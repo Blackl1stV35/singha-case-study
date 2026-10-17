@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="131mm" height="60mm" viewBox="3 3 131 60" version="1.1">
+<title>Pop label artwork only (placeholder text)</title>
+<rect x="3" y="3" width="131" height="60" fill="#F3F8EC"/>
+<path d="M44 56 L44 36" stroke="#3B6D11" stroke-width="0.4" fill="none"/>
+<path d="M44 42 L36 37 M44 42 L52 37 M44 49 L35 44 M44 49 L53 44" stroke="#3B6D11" stroke-width="0.4" fill="none"/>
+<text x="44" y="22" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="5" fill="#27500A">Product name</text>
+<text x="44" y="28" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="2.6" fill="#3B6D11">Front panel: placeholder</text>
+<text x="84" y="12" font-family="Arial, Helvetica, sans-serif" font-size="2.6" fill="#27500A">Net content: 250 ml (placeholder)</text>
+<text x="84" y="18" font-family="Arial, Helvetica, sans-serif" font-size="2.6" fill="#27500A">Keep frozen</text>
+<text x="84" y="24" font-family="Arial, Helvetica, sans-serif" font-size="2.6" fill="#27500A">Ingredients: placeholder</text>
+<text x="84" y="30" font-family="Arial, Helvetica, sans-serif" font-size="2.6" fill="#27500A">Thai FDA no.: placeholder</text>
+<text x="84" y="36" font-family="Arial, Helvetica, sans-serif" font-size="2.6" fill="#27500A">Made in: placeholder</text>
+<text x="84" y="42" font-family="Arial, Helvetica, sans-serif" font-size="2.6" fill="#27500A">No health claims (team rule)</text>
+</svg>

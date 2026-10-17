@@ -1,0 +1,47 @@
+{
+  "_note": "Rough inputs accepted by the user on 2026-10-17. Status: validated, dated (source read, year stated), assumption (rough, to be replaced), or unresolved (placeholder until the gate resolution run reports). Ranges drive the sensitivity tables. Currency noted per field.",
+  "singapore": {
+    "shelf_price_sgd_per_can": {"value": 1.45, "low": 1.20, "high": 1.60, "status": "dated", "source": "FairPrice listing, Singha Ume Plum Lemon Soda No Sugar, 24 x 330 ml at S$34.90 (read 17 Oct 2026); single listing, not reproduced in site search"},
+    "gst_rate": {"value": 0.09, "low": 0.09, "high": 0.09, "status": "dated", "source": "GST rate used in the gate track; IRAS page not read in full"},
+    "retailer_margin": {"value": 0.30, "low": 0.25, "high": 0.35, "status": "assumption", "source": "Rough grocery or convenience retail margin on ex-GST price"},
+    "importer_margin": {"value": 0.25, "low": 0.20, "high": 0.30, "status": "assumption", "source": "Rough importer or distributor margin on its selling price"},
+    "importer_handling_sgd_per_can": {"value": 0.08, "low": 0.05, "high": 0.12, "status": "assumption", "source": "Warehousing and delivery, rough"},
+    "bcrs_deposit_sgd_per_can": {"value": 0.10, "low": 0.00, "high": 0.10, "status": "dated", "source": "NEA release (21 Mar 2023): S$0.10 per container; start date and mechanics unresolved; base case treats it as borne by the importer"},
+    "exworks_usd_per_can": {"value": 0.20, "low": 0.15, "high": 0.30, "status": "assumption", "source": "Rough Thai cost for 330 ml can including ingredients, packaging and filling; no quote"},
+    "usd_sgd": {"value": 1.33, "low": 1.28, "high": 1.38, "status": "assumption", "source": "Rough exchange rate"},
+    "freight_20ft_usd": {"value": 1200, "low": 900, "high": 1800, "status": "assumption", "source": "Rough Thailand to Singapore 20 ft container; the vendor indicative USD 172.8 to 217.8 per 20 ft is not used because its basis looks implausible for a full container"},
+    "cartons_per_20ft": {"value": 1000, "low": 800, "high": 1200, "status": "assumption", "source": "Rough 24 x 330 ml cartons per 20 ft container"},
+    "cans_per_carton": {"value": 24, "low": 24, "high": 24, "status": "dated", "source": "Pack size of the FairPrice listing"},
+    "insurance_sgd_per_can": {"value": 0.01, "low": 0.005, "high": 0.02, "status": "assumption", "source": "Rough cargo insurance"},
+    "duty_rate": {"value": 0.0, "low": 0.0, "high": 0.0, "status": "dated", "source": "Customs dutiable list: soft drinks non-dutiable, GST applies; confirm per SKU"},
+    "trade_spend_share": {"value": 0.10, "low": 0.05, "high": 0.20, "status": "assumption", "source": "Promotions and listing support as a share of CIF price"},
+    "fixed_cost_sgd_per_year": {"value": 450000, "low": 300000, "high": 600000, "status": "assumption", "source": "Brand marketing, one sales and account role, samples, travel, compliance upkeep"},
+    "one_off_setup_sgd": {"value": 60000, "low": 40000, "high": 90000, "status": "assumption", "source": "Labelling, Nutri-Grade consultancy, trademark filing, samples"},
+    "category_volume_cans": {"value": 412000000, "low": 300000000, "high": 500000000, "status": "dated", "source": "Derived: MarketLine carbonated soft drinks, Singapore, 135.9m litres in 2021 (vendor, Feb 2023 edition), divided by 0.33 litre per can. Vendor-derived, 2021 base"},
+    "flavoured_lane_import_sgd_2025": {"value": 172800000, "low": 172800000, "high": 172800000, "status": "validated", "source": "SingStat T010001 HS 2202.10, 2025 (monthly series in data/singstat_hs2202_monthly_imports_2023_2026.csv)"}
+  },
+  "korea": {
+    "shelf_price_krw_per_can": {"value": 2000, "low": 1600, "high": 2200, "status": "dated", "source": "GS25 list price, 355 ml can, convenience store (from the Korea gate track); convenience store is an upper reference for supermarket price"},
+    "vat_rate": {"value": 0.10, "low": 0.10, "high": 0.10, "status": "assumption", "source": "Standard Korean VAT rate, to confirm in the Korea G2 or G3 resolution"},
+    "retailer_margin": {"value": 0.30, "low": 0.20, "high": 0.35, "status": "assumption", "source": "Rough retail margin on ex-VAT price"},
+    "importer_margin": {"value": 0.25, "low": 0.20, "high": 0.30, "status": "assumption", "source": "Rough importer or distributor margin"},
+    "importer_handling_krw_per_can": {"value": 150, "low": 100, "high": 250, "status": "assumption", "source": "Warehousing and delivery, rough"},
+    "tariff_rate": {"value": 0.0, "low": 0.0, "high": 0.30, "status": "unresolved", "source": "Placeholder: Thailand-Korea FTA and MFN rates for HS 2202 are being resolved in the Korea gate run; base uses 0 and sensitivity runs 8 and 30 percent"},
+    "exworks_usd_per_can": {"value": 0.20, "low": 0.15, "high": 0.30, "status": "assumption", "source": "Same Thai cost as Singapore, rough"},
+    "usd_krw": {"value": 1350, "low": 1300, "high": 1450, "status": "assumption", "source": "Rough exchange rate"},
+    "freight_20ft_usd": {"value": 1500, "low": 1200, "high": 2200, "status": "assumption", "source": "Rough Thailand to Busan 20 ft container"},
+    "cartons_per_20ft": {"value": 1000, "low": 800, "high": 1200, "status": "assumption", "source": "Rough 24 can cartons per container"},
+    "insurance_krw_per_can": {"value": 10, "low": 5, "high": 20, "status": "assumption", "source": "Rough cargo insurance"},
+    "trade_spend_share": {"value": 0.10, "low": 0.05, "high": 0.20, "status": "assumption", "source": "Promotions and listing support as a share of CIF price"},
+    "fixed_cost_krw_per_year": {"value": 500000000, "low": 350000000, "high": 700000000, "status": "assumption", "source": "Brand marketing, one sales role, samples, compliance upkeep"},
+    "one_off_setup_krw": {"value": 80000000, "low": 50000000, "high": 120000000, "status": "assumption", "source": "Registration, labelling, trademark, samples"},
+    "category_volume_cans": {"value": 590000000, "low": 400000000, "high": 700000000, "status": "dated", "source": "Derived: MarketLine South Korea carbonated soft drinks, 2,094.4m litres in 2024 (vendor teaser), divided by 0.355 litre per can. Does not use the company's 29.1m litre figure"}
+  },
+  "common": {
+    "wacc": {"value": 0.12, "low": 0.10, "high": 0.15, "status": "assumption", "source": "Rough discount rate for a small regional beverage export venture"},
+    "terminal_growth": {"value": 0.01, "low": 0.0, "high": 0.02, "status": "assumption", "source": "Rough long-run growth after year 5"},
+    "ramp_share_base": {"value": [0.001, 0.003, 0.006, 0.009, 0.010], "status": "assumption", "source": "Share of category volume in years 1 to 5 in the base case; the bull and bear cases scale it"},
+    "bull_multiplier": {"value": 1.8, "status": "assumption", "source": "Share multiplier in the bull case"},
+    "bear_multiplier": {"value": 0.4, "status": "assumption", "source": "Share multiplier in the bear case"}
+  }
+}

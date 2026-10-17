@@ -1,0 +1,7 @@
+market,scenario,K1_net_pct_at_least_20,K2_breakeven_share_at_most_1pct,K3_year3_share_at_least_breakeven,K4_listing,K5_pilot_velocity,K6_regulatory,K7_npv_positive,K8_peak_funding_at_most_1m_sgd
+singapore,base,pass (24%),pass (0.88%),fail (0.60% vs 0.88%),open (not modelled),open (not modelled),open (resolution run),fail (SGD -0.40m),pass (SGD 0.90m)
+singapore,bull,pass (24%),pass (0.83%),pass (1.08% vs 0.83%),open (not modelled),open (not modelled),open (resolution run),pass (SGD 3.08m),pass (SGD 0.58m)
+singapore,bear,pass (24%),pass (0.93%),fail (0.24% vs 0.93%),open (not modelled),open (not modelled),open (resolution run),fail (SGD -1.32m),fail (SGD 1.76m)
+korea,base,pass (45%),pass (0.21%),pass (0.60% vs 0.21%),open (not modelled),open (not modelled),open (resolution run),pass (SGD 13.18m),pass (SGD 0.35m)
+korea,bull,pass (45%),pass (0.20%),pass (1.08% vs 0.20%),open (not modelled),open (not modelled),open (resolution run),pass (SGD 30.68m),pass (SGD 0.17m)
+korea,bear,pass (45%),pass (0.24%),pass (0.24% vs 0.24%),open (not modelled),open (not modelled),open (resolution run),pass (SGD 1.52m),pass (SGD 0.73m)

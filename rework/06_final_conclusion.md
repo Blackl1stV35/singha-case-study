@@ -56,7 +56,7 @@ The scores for A and B are unchanged from the screen. The score for C is my prop
 | Consumer test | Not run | Not started |
 | Unit cost | Not quoted | [rework/05](05_team_note_c_price_ladder.md) (the cost questions apply to any finalist) |
 
-## Slide 6: the gating test (before 21 October)
+## Slide 6: the gating test (pended by the user, 18 October; raise on "pending decisions")
 
 - **Leak test:** freeze 30 pops, 15 in a leaf-only wrap and 15 in a leaf wrap with a food-grade inner film. Thaw each group at 30 °C for two hours and log leaks.
 - **Blind intercept:** 20 people in a Bangkok office or market. Peel-and-sip against a cup, plus a purchase-intent question.
@@ -84,6 +84,28 @@ The scores for A and B are unchanged from the screen. The score for C is my prop
 2. Approve the leak test and the intercept for 19 to 21 October.
 3. Agree the claim wording: "plastic-free" only if the leak test passes without an inner film.
 4. Before submitting, remove team identity from the repository and its commit metadata. The repository is on GitHub under a personal account.
+
+## Appendix: elevator pitch for the primary concept (A)
+
+**Tagline:** Peel it, sip it, as it thaws.
+
+**30-second version:**
+Thai drinks come in cans and bottles. Ours comes in a leaf. It is a frozen coconut-pandan drink, sealed in a banana or pandan leaf. You peel it open and sip it as it thaws, so the drink turns from ice to liquid in your hand. We aim it at Thai buyers who want plastic-free, traditional packaging. We found no leaf-wrapped frozen drink in six Thai and English searches, which is not proof it does not exist. The concept is not tested yet. Our first test checks whether the leaf leaks during a two-hour thaw. If it leaks, we add a film and drop the plastic-free claim.
+
+**End to end, for a longer slot:**
+- **Insight (hypothesis):** plastic-free buyers may pay for a wrap that reads local. Evidence so far is produce, not drinks (Rimping supermarket, Chiang Mai, 2019).
+- **Product:** frozen coconut or pandan drink in a leaf wrap, peel-and-sip while thawing.
+- **What is new:** the way you drink it, not the ingredients. No leaf-wrapped frozen drink found (absence search only).
+- **Target:** Thai buyers who value plastic-free, traditional packaging.
+- **Make:** a co-packer or small community maker hand-wraps, with frozen distribution. Unverified; cost not quoted.
+- **Proof so far:** none. The leak test and the intercept are pended.
+- **Ask:** feedback on whether a new drinking ritual counts as innovation under Alternative Formats.
+
+**If asked:**
+- *What is actually new?* The consumption act. The ingredients are standard coconut and pandan.
+- *Does the leaf leak?* Not tested yet. That test is pended.
+- *Is it really plastic-free?* Only if the leaf holds without a film. Otherwise we change the claim.
+- *What does it cost?* Not set. We need a co-packer cost quote first.
 
 ## Not in this draft
 

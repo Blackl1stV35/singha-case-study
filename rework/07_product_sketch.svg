@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="470" viewBox="0 0 680 470" role="img" font-family="Arial, Helvetica, sans-serif">
+<title>Leaf-wrapped frozen pop: front view, cross-section and use steps</title>
+<desc>Front view: a frozen pop with its top exposed above a leaf wrap, and a peel tab at the top corner. Cross-section: the outer leaf, an optional dashed inner film, and the frozen core. Below: four steps in order, freeze, wrap, thaw and peel, sip.</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#3d3d3a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<rect x="0" y="0" width="680" height="470" fill="#ffffff"/>
+
+<rect x="104" y="80" width="102" height="180" rx="48" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<rect x="94" y="140" width="112" height="130" rx="18" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+<rect x="84" y="126" width="24" height="18" rx="4" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+<line x1="150" y1="152" x2="150" y2="258" stroke="#3d3d3a" stroke-opacity="0.35" stroke-width="0.5"/>
+<line x1="150" y1="176" x2="120" y2="196" stroke="#3d3d3a" stroke-opacity="0.35" stroke-width="0.5"/>
+<line x1="150" y1="176" x2="180" y2="196" stroke="#3d3d3a" stroke-opacity="0.35" stroke-width="0.5"/>
+<line x1="150" y1="220" x2="120" y2="240" stroke="#3d3d3a" stroke-opacity="0.35" stroke-width="0.5"/>
+<line x1="150" y1="220" x2="180" y2="240" stroke="#3d3d3a" stroke-opacity="0.35" stroke-width="0.5"/>
+<line x1="94" y1="140" x2="206" y2="140" stroke="#3d3d3a" stroke-width="0.8" stroke-dasharray="3 3" stroke-opacity="0.6"/>
+
+<rect x="340" y="60" width="200" height="200" rx="26" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+<rect x="352" y="72" width="176" height="176" rx="18" fill="none" stroke="#3d3d3a" stroke-width="0.8" stroke-dasharray="4 4"/>
+<rect x="366" y="86" width="148" height="148" rx="14" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+
+<text x="160" y="296" text-anchor="middle" font-size="14" font-weight="500" fill="#3d3d3a">Front view</text>
+<text x="160" y="314" text-anchor="middle" font-size="12" fill="#5F5E5A">Peel tab at top</text>
+<text x="440" y="296" text-anchor="middle" font-size="14" font-weight="500" fill="#3d3d3a">Cross-section</text>
+<text x="440" y="314" text-anchor="middle" font-size="12" fill="#5F5E5A">Leaf, optional film, frozen core</text>
+
+<rect x="40" y="346" width="126" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="103" y="368" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#0C447C">Freeze</text>
+<text x="103" y="386" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#185FA5">Frozen drink</text>
+<rect x="198" y="346" width="126" height="56" rx="8" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+<text x="261" y="368" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#27500A">Wrap</text>
+<text x="261" y="386" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3B6D11">Leaf wrap</text>
+<rect x="356" y="346" width="126" height="56" rx="8" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+<text x="419" y="368" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#27500A">Thaw and peel</text>
+<text x="419" y="386" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3B6D11">Peel the tab</text>
+<rect x="514" y="346" width="126" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="577" y="368" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#0C447C">Sip</text>
+<text x="577" y="386" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#185FA5">As it thaws</text>
+
+<line x1="166" y1="374" x2="196" y2="374" stroke="#3d3d3a" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="324" y1="374" x2="354" y2="374" stroke="#3d3d3a" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="482" y1="374" x2="512" y2="374" stroke="#3d3d3a" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="40" y="422" width="14" height="14" rx="3" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="60" y="433" font-size="12" fill="#5F5E5A">Frozen drink</text>
+<rect x="160" y="422" width="14" height="14" rx="3" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+<text x="180" y="433" font-size="12" fill="#5F5E5A">Leaf wrap</text>
+<rect x="290" y="422" width="14" height="14" rx="3" fill="none" stroke="#3d3d3a" stroke-width="0.8" stroke-dasharray="3 3"/>
+<text x="310" y="433" font-size="12" fill="#5F5E5A">Optional film (only if the leaf leaks)</text>
+</svg>

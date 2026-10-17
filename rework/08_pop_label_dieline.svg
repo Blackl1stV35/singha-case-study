@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" width="140mm" height="90mm" viewBox="0 0 140 90" version="1.1" id="dieline">
+<sodipodi:namedview id="namedview" pagecolor="#ffffff" bordercolor="#999999" inkscape:document-units="mm"/>
+<title>Leaf-wrapped pop label dieline (working draft)</title>
+
+<g inkscape:groupmode="layer" inkscape:label="Artwork" id="layer-artwork">
+<rect x="3" y="3" width="131" height="60" fill="#F3F8EC"/>
+<path d="M44 56 L44 36" stroke="#3B6D11" stroke-width="0.4" fill="none"/>
+<path d="M44 42 L36 37 M44 42 L52 37 M44 49 L35 44 M44 49 L53 44" stroke="#3B6D11" stroke-width="0.4" fill="none"/>
+<text x="44" y="22" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="5" fill="#27500A">Product name</text>
+<text x="44" y="28" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="2.6" fill="#3B6D11">Front panel: placeholder</text>
+<text x="84" y="12" font-family="Arial, Helvetica, sans-serif" font-size="2.6" fill="#27500A">Net content: 250 ml (placeholder)</text>
+<text x="84" y="18" font-family="Arial, Helvetica, sans-serif" font-size="2.6" fill="#27500A">Keep frozen</text>
+<text x="84" y="24" font-family="Arial, Helvetica, sans-serif" font-size="2.6" fill="#27500A">Ingredients: placeholder</text>
+<text x="84" y="30" font-family="Arial, Helvetica, sans-serif" font-size="2.6" fill="#27500A">Thai FDA no.: placeholder</text>
+<text x="84" y="36" font-family="Arial, Helvetica, sans-serif" font-size="2.6" fill="#27500A">Made in: placeholder</text>
+<text x="84" y="42" font-family="Arial, Helvetica, sans-serif" font-size="2.6" fill="#27500A">No health claims (team rule)</text>
+</g>
+
+<g inkscape:groupmode="layer" inkscape:label="Guides (remove before print)" id="layer-guides">
+<rect x="6" y="6" width="125" height="54" fill="none" stroke="#00AEEF" stroke-width="0.2" stroke-dasharray="1 1"/>
+<line x1="8" y1="3" x2="8" y2="63" stroke="#00AEEF" stroke-width="0.2" stroke-dasharray="2 1"/>
+<line x1="80" y1="3" x2="80" y2="63" stroke="#00AEEF" stroke-width="0.2" stroke-dasharray="2 1"/>
+</g>
+
+<g inkscape:groupmode="layer" inkscape:label="Bleed (3 mm)" id="layer-bleed">
+<rect x="0" y="0" width="137" height="66" fill="none" stroke="#999999" stroke-width="0.2" stroke-dasharray="0.8 0.8"/>
+</g>
+
+<g inkscape:groupmode="layer" inkscape:label="Dieline (cut)" id="layer-cut">
+<rect x="3" y="3" width="131" height="60" rx="4" fill="none" stroke="#FF00FF" stroke-width="0.25"/>
+</g>
+
+<g inkscape:groupmode="layer" inkscape:label="Notes (not for print)" id="layer-notes">
+<text x="3" y="72" font-family="Arial, Helvetica, sans-serif" font-size="2.6" fill="#5F5E5A">Working draft. Assumed: pop 40 mm across; label 131 x 60 mm finished, 3 mm bleed.</text>
+<text x="3" y="77" font-family="Arial, Helvetica, sans-serif" font-size="2.6" fill="#5F5E5A">Measure a prototype before printing. Label placement on the leaf is untested.</text>
+<text x="3" y="82" font-family="Arial, Helvetica, sans-serif" font-size="2.6" fill="#5F5E5A">All text is placeholder. Thai FDA label content needs a registration adviser.</text>
+<text x="3" y="87" font-family="Arial, Helvetica, sans-serif" font-size="2.6" fill="#5F5E5A">Cut magenta, safe area blue, bleed grey. Hide the Guides and Bleed layers before printing.</text>
+</g>
+</svg>

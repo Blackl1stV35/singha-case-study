@@ -46,7 +46,7 @@ Scores: likelihood (L) and impact (I) on 1 to 5. Score is L times I. Owners are 
 | R9 | Freight rate volatility; no current container quote | 3 | 2 | 6 | forwarder quotes for two lanes | K1 | freight |
 | R10 | FX move (THB, SGD, KRW) | 3 | 3 | 9 | price in SGD or KRW | K1 | exchange rates |
 | R11 | Co-packer capacity or can-line capability not verified (no FSSC-certified can-filler confirmed) | 3 | 3 | 9 | shortlist and quote co-packers; treat as a limit until quoted | K1 | exworks cost |
-| R12 | Singapore IPOS ownership of SINGHA classes 32 and 30 unverifiable | 2 | 4 | 8 | direct IPOS search | K6 | none, gate |
+| R12 | SINGHA class 32 marks in Singapore held by Boon Rawd Brewery (resolved 2026-10-17); the candidate's own name must clear IPOS | 4 | 4 | 16 | clear a new brand name on IPOS and KIPRIS before filing; avoid SINGHA and close variants | K6 | none, gate |
 | R13 | Company-stated Korea figures do not hold | 4 | 3 | 12 | not used; unverifiable; no company sell-out data available to the study | K3 | none (excluded) |
 | R14 | Trade-data gap between Thai export and Singapore mirror values | 3 | 3 | 9 | bracket and sensitivity | K1 | realised CIF |
 | R15 | Incumbent Singha zero range is a direct competitor in both markets, with the SINGHA mark held by Boon Rawd | 4 | 4 | 16 | differentiate on the botanical profile and sweetener choice; price against the KRW 2,000 list and realised promotions; own brand name | K1, K4 | competitor pricing |

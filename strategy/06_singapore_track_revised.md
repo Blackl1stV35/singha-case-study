@@ -11,7 +11,12 @@ Perspective: an external competing candidate in the Singha University "Ultimate 
 
 ## Trademark and name
 
-- IPOS status of the SINGHA mark in classes 32 and 30 is **closed as a limit**. The IPOS applicant search showed a CAPTCHA, which was not solved. A WIPO Global Brand Database search did not return results in this session.
+- **IPOS ownership (resolved 2026-10-17, via the desktop Chrome session; the CAPTCHA was solved by the user):** SINGHA trade mark records in Singapore, by description search:
+  - Boon Rawd Brewery Co., Ltd., class 32, registered: 40201920941S and 40201920937T (27 September 2019); T1201128G (2012); T0622897J and T0622896B (27 October 2006). T9404041C (1994) removed.
+  - Boon Rawd Brewery applicant search: 26 records in total. A 2026 pending application (40202613080Q, class 32, filed 21 May 2026) carries a lion logo, not the word mark.
+  - Singha Asia Holding Pte. Ltd., classes 16, 35 and 36, expired (renewal possible): 40201615930S.
+  - Super Brands Company Pte. Ltd., class 33, registered: 40201900656Q (a third-party SINGHA-containing mark for alcohol, not class 32).
+  - Class 29 and 30 registrations to Boon Rawd (T1112585H, T1112586F, T1112587D, 2011): wording not checked. Closed as a limit.
 - A Singapore or Korean SINGHA registration held by Boon Rawd Brewery, if one exists, is not available to the candidate. The candidate's product needs its own name cleared on IPOS.
 - WIPO IR 625021 (SINGHA LAGER BEER, class 32): designation to Singapore unknown. Closed as a limit.
 
@@ -57,7 +62,7 @@ Passes: G1 (total) and G2, two in all. Under the rule (four passes, no fail), th
 ## Limits (closed as unresolved)
 
 1. Singapore importer of record for the Singha zero cans.
-2. IPOS ownership of SINGHA in classes 32 and 30 (CAPTCHA; WIPO did not return results).
+2. Wording of the Boon Rawd class 29 and 30 registrations (T1112585H, T1112586F, T1112587D): not checked. Closed as a limit. Class 32 ownership is resolved (see the Trademark section).
 3. WIPO IR 625021 designation to Singapore.
 4. Listing or slotting cost at FairPrice, Cold Storage and 7-Eleven.
 5. Current Thailand to Singapore container freight.

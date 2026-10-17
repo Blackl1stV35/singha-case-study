@@ -55,9 +55,9 @@ Novelty scale, as the judge applied it, with Thailand as the only market:
 - **Format:** a 250 ml chilled can of non-alcoholic herbal drink (lemongrass, butterfly pea, kaffir lime), positioned as a dinner-time alternative to alcohol.
 - **Target:** Thai adults aged about 22 to 35 who drink little or none and want a dinner-time ritual drink.
 - **Novelty (1, verdict "unclear"):** only 2 product searches. The closest are STOCKHOLME Sober Bar in Bangkok and The Sarojin's alcohol-free menu, both venues, not packaged products. No canned Thai-botanical RTD was found, but the search was thin.
-- **Fit (2):** sober-curious adults are a trend target, supported by Innova Market Insights (December 2025), GlobalData, and a Thai Post column citing Mintel (2023).
+- **Fit (2):** sober-curious adults are a trend target, supported by Innova Market Insights (December 2025), GlobalData, and a Thai Post column citing Mintel (2023). The desk check found the Thai Post column does not support sober-curious demand, and the national data do not show drinking falling.
 - **Feasibility (2):** Thai botanicals and a canning or retort co-packer are public routes.
-- **Consumer case (1, proposed 0):** no Thai survey. The desk check found that the Thai Post column does not support sober-curious demand, and the 9.6 percent figure is unsourced. See [02_desk_kill_tests.md](02_desk_kill_tests.md).
+- **Consumer case (1, proposed 0):** no Thai survey. The desk check found that the Thai Post column does not support sober-curious demand, and the 9.6 percent figure is unsourced. The follow-up search found no Thai source for drinking less, and the NSO data show drinking rising from 2021 to 2024. See [02_desk_kill_tests.md](02_desk_kill_tests.md).
 - **Regulatory:** whether alcohol-association marketing limits reach a non-alcoholic brand is unverified and needs legal review.
 - **Kill test:** a store and online audit (Makro, Tops, 7-Eleven, Lazada, Shopee, Boots, Villa Market) finds a Thai-botanical non-alcoholic RTD already sold in an evening or alcohol-alternative position.
 - **First test (3 days):** a blind taste of three Thai-botanical bases (for example lemongrass with kaffir lime, butterfly pea with lime, pandan with ginger) with 40 adults aged 22 to 35 who drink little or none. Then purchase intent at 50 to 70 THB.

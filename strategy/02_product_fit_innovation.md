@@ -83,3 +83,4 @@ Gap: no confirmed Singapore SKU combines a named botanical extract, a citrus fla
 - P5 (taste and consumer acceptance) needs a blind test. Fieldwork is pended, so this is a decision for the user.
 - P4 (operations) depends on the operations scan, which is running.
 - The Singapore gap is provisional until Cold Storage and 7-Eleven shelves are read directly.
+- The RedMart price of S$39.90 per 24 cans for Singha zero citrus and plum was reported in the product-fit scan but not reproduced in the open-items scan. Treat it as unverified. The Lazada zero lemon listing (Direct Imported from Thailand) and a Yuzu zero listing at S$29.90 (undated) are the only other group prices found.

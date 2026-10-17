@@ -1,37 +1,26 @@
-# Korea track: revised verdict plan (group perspective)
+# Korea track: verdict (external candidate, double-blind)
 
-## Perspective
+Perspective: an external competing candidate in the Singha University "Ultimate Challenge 2026: The Innovative Bev & Bite" (double-blind). Singha's own zero-sugar range is a competitor here. The SINGHA mark, group factories and group importers are not available to the candidate.
 
-The analysis stands inside the Boon Rawd group, as stated in the corpus (Singha.md, Company section and Appendices A and C). Boon Rawd Brewery is the holding company (registration 0105476000061), and Singha Corporation (0105544082625) coordinates more than 150 subsidiaries. SBU2 non-alcoholic beverages is the lead unit, and Boon Rawd Trading handles brand and overseas work.
+## Competitor set
 
-Per the user, group zero-sugar SKUs in Korea are not competitors. The competitor set is third-party only.
-
-## Korean importer and exporter of record
-
-| Question | Finding | Status |
-|---|---|---|
-| Importer of record (수입원) for the Singha zero cans (Lemon, Yuzu, Lime Lemon 355 ml) | Not found on any listing or product page read. Kaohoon names only Boonrawd Trading Co., Ltd. | unverifiable |
-| Named Korean importer of any Singha product | Hite Jinro, for beer only, from 2014 under a 2013 agreement; no renewal found | dated |
-| Group-linked Korean importer for a soda | 부라보에프앤비㈜ is the importer of record for Leo Soda Water (Costco Korea; producer Wang Noi Beverage, a group factory; described as a Singha affiliate) | validated for Leo; link to Singha zero cans not confirmed |
-| Thai producer of Costco's Leo soda | Wang Noi Beverage Co., Ltd, one of eight group factories | validated (group page) |
-| Thai maker and exporter of the Singha zero cans | Company-described as Thai (Boonrawd Trading); the can label was not read | unverifiable |
-| Korean subsidiary or branch of the group | None on the group page; registry not reached | unverifiable |
-| Exporter of record (Thai customs) | Not identified | unverifiable |
-
-The Korean importer of record is the decisive gap. It cannot be assumed from group channels. The routes that would close it are a can-side label read (식품 표시사항) or a 식품안전나라 import-record query for the exact product name.
-
-## Market presence (context)
-
-- Singha citrus zero 330 ml has been listed at GS25 since October 2022 (list KRW 1,600, later KRW 2,000). Singha Lime Lemon zero 355 ml was launched at GS25 in June 2026 (list KRW 2,000; 1+1 at KRW 1,000 effective; 2+1 at KRW 1,333 effective). The list price is KRW 2,000; promotions cut the realised shelf price. A competitor's KRW 2,000 price is not the same as a realised price.
-- Company-stated: share of Korea soda 5.7 percent (2020) to 15.4 percent (2024); soda sales doubled in 2024; a 6x target for 2025; a Korean soda market of 29.1m litres growing about 28 percent a year. **These remain unverifiable.** The user has no sell-out data, so no group data will settle them. The model does not use them.
-
-## Competitor set (group SKUs excluded)
-
+Included as direct competitors:
+- Singha Lemon Soda zero (Lemon, Yuzu, Lime Lemon 355 ml; on GS25 since 2022 for the 330 ml lemon, and Lime Lemon launched June 2026). List KRW 2,000; promotions bring the realised price to KRW 1,000 to 1,333.
 - Coca-Cola Zero Lemon Lime (launched 1 August 2026; aspartame, acesulfame-K, sucralose)
-- Pepsi Zero Sugar Lime (KRW 2,100 at GS25; same three sweeteners)
+- Pepsi Zero Sugar Lime (KRW 2,100 at GS25; the same three sweeteners)
 - Lotte Chilsung Cider Zero Yuja (KRW 2,100 at 7-Eleven)
-- Woongjin The Victoria Cool Lime (botanical craft soda, zero sugar; the closest botanical zero competitor; sweetener not disclosed)
+- Woongjin The Victoria Cool Lime (botanical craft soda, zero sugar; the closest botanical competitor; sweetener not disclosed)
 - Trevi (bulk KRW 166 per 100 ml, a cheap zero reference)
+
+## Trademark and name
+
+The SINGHA class 32 marks on KIPRIS (seven records) are held by Boon Rawd Brewery. The candidate cannot use them. The product needs its own name, cleared on KIPRIS for class 32 before any filing. That clearance is not yet done.
+
+## Route to shelf
+
+- The Korean importer of record for the Singha zero cans is not identifiable from public sources. This is recorded as a limit. It is not needed for the candidate's plan, because the candidate must find its own importer.
+- A candidate must secure its own importer, a co-packer and listings. Listing and slotting fees per can are not published and are recorded as a limit.
+- Overseas plant registration (MFDS, at least 7 days before each import declaration) and the 소비기한 date label apply to the producer and importer. The producer must be chosen with both in mind.
 
 ## Economics (base case, realised basis, `04_financial_model_results.md`)
 
@@ -39,46 +28,43 @@ The Korean importer of record is the decisive gap. It cannot be assumed from gro
 |---|---|---|
 | Shelf list price incl. VAT, 355 ml | KRW 2,000 | validated (list); realised price lower on promotion |
 | Realised CIF per can | KRW 528 | proxy (Comtrade HS 220210 Thai unit value to Korea) |
-| Exporter cost (ex-works, freight, insurance) | KRW 387 | ex-works assumed; freight is a proxy from expired LCL quotes |
-| Net contribution after 10% trade spend | KRW 88 (17 percent of CIF) | model |
-| CIF needed for the 20 percent threshold | about KRW 553 | derived |
-| Tariff | 0 percent under the ASEAN-Korea FTA with Thai origin proof; 8 percent MFN if origin proof fails | validated (Korea Customs FTA portal) |
-| Sugar levy | none in force; a draft would tax sugar-substitute drinks up to 50 won per litre (about KRW 18 per can) | pending |
+| Exporter cost (ex-works, freight, insurance) | KRW 387 | ex-works assumed; freight is a proxy (expired LCL quotes) |
+| Net contribution after 10% trade spend | KRW 88 (17% of CIF) | model |
+| CIF needed for the 20% contribution threshold | about KRW 553 | derived |
+| Tariff | 0% under the ASEAN-Korea FTA with Thai origin proof; 8% MFN if origin proof fails | validated (Korea Customs FTA portal) |
+| Sugar levy | none in force; draft would tax sugar-substitute drinks up to 50 won per litre (about KRW 18 per can). The Kim Yun bill was postponed on 19 September 2026; the Kim Sun-min and Lee Su-jin bills were submitted | pending |
+| Fixed cost | KRW 500m a year, standalone (no group sharing) | assumption |
 
 ## Gate verdict
 
 | Gate | Result | Evidence |
 |---|---|---|
-| G1 size and growth | unknown | no independent 2023 to 2025 sparkling or soda series; MFDS 2014 to 2018 is the newest official series; vendor 2024 carbonated volume 2,094.4m litres is the only anchor |
-| G2 import access | pass | ASEAN-Korea FTA 0 percent with origin proof; MFDS overseas plant registration required 7 days before each declaration; first imports face document review and testing |
-| G3 unit economics | fail on the realised proxy (K1 at 17 percent); pass on the ceiling | distributor and importer margins unverifiable; retailer margin proxy 19 to 27 percent (BGF and GS Retail) |
-| G4 competition and channel | unknown | competitor set crowded (seven citrus zero SKUs in 2026); listing or slotting fee per can not found; the KFTC 2025 consent decision changed listing incentives but published no per-can amount |
+| G1 size and growth | unknown | no independent 2023 to 2025 sparkling or soda series. Limit: KOSIS, aT and the Korea Beverage Association not reached |
+| G2 import access | pass | ASEAN-Korea FTA 0% with origin proof; MFDS overseas registration; first imports face document review and testing |
+| G3 unit economics | fail on the realised proxy (K1 at 17%); pass on the ceiling | importer and distributor margins are limits; retailer margin proxy 19 to 27 percent (BGF and GS Retail); freight is a proxy |
+| G4 competition and channel | unknown; crowded | seven citrus zero SKUs from five brands in 2026, including Singha's own range; listing fees are a limit |
 | G5 demand | unknown | no Korea-specific sparkling or zero-sugar demand data beyond vendor and press; a single-retailer figure (GS25 zero above 52 percent of carbonated sales, January to April 2024) |
-| G6 regulatory and fixed cost | unknown | sweetener usage limits for beverages not found (acesulfame-K, sucralose, steviol glycosides are permitted, limits unverified); zero-sugar label rule (무당) requires a sweetener statement and a calorie statement above 20 kcal per 100 ml; 소비기한 date required on food shipped for import since 2024; functional claims unavailable for citrus; trademark: group-owned SINGHA class 32 marks on KIPRIS (seven records) |
+| G6 regulatory and fixed cost | unknown | sweetener usage limits for beverages are a limit (식품첨가물공전 not reached); zero-sugar label rule (무당) requires a sweetener statement and a calorie statement above 20 kcal per 100 ml; 소비기한 date required on food shipped for import since 2024; functional claims unavailable for citrus; name clearance not yet done |
 
 Passes: G2 only. Under the rule (four passes, no fail), the verdict is **not validated**.
 
-## What changed from the previous plan
+## Company-stated claims
 
-1. Competitor set excludes group SKUs (per the user).
-2. Trademark: the SINGHA class 32 marks are group-owned (Boon Rawd Brewery). The blocker is cleared at group level. Product-name clearance remains open.
-3. Listing: the group already has a presence at GS25 for citrus zero (since 2022). Listing a new SKU is an extension. The listing cost is still unverifiable.
-4. Importer of record: unverified. The group-linked importer for Leo Soda (부라보에프앤비㈜) is a candidate route, not evidence for the zero cans.
-5. Production: Wang Noi Beverage (group factory) produces the Costco Leo soda. A group-factory route would reduce co-packer risk. Canning capability is unverified.
-6. Freight and retailer margin are now proxies, not assumptions. Both are weak.
+The company-stated Korea figures (share 5.7 percent in 2020 and 15.4 percent in 2024, soda sales doubled in 2024, a 6x target for 2025, a 29.1m-litre market growing about 28 percent a year) are **unverifiable**. The candidate has no access to company sell-out data. They are not used in the model. This is recorded as a limit.
 
-## Revised verdict plan
+## Limits (closed as unresolved)
 
-Status: **not validated**. The realised price is the decisive variable: the base case misses K1 by about KRW 25 per can, and the threshold is reachable only with a price above the category unit value. The bull case passes at the back-solved ceiling.
+1. Korean importer of record for the Singha zero cans: no label or registry route reached.
+2. Korean listing or slotting fee per can at GS25, CU or 7-Eleven: no published amount.
+3. Korean importer and distributor margin for soft drinks: no benchmark found.
+4. Korean sparkling or soda market size, 2023 to 2025: KOSIS, aT and Circana or NIQ not reached.
+5. Korean sweetener usage limits for acesulfame-K, sucralose and steviol glycosides in beverages: 식품첨가물공전 not reached.
+6. Thailand to Busan 20 ft container rate: no Laem Chabang or Bangkok quote found.
+7. Sugar-levy status after 19 September 2026: no later report found.
+8. Company-stated Korea figures: unverifiable; no company data.
 
-Steps to close, in order:
+## Verdict and what would change it
 
-1. Importer of record, from the can label (식품 표시사항) or the 식품안전나라 import record for the exact product name. This is a gate for K6.
-2. Overseas plant registration: confirm that the producing factory is on the MFDS overseas registry at least 7 days before each declaration.
-3. Sweetener usage limits in the Korean beverage category (식품첨가물공전). Required for K6 on the sweetener system.
-4. Listing and slotting fee per can at GS25 and 7-Eleven, from a supplier quote. Required for K4 and G4.
-5. A current Laem Chabang or Thai to Busan container or LCL quote. Replaces the freight proxy.
-6. Sugar-levy status after 19 September 2026. A high-case sensitivity is in the model.
-7. Concept and taste test. Pended; needs the user's decision.
+Status: **not validated**. The base case misses the K1 threshold by about KRW 25 per can. The bull case passes at the back-solved ceiling. Entry would need a realised price above the Thai category unit value, a sweetener system confirmed within Korean limits, and a name cleared on KIPRIS.
 
-The company-stated volume and share claims are not on the list. They are unverifiable and the user has no data to settle them.
+The open items that would change the verdict, in order: realised price (a supplier quote and a price test), sweetener limits, listing fees, and a current freight quote. The product's taste and consumer acceptance (P5) remain untested. Fieldwork is pended and needs the user's decision.

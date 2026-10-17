@@ -57,7 +57,7 @@ The realised CIF price dominates in both markets. The levy and tariff matter les
 
 - At category-average realised prices, neither market clears the economic thresholds in the base case. Both are close to break-even.
 - Both markets become positive only if the product can realise a price about 2 to 5 percent above the Thai category unit value, or if fixed costs and exworks cost are lower than assumed.
-- A group route (shared fixed cost, group factory) moves the fixed-cost and exworks lines. Those are sensitivities until the group shows actual costs.
+- The candidate's fixed cost and exworks cost are standalone assumptions. Shared-cost or group-factory routes are not available to the candidate and are not modelled.
 - Korea's base is closer to break-even than Singapore's, but its bull case is much larger. The Korea bull case relies on the ceiling price and a 1.8 share multiplier, neither of which has evidence.
 
 ## Limits

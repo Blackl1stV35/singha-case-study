@@ -2,7 +2,7 @@
 
 Scan: live captures on 17 October 2026 (RedMart, FairPrice, Korean convenience-store and brand pages), with press, peer-reviewed literature (Consensus) and regulator texts. Full scanner output is in the workflow record; the summary below keeps the decision-relevant items.
 
-Perspective: the Boon Rawd group. Group zero-sugar SKUs (Singha Lemon, Yuzu, Lime Lemon zero in Korea; Singha Lemon and Plum zero in Singapore) are shown as category presence and are not treated as competitors (see `05_korea_track_revised.md` and `06_singapore_track_revised.md`).
+Perspective: an external competing candidate in a double-blind competition. Singha's own zero-sugar SKUs (Lemon, Yuzu, Lime Lemon zero in Korea; Lemon and Plum zero in Singapore) are direct competitors (see `05_korea_track_revised.md` and `06_singapore_track_revised.md`).
 
 ## Product-fit verdicts
 
@@ -31,7 +31,7 @@ Zero-sugar sparkling cans already on sale, price per 330 ml can, from the 17 Oct
 | Flojo sparkling wellness | about S$3.50 to S$3.75 | reishi, echinacea, calendula and others | yuzu | sugar unverified in Singapore (US presale about 5 g) | botanical citrus, functional, probably not zero |
 | Curated Culture Refresh | up to S$3 per 245 ml | no | calamansi | xylitol | citrus zero prebiotic soda |
 | Famous Soda Co sugar-free | S$4.58 to S$5.95 per 330 ml | not named | citrus | not named | premium zero citrus tier |
-| Singha Lemon and Plum zero (group) | about S$1.66 on promotion | no | yes | not stated | group presence, excluded from competitors |
+| Singha Lemon and Plum zero (incumbent) | about S$1.66 on promotion | no | yes | not stated | direct competitor |
 
 Gap: no confirmed Singapore SKU combines a named botanical extract, a citrus flavour, zero sugar, no artificial sweetener and no functional claim. Cold Storage and 7-Eleven shelves were not fully reached, so the gap is provisional for those retailers.
 
@@ -46,7 +46,7 @@ Gap: no confirmed Singapore SKU combines a named botanical extract, a citrus fla
 
 ## Korea white space
 
-- Seven citrus zero or sugar-free sparkling SKUs from five brands are on sale in 2026. These include the group's Singha Lemon, Yuzu and Lime Lemon zero range (excluded from competitors, but it shows the category is occupied).
+- Seven citrus zero or sugar-free sparkling SKUs from five brands are on sale in 2026. These include Singha's own Lemon, Yuzu and Lime Lemon zero range, a direct competitor that shows the category is occupied.
 - Third-party citrus zero competitors: Lotte Chilsung Cider Zero Yuja (KRW 2,100 per 355 ml at 7-Eleven); Coca-Cola Zero Lemon Lime (launched 1 August 2026; aspartame, acesulfame-K, sucralose); Pepsi Zero Sugar Lime (KRW 2,100 at GS25); Woongjin The Victoria Cool Lime (lime and mint botanical craft soda, zero sugar and calorie, announced 22 June 2026).
 - Closest botanical zero competitor: Woongjin Victoria Cool Lime. Its sweetener, can size and price are not disclosed.
 - The remaining gap is narrow: a named botanical profile, no functional claim, and a sweetener-free or clearly stated formula.

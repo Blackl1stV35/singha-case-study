@@ -1,0 +1,904 @@
+{
+  "summary": "Generate new-form food or beverage ideas from zero on the three competition axes, with live novelty checks on the Thai market, then judge and pick finalists",
+  "agentCount": 4,
+  "logs": [
+    "Axis agents returned: 3/3"
+  ],
+  "result": {
+    "axes": [
+      {
+        "axis": "Ingredients and Nutrition",
+        "axis_note": "Generated fresh from the case brief on 2026-10-18 without using the earlier team candidates, from about 41 Thai and English web searches (most facts come from search snippets, not full texts). Three ideas return none_found (green-banana resistant-starch RTD, jackfruit-seed RTD, cassava-leaf protein RTD, the last with a serious cyanide-safety barrier), and five already exist in Thailand or abroad, so they are benchmarks rather than novel bets. Green-banana RS and seaweed fibre are fibre-led and may overlap in concept with the earlier fibre soda candidate. Thai FDA notifications 445 to 448 (published 4 January 2024, enforced 2 July 2024) govern nutrition labels and health claims, so blood-sugar and heart claims must be dropped, but the exact protein and fibre thresholds were not verified.",
+        "ideas": [
+          {
+            "name": "Wolffia (ไข่ผำ) protein RTD drink",
+            "format": "Chilled ready-to-drink protein shake with Wolffia globosa powder as the protein base.",
+            "target": "Thai gym-goers and office workers who buy plant protein drinks at convenience stores.",
+            "consumer_hypothesis": "Thai buyers of plant protein drinks may want a local, non-soy protein source they can name.",
+            "what_is_new": "Not new: Flo (Advanced Greenfarm) already sells Wolffia protein shakes, so a Wolffia drink would need a distinct format or flavour to be novel.",
+            "novelty_searches": "Run 2026-10-18 with 4 searches: Thai 'ไข่น้ำ Wolffia เครื่องดื่ม ผลิตภัณฑ์ โปรตีนสูง'; English 'Wolffia globosa protein drink Thailand product'; Thai 'ไข่น้ำ อาหาร ผลิตภัณฑ์ วางจำหน่าย Makro Lazada'; English 'Wolffia duckweed protein food ready to eat Thailand startup'. Verdict: exists.",
+            "existing_found": [
+              "Flo by Advanced Greenfarm (Thailand): Wolffia protein shakes in matcha and vanilla, plus a dessert enhancer (NutraIngredients and FoodNavigator-Asia, 21 Jan 2026)",
+              "Algae matcha Wolffia drink from Mahasarakham University, a promotional piece with no retail listing found",
+              "Frozen Wolffia product from Thai Coconut, an award-winning Sial Innovation entry (WealthyThai)"
+            ],
+            "novelty_verdict": "exists",
+            "ingredient_access_thailand": "Wolffia is grown in Thailand by Advanced Greenfarm and community growers, so raw material is local, though a bulk supply deal for an outside team is unverified.",
+            "production_route": "A specialist grower or powder maker supplies the ingredient, and a co-packer with cold-fill lines makes the drink.",
+            "regulatory_path_thailand": "Standard processed-food registration (เลขสารบบอาหาร) under the Food Act B.E. 2522 applies, with the exact category unverified.",
+            "sources": [
+              "https://www.nutraingredients.com/Article/2026/01/21/thai-firm-flo-revives-superfood-wolffia-for-global-growth",
+              "https://www.foodnavigator-asia.com/Article/2026/01/21/thai-firm-flo-revives-superfood-wolffia-for-global-growth",
+              "https://inter.msu.ac.th/algae-matcha-a-future-protein-innovation-transforming-thai-wolffia-into-a-high-value-health-drink/",
+              "https://www.wealthythai.com/en/updates/news-highlight/14377",
+              "https://www.prd.go.th/th/content/category/detail/id/31/iid/502282"
+            ],
+            "unverified": [
+              "Flo retail prices and shelf presence not checked",
+              "Protein of 40 to 45 percent dry weight comes from a PRD summary, not independently checked",
+              "Thai registration category not verified"
+            ]
+          },
+          {
+            "name": "Upcycled okara (กากถั่วเหลือง) fibre-protein RTD",
+            "format": "Chilled or shelf-stable ready-to-drink soy beverage made with whole soy pulp (okara) for fibre and protein.",
+            "target": "Thai health-conscious consumers who want fibre and protein without added sugar.",
+            "consumer_hypothesis": "Thai soy-milk drinkers may buy a fibre-rich version that uses the pulp their soy-milk makers usually discard.",
+            "what_is_new": "Not new globally, since Taiwan, Singapore and Hong Kong already sell okara soy drinks, so any novelty would have to come from a Thai-specific formula and supply chain, which is unverified.",
+            "novelty_searches": "Run 2026-10-18 with 4 novelty searches: Thai 'กากถั่วเหลือง เครื่องดื่ม อัพไซเคิล' with 'okara soy pulp upcycled drink Thailand'; English 'okara ready to drink fibre protein beverage product'; Thai 'โอคาระ น้ำ ผลิตภัณฑ์ ขายใน 7-Eleven Tops Makro'; English 'okara drink Japan Korea product soy pulp beverage launch'. Verdict: exists abroad, none found in Thailand. Plus one supply search.",
+            "existing_found": [
+              "I-Mei (Taiwan): high-fibre soy milk drinks made from whole beans with okara, in 330 ml and 1 L packs (Tetra Pak TPIndex 2020)",
+              "Soynergy (Singapore, NUS spin-out): non-dairy okara drink at pilot to early commercial stage",
+              "Organic okara soy drink, 900 ml, listed by foodcraft.hk (Hong Kong)",
+              "No Thai retail okara drink found in these searches"
+            ],
+            "novelty_verdict": "exists",
+            "ingredient_access_thailand": "Okara is a by-product of Thai soy-milk and tofu makers and is widely available, but it spoils quickly unless dried according to a Thai research abstract.",
+            "production_route": "A co-packer with a soy-milk line or the team's own small plant, since whole-bean soy drinks need a heat-treatment step.",
+            "regulatory_path_thailand": "Processed soy-beverage registration (เลขสารบบอาหาร) under the Food Act B.E. 2522 applies, with category unverified.",
+            "sources": [
+              "https://www.tetrapak.com/content/dam/tetrapak/publicweb/gb/en/insights/documents/TPIndex2020-I-Mei.pdf",
+              "https://news.nus.edu.sg/nus-food-scientists-create-healthy-probiotic-drink-from-soy-pulp/",
+              "https://foodcraft.hk/products/organic-okara-nomu-soybean-soy-drink-900ml",
+              "https://greyb.com/startups/soynergy/",
+              "https://siweb.dss.go.th/index.php/th/food-abstract/3020-2020-04-01-03-52-03"
+            ],
+            "unverified": [
+              "Thai tofu-shop okara volume and buyer prices not found",
+              "Soynergy current sales status not checked",
+              "Details from snippets only"
+            ]
+          },
+          {
+            "name": "Green-banana (กล้วยดิบ) RS2 resistant-starch RTD",
+            "format": "Chilled, cold-fill ready-to-drink fibre beverage built on unripe Thai banana flour with high RS2 resistant starch.",
+            "target": "Thai adults who want a fibre-rich, lower-sugar drink for daily gut health.",
+            "consumer_hypothesis": "Thai consumers who already buy fibre drinks may try one whose fibre comes from a local banana.",
+            "what_is_new": "No Thai RTD built on green-banana resistant starch was found after 6 searches, although the flour and its resistant-starch content are well studied in Thai research.",
+            "novelty_searches": "Run 2026-10-18 with 6 searches (Thai and English): 'กล้วยดิบ เครื่องดื่ม รีซิสแตนท์สตาร์ช ผลิตภัณฑ์'; 'green banana resistant starch ready to drink beverage product'; 'resistant starch drink Thailand กล้วยดิบ น้ำ ขายออนไลน์'; 'green banana flour resistant starch Thailand supplier kluai dib'; 'น้ำกล้วยดิบ ผงชง เครื่องดื่ม แป้งกล้วยดิบ ผลิตภัณฑ์ ขาย ออนไลน์ ร้านค้า'; 'แป้งกล้วยดิบ ผู้ผลิต ขายส่ง กล้วยหอมทองดิบ วิสาหกิจชุมชน'. Verdict: none found after 6 searches.",
+            "existing_found": [
+              "Brazilian study of a functional milk shake with green-banana resistant starch (research, no product launch)",
+              "NuBana N200 green banana flour, at least 65 percent RS2, marketed for beverage mixes and cold-fill drinks (ingredient, not a Thai product)",
+              "Thai study of banana boba using green Hom Thong flour (food study, not a drink)",
+              "Daily News article promoting unripe banana powder with blood-sugar claims (marketing, not a product listing)"
+            ],
+            "novelty_verdict": "none_found",
+            "ingredient_access_thailand": "Unripe banana flour is made by Thai researchers and community groups, but no commercial Thai seller with a price list was found in 6 searches.",
+            "production_route": "A specialist makes the flour by drying and milling, and a co-packer with cold-fill capacity makes the drink.",
+            "regulatory_path_thailand": "Processed-food registration applies, and the blood-sugar and gut-health claims seen in marketing would need approval, so they must be avoided; the exact category is unverified.",
+            "sources": [
+              "https://www.dailynews.co.th/news/4467606/",
+              "https://www.nutraceuticalsworld.com/live_from_shows/international-agriculture-group-launches-green-banana-flour-containing-65-resistant-starch/",
+              "https://he02.tci-thaijo.org/index.php/ThaiJPEN/article/view/267379",
+              "https://dric.nrct.go.th/Search/SearchDetail/202420",
+              "https://patents.google.com/patent/TH12979C3/th"
+            ],
+            "unverified": [
+              "Thai RS levels of 52.2 to 61.4 percent come from a search snippet, not the full text",
+              "Thai FDA treatment of RS as a fibre claim not checked",
+              "NuBana supplier country and Thai import route not checked"
+            ]
+          },
+          {
+            "name": "Sacha inchi press-cake protein and omega-3 RTD",
+            "format": "Ready-to-drink plant protein beverage made from sacha inchi press cake (the oil by-product), with omega-3 from the seed.",
+            "target": "Thai office workers and gym-goers who want plant omega-3 and protein without fish oil.",
+            "consumer_hypothesis": "Thai consumers who avoid dairy and fish oil may buy a plant drink that carries an omega-3 message if it tastes good.",
+            "what_is_new": "Not new in Thailand: Mahidol University licensed a sacha inchi press-cake beverage with prebiotics and omega-3 to Nikao in August 2022, so the team must first confirm whether that product is on sale.",
+            "novelty_searches": "Run 2026-10-18 with 6 searches (Thai and English): 'ถั่วดาวอินคา เครื่องดื่ม น้ำ โอเมก้า 3 ผลิตภัณฑ์'; 'sacha inchi drink ready to drink Thailand omega-3 plant milk'; 'sacha inchi Thailand cultivation supplier Plukenetia volubilis Chiang Rai Thai farm'; 'sacha inchi milk beverage product launch Asia omega-3 plant-based'; 'Mahidol Nikao sacha inchi protein beverage prebiotic omega-3 license product'; 'มหิดล นิเคโอะ เครื่องดื่มผสมโปรตีนจากกากถั่วดาวอินคา พรีไบโอติก โอเมก้า 3 วางจำหน่าย'. Verdict: exists (licence).",
+            "existing_found": [
+              "Mahidol University licence to Nikao, 24 Aug 2022, for 'ผลิตภัณฑ์เครื่องดื่มผสมโปรตีนจากกากถั่วดาวอินคาเสริมพรีไบโอติกและโอเมก้า 3' (Mahidol PHNU document; sale status not confirmed)",
+              "Kiki Milk Protein (US): sacha inchi protein drink with 10 g plant protein per serving (FoodBev)",
+              "Thai journal study of sacha inchi milk with high alpha-linolenic acid content",
+              "Super Grains Sacha Inchi Omega Plus drink powder (Malaysian retail listing)"
+            ],
+            "novelty_verdict": "exists",
+            "ingredient_access_thailand": "Sacha inchi is grown commercially in Thailand, with Naresuan research comparing Chiang Rai and Phitsanulok crops, but press-cake supply to a new drink maker is unverified.",
+            "production_route": "A specialist or the licensed oil-press partner supplies the cake protein, and a co-packer makes the drink.",
+            "regulatory_path_thailand": "Processed-beverage registration applies, and any omega-3 or heart-health claim falls under Thai FDA health-claim rules that were not verified.",
+            "sources": [
+              "https://phnu.ph.mahidol.ac.th/download/MOU%20Nikao%20Thailand.pdf",
+              "https://li01.tci-thaijo.org/index.php/yru_jst/article/view/130528",
+              "https://www.foodbev.com/news/kiki-milk-introduces-new-kiki-milk-protein-drink-based-on-sacha-inchi-seeds",
+              "https://nuir.lib.nu.ac.th/dspace/handle/123456789/3045",
+              "https://kb.psu.ac.th/psukb/handle/2016/18243"
+            ],
+            "unverified": [
+              "Nikao licence sale status and current product not checked",
+              "Mahidol MOU read from search snippet only, PDF text not extracted",
+              "Omega-3 and ALA values come from snippets"
+            ]
+          },
+          {
+            "name": "Cricket-protein RTE snack or protein drink",
+            "format": "Ready-to-eat high-protein snack (puffed or baked) or ready-to-drink shake built on cricket powder.",
+            "target": "Thai adults buying high-protein snacks, and younger buyers interested in novel protein.",
+            "consumer_hypothesis": "Thai snack buyers may try a cricket-based product if the flavour is familiar and the protein content is clearly stated.",
+            "what_is_new": "Not new: cricket powder, bars and flavoured crickets are already sold in Thailand, and a SiamBugs plant-cricket-probiotic protein powder drink is described without confirmed sales.",
+            "novelty_searches": "Run 2026-10-18 with 4 searches: Thai 'จิ้งหรีด เครื่องดื่ม โปรตีน ผลิตภัณฑ์ ประเทศไทย'; English 'cricket protein drink ready to drink Thailand insect beverage'; Thai 'ผงจิ้งหรีด อย. เลขสารบบอาหาร อาหารแมลง ขนม ขายจริง'; English 'cricket flour insect protein food product Thailand edible insect regulation FDA'. Verdict: exists.",
+            "existing_found": [
+              "Thai Ento Food, Sixtein cricket protein powder, award winner at Food Ingredient Asia (Thailand) 2023 (Kaohoon press release)",
+              "Protanica Cricket Bites, a Thai cricket snack with strong B2B interest (entomofago.eu)",
+              "Hiso Snack flavoured crickets sold in convenience stores (Chiang Mai report, per search snippet)"
+            ],
+            "novelty_verdict": "exists",
+            "ingredient_access_thailand": "Cricket powder is sold in Thailand by Thai Ento Food and Chiang Mai farms, so the raw material is locally available.",
+            "production_route": "A specialist insect processor supplies powder, and a co-packer with extrusion or baking lines makes the snack.",
+            "regulatory_path_thailand": "Insect-based food falls under the Food Act B.E. 2522 registration, but no specific Thai FDA cricket notification was found, so the path is unverified.",
+            "sources": [
+              "https://www.kaohoon.com/pr/629087",
+              "https://www.entomofago.eu/en/2021/08/04/protanica-thailand/",
+              "https://www.nationthailand.com/sustaination/40041902",
+              "https://www.khaosodenglish.com/featured/2023/04/29/thai-edible-insects-exporters-to-singapore/amp/"
+            ],
+            "unverified": [
+              "SiamBugs drink sales status unknown",
+              "No Thai FDA insect notification found in search",
+              "Articles range from 2017 to 2024, so current availability is unconfirmed"
+            ]
+          },
+          {
+            "name": "Jackfruit-seed flour fibre-protein RTD",
+            "format": "Chilled ready-to-drink shake or drink made with jackfruit-seed flour, upcycled from Thai jackfruit processing.",
+            "target": "Thai consumers seeking a local, low-cost fibre drink, and food-waste-conscious buyers.",
+            "consumer_hypothesis": "Thai buyers of upcycled or local-fruit products may try a drink made from a fruit part usually thrown away.",
+            "what_is_new": "No Thai RTD made from jackfruit-seed flour was found after 4 searches, although seed-flour milkshake premixes and Thai seed-flour snacks have been studied.",
+            "novelty_searches": "Run 2026-10-18 with 4 searches: Thai 'เมล็ดขนุน เครื่องดื่ม แป้งเมล็ดขนุน โปรตีน ผลิตภัณฑ์ ขาย'; English 'jackfruit seed drink beverage upcycled protein fibre product'; 'jackfruit seed flour Thailand food product resistant starch research เมล็ดขนุน อัพไซเคิล'; English 'jackfruit seed beverage startup Southeast Asia ready-to-drink'. Verdict: none found after 4 searches.",
+            "existing_found": [
+              "Instant jackfruit-seed milkshake premix, a 2024 research study (Nutrition Connect), powder not RTD",
+              "ICAR-IIHR Arka Halasuras RTD jackfruit beverage, made from pulp not seed (India)",
+              "Thai patent for jackfruit-seed flour snack chips (TH9947A3)",
+              "Mahidol-linked Thai nutrition database entry for a seed-based 'น้ำขนุน' (database recipe, not a product)"
+            ],
+            "novelty_verdict": "none_found",
+            "ingredient_access_thailand": "Jackfruit seeds are discarded in quantity by Thai jackfruit processors, so raw material is local, but a seed-supply contract is unverified.",
+            "production_route": "A specialist makes the seed flour by drying and milling, and a co-packer makes the RTD.",
+            "regulatory_path_thailand": "Processed-food registration under the Food Act B.E. 2522 applies, with category unverified.",
+            "sources": [
+              "https://nutritionconnect.org/resource-center/process-optimization-and-quality-characterization-jackfruit-seed-based-instant",
+              "https://iihr.res.in/node/24299",
+              "https://patents.google.com/patent/TH9947A3/th",
+              "https://hdmall.co.th/nutrition-hub/items/jackfruit-seeds-fresh-raw-99"
+            ],
+            "unverified": [
+              "Seed share of 10 to 15 percent of fruit weight comes from search snippets",
+              "Shelf life and stability of a seed-based RTD not tested",
+              "Thai resistant-starch data from a KMUTNB study not read in full"
+            ]
+          },
+          {
+            "name": "Seaweed (Gracilaria or agar) soluble-fibre low-sugar RTD",
+            "format": "Uncarbonated, low-calorie ready-to-drink fibre beverage using Thai-grown Gracilaria or agar as the soluble fibre.",
+            "target": "Thai adults cutting sugar who want fibre, and vegan drink buyers.",
+            "consumer_hypothesis": "Thai consumers cutting sugar may try a seaweed-fibre drink if it tastes fruity and stays liquid when cold.",
+            "what_is_new": "Not new globally: OoMee (Aqua Theon, US) sells an agar-based seaweed fibre drink with under 5 g sugar, and YGC (Singapore) sells eucheuma seaweed drinks, so a Thai version needs its own flavour and sourcing.",
+            "novelty_searches": "Run 2026-10-18 with 4 searches: Thai 'สาหร่ายเครื่องดื่ม ไฟเบอร์ สาหร่ายผมนาง น้ำสาหร่าย ผลิตภัณฑ์ วางขาย'; English 'seaweed Gracilaria soluble fibre beverage ready to drink product'; Thai 'seaweed drink Thailand product fucoidan fibre เครื่องดื่มสาหร่าย'; English 'seaweed beverage brand launch Asia dietary fiber sugar-free drink 2025 2026'. Verdict: exists abroad; none found on the Thai market.",
+            "existing_found": [
+              "OoMee (Aqua Theon, US): agar-based seaweed soluble and insoluble fibre drink, about 20 kcal and under 5 g sugar, company-reported to be in about 700 US stores (Green Queen)",
+              "YGC Group (Singapore) eucheuma seaweed health drinks in 150 ml bottles (GAMA Consumer)",
+              "Sea Vegetable Company (Japan) seaweed kombucha, launch date unclear",
+              "Sealife Gracilaria fibre powder (India), which sets when heated so is a poor fit for a clear cold drink (GlobalLinker)"
+            ],
+            "novelty_verdict": "exists",
+            "ingredient_access_thailand": "Gracilaria (ผมนาง) is farmed by growers in Songkhla according to a PSU study, but a food-grade fibre or agar supply to a drink maker was not found.",
+            "production_route": "A co-packer with hot-fill or aseptic lines, plus an agar or fibre specialist, since the gelling needs tight formulation control.",
+            "regulatory_path_thailand": "Processed-beverage registration applies, and any fibre claim falls under Thai nutrient-claim rules that were not verified.",
+            "sources": [
+              "https://www.greenqueen.com.hk/aqua-theon-oomee-seaweed-drink-glp-1-functional-beverages/",
+              "https://www.gamaconsumer.com/?p=6572",
+              "https://globallinker.com/products/sea-life-8250366",
+              "https://kb.psu.ac.th/items/a2defacf-e578-423a-bdb3-079118b12d53/full"
+            ],
+            "unverified": [
+              "OoMee sales claims are company-reported",
+              "Thai agar supply not checked",
+              "Sea Vegetable kombucha launch date not confirmed"
+            ]
+          },
+          {
+            "name": "Detoxified cassava-leaf protein RTD",
+            "format": "Ready-to-drink plant protein drink made from cassava-leaf protein concentrate after validated cyanide removal.",
+            "target": "Thai adults seeking local plant protein and food-waste upcycling, initially a niche premium segment.",
+            "consumer_hypothesis": "Thai consumers wanting local plant protein may try a cassava-leaf drink if the taste is neutral and the safety is proven.",
+            "what_is_new": "No cassava-leaf protein RTD was found after 4 searches, and Fourth Culture's Jani is a shelf-stable stew rather than a drink, so the novelty is real but the safety barrier is high.",
+            "novelty_searches": "Run 2026-10-18 with 4 searches: Thai 'ใบมันสำปะหลัง โปรตีน เครื่องดื่ม ผลิตภัณฑ์ ขาย ใบมันสำปะหลังเข้มข้น'; English 'cassava leaf protein concentrate drink beverage product Thailand'; English 'cassava leaf protein food product launch leaf protein ready to drink Asia'; Thai 'ใบมันสำปะหลัง ผงโปรตีน ไซยาไนด์ กำจัด อาหารมนุษย์ งานวิจัย ประเทศไทย'. Verdict: none found after 4 searches.",
+            "existing_found": [
+              "Jani (Fourth Culture Food Group): shelf-stable cassava-leaf stew using leaves sourced from Thailand, with company-reported almost 30 percent plant protein (Substack)",
+              "Thai cassava leaves used mainly as animal feed, with research only (Chulalongkorn leaf protein thesis; Tropentag 2018)",
+              "Thai Chulalongkorn thesis on leaf protein concentrate extraction conditions (research, not a product)"
+            ],
+            "novelty_verdict": "none_found",
+            "ingredient_access_thailand": "Cassava leaves are plentiful in Thai cassava fields, but no commercial leaf-protein concentrate seller in Thailand was found in 4 searches.",
+            "production_route": "The team's own specialist plant with validated detoxification, since a co-packer is unlikely to take on the cyanide-control risk.",
+            "regulatory_path_thailand": "Food Act registration applies, and a cyanide limit for cassava-leaf protein is needed, but the Thai limit was not found and is unverified.",
+            "sources": [
+              "https://gourmetpro.substack.com/p/jani-a-new-type-of-plant-based-product",
+              "https://www.tropentag.de/2018/abstracts/pdf/879.pdf",
+              "https://cuir.car.chula.ac.th/handle/123456789/9468",
+              "https://www.scielo.br/j/rbeaa/a/7KwWgRqn4Pyyd9VQv7DV6bq/abstract/?lang=en"
+            ],
+            "unverified": [
+              "Cyanide figures of 150 to 250 ppm against a 10 to 50 ppm safe range come from search snippets, not full texts",
+              "Thai cyanide limit for food not verified",
+              "Jani sourcing from Thailand is company-reported"
+            ]
+          }
+        ]
+      },
+      {
+        "axis": "Alternative Formats",
+        "axis_note": "Six of seven formats already exist somewhere (an edible grain cup sold by a Thai maker, the Ooho membrane abroad, scent-led drinking from air up, sphere ice in bars, dose caps for probiotics, and compressed coffee cubes in the US), so any Thai entry would need its novelty in flavour, ingredient or ritual rather than in the format itself. The one open gap, a leaf-wrapped frozen drink, returned none found after 6 searches, but its food-safety, cold-chain and leaf-supply feasibility are weakly grounded. Retail checks at Makro, Tops, 7-Eleven, Lazada and Shopee were run only through combined queries, and Boots and Villa Market were not searched, so direct store and marketplace checks are still needed. Searches were run on 2026-10-18, and several sources are dated (2013 to 2019). The earlier team candidates (citrus, malt fibre, premium glass, tea, fibre soda) were not used as starting points.",
+        "ideas": [
+          {
+            "name": "Edible grain cup for drinks (eat-after-sipping cup)",
+            "format": "Cup made from millet or wholegrain flour in wafer or biscuit form that is eaten after the drink is finished.",
+            "target": "Bangkok office workers and cafe-goers who avoid single-use plastic",
+            "consumer_hypothesis": "Working-age Bangkok consumers rated edible cups highly on attitude and perceived innovation in a 2023 Srinakharinwirot survey of 400 respondents (abstract only, not full text).",
+            "what_is_new": "The format is not new in Thailand because a millet-based edible cup is already listed by a Thai firm, so a team entry would need a distinct Thai flavour or ingredient to differ.",
+            "novelty_searches": "Searched on 2026-10-18 with 5 queries: 'edible cup drink Thailand product แก้วกินได้ เครื่องดื่ม'; 'edible drinking cup rice seaweed beverage product 2025'; 'ถ้วยกินได้ ข้าว สาหร่าย แก้วน้ำ กินได้ ผลิตภัณฑ์ ไทย'; 'edible cup drink Makro Tops 7-Eleven Shopee Lazada'; 'Mister Cone แก้วกินได้ ซื้อ ราคา จำหน่าย ประเทศไทย'.",
+            "existing_found": [
+              "Mister Cone edible cup, millet-based and gluten-free, from Thai firm K.C.L. Trading Co., Ltd., shown at Thaifex Anuga Asia 2024 (https://thaifex-anuga.com/new-to-market-street/mister-cone-edible-wafer-cup/)",
+              "Mister Cone Waffle Bowl M listing on Lazada Thailand, shown as sold out and not confirmed to be the same cup (https://h5.lazada.co.th/products/mistercone-waffle-bowl-m-40-i4903349581.html)",
+              "7-Eleven Guangdong biscuit-cup latte launched 2026 in China, not Thailand (https://www.huxiu.com/article/4835461.html)"
+            ],
+            "novelty_verdict": "exists",
+            "ingredient_access_thailand": "Millet and rice flours are sold in Thai markets, but no Thai supplier was verified by search, so this is unverified.",
+            "production_route": "A specialist wafer or biscuit co-packer is the likely route, because the existing Thai maker's name suggests a trading firm rather than a manufacturer, which is an inference (https://thaifex-anuga.com/new-to-market-street/mister-cone-edible-wafer-cup/).",
+            "regulatory_path_thailand": "A Thai FDA food registration (เลขสารบบอาหาร) probably applies to the cup as a processed food, but the exact category and fees are unverified.",
+            "sources": [
+              "https://thaifex-anuga.com/new-to-market-street/mister-cone-edible-wafer-cup/",
+              "https://h5.lazada.co.th/products/mistercone-waffle-bowl-m-40-i4903349581.html",
+              "https://www.huxiu.com/article/4835461.html",
+              "https://ir.swu.ac.th/entities/publication/1f31931e-1ed3-49dd-9190-15a33cc2c256/full"
+            ],
+            "unverified": [
+              "Thai flour supplier for millet or rice flour",
+              "Whether the Mister Cone cup is still sold in Thailand",
+              "Thai registration category and fees",
+              "Direct checks at Makro, Tops, 7-Eleven, Lazada and Shopee"
+            ]
+          },
+          {
+            "name": "Edible coconut-water membrane sphere (pop-and-sip)",
+            "format": "Alginate and calcium gel membrane that encloses coconut water and is bitten or swallowed as one piece.",
+            "target": "Runners, festival-goers and event sponsors who want zero-waste hydration",
+            "consumer_hypothesis": "Event-goers are likely to try a pop-and-sip sphere at a sports or festival booth, based on the London Marathon trial of the Ooho membrane (https://www.imperial.ac.uk/news/190938/edible-water-bottles-developed-imperial-start-up/).",
+            "what_is_new": "The membrane format already exists abroad as Ooho, so the Thai angle would be coconut water as the filling plus a shelf-life solution, which is unverified.",
+            "novelty_searches": "Searched on 2026-10-18 with 3 queries: 'edible membrane water sphere alginate coconut water pop Thailand'; 'ไข่มุกน้ำ อัลจิเนต แคลเซียม เยลลี่ น้ำมะพร้าว ทานได้ ทั้งเปลือก'; 'Ooho edible water bubble seaweed membrane commercial product'; no Thai retail product was found after these 3 searches.",
+            "existing_found": [
+              "Ooho edible water bubble by Skipping Rocks Lab, sold in 20, 55 and 150 ml sizes with a shelf life of days, mainly at trials and events (https://materialdistrict.com/article/edible-water-bubble-ooho-plastic-bottles/)",
+              "Ooho London Marathon trial with Imperial start-up, reported by Imperial College London (https://www.imperial.ac.uk/news/190938/edible-water-bottles-developed-imperial-start-up/)"
+            ],
+            "novelty_verdict": "exists",
+            "ingredient_access_thailand": "Food-grade sodium alginate and calcium lactate are offered by Chinese traders and online sellers with no Thai distributor found, so Thai access is unverified (https://www.echemi.com/produce/pr2607093391-sodium-alginate-cas-9005-38-3-food-grade-thickener-stabilizer-manufacturer.html).",
+            "production_route": "A specialist food-tech co-packer with a cold chain is the likely route, because the membrane keeps only a few days (https://materialdistrict.com/article/edible-water-bubble-ooho-plastic-bottles/).",
+            "regulatory_path_thailand": "Thai novel food rules may apply, since food with under 15 years of human consumption evidence or made by an innovative process needs safety assessment before production or import, but whether this membrane counts is unverified (https://www.tilleke.com/insights/thailands-novel-food-approvals-why-exclusivity-matters-for-the-food-industry/).",
+            "sources": [
+              "https://materialdistrict.com/article/edible-water-bubble-ooho-plastic-bottles/",
+              "https://www.imperial.ac.uk/news/190938/edible-water-bottles-developed-imperial-start-up/",
+              "https://www.echemi.com/produce/pr2607093391-sodium-alginate-cas-9005-38-3-food-grade-thickener-stabilizer-manufacturer.html",
+              "https://www.ingredientsnetwork.com/47/company/27/32/20/exhibitor273220-580.html",
+              "https://www.tilleke.com/insights/thailands-novel-food-approvals-why-exclusivity-matters-for-the-food-industry/"
+            ],
+            "unverified": [
+              "Thai distributor for food-grade alginate or calcium lactate",
+              "Shelf-life solution for Thai distribution",
+              "Whether the membrane falls under Thai novel food rules",
+              "Coconut water membrane stability in trials"
+            ]
+          },
+          {
+            "name": "Scent-release lid for sugar-reduced Thai herb drinks",
+            "format": "Drinking lid with a food-grade aroma insert (lemongrass, pandan or kaffir lime) that releases scent toward the nose while sipping.",
+            "target": "Adults cutting sugar who still want sweet-aroma cues in cafe drinks",
+            "consumer_hypothesis": "Consumers cutting sugar may accept a scent-led sip if the aroma supplies the sweetness cue, the premise of air up's scent drinking system (https://shop.air-up.com/at/en/what-makes-the-air-up-bottle-different).",
+            "what_is_new": "Scent-led flavour already exists in air up bottles and aroma-lid patents, so the open gap is a lid for Thai herb aromas on cafe cups, which the search did not find.",
+            "novelty_searches": "Searched on 2026-10-18 with 4 queries: 'scented aroma lid cup flavor drink without sugar lemongrass pandan'; 'air up scent drinking bottle Thailand sale'; 'ฝาแก้วปล่อยกลิ่น เครื่องดื่ม กลิ่นหอม ลดน้ำตาล ผลิตภัณฑ์'; 'aroma cup lid scent release drinking experience Japan product flavor without calories'.",
+            "existing_found": [
+              "air up scent-based drinking bottles with flavour pods such as Strawberry-Lemongrass, sold on air up's own shop, with Thai availability not confirmed (https://shop.air-up.com/gb/en/flavors/strawberry-lemongrass-pod-3-pcs)",
+              "US10856682B2, aroma-enhancing beverage containers and lids (https://patents.google.com/patent/US10856682)",
+              "US 5635229, scent disbursement means on a flip-open cap (https://patents.justia.com/patent/5635229)",
+              "Kaoru Cup, a Takatori-ware scent cup from Fukuoka (https://hiroshionaka.substack.com/p/kaoru-cup)"
+            ],
+            "novelty_verdict": "exists",
+            "ingredient_access_thailand": "Fresh lemongrass and pandan are common in Thai markets (general knowledge, not checked by search), and no Thai seller of food-grade aroma inserts was found, so this is unverified.",
+            "production_route": "A packaging specialist for lid moulding with a co-packer for the aroma insert is the likely route, and a Canadian patent notes that pod-based aroma lids are bulky and costly (https://brevets-patents.ic.gc.ca/opic-cipo/cpd/eng/patent/2949166/summary.html).",
+            "regulatory_path_thailand": "A food registration for the drink plus food-contact or packaging rules for the lid probably apply, but no lid-specific Thai rule was found (unverified).",
+            "sources": [
+              "https://shop.air-up.com/gb/en/flavors/strawberry-lemongrass-pod-3-pcs",
+              "https://shop.air-up.com/at/en/what-makes-the-air-up-bottle-different",
+              "https://patents.google.com/patent/US10856682",
+              "https://patents.justia.com/patent/5635229",
+              "https://hiroshionaka.substack.com/p/kaoru-cup",
+              "https://brevets-patents.ic.gc.ca/opic-cipo/cpd/eng/patent/2949166/summary.html"
+            ],
+            "unverified": [
+              "Thai availability of air up products",
+              "Thai supplier of food-grade aroma inserts",
+              "Scent stability over a drink's shelf life",
+              "Thai lid-specific registration rules"
+            ]
+          },
+          {
+            "name": "Coconut-pandan sphere ice for slow-melt drinks",
+            "format": "Coconut-water or coconut-milk ice sphere infused with pandan that melts slowly in a glass and is served as a presentation ritual.",
+            "target": "Bangkok cafe and bar customers who want a slow-melt, undiluted drink",
+            "consumer_hypothesis": "Drinkers may pay for a presentation that dilutes less, because sphere makers sell the smaller surface area and slower melt (https://thetakeout.com/1848980961).",
+            "what_is_new": "Sphere ice is already used in bars and coconut or fruit ice-ball recipes exist at home, so only a pandan-coconut version served in a Thai cafe would be new, and that is unverified.",
+            "novelty_searches": "Searched on 2026-10-18 with 4 queries: 'ice sphere drink ice ball cafe Thailand ก้อนน้ำแข็งทรงกลม เครื่องดื่ม คาเฟ่'; 'frozen fruit ice sphere melts into drink coconut pandan ice ball serve'; 'ก้อนน้ำแข็งทรงกลม ร้านกาแฟ ชา กรุงเทพ sphere ice'; 'แม่พิมพ์น้ำแข็งทรงกลม ซิลิโคน Shopee Lazada ขาย'.",
+            "existing_found": [
+              "Sphere ice makers and molds sold to bars and home users (https://www.katom.com/cat/a/sphere-ice-maker.html)",
+              "HomePro round ice mold that makes up to 3 spheres per tray in Thailand (https://www.homepro.co.th/p/1269564)",
+              "Lazada Thailand ice-mould listings, mostly square, with a round-ball listing seen without price or sales data (https://www.lazada.co.th/trending/Ice-Trays-Moulds-Top-Deals-This-Month/692064567)",
+              "Coconut-water and fruit ice-ball home recipes (https://www.zokuhome.com/blogs/news/15256353-ice-ball-drink)"
+            ],
+            "novelty_verdict": "exists",
+            "ingredient_access_thailand": "Silicone sphere molds are sold in Thailand by HomePro and listed on Lazada, while pandan and coconut water are common local inputs that the sources did not confirm (https://www.homepro.co.th/p/1269564).",
+            "production_route": "A cafe kitchen can make the sphere with a mould, so no factory route is needed for a cafe version (https://www.homepro.co.th/p/1269564).",
+            "regulatory_path_thailand": "Food rules probably apply to a sold sphere-ice product, but no ice-specific Thai rule was verified (unverified).",
+            "sources": [
+              "https://www.katom.com/cat/a/sphere-ice-maker.html",
+              "https://www.homepro.co.th/p/1269564",
+              "https://www.lazada.co.th/trending/Ice-Trays-Moulds-Top-Deals-This-Month/692064567",
+              "https://www.zokuhome.com/blogs/news/15256353-ice-ball-drink",
+              "https://thetakeout.com/1848980961"
+            ],
+            "unverified": [
+              "Thai cafe use of sphere ice for drinks",
+              "Thai ice-specific rules",
+              "Pandan infusion stability in frozen spheres",
+              "Consumer willingness to pay for slow melt"
+            ]
+          },
+          {
+            "name": "Push-to-mix dose cap for functional herbal powder",
+            "format": "Bottle cap that stores a dry herbal or functional powder, such as lemongrass-ginger, and releases it into the drink on a press.",
+            "target": "Gym-goers and office workers who want a functional shot without a fridge",
+            "consumer_hypothesis": "Shot buyers may accept a press-to-mix cap for a shelf-stable functional dose, since the DRYCAP probiotic shot and the Shinsen dosing cap were sold on that premise (https://www.nutritioninsight.com/news/chr-hansen-and-partner-biofarma-debut-new-probiotic-concept.html).",
+            "what_is_new": "Dose caps already exist for probiotics, so the new element would be a Thai herbal powder such as lemongrass-ginger in a dose cap for a local drink, which the search did not find.",
+            "novelty_searches": "Searched on 2026-10-18 with 4 queries: 'push cap dual chamber bottle cap release powder into drink Thailand ฝาแยกช่อง กดแล้วผสม'; 'two compartment bottle cap shot mix beverage functional shot ginger lemongrass'; 'dual chamber cap powder shot probiotic drink product bottle cap mix release brand'; 'ฝาขวดเก็บผง กดฝาให้ผงตกลงในน้ำ เครื่องดื่ม ประเทศไทย ขาย'.",
+            "existing_found": [
+              "DRYCAP probiotic shot by Chr. Hansen and Biofarma, debuted 2013 as a 10 ml dose (https://www.nutritioninsight.com/news/chr-hansen-and-partner-biofarma-debut-new-probiotic-concept.html)",
+              "Shinsen Cap dosing cap with BB-12 powder and at least one year shelf life, dated 2019 (https://www.foodingredientsfirst.com/news/chr-hansen-partners-on-probiotics-in-new-shelf-stable-format.html)",
+              "US8839982B1, dual-chamber dispensing capsule patent (https://patents.google.com/patent/US8839982)"
+            ],
+            "novelty_verdict": "exists",
+            "ingredient_access_thailand": "Dry herbal powders such as lemongrass and ginger are sold in Thailand, but no supplier was checked by search, so this is unverified.",
+            "production_route": "A specialist closure maker plus a powder-filling co-packer is the likely route, since dose caps need a separately sealed compartment (https://lallemand-health-solutions.com/en/blog/the-future-is-in-the-format).",
+            "regulatory_path_thailand": "A food registration for the powder drink applies, and food-contact rules for the cap plus Thai Notification 310 (2551) on non-food items in food packaging may apply, both unverified (https://exfood.fda.moph.go.th/law/data/announ_fda/057Explain_Notification_310(2551).pdf).",
+            "sources": [
+              "https://www.nutritioninsight.com/news/chr-hansen-and-partner-biofarma-debut-new-probiotic-concept.html",
+              "https://www.foodingredientsfirst.com/news/chr-hansen-partners-on-probiotics-in-new-shelf-stable-format.html",
+              "https://lallemand-health-solutions.com/en/blog/the-future-is-in-the-format",
+              "https://patents.google.com/patent/US8839982",
+              "https://exfood.fda.moph.go.th/law/data/announ_fda/057Explain_Notification_310(2551).pdf"
+            ],
+            "unverified": [
+              "Current sales status of DRYCAP and Shinsen cap products",
+              "Thai supplier of dose caps",
+              "Thai herbal powder supply",
+              "Whether Notification 310 applies to a cap that holds food powder"
+            ]
+          },
+          {
+            "name": "Leaf-wrapped frozen coconut drink pop",
+            "format": "Frozen coconut or pandan drink sealed in a banana or pandan leaf wrapper that is peeled open and sipped as it thaws.",
+            "target": "Thai consumers who value traditional, plastic-free packaging",
+            "consumer_hypothesis": "Buyers who value plastic-free and traditional packaging may pay for a leaf wrap that reads as local, since Chiang Mai's Rimping supermarket moved produce to banana-leaf wraps in 2019 (https://thedieline.com/blog/2019/3/29/thailand-supermarket-says-no-to-single-use-plastics-wraps-produce-in-banana-leaves).",
+            "what_is_new": "Leaf-wrapped foods exist, but no leaf-wrapped drink or frozen drink pop was found, so this would be a first in these results, which is not proof of absence.",
+            "novelty_searches": "Searched on 2026-10-18 with 6 queries: 'เครื่องดื่มห่อใบตอง บรรจุภัณฑ์ ใบตอง น้ำ ผลิตภัณฑ์ ไทย'; 'drink packaged in banana leaf or pandan leaf wrap beverage sachet product'; 'น้ำดื่มห่อใบตอง OTOP ใบเตย บรรจุภัณฑ์ใบไม้ ขายในไทย'; 'banana leaf packaging Thailand beverage OTOP drink wrapped leaf sold'; 'ไอติมห่อใบตอง ไอศกรีมกะทิ ห่อใบตอง แช่แข็ง ขาย'; 'frozen coconut drink popsicle wrapped in banana leaf Thailand street vendor'; none found after 6 searches.",
+            "existing_found": [
+              "Rimping Supermarket, Chiang Mai, banana-leaf wraps for fresh produce since 2019, still with some plastic stickers (https://thedieline.com/blog/2019/3/29/thailand-supermarket-says-no-to-single-use-plastics-wraps-produce-in-banana-leaves)",
+              "Malaysian kuih tepung pelita moved from banana-leaf wraps to plastic cups, a counter-trend example (https://says.com/my/seismik/makan/why-vendors-sell-tepung-pelita-inside-plastic-cups)"
+            ],
+            "novelty_verdict": "none_found",
+            "ingredient_access_thailand": "Banana leaves are common in Thai markets and are a by-product of banana cultivation, but no leaf supplier was verified by search, so this is unverified (https://consumer.org.my/?p=49623 covers leaf properties only).",
+            "production_route": "A small community enterprise or a frozen-food co-packer able to hand-wrap is the likely route, which is unverified because no Thai leaf-wrapped beverage maker was found.",
+            "regulatory_path_thailand": "A food registration for a frozen drink applies and leaf packaging may need Thai FDA review, but no leaf-wrap rule was found (unverified).",
+            "sources": [
+              "https://thedieline.com/blog/2019/3/29/thailand-supermarket-says-no-to-single-use-plastics-wraps-produce-in-banana-leaves",
+              "https://says.com/my/seismik/makan/why-vendors-sell-tepung-pelita-inside-plastic-cups",
+              "https://consumer.org.my/?p=49623"
+            ],
+            "unverified": [
+              "Banana leaf supply and food-safety of leaf contact with drinks",
+              "Cold-chain feasibility of leaf-wrapped frozen pops",
+              "Thai FDA rules for leaf packaging",
+              "Consumer acceptance of leaf-wrapped drinks"
+            ]
+          },
+          {
+            "name": "Compressed coffee cube that dissolves in cold milk",
+            "format": "Compacted instant coffee cube with milk powder or sugar, dropped into cold milk or water to make an iced coffee without ice.",
+            "target": "Office workers who want a quick iced coffee that does not dilute",
+            "consumer_hypothesis": "Iced-coffee drinkers may switch to a cube that avoids ice dilution, based on how common home frozen coffee cubes already are (https://nescafe.com/ph/recipes/coffee-ice-cubes-milk).",
+            "what_is_new": "Compressed coffee cubes already exist (Santo Cubes, US, 2018), so the new element would be a cold-dissolving Thai version with a local flavour, which is unverified.",
+            "novelty_searches": "Searched on 2026-10-18 with 3 queries: 'กาแฟก้อนละลายน้ำเย็น ชงเย็น กาแฟก้อน ผลิตภัณฑ์'; 'frozen coffee cube drop into milk instant cold brew cube product Thailand'; 'compressed instant coffee tablet cube dissolve cold water milk product launch Thailand'.",
+            "existing_found": [
+              "Santo Cubes, compressed coffee and cane sugar cubes that dissolve in hot milk or water, US, 2018 (https://www.foodnavigator-usa.com/Article/2018/10/11/Santo-Cubes-aims-to-update-instant-coffee-set-with-launch-of-coffee-cubes)",
+              "Chulalongkorn University study on compressed instant coffee tablets (https://cuir.car.chula.ac.th/handle/123456789/78333)",
+              "Thai patent TH149244B on a method for making soluble coffee pellets (https://patents.google.com/patent/TH149244B/th)",
+              "Nescafé Concentrate Ready-to-Mix in Thailand, a liquid concentrate rather than a cube (https://www.matichon.co.th/economy/news_5386411)"
+            ],
+            "novelty_verdict": "exists",
+            "ingredient_access_thailand": "Instant coffee and milk powder are sold widely in Thailand, with Nescafé the nearest brand (https://www.matichon.co.th/economy/news_5386411), but a compacting-grade coffee supplier was not verified.",
+            "production_route": "A compaction line at a specialist instant-coffee co-packer is the likely route, per the Chulalongkorn compressed-coffee study (https://cuir.car.chula.ac.th/handle/123456789/78333).",
+            "regulatory_path_thailand": "A Thai FDA food registration (เลขสารบบอาหาร) probably applies to the cube as an instant coffee product, but the category and fees are unverified.",
+            "sources": [
+              "https://www.foodnavigator-usa.com/Article/2018/10/11/Santo-Cubes-aims-to-update-instant-coffee-set-with-launch-of-coffee-cubes",
+              "https://cuir.car.chula.ac.th/handle/123456789/78333",
+              "https://patents.google.com/patent/TH149244B/th",
+              "https://www.matichon.co.th/economy/news_5386411",
+              "https://nescafe.com/ph/recipes/coffee-ice-cubes-milk"
+            ],
+            "unverified": [
+              "Cold-water dissolve performance of compressed coffee cubes",
+              "Thai compacting-grade coffee supplier",
+              "Thai registration category and fees",
+              "Whether any Thai coffee cube is on sale"
+            ]
+          }
+        ]
+      },
+      {
+        "axis": "New Trend-Driven Target",
+        "axis_note": "Checked 2026-10-18 using a general web search engine and a few direct page fetches; store sites (Makro, Tops, Boots, Villa Market, Lazada, Shopee) were not opened directly, so 'none found' means none found in these searches, not absence. Dated trend anchors: the Thai FDA made injectable GLP-1 pens prescription-only from 15 Sep 2026 (Nation Thailand article dated 14 Sep 2026); Mintel's 2026 Thailand Women's Wellness Consumer Report (dated 30 Jun 2026, paywalled) calls hormone balance a major gap for Thai women; an NSO document (file metadata 29 Apr 2026) says Thailand has the highest 60+ population share in ASEAN in 2025, and a Statista chart credited to NESDC gives 20.17% aged 60+ in 2023. Novelty outcomes: the menopause isoflavone RTD (none found after 4 product searches) and the autism sensory-friendly snack (none found after 4 product searches) are the two checkable gaps; the autism trend evidence is weak and marked unverified. The GLP-1 savoury broth, the texture-modified elderly meal, the sahur protein drink and the dust-season drink already exist in Thailand or abroad, and the sober-curious NA herbal RTD is unclear after only 2 product searches. No Singha factory, importer, data or trademark is assumed, and no earlier team candidate (citrus, malt-fibre, premium glass, tea, fibre soda) was reused.",
+        "ideas": [
+          {
+            "name": "Midlife Women Standardised-Isoflavone Unsweetened Soy Drink",
+            "format": "250 ml unsweetened UHT soy drink with a labelled isoflavone dose per serving, positioned as an evening drink, sold through pharmacies, supermarkets and e-commerce.",
+            "target": "Thai women aged 40 to 59 in perimenopause or menopause with hot flushes or disturbed sleep, who prefer a daily food habit over capsules.",
+            "consumer_hypothesis": "Women who dislike capsules may buy a soy drink with a labelled isoflavone dose; plain Thai soy milk carries only about 9.65 mg isoflavone per 100 g (Mahidol table), so a labelled dose needs added standardised isoflavone. Thai demand is unverified.",
+            "what_is_new": "No isoflavone-standardised RTD soy drink for this group was found in Thailand; the closest existing products are isoflavone capsules sold abroad, so global novelty is unverified.",
+            "novelty_searches": "Run 2026-10-18. Thai: 'เครื่องดื่มสำหรับวัยทอง ไอโซฟลาโวน ถั่วเหลือง ร้อนวูบวาบ ผลิตภัณฑ์ วางขาย ไทย'; 'น้ำเต้าหู้ ไอโซฟลาโวน สูง ผู้หญิง วัยทอง สูตรพิเศษ ผลิตภัณฑ์ ญี่ปุ่น ไทย วางขาย'; 'อาหารเสริมวัยทอง ผู้หญิง 40 ปี ขึ้นไป เครื่องดื่ม นอนหลับ อารมณ์ ผลิตภัณฑ์ ไทย 2569'; 'สารสกัดถั่วเหลือง ไอโซฟลาโวน ผู้ผลิต ผู้จำหน่าย ประเทศไทย'. English: 'menopause drink ready to drink product launch Asia phytoestrogen soy isoflavone beverage 2025 2026'; market context: 'Mintel Thailand women's wellness 2026 mid-life women hormonal health food beverage'. None found after 4 product searches (Thai and English); only capsules and plain soy foods surfaced.",
+            "existing_found": [
+              "Holistic Way Menopause Relief, Singapore: once-daily plant capsule with soy isoflavones, hops extract and flax lignan, press release dated 6 Aug 2026; a capsule, not a drink (https://www.malaymail.com/news/money/mediaoutreach/2026/08/06/holistic-way-unveils-new-plant-based-menopause-relief-supplement/479621)",
+              "Thai menopause diet and supplement articles recommend soy foods and herbal blends with no isoflavone RTD drink named (https://www.naewna.com/lady/837987)"
+            ],
+            "novelty_verdict": "none_found",
+            "ingredient_access_thailand": "Soy isoflavone extract suppliers in Thailand were not identified in search, so ingredient access is unverified.",
+            "production_route": "A co-packer with UHT and dosing capacity is the likely route, since Thai contract drink makers exist but none was verified for isoflavone drinks.",
+            "regulatory_path_thailand": "Likely Thai FDA supplement registration (supplements must be registered per the BOI guidance), with nutrient-function claims governed by a separate FDA notification; the exact route is unverified.",
+            "sources": [
+              "Mintel, Thailand Women's Wellness Consumer Report 2026, dated 30 Jun 2026 (https://store.mintel.com/report/thailand-womens-wellness-market-report)",
+              "Mahidol pharmacy isoflavone table (https://pharmacy.mahidol.ac.th/knowledge/files/0002.pdf)",
+              "Holistic Way press release, 6 Aug 2026 (https://www.malaymail.com/news/money/mediaoutreach/2026/08/06/holistic-way-unveils-new-plant-based-menopause-relief-supplement/479621)",
+              "BOI healthcare document on supplement registration (https://www.boi.go.th/upload/Healthcare_medical_th.pdf)",
+              "Tilleke note on Thai health claims for food supplements (https://www.tilleke.com/insights/thailand-health-claims-for-food-supplements-and-tips-for-the-industry/)"
+            ],
+            "unverified": [
+              "Size of the Thai midlife women population (not sourced)",
+              "A small Iranian pre-post study (n=31, about 74 mg per day isoflavone) was the only dose reference found; it is not Thai evidence",
+              "Full Mintel text is paywalled (listed at USD 2,995), so only the public summary was read",
+              "Store-level audit of Makro, Tops, Boots and Watsons was not completed",
+              "Claim wording, dose safety and Thai regulatory category"
+            ]
+          },
+          {
+            "name": "Batch-Consistent Low-Sensory Snack and Drink for Autistic Children",
+            "format": "Single-texture, mild-flavour, low-odour snack pouch and 150 ml drink with identical texture batch to batch, with a visual cue on the pack; sold through pharmacies, online and clinic channels.",
+            "target": "Autistic children aged about 3 to 12 with food selectivity by texture or smell, and their parents.",
+            "consumer_hypothesis": "Parents who struggle to find foods their child accepts may pay for repeatable texture and smell; this is untested in Thailand.",
+            "what_is_new": "A Thai packaging thesis exists (Naresuan repository, 2017) but no commercial food designed around sensory selectivity was found; global novelty is unverified because foreign results were blogs and guidance pages.",
+            "novelty_searches": "Run 2026-10-18. Thai: 'อาหารสำหรับเด็กออทิสติก ผลิตภัณฑ์ เนื้อสัมผัสคงที่ ไม่ระคายประสาทสัมผัส ขายในไทย'; 'ขนมและเครื่องดื่มสำหรับเด็กพิเศษ ออทิสติก ผลิตภัณฑ์ไทย ขายออนไลน์ เนื้อสัมผัสเหมือนเดิมทุกครั้ง'. English: 'sensory friendly food product autistic children texture picky eating brand launch Thailand OR Asia 2025 2026'; 'universal design food sensory sensitive children snack brand Japan Korea Thailand 2026 autism-friendly packaged food product'. None found after 4 product searches; results were guidance pages and a 2017 packaging thesis.",
+            "existing_found": [
+              "Naresuan University repository thesis (2017) on snack and drink packaging for autistic children; a design study, not a product (https://nuir.lib.nu.ac.th/dspace/handle/123456789/4402)",
+              "Minnesota Department of Health sensory-support guidance, updated April 2026; guidance, not a product (https://www.health.mn.gov/docs/people/wic/localagency/topicmonth/sensorysupport.pdf)"
+            ],
+            "novelty_verdict": "none_found",
+            "ingredient_access_thailand": "Mild base ingredients such as tofu, oats and freeze-dried fruit are widely sold in Thailand, but no supplier was verified for texture-stable versions.",
+            "production_route": "A co-packer with texture-controlled snack and RTD lines is the likely route, since no Thai maker of sensory-selective foods was found.",
+            "regulatory_path_thailand": "A Thai FDA food registration applies, and any disability or health claim would need a separate approval path that was not verified.",
+            "sources": [
+              "ASEAN-Japan meeting deck, candidate for the DMH presentation with the 2015 ASD prevalence of 6 per 1,000 (https://www.mhlw.go.jp/english/policy/affairs/asean/dl/18th_sum_11.pdf); old figure, date of the deck not confirmed",
+              "Thai news item on the disability registry and rising autism and ADHD numbers, date label unverified (https://www.bangkokbiznews.com/health/well-being/1219919)",
+              "Naresuan repository thesis (https://nuir.lib.nu.ac.th/dspace/handle/123456789/4402)"
+            ],
+            "unverified": [
+              "Latest official Thai autism prevalence (only a 2015 figure was found)",
+              "Trend strength: rising diagnosis is stated in news but not quantified in a dated official source",
+              "A 1-in-161 under-5 figure appears in an undated news item with typos, so it was not used",
+              "Parent demand and willingness to pay",
+              "Thai regulatory category and any claim rules"
+            ]
+          },
+          {
+            "name": "Thai-Herb Non-Alcoholic Evening RTD for Sober-Curious Adults",
+            "format": "250 ml chilled canned non-alcoholic herbal drink with Thai botanicals (for example lemongrass, butterfly pea, kaffir lime), positioned as a dinner-time alternative to alcohol.",
+            "target": "Thai adults aged about 22 to 35 who drink less or not at all and want an adult evening ritual drink.",
+            "consumer_hypothesis": "Sober-curious adults may want flavour complexity and a ritual at dinner; Thai options appear limited to 0.0 beer and venue menus, but no Thai survey was found.",
+            "what_is_new": "Non-alcoholic herbal RTDs and alcohol-free bars exist abroad and in Bangkok; a canned Thai-botanical dinner RTD was not found in Thailand, and global novelty is unverified.",
+            "novelty_searches": "Run 2026-10-18. Thai: 'เครื่องดื่มไม่มีแอลกอฮอล์ สมุนไพรไทย พร้อมดื่ม กระป๋อง ตลาด Gen Z ไม่ดื่มแอลกอฮอล์ 2569'. English: 'Thailand non-alcoholic spirit alternative sober curious ready-to-drink 2026 launch'. Only 2 product searches, so no none_found verdict is claimed; results showed venues, trend commentary and beer-only forecasts.",
+            "existing_found": [
+              "STOCKHOLME Sober Bar, Bangkok: described as Thailand's first alcohol-free bar, open 2pm to 10pm (https://www.timeout.com/bangkok/restaurants/thailands-first-alcohol-free-bar-serves-up-divine-intoxication-no-hangover-pinky-promise)",
+              "The Sarojin, Khao Lak: alcohol-free drinks menu, article date unclear (https://www.breakingtravelnews.com/news/article/new-alcohol-free-menu-launched-at-luxurious-thai-residence-the-sarojin)"
+            ],
+            "novelty_verdict": "unclear",
+            "ingredient_access_thailand": "Thai botanicals such as lemongrass and butterfly pea are common in Thai markets, but supplier and extract grade were not verified in this run.",
+            "production_route": "A co-packer with canning or retort capacity is the likely route, since no Thai non-alcoholic herbal RTD maker was verified.",
+            "regulatory_path_thailand": "A Thai FDA food registration applies to a non-alcoholic beverage, while herbal-ingredient rules and limits on alcohol-related advertising were not verified.",
+            "sources": [
+              "Innova Market Insights on low- and no-alcohol opportunity in Thailand, Dec 2025 (https://www.innovamarketinsights.com/?p=59136)",
+              "GlobalData on Thai low- and no-alcohol demand; no-alcohol beer CAGR 12.9% for 2022 to 2027 (https://www.globaldata.com/media/consumer/innovative-product-positioning-drive-demand-low-no-alcoholic-drinks-thailand-says-globaldata/)",
+              "Thai Post column citing Mintel 2023 on Gen Z as the main no-alcohol beverage consumers (https://www.thaipost.net/columnist-people/506731/)"
+            ],
+            "unverified": [
+              "Share of Thai adults who are sober-curious (no survey found)",
+              "Effect of Thai alcohol advertising rules on a non-alcoholic brand",
+              "Herb sourcing and extract grade",
+              "Price point and channel",
+              "The NSO-derived 9.6% figure is a youth drinking rate, not a sober-curious rate"
+            ]
+          },
+          {
+            "name": "Halal Sahur Oat-Protein Drink for Fasting Muslims",
+            "format": "250 ml chilled or ambient halal oat-and-protein drink for pre-dawn (sahur) meals during Ramadan, with fibre and slow-digesting carbohydrate.",
+            "target": "Muslim consumers in southern Thailand and Bangkok who fast during Ramadan and need a filling pre-dawn meal.",
+            "consumer_hypothesis": "Fasting users may want a filling, portable pre-dawn drink with halal certification; Malaysia and Indonesia already sell this format, so Thai demand is unverified.",
+            "what_is_new": "Not new in the region: Indonesian and Malaysian sahur-focused protein products exist; a CICOT-certified Thai-made version is a Thai-market novelty only.",
+            "novelty_searches": "Run 2026-10-18. Thai: 'ผลิตภัณฑ์เครื่องดื่มสำหรับช่วงรอมฎอน ซาฮูร์ ฮาลาล ไทย วางขาย ผลิตภัณฑ์โปรตีน'. English: 'Ramadan sahur drink product launch Malaysia Indonesia Thailand halal protein slow release beverage 2025 2026'. Thai halal results showed protein drinks for daily use but no Ramadan-specific Thai product.",
+            "existing_found": [
+              "MILO (Nestle Indonesia) sahur campaign positioning a malt-cocoa drink for pre-dawn energy (https://www.marketing-interactive.com/milo-advocates-nutritious-sahur-for-enduring-energy-during-ramadan)",
+              "SuriFood (Indonesia): high-protein ready-to-eat menu before imsak, reported 12 Mar 2026 (https://www.cnbcindonesia.com/tech/20260312171147-37-718586/surifood-perkenalkan-menu-siap-saji-berprotein-tinggi-sebelum-imsak)",
+              "Fill Protein chocolate drink (Malaysia), product page stating halal-certified ingredients (https://www.doctoroncall.com.my/pharmacy/fill-protein-nutritious-drink-chocolate-flavor-v-2s-foc-shaker/)"
+            ],
+            "novelty_verdict": "exists",
+            "ingredient_access_thailand": "Halal-certified oats, dates, and whey or pea protein must come from Thai or imported sources, and none was verified in this run.",
+            "production_route": "The plant must be halal-certified because CICOT inspects food manufacturers, so a CICOT-certified co-packer is the likely route (https://www.halal.or.th).",
+            "regulatory_path_thailand": "Thai FDA food registration plus CICOT halal certification with plant inspection under the CICOT production code (revision 5, effective 4 Dec 2025, per search summary).",
+            "sources": [
+              "Thai Commerce Ministry: 2567 food exports to OIC countries USD 7,131.3 million, up 6.3% (https://uploads.tpso.go.th/พาณิชย์ชี้ช่องไทยบุกตลาดอาหารฮาลาลโลก!%20ชิงโอกาสทองในกลุ่มประชากร%20OIC.pdf)",
+              "CICOT halal certification information (https://www.halal.or.th)",
+              "MILO sahur campaign (https://www.marketing-interactive.com/milo-advocates-nutritious-sahur-for-enduring-energy-during-ramadan)",
+              "SuriFood, 12 Mar 2026 (https://www.cnbcindonesia.com/tech/20260312171147-37-718586/surifood-perkenalkan-menu-siap-saji-berprotein-tinggi-sebelum-imsak)"
+            ],
+            "unverified": [
+              "Thai Muslim population share (2566 census figure not found)",
+              "Ramadan 2027 start date (about early February 2027, own estimate, not from a source)",
+              "Thai demand, price point and channel",
+              "Malaysian and Indonesian product claims are marketing claims",
+              "CICOT document number and fees were not confirmed"
+            ]
+          },
+          {
+            "name": "Texture-Modified Thai Savoury Protein Meal for Older Adults",
+            "format": "200 g ready-to-eat Thai savoury dish (for example a gaeng-style or stir-fry style meal) moulded or pureed to IDDSI level 4 or 5, chilled or retort, sold through pharmacies, care homes and online.",
+            "target": "Thai adults aged 60 and over with chewing or swallowing difficulty, and the family carers who buy meals for them.",
+            "consumer_hypothesis": "Carers may want protein-rich food that looks and tastes like home cooking rather than generic puree or jelly; Chula staff say chewing and swallowing problems lead older people to under-eat, which is a nutrition claim not yet tested with buyers.",
+            "what_is_new": "Not new: Chula's protein jelly pudding, its 52-recipe texture-modified cookbook and March Mondae's Mellow Puree already cover this space; a full savoury meal format is the only possible angle and is unverified.",
+            "novelty_searches": "Run 2026-10-18. Thai: 'อาหารผู้สูงอายุ เคี้ยวง่าย กลืนง่าย ผลิตภัณฑ์ ไทย วางขาย โปรตีนสูง IDDSI'; 'เจลลี่ผู้สูงอายุ ผู้ป่วยกลืนลำบาก ขายออนไลน์ ผลิตภัณฑ์ โปรตีน ดัดแปลงเนื้อสัมผัส แบรนด์ไทย'. English: 'Thailand dysphagia ready-to-eat texture modified food commercial brand IDDSI level 4 jelly product 2025 2026'. Thai: 'ผงทำให้ข้น xanthan gum อาหารสำหรับผู้มีปัญหาการกลืน ผู้จำหน่ายในไทย ThickenUp'. Verdict exists based on Mellow Puree and Chula products.",
+            "existing_found": [
+              "Mellow Puree: texture-modified ready-to-eat puree at IDDSI level 4 by March Mondae Co. Ltd, credited to Chulalongkorn researchers, listed at THAIFEX-ANUGA (edition not confirmed) (https://thaifex-anuga.com/new-to-market-street/mellow-puree/)",
+              "Chula protein-enriched texture-modified jelly pudding for older adults, bronze medal at the Geneva inventions exhibition, April 2025 per search snippet; no sales channel stated (https://www.infoquest.co.th/?p=519015)",
+              "Chula 52-recipe texture-modified Thai cookbook, news dated 15 Dec 2025, available by download or purchase rather than retail (https://www.chula.ac.th/news/277147/)"
+            ],
+            "novelty_verdict": "exists",
+            "ingredient_access_thailand": "Thickeners such as Resource ThickenUp are sold in Singapore and Hong Kong, but no Thai distributor was confirmed, so Thai ingredient access is unverified.",
+            "production_route": "A specialist texture-modified food maker of the Mellow Puree type or a medical-food contract manufacturer is the likely route, not a general RTD line.",
+            "regulatory_path_thailand": "Unverified: likely a Thai FDA food registration under a special-use or medical-food category, which was not confirmed in this search.",
+            "sources": [
+              "National Statistical Office document on aging society, file metadata dated 29 Apr 2026, states highest 60+ share in ASEAN in 2025 (https://www.nso.go.th/nsoweb/storage/infomotion/2026/20260501095447_84140.pdf)",
+              "Statista chart credited to NESDC: 20.17% of population aged 60+ in 2023 (https://statista.com/statistics/713667/thailand-forecast-aging-population)",
+              "Chula news on texture-modified cookbook, 15 Dec 2025 (https://www.chula.ac.th/news/277147/)",
+              "Mellow Puree trade-show listing (https://thaifex-anuga.com/new-to-market-street/mellow-puree/)"
+            ],
+            "unverified": [
+              "Exact 2025 or 2026 share of population aged 60+ (the NSO figure was not extracted; the 2023 Statista figure was used)",
+              "Whether Mellow Puree is still on sale and its launch year",
+              "Thai regulatory category",
+              "Buyer demand for a savoury format"
+            ]
+          },
+          {
+            "name": "GLP-1 Thai Savoury Protein Broth (RTD)",
+            "format": "180 to 200 ml ready-to-drink savoury protein broth in Thai flavours (for example a chicken-bone herb broth), chilled or shelf-stable, sold through clinics, pharmacies and online.",
+            "target": "Thai adults on prescribed or cash-pay GLP-1 medicines who eat little and need protein without sugar or heavy fat.",
+            "consumer_hypothesis": "Users who lose appetite or feel nauseous after sweet, fatty or spicy food may accept a light savoury protein drink more readily than a sweet shake; this is unverified in Thailand.",
+            "what_is_new": "Not new as a category: Thai-flavoured chicken-bone protein broth RTDs and GLP-1 protein drinks exist abroad; the only possible novelty is a Thai-made savoury RTD for the Thai cash-pay GLP-1 channel, which is unverified.",
+            "novelty_searches": "Run 2026-10-18. Thai: 'อาหารสำหรับผู้ใช้ยาลดน้ำหนัก GLP-1 ผลิตภัณฑ์ โปรตีนสูง ปริมาณน้อย ไทย'; 'GLP-1 เครื่องดื่ม โปรตีน ลดน้ำหนัก Shopee Lazada วางขาย 2569'; 'อาหารเสริม GLP-1 ธรรมชาติ ไทย ผลิตภัณฑ์ อย. เลขทะเบียน'; '7-Eleven Makro โปรตีนชงพร้อมดื่ม สำหรับคนดูแลน้ำหนัก ฉีดยาลดน้ำหนัก 2569 สินค้าใหม่'; 'น้ำซุปโปรตีนพร้อมดื่ม ไทย bone broth protein ready to drink ขายในไทย'. English: 'GLP-1 friendly food product launch protein small portion nutrient dense 2026'; 'GLP-1 companion products Thailand Makro Tops Boots high protein yogurt shake 2026'. No GLP-1-labelled food or savoury RTD found in Thai results after 7 searches; verdict is exists because the same format exists abroad.",
+            "existing_found": [
+              "Mattisson HealthStyle Thai Chicken Bone Broth 240 ml, Netherlands, 2.46 g protein per 100 ml (https://www.vitaminstore.nl/en/product/mattisson-healthstyle-organic-thai-chicken-bone-broth-liquid-1309625)",
+              "Brothway The Spicy Way Thai Chicken Bone Broth 480 ml, UK retail listing marketed on protein and collagen (https://www.hollandandbarrett.com/shop/product/brothway-the-spicy-way-thai-chicken-bone-broth-480ml-6100011567)",
+              "Nestle GLP-1 protein drink, US, 10 g whey and 45 kcal per serving (https://stylus.com/food-beverage/nestle-launches-glp-1-weight-loss-drink)",
+              "Nutrabalance GLP-1 supportive nutrition drink, Australia, 15 g protein per serving (https://www.foodanddrinkbusiness.com.au/new-in-store/nutrabalance-launches-glp-1-supportive-nutrition-drink)",
+              "The Gym Kitchen GLP-1 friendly chilled meal range, UK, May 2026 (https://www.grocerygazette.co.uk/2026/05/08/the-gym-kitchen-introduces-glp-1-friendly-range/)"
+            ],
+            "novelty_verdict": "exists",
+            "ingredient_access_thailand": "Chicken-bone broth base and collagen or whey protein are commodity inputs, but no Thai supplier was confirmed in this run, so access is unverified.",
+            "production_route": "A Thai co-packer with aseptic or retort RTD capacity is the likeliest route, since Thai OEM directories list drink contract makers but their capacity and certificates were not verified.",
+            "regulatory_path_thailand": "Likely a Thai FDA food registration (เลขสารบบอาหาร) for an RTD food, with a supplement registration if sold as a supplement, but the exact category is unverified.",
+            "sources": [
+              "Nation Thailand, article dated 14 Sep 2026: injectable GLP-1 pens prescription-only from 15 Sep 2026 (https://www.nationthailand.com/health-wellness/40071007)",
+              "Barchart: food companies targeting GLP-1 users with GLP-1 friendly labels (https://www.barchart.com/story/news/37041316/food-companies-are-targeting-users-of-weight-loss-drugs-with-glp-1-friendly-labels)",
+              "Barbell Medicine on protein intake on GLP-1 drugs (https://www.barbellmedicine.com/blog/protein-on-ozempic/)",
+              "Mattisson, Brothway, Nestle, Nutrabalance and Gym Kitchen listings (see existing_found)"
+            ],
+            "unverified": [
+              "Size of the Thai GLP-1 user base (a LinkedIn post cites THB 4.1 bn for 2026, not verified)",
+              "Whether users accept a savoury format (no Thai consumer data)",
+              "Thai registration category",
+              "Ingredient suppliers and Thai distribution"
+            ]
+          },
+          {
+            "name": "Dry-Season Anti-PM2.5 Antioxidant Drink",
+            "format": "250 ml herbal or antioxidant ready-to-drink marketed for the February to April dust season.",
+            "target": "Urban and northern Thai adults exposed to dust in the dry season.",
+            "consumer_hypothesis": "Dust episodes create a recurring purchase occasion, but Thai evidence for drinks is weak.",
+            "what_is_new": "Not new: a concentrated longan-extract drink (P80) is already marketed for PM2.5 in Thailand; the Thai evidence cited is thin.",
+            "novelty_searches": "Run 2026-10-18. Thai: 'เครื่องดื่ม ต้านฝุ่น PM2.5 ผลิตภัณฑ์ อาหาร ดูแลปอด วางขาย ไทย'. English: 'anti-pollution functional drink PM2.5 product launch Asia antioxidant beverage air pollution 2025 2026'; 'Thailand PM2.5 food supplement respiratory protection product Lazada Shopee drink lung detox 2026'. Verdict exists based on the P80 product found in Thai marketing articles.",
+            "existing_found": [
+              "P80 concentrated longan-extract drink promoted for dust season in Thai marketing articles (thansettakij marketing pages; the specific article URL was not confirmed)",
+              "Thai traditional-medicine advice on four herbs for dust symptoms, not a drink (https://old.thaipbsworld.com/?p=309162 covers herb evidence and is cautious)"
+            ],
+            "novelty_verdict": "exists",
+            "ingredient_access_thailand": "Longan extract and Thai herbs such as Thunbergia laurifolia are sold in Thailand, but no supplier was verified in this run.",
+            "production_route": "The found product is brand-owned with its production route not disclosed, so a co-packer is the likely route for a new brand.",
+            "regulatory_path_thailand": "A Thai FDA food registration applies, and any PM2.5 benefit claim would face claim restrictions that were not verified.",
+            "sources": [
+              "Bangkok Biz News dust-season reports, February to March 2026 episodes, year inferred from context (https://www.bangkokbiznews.com/news/928161)",
+              "Thai PBS World on herbs and PM2.5, Sept 2024, thin human evidence (https://old.thaipbsworld.com/?p=309162)"
+            ],
+            "unverified": [
+              "Whether any dust-season drink has clinical evidence",
+              "Whether P80 is still sold",
+              "2569 season totals (the Pollution Control Department summary was not opened)",
+              "Claim restrictions for PM2.5 benefits"
+            ]
+          }
+        ]
+      }
+    ],
+    "judge": {
+      "finalists": [
+        {
+          "name": "Leaf-wrapped frozen coconut drink pop",
+          "axis": "Alternative Formats",
+          "novelty": 2,
+          "fit": 2,
+          "feasibility": 1,
+          "consumer_case": 1,
+          "why": "Scores N2 F2 Fe1 C1 (total 6). Novelty: six Thai and English searches found no frozen drink or drink sealed in a leaf; the leaf wraps that exist are for produce (Rimping, Chiang Mai, 2019) and for leaf-wrapped food, so the drink format is unverified rather than proven absent. Fit: peel-open-and-sip while it thaws is a new consumption ritual. Feasibility is capped at 1 because a leaf is not waterproof and a thawing coconut liquid needs an inner film, which conflicts with the plastic-free reason to buy; leaf supply and cold-chain costs are also unverified. Consumer: plastic-free buyers are named with a reason, but the evidence is about produce, not drinks.",
+          "kill_test": "Kill if a leaf-only wrap (no inner film) leaks during a 2-hour thaw at 30 C, and any inner film needed to stop leaks removes the plastic-free reason to buy.",
+          "first_test_in_3_days": "Freeze 30 coconut-milk pops in two wraps (leaf only, and leaf with a food-grade inner film). Thaw 15 of each at 30 C for 2 hours and log leaks. Then run a 20-person blind intercept in a Bangkok office or market: peel-and-sip versus a cup, a willingness-to-pay question, and whether the wrap reads as plastic-free."
+        },
+        {
+          "name": "Midlife women standardised-isoflavone unsweetened soy drink",
+          "axis": "New Trend-Driven Target",
+          "novelty": 2,
+          "fit": 2,
+          "feasibility": 1,
+          "consumer_case": 1,
+          "why": "Scores N2 F2 Fe1 C1 (total 6). Novelty: four Thai and English product searches found no soy drink with a labelled isoflavone dose; the closest product is a Singapore isoflavone capsule (Holistic Way, Aug 2026), a different format. Fit: targets women aged 40 to 59 with hot flushes and sleep problems, a named group tied to a hormonal-health gap reported by Mintel's Thailand women's wellness report (only the public summary was read; the report is paywalled). Feasibility is capped at 1: no Thai isoflavone extract supplier was verified, the supplement-versus-food registration route and menopause claim wording are unresolved, and dose safety needs warnings. Consumer: named target and reason, but no Thai demand test yet.",
+          "kill_test": "Kill if a desk check of Thai FDA food and supplement registration and health-claim notifications, or a registration adviser's answer, shows the pack can carry only nutrient content and no menopause-linked benefit, because that removes the midlife reason to buy.",
+          "first_test_in_3_days": "Spike plain soy milk with a standardised isoflavone powder from a public supplier at two dose levels, with the dose range flagged for review. Run a blind taste and purchase-intent test with 30 Thai women aged 40 to 59, and check the powder's certificate of analysis."
+        },
+        {
+          "name": "Thai-herb non-alcoholic evening RTD for sober-curious adults",
+          "axis": "New Trend-Driven Target",
+          "novelty": 1,
+          "fit": 2,
+          "feasibility": 2,
+          "consumer_case": 1,
+          "why": "Scores N1 F2 Fe2 C1 (total 6). Novelty is provisional: only two product searches were run. Bangkok venues (STOCKHOLME Sober Bar, The Sarojin's alcohol-free menu) and Thai no-alcohol beer exist, but no canned or bottled Thai-botanical non-alcoholic RTD was found, so the verdict is unclear rather than none found. Fit: sober-curious adults are a trend-driven target supported by Thai-market sources (Innova Market Insights, Dec 2025; GlobalData; a Thai Post column citing Mintel 2023 on Gen Z). Feasibility is strong: Thai botanicals and a canning or retort co-packer are public routes. Consumer: named target and reason, but no Thai survey; the NSO 9.6 percent figure is a youth drinking rate and must not be used as a sober-curious rate.",
+          "kill_test": "Kill if a store and online audit (Makro, Tops, 7-Eleven, Lazada, Shopee, Boots, Villa Market) finds a Thai-botanical non-alcoholic RTD already sold with an evening or alcohol-alternative position.",
+          "first_test_in_3_days": "Run a blind taste of three Thai-botanical bases (for example lemongrass with kaffir lime, butterfly pea with lime, pandan with ginger) with 40 adults aged 22 to 35 who drink little or no alcohol, then ask purchase intent at a 50 to 70 THB price point."
+        }
+      ],
+      "rejected": [
+        {
+          "name": "Wolffia (ไข่ผำ) protein RTD drink",
+          "reason": "Exists in Thailand: Flo (Advanced Greenfarm) sells Wolffia protein shakes, per two trade articles dated 21 Jan 2026, and Thai Coconut sells a frozen Wolffia product. Scores N0 F2 Fe2 C1 (total 5). Blocked on novelty."
+        },
+        {
+          "name": "Upcycled okara fibre-protein RTD",
+          "reason": "Scores N1 F1 Fe2 C1 (total 5). Thai soy milk is ubiquitous and the okara version is a variant of it; okara soy drinks exist abroad (I-Mei, Soynergy, a Hong Kong listing). Okara is a by-product, not a new raw material, so fit to the ingredient axis is modest. Four searches are thin."
+        },
+        {
+          "name": "Green-banana RS2 resistant-starch RTD",
+          "reason": "Scores N1 F2 Fe1 C1 (total 5). Unripe banana powder is already marketed in Thailand with health claims (Daily News), so only the RTD form is new. RS2 survival under pasteurisation and cold-fill is unproven, flour supply is unverified, and the fibre claim rules are unchecked. Best Axis 1 idea and the first reserve if the team wants Axis 1 coverage."
+        },
+        {
+          "name": "Sacha inchi press-cake protein and omega-3 RTD",
+          "reason": "Scores N0 F2 Fe2 C1 (total 5). Mahidol University licensed a sacha-inchi press-cake protein drink with prebiotics and omega-3 to Nikao Corporation on 24 Aug 2022 (confirmed in a Mahidol faculty document). Sale status is unknown, but the concept is already licensed to a Thai company, so the team would face IP."
+        },
+        {
+          "name": "Cricket-protein RTE snack or protein drink",
+          "reason": "Exists in Thailand: Thai Ento Food sells Sixtein cricket protein powder, Protanica sells cricket bites, and flavoured crickets are sold in convenience stores. Scores N0 F1 Fe2 C1 (total 4)."
+        },
+        {
+          "name": "Jackfruit-seed flour fibre-protein RTD",
+          "reason": "Scores N1 F2 Fe1 C1 (total 5). Seed-flour chips are patented (TH9947A3) and seed-based milkshake premixes are in research; boiled jackfruit seed as a snack is common in Thailand (judge's own knowledge, not in the searches). Protein content of the seed flour was not checked, so the protein part of the fit is unproven."
+        },
+        {
+          "name": "Seaweed (Gracilaria or agar) soluble-fibre low-sugar RTD",
+          "reason": "Scores N2 F2 Fe1 C1 (total 6) but is excluded for overlap. An uncarbonated, fibre-led, sugar-free drink is the same concept space as the fibre soda candidate the brief rules out, so it cannot be counted as fresh. Abroad: OoMee (US) and YGC (Singapore). First alternate only if the team shows the concept is distinct."
+        },
+        {
+          "name": "Detoxified cassava-leaf protein RTD",
+          "reason": "Scores N2 F2 Fe0 C1 (total 5). Novelty holds on four searches, but cyanide detoxification needs a validated process, the Thai cyanide limit was not found, and co-packers are unlikely to take the risk. Jani (Fourth Culture) is a shelf-stable stew, and its Thai sale is unverified. Fails on safety."
+        },
+        {
+          "name": "Edible grain cup for drinks",
+          "reason": "Exists in Thailand: the Mister Cone millet-based edible cup from K.C.L. Trading was shown at Thaifex Anuga Asia 2024 and has a Lazada listing. Scores N0 F2 Fe2 C1 (total 5)."
+        },
+        {
+          "name": "Edible coconut-water membrane sphere (pop-and-sip)",
+          "reason": "Scores N1 F2 Fe1 C1 (total 5). Ooho exists abroad and no Thai retail product was found in three searches. Alginate spheres filled with juice are a close format, likely sold as popping boba in Thai bubble-tea shops; that is unverified because the Thai popping-boba search returned no Thai sources. Shelf life of days is a distribution barrier."
+        },
+        {
+          "name": "Scent-release lid for sugar-reduced Thai herb drinks",
+          "reason": "Scores N2 F2 Fe1 C1 (total 6) but ranks below the finalists. air up is a near-identical scent-led drinking precedent abroad, and a search found no evidence it sells in Thailand (absence only). No Thai food-grade aroma-insert supplier was found, and the consumer premise rests on air up's own marketing. Second alternate."
+        },
+        {
+          "name": "Coconut-pandan sphere ice for slow-melt drinks",
+          "reason": "Scores N1 F1 Fe2 C1 (total 5). Sphere-ice moulds are sold in Thailand (HomePro, Lazada), and the pandan-coconut version is a flavour variant. Cafe use of sphere ice in Thailand was not verified, and there is no demand evidence for paying for slower melt."
+        },
+        {
+          "name": "Push-to-mix dose cap for functional herbal powder",
+          "reason": "Scores N1 F2 Fe1 C1 (total 5). Dose caps exist abroad (DRYCAP 2013, Shinsen 2019) and no Thai dose cap was found, but herbal powder drinks in Thai sachet form likely exist (judge's own knowledge). Closure sourcing, powder filling and whether Notification 310 applies are unverified."
+        },
+        {
+          "name": "Compressed coffee cube that dissolves in cold milk",
+          "reason": "Scores N1 F1 Fe1 C1 (total 4). A Chulalongkorn study on compressed instant coffee tablets and a Thai patent for soluble coffee pellets exist; Santo Cubes (US, 2018) sells a compressed cube. Cold-water dissolving performance is unproven and no compacting supplier was verified."
+        },
+        {
+          "name": "Batch-consistent low-sensory snack and drink for autistic children",
+          "reason": "Scores N2 F1 Fe1 C1 (total 5). No product found after four searches, but the trend evidence is weak (a 2015 prevalence figure and an undated news item), parent demand is unmeasured, the claim and ethics exposure is high because it targets vulnerable children, and the only Thai item is a 2017 packaging thesis."
+        },
+        {
+          "name": "GLP-1 Thai savoury protein broth (RTD)",
+          "reason": "Scores N2 F2 Fe1 C1 (total 6) but is rejected. The ideas file marked it exists on abroad precedent; under the brief's Thailand-only test it scores N2 after seven Thai searches, with global precedents flagged. Its reason depends on association with a prescription medicine's users, which is the claim most likely to be barred under Thai food advertising rules (not verified), and the Thai user base is unknown. Third alternate only if the medicine association is dropped."
+        },
+        {
+          "name": "Halal sahur oat-protein drink for fasting Muslims",
+          "reason": "Scores N1 F1 Fe2 C1 (total 5). Sahur products exist in Indonesia (MILO, SuriFood) and Malaysia (Fill Protein), and Thai protein drinks exist in general. Fit is weak because the sahur occasion is recurring and cultural, not a future trend. Thai demand is unmeasured, export statistics are not demand, and the Ramadan 2027 timing is an unsourced estimate."
+        },
+        {
+          "name": "Texture-modified Thai savoury protein meal for older adults",
+          "reason": "Exists in Thailand: Mellow Puree (March Mondae, IDDSI level 4, Chulalongkorn-credited) and Chulalongkorn's protein jelly and 52-recipe texture-modified cookbook. Scores N0 F2 Fe2 C1 (total 5)."
+        },
+        {
+          "name": "Dry-season anti-PM2.5 antioxidant drink",
+          "reason": "Exists in Thailand: a longan-extract P80 drink is marketed for dust season. Scores N0 F1 Fe2 C1 (total 4). PM2.5 benefit claims face restrictions and the herb evidence is thin."
+        }
+      ],
+      "recommendation": "Scoring used the brief's four 0-to-2 criteria. Novelty is judged on Thailand only, as the brief states: 2 means no Thai product or close variant was found, 1 means a close variant exists in Thailand in another format or the search was too thin to close the question, 0 means a Thai product of the same concept exists or is licensed. Fit asks whether the idea answers its axis, feasibility asks whether a Thai team can make it with public routes and no unresolved safety barrier, and consumer case asks for a named target with a reason and Thai-market evidence. Nine ideas score 0 on novelty (Wolffia, sacha inchi, cricket, grain cup, textured meal, PM2.5 drink, and others), so they are out regardless of other scores. Three finalists tie at 6 of 8: the leaf-wrapped frozen drink pop, the midlife isoflavone soy drink, and the Thai-herb non-alcoholic evening RTD. Ties were broken by the strength of the novelty evidence and by how testable the barrier is in three days. Axis 1 has no finalist; its best idea is the green-banana RS2 RTD (5), the first reserve. Existing products in the set: Wolffia (Flo), Mister Cone, the sacha inchi licence (Nikao), cricket powder and bites, Mellow Puree, P80, sphere-ice moulds, and the abroad okara, seaweed, air up, Ooho and DRYCAP precedents. Novelty claims that remain unverified: the non-alcoholic RTD (two searches only), the leaf pop and isoflavone drink (absence after six and four searches, with the Mintel summary paywalled), the scent lid (no evidence air up sells in Thailand), the membrane sphere (Thai popping boba not confirmed by search), and the jackfruit and dose-cap ideas (Thai boiled seed snacks and herbal sachets come from judge knowledge). The ideas file marks several items exists on abroad precedent, which the brief's Thailand-only test does not count; the judge applied the brief's rule and flagged the abroad precedents as fast-follower risk. The judge checked three claims live: the Mahidol-Nikao licence is confirmed, while air up and Thai popping boba returned no Thai evidence. The team's docx corpus was not used as a source.",
+      "open_questions_for_team": [
+        "Does the organiser accept abroad-only precedent as novel? The judge applied the brief's Thailand-only rule; if abroad precedent counts, several finalists fall.",
+        "Does the team want one idea per axis? If so, swap the isoflavone drink or the non-alcoholic RTD for the green-banana RS2 RTD (score 5), after first testing whether RS2 survives the heat and cold-fill steps.",
+        "Is Nikao's sacha-inchi drink on sale, and what does its licence cover? This decides whether the concept is closed to the team.",
+        "Does air up sell in Thailand? The scent-lid score depends on it, and the search found no evidence either way.",
+        "Are popping-boba alginate spheres sold in Thai bubble-tea shops? This decides whether the membrane sphere is a close variant.",
+        "What is the Thai FDA route for a menopause-linked isoflavone claim, and does a supplement registration apply? Desk research is needed before any test.",
+        "Can a non-alcoholic product be positioned as an alcohol alternative in Thailand without triggering alcohol-association marketing limits? This needs legal review.",
+        "Is the seaweed-fibre drink distinct from the excluded fibre-soda candidate? The team must show it is before it can be counted as fresh.",
+        "What is the Thai cyanide limit for cassava-leaf protein, and is there a validated detox route? This is a hard stop for that idea.",
+        "Ramadan 2027 start date (about early February 2027) is the judge's own estimate and needs checking if the sahur idea is revisited.",
+        "The Mintel women's wellness report is paywalled and only its public summary was read; the isoflavone consumer case depends on it."
+      ]
+    }
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Generate"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 2,
+      "title": "Judge"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "axis1-ingredients-nutrition",
+      "phaseIndex": 1,
+      "phaseTitle": "Generate",
+      "agentId": "a6514c29fa83ae75d",
+      "model": "claude-haiku-5-5",
+      "state": "done",
+      "startedAt": 1792256425522,
+      "queuedAt": 1792256425418,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Ingredients and Nutrition",
+      "promptPreview": "CASE BRIEF (only source, from the competition screenshot). Singha University, The Innovative Bev and Bite. Create and develop a new-form food or beverage product, using an innovation that has never existed before, to answer three core axes: (1) Ingredients and Nutrition: novelty in ingredients or raw materials, and in nutritional value; (2) Alternative Formats: appearance and serving or consumptio…",
+      "promptFramed": true,
+      "lastProgressAt": 1792256817012,
+      "tokens": 172980,
+      "toolCalls": 46,
+      "durationMs": 391486,
+      "resultPreview": "{\"axis\":\"Ingredients and Nutrition\",\"axis_note\":\"Generated fresh from the case brief on 2026-10-18 without using the earlier team candidates, from about 41 Thai and English web searches (most facts come from search snippets, not full texts). Three ideas return none_found (green-banana resistant-starch RTD, jackfruit-seed RTD, cassava-leaf protein RTD, the last with a serious cyanide-safety barrier…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "axis2-alternative-formats",
+      "phaseIndex": 1,
+      "phaseTitle": "Generate",
+      "agentId": "a3c26578ba3a17cb3",
+      "model": "claude-haiku-5-5",
+      "state": "done",
+      "startedAt": 1792256425523,
+      "queuedAt": 1792256425419,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Alternative Formats",
+      "promptPreview": "CASE BRIEF (only source, from the competition screenshot). Singha University, The Innovative Bev and Bite. Create and develop a new-form food or beverage product, using an innovation that has never existed before, to answer three core axes: (1) Ingredients and Nutrition: novelty in ingredients or raw materials, and in nutritional value; (2) Alternative Formats: appearance and serving or consumptio…",
+      "promptFramed": true,
+      "lastProgressAt": 1792256785316,
+      "tokens": 159894,
+      "toolCalls": 37,
+      "durationMs": 357735,
+      "resultPreview": "{\"axis\":\"Alternative Formats\",\"axis_note\":\"Six of seven formats already exist somewhere (an edible grain cup sold by a Thai maker, the Ooho membrane abroad, scent-led drinking from air up, sphere ice in bars, dose caps for probiotics, and compressed coffee cubes in the US), so any Thai entry would need its novelty in flavour, ingredient or ritual rather than in the format itself. The one open gap,…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "axis3-trend-driven-target",
+      "phaseIndex": 1,
+      "phaseTitle": "Generate",
+      "agentId": "ad17d671c0084ebc3",
+      "model": "claude-haiku-5-5",
+      "state": "done",
+      "startedAt": 1792256425524,
+      "queuedAt": 1792256425419,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "New Trend-Driven Target",
+      "promptPreview": "CASE BRIEF (only source, from the competition screenshot). Singha University, The Innovative Bev and Bite. Create and develop a new-form food or beverage product, using an innovation that has never existed before, to answer three core axes: (1) Ingredients and Nutrition: novelty in ingredients or raw materials, and in nutritional value; (2) Alternative Formats: appearance and serving or consumptio…",
+      "promptFramed": true,
+      "lastProgressAt": 1792257217184,
+      "tokens": 198089,
+      "toolCalls": 49,
+      "durationMs": 789601,
+      "resultPreview": "{\"axis\":\"New Trend-Driven Target\",\"axis_note\":\"Checked 2026-10-18 using a general web search engine and a few direct page fetches; store sites (Makro, Tops, Boots, Villa Market, Lazada, Shopee) were not opened directly, so 'none found' means none found in these searches, not absence. Dated trend anchors: the Thai FDA made injectable GLP-1 pens prescription-only from 15 Sep 2026 (Nation Thailand ar…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "judge:rework-finalists",
+      "phaseIndex": 2,
+      "phaseTitle": "Judge",
+      "agentId": "ab84b9e1d6e252d88",
+      "model": "claude-haiku-5-5",
+      "state": "done",
+      "startedAt": 1792257217283,
+      "queuedAt": 1792257217200,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Scoring used the brief's four 0-to-2 criteria. Novelty is j…",
+      "promptPreview": "CASE BRIEF (only source, from the competition screenshot). Singha University, The Innovative Bev and Bite. Create and develop a new-form food or beverage product, using an innovation that has never existed before, to answer three core axes: (1) Ingredients and Nutrition: novelty in ingredients or raw materials, and in nutritional value; (2) Alternative Formats: appearance and serving or consumptio…",
+      "promptFramed": true,
+      "lastProgressAt": 1792257543068,
+      "tokens": 160693,
+      "toolCalls": 6,
+      "durationMs": 325783,
+      "resultPreview": "{\"finalists\":[{\"name\":\"Leaf-wrapped frozen coconut drink pop\",\"axis\":\"Alternative Formats\",\"novelty\":2,\"fit\":2,\"feasibility\":1,\"consumer_case\":1,\"why\":\"Scores N2 F2 Fe1 C1 (total 6). Novelty: six Thai and English searches found no frozen drink or drink sealed in a leaf; the leaf wraps that exist are for produce (Rimping, Chiang Mai, 2019) and for leaf-wrapped food, so the drink format is unverifie…"
+    }
+  ],
+  "totalTokens": 691656,
+  "totalToolCalls": 138
+}

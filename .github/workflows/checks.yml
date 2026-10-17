@@ -1,0 +1,62 @@
+name: checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Reject files over 100 MB
+        run: |
+          big=$(find . -path ./.git -prune -o -type f -size +100M -print)
+          if [ -n "$big" ]; then
+            echo "Files over 100 MB (GitHub rejects these):"
+            echo "$big"
+            exit 1
+          fi
+          echo "No files over 100 MB."
+
+      - name: Validate .docx packages
+        run: |
+          status=0
+          found=0
+          while IFS= read -r f; do
+            found=1
+            if python3 -c "import sys, zipfile; z = zipfile.ZipFile(sys.argv[1]); bad = z.testzip(); assert bad is None, 'corrupt part: ' + str(bad); assert 'word/document.xml' in z.namelist(), 'missing word/document.xml'; print('OK', sys.argv[1], len(z.namelist()), 'parts')" "$f"; then
+              :
+            else
+              echo "INVALID .docx: $f"
+              status=1
+            fi
+          done < <(find . -path ./.git -prune -o -type f -name '*.docx' -print)
+          if [ "$found" -eq 0 ]; then
+            echo "No .docx files in repo; skipping."
+          fi
+          exit $status
+
+      - name: Validate .md files are non-empty UTF-8
+        run: |
+          status=0
+          while IFS= read -r f; do
+            if [ ! -s "$f" ]; then
+              echo "Empty file: $f"
+              status=1
+              continue
+            fi
+            if ! python3 -c "import sys; open(sys.argv[1], encoding='utf-8').read()" "$f"; then
+              echo "Not valid UTF-8: $f"
+              status=1
+            fi
+          done < <(find . -path ./.git -prune -o -type f -name '*.md' -print)
+          exit $status

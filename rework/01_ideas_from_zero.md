@@ -1,6 +1,10 @@
 # Rework: ideas from zero, screened on the Thai market
 
-Status: screening result from workflow wqrcxrdmc, 18 October 2026. Not a decision, and nothing is validated by a test yet. Novelty is an absence search with 2 to 6 searches per idea, so "none found" is not proof of absence.
+Status: screening result from workflow wqrcxrdmc, 18 October 2026. Nothing is validated by a test yet.
+
+**Decision (18 October 2026, the user):** the entry may cover one component. It does not have to cover all three. The three finalists stand as they are, and open question 2 is closed.
+
+**Desk kill tests (18 October 2026):** no finalist is killed. Finalist C's Thai Post citation fails, and its 9.6 percent figure is unsourced. The results and proposed changes are in [02_desk_kill_tests.md](02_desk_kill_tests.md). Novelty is an absence search with 2 to 6 searches per idea, so "none found" is not proof of absence.
 
 ## How this was made
 
@@ -53,7 +57,7 @@ Novelty scale, as the judge applied it, with Thailand as the only market:
 - **Novelty (1, verdict "unclear"):** only 2 product searches. The closest are STOCKHOLME Sober Bar in Bangkok and The Sarojin's alcohol-free menu, both venues, not packaged products. No canned Thai-botanical RTD was found, but the search was thin.
 - **Fit (2):** sober-curious adults are a trend target, supported by Innova Market Insights (December 2025), GlobalData, and a Thai Post column citing Mintel (2023).
 - **Feasibility (2):** Thai botanicals and a canning or retort co-packer are public routes.
-- **Consumer case (1):** no Thai survey. The 9.6 percent figure in the agent's notes is a youth drinking rate, not a sober-curious rate, and must not be used as one.
+- **Consumer case (1, proposed 0):** no Thai survey. The desk check found that the Thai Post column does not support sober-curious demand, and the 9.6 percent figure is unsourced. See [02_desk_kill_tests.md](02_desk_kill_tests.md).
 - **Regulatory:** whether alcohol-association marketing limits reach a non-alcoholic brand is unverified and needs legal review.
 - **Kill test:** a store and online audit (Makro, Tops, 7-Eleven, Lazada, Shopee, Boots, Villa Market) finds a Thai-botanical non-alcoholic RTD already sold in an evening or alcohol-alternative position.
 - **First test (3 days):** a blind taste of three Thai-botanical bases (for example lemongrass with kaffir lime, butterfly pea with lime, pandan with ginger) with 40 adults aged 22 to 35 who drink little or none. Then purchase intent at 50 to 70 THB.

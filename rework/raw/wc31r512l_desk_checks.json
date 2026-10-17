@@ -1,0 +1,652 @@
+{
+  "summary": "Desk checks of the kill tests for the three finalists (Thai regulation, store and online audit, alcohol-advertising rules), each claim sourced and kill verdicts independently re-checked",
+  "agentCount": 4,
+  "logs": [],
+  "result": [
+    {
+      "finalist": "A",
+      "res": {
+        "finalist": "A: Leaf-wrapped frozen coconut drink pop (banana or pandan leaf, peeled and sipped as it thaws). Desk checks only; the physical leak test, cold-chain cost and willingness to pay are not covered.",
+        "checks": [
+          {
+            "question": "Does a Thai food-safety rule restrict or require approval for banana or pandan leaves used as food packaging or in contact with a drink?",
+            "finding": "No rule found names banana or pandan leaves or bars leaf packaging outright. The only container-specific MOPH rule found is Notification No. 92 (B.E. 2528, 1985). Per a FAOLEX summary, its clauses 4 to 6 set general quality rules (no harmful release of heavy metals or other contaminants into food) and clause 7 bars reuse of containers previously used for fertilizer, poison or harmful substances. Its title also includes 'prohibition of use of things as food containers', and the list of prohibited things could not be read: the FAOLEX PDF is an unreadable scan, and the DSS copy returned HTTP 523. A TCI journal article (2020) says Notification 92 does not define 'container'. Plastic container rules (Notification No. 435, B.E. 2565, replacing No. 295) cover plastic only. A DSS voluntary specification for areca-sheath food containers (DSS7-2566) shows natural-leaf containers are handled through voluntary standards; its full text was not readable here, and a search summary says it is not a mandatory legal standard. A 2026 draft food-contact revision covers ceramics, metals, glass, paper and board, and the article describing it does not mention natural materials. Verdict is unresolved because the Notification 92 prohibition list could not be read.",
+            "verdict": "unresolved",
+            "queries": [
+              "ประกาศกระทรวงสาธารณสุข ภาชนะบรรจุอาหาร ใบตอง ใบพลาญ วัสดุธรรมชาติ",
+              "ประกาศกระทรวงสาธารณสุข เรื่อง ภาชนะ วัสดุที่สัมผัสอาหาร อย. ใบตอง",
+              "Thailand FDA banana leaf food packaging regulation food contact natural materials",
+              "อย. ประกาศ ภาชนะบรรจุอาหาร ที่ทำจากใบไม้ ห้ามใช้ ใบตอง",
+              "ประกาศกระทรวงสาธารณสุข ฉบับที่ 295 พ.ศ. 2548 ภาชนะบรรจุที่ทำจากพลาสติก ขอบเขต",
+              "ประกาศกระทรวงสาธารณสุข ฉบับที่ 435 พ.ศ. 2565 ภาชนะบรรจุอาหารที่ทำจากพลาสติก ขอบเขต",
+              "พระราชบัญญัติอาหาร พ.ศ. 2522 มาตรา 25 ภาชนะ บรรจุอาหาร ห้ามผลิต ขาย วัสดุที่เป็นอันตราย",
+              "Thailand Food Act B.E. 2522 food container packaging requirement section 25 adulterated food natural material",
+              "ประกาศกระทรวงสาธารณสุข ฉบับที่ 92 พ.ศ. 2528 ภาชนะบรรจุอาหาร ห้ามใช้ สิ่งของ เป็นภาชนะ",
+              "\"การห้ามใช้สิ่งของเป็นภาชนะบรรจุอาหาร\" ฉบับที่ 92 ข้อ 7 ปุ๋ย สารพิษ",
+              "อย. ภาชนะบรรจุอาหารจากธรรมชาติ ใบตอง ใบกล้วย ใบยอ ใบบัว ความปลอดภัย ประกาศ",
+              "Fetch attempts: ecolex Notification 92 summary (read); FAOLEX PDF tha160423.pdf (unreadable scan); foodcontact.dss.go.th Notice 92 page (HTTP 523); DSS DSS7-2566 PDF (saved, could not render); library.regask.com overview (404); leap.unep.org Notification 92 page (403); SGS 2026 news article (403); foodpackagingforum draft article (read)"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.ecolex.org/details/legislation/notification-of-the-ministry-of-public-health-no-92-be2528-1985-regarding-prescription-of-quality-or-standard-for-food-containers-use-of-food-containers-and-prohibition-of-use-of-things-as-food-containers-lex-faoc160423/",
+                "fact": "Notification of the Ministry of Public Health No. 92 (B.E. 2528) on quality or standard for food containers, use of containers and prohibition of use of things as food containers. Summary only: clauses 4 to 6 on harmful heavy-metal migration; clause 7 bars reuse of containers previously used for fertilizer or poison. No natural-material bar in the summary; FAOLEX lists it as not repealed.",
+                "date": "1985 (B.E. 2528); summary accessed 2026-10-18"
+              },
+              {
+                "url": "https://so04.tci-thaijo.org/index.php/WTURJ/article/view/256345",
+                "fact": "Article notes Notification 92 does not define the term 'container' and has been in force for a long time.",
+                "date": "2020-08-30"
+              },
+              {
+                "url": "https://www.jetro.go.jp/ext_images/agriportal/platform/th/ip_435/pdf/20250331_01_1.pdf",
+                "fact": "Notification No. 435 (B.E. 2565) sets quality standards and migration limits for plastic food containers; published in the Royal Gazette 17 June 2565, effective 18 June 2565, replacing No. 295 (B.E. 2548). Secondary summary from search results.",
+                "date": "2022-06-17 (per summary)"
+              },
+              {
+                "url": "https://food.chemlinked.com/foodpedia/thailand-food-contact-materials-regulations",
+                "fact": "Secondary summary: the Food Act B.E. 2522 prohibits containers made of materials likely to harm health; the FDA Secretary may suspend production or import where containers are deemed hazardous.",
+                "date": "Undated; accessed 2026-10-18"
+              },
+              {
+                "url": "https://foodpackagingforum.org/news/thailand-overhauling-food-contact-material-regulations",
+                "fact": "Draft food-contact overhaul (FDA references dated 11 to 12 Feb 2026; consultation closed 31 March 2026) covers ceramics, metals, glass, paper and board; plastics are not covered by this draft; the article does not mention natural or plant-based materials such as leaves.",
+                "date": "2026-03-05 (article date)"
+              },
+              {
+                "url": "https://www.dss.go.th/images/sdo/files/specification/specification_DSS7-2566.pdf",
+                "fact": "DSS specification (DSS7-2566) for food-contact containers made from areca-palm sheath. Full text not readable in this environment; a search summary describes it as a voluntary specification, not a legal standard.",
+                "date": "March 2023 (per search summary); file metadata 2023-03-07"
+              }
+            ]
+          },
+          {
+            "question": "Is any leaf-wrapped frozen or ready-to-drink product already sold in Thailand?",
+            "finding": "No leaf-wrapped frozen drink or ready-to-drink product was found in any search, but the store audit could not be completed. In the built-in browser, Lazada catalogue searches for four terms returned a 'no results' message, but the control term ข้าวต้มมัด (khao tom mad, which has many listings) returned the same message, so the catalogue text is not a valid absence signal. Shopee search returned no page text. Makro Pro returned HTTP 404, Tops HTTP 403, and the 7-Eleven ALL Online search returned 'no results' alongside a notice that search was temporarily unavailable. Adjacent leaf-wrapped foods exist (leaf-wrapped sausage and squid-egg packs on Lazada), but they are not frozen drinks and do not trigger a kill. Verdict is unresolved: the desk can neither confirm nor rule out an existing product.",
+            "verdict": "unresolved",
+            "queries": [
+              "ไอศกรีมกะทิห่อใบตอง ขาย",
+              "น้ำมะพร้าวแช่แข็งห่อใบตอง ขาย",
+              "เครื่องดื่มห่อใบตอง แช่แข็ง ไอติม น้ำ ห่อใบเตย ขายออนไลน์ (allowed domains: shopee.co.th, lazada.co.th, makro.pro, tops.co.th, 7eleven.co.th)",
+              "Thailand frozen drink wrapped in banana leaf pandan leaf ice pop sold",
+              "ไอติมใบตอง ห่อใบตอง แช่แข็ง ขาย",
+              "ไอศกรีมห่อใบตอง (allowed domains: shopee.co.th, lazada.co.th, makro.pro, tops.co.th, allonline.7eleven.co.th)",
+              "น้ำมะพร้าวห่อใบตอง ขาย",
+              "โอทอป ไอศกรีม ห่อใบตอง ตลาด รถเข็น ไอติมกะทิใบเตย",
+              "ห่อหมกแช่แข็ง ห่อใบตอง ขาย ซูเปอร์มาร์เก็ต (allowed domains: as above)",
+              "ข้าวต้มมัด แช่แข็ง ห่อใบตอง ขาย (allowed domains: as above)",
+              "ปลาห่อใบตอง แช่แข็ง พร้อมทาน ขาย",
+              "ขนมไทยห่อใบตอง แช่แข็ง ขายออนไลน์ พร้อมส่ง กะทิ",
+              "Browser (2026-10-18): Shopee search for ใบตอง แช่แข็ง (no page text returned; the desk-used tab then showed an unrelated Shopee search)",
+              "Browser (2026-10-18): Lazada catalogue for ใบตอง แช่แข็ง, ไอศกรีม ใบตอง, น้ำมะพร้าวใบตอง, ใบเตย แช่แข็ง; control ข้าวต้มมัด",
+              "WebFetch: Lazada catalogue search; 7-Eleven ALL Online search; Makro Pro search (404); Tops search (403)"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.lazada.co.th/catalog/?q=%E0%B9%83%E0%B8%9A%E0%B8%95%E0%B8%AD%E0%B8%87%20%E0%B9%81%E0%B8%8A%E0%B9%88%E0%B9%81%E0%B8%82%E0%B9%87%E0%B8%87",
+                "fact": "Lazada catalogue page for ใบตอง แช่แข็ง shows 'ไม่พบสิ่งที่คุณค้นหา' (no results). The control term ข้าวต้มมัด shows the same message on its tag page, so this is not evidence of absence.",
+                "date": "2026-10-18 (browser access)"
+              },
+              {
+                "url": "https://www.lazada.co.th/tag/%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%95%E0%B9%89%E0%B8%A1%E0%B8%A1%E0%B8%B1%E0%B8%94/?q=%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%95%E0%B9%89%E0%B8%A1%E0%B8%A1%E0%B8%B1%E0%B8%94&catalog_redirect_tag=true",
+                "fact": "Control query page: the same 'ไม่พบสิ่งที่คุณค้นหา' text appears for ข้าวต้มมัด, a product with many listings in search results, so the rendered catalogue does not show product grids to text extraction.",
+                "date": "2026-10-18 (browser access)"
+              },
+              {
+                "url": "https://www.lazada.co.th/tag/%E0%B9%81%E0%B8%AB%E0%B8%99%E0%B8%A1%E0%B8%AB%E0%B9%88%E0%B8%AD%E0%B9%83%E0%B8%9A%E0%B8%95%E0%B8%AD%E0%B8%87/",
+                "fact": "Adjacent only: Lazada listing page for leaf-wrapped sausage (แหนมห่อใบตอง). Not a frozen drink.",
+                "date": "Page title dated มิ.ย. 2025"
+              },
+              {
+                "url": "https://www.lazada.co.th/products/2-i16114377842.html",
+                "fact": "Adjacent only: leaf-wrapped squid-egg product (ไข่หมึกห่อใบตอง, 2 packs). Frozen status not checked; not a drink.",
+                "date": "Undated; accessed 2026-10-18"
+              }
+            ]
+          },
+          {
+            "question": "Can the pack carry a 'plastic-free' or 'eco' claim in Thailand, and which rule applies?",
+            "finding": "No Thai rule found bans or specifically regulates 'plastic-free' or 'eco' wording on food packaging, and Thailand has no statute aimed specifically at greenwashing. The general rules that would apply are: (1) Food Act B.E. 2522 s.40, which prohibits advertising a food's benefits, quality or effects as false or deceptively misleading (penalty up to 3 years and/or 30,000 baht under s.70, per a secondary article); whether a packaging environmental claim counts as a food benefit or quality is not settled. (2) Food Act s.41, which requires prior review of certain food advertising for commerce; whether it reaches packaging claims is not settled, the 2008 rule found is in a folder marked CANCEL, and a 2021 (B.E. 2564) FDA food advertising rule was located but not read. (3) Consumer Protection Act B.E. 2522 s.22, which bars false or exaggerated advertising (read only through secondary summaries). A search summary says the Food Act's definition of 'label' covers marks and text on the container or packaging. A plastic-free claim is only lawful if accurate: if the pack carries any plastic film (the kill test's inner-film case), the claim would be false. The TEI Green Label is voluntary. EU rules restricting 'eco-friendly' claims (ECGT, applying from 27 Sept 2026) bind only EU-market sales. Verdict is unresolved because the governing rule for packaging claims (s.40 vs s.41 vs Consumer Protection Act s.22) and the current FDA advertising rule text are not settled.",
+            "verdict": "unresolved",
+            "queries": [
+              "กฎหมาย ข้อความ ปลอดพลาสติก เป็นมิตรต่อสิ่งแวดล้อม ฉลาก บรรจุภัณฑ์ อวดอ้าง เกินจริง พระราชบัญญัติคุ้มครองผู้บริโภค",
+              "Thailand green claims environmental claims packaging regulation eco-friendly labelling rule Consumer Protection Act Thai FDA",
+              "อย. ฉลากอาหาร ข้อความที่ห้ามแสดง ประกาศกระทรวงสาธารณสุข ฉลาก ข้อความอวดอ้าง",
+              "ฉลากเขียว TGO บรรจุภัณฑ์ ไม่ใช้พลาสติก คำอ้างสิ่งแวดล้อม แนวทาง การอ้างสิ่งแวดล้อม ประเทศไทย",
+              "พระราชบัญญัติคุ้มครองผู้บริโภค พ.ศ. 2522 มาตรา 22 ข้อความอันเป็นเท็จ โฆษณา ข้อความเกินจริง",
+              "ประกาศคณะกรรมการคุ้มครองผู้บริโภค โฆษณา สิ่งแวดล้อม ข้อความ เป็นมิตรต่อสิ่งแวดล้อม ต้องมีหลักฐาน",
+              "พระราชบัญญัติอาหาร พ.ศ. 2522 มาตรา 40 การโฆษณาอาหาร ข้อความเป็นเท็จ ฉลาก มาตรา 41",
+              "พระราชบัญญัติอาหาร มาตรา 41 โฆษณาคุณประโยชน์ คุณภาพ สรรพคุณอาหาร ต้องให้ผู้อนุญาตตรวจพิจารณาก่อน",
+              "ประกาศ อย. ฉลาก คำว่า ธรรมชาติ 100% ข้อความ ห้ามใช้ อาหาร ฉลาก ข้อความที่ไม่สามารถพิสูจน์ได้"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.dlapiper.com/insights/publications/2025/07/greenwashing-claims-from-a-global-perspective/thailand",
+                "fact": "Thailand has no statute aimed specifically at greenwashing; the Consumer Protection Act B.E. 2522 prohibits false or exaggerated advertising, which may cover sustainability claims.",
+                "date": "2025-07-16"
+              },
+              {
+                "url": "https://he01.tci-thaijo.org/index.php/fdajournal/article/download/138524/102973/367750",
+                "fact": "Secondary article on Food Act s.40: no advertising of food benefits, quality or effects that is false or deceptively misleading; penalty under s.70 up to 3 years and/or 30,000 baht. Also contains a summary of s.4 'label' (marks and text on food, container or packaging), which was not checked against the Act text.",
+                "date": "Undated; accessed 2026-10-18"
+              },
+              {
+                "url": "https://exfood.fda.moph.go.th/law/data/announ_fda/CANCEL/061RuleOfFoodAd51.pdf",
+                "fact": "FDA food advertising criteria (B.E. 2551, 2008), filed in a folder marked CANCEL; the search summary says s.41 covers commercial advertising through broadcast, print and other media. Status not confirmed.",
+                "date": "2008 (B.E. 2551)"
+              },
+              {
+                "url": "https://food.fda.moph.go.th/for-entrepreneurs/h-guidelines",
+                "fact": "Listing page for FDA guidelines. Search summary says the current food advertising criteria are the B.E. 2564 (2021) announcement in Royal Gazette vol. 138 special part 63 ng; text not read.",
+                "date": "2021 (B.E. 2564) per summary"
+              },
+              {
+                "url": "https://www.ilaw.or.th/articles/44880",
+                "fact": "Secondary article: Consumer Protection Act s.22 requires advertising to avoid unfair or false or exaggerated text.",
+                "date": "Undated; accessed 2026-10-18"
+              },
+              {
+                "url": "https://greenlabel.tei.or.th/wp-content/uploads/2024/06/TGL-104-15.pdf",
+                "fact": "TGL-104-15, a voluntary Green Label standard for paper packaging, approved by the Green Label management committee on 10 July 2015 (per search summary).",
+                "date": "2015-07-10"
+              },
+              {
+                "url": "https://www.bakermckenzie.com/en/insight/publications/2026/09/thailand-eu-green-claim-rules-impact-on-thai-businesses",
+                "fact": "EU Empowering Consumers for the Green Transition rules apply from 27 Sept 2026 and restrict generic claims such as 'eco-friendly' for EU-market sales; not a Thai domestic rule.",
+                "date": "2026-09"
+              }
+            ]
+          }
+        ],
+        "not_settled_by_desk": [
+          "Full text of MOPH Notification No. 92 (B.E. 2528): the clause listing prohibited 'things' as food containers, and whether it names leaves or other natural materials. Only a FAOLEX summary was read; the FAOLEX PDF is an unreadable scan and the DSS page returned HTTP 523.",
+          "Full text of DSS specification DSS7-2566 (areca-sheath containers): downloaded but not renderable in this environment (no PDF renderer installed), so its scope and legal status rest on a search summary.",
+          "Whether any current FDA or DSS rule covers natural leaves as food-contact material beyond Notification 92; the 2026 draft revision was read only through a secondary article (SGS page returned HTTP 403) and it is unclear whether it is final.",
+          "Store-level audit of existing products was not completed: Shopee search gave no page text; Lazada catalogue text does not render product grids (control term failed); Makro Pro returned 404; Tops returned 403; 7-Eleven ALL Online search showed a technical-problem notice. The OTOP registry was not searched directly.",
+          "Side effect to check: the desk navigated the user's existing Shopee tab (tab-1) to a search URL during the audit; the tab now shows a different Shopee search page. The desk opened and closed its own Lazada tab (tab-2).",
+          "Full texts of Food Act B.E. 2522 s.4 (label definition), s.40, s.41 and the Consumer Protection Act B.E. 2522 s.22 were not read; only secondary summaries were available. Whether a packaging environmental claim counts as a food benefit or quality under s.40 is unsettled, as is whether s.41 pre-review applies.",
+          "Current status and text of the FDA food advertising criteria (B.E. 2564) were not read.",
+          "Whether Notification No. 435 has been amended: a search summary lists a draft revision dated 16 Sept 2026, not confirmed as enacted. This matters only if the pack has a plastic inner film.",
+          "Whether the pack would need any plastic inner film to pass the 2-hour thaw leak test, and so whether a plastic-free claim would be accurate. This is a product fact, not settled by the desk.",
+          "Physical leak and thaw test (leaf-only wrap, 2 hours at 30 C), cold-chain cost, and consumer willingness to pay. These are known physical and consumer items outside the desk."
+        ]
+      },
+      "verified": []
+    },
+    {
+      "finalist": "B",
+      "res": {
+        "finalist": "Finalist B: Midlife women standardised-isoflavone unsweetened soy drink",
+        "checks": [
+          {
+            "question": "Under Thai FDA rules, is a drink with added isoflavone extract classified as a food or as a food supplement? What registration route applies to each?",
+            "finding": "Notification No. 293 (B.E. 2548), clause 2, defines a food supplement as a product taken in addition to the normal diet, containing nutrients or other substances, in tablet, capsule, powder, liquid or other forms that are NOT conventional food forms, for consumers expecting health-promotion benefits. The compiled text shows no amendment footnote on clause 2; clauses 4, 9, 10 and 12 were replaced by Notifications 405 (B.E. 2562) and 411 (B.E. 2562). On the public definition, a 250 ml UHT soy drink in conventional drink form falls outside the food-supplement definition and sits on the food route. Caveats: the current consolidated text of 405, 411 and 448 (B.E. 2566, food supplement no. 5) was not retrieved; the Thai FDA PDF of No. 448 could not be located (404 on tried URLs), and secondary sources disagree on its effective date (17 Jun 2024 vs 2 Jul 2024). Registration route: under 293 clause 12, a supplement label must show the food serial number (เลขสารบบอาหาร). The route for a conventional food with added isoflavone extract (food serial number only, or any extra safety or novel-food review under Notification 447 clause 2(1)(1)) was not settled from public text. A secondary vendor page says supplements fall under a 'specifically controlled food' route; this was not verified against a primary text.",
+            "verdict": "pass",
+            "queries": [
+              "Thailand FDA food supplement definition notification isoflavone soy extract food supplement vs food registration (WebSearch, 2026-10-18)",
+              "อาหารเสริม ประกาศกระทรวงสาธารณสุข ฉบับที่ 223 ไอโซฟลาโวน ถั่วเหลือง อย. (WebSearch; no notification 223 found)",
+              "ประกาศกระทรวงสาธารณสุข ฉบับที่ 448 พ.ศ. 2566 ผลิตภัณฑ์เสริมอาหาร (ฉบับที่ 5) pdf food.fda.moph.go.th (WebSearch)",
+              "exfood.fda.moph.go.th announ_moph 448 ผลิตภัณฑ์เสริมอาหาร ฉบับที่ 5 ราชกิจจานุเบกษา 2566 เลขสารบบ (WebSearch)",
+              "Direct fetch https://food.fda.moph.go.th/food-law/category/food-supplement (HTTP 404); curl of https://exfood.fda.moph.go.th/law/data/announ_moph/P448.PDF, P448.pdf and P447.PDF (all HTTP 404)",
+              "Downloaded and text-extracted Compi_293 (https://exfood.fda.moph.go.th/law/data/complilation/Compi_293.pdf)",
+              "Downloaded and text-extracted Notification 450 Thai (https://food.fda.moph.go.th/media.php?id=654869394207416320&name=P450.pdf); text layer garbled, registration wording not readable"
+            ],
+            "evidence": [
+              {
+                "url": "https://exfood.fda.moph.go.th/law/data/complilation/Compi_293.pdf",
+                "fact": "Notification 293 (B.E. 2548) clause 2 defines food supplement as a product taken beyond normal diet, with nutrients or other substances, in forms other than conventional food forms, for consumers expecting health-promotion benefits. Clause 12 requires the food serial number on the label of food supplements. Footnotes record replacement of clauses 4, 9, 10 and 12 by Notifications 405 and 411 (B.E. 2562).",
+                "date": "Notification 2005 (B.E. 2548); compilation PDF metadata 2023-03-29"
+              },
+              {
+                "url": "https://www.thaipost.net/news-update/534478/",
+                "fact": "News report: MoPH issued four food-labelling notifications including No. 447 (health claims) and No. 448 (food supplements); published in the Royal Gazette on 4 Jan 2024; enforcement stated as 2 Jul 2024.",
+                "date": "2024-01 (news report)"
+              },
+              {
+                "url": "https://food.chemlinked.com/database/view/5347",
+                "fact": "Secondary database entry: MOPH Notification No. 448 (B.E. 2566), Food Supplement (No. 5), release 2023-12-17, implementation 2024-06-17. Conflicts with the news date above; not verified against the gazette.",
+                "date": "Database entry (undated); release 2023-12-17"
+              }
+            ]
+          },
+          {
+            "question": "Can a food or a supplement in Thailand carry a menopause, hot-flush or sleep benefit claim, and which notification sets the wording? Verdict kill if the rules bar a menopause-linked benefit on a food.",
+            "finding": "Notification No. 447 (B.E. 2566), health claims on food labels, governs wording. Annexes 1 to 3 list nutrient function claims, a short list of other function claims (beta-glucans, phytosterols/phytostanols, choline, DHA/EPA, sodium, saturated fat) and disease-risk claims. None concerns soy, isoflavones, menopause, hot flushes or sleep. The FDA's later annex adds four items (cocoa flavanols, native chicory inulin, fructo-oligosaccharides, and monounsaturated fat replacing saturated fat), none on soy or menopause. Clause 5: a claim not in Annexes 1 to 3 may be used only after assessment by a Thai FDA-recognised nutrition and health claim assessment centre and approval by the FDA. So the rules do not bar a menopause-linked claim outright, and a route exists. However, clause 6(2) prohibits claims that mislead consumers about treatment, relief, cure or prevention of disease, and clause 6(3)(7) requires the statement 'Not intended to treat, relieve, cure or prevent any disease' on other function claims. Whether hot-flush or sleep symptoms count as a 'disease' for the clause 6(2) relief bar is not settled by the text. Clause 2(3) requires well-designed human intervention studies in the target group, and clause 6(3)(5) requires any maximum safe intake statement. Food-supplement claim wording (293 as amended, 448) was not retrieved. The kill test is not met on the text (no explicit bar and an assessment route exists), but the clause 6(2) relief bar is an open risk for a menopause or hot-flush claim. Verdict unresolved.",
+            "verdict": "unresolved",
+            "queries": [
+              "ประกาศกระทรวงสาธารณสุข ฉลาก อ้างสรรพคุณ วัยทอง อาหาร ห้าม อย. (WebSearch)",
+              "Thailand soy milk or soy drink product menopause hot flush claim isoflavone \"วัยทอง\" นมถั่วเหลือง ผลิตภัณฑ์ 2025 2026 (WebSearch)",
+              "Direct fetch https://food.fda.moph.go.th/food-law/category/food-labeling-and-nutrition-labeling (lists No. 447 with effective date 02/07/67)",
+              "Downloaded and text-extracted Notification 447 English FDA translation https://food.fda.moph.go.th/media.php?id=607838556769099776&name=P447_EN.pdf (clauses 1 to 9, Annexes 1 to 4)",
+              "Downloaded and text-extracted FDA annex of other function claims https://food.fda.moph.go.th/media.php?id=824886348598091776&name=other-function-claims.pdf"
+            ],
+            "evidence": [
+              {
+                "url": "https://food.fda.moph.go.th/media.php?id=607838556769099776&name=P447_EN.pdf",
+                "fact": "Notification 447 (FDA English translation, disclaimer on file): clause 5 requires assessment by a recognised centre and FDA approval for claims outside Annexes 1-3; clause 6(2) bars claims misleading about treatment, relief, cure or prevention of disease; clause 6(3)(7) requires 'Not intended to treat, relieve, cure or prevent any disease' for other function and risk claims; clause 2(3) requires well-designed human intervention studies in the target group; Annex 2 lists beta-glucans, phytosterols, choline, DHA/EPA, sodium and saturated fat only.",
+                "date": "Given 2023-12-17 (B.E. 2566); in force after 180 days from gazette publication"
+              },
+              {
+                "url": "https://food.fda.moph.go.th/food-law/category/food-labeling-and-nutrition-labeling",
+                "fact": "Thai FDA listing: Notification No. 447 (B.E. 2566) on health claims on food labels, effective 02/07/67 (2 July 2024). Listing also shows the other-function claims annex as a supplement to No. 447.",
+                "date": "Effective 2024-07-02; page read 2026-10-18"
+              },
+              {
+                "url": "https://food.fda.moph.go.th/media.php?id=824886348598091776&name=other-function-claims.pdf",
+                "fact": "Annex adding 4 items and 6 statements to the list of other function claims under No. 447: cocoa flavanols, native chicory inulin, fructo-oligosaccharides, and MUFA replacing saturated fat. No soy, isoflavone, menopause, hot-flush or sleep entry.",
+                "date": "Undated announcement; file metadata 2025-10-31"
+              },
+              {
+                "url": "https://efsa.europa.eu/en/efsajournal/pub/2847",
+                "fact": "Trade-press summary (not verified against primary text; the EFSA Wiley page returned HTTP 403) reports that EFSA rejected a menopause health claim for soy isoflavones under the EU article 13 process.",
+                "date": "Opinion DOI 10.2903/j.efsa.2012.2847 (2012)"
+              }
+            ]
+          },
+          {
+            "question": "Is any soy drink or isoflavone drink already marketed in Thailand for menopause or hot flushes? Audit Makro, Tops, Boots, Watsons, Lazada and Shopee. Verdict kill if a directly comparable drink is sold, with the product and date.",
+            "finding": "No directly comparable soy or isoflavone drink marketed for menopause or hot flushes was found on the pages that loaded, but the audit is incomplete. Lazada: two Thai search queries (น้ำถั่วเหลือง วัยทอง; น้ำถั่วเหลือง ไอโซฟลาโวน) on 2026-10-18 returned 'no results' pages. Shopee: the search redirected to a traffic-verification page; this was not bypassed. Makro, Tops and Boots: the search routes tried returned 404 or not-found pages; the Makro and Boots homepages loaded without results. Watsons: the search page loaded only a cookie banner with no product list. Thai and English web searches surfaced no 2025 to 2026 Thai soy-drink listing with menopause or hot-flush wording. The Chiang Mai 2018 study found Thai soy-milk brands with isoflavone content but no menopause claims. Absence on these pages is not proof of absence in the market. Verdict unresolved.",
+            "verdict": "unresolved",
+            "queries": [
+              "Lazada: น้ำถั่วเหลืองไอโซฟลาวอน (first attempt, mistyped); น้ำถั่วเหลือง วัยทอง; น้ำถั่วเหลือง ไอโซฟลาโวน",
+              "Shopee: น้ำถั่วเหลือง วัยทอง; ไอโซฟลาโวน (redirected to traffic verification)",
+              "Makro: น้ำถั่วเหลือง (two URL forms, both 404)",
+              "Tops: น้ำถั่วเหลือง (search route, not found)",
+              "Boots: ไอโซฟลาโวน (search route 404; homepage loaded)",
+              "Watsons: ไอโซฟลาโวน (search page, cookie banner only)",
+              "WebSearch: น้ำถั่วเหลือง ไอโซฟลาวอน วัยทอง ร้อนวูบวาบ Shopee Lazada 2026",
+              "WebSearch: soy milk isoflavone menopause hot flashes drink Thailand Watsons Boots Makro Tops Lazada Shopee product",
+              "WebSearch: Thailand soy milk or soy drink product menopause hot flush claim isoflavone \"วัยทอง\" นมถั่วเหลือง ผลิตภัณฑ์ 2025 2026"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.lazada.co.th/catalog/?q=%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%96%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%87%20%E0%B8%A7%E0%B8%B1%E0%B8%A2%E0%B8%97%E0%B8%AD%E0%B8%87",
+                "fact": "Lazada Thailand search for น้ำถั่วเหลือง วัยทอง: page shows 'ไม่พบสิ่งที่คุณค้นหา' (no results found).",
+                "date": "2026-10-18"
+              },
+              {
+                "url": "https://www.lazada.co.th/catalog/?q=%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%96%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%87%20%E0%B9%84%E0%B8%AD%E0%B9%82%E0%B8%8B%E0%B8%9F%E0%B8%A5%E0%B8%B2%E0%B9%82%E0%B8%A7%E0%B8%99",
+                "fact": "Lazada Thailand search for น้ำถั่วเหลือง ไอโซฟลาโวน: page shows 'ไม่พบสิ่งที่คุณค้นหา' (no results found).",
+                "date": "2026-10-18"
+              },
+              {
+                "url": "https://shopee.co.th/search?keyword=%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%96%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%87%20%E0%B8%A7%E0%B8%B1%E0%B8%A2%E0%B8%97%E0%B8%AD%E0%B8%87",
+                "fact": "Shopee search redirected to a traffic-verification page (shopee.co.th/verify/traffic/error). Not bypassed; no products read.",
+                "date": "2026-10-18"
+              },
+              {
+                "url": "https://store.boots.co.th/search?text=%E0%B9%84%E0%B8%AD%E0%B9%82%E0%B8%8B%E0%B8%9F%E0%B8%A5%E0%B8%B2%E0%B9%82%E0%B8%A7%E0%B8%99",
+                "fact": "Boots Thailand search route returned a 404 page; homepage loaded with coupons and articles only.",
+                "date": "2026-10-18"
+              },
+              {
+                "url": "https://www.makro.pro/search?q=%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%96%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%87",
+                "fact": "Makro Pro search route returned 404 (also tried keyword= form, 404). Category pages list 'เครื่องดื่มบำรุงสุขภาพ' but no product search results captured.",
+                "date": "2026-10-18"
+              },
+              {
+                "url": "https://www.tops.co.th/en/search?text=%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%96%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%87",
+                "fact": "Tops online search route returned 'Sorry, the page not found'.",
+                "date": "2026-10-18"
+              },
+              {
+                "url": "https://www.watsons.co.th/th/search?text=%E0%B9%84%E0%B8%AD%E0%B9%82%E0%B8%8B%E0%B8%9F%E0%B8%A5%E0%B8%B2%E0%B9%82%E0%B8%A7%E0%B8%99",
+                "fact": "Watsons Thailand search page loaded a cookie banner and navigation only; no product list captured.",
+                "date": "2026-10-18"
+              },
+              {
+                "url": "https://he01.tci-thaijo.org/index.php/jhsmr/article/view/125491",
+                "fact": "Study of four Thai soy-milk brands sold in Chiang Mai (two flavours each): total isoflavones 25.5 to 63.5 mg per 250 ml serving, with variation between lots of the same product. Study reports product content only, not menopause claims.",
+                "date": "Published 2018-05-24 (DOI 10.31584/jhsmr.2018.36.2.5)"
+              }
+            ]
+          },
+          {
+            "question": "What upper-intake or safety guidance exists for isoflavones (Thai FDA, Singapore HPB or EFSA), and does it cap a labelled dose in a daily drink?",
+            "finding": "No binding Thai, EFSA or Singapore cap on a labelled isoflavone dose in a daily food was found. EFSA (press release, 21 Oct 2015) found no indication of harm at isoflavone levels typically found in food supplements over 3 months to just under 1 year; it stated no tolerable upper intake level and no safe maximum daily intake, and noted no data for women in transition to menopause or with a personal or family history of cancer. Those gaps cover part of the target group (women aged 40 to 59). No Thai FDA isoflavone intake limit was found. Mahidol pharmacy knowledge page (undated, non-binding) suggests 50 to 100 mg isoflavones per day as an intake guide. A 2005 Japanese food-safety panel, reported secondarily, set about 70 to 75 mg per day from food and supplements and judged about 30 mg per day from supplements acceptable (old, non-binding). Singapore HPB guidance was not found. Product variation (25.5 to 63.5 mg per 250 ml across four Thai soy-milk brands) means a labelled dose needs verification. Verdict unresolved: no cap was found, but safety for the target group is not settled.",
+            "verdict": "unresolved",
+            "queries": [
+              "ไอโซฟลาโวน อาหารเสริม ปริมาณสูงสุด ต่อวัน อย. ประกาศ ถั่วเหลือง สารสกัด วัยหมดประจำเดือน ข้อแนะนำ (WebSearch; no Thai FDA isoflavone limit found)",
+              "EFSA scientific opinion soy isoflavones safety upper level intake 150 mg/day food supplements 2015 (WebSearch)",
+              "EFSA Journal 2015 scientific opinion isoflavones soy red clover NDA panel safety of isoflavone food supplements menopausal women efsa.europa.eu (WebSearch) and direct fetch of https://www.efsa.europa.eu/en/press/news/151021",
+              "Singapore HPB isoflavone soy supplement guidance upper limit intake women menopause (WebSearch; no HPB result)",
+              "hpb.gov.sg isoflavones soy health information intake advice menopause (WebSearch restricted to hpb.gov.sg; no HPB page returned)",
+              "soy milk Thailand isoflavone content four brands 25.5 63.5 mg per 250 mL serving Chiang Mai 2018 journal (WebSearch)"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.efsa.europa.eu/en/press/news/151021",
+                "fact": "EFSA press release 'Isoflavones in food supplements for post-menopausal women: no evidence of harm': no indication of harm to mammary gland, uterus or thyroid at typical supplement levels, limited to studied doses (3 months to just under a year); no tolerable upper intake level or safe maximum daily intake stated; no data for women in transition to menopause or with personal or family history of cancer. Opinion DOI 10.2903/j.efsa.2015.4246.",
+                "date": "2015-10-21"
+              },
+              {
+                "url": "https://pharmacy.mahidol.ac.th/knowledge/files/0002.pdf",
+                "fact": "Mahidol Faculty of Pharmacy knowledge sheet: suggested daily isoflavone intake about 50 to 100 mg, roughly equal to 2 to 4 glasses of soy milk; academic guidance, not a legal limit (seen in search snippet only).",
+                "date": "Undated"
+              },
+              {
+                "url": "https://www.nutraingredients.com/Article/2005/12/14/Japan-issues-safety-data-on-isoflavone-intake",
+                "fact": "Secondary report of a Japanese food-safety panel: consumers could safely take up to about 70 to 75 mg isoflavones per day from foods and supplements; about 30 mg per day from supplements judged acceptable alongside dietary soy. Old and non-binding in Thailand.",
+                "date": "2005-12-14"
+              },
+              {
+                "url": "https://he01.tci-thaijo.org/index.php/jhsmr/article/view/125491",
+                "fact": "Four Thai soy-milk brands, two flavours each: 25.5 to 63.5 mg isoflavones per 250 ml serving, with lot-to-lot variation; authors call for standardising or labelling isoflavone content.",
+                "date": "Published 2018-05-24"
+              }
+            ]
+          }
+        ],
+        "not_settled_by_desk": [
+          "Current consolidated text of Thai food-supplement Notifications 405 (B.E. 2562), 411 (B.E. 2562) and 448 (B.E. 2566, food supplement no. 5) was not retrieved; the No. 448 PDF could not be located and secondary sources give different effective dates (17 Jun 2024 vs 2 Jul 2024).",
+          "Registration route for a conventional food with added isoflavone extract (food serial number only, or any pre-market safety or novel-food review) is not settled from public text; the Notification 450 text layer was unreadable for registration wording. Needs a Thai registration adviser.",
+          "Whether the Thai FDA treats hot-flush or sleep symptoms as a 'disease' for the Notification 447 clause 6(2) bar on claims about 'relief' of disease. The desk cannot settle this; needs an FDA written opinion or a registration adviser. This is the decisive point for the kill test.",
+          "Whether a menopause or hot-flush claim would be approved under Notification 447 clause 5 (assessment by a recognised centre and FDA approval), and whether the evidence meets clause 2(3) for the target group. No published Thai assessment was found.",
+          "Food-supplement claim-wording rules in the 293 series as amended (405, 411, 448) were not read, so claim limits for a supplement route are not settled.",
+          "EU position on soy isoflavones and menopause rests on a trade-press summary only; the EFSA opinion behind DOI 10.2903/j.efsa.2012.2847 returned HTTP 403. The full EFSA 2015 isoflavone opinion (DOI 10.2903/j.efsa.2015.4246) was not read; only the press release was checked.",
+          "Thai retail audit is incomplete: Shopee redirected to a traffic-verification page (not bypassed); Makro, Tops and Boots search routes returned 404 or not-found pages under the URL forms tried; Watsons search showed no product list. The Thai FDA product registration database (registered food serial numbers with menopause or hot-flush wording) was not queried.",
+          "Singapore HPB guidance on isoflavones was not found through search (domain-restricted search returned no hpb.gov.sg page); the HPB site was not browsed directly.",
+          "Safety of the labelled dose in women aged 40 to 59, including perimenopausal women and women with breast cancer, uterine or thyroid history. EFSA excluded transition-stage women and women with cancer history from its assessment (known physical or consumer item: dose safety test).",
+          "Labelled-dose accuracy: the 2018 Chiang Mai study found 25.5 to 63.5 mg per 250 ml across four Thai soy-milk brands and lot variation, so the product's own certificate of analysis is needed to support any labelled dose (known item: supplier certificate of analysis).",
+          "Notification 447 clause 4 limits (total fat, saturated fat, cholesterol, sodium and total sugar per serving) and clause 6(3) label conditions depend on the product's composition, which is not public.",
+          "Consumer demand for a menopause-linked soy drink in Thai women aged 40 to 59 (known consumer item: consumer demand)."
+        ]
+      },
+      "verified": []
+    },
+    {
+      "finalist": "C",
+      "res": {
+        "finalist": "Finalist C: Thai-herb non-alcoholic evening RTD for sober-curious adults (single component entry, three finalists kept as they are)",
+        "checks": [
+          {
+            "question": "Is a Thai-botanical non-alcoholic canned or bottled drink already sold in Thailand with an evening or alcohol-alternative position? Audit the listed stores and platforms (Makro, Tops, 7-Eleven, Lazada, Shopee, Boots, Villa Market).",
+            "finding": "Unresolved, not pass. No kill-qualifying product was found, but the store audit cannot be completed from public search. Nothing found is both a Thai-botanical non-alcoholic RTD and positioned for evening use or as an alcohol alternative. Closest hits: (1) Phayanak herbal drink 'Promt' (Phen Phak brand), a 150 ml carbonated bottle labelled non-alcoholic, with black galangal, dang gui, cordyceps and guarana as main herbs. Its Lazada listing states no evening, drinking or alcohol-substitute positioning and shows no date. It is a bottle, not a can. Press articles on its positioning rely on company statements and were excluded. (2) QminC herbal RTD (ginger and finger root, Tera Food, March 2022 trade report): functional health positioning, not evening. (3) Heineken 0.0 and Bavaria 0.0 malt drinks: not botanical. (4) A 7-Eleven drinks page lists a 'Signature Herbal Refresh' drink with no alcohol or packaging detail. Lemongrass-pandan water is a home and market drink, not a packaged RTD found in this audit. The search index surfaced no product pages for Makro, Tops, Boots or Villa Market, and Lazada and Shopee results were mostly off-category, so the retailer audit remains open.",
+            "verdict": "unresolved",
+            "queries": [
+              "non-alcoholic herbal drink lemongrass butterfly pea kaffir lime canned Thailand",
+              "เครื่องดื่มสมุนไพรไม่มีแอลกอฮอล์ กระป๋อง ตะไคร้ อัญชัน ใบมะกรูด",
+              "Thailand non-alcoholic RTD alcohol alternative evening drink Makro Tops 7-Eleven Lazada Shopee",
+              "non-alcoholic drink can Thailand 7-Eleven Makro Tops Villa Market Boots alcohol-free herbal soda (domain filter: makro.pro, tops.co.th, 7eleven.co.th, villamarket.com, boots.co.th, lazada.co.th, shopee.co.th)",
+              "เครื่องดื่มไม่มีแอลกอฮอล์ ทดแทนแอลกอฮอล์ ตะไคร้ อัญชัน มะกรูด กระป๋อง ออนไลน์ ราคา (domain filter: shopee.co.th, lazada.co.th)",
+              "เครื่องดื่มสมุนไพรไม่มีแอลกอฮอล์ กระป๋อง ตะไคร้ ดื่มแทนเหล้า แบรนด์ไทย เปิดตัว",
+              "Thai brand non-alcoholic herbal RTD can launch lemongrass pandan alcohol alternative evening Thailand",
+              "พญานาค พร้อมท์ เครื่องดื่มสมุนไพร ไม่มีแอลกอฮอล์ ดื่มแทนเหล้า",
+              "เครื่องดื่มสมุนไพรอัดก๊าซ ไม่มีแอลกอฮอล์ กระป๋อง ดื่มแทนแอลกอฮอล์ ตอนเย็น 2569",
+              "เครื่องดื่ม 0% แอลกอฮอล์ สมุนไพรไทย กระป๋อง ตะไคร้ แบรนด์ เปิดตัว ทดแทนแอลกอฮอล์",
+              "0% alcohol Thai herbal can lemongrass brand Thailand launch alcohol alternative sparkling",
+              "Fetched: lazada.co.th Phayanak herbal drink listing (product 5186395781)"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.lazada.co.th/products/150-ml-48-i5186395781.html",
+                "fact": "Phayanak herbal drink 'Promt': 150 ml bottles, 48 per pack, labelled non-alcoholic and carbonated; botanicals black galangal, dang gui, cordyceps, guarana. No evening, drinking or alcohol-substitute positioning shown; no seller name or listing date shown.",
+                "date": "undated listing (fetched 2026-10-18)"
+              },
+              {
+                "url": "https://www.fruit-processing.com/2022/03/thailands-qminc-brand-launches-two-new-rtd-herbal-based-functional-drinks-ginger-and-finger-root-for-the-health-conscious/",
+                "fact": "Tera Food's QminC launched two herbal RTD functional drinks (ginger and finger root). Functional health positioning, not evening. Search excerpt only, not fetched.",
+                "date": "2022-03 (from URL)"
+              },
+              {
+                "url": "https://www.7eleven.co.th/new-product/drink",
+                "fact": "Drinks page lists a 'Signature Herbal Refresh' drink. Alcohol status, packaging and positioning not shown. Search excerpt only.",
+                "date": "undated"
+              },
+              {
+                "url": "https://www.lazada.co.th/products/heineken-00-no-alcohol-330-pack-6-cans-i957830788.html",
+                "fact": "Heineken 0.0 non-alcoholic malt drink, 6 x 330 ml cans. Not botanical, so excluded from the Thai-botanical test. Search excerpt only.",
+                "date": "undated"
+              },
+              {
+                "url": "https://www.makro.pro/en/c/beverages/non-alcoholic-beverages",
+                "fact": "Makro non-alcoholic beverages category page exists. Product list not retrieved, so no Makro product was verified.",
+                "date": "undated"
+              }
+            ]
+          },
+          {
+            "question": "What do the Thai alcohol-advertising rules (Alcohol Control Act B.E. 2551 and its advertising provisions) say about a non-alcoholic product that positions itself as an alcohol alternative or uses alcohol-like cues? Kill only if the rule bars that positioning outright; otherwise unresolved with section cited.",
+            "finding": "Unresolved, with sections cited. No provision found bars an alcohol-alternative positioning outright. Amended Act (No. 2, B.E. 2568): section 32/3 is the relevant clause. It prohibits indirect advertising, including using alcohol brand names, logos or symbols on non-alcoholic products where the use could reasonably be seen as promoting alcoholic beverages. Section 32/1 generally prohibits advertising of alcoholic beverages, with exceptions for factual, educational or public communication under Ministerial conditions. Section 32/2 bars celebrity and influencer endorsement that displays alcohol brand names or trademarks. The original 2008 section 32 (first paragraph, per secondary summaries) barred direct or indirect promotion using alcohol names or symbols that highlight attributes or induce drinking. Under the amended text, a non-alcoholic product with its own brand, no alcohol marks, and only alcohol-like cues (flavour, can design, beer-style naming) is not barred on its face. The 32/3 test is fact-dependent, not an outright bar. Gaps: the law-firm summary says the Act does not define 'alcoholic beverage' or give an alcohol-percentage threshold, so whether a near-zero product falls within the Act is unverified. Ministerial conditions under 32/1 and 32/2 were still being drafted; a public consultation on a draft under 32/1 was reported for 9 September 2026. The draft reportedly restricts bottle and packaging images and sets media limits. No information was found on how the draft treats non-alcoholic products. The Royal Gazette PDFs are binary and could not be read, so section wording comes from secondary summaries. Effective date: 8 November 2025 (60 days after 9 September 2025 publication), per the law-firm page and a Thai press excerpt; one Thai excerpt says 90 days.",
+            "verdict": "unresolved",
+            "queries": [
+              "Alcohol Control Act B.E. 2551 section 32 advertising alcohol beverages Thailand English text",
+              "พระราชบัญญัติควบคุมเครื่องดื่มแอลกอฮอล์ พ.ศ. 2551 มาตรา 32 โฆษณา",
+              "เบียร์ไร้แอลกอฮอล์ โฆษณา มาตรา 32 พ.ร.บ.เครื่องดื่มแอลกอฮอล์ ไม่ถือเป็นเครื่องดื่มแอลกอฮอล์ 0.5%",
+              "Alcoholic Beverage Control Act B.E. 2551 (2008) official text Royal Gazette ratchakitcha pdf",
+              "พ.ร.บ.ควบคุมเครื่องดื่มแอลกอฮอล์ (ฉบับที่ 2) พ.ศ. 2568 ราชกิจจานุเบกษา มาตรา 32/1 โฆษณา",
+              "Alcoholic Beverage Control Act (No. 2) B.E. 2568 2025 Royal Gazette advertising section 32/1 32/3 in force",
+              "ร่างประกาศ มาตรา 32/1 โฆษณาเครื่องดื่มแอลกอฮอล์ พื้นที่โลโก้ 3-5% เวลา 22.00-05.00 น.",
+              "Fetched: faolex 2009 English translation of the 2008 Act (binary PDF, unreadable); Fetched: Royal Gazette link via Rajah & Tann PDF (binary, unreadable)"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.rajahtannasia.com/?p=178681",
+                "fact": "Law-firm page: amendment published in the Royal Gazette on 9 September 2025 and effective 60 days later. Summarises section 32/1 general ban with exceptions, section 32/2 endorsement ban, and section 32/3 surrogate use of alcohol marks on non-alcoholic products. Page does not define alcoholic beverage.",
+                "date": "2025-09-22"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/Alcohol_Beverage_Control_Act",
+                "fact": "The 2008 Act commenced 14 February 2008. The House passed the amending bill 365-0 on 19 March 2025 and approved the advertising change 371-1 the same day. The Senate approved the draft on 4 August 2025. The article does not quote section 32 wording.",
+                "date": "accessed 2026-10-18"
+              },
+              {
+                "url": "https://www.ilct.co.th/tag/alcoholadvertisement/",
+                "fact": "Commentary on the 2008 section 32: bars alcohol name or trademark imagery in advertising; treats advertising originating outside Thailand as exempt. Search excerpt only.",
+                "date": "undated"
+              },
+              {
+                "url": "https://www.thansettakij.com/business/669214",
+                "fact": "Press excerpt: draft subordinate rules under section 32/1 opened for comment on 9 September 2569 (2026). Draft reportedly bans images of bottles and packaging and requires age screening online. Only one outlet reports a 3-5 percent logo-area limit. Search excerpt only, not fetched in full.",
+                "date": "2026-09-09 (per excerpt)"
+              }
+            ]
+          },
+          {
+            "question": "Check the trend sources the file cites: Innova Market Insights (December 2025, Thailand low- and no-alcohol), GlobalData (no-alcohol beer CAGR 12.9%, 2022-2027), and the Thai Post column citing Mintel 2023 on Gen Z. For each, say whether the source says what the file says.",
+            "finding": "Kill, scoped to the Thai Post item. (a) GlobalData: pass. The article (26 May 2023, based on a Q1 2023 Thailand consumer survey of 508 respondents) gives a 12.9% volume CAGR for 2022-27 for the no-/low-alcohol beer market in Thailand. Figure, period and country match the file. Scope difference: the source covers no-/low-alcohol beer by volume, not no-alcohol beer alone; the file should say so. (b) Innova: unresolved. The report page is dated 1 December 2025 and is titled 'Alcoholic and Non-Alcoholic Beverages in Thailand'. The public page does not show a Thailand low- or no-alcohol finding, and the full report is paid. A search excerpt said the teaser reports a non-alcoholic frequency statistic, but the page fetch did not show it, so this conflict is unresolved. (c) Thai Post and Mintel: kill if the file uses the column for Gen Z drinking less or sober-curious behaviour. The column (25 December 2023, Thai Post column on the drinks market, byline Rungnapa Saraphin) cites Mintel Thailand for two Gen Z points: over one in three Thai Gen Z consumers prefer sweet non-alcoholic drinks, and Gen Z is the most active group in drinking non-alcoholic beverages. It does not mention Gen Z alcohol reduction, sober-curious consumers or alcohol trends. The Mintel data on Gen Z cutting alcohol is UK data (Mintel UK insight, 2023 survey), not Thai. No Thai source was found on Gen Z cutting alcohol. The file's exact sentence was not in the desk brief, so confirm which claim the column is cited for. The column supports only the non-alcoholic preference point.",
+            "verdict": "kill",
+            "queries": [
+              "Innova Market Insights Thailand low no alcohol December 2025",
+              "GlobalData no-alcohol beer CAGR 12.9% 2022-2027",
+              "Thai Post Mintel 2023 Gen Z alcohol sober curious column",
+              "ไทยโพสต์ คอลัมน์ Gen Z ไม่ดื่มแอลกอฮอล์ Mintel 2023 sober curious",
+              "ไทยโพสต์ Gen Z ดื่มแอลกอฮอล์น้อยลง คอลัมน์ Mintel (domain filter: thaipost.net, thaipost.co.th)",
+              "Mintel UK Gen Z sober curious insight (fetched)",
+              "Fetched: innovamarketinsights.com Thailand alcoholic and non-alcoholic beverages report page",
+              "Fetched: globaldata.com Thailand low/no-alcohol positioning article",
+              "Fetched: thaipost.net columnist-people/506731"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.globaldata.com/media/consumer/innovative-product-positioning-drive-demand-low-no-alcoholic-drinks-thailand-says-globaldata/",
+                "fact": "Article gives a 12.9% volume CAGR for the no-/low-alcohol beer market in Thailand, 2022-27, from a Q1 2023 Thailand consumer survey (508 respondents). Matches the file's figure and period; scope is no-/low-alcohol beer.",
+                "date": "2023-05-26"
+              },
+              {
+                "url": "https://www.innovamarketinsights.com/reports/alcoholic-and-non-alcoholic-beverages-industry-in-thailand/",
+                "fact": "Report page dated 1 December 2025, titled as an alcoholic and non-alcoholic beverages report for Thailand. Public text does not show a Thailand low- or no-alcohol finding. Full report is paid.",
+                "date": "2025-12-01"
+              },
+              {
+                "url": "https://www.thaipost.net/columnist-people/506731/",
+                "fact": "Thai Post column on the Thai drinks market. Cites Mintel Thailand: over one in three Thai Gen Z consumers prefer sweet non-alcoholic drinks; Gen Z is most active in drinking non-alcoholic beverages. No mention of Gen Z drinking less alcohol or sober-curious consumers.",
+                "date": "2023-12-25"
+              },
+              {
+                "url": "https://www.mintel.com/insights/food-and-drink/gen-z-sober-curious-generation/",
+                "fact": "Mintel UK insight: 40% of UK Gen Z limited alcohol consumption in 2023; around two-thirds of 18-24s worry about alcohol's emotional impact; around a third of 18-24s do not drink. UK data only.",
+                "date": "2024-01-17 (updated 2026-02-23)"
+              }
+            ]
+          },
+          {
+            "question": "What does the 9.6 percent figure from the Thai National Statistical Office measure: youth drinking, or sober-curious adults? Report the definition. Pass if the definition is found; otherwise unresolved.",
+            "finding": "Unresolved. The definition is not found, and the NSO attribution is not supported by the sources read. The only source found that states 9.6% is a Naewna article dated 17 August 2025. It attributes the figure to a remark by a Walailak University medical school academic, cites no survey, and gives no sample, age range, area or definition of drinking. It describes 9.6% as the 2024 level for Thai youth, up from 8.9% in 2021. The NSO figures that article does attribute are a different measure: 24.8% drinking among ages 15-24 in 2024, down from 34.7% in 2021. A Daily News article dated 5 March 2026 repeats those NSO youth figures and does not contain 9.6%. The NSO headline for all persons aged 15+ is a 2024 drinking share of 35.2% (28% in 2021), per a Thansettakij article dated 12 June 2025. The Statistical Yearbook 2025 chart shows only sex-specific 2024 values, and the 9.6 appears once as an unlabelled value that cannot be tied to a measure. The NSO 2023 survey PDF could not be read. One unfetched search excerpt, with no source URL, attributed 9.6% to a youth-network survey of about 2,200 people in Bangkok and vicinity, defined as drinking three to five days a week among those who had ever drunk, including ages 13-15. This is unverified. Neither source measures sober-curious adults.",
+            "verdict": "unresolved",
+            "queries": [
+              "สำนักงานสถิติแห่งชาติ ร้อยละ 9.6 ดื่มแอลกอฮอล์ การสำรวจ",
+              "สำนักงานสถิติแห่งชาติ สำรวจพฤติกรรมการดื่มเครื่องดื่มแอลกอฮอล์ ร้อยละ 9.6 เยาวชน อายุ 15-24 ปี",
+              "สสช. การสำรวจการดื่มเครื่องดื่มแอลกอฮอล์ พ.ศ. 2567 ดื่มเป็นประจำ ร้อยละ อายุ 15 ปีขึ้นไป",
+              "NSO Thailand alcohol drinking survey 2024 regular drinkers percent 15 years and over 9.6",
+              "Fetched: naewna.com 907169 (17 Aug 2025), dailynews.co.th 5660558, nso.go.th 2023 PDF (unreadable), nso.go.th Statistical Yearbook 2025 p.228 (unlabelled 9.6), thansettakij.com 629810"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.naewna.com/likesara/907169",
+                "fact": "Article attributes 9.6% to a Walailak University academic remark with no cited survey; describes it as the 2024 level for Thai youth, up from 8.9% in 2021. No sample, definition or NSO attribution. Gives NSO youth 15-24 drinking rate as 24.8% (2024), down from 34.7% (2021).",
+                "date": "2025-08-17"
+              },
+              {
+                "url": "https://www.dailynews.co.th/news/5660558/",
+                "fact": "Repeats NSO 2024 youth 15-24 drinking rate of 24.8%, down from 34.7% in 2021. Does not contain the figure 9.6.",
+                "date": "2026-03-05"
+              },
+              {
+                "url": "https://www.thansettakij.com/health-wellness/629810",
+                "fact": "Attributes to NSO a 2024 share of 35.2% of persons aged 15+ who drink (about 20.9 million), up from 28% in 2021. No regular versus occasional split; 9.6 does not appear.",
+                "date": "2025-06-12"
+              },
+              {
+                "url": "https://www.nso.go.th/public/e-book/Statistical-Yearbook/SYB-2025/228/",
+                "fact": "Statistical Yearbook 2025, Figure 5.1: 2024 sex-specific alcohol values (men 55.7 percent drinking behaviour, women 77.4 percent never drank). No definition of regular or heavy drinker. One unlabelled 9.6 value in chart text that cannot be tied to a measure.",
+                "date": "2025 yearbook"
+              },
+              {
+                "url": "https://nso.go.th/nsoweb/storage/upload_file_pdf/2023/20230505231943_80233.pdf",
+                "fact": "NSO PDF could not be read (binary, no PDF text tool). Search excerpt only: about 28.4 percent of persons aged 15+ drink, with splits between regular and occasional drinkers. Not verified.",
+                "date": "2023 upload"
+              }
+            ]
+          }
+        ],
+        "not_settled_by_desk": [
+          "Retailer-level audit of Makro, Tops, 7-Eleven, Lazada, Shopee, Boots and Villa Market. Search cannot read live catalogues or shelves. Needs dated captures from each store and platform, including in-store checks in Bangkok, before any absence claim is made.",
+          "Whether any Thai-botanical non-alcoholic RTD sold in a can carries an evening or alcohol-alternative position. The Phayanak bottle has no stated positioning, so this remains open.",
+          "Innova December 2025 Thailand low- and no-alcohol finding. The full report is paid. The public teaser does not show it, and one search excerpt conflicts with the page fetch on whether a non-alcoholic frequency statistic appears.",
+          "Verbatim text of Alcohol Control Act B.E. 2551 section 32 and amended sections 32/1 to 32/5 (Act No. 2, B.E. 2568). Royal Gazette PDFs are binary and not text-extractable with the available tools. Section wording here comes from secondary summaries only.",
+          "Effective date of Act No. 2: 8 November 2025 per the law-firm page and a Thai press excerpt, but a second excerpt says 90 days. Not settled from a primary source.",
+          "Definition of 'alcoholic beverage' and any alcohol-percentage threshold in the Act, which determines whether a near-zero non-alcoholic product falls outside it. Not found in any source read.",
+          "Ministerial conditions under sections 32/1 and 32/2, and the draft under 32/1 opened for comment on 9 September 2026. Final text unknown, and treatment of non-alcoholic products unknown.",
+          "Regulator interpretation of 'could reasonably be seen as promoting alcoholic beverages' (section 32/3) for a non-alcoholic product with alcohol-like cues. No guidance, opinion or precedent was found.",
+          "Thai FDA (อย.) rules on labelling and herbal-claim wording for a Thai-herb RTD, and any FDA notice on non-alcoholic beverages with alcohol-like names. Not searched; outside the four checks but needed before launch.",
+          "Which sentence in the file cites the Thai Post column. The column supports only the Gen Z preference for sweet non-alcoholic drinks; no Thai source found shows Gen Z cutting alcohol. Mintel's alcohol data on Gen Z is UK-only.",
+          "Definition, survey, year, sample and age base of the 9.6% figure, and whether any NSO table contains it. The Statistical Yearbook chart value is unlabelled and the 2023 NSO PDF is unreadable. An unfetched search excerpt attributing 9.6% to a youth-network survey is unverified and has no source URL.",
+          "GlobalData 12.9% covers no-/low-alcohol beer by volume in Thailand (May 2023 source). The file says no-alcohol beer. The file's wording should be aligned to the source's scope, and the figure is three years old.",
+          "Consumer survey, taste test and price test, per the brief's list of known physical and consumer items. Not settled by the desk.",
+          "Thai-market size and growth for botanical or herbal non-alcoholic RTDs, and drinker-segment data for ages 22-35 who drink little or none. Statista and Euromonitor pages are paywalled, and no public Thai figure was found."
+        ]
+      },
+      "verified": [
+        {
+          "check": "Check the trend sources the file cites: Innova Market Insights (December 2025, Thailand low- and no-alcohol), GlobalData (no-alcohol beer CAGR 12.9%, 2022-2027), and the Thai Post column citing Mintel 2023 on Gen Z. For each, say whether the source says what the file says.",
+          "verify": {
+            "confirmed": true,
+            "note": "Confirmed for the Thai Post item, conditional on the file's wording, which I could not see. The Thai Post column (https://www.thaipost.net/columnist-people/506731/, dated 25 Dec 2023, byline Rungnapa Saraphin, column \"กระจกไร้เงา\") says over one in three Thai Gen Z consumers prefer non-alcoholic drinks, sweeter ones in particular, and that Gen Z is the largest group drinking non-alcoholic beverages in Thailand. Per the fetched text it does not mention Gen Z drinking less alcohol or sober-curious consumers. The 40% Gen Z-limits-alcohol figure comes from Mintel UK (https://www.mintel.com/insights/food-and-drink/gen-z-sober-curious-generation/, published 17 Jan 2024, updated 23 Feb 2026); it is UK-only, so it cannot support a Thai claim. The kill stands if the file cites the column for drinking less or sober-curious behaviour. If the file's sentence is only about non-alcoholic preference, the item passes. The exact sentence still needs checking.\n\nGlobalData (https://www.globaldata.com/media/consumer/innovative-product-positioning-drive-demand-low-no-alcoholic-drinks-thailand-says-globaldata/, 26 May 2023): pass on figure (12.9% volume CAGR, 2022-27) and period. Re-seen via search snippet, not re-fetched this run. Scope is no-/low-alcohol beer by volume, not no-alcohol beer alone; the file should say so.\n\nInnova (https://www.innovamarketinsights.com/reports/alcoholic-and-non-alcoholic-beverages-industry-in-thailand/ and ?p=59150, both dated 1 Dec 2025): unresolved. Both fetched pages are teasers with a purchase form and show no Thailand low/no-alcohol frequency or occasion statistic. A search snippet cited \"more than half drink more than once a week\" and breakfast/afternoon-snack figures, but neither page shows them, so no primary source confirms them.\n\nQueries run this turn (new, beyond the list in the brief): EN \"Thailand Gen Z drinking less alcohol survey 2025 no-alcohol beverages\"; TH \"กระแส sober curious คนรุ่นใหม่ ลดดื่มแอลกอฮอล์ ไทย สำรวจ 2025\"; EN \"Innova Market Insights Thailand no- and low-alcohol consumers 2025 press release\". No Thai 2025 survey on Gen Z cutting alcohol turned up. The 2025 Gen Z drinking-less results were US (NCSolutions, 65% of Gen Z planning to drink less in 2025) and Australian (protocol only), so neither applies to Thailand. A Mintel Thailand 2024 non-alcoholic beverage report appeared in search summaries (Gen Z 37% prefer sweet non-alcoholic drinks); it concerns preference, not reduction, and was not fetched directly."
+          }
+        }
+      ]
+    }
+  ],
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Desk checks"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 2,
+      "title": "Verify"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "check:A",
+      "phaseIndex": 1,
+      "phaseTitle": "Desk checks",
+      "agentId": "ac38426653a435872",
+      "model": "claude-haiku-5-5",
+      "state": "done",
+      "startedAt": 1792258458895,
+      "queuedAt": 1792258458829,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "A: Leaf-wrapped frozen coconut drink pop (banana or pandan …",
+      "promptPreview": "Today is 18 October 2026. Search in Thai and English. Prefer primary sources: Thai FDA (อย.) notifications and announcements, the Alcohol Control Act B.E. 2551 text, and store or online listings with dates. Do not use the team's internal documents or any company claims. Record each finding with its URL and date. If a check cannot be settled from public sources, return verdict \"unresolved\" and say …",
+      "promptFramed": true,
+      "lastProgressAt": 1792259017839,
+      "tokens": 181701,
+      "toolCalls": 60,
+      "durationMs": 558941,
+      "resultPreview": "{\"finalist\":\"A: Leaf-wrapped frozen coconut drink pop (banana or pandan leaf, peeled and sipped as it thaws). Desk checks only; the physical leak test, cold-chain cost and willingness to pay are not covered.\",\"checks\":[{\"question\":\"Does a Thai food-safety rule restrict or require approval for banana or pandan leaves used as food packaging or in contact with a drink?\",\"finding\":\"No rule found names…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "check:B",
+      "phaseIndex": 1,
+      "phaseTitle": "Desk checks",
+      "agentId": "a85a6b3d82164ded7",
+      "model": "claude-haiku-5-5",
+      "state": "done",
+      "startedAt": 1792258458896,
+      "queuedAt": 1792258458830,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Finalist B: Midlife women standardised-isoflavone unsweeten…",
+      "promptPreview": "Today is 18 October 2026. Search in Thai and English. Prefer primary sources: Thai FDA (อย.) notifications and announcements, the Alcohol Control Act B.E. 2551 text, and store or online listings with dates. Do not use the team's internal documents or any company claims. Record each finding with its URL and date. If a check cannot be settled from public sources, return verdict \"unresolved\" and say …",
+      "promptFramed": true,
+      "lastProgressAt": 1792259080515,
+      "tokens": 206316,
+      "toolCalls": 46,
+      "durationMs": 619466,
+      "resultPreview": "{\"finalist\":\"Finalist B: Midlife women standardised-isoflavone unsweetened soy drink\",\"checks\":[{\"question\":\"Under Thai FDA rules, is a drink with added isoflavone extract classified as a food or as a food supplement? What registration route applies to each?\",\"finding\":\"Notification No. 293 (B.E. 2548), clause 2, defines a food supplement as a product taken in addition to the normal diet, containi…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "check:C",
+      "phaseIndex": 1,
+      "phaseTitle": "Desk checks",
+      "agentId": "a719d1c101c504a3f",
+      "model": "claude-haiku-5-5",
+      "state": "done",
+      "startedAt": 1792258458897,
+      "queuedAt": 1792258458831,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Finalist C: Thai-herb non-alcoholic evening RTD for sober-c…",
+      "promptPreview": "Today is 18 October 2026. Search in Thai and English. Prefer primary sources: Thai FDA (อย.) notifications and announcements, the Alcohol Control Act B.E. 2551 text, and store or online listings with dates. Do not use the team's internal documents or any company claims. Record each finding with its URL and date. If a check cannot be settled from public sources, return verdict \"unresolved\" and say …",
+      "promptFramed": true,
+      "lastProgressAt": 1792258975403,
+      "tokens": 188765,
+      "toolCalls": 44,
+      "durationMs": 514351,
+      "resultPreview": "{\"finalist\":\"Finalist C: Thai-herb non-alcoholic evening RTD for sober-curious adults (single component entry, three finalists kept as they are)\",\"checks\":[{\"question\":\"Is a Thai-botanical non-alcoholic canned or bottled drink already sold in Thailand with an evening or alcohol-alternative position? Audit the listed stores and platforms (Makro, Tops, 7-Eleven, Lazada, Shopee, Boots, Villa Market).…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "verify:C",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "acbd6fa81d3441d1a",
+      "model": "claude-haiku-5-5",
+      "state": "done",
+      "startedAt": 1792258975451,
+      "queuedAt": 1792258975417,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Confirmed for the Thai Post item, conditional on the file's…",
+      "promptPreview": "Today is 18 October 2026. Search in Thai and English. Prefer primary sources: Thai FDA (อย.) notifications and announcements, the Alcohol Control Act B.E. 2551 text, and store or online listings with dates. Do not use the team's internal documents or any company claims. Record each finding with its URL and date. If a check cannot be settled from public sources, return verdict \"unresolved\" and say …",
+      "promptFramed": true,
+      "lastProgressAt": 1792259116307,
+      "tokens": 92797,
+      "toolCalls": 9,
+      "durationMs": 140855,
+      "resultPreview": "{\"confirmed\":true,\"note\":\"Confirmed for the Thai Post item, conditional on the file's wording, which I could not see. The Thai Post column (https://www.thaipost.net/columnist-people/506731/, dated 25 Dec 2023, byline Rungnapa Saraphin, column \\\"กระจกไร้เงา\\\") says over one in three Thai Gen Z consumers prefer non-alcoholic drinks, sweeter ones in particular, and that Gen Z is the largest group dri…"
+    }
+  ],
+  "totalTokens": 669579,
+  "totalToolCalls": 159
+}

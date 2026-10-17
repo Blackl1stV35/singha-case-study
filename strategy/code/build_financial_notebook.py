@@ -67,7 +67,10 @@ def unit_sg(p):
     retail_ex = p["shelf_price_sgd_per_can"] / (1 + p["gst_rate"])
     buy = retail_ex * (1 - p["retailer_margin"])
     imp_cost = buy * (1 - p["importer_margin"])
-    cif = imp_cost - p["importer_handling_sgd_per_can"] - p["bcrs_deposit_sgd_per_can"]
+    # ceiling: what the importer can pay after its handling and the BCRS producer fee; deposit is pass-through
+    ceiling = imp_cost - p["importer_handling_sgd_per_can"] - p["bcrs_producer_fee_sgd_per_can"] - p["bcrs_deposit_sgd_per_can"]
+    # realised basis: category unit value bracket (Comtrade), importer carries its own costs
+    cif = p["cif_realised_sgd_per_can"] if p.get("cif_basis") == "realised" else ceiling
     freight = p["freight_20ft_usd"] / (p["cartons_per_20ft"] * p["cans_per_carton"]) * p["usd_sgd"]
     cost = p["exworks_usd_per_can"] * p["usd_sgd"] + freight + p["insurance_sgd_per_can"]
     gross = cif - cost
@@ -78,16 +81,18 @@ def unit_kr(p):
     retail_ex = p["shelf_price_krw_per_can"] / (1 + p["vat_rate"])
     buy = retail_ex * (1 - p["retailer_margin"])
     imp_cost = buy * (1 - p["importer_margin"])
-    cif = (imp_cost - p["importer_handling_krw_per_can"]) / (1 + p["tariff_rate"])
+    ceiling = (imp_cost - p["importer_handling_krw_per_can"]) / (1 + p["tariff_rate"])
+    # realised basis: exporter sells at the observed Thai unit value, and the importer absorbs the tariff
+    cif = p["cif_realised_krw_per_can"] if p.get("cif_basis") == "realised" else ceiling
     freight = p["freight_20ft_usd"] / (p["cartons_per_20ft"] * 24) * p["usd_krw"]
     cost = p["exworks_usd_per_can"] * p["usd_krw"] + freight + p["insurance_krw_per_can"]
     gross = cif - cost
-    net = gross - p["trade_spend_share"] * cif
+    net = gross - p["trade_spend_share"] * cif - p.get("sugar_levy_krw_per_can", 0.0)
     return {"ccy": "KRW", "fx_to_sgd": p["usd_sgd"] / p["usd_krw"], "cif": cif, "exporter_cost": cost, "gross": gross, "net": net, "net_pct": net / cif}
 
 unit_rows = []
 for mkt, fn in [("singapore", unit_sg), ("korea", unit_kr)]:
-    u = fn(params(mkt))
+    u = fn(params(mkt, {"cif_basis": "realised"}))  # base case uses the realised basis in both markets
     unit_rows.append({"market": mkt, "ccy": u["ccy"], "cif_per_can": u["cif"], "exporter_cost_per_can": u["exporter_cost"],
                       "gross_per_can": u["gross"], "net_per_can": u["net"], "net_pct_of_cif": u["net_pct"]})
 unit_df = pd.DataFrame(unit_rows)
@@ -97,7 +102,21 @@ unit_df.round(3)
 md("## 2. Five-year cash flow, valuation and KPI metrics")
 
 code("""
+# CIF basis by scenario. Korea: base uses the realised Thai unit value; bull uses the back-solved importer ceiling;
+# bear uses the low end of the realised range. Singapore: ceiling until a Thai unit value for Singapore is computed.
+CIF_CASE = {
+    "korea": {"base": ("realised", None), "bull": ("ceiling", None), "bear": ("realised", 450)},
+    "singapore": {"base": ("realised", None), "bull": ("ceiling", None), "bear": ("realised", 0.380)},
+}
+
 def run_case(market, growth_case="base", mult_case="base", overrides=None, years=5):
+    basis, cif_override = CIF_CASE[market][growth_case]
+    ov = dict(overrides or {})
+    ov.setdefault("cif_basis", basis)
+    if cif_override is not None:
+        key = "cif_realised_krw_per_can" if market == "korea" else "cif_realised_sgd_per_can"
+        ov.setdefault(key, cif_override)
+    overrides = ov
     p = params(market, overrides)
     u = unit_sg(p) if market == "singapore" else unit_kr(p)
     setup = p["one_off_setup_sgd"] if market == "singapore" else p["one_off_setup_krw"]
@@ -125,7 +144,8 @@ def run_case(market, growth_case="base", mult_case="base", overrides=None, years
     peak_local = -min(cum.min(), 0.0)
     fx = u["fx_to_sgd"]
     cat3 = cat0 * (1 + g) ** 3
-    breakeven_cans = fixed / u["net"]
+    # no break-even when net contribution is zero or negative
+    breakeven_cans = fixed / u["net"] if u["net"] > 0 else float("inf")
     summary = {
         "market": market, "growth_case": growth_case, "mult_case": mult_case,
         "net_pct_of_cif": u["net_pct"], "net_per_can_local": u["net"], "ccy": u["ccy"],
@@ -189,10 +209,12 @@ code("""
 TORNADO = {
     "singapore": ["shelf_price_sgd_per_can", "retailer_margin", "importer_margin", "exworks_usd_per_can", "freight_20ft_usd",
                   "cartons_per_20ft", "trade_spend_share", "fixed_cost_sgd_per_year", "usd_sgd",
-                  "bcrs_deposit_sgd_per_can", "importer_handling_sgd_per_can", "one_off_setup_sgd", "category_volume_cans"],
+                  "bcrs_deposit_sgd_per_can", "bcrs_producer_fee_sgd_per_can", "importer_handling_sgd_per_can", "one_off_setup_sgd",
+                  "category_volume_cans", "cif_realised_sgd_per_can"],
     "korea": ["shelf_price_krw_per_can", "retailer_margin", "importer_margin", "exworks_usd_per_can", "freight_20ft_usd",
               "cartons_per_20ft", "trade_spend_share", "fixed_cost_krw_per_year", "usd_krw", "tariff_rate",
-              "importer_handling_krw_per_can", "one_off_setup_krw", "category_volume_cans"],
+              "importer_handling_krw_per_can", "one_off_setup_krw", "category_volume_cans", "cif_realised_krw_per_can",
+              "sugar_levy_krw_per_can"],
 }
 GROWTH_RANGE = {"singapore": (GROWTH["singapore"]["bear"], GROWTH["singapore"]["bull"]),
                 "korea": (GROWTH["korea"]["bear"], GROWTH["korea"]["bull"])}

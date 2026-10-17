@@ -1,61 +1,69 @@
-# Step 4: financial model results (rough inputs)
+# Step 4: financial model results (revised 2026-10-17)
 
-Notebook: `04_financial_model.ipynb`. Outputs: `data/fin_*.csv`, figures `04_tornado.png` and `04_cumulative_cash.png`. Inputs: `data/assumptions.json`. Every input is rough, as accepted by the user on 2026-10-17, and its status is recorded there. Korea values are converted to S$ at the model rate (1 S$ = 1,015 KRW).
+Notebook: `04_financial_model.ipynb`. Outputs: `data/fin_*.csv`, figures `04_tornado.png` and `04_cumulative_cash.png`. Inputs and their status: `data/assumptions.json`. Korea values are converted to S$ at 1 S$ = 1,015 KRW. The model is pre-tax and has no working capital.
 
-## Unit economics per can
+This revision replaces the earlier results. Three input changes drove it:
 
-| | Singapore (S$ per 330 ml) | Korea (KRW per 355 ml) |
+1. **BCRS deposit** is a pass-through charged at checkout, so it is not an importer cost. The producer fee of S$0.035 per can is added (validated).
+2. **Realised price** is now the base case in both markets. Singapore uses the mid-point of the Thai export and Singapore mirror bracket (S$0.478 CIF per can). Korea uses the Thai unit value (KRW 528 CIF per can). The back-solved importer ceiling is now the bull case only.
+3. **Korean freight and retail margin** are proxies (freight USD 1,900 per 20 ft from expired LCL quotes; retailer margin 25 percent from BGF and GS Retail gross margins).
+
+## Unit economics per can (base, realised)
+
+| | Singapore (S$, 330 ml) | Korea (KRW, 355 ml) |
 |---|---|---|
-| Shelf price incl. tax | 1.45 | 2,000 |
-| CIF price the exporter can charge | 0.52 | 805 (0% tariff placeholder) |
-| Exporter cost (ex-works, freight, insurance) | 0.34 | 364 |
-| Net contribution after 10% trade spend | 0.12 (24% of CIF) | 360 (45% of CIF) |
-| Break-even volume at base fixed cost | 3.6m cans a year (0.9% of category) | 1.4m cans a year (0.2% of category) |
+| CIF price the exporter receives | 0.478 | 528 |
+| Exporter cost (ex-works, freight, insurance) | 0.343 | 387 |
+| Net contribution after 10% trade spend | 0.088 (18% of CIF) | 88 (17% of CIF) |
+| CIF needed for 20% contribution | 0.489 | about 553 |
+| Break-even volume at base fixed cost | 5.1m cans a year (1.25% of category) | 5.7m cans a year (0.86% of category) |
+
+Both markets fall short of the 20 percent threshold at the base realised price. The gap is small: about 2 to 5 percent on the CIF price.
 
 ## Scenarios
 
-| Market | Scenario | Category growth | Share multiplier | NPV (S$m) | Payback | Peak funding (S$m) | Year-5 volume (m cans) |
-|---|---|---|---|---|---|---|---|
-| Singapore | base | 0.0% | 1.0 | -0.40 | not within 5 years | 0.90 | 4.1 |
-| Singapore | bull | +1.8% | 1.8 | +3.08 | year 5 | 0.58 | 8.1 |
-| Singapore | bear | -1.8% | 0.4 | -1.32 | not within 5 years | 1.76 | 1.5 |
-| Korea | base | +3.7% | 1.0 | +13.2 | year 3 | 0.35 | 7.1 |
-| Korea | bull | +6.0% | 1.8 | +30.7 | year 2 | 0.17 | 14.2 |
-| Korea | bear | 0.0% | 0.4 | +1.5 | not within 5 years | 0.73 | 2.4 |
+| Market | Scenario | Price basis | Category growth | Share multiplier | NPV (S$m) | Payback | Peak funding (S$m) | Year-5 volume (m cans) |
+|---|---|---|---|---|---|---|---|---|
+| Singapore | base | realised | 0.0% | 1.0 | -1.00 | not within 5 years | 1.26 | 4.1 |
+| Singapore | bull | ceiling | +1.8% | 1.8 | +7.67 | year 3 | 0.36 | 8.1 |
+| Singapore | bear | realised low | -1.8% | 0.4 | -1.68 | not within 5 years | 2.31 | 1.5 |
+| Korea | base | realised | +3.7% | 1.0 | -0.10 | not within 5 years | 0.99 | 7.1 |
+| Korea | bull | ceiling | +6.0% | 1.8 | +34.47 | year 2 | 0.13 | 14.2 |
+| Korea | bear | realised low | 0.0% | 0.4 | -1.77 | not within 5 years | 2.42 | 2.4 |
 
-## Where the value comes from
-
-- **Singapore:** the five-year cash flow is negative in the base case (about -S$0.65m present value). The small positive NPV comes only from the terminal value. The market is flat, Malaysia holds 73% of the flavoured lane, and the fixed cost is large relative to the margin.
-- **Korea:** about 79% of the base NPV is terminal value, so the Korea answer depends on the cash flow still holding in year 5 and beyond. Read the Korea NPV as "positive if the ramp is reached and sustained", not as a five-year return.
+Terminal-value convention: a negative year-5 cash flow gets no terminal value, which treats the business as exiting rather than losing money indefinitely.
 
 ## KPI test (step 0 thresholds)
 
-| KPI | Singapore base | Singapore bull | Singapore bear | Korea base | Korea bull | Korea bear |
-|---|---|---|---|---|---|---|
-| K1 net contribution at least 20% of CIF | pass (24%) | pass | pass | pass (45%) | pass | pass |
-| K2 break-even share at most 1.0% | pass (0.88%) | pass (0.83%) | pass (0.93%) | pass (0.21%) | pass (0.20%) | pass (0.24%) |
-| K3 year-3 share at least break-even share | **fail** (0.60% vs 0.88%) | pass (1.08% vs 0.83%) | **fail** (0.24% vs 0.93%) | pass (0.60% vs 0.21%) | pass | pass (0.24% vs 0.24%, marginal) |
-| K7 NPV positive | **fail** | pass | **fail** | pass | pass | pass |
-| K8 peak funding at most S$1.0m | pass (0.90) | pass | **fail** (1.76) | pass | pass | pass |
-| K4 listing, K5 pilot velocity, K6 regulatory | open | open | open | open | open | open |
+| KPI | Singapore base | Singapore bull | Korea base | Korea bull |
+|---|---|---|---|---|
+| K1 net contribution at least 20% of CIF | fail (18%) | pass (34%) | fail (17%) | pass (46%) |
+| K2 break-even share at most 1.0% | fail (1.25%) | pass (0.51%) | pass (0.86%) | pass (0.18%) |
+| K3 year-3 share at least break-even share | fail (0.60% vs 1.25%) | pass (1.08% vs 0.51%) | fail (0.60% vs 0.86%) | pass (1.08% vs 0.18%) |
+| K7 NPV positive | fail (-S$1.00m) | pass (+S$7.67m) | fail (-S$0.10m) | pass (+S$34.5m) |
+| K8 peak funding at most S$1.0m | fail (1.26) | pass (0.36) | pass (0.99) | pass (0.13) |
+| K4 listing, K5 velocity, K6 regulatory | open | open | open | open |
 
-Read across: Korea passes every testable KPI in all three scenarios, and Singapore passes only in the bull case. The bull result for Singapore needs the category to grow and the share to nearly double. K4 to K6 are untested in all cases, so no scenario clears the full set.
+The bear case has no break-even point in Singapore (net contribution is zero), so K2 is not meaningful there.
 
 ## What moves the answer (tornado, base case)
 
-- **Singapore** (NPV swing largest first): exworks cost (0.15 to 0.30 USD per can: from +1.6m to -1.8m), shelf price (1.20 to 1.60: from -1.6m to +1.5m), BCRS deposit treatment (0 to 0.10 per can: from +2.2m to -0.4m), share ramp (0.5x to 1.5x), fixed cost, retailer margin.
-- **Korea** (NPV swing largest first): share ramp (0.5x to 1.5x: from 4.4m to 22.0m), shelf price (1,600 to 2,200 KRW: from 4.8m to 17.4m), ex-works cost, retailer margin, category volume (400m to 700m cans: from 7.5m to 16.5m), tariff (0% to 30%: from 13.2m to 5.0m). Korea stays positive at the 30% tariff.
+- **Singapore** (largest swing first): realised CIF price (S$0.38 to S$0.58 gives -S$1.7m to +S$1.1m), exworks cost (USD 0.15 to 0.30 per can), fixed cost (S$300k to S$600k a year), share ramp, trade spend, freight.
+- **Korea** (largest swing first): realised CIF price (KRW 450 to 805 gives -S$1.6m to +S$12.1m), exworks cost, share ramp, freight (USD 1,200 to 2,200 per 20 ft), fixed cost (KRW 350m to 700m a year), trade spend.
 
-## What would change the verdicts
+The realised CIF price dominates in both markets. The levy and tariff matter less: the levy high case (KRW 18 per can) is a small reduction, and the tariff does not move the exporter's result under the realised basis (the importer absorbs it).
 
-1. **Singapore BCRS deposit.** If the deposit is passed to consumers rather than borne by the importer, Singapore's base NPV turns to about +S$2.2m. This is a G6 item in the Singapore resolution run.
-2. **Korea tariff.** The base uses 0%. The Korea resolution run reports the Thailand-Korea FTA and MFN rates. Korea stays NPV-positive up to a 30% tariff in this model.
-3. **Korea volume.** The base assumes about 1% of carbonated volume by year 5. No source supports that share. It is a planning assumption that a pilot must test (KPI K5).
-4. **Retail price in Korea.** The 2,000 KRW reference is a convenience store list price. Supermarket prices may be lower, which the tornado covers from 1,600 KRW.
+## What the revision means
+
+- At category-average realised prices, neither market clears the economic thresholds in the base case. Both are close to break-even.
+- Both markets become positive only if the product can realise a price about 2 to 5 percent above the Thai category unit value, or if fixed costs and exworks cost are lower than assumed.
+- A group route (shared fixed cost, group factory) moves the fixed-cost and exworks lines. Those are sensitivities until the group shows actual costs.
+- Korea's base is closer to break-even than Singapore's, but its bull case is much larger. The Korea bull case relies on the ceiling price and a 1.8 share multiplier, neither of which has evidence.
 
 ## Limits
 
-- Pre-tax, with no working capital, no depreciation, no tax, and no currency hedging.
-- Category volume bases are vendor-derived (Singapore from a 2021 figure, Korea from a 2024 teaser).
-- The terminal value is a simple perpetuity on year-5 cash at 1% growth and a 12% discount rate, all rough.
-- The Korea share ramp is the same shape as Singapore's. It has not been fitted to any Korean evidence.
+- Pre-tax, no working capital, no depreciation, no hedging.
+- Category volume bases are vendor-derived (Singapore 2021, Korea 2024).
+- Freight, importer margin and listing fees are unverifiable or proxies.
+- The realised price is a category average, not a Singha price.
+- The company-stated Korea figures are not used and are unverifiable.

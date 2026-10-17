@@ -31,22 +31,22 @@ Not Thai, and not used as evidence: the Australian Gen Z survey, Mintel UK's 40%
 ## What the reframe changes
 
 - **Kill test (new):** a segment shows less than the team's threshold of "would buy this instead of an alcoholic drink on the occasion you described". Proposed threshold: 30% yes in either segment, to be set by the team before the test.
-- **Price:** the old 50 to 70 THB test point was set for a sober-curious premium. Price-led switchers are the segment most sensitive to price, so the price ladder must start from what Thai shoppers already pay for non-alcoholic drinks. GlobalData's own analyst says high prices on low- and no-alcohol products push consumers to cheaper alternatives. **Open:** no shelf-price data has been collected. Needs a price audit (see next steps).
+- **Price:** the old 50 to 70 THB test point was set for a sober-curious premium. Price-led switchers are the segment most sensitive to price, so the price ladder must start from what Thai shoppers already pay for non-alcoholic drinks. GlobalData's own analyst says high prices on low- and no-alcohol products push consumers to cheaper alternatives. **Audit (18 October 2026, [04_price_audit.md](04_price_audit.md)):** the 50 to 70 THB point is 200 to 280 THB per litre. Mass-market zero-sugar and herbal drinks read 26 to 86 THB per litre, and beer 96 to 139. Only imported flavoured sparkling water (Perrier, 198 to 248) reaches that level. The point is not supported for price-led switchers.
 - **Regulation:** the reframe removes the alcohol-association question for the target, but the product still needs no alcohol cues under Alcohol Control Act s.32/3. Whether "alcohol-free" wording is allowed on pack is unverified.
 - **Score:** consumer case is re-scored to **1 (provisional)** for the reframed target. It has a named target, a reason, and Thai evidence, but the evidence is vendor-level and not yet tested on the segments. Total stays at 6, so C ties A and B on the current scores, pending the test.
 
 ## Test (3 days, after the price audit)
 
-1. **Price audit (desk, before the test):** collect shelf prices for non-alcoholic sparkling and herbal drinks, per 250 to 330 ml, at 7-Eleven, Makro, Tops and Lazada, with dated captures. Add beer prices per 330 ml can for comparison. This sets the price ladder.
+1. **Price audit (done 18 October 2026, [04_price_audit.md](04_price_audit.md)):** collect shelf prices for non-alcoholic sparkling and herbal drinks, per 250 to 330 ml, at 7-Eleven, Makro, Tops and Lazada, with dated captures. Add beer prices per 330 ml can for comparison. This sets the price ladder.
 2. **Blind taste:** 40 respondents per segment (80 total). Three bases, blind, plus a plain sparkling water control. Record preferred base and whether the drink reads as alcohol-free.
 3. **Occasion question:** for each respondent, "Would you buy this instead of an alcoholic drink on the occasion you described?" Yes, maybe or no. The yes share per segment is the primary result.
-4. **Price ladder:** show three price points from the audit, in random order. Record purchase intent at each.
+4. **Price ladder:** show 15, 25 and 35 THB per 250 ml, in random order (proposed from the audit, for team agreement). Record purchase intent at each.
 5. **Stop rules:** if the yes share is below the threshold in both segments, C is killed. If it passes in one segment only, C is narrowed to that segment and the other is dropped from the entry.
 
 ## Not settled by this plan
 
 - Whether the price-led segment will pay any non-alcoholic premium at all.
-- Shelf presence: the store audit for C is still incomplete (see [02_desk_kill_tests.md](02_desk_kill_tests.md)).
+- Shelf presence: the price audit reached online listings only. Single-can shelf prices at 7-Eleven and Makro are still open.
 - Unit cost for this can at the audited price. No cost data exists for this concept yet.
 - Whether the Lent and occasion wording is safe on pack.
 

@@ -105,14 +105,16 @@ def leaf_material():
     mat.use_nodes = True
     nt = mat.node_tree
     bsdf = nt.nodes.get("Principled BSDF")
-    colour = image_node(nt, tex("leaf001", "Leaf001_Color_interior512.jpg"), "sRGB")
+    # Colour pre-scaled so its green reflectance matches the sourced 10.5 % (Gausman and Allen 1973, derived single leaf)
+    colour = image_node(nt, tex("leaf001", "Leaf001_Color_optics512.jpg"), "sRGB")
     nt.links.new(colour.outputs["Color"], bsdf.inputs["Base Color"])
     rough = image_node(nt, tex("leaf001", "Leaf001_Roughness_interior512.jpg"), "Non-Color")
     nt.links.new(rough.outputs["Color"], bsdf.inputs["Roughness"])
     normal_from_map(nt, bsdf, tex("leaf001", "Leaf001_NormalGL_interior512.jpg"), 0.6)
-    # ASSUMPTION: no sourced leaf transmittance; translucency is set by hand
-    set_input(bsdf, "Subsurface Weight", 0.25)
-    set_input(bsdf, "Subsurface Radius", (0.2, 0.4, 0.1))
+    # Translucency from the sourced single-leaf transmittance: 12.0 % at 550 nm (weight), 0.69 % at 650 nm (red radius
+    # scaled by 0.69 / 12.0). Blue is not sourced and is set equal to green. Derived mapping, not validated against a measurement.
+    set_input(bsdf, "Subsurface Weight", 0.12)
+    set_input(bsdf, "Subsurface Radius", (0.024, 0.4, 0.4))
     set_input(bsdf, "Subsurface Scale", 0.004)
     return mat
 

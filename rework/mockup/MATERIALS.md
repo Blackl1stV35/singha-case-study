@@ -47,8 +47,17 @@ The 2K maps were resized to 1024 × 1024 with Lanczos resampling. The archives, 
 - The still camera now starts from the video's first key (0.75 m, 300°, z 0.13, 85 mm). The earlier still camera sat at about 0.57 m and cropped the pack; the 1080p still now frames the whole pop.
 - The 4K marketing video (rework/13) was rendered with the earlier placeholder materials and has not been re-rendered.
 
-## 6. Leaf optics sourced after the lock (not applied to the render)
+## 6. Leaf optics (applied 18 October)
 
 Resolved 18 October 2026 (see `rework/22_thailand_inputs.md`, section 6). Banana single-leaf values from Gausman and Allen (1973), Tables III to V, derived with the single-layer Kubelka–Munk form: diffuse reflectance 10.5 % and transmittance 12.0 % at 550 nm; reflectance 6.0 % and transmittance 0.69 % at 650 nm. Fresh leaf thickness 0.241 mm (measured).
 
-The mockup is locked at commit `f03dcfe`, so these values are recorded here and not applied. Applying the 12 % transmittance would replace the subsurface assumption in section 1, and would require a new still and your approval. Pandan optics and the cuticle roughness remain unsourced.
+Applied on 18 October at your request (still `rework/26_pop_mockup_leaf_optics.png`): the leaf colour texture is scaled so its green reflectance matches the sourced 10.5 % (linear factor 0.52, file `Leaf001_Color_optics512.jpg`); subsurface weight is 0.12 from the 12 % transmittance; the red subsurface radius is scaled by 0.69 / 12 and the blue radius is set equal to green. The mapping is derived and not validated against a measurement. The earlier approved still is `rework/23_pop_mockup_real_materials.png`.
+
+## 7. Physics assumptions in the render (18 October 2026)
+
+Set from physical reasoning where no measurement exists (see `rework/22_thailand_inputs.md`, section 7):
+- Pandan optics: same as banana, plus or minus 20 %. The pandan leaf is not modelled separately; the wrap uses the banana-based values.
+- Cuticle specular roughness: Principled roughness from the leaf texture's roughness map, which is consistent with a waxy cuticle near 0.3.
+- Leaf refractive index: 1.47 (not a render input; recorded for the optics note).
+
+The render is for appearance only. Thresholds in the screens are not computed from the render.

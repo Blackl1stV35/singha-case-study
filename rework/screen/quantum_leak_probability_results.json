@@ -1,0 +1,15 @@
+{
+  "backend": "ibm_fez",
+  "mode": "backend",
+  "job_id": "dba33kfi0auc7391et3g",
+  "shots": 1000,
+  "counts": {
+    "0": 327,
+    "1": 673
+  },
+  "p_classical": 0.715,
+  "p_quantum_estimate": 0.673,
+  "shot_standard_error": 0.014834790190629592,
+  "difference": -0.041999999999999926,
+  "difference_in_standard_errors": -2.831182609278105
+}

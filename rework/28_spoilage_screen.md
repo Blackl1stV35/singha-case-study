@@ -58,7 +58,7 @@ Within each event window, the sealed drink does not spoil. The contaminated drin
 
 ## Limits
 
-- **Pathogens are not modelled.** The screen covers spoilage organisms only. Pathogen growth after temperature abuse, including toxin-forming bacteria, needs a separate assessment. The Thai 2-hour and 5 °C rules are the operative safeguard for that.
+- **Pathogens are screened separately** in rework/29. The start load, not the time after thaw, decides their risk.
 - **Start loads are assumed.** A measured microbial load for the actual drink would change the result. No measurement is in scope.
 - **Lag phase is ignored.** This makes the screen conservative for spoilage.
 - **Generic growth parameters.** The actual drink's pH, water activity and preservative system (none assumed) would shift the rates.

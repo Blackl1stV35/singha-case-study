@@ -1,0 +1,271 @@
+{
+  "assumptions": {
+    "serving_g": 170.0,
+    "ratkowsky_c": 0.2,
+    "start_cells_per_serving": 1.0,
+    "temperature_proxy": "mean of core and surface, thermal screen",
+    "lag_phase": "ignored (conservative)",
+    "frozen": "no growth"
+  },
+  "pathogens": {
+    "Salmonella": {
+      "tmin": 5.2,
+      "tmax": 46.0,
+      "mu30": 0.8,
+      "hazard_log": 3.0,
+      "basis": "low infectious dose; 10^3 per serving taken as the hazard level",
+      "b": 0.0376,
+      "need_ln": 6.908
+    },
+    "E. coli O157:H7": {
+      "tmin": 7.0,
+      "tmax": 45.0,
+      "mu30": 0.8,
+      "hazard_log": 2.0,
+      "basis": "very low infectious dose; 10^2 per serving",
+      "b": 0.04093,
+      "need_ln": 4.605
+    },
+    "Listeria monocytogenes": {
+      "tmin": -1.5,
+      "tmax": 45.0,
+      "mu30": 0.4,
+      "hazard_log": 2.0,
+      "basis": "grows in the cold; 10^2 per serving for susceptible people",
+      "b": 0.02113,
+      "need_ln": 4.605
+    },
+    "Staphylococcus aureus (enterotoxin)": {
+      "tmin": 7.0,
+      "tmax": 45.0,
+      "mu30": 0.6,
+      "hazard_log": 7.0,
+      "basis": "toxin needs about 10^5 CFU/g; 10^7 per serving",
+      "b": 0.03544,
+      "need_ln": 16.118
+    },
+    "Bacillus cereus (emetic toxin)": {
+      "tmin": 4.0,
+      "tmax": 48.0,
+      "mu30": 1.0,
+      "hazard_log": 7.0,
+      "basis": "emetic toxin needs about 10^5 CFU/g; 10^7 per serving",
+      "b": 0.03954,
+      "need_ln": 16.118
+    }
+  },
+  "scenarios": {
+    "S1": {
+      "label": "Street stall, shade, hot-season day",
+      "window_h": 6.0,
+      "Salmonella": null,
+      "E. coli O157:H7": null,
+      "Listeria monocytogenes": null,
+      "Staphylococcus aureus (enterotoxin)": null,
+      "Bacillus cereus (emetic toxin)": null
+    },
+    "S2": {
+      "label": "Street stall, full sun, hot-season day",
+      "window_h": 6.0,
+      "Salmonella": null,
+      "E. coli O157:H7": null,
+      "Listeria monocytogenes": null,
+      "Staphylococcus aureus (enterotoxin)": null,
+      "Bacillus cereus (emetic toxin)": null
+    },
+    "S3": {
+      "label": "Parked car, closed, 2 h",
+      "window_h": 2.0,
+      "Salmonella": null,
+      "E. coli O157:H7": null,
+      "Listeria monocytogenes": null,
+      "Staphylococcus aureus (enterotoxin)": null,
+      "Bacillus cereus (emetic toxin)": null
+    },
+    "S4": {
+      "label": "Insulated box + gel packs, motorbike, 3 h",
+      "window_h": 3.0,
+      "Salmonella": null,
+      "E. coli O157:H7": null,
+      "Listeria monocytogenes": null,
+      "Staphylococcus aureus (enterotoxin)": null,
+      "Bacillus cereus (emetic toxin)": null
+    },
+    "S5": {
+      "label": "Extreme 40 C day, full sun, bare pop",
+      "window_h": 6.0,
+      "Salmonella": null,
+      "E. coli O157:H7": null,
+      "Listeria monocytogenes": null,
+      "Staphylococcus aureus (enterotoxin)": null,
+      "Bacillus cereus (emetic toxin)": null
+    },
+    "S7": {
+      "label": "Home freezer outage, 28 C kitchen",
+      "window_h": 6.0,
+      "Salmonella": null,
+      "E. coli O157:H7": null,
+      "Listeria monocytogenes": null,
+      "Staphylococcus aureus (enterotoxin)": null,
+      "Bacillus cereus (emetic toxin)": null
+    },
+    "SU1": {
+      "label": "Festival stall in sun, hot afternoon, 3 h",
+      "window_h": 3.0,
+      "Salmonella": null,
+      "E. coli O157:H7": null,
+      "Listeria monocytogenes": null,
+      "Staphylococcus aureus (enterotoxin)": null,
+      "Bacillus cereus (emetic toxin)": null
+    },
+    "SU2": {
+      "label": "Songkran street stall, splash-wetted, 2 h",
+      "window_h": 2.0,
+      "Salmonella": null,
+      "E. coli O157:H7": null,
+      "Listeria monocytogenes": null,
+      "Staphylococcus aureus (enterotoxin)": null,
+      "Bacillus cereus (emetic toxin)": null
+    },
+    "SU3": {
+      "label": "Ice-water cooler at a picnic, 4 h",
+      "window_h": 4.0,
+      "Salmonella": null,
+      "E. coli O157:H7": null,
+      "Listeria monocytogenes": null,
+      "Staphylococcus aureus (enterotoxin)": null,
+      "Bacillus cereus (emetic toxin)": null
+    },
+    "SU4": {
+      "label": "Insulated cooler with gel packs at a festival, 4 h",
+      "window_h": 4.0,
+      "Salmonella": null,
+      "E. coli O157:H7": null,
+      "Listeria monocytogenes": null,
+      "Staphylococcus aureus (enterotoxin)": null,
+      "Bacillus cereus (emetic toxin)": null
+    },
+    "SU5": {
+      "label": "Parked car at a festival lot, 3 h",
+      "window_h": 3.0,
+      "Salmonella": null,
+      "E. coli O157:H7": null,
+      "Listeria monocytogenes": null,
+      "Staphylococcus aureus (enterotoxin)": null,
+      "Bacillus cereus (emetic toxin)": null
+    }
+  },
+  "constant_temperature_hours_to_hazard": {
+    "Salmonella": {
+      "5 C": null,
+      "10 C": 212.41,
+      "20 C": 22.56,
+      "25 C": 12.85,
+      "30 C": 8.63,
+      "35 C": 6.96,
+      "40 C": 8.26
+    },
+    "E. coli O157:H7": {
+      "5 C": null,
+      "10 C": 306.06,
+      "20 C": 16.49,
+      "25 C": 8.81,
+      "30 C": 5.76,
+      "35 C": 4.69,
+      "40 C": 6.32
+    },
+    "Listeria monocytogenes": {
+      "5 C": 244.29,
+      "10 C": 78.13,
+      "20 C": 22.62,
+      "25 C": 15.24,
+      "30 C": 11.51,
+      "35 C": 10.36,
+      "40 C": 14.99
+    },
+    "Staphylococcus aureus (enterotoxin)": {
+      "5 C": null,
+      "10 C": 1428.27,
+      "20 C": 76.96,
+      "25 C": 41.09,
+      "30 C": 26.86,
+      "35 C": 21.89,
+      "40 C": 29.49
+    },
+    "Bacillus cereus (emetic toxin)": {
+      "5 C": 10312.33,
+      "10 C": 286.64,
+      "20 C": 40.57,
+      "25 C": 23.85,
+      "30 C": 16.12,
+      "35 C": 12.52,
+      "40 C": 12.49
+    }
+  },
+  "start_load_sensitivity_hours_at_30C": {
+    "Salmonella": {
+      "10^0 cells per serving": 8.63,
+      "10^1 cells per serving": 5.76,
+      "10^2 cells per serving": 2.88,
+      "10^3 cells per serving": 0.0,
+      "10^5 cells per serving": 0.0
+    },
+    "E. coli O157:H7": {
+      "10^0 cells per serving": 5.76,
+      "10^1 cells per serving": 2.88,
+      "10^2 cells per serving": 0.0,
+      "10^3 cells per serving": 0.0,
+      "10^5 cells per serving": 0.0
+    },
+    "Listeria monocytogenes": {
+      "10^0 cells per serving": 11.51,
+      "10^1 cells per serving": 5.76,
+      "10^2 cells per serving": 0.0,
+      "10^3 cells per serving": 0.0,
+      "10^5 cells per serving": 0.0
+    },
+    "Staphylococcus aureus (enterotoxin)": {
+      "10^0 cells per serving": 26.86,
+      "10^1 cells per serving": 23.03,
+      "10^2 cells per serving": 19.19,
+      "10^3 cells per serving": 15.35,
+      "10^5 cells per serving": 7.68
+    },
+    "Bacillus cereus (emetic toxin)": {
+      "10^0 cells per serving": 16.12,
+      "10^1 cells per serving": 13.82,
+      "10^2 cells per serving": 11.51,
+      "10^3 cells per serving": 9.21,
+      "10^5 cells per serving": 4.61
+    }
+  },
+  "two_hour_check": {
+    "Salmonella": {
+      "cells_per_serving_after_2h_at_30C": 4.95,
+      "hazard_cells_per_serving": 1000.0
+    },
+    "E. coli O157:H7": {
+      "cells_per_serving_after_2h_at_30C": 4.95,
+      "hazard_cells_per_serving": 100.0
+    },
+    "Listeria monocytogenes": {
+      "cells_per_serving_after_2h_at_30C": 2.23,
+      "hazard_cells_per_serving": 100.0
+    },
+    "Staphylococcus aureus (enterotoxin)": {
+      "cells_per_serving_after_2h_at_30C": 3.32,
+      "hazard_cells_per_serving": 10000000.0
+    },
+    "Bacillus cereus (emetic toxin)": {
+      "cells_per_serving_after_2h_at_30C": 7.39,
+      "hazard_cells_per_serving": 10000000.0
+    }
+  },
+  "spoilage_start_load_hours_at_30C": {
+    "10^1 CFU/mL": 6.91,
+    "10^2 CFU/mL": 5.76,
+    "10^3 CFU/mL": 4.61,
+    "10^4 CFU/mL": 3.45,
+    "10^5 CFU/mL": 2.3
+  }
+}

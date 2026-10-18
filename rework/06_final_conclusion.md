@@ -42,4 +42,4 @@ Status: team conclusion. All evidence is virtual: no physical, taste or consumer
 - The damaged-path size is not measured. The screens report thresholds, not probabilities.
 - The leaf in the render is a generic photo, not confirmed as banana or pandan.
 - Whether the product is legally a beverage or an ice cream is a registration question. The screen uses the stricter beverage rule.
-- Spoilage is screened for spoilage organisms only (about 6 to 12 h at 30 C for a sealed drink). Pathogen growth after temperature abuse is not modelled; the Thai 2-hour and 5 °C rules are the safeguard.
+- Spoilage (about 6 to 12 h at 30 C for a sealed drink) and pathogens (about 6 to 27 h from one contaminating cell at 30 C) are screened with generic parameters (rework/28, rework/29). The start load decides the risk, so a validated kill step or pathogen-free raw material is a production requirement.

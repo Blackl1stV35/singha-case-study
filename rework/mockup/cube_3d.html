@@ -383,23 +383,43 @@ function drawIsoCube(ctx, cx, cy, a) {
   poly([F, R, RB, FB], C['lime-deep']);
 }
 
+function drawMark(ctx) {
+  // SINGHA wordmark and an emblem slot on the mark row (top 120 px). The emblem artwork is not yet supplied.
+  const slot = 90;
+  const top = 15;
+  ctx.fillStyle = C['off-white'];
+  ctx.font = fontFor(800, 6);
+  const word = 'SINGHA';
+  const wordX = LABEL_W - MARGIN - ctx.measureText(word).width;
+  ctx.fillText(word, wordX, 85);
+  const slotX = wordX - 20 - slot;
+  ctx.strokeStyle = C['off-white'];
+  ctx.lineWidth = 3;
+  ctx.strokeRect(slotX, top, slot, slot);
+  ctx.font = fontFor(400, 2);
+  ctx.textAlign = 'center';
+  ctx.fillText('[emblem]', slotX + slot / 2, top + slot / 2 + 7);
+  ctx.textAlign = 'left';
+}
+
 function drawFront(ctx) {
   ctx.save();
   ctx.textBaseline = 'alphabetic';
   ctx.textAlign = 'left';
   ctx.fillStyle = C['off-white'];
   ctx.fillRect(0, 0, LABEL_W, LABEL_H);
-  ctx.fillStyle = C.ink;                      // top name band, deep ink (not the can's lime field)
-  ctx.fillRect(0, 0, LABEL_W, 80);
-  drawNameLine(ctx, 54);
+  ctx.fillStyle = C.ink;                      // top band, deep ink: mark row, then name row
+  ctx.fillRect(0, 0, LABEL_W, 220);
+  drawMark(ctx);
+  drawNameLine(ctx, 175);
+  ctx.fillStyle = C.lime;                     // thin accent rule under the band
+  ctx.fillRect(0, 220, LABEL_W, 10);
   ctx.fillStyle = C['off-white-deep'];        // middle band, cube artwork
-  ctx.fillRect(0, 80, LABEL_W, 400);
-  ctx.fillStyle = C.lime;                     // thin accent rule under the name band
-  ctx.fillRect(0, 80, LABEL_W, 10);
-  drawIsoCube(ctx, LABEL_W / 2, 280, 100);
+  ctx.fillRect(0, 230, LABEL_W, 400);
+  drawIsoCube(ctx, LABEL_W / 2, 430, 100);
   ctx.fillStyle = C.ink;
-  ctx.fillRect(0, 480, LABEL_W, 4);
-  let y = 530;                                // bottom band, particulars
+  ctx.fillRect(0, 630, LABEL_W, 4);
+  let y = 680;                                // bottom band, particulars
   for (const item of TOKENS.copyFront.slice(1)) {
     const lines = layoutSegs(ctx, segsFor(item, TOKENS.typeMm.particulars.size), LIVE_W);
     y = drawLines(ctx, lines, MARGIN, y, BODY_LH) + LINE_GAP;
@@ -415,13 +435,12 @@ function drawBack(ctx) {
   ctx.fillStyle = C['off-white'];
   ctx.fillRect(0, 0, LABEL_W, LABEL_H);
   ctx.fillStyle = C.ink;
-  ctx.fillRect(0, 0, LABEL_W, 80);
+  ctx.fillRect(0, 0, LABEL_W, 220);
+  drawMark(ctx);
+  drawNameLine(ctx, 175);
   ctx.fillStyle = C.lime;
-  ctx.fillRect(0, 80, LABEL_W, 10);
-  ctx.fillStyle = C['off-white'];
-  ctx.font = fontFor(TOKENS.typeMm.tradeName.weight, TOKENS.typeMm.tradeName.size);
-  ctx.fillText(TOKENS.copyFront[0].split(' · ')[0], MARGIN, 54);
-  let y = 136;
+  ctx.fillRect(0, 220, LABEL_W, 10);
+  let y = 276;
   for (const item of TOKENS.copyBack) {
     const lines = layoutSegs(ctx, segsFor(item, TOKENS.typeMm.particulars.size), LIVE_W);
     y = drawLines(ctx, lines, MARGIN, y, BODY_LH) + LINE_GAP;

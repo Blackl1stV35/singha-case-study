@@ -8,7 +8,7 @@
   "launch": "Playwright bundled Chromium (headless)",
   "wording_scan": {
     "page": "rework/mockup/cube_3d.html",
-    "patterns_checked": 64,
+    "patterns_checked": 62,
     "forbidden_pattern_hits": [],
     "bare_new_occurrences": 0,
     "new_as_constructor": 37,
@@ -47,8 +47,8 @@
           "trade": 3.8,
           "type": 2.4
         },
-        "frontBottomPx": 720,
-        "backBottomPx": 622,
+        "frontBottomPx": 870,
+        "backBottomPx": 762,
         "scrollWidth": 1280,
         "bodyScrollWidth": 1280,
         "innerWidth": 1280
@@ -118,8 +118,8 @@
           "trade": 3.8,
           "type": 2.4
         },
-        "frontBottomPx": 720,
-        "backBottomPx": 622,
+        "frontBottomPx": 870,
+        "backBottomPx": 762,
         "scrollWidth": 375,
         "bodyScrollWidth": 375,
         "innerWidth": 375
@@ -180,8 +180,8 @@
           "trade": 3.8,
           "type": 2.4
         },
-        "frontBottomPx": 720,
-        "backBottomPx": 622,
+        "frontBottomPx": 870,
+        "backBottomPx": 762,
         "scrollWidth": 1280,
         "bodyScrollWidth": 1280,
         "innerWidth": 1280
@@ -246,7 +246,7 @@
     {
       "check": "desktop front and back label text inside the 90 mm label",
       "pass": true,
-      "detail": "frontBottomPx=720; backBottomPx=622; limit=900"
+      "detail": "frontBottomPx=870; backBottomPx=762; limit=900"
     },
     {
       "check": "desktop idle screenshot saved",
@@ -301,7 +301,7 @@
     {
       "check": "phone front and back label text inside the 90 mm label",
       "pass": true,
-      "detail": "frontBottomPx=720; backBottomPx=622; limit=900"
+      "detail": "frontBottomPx=870; backBottomPx=762; limit=900"
     },
     {
       "check": "phone idle screenshot saved",

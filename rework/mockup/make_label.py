@@ -39,15 +39,15 @@ FORBIDDEN = [
     r"gluten", r"keto", r"recycl", r"compost", r"plastic[- ]free", r"juice", r"real\s+lime",
     r"fruit", r"hydrat", r"electrolyte", r"immun", r"energy", r"digest", r"healthy", r"calorie",
     r"beer", r"alcohol", r"cocktail", r"mocktail", r"\bgin\b", r"spritz", r"tonic", r"\bbar\b",
-    r"happy\s+hour", r"amber", r"\bgold", r"copper", r"emblem", r"mascot", r"wordmark", r"royal",
+    r"happy\s+hour", r"amber", r"\bgold", r"copper", r"mascot", r"royal",
     r"insignia", r"crest", r"glass", r"bottle", r"night", r"kidney", r"muscle", r"\bheart\b",
     r"made\s+with", r"\bfresh\b", r"\bvitamin", r"\bsource\s+of\b",
 ]
 
-# Organiser name and mark words are held only as SHA-256 digests of the lowercase word, so
+# Organiser terms other than the SINGHA name and lion emblem (authorized by the user, 18 October 2026)
+# are held only as SHA-256 digests of the lowercase word, so
 # this judge-facing file does not spell them out. A word matches if its digest is listed.
 ORGANISER_DIGESTS = frozenset({
-    "c5ed892fbd12ed6522132a890c06632117250edf2dc03eeaa8836c00286f4c14",
     "0685a44148ce4b27714803c8cdde4be9bcf9d72012f48d5e20a561171178c199",
     "8535e86c8118bbbb0a18ac72d15d3a2b37b18d1bce1611fc60165f322cf57386",
     "fc59487712bbe89b488847b77b5744fb6b815b8fc65ef2ab18149958edb61464",
@@ -186,20 +186,21 @@ def draw_block(p, laid, x0, y0, size, theme):
     return y
 
 
-def name_line(p, text, band_h, ink):
+def name_line(p, text, band_h, ink, max_w=None):
     """Trade name and type name on one line (clause 14(3) in the notes): trade 3.8 mm, type 2.4 mm."""
     trade, rest = text.split(" · ", 1)
     type_str = "· " + rest
     size = 150
+    limit = max_w or (W - 2 * MARGIN)
     while True:
         ft = font(True, size)
         fs = font(True, round(size * 2.4 / 3.8))
         gap = ft.getlength(" ")
         width = ft.getlength(trade) + gap + fs.getlength(type_str)
-        if width <= W - 2 * MARGIN or size <= 60:
+        if width <= limit or size <= 60:
             break
         size -= 2
-    if width > W - 2 * MARGIN:
+    if width > limit:
         raise SystemExit("name line does not fit the band")
     asc, desc = ft.getmetrics()
     cap_h = -ft.getbbox("H", anchor="ls")[1]
@@ -237,6 +238,17 @@ def themes(C):
     return light, dark
 
 
+def draw_mark(p, C):
+    """SINGHA wordmark and an emblem slot on the top band, right side. The emblem artwork is not yet supplied."""
+    d = p.draw
+    x0, y0, s = 1740, 35, 150
+    d.rounded_rectangle([x0, y0, x0 + s, y0 + s], radius=18, outline=C["off-white"], width=5)
+    ph = font(False, 30)
+    d.text((x0 + s / 2 - ph.getlength("[emblem]") / 2, y0 + s / 2 + 10), "[emblem]", font=ph, fill=C["off-white"], anchor="ls")
+    wf = font(True, 96)
+    d.text((x0 + s + 30, y0 + s / 2 + 34), "SINGHA", font=wf, fill=C["off-white"], anchor="ls")
+
+
 def build_front(tok, C, name):
     cf = tok["copy_front"]
     drop = pick(cf, "Drop one cube")
@@ -254,7 +266,8 @@ def build_front(tok, C, name):
     band_top = 220
     d.rectangle([0, 0, W, band_top], fill=C["ink"])
     d.rectangle([0, band_top, W, band_top + 10], fill=C["lime"])
-    name_line(p, name, band_top, C["off-white"])
+    name_line(p, name, band_top, C["off-white"], max_w=1560)
+    draw_mark(p, C)
 
     # Middle band: cube on a lime-pale panel, instruction copy on the right.
     d.rounded_rectangle([MARGIN, 260, 1000, 860], radius=40, fill=C["off-white-deep"])
@@ -323,7 +336,8 @@ def build_back(tok, C, name):
     band_top = 220
     d.rectangle([0, 0, W, band_top], fill=C["ink"])
     d.rectangle([0, band_top, W, band_top + 10], fill=C["lime"])
-    name_line(p, name, band_top, C["off-white"])
+    name_line(p, name, band_top, C["off-white"], max_w=1560)
+    draw_mark(p, C)
 
     top_y = 290
     col_w = 1020

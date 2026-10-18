@@ -234,6 +234,8 @@ def wording_scan():
     sys.path.insert(0, str(MOCKUP_DIR))
     import make_label  # the wording list and the organiser digests are defined there
     text = PAGE.read_text(encoding="utf-8")
+    # The emblem is an embedded image: scan the copy only, not its base64 data.
+    text = re.sub(r"data:image/[a-z]+;base64,[A-Za-z0-9+/=]+", "", text)
     hits = [pat for pat in make_label.FORBIDDEN if pat != r"\bnew\b" and re.search(pat, text, re.I)]
     return {
         "page": "rework/mockup/cube_3d.html",

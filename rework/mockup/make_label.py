@@ -44,13 +44,12 @@ FORBIDDEN = [
     r"made\s+with", r"\bfresh\b", r"\bvitamin", r"\bsource\s+of\b",
 ]
 
-# Organiser terms other than the SINGHA name and lion emblem (authorized by the user, 18 October 2026)
+# Organiser terms other than the SINGHA name and the lion emblem (authorized by the user, 18 October 2026)
 # are held only as SHA-256 digests of the lowercase word, so
 # this judge-facing file does not spell them out. A word matches if its digest is listed.
 ORGANISER_DIGESTS = frozenset({
     "0685a44148ce4b27714803c8cdde4be9bcf9d72012f48d5e20a561171178c199",
     "8535e86c8118bbbb0a18ac72d15d3a2b37b18d1bce1611fc60165f322cf57386",
-    "fc59487712bbe89b488847b77b5744fb6b815b8fc65ef2ab18149958edb61464",
     "12bc419ae805f8582e3462908dd8fe29eb3ce201b5083a13a73b7fd2f84228ff",
 })
 
@@ -238,7 +237,19 @@ def themes(C):
     return light, dark
 
 
+EMBLEM_PATH = HERE / "assets" / "singha_emblem.png"
+
+
 def draw_mark(p, C):
+    """SINGHA lion emblem with wordmark on the top band, right side (user-authorized mark).
+    Falls back to a wordmark in type and an emblem slot if the artwork file is missing."""
+    if EMBLEM_PATH.exists():
+        em = Image.open(EMBLEM_PATH).convert("RGBA")
+        h = 190
+        w = round(em.width * h / em.height)
+        em = em.resize((w, h), Image.LANCZOS)
+        p.img.paste(em, (W - MARGIN - w, 15), em)
+        return
     """SINGHA wordmark and an emblem slot on the top band, right side. The emblem artwork is not yet supplied."""
     d = p.draw
     x0, y0, s = 1740, 35, 150

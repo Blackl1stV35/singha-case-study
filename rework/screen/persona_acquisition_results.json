@@ -1,0 +1,380 @@
+{
+  "question": "Cost per acquired customer for the targeted group, Thailand, desk proxy basis",
+  "formula": "CPA_trial = (CPM / 1000) / (CTR x LPR) = CPC / LPR; CPA_repeat = CPA_trial / repeat rate",
+  "labels": {
+    "SOURCED": "printed page or URL read in this study",
+    "PROXY": "stands in for what is needed",
+    "ASSUMPTION": "no source; range given",
+    "DERIVED": "arithmetic on the labelled inputs"
+  },
+  "inputs": {
+    "CPM_thb_per_1000": {
+      "base": 120.0,
+      "range": [
+        80.0,
+        180.0
+      ],
+      "label": "PROXY (Phoenix 2025, FB); range ASSUMPTION"
+    },
+    "CPC_thb": {
+      "base": 11.5,
+      "label": "PROXY (Phoenix 2025, FB and IG combined)"
+    },
+    "CTR": {
+      "base": 0.01043,
+      "range": [
+        0.007,
+        0.012
+      ],
+      "label": "DERIVED (CPM / (1000 x CPC)); range ASSUMPTION"
+    },
+    "LPR": {
+      "low": 0.0008,
+      "base": 0.01,
+      "high": 0.03437,
+      "label": "low PROXY (Phoenix 0.08%); base ASSUMPTION; high PROXY (ECDB, low confidence, derived)"
+    },
+    "repeat_rate": {
+      "range": [
+        0.15,
+        0.3,
+        0.4
+      ],
+      "label": "ASSUMPTION"
+    },
+    "frequency": {
+      "value": 2.0,
+      "label": "ASSUMPTION (reach only; not in CPA)"
+    },
+    "contribution_per_serving_thb": {
+      "high_cost": 3.61,
+      "low_cost": 6.81,
+      "label": "DERIVED from rework/53 (margins ASSUMPTION)"
+    },
+    "meta_audience_million": {
+      "18+": 52.1,
+      "men": 24.9,
+      "women": 27.2,
+      "25-34": 18.3,
+      "35-44": 11.1,
+      "label": "PROXY (Affect Group, potential reach in accounts)"
+    },
+    "7eleven_stores_2025": {
+      "value": 15945,
+      "label": "SOURCED (CP All, YE2025)"
+    }
+  },
+  "verification_rework47": [
+    {
+      "item": "Drank past 12 months, 25-44 (both sexes), 2021",
+      "record_value": 36.5,
+      "printed_or_source": 36.5,
+      "recomputed": 36.53,
+      "status": "holds",
+      "note": "Table 2 p. VI (PDF 7) and Table 6 p. 25 (PDF 44) agree."
+    },
+    {
+      "item": "Drank past 12 months, 45-59 (both sexes), 2021",
+      "record_value": 32.4,
+      "printed_or_source": 32.4,
+      "recomputed": 32.42,
+      "status": "holds",
+      "note": "Table 2 and Table 6 agree."
+    },
+    {
+      "item": "Drank past 12 months, men, 2021",
+      "record_value": 46.4,
+      "printed_or_source": 46.4,
+      "recomputed": 46.44,
+      "status": "holds",
+      "note": "Table 2 and Table 6 agree."
+    },
+    {
+      "item": "Drank past 12 months, women, 2021",
+      "record_value": 10.8,
+      "printed_or_source": 10.8,
+      "recomputed": 10.83,
+      "status": "holds",
+      "note": "Table 2 and Table 6 agree."
+    },
+    {
+      "item": "Bottled non-alcoholic drunk every day, 25-44",
+      "record_value": 17.9,
+      "printed_or_source": 18.2,
+      "recomputed": 17.92,
+      "status": "holds as a count ratio; printed rate differs",
+      "note": "17.9 = everyday / all persons 6+ in the group, including Unknown. The printed rate (Table 20) is 18.2 = everyday / persons with a known answer. The record should use 18.2."
+    },
+    {
+      "item": "Bottled non-alcoholic drunk every day, 45-59",
+      "record_value": 15.8,
+      "printed_or_source": 16.0,
+      "recomputed": 15.83,
+      "status": "holds as a count ratio; printed rate differs",
+      "note": "Same denominator issue: printed 16.0; count with Unknown 15.8."
+    },
+    {
+      "item": "Bottled non-alcoholic drunk every day, men",
+      "record_value": 17.5,
+      "printed_or_source": "no printed rate (Table 50 counts only)",
+      "recomputed": 17.46,
+      "status": "holds as a count ratio",
+      "note": "Known-answer denominator gives 17.7. No printed sex-specific rate exists."
+    },
+    {
+      "item": "Bottled non-alcoholic drunk every day, women",
+      "record_value": 10.9,
+      "printed_or_source": "no printed rate (Table 50 counts only)",
+      "recomputed": 10.88,
+      "status": "holds as a count ratio",
+      "note": "Known-answer denominator gives 11.0."
+    },
+    {
+      "item": "Per-person ratio, 25-44 over 45-59 (drinking x everyday)",
+      "record_value": 1.28,
+      "printed_or_source": "derived from printed rates",
+      "recomputed": 1.28,
+      "status": "holds",
+      "note": "Record inputs give 1.276; printed inputs give 1.281. Direction and size unchanged."
+    },
+    {
+      "item": "Men 25-44 drinking 68.6 (2024)",
+      "record_value": 68.6,
+      "printed_or_source": "NSO Social Indicators 2025, Table 4.6.2 (WebFetch)",
+      "recomputed": 68.6,
+      "status": "holds, men only; not in the 2021 report",
+      "note": "The 2021 report has no sex-by-age cell (Tables 2 and 6 cross only one dimension). The 2024 cell is from NSO Social Indicators 2025; printed page not yet read."
+    },
+    {
+      "item": "Both sexes 25-44 drinking 46.9 (2024)",
+      "record_value": 46.9,
+      "printed_or_source": "NSO Social Indicators 2025, Table 4.6.2 (WebFetch)",
+      "recomputed": 46.9,
+      "status": "holds, both sexes; not in the 2021 report",
+      "note": "Equal-weight average of men 68.6 and women 25.2 gives 46.9, so the two values are consistent. The implied male weight is 0.50."
+    },
+    {
+      "item": "2021 cross-check: men 25-44 58.1 and women 15.2 average to 36.5",
+      "record_value": 36.5,
+      "printed_or_source": "NSO Social Indicators 2025, 2021 column",
+      "recomputed": 36.65,
+      "status": "consistent",
+      "note": "Equal-weight average 36.65 against printed 36.5. Implied male weight 0.497. The 2021 column matches the printed 2021 report on every row checked."
+    }
+  ],
+  "persona_cells": {
+    "sweet_bottled_everyday_pct": {
+      "all": 14.3,
+      "6-14": 10.1,
+      "15-24": 13.4,
+      "25-44": 18.2,
+      "45-59": 16.0,
+      "60+": 9.1
+    },
+    "sweet_bottled_weekly_plus_pct": {
+      "all": 53.0,
+      "6-14": 58.9,
+      "15-24": 64.6,
+      "25-44": 62.2,
+      "45-59": 50.5,
+      "60+": 31.0
+    },
+    "sugar_substitute_everyday_pct": {
+      "all": 0.8,
+      "6-14": 0.3,
+      "15-24": 0.3,
+      "25-44": 0.6,
+      "45-59": 1.0,
+      "60+": 1.2
+    },
+    "sugar_substitute_weekly_plus_pct": {
+      "all": 2.8,
+      "6-14": 1.6,
+      "15-24": 2.3,
+      "25-44": 3.0,
+      "45-59": 3.0,
+      "60+": 3.3
+    },
+    "share_25_44_of_everyday_bottled_drinkers_pct": 38.5,
+    "share_25_44_of_population_6plus_pct": 30.3,
+    "share_men_of_everyday_bottled_drinkers_pct": 60.2,
+    "share_men_of_population_6plus_pct": 48.5,
+    "prevalence_ratio_sugar_substitute_to_sweet_weekly_plus_25_44": 0.048,
+    "note": "Prevalence ratios, not conditional probabilities. Sugar substitute and sweet bottled drinks are measured in the same survey but not cross-tabulated with each other."
+  },
+  "pool_men_25_44": {
+    "men_25_44_population_million": 9.51,
+    "men_25_44_current_drinkers_million_2024": 6.52,
+    "men_25_44_meta_potential_reach_million": 14.05,
+    "basis": "Population: rework/47 (DOPA Nov 2568). Drinkers: 2024 cell 68.6 (NSO SI 2025). Meta: Affect Group counts with an ASSUMPTION that the male share is constant across ages."
+  },
+  "scenarios": [
+    {
+      "name": "S1 agency-implied conversion",
+      "cpm_thb": 120.0,
+      "ctr": 0.010435,
+      "cpc_thb": 11.5,
+      "lpr": 0.0008,
+      "cpa_trial_thb": 14375.0,
+      "repeat_rate": 0.3,
+      "cpa_repeat_thb": 47916.7,
+      "servings_to_recover_at_high_cost": 3982.0,
+      "servings_to_recover_at_low_cost": 2110.9,
+      "label": "Paid social; LPR 0.08% is the Phoenix conversion (base undefined). PROXY"
+    },
+    {
+      "name": "S2 base case",
+      "cpm_thb": 120.0,
+      "ctr": 0.010435,
+      "cpc_thb": 11.5,
+      "lpr": 0.01,
+      "cpa_trial_thb": 1150.0,
+      "repeat_rate": 0.3,
+      "cpa_repeat_thb": 3833.3,
+      "servings_to_recover_at_high_cost": 318.6,
+      "servings_to_recover_at_low_cost": 168.9,
+      "label": "Paid social; LPR 1.0% is ASSUMPTION. CPM and CTR are PROXY and DERIVED"
+    },
+    {
+      "name": "S3 beverage-cart benchmark",
+      "cpm_thb": 120.0,
+      "ctr": 0.010435,
+      "cpc_thb": 11.5,
+      "lpr": 0.034369,
+      "cpa_trial_thb": 334.6,
+      "repeat_rate": 0.3,
+      "cpa_repeat_thb": 1115.4,
+      "servings_to_recover_at_high_cost": 92.7,
+      "servings_to_recover_at_low_cost": 49.1,
+      "label": "Paid social; LPR 3.4% from ECDB cart funnel. PROXY, low confidence"
+    }
+  ],
+  "retail_floor": {
+    "stores_7eleven_2025": 15945,
+    "cases": {
+      "low": {
+        "sample_cost_thb": 10.0,
+        "sample_to_trial": 0.2,
+        "cpa_trial_thb": 50.0,
+        "cpa_repeat_thb": 166.7
+      },
+      "base": {
+        "sample_cost_thb": 15.0,
+        "sample_to_trial": 0.1,
+        "cpa_trial_thb": 150.0,
+        "cpa_repeat_thb": 500.0
+      },
+      "high": {
+        "sample_cost_thb": 25.0,
+        "sample_to_trial": 0.05,
+        "cpa_trial_thb": 500.0,
+        "cpa_repeat_thb": 1666.7
+      }
+    },
+    "label": "Floor only. Excludes listing fees, trade spend, distribution and shelf costs, which are not sourced. Sample cost and sample-to-trial rate are ASSUMPTION."
+  },
+  "breakeven": {
+    "cpc_thb": 11.5,
+    "contribution_high_cost_thb": 3.61,
+    "lpr_needed_for_1_serving_payback": 3.186,
+    "lpr_needed_for_4_servings_payback": 0.796,
+    "reading": "A paid click costs more than one serving's contribution. Recovering the cost of one first purchase needs a click-to-purchase rate of about 320% (impossible). Recovering it over four servings still needs about 80%."
+  },
+  "monte_carlo": {
+    "seed": 20261019,
+    "draws": 20000,
+    "distribution": "triangular (low, mode, high) for CPM, CTR, LPR, repeat; independent",
+    "cpa_trial_thb": {
+      "p5": 422.7,
+      "p50": 914.8,
+      "p95": 2847.7
+    },
+    "cpa_repeat_thb": {
+      "p5": 1422.8,
+      "p50": 3285.4,
+      "p95": 10688.6
+    },
+    "share_of_draws_cpa_below_one_serving_high_cost": 0.0,
+    "share_of_draws_cpa_below_one_serving_low_cost": 0.0,
+    "share_of_draws_cpa_below_1000_thb": 0.562
+  },
+  "monte_carlo_inputs": {
+    "cpm_thb": {
+      "p5": 94.2,
+      "p50": 125.3,
+      "p95": 162.9
+    },
+    "ctr_pct": {
+      "p5": 0.795,
+      "p50": 0.992,
+      "p95": 1.139
+    },
+    "lpr_pct": {
+      "p5": 0.469,
+      "p50": 1.419,
+      "p95": 2.791
+    },
+    "repeat_pct": {
+      "p5": 19.4,
+      "p50": 28.7,
+      "p95": 36.6
+    }
+  },
+  "tornado_trial": [
+    {
+      "lever": "Click-to-first-purchase rate (offer, price, product page, marketplace listing)",
+      "input": "lpr",
+      "range": [
+        0.0008,
+        0.034368749999999997
+      ],
+      "cpa_at_low_input": 14375.0,
+      "cpa_at_high_input": 334.6,
+      "swing_thb": 14040.4,
+      "source": "ECDB cart funnel and Phoenix conversion bound the range. PROXY"
+    },
+    {
+      "lever": "Cost per mille (placement, audience, bidding)",
+      "input": "cpm",
+      "range": [
+        80.0,
+        180.0
+      ],
+      "cpa_at_low_input": 766.7,
+      "cpa_at_high_input": 1725.0,
+      "swing_thb": 958.3,
+      "source": "ASSUMPTION band around PROXY"
+    },
+    {
+      "lever": "Click-through rate (creative, hook, targeting)",
+      "input": "ctr",
+      "range": [
+        0.007,
+        0.012
+      ],
+      "cpa_at_low_input": 1714.3,
+      "cpa_at_high_input": 1000.0,
+      "swing_thb": 714.3,
+      "source": "ASSUMPTION band around DERIVED"
+    }
+  ],
+  "tornado_repeat": {
+    "lever": "Repeat rate (retention, pack size, subscription)",
+    "range": [
+      0.15,
+      0.4
+    ],
+    "cpa_repeat_at_low": 7666.7,
+    "cpa_repeat_at_high": 2875.0,
+    "swing_thb": 4791.7,
+    "note": "Changes cost per repeat customer only. Does not change cost per first purchase."
+  },
+  "limits": [
+    "No respondents, no outside contact. Desk proxy only.",
+    "Ad benchmarks are one Thai agency's client data with no stated method; the Meta audience counts are third-party with no stated date for the estimate.",
+    "The 2021 survey measures bottled non-alcoholic drinks (sweet group, per the report's text), drinks with sugar substitutes, and alcohol. It does not measure sugar-sweetened drinking as such, and it has no sodium or sparkling-water question.",
+    "2024 sex-by-age drinking cells come from a garbled text layer; printed-page image check still needed.",
+    "No Thai FMCG channel share was found (Kantar page gave no percentages), so the retail route is a floor only.",
+    "Persona fit (the match between the cube and the target) is folded into the click-to-purchase rate; it is not measured."
+  ]
+}

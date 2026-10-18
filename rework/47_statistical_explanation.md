@@ -1,5 +1,7 @@
 # Statistical explanation of the conversion lead (18 October 2026)
 
+> Correction, 19 October 2026: the everyday-drinker rates for 25 to 44 and 45 to 59 (17.9% and 15.8% above) count Unknown answers in the denominator; the printed rates are 18.2% and 16.0%. The 68.6% and 46.9% cells come from NSO Social Indicators 2025 Table 4.6.2, not from the 2021 report, and the pooled 15.8% sugar-sweetened share is not a printed 2021 figure. Read [55](55_consumer_persona_and_acquisition.md) before quoting any figure from this record.
+
 Status: plan steps run where sources allowed. Inputs gathered, local analysis run, and limits recorded. **The conversion lead is weakly identified.** The volume lead (men 45–59) is well identified by size but is pended by decision.
 
 Scripts and outputs: [rework/screen/stat_explanation.py](screen/stat_explanation.py) (results in [rework/screen/segment_stat_results.json](screen/segment_stat_results.json)), chart [rework/charts/conversion_statistics.png](charts/conversion_statistics.png). Inputs gathered in the workflow journal (wr0grmzon), not copied into the repo.

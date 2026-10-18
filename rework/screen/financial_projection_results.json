@@ -1,0 +1,3257 @@
+{
+  "basis": "Team-only record (rework/56). Proxy inputs for Boon Rawd / Singha group entities; group-level figures not reachable. All values in million THB unless stated. Year 0 = base year (proxy FY2025 values); Years 1-5 are projection years. Volume is a scenario input: rework/55 (consumer study) does not exist.",
+  "inputs": [
+    {
+      "key": "fx",
+      "base": 33.4573,
+      "downside": null,
+      "unit": "THB/USD",
+      "label": "SOURCED",
+      "source": "rework/53_unit_cost_and_value_chain.md (team record); XE mid-market 18 Oct 2026, as in screen/unit_cost_value_chain.py",
+      "note": ""
+    },
+    {
+      "key": "tax",
+      "base": 0.2,
+      "downside": null,
+      "unit": "ratio",
+      "label": "SOURCED",
+      "source": "https://www.forvismazars.com/th/en/insights/doing-business-in-thailand/tax/corporate-income-tax-in-thailand (secondary: KPMG 2018 profile; Revenue Department not reached)",
+      "note": ""
+    },
+    {
+      "key": "wacc",
+      "base": 0.08,
+      "downside": null,
+      "unit": "ratio",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "hurdle rate for ROIC comparison; not sourced"
+    },
+    {
+      "key": "rate_shock",
+      "base": 0.0,
+      "downside": 0.01,
+      "unit": "ratio",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "added to all debt rates in the downside"
+    },
+    {
+      "key": "infobel_sbc_usd_m",
+      "base": 1100.0,
+      "downside": null,
+      "unit": "USD m",
+      "label": "PROXY",
+      "source": "https://www.infobelpro.com/companies/thailand/breweries (Singha Beverage Company Ltd, directory estimate, no fiscal year). Stands in for beverage subsidiary revenue",
+      "note": ""
+    },
+    {
+      "key": "infobel_brb_usd_m",
+      "base": 341.0,
+      "downside": null,
+      "unit": "USD m",
+      "label": "PROXY",
+      "source": "https://www.infobelpro.com/companies/thailand/breweries (The Boon Rawd Brewery Co Ltd). Used in sensitivity only",
+      "note": ""
+    },
+    {
+      "key": "zoom_brb_usd_m",
+      "base": 578.5,
+      "downside": null,
+      "unit": "USD m",
+      "label": "PROXY",
+      "source": "https://www.zoominfo.com/c/boon-rawd-brewery-co-ltd/426420413 (aggregator estimate). Used in sensitivity only",
+      "note": ""
+    },
+    {
+      "key": "tb_rev",
+      "base": 334704.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/sgx/Y92/financials/income-statement/ (ThaiBev FY2025). Stands in for the beverage operating company's margin structure",
+      "note": ""
+    },
+    {
+      "key": "tb_gp",
+      "base": 104926.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/sgx/Y92/financials/income-statement/ (ThaiBev FY2025 gross profit)",
+      "note": ""
+    },
+    {
+      "key": "tb_ebitda",
+      "base": 50654.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/sgx/Y92/financials/income-statement/ (ThaiBev FY2025 EBITDA; The Edge reports 57.01bn, a conflict; see limits)",
+      "note": ""
+    },
+    {
+      "key": "tb_da",
+      "base": 10346.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/sgx/Y92/financials/cash-flow-statement/ (ThaiBev FY2025 D&A)",
+      "note": ""
+    },
+    {
+      "key": "tb_capex",
+      "base": 12998.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/sgx/Y92/financials/cash-flow-statement/ (ThaiBev FY2025 capex)",
+      "note": ""
+    },
+    {
+      "key": "tb_ar",
+      "base": 17856.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/sgx/Y92/financials/balance-sheet/ (ThaiBev FY2025 total receivables)",
+      "note": ""
+    },
+    {
+      "key": "tb_ap",
+      "base": 13423.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/sgx/Y92/financials/balance-sheet/ (ThaiBev FY2025 accounts payable)",
+      "note": ""
+    },
+    {
+      "key": "tb_cash",
+      "base": 43845.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/sgx/Y92/financials/balance-sheet/ (ThaiBev FY2025 cash)",
+      "note": ""
+    },
+    {
+      "key": "tb_debt",
+      "base": 234545.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/sgx/Y92/financials/balance-sheet/ (ThaiBev FY2025 total debt, read as including leases)",
+      "note": ""
+    },
+    {
+      "key": "tb_lease",
+      "base": 7012.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/sgx/Y92/financials/balance-sheet/ (ThaiBev FY2025 lease liabilities)",
+      "note": ""
+    },
+    {
+      "key": "tb_beer_rev_9m",
+      "base": 96500.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://www.foodbusinessmea.com/thai-beverage-records-0-4-revenue-decline-amid-spirits-weakness/ (beer, nine months to 30 Jun 2025, THB 96.50bn)",
+      "note": ""
+    },
+    {
+      "key": "tb_beer_ebitda_9m",
+      "base": 12570.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://www.foodbusinessmea.com/thai-beverage-records-0-4-revenue-decline-amid-spirits-weakness/ (beer EBITDA, nine months to 30 Jun 2025, THB 12.57bn)",
+      "note": ""
+    },
+    {
+      "key": "tb_nab_rev_9m",
+      "base": 49330.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://www.foodbusinessmea.com/thai-beverage-records-0-4-revenue-decline-amid-spirits-weakness/ (NAB revenue, nine months to 30 Jun 2025, THB 49.33bn)",
+      "note": ""
+    },
+    {
+      "key": "tb_nab_ebitda_9m",
+      "base": 8720.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://www.foodbusinessmea.com/thai-beverage-records-0-4-revenue-decline-amid-spirits-weakness/ (NAB EBITDA, nine months to 30 Jun 2025, THB 8.72bn)",
+      "note": ""
+    },
+    {
+      "key": "tb_food_rev_9m",
+      "base": 16560.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://www.foodbusinessmea.com/thai-beverage-records-0-4-revenue-decline-amid-spirits-weakness/ (food revenue, nine months to 30 Jun 2025, THB 16.56bn)",
+      "note": ""
+    },
+    {
+      "key": "tb_food_ebitda_9m",
+      "base": 1580.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://www.foodbusinessmea.com/thai-beverage-records-0-4-revenue-decline-amid-spirits-weakness/ (food EBITDA, nine months to 30 Jun 2025, THB 1.58bn)",
+      "note": ""
+    },
+    {
+      "key": "bev_mult",
+      "base": 8.8,
+      "downside": null,
+      "unit": "x",
+      "label": "SOURCED",
+      "source": "https://ca.marketscreener.com/quote/stock/THAI-BEVERAGE-6498120/valuation/ (ThaiBev FY2025 EV/EBITDA, vendor figure); applied to the beverage subsidiary as a PROXY multiple",
+      "note": ""
+    },
+    {
+      "key": "bev_dio",
+      "base": 40.0,
+      "downside": null,
+      "unit": "days",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "beer and NAB inventory days on COGS. ThaiBev group figure (about 104 days) reflects spirits ageing, so not used"
+    },
+    {
+      "key": "bev_growth",
+      "base": 0.02,
+      "downside": -0.02,
+      "unit": "ratio",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "anchored to ThaiBev beer and NAB 9M revenue of -0.3% and -0.7%"
+    },
+    {
+      "key": "bev_margin_shock",
+      "base": 0.0,
+      "downside": -0.015,
+      "unit": "pp",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "downside margin cut versus proxy margin"
+    },
+    {
+      "key": "pkg_rev0",
+      "base": 4000.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "external revenue scale; no sourced figure for a group packaging entity"
+    },
+    {
+      "key": "scgp_rev",
+      "base": 124374.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/bkk/SCGP/financials/ (SCG Packaging FY2025 revenue)",
+      "note": ""
+    },
+    {
+      "key": "scgp_gp",
+      "base": 22254.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/bkk/SCGP/financials/ (SCG Packaging FY2025 gross profit)",
+      "note": ""
+    },
+    {
+      "key": "scgp_op",
+      "base": 8456.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/bkk/SCGP/financials/ (SCG Packaging FY2025 operating income)",
+      "note": ""
+    },
+    {
+      "key": "scgp_da",
+      "base": 8759.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/bkk/SCGP/financials/cash-flow-statement/ (SCG Packaging FY2025 D&A)",
+      "note": ""
+    },
+    {
+      "key": "scgp_oth_amort",
+      "base": 209.25,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/bkk/SCGP/financials/cash-flow-statement/ (SCG Packaging FY2025 other amortisation)",
+      "note": ""
+    },
+    {
+      "key": "scgp_capex",
+      "base": 4922.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/bkk/SCGP/financials/cash-flow-statement/ (SCG Packaging FY2025 capex)",
+      "note": ""
+    },
+    {
+      "key": "scgp_ar",
+      "base": 22152.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/bkk/SCGP/financials/balance-sheet/ (SCG Packaging FY2025 receivables)",
+      "note": ""
+    },
+    {
+      "key": "scgp_inv",
+      "base": 17356.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/bkk/SCGP/financials/balance-sheet/ (SCG Packaging FY2025 inventory)",
+      "note": ""
+    },
+    {
+      "key": "scgp_ap",
+      "base": 14582.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/bkk/SCGP/financials/balance-sheet/ (SCG Packaging FY2025 payables)",
+      "note": ""
+    },
+    {
+      "key": "pkg_growth",
+      "base": 0.03,
+      "downside": 0.0,
+      "unit": "ratio",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": ""
+    },
+    {
+      "key": "pkg_margin_shock",
+      "base": 0.0,
+      "downside": -0.01,
+      "unit": "pp",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": ""
+    },
+    {
+      "key": "pkg_mult",
+      "base": 7.0,
+      "downside": null,
+      "unit": "x",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "SOTP multiple; not sourced"
+    },
+    {
+      "key": "pkg_acq_mult",
+      "base": 7.0,
+      "downside": null,
+      "unit": "x",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "acquisition price, EV over Year 0 EBITDA; not sourced"
+    },
+    {
+      "key": "pkg_nd0",
+      "base": 0.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "sub debt refinanced by holding company at acquisition, so the acquisition price is an EV"
+    },
+    {
+      "key": "s_rev",
+      "base": 13988.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://investor.singhaestate.co.th/en/newsroom/press-releases/187640/singha-estate-leverages-strength-of-recurring-income-portfolio-reports-all-time-high-normalized-profit-of-thb-531-million-ready-to-announces-dividend-of-thb-0015-per-share (Singha Estate FY2025 core operating revenue). Stands in for the group's property arm",
+      "note": ""
+    },
+    {
+      "key": "s_ebitda_norm",
+      "base": 3649.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://investor.singhaestate.co.th/en/newsroom/press-releases/187640/singha-estate-leverages-strength-of-recurring-income-portfolio-reports-all-time-high-normalized-profit-of-thb-531-million-ready-to-announces-dividend-of-thb-0015-per-share (Singha Estate FY2025 normalized EBITDA)",
+      "note": ""
+    },
+    {
+      "key": "s_da",
+      "base": 1301.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/bkk/S/financials/cash-flow-statement/ (Singha Estate FY2025 D&A)",
+      "note": ""
+    },
+    {
+      "key": "s_capex",
+      "base": 888.99,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/bkk/S/financials/cash-flow-statement/ (Singha Estate FY2025 capex)",
+      "note": ""
+    },
+    {
+      "key": "s_ar",
+      "base": 1098.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/bkk/S/financials/balance-sheet/ (Singha Estate FY2025 receivables, total)",
+      "note": ""
+    },
+    {
+      "key": "s_inv",
+      "base": 10764.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/bkk/S/financials/balance-sheet/ (Singha Estate FY2025 inventory; property held for sale)",
+      "note": ""
+    },
+    {
+      "key": "s_ap",
+      "base": 313.99,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/bkk/S/financials/balance-sheet/ (Singha Estate FY2025 accounts payable)",
+      "note": ""
+    },
+    {
+      "key": "s_st_debt",
+      "base": 3213.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/bkk/S/financials/balance-sheet/ (Singha Estate FY2025 short-term debt)",
+      "note": ""
+    },
+    {
+      "key": "s_cpltd",
+      "base": 5574.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/bkk/S/financials/balance-sheet/ (Singha Estate FY2025 current portion of long-term debt)",
+      "note": ""
+    },
+    {
+      "key": "s_ltd",
+      "base": 24323.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/bkk/S/financials/balance-sheet/ (Singha Estate FY2025 long-term debt; leases excluded)",
+      "note": ""
+    },
+    {
+      "key": "s_cash",
+      "base": 2726.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "PROXY",
+      "source": "https://stockanalysis.com/quote/bkk/S/financials/balance-sheet/ (Singha Estate FY2025 cash)",
+      "note": ""
+    },
+    {
+      "key": "prop_gm",
+      "base": 0.45,
+      "downside": null,
+      "unit": "ratio",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "gross margin for the property arm; no COGS line sourced"
+    },
+    {
+      "key": "prop_growth",
+      "base": 0.03,
+      "downside": 0.0,
+      "unit": "ratio",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": ""
+    },
+    {
+      "key": "prop_margin_shock",
+      "base": 0.0,
+      "downside": -0.02,
+      "unit": "pp",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": ""
+    },
+    {
+      "key": "prop_mult",
+      "base": 9.0,
+      "downside": null,
+      "unit": "x",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "EV/EBITDA; not sourced. Sensitivity 7x to 11x"
+    },
+    {
+      "key": "food_rev0",
+      "base": 3000.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "scale; no sourced figure"
+    },
+    {
+      "key": "food_growth",
+      "base": 0.0,
+      "downside": -0.03,
+      "unit": "ratio",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "ThaiBev food 9M revenue was -1.4% year on year"
+    },
+    {
+      "key": "food_margin_shock",
+      "base": 0.0,
+      "downside": -0.01,
+      "unit": "pp",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": ""
+    },
+    {
+      "key": "food_gm",
+      "base": 0.3,
+      "downside": null,
+      "unit": "ratio",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": ""
+    },
+    {
+      "key": "food_da",
+      "base": 0.03,
+      "downside": null,
+      "unit": "ratio",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": ""
+    },
+    {
+      "key": "food_capex",
+      "base": 0.02,
+      "downside": null,
+      "unit": "ratio",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": ""
+    },
+    {
+      "key": "food_dso",
+      "base": 30.0,
+      "downside": null,
+      "unit": "days",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": ""
+    },
+    {
+      "key": "food_dio",
+      "base": 40.0,
+      "downside": null,
+      "unit": "days",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": ""
+    },
+    {
+      "key": "food_dpo",
+      "base": 35.0,
+      "downside": null,
+      "unit": "days",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": ""
+    },
+    {
+      "key": "food_lev",
+      "base": 1.5,
+      "downside": null,
+      "unit": "x",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "net debt over EBITDA"
+    },
+    {
+      "key": "food_mult",
+      "base": 8.0,
+      "downside": null,
+      "unit": "x",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": ""
+    },
+    {
+      "key": "cube_retail",
+      "base": 15.0,
+      "downside": null,
+      "unit": "THB/serving",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "set equal to the can's launch shelf price (LISTED, rework/53 section 3)"
+    },
+    {
+      "key": "cube_ret_m",
+      "base": 0.3,
+      "downside": 0.35,
+      "unit": "ratio",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "retailer margin; mid and high cases of rework/53"
+    },
+    {
+      "key": "cube_dist_m",
+      "base": 0.15,
+      "downside": 0.2,
+      "unit": "ratio",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "distributor margin; mid and high cases of rework/53"
+    },
+    {
+      "key": "cube_serv_base",
+      "base": [
+        2.0,
+        4.0,
+        6.0,
+        7.0,
+        8.0
+      ],
+      "downside": null,
+      "unit": "million servings",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "scenario input. No volume is taken from the consumer study: rework/55 does not exist"
+    },
+    {
+      "key": "cube_serv_scale",
+      "base": 1.0,
+      "downside": 0.5,
+      "unit": "ratio",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "multiplier on the scenario volume"
+    },
+    {
+      "key": "cube_fixed",
+      "base": 15.0,
+      "downside": 20.0,
+      "unit": "MTHB/yr",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "launch marketing, registration, trademark, listing; excluded by rework/53"
+    },
+    {
+      "key": "cube_capex",
+      "base": 25.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "filling and compaction line, placed in service at start of Year 1"
+    },
+    {
+      "key": "cube_life",
+      "base": 5.0,
+      "downside": null,
+      "unit": "years",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": ""
+    },
+    {
+      "key": "cube_ar_days",
+      "base": 30.0,
+      "downside": null,
+      "unit": "days",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": ""
+    },
+    {
+      "key": "cube_inv_days",
+      "base": 45.0,
+      "downside": 45.0,
+      "unit": "days",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "also the holding period for intragroup pouch film"
+    },
+    {
+      "key": "cube_ap_days",
+      "base": 30.0,
+      "downside": null,
+      "unit": "days",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": ""
+    },
+    {
+      "key": "cube_cost_case",
+      "base": "mid",
+      "downside": "high",
+      "unit": "case",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "mid is the midpoint of the rework/53 low and high cases"
+    },
+    {
+      "key": "khc_usd",
+      "base": 242.0,
+      "downside": null,
+      "unit": "USD",
+      "label": "SOURCED",
+      "source": "rework/53_unit_cost_and_value_chain.md (team record): potassium bicarbonate, USD 242 for 22.68 kg (US listing)",
+      "note": ""
+    },
+    {
+      "key": "khc_kg",
+      "base": 22.68,
+      "downside": null,
+      "unit": "kg",
+      "label": "SOURCED",
+      "source": "rework/53_unit_cost_and_value_chain.md (team record)",
+      "note": ""
+    },
+    {
+      "key": "khc_high_mult",
+      "base": 2.0,
+      "downside": null,
+      "unit": "x",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "high-cost case doubles the low price, per rework/53"
+    },
+    {
+      "key": "khc_g",
+      "base": 2.58,
+      "downside": null,
+      "unit": "g/serving",
+      "label": "SOURCED",
+      "source": "rework/53_unit_cost_and_value_chain.md (team record) (design mass at 1.75 volumes)",
+      "note": ""
+    },
+    {
+      "key": "citric_g",
+      "base": 1.65,
+      "downside": null,
+      "unit": "g/serving",
+      "label": "SOURCED",
+      "source": "rework/53_unit_cost_and_value_chain.md (team record)",
+      "note": ""
+    },
+    {
+      "key": "citric_low",
+      "base": 115.0,
+      "downside": null,
+      "unit": "THB/kg",
+      "label": "SOURCED",
+      "source": "rework/53_unit_cost_and_value_chain.md (team record) (US listings, converted)",
+      "note": ""
+    },
+    {
+      "key": "citric_high",
+      "base": 142.0,
+      "downside": null,
+      "unit": "THB/kg",
+      "label": "SOURCED",
+      "source": "rework/53_unit_cost_and_value_chain.md (team record)",
+      "note": ""
+    },
+    {
+      "key": "sucr_thb_kg",
+      "base": 655.0,
+      "downside": null,
+      "unit": "THB/kg",
+      "label": "SOURCED",
+      "source": "rework/53_unit_cost_and_value_chain.md (team record) (Lazada TH listing, sucralose)",
+      "note": ""
+    },
+    {
+      "key": "sucr_low_g",
+      "base": 0.01,
+      "downside": null,
+      "unit": "g/serving",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "sweetener dose"
+    },
+    {
+      "key": "sucr_high_g",
+      "base": 0.1,
+      "downside": null,
+      "unit": "g/serving",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "sweetener dose"
+    },
+    {
+      "key": "pouch_usd_low",
+      "base": 0.03,
+      "downside": null,
+      "unit": "USD/piece",
+      "label": "SOURCED",
+      "source": "rework/53_unit_cost_and_value_chain.md (team record) (non-Thai listing, spec unconfirmed)",
+      "note": ""
+    },
+    {
+      "key": "pouch_usd_high",
+      "base": 0.05,
+      "downside": null,
+      "unit": "USD/piece",
+      "label": "SOURCED",
+      "source": "rework/53_unit_cost_and_value_chain.md (team record) (non-Thai listing, spec unconfirmed)",
+      "note": ""
+    },
+    {
+      "key": "print_low",
+      "base": 0.0,
+      "downside": null,
+      "unit": "THB/serving",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "print placeholder, no public price"
+    },
+    {
+      "key": "print_high",
+      "base": 1.5,
+      "downside": null,
+      "unit": "THB/serving",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "print placeholder, no public price"
+    },
+    {
+      "key": "hold_oh0",
+      "base": 150.0,
+      "downside": null,
+      "unit": "MTHB/yr",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "corporate overhead; no sourced figure"
+    },
+    {
+      "key": "hold_oh_g",
+      "base": 0.03,
+      "downside": null,
+      "unit": "ratio",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": ""
+    },
+    {
+      "key": "hold_debt0",
+      "base": 12000.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "holding company senior debt; not sourced"
+    },
+    {
+      "key": "hold_rate",
+      "base": 0.045,
+      "downside": null,
+      "unit": "ratio",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": ""
+    },
+    {
+      "key": "hold_amort",
+      "base": 1000.0,
+      "downside": null,
+      "unit": "MTHB/yr",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": ""
+    },
+    {
+      "key": "hold_cash0",
+      "base": 3000.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": ""
+    },
+    {
+      "key": "hold_min_cash",
+      "base": 1000.0,
+      "downside": null,
+      "unit": "MTHB",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": ""
+    },
+    {
+      "key": "acq_debt_share",
+      "base": 0.6,
+      "downside": null,
+      "unit": "ratio",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "share of the packaging acquisition funded by new holding debt"
+    },
+    {
+      "key": "acq_rate",
+      "base": 0.05,
+      "downside": null,
+      "unit": "ratio",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": ""
+    },
+    {
+      "key": "sub_rate",
+      "base": 0.045,
+      "downside": null,
+      "unit": "ratio",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "interest on each subsidiary's own net debt"
+    },
+    {
+      "key": "payout",
+      "base": 0.6,
+      "downside": null,
+      "unit": "ratio",
+      "label": "ASSUMPTION",
+      "source": "",
+      "note": "share of positive subsidiary FCF to equity paid to the holding company"
+    }
+  ],
+  "cases": {
+    "base": {
+      "case": "base",
+      "derived": {
+        "bev_rev0": 36803.03,
+        "bev_gm": 0.31348893350542567,
+        "bev_margin": 0.1459919083864774,
+        "bev_lev": 3.626327634540214,
+        "pkg_gm": 0.17892807178349174,
+        "pkg_margin": 0.140095598758583,
+        "prop_margin": 0.2608664569631112,
+        "food_margin": 0.09541062801932366,
+        "prop_nd0": 30384.0,
+        "cube_price": 8.924999999999999,
+        "cube_cost_ps": 3.7179160626984125,
+        "cube_pouch_ps": 1.3382919999999998,
+        "cube_comp": {
+          "low": {
+            "ingredients": 1.1107993751322751,
+            "sweetener": 0.006549999999999999,
+            "pouch_film": 1.0037189999999998,
+            "print": 0.0
+          },
+          "high": {
+            "ingredients": 2.0763987502645502,
+            "sweetener": 0.0655,
+            "pouch_film": 1.6728649999999998,
+            "print": 1.5
+          },
+          "mid": {
+            "ingredients": 1.5935990626984127,
+            "sweetener": 0.036025,
+            "pouch_film": 1.3382919999999998,
+            "print": 0.75
+          }
+        },
+        "bev_dso": 19.472250107557723,
+        "bev_dpo": 21.322298044199183,
+        "pkg_dso": 65.00940711081094,
+        "pkg_dio": 62.03427340383862,
+        "pkg_dpo": 52.11936936936937,
+        "prop_dso": 28.650986559908496,
+        "prop_dio": 280.8736059479554,
+        "prop_dpo": 8.193190591935945,
+        "bev_da_pct": 0.03091089440221808,
+        "bev_capex_pct": 0.0388343133036952,
+        "pkg_da_pct": 0.07210711241899433,
+        "pkg_capex_pct": 0.03957418753115603,
+        "prop_da_pct": 0.09300829282241922,
+        "prop_capex_pct": 0.06355376036602803
+      },
+      "operating": {
+        "beverage_core": {
+          "rev": [
+            36803.03,
+            37539.090599999996,
+            38289.872412,
+            39055.66986024001,
+            39836.7832574448,
+            40633.51892259369
+          ],
+          "cogs": [
+            25265.687375531816,
+            25771.00112304245,
+            26286.4211455033,
+            26812.149568413373,
+            27348.39255978163,
+            27895.360410977264
+          ],
+          "gp": [
+            11537.342624468183,
+            11768.089476957546,
+            12003.451266496697,
+            12243.520291826633,
+            12488.390697663166,
+            12738.158511616428
+          ],
+          "ebitda": [
+            5372.944584104779,
+            5480.403475786875,
+            5590.011545302612,
+            5701.811776208666,
+            5815.848011732838,
+            5932.164971967494
+          ],
+          "da": [
+            1137.614574011664,
+            1160.3668654918972,
+            1183.5742028017353,
+            1207.2456868577701,
+            1231.3906005949252,
+            1256.0184126068239
+          ],
+          "capex": [
+            1429.2203975452937,
+            1457.8048054961994,
+            1486.9609016061233,
+            1516.7001196382462,
+            1547.0341220310108,
+            1577.974804471631
+          ],
+          "nwc": [
+            3256.281598313898,
+            3321.407230280176,
+            3387.835374885779,
+            3455.5920823834954,
+            3524.7039240311647,
+            3595.1980025117873
+          ]
+        },
+        "beverage": {
+          "rev": [
+            36803.03,
+            37556.940599999994,
+            38325.572411999994,
+            39109.21986024001,
+            39899.258257444795,
+            40704.91892259369
+          ],
+          "cogs": [
+            25265.687375531816,
+            25778.436955167846,
+            26301.292809754093,
+            26834.457064789563,
+            27374.41797222052,
+            27925.10373947885
+          ],
+          "ebitda": [
+            5372.944584104779,
+            5475.817643661478,
+            5595.839881051818,
+            5718.054279832475,
+            5837.297599293949,
+            5958.821643465907
+          ],
+          "da": [
+            1137.614574011664,
+            1165.3668654918972,
+            1188.5742028017353,
+            1212.2456868577701,
+            1236.3906005949252,
+            1261.0184126068239
+          ],
+          "capex": [
+            1429.2203975452937,
+            1482.8048054961994,
+            1486.9609016061233,
+            1516.7001196382462,
+            1547.0341220310108,
+            1577.974804471631
+          ],
+          "nwc": [
+            3256.281598313898,
+            3323.1799357099867,
+            3391.3807857454008,
+            3460.910198672928,
+            3530.9083930355027,
+            3602.2888242310305
+          ],
+          "gp": [
+            11537.342624468183,
+            11778.503644832148,
+            12024.2796022459,
+            12274.762795450446,
+            12524.840285224276,
+            12779.815183114843
+          ]
+        },
+        "cube": {
+          "serv": [
+            0.0,
+            2.0,
+            4.0,
+            6.0,
+            7.0,
+            8.0
+          ],
+          "rev": [
+            0.0,
+            17.849999999999998,
+            35.699999999999996,
+            53.55,
+            62.474999999999994,
+            71.39999999999999
+          ],
+          "cogs": [
+            0.0,
+            7.435832125396825,
+            14.87166425079365,
+            22.307496376190475,
+            26.025412438888885,
+            29.7433285015873
+          ],
+          "fixed": [
+            0.0,
+            15.0,
+            15.0,
+            15.0,
+            15.0,
+            15.0
+          ],
+          "tp_ebitda": [
+            0.0,
+            -4.585832125396827,
+            5.828335749206346,
+            16.242503623809522,
+            21.44958756111111,
+            26.656671498412692
+          ],
+          "film_purch": [
+            0.0,
+            2.6765839999999996,
+            5.353167999999999,
+            8.029751999999998,
+            9.368044,
+            10.706335999999999
+          ],
+          "film_inv": [
+            0.0,
+            0.32998980821917806,
+            0.6599796164383561,
+            0.9899694246575341,
+            1.1549643287671232,
+            1.3199592328767122
+          ],
+          "up": [
+            0.0,
+            0.059044440092861764,
+            0.11808888018572353,
+            0.17713332027858528,
+            0.20665554032501618,
+            0.23617776037144705
+          ],
+          "dup": [
+            0.0,
+            0.059044440092861764,
+            0.059044440092861764,
+            0.05904444009286175,
+            0.029522220046430903,
+            0.029522220046430875
+          ],
+          "pkg_margin_on_film": [
+            0.0,
+            0.4789160140865454,
+            0.9578320281730908,
+            1.4367480422596361,
+            1.676206049302909,
+            1.9156640563461815
+          ],
+          "group_ebitda": [
+            0.0,
+            -4.165960551403144,
+            6.727123337286574,
+            17.620207225976298,
+            23.096271390367587,
+            28.54281333471244
+          ],
+          "da": [
+            0.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "capex": [
+            0.0,
+            25.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "ppe": [
+            25.0,
+            20.0,
+            15.0,
+            10.0,
+            5.0,
+            0.0
+          ],
+          "nwc": [
+            0.0,
+            1.7727054298108278,
+            3.5454108596216556,
+            5.318116289432485,
+            6.2044690043378985,
+            7.090821719243311
+          ]
+        },
+        "packaging": {
+          "rev": [
+            4000.0,
+            4122.676584,
+            4248.953167999999,
+            4378.937752000001,
+            4511.403284,
+            4647.802633200001
+          ],
+          "cogs": [
+            3284.287712866033,
+            3385.0140122379275,
+            3488.696170551401,
+            3595.4228635747018,
+            3704.1865933561676,
+            3816.1802700112885
+          ],
+          "ebitda": [
+            560.3823950343319,
+            577.6727828994484,
+            595.4675149200958,
+            613.7817214209401,
+            632.3915286293438,
+            651.5524463137883
+          ],
+          "da": [
+            288.42844967597733,
+            297.08130316625665,
+            305.9937422612443,
+            315.1735545290817,
+            324.62876116495414,
+            334.3676239999028
+          ],
+          "capex": [
+            158.29675012462414,
+            163.04565262836286,
+            167.93702220721372,
+            172.97513287343017,
+            178.16438685963305,
+            183.50931846542207
+          ],
+          "nwc": [
+            801.6466464051972,
+            825.696045797353,
+            850.4669271712737,
+            875.980934986412,
+            902.2603630360043,
+            929.3281739270847
+          ],
+          "gp": [
+            715.712287133967,
+            737.6625717620723,
+            760.2569974485982,
+            783.514888425299,
+            807.2166906438324,
+            831.6223631887124
+          ]
+        },
+        "property": {
+          "rev": [
+            13988.0,
+            14407.640000000001,
+            14839.8692,
+            15285.065276,
+            15743.617234280002,
+            16215.925751308401
+          ],
+          "cogs": [
+            7693.400000000001,
+            7924.202000000001,
+            8161.92806,
+            8406.7859018,
+            8658.989478854002,
+            8918.759163219622
+          ],
+          "gp": [
+            6294.599999999999,
+            6483.438,
+            6677.941139999999,
+            6878.279374199999,
+            7084.627755426,
+            7297.1665880887795
+          ],
+          "ebitda": [
+            3649.0,
+            3758.4700000000003,
+            3871.2240999999995,
+            3987.3608229999995,
+            4106.9816476900005,
+            4230.1910971207
+          ],
+          "da": [
+            1301.0,
+            1340.0300000000002,
+            1380.2309,
+            1421.637827,
+            1464.2869618100003,
+            1508.2155706643002
+          ],
+          "capex": [
+            888.99,
+            915.6597000000002,
+            943.129491,
+            971.42337573,
+            1000.5660770019002,
+            1030.5830593119572
+          ],
+          "nwc": [
+            11548.010000000002,
+            11894.450300000002,
+            12251.283809,
+            12618.82232327,
+            12997.386992968104,
+            13387.308602757146
+          ]
+        },
+        "food": {
+          "rev": [
+            3000.0,
+            3000.0,
+            3000.0,
+            3000.0,
+            3000.0,
+            3000.0
+          ],
+          "cogs": [
+            2100.0,
+            2100.0,
+            2100.0,
+            2100.0,
+            2100.0,
+            2100.0
+          ],
+          "gp": [
+            900.0,
+            900.0,
+            900.0,
+            900.0,
+            900.0,
+            900.0
+          ],
+          "ebitda": [
+            286.231884057971,
+            286.231884057971,
+            286.231884057971,
+            286.231884057971,
+            286.231884057971,
+            286.231884057971
+          ],
+          "da": [
+            90.0,
+            90.0,
+            90.0,
+            90.0,
+            90.0,
+            90.0
+          ],
+          "capex": [
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0
+          ],
+          "nwc": [
+            275.3424657534247,
+            275.3424657534247,
+            275.3424657534247,
+            275.3424657534247,
+            275.3424657534247,
+            275.3424657534247
+          ]
+        }
+      },
+      "financing": {
+        "beverage": {
+          "nd": [
+            19484.05742419234,
+            18539.018113046597,
+            17542.28997637036,
+            16502.63374056139,
+            15420.23811316125,
+            14294.32723734
+          ],
+          "interest": [
+            0.0,
+            876.7825840886552,
+            834.2558150870968,
+            789.4030489366662,
+            742.6185183252625,
+            693.9107150922562
+          ],
+          "net_income": [
+            0.0,
+            2746.93455526474,
+            2858.4078905303895,
+            2973.124435230431,
+            3086.630784299009,
+            3203.114012613461
+          ],
+          "fcfe": [
+            0.0,
+            2362.5982778643497,
+            2491.820341690587,
+            2599.140589522428,
+            2705.989068500349,
+            2814.7771895531264
+          ],
+          "dividend": [
+            0.0,
+            1417.5589667186098,
+            1495.0922050143522,
+            1559.4843537134568,
+            1623.5934411002092,
+            1688.8663137318758
+          ]
+        },
+        "packaging": {
+          "nd": [
+            0.0,
+            -133.78377397291658,
+            -273.65620304100304,
+            -419.82523130639345,
+            -572.4287787281017,
+            -731.6870941395899
+          ],
+          "interest": [
+            0.0,
+            0.0,
+            -6.020269828781246,
+            -12.314529136845136,
+            -18.892135408787706,
+            -25.759295042764577
+          ],
+          "net_income": [
+            0.0,
+            224.47318378655342,
+            236.39523399010622,
+            248.73815682296285,
+            261.3239222985419,
+            274.35529388532007
+          ],
+          "fcfe": [
+            0.0,
+            334.4594349322914,
+            349.6810726702161,
+            365.4225706634761,
+            381.50886855427063,
+            398.14578852872035
+          ],
+          "dividend": [
+            0.0,
+            200.67566095937482,
+            209.80864360212965,
+            219.25354239808567,
+            228.90532113256236,
+            238.8874731172322
+          ]
+        },
+        "property": {
+          "nd": [
+            30384.0,
+            30016.4568,
+            29619.46879392,
+            29191.88741103245,
+            28732.52580422572,
+            28240.1576467152
+          ],
+          "interest": [
+            0.0,
+            1367.28,
+            1350.740556,
+            1332.8760957264,
+            1313.6349334964602,
+            1292.9636611901574
+          ],
+          "net_income": [
+            0.0,
+            840.9280000000001,
+            912.2021151999995,
+            986.2775202188795,
+            1063.247801906832,
+            1143.2094922129938
+          ],
+          "fcfe": [
+            0.0,
+            918.8580000000002,
+            992.470015200001,
+            1068.95345721888,
+            1148.4040170168282,
+            1230.920393776295
+          ],
+          "dividend": [
+            0.0,
+            551.3148000000001,
+            595.4820091200005,
+            641.372074331328,
+            689.0424102100969,
+            738.552236265777
+          ]
+        },
+        "food": {
+          "nd": [
+            429.3478260869565,
+            360.73623188405793,
+            291.13663072463766,
+            220.53479530852172,
+            148.9162934624137,
+            76.26648518972173
+          ],
+          "interest": [
+            0.0,
+            19.320652173913043,
+            16.233130434782606,
+            13.101148382608693,
+            9.924065788883476,
+            6.701233205808617
+          ],
+          "net_income": [
+            0.0,
+            141.52898550724638,
+            143.9990028985507,
+            146.50458854028983,
+            149.04625461527002,
+            151.6245206817299
+          ],
+          "fcfe": [
+            0.0,
+            171.52898550724638,
+            173.9990028985507,
+            176.50458854028983,
+            179.04625461527002,
+            181.6245206817299
+          ],
+          "dividend": [
+            0.0,
+            102.91739130434782,
+            104.39940173913043,
+            105.9027531241739,
+            107.42775276916201,
+            108.97471240903793
+          ]
+        }
+      },
+      "holding_company": {
+        "overhead": [
+          150.0,
+          154.5,
+          159.135,
+          163.90905,
+          168.82632150000003,
+          173.891111145
+        ],
+        "debt_old": [
+          12000.0,
+          11000.0,
+          10000.0,
+          9000.0,
+          8000.0,
+          7000.0
+        ],
+        "debt_acq": [
+          2353.6060591441938,
+          2353.6060591441938,
+          2353.6060591441938,
+          2353.6060591441938,
+          2353.6060591441938,
+          2353.6060591441938
+        ],
+        "debt_total": [
+          14353.606059144193,
+          13353.606059144193,
+          12353.606059144193,
+          11353.606059144193,
+          10353.606059144193,
+          9353.606059144193
+        ],
+        "cash": [
+          1430.9292939038705,
+          1891.2158099289932,
+          2524.1827664473963,
+          3318.6061370572315,
+          4276.068437812053,
+          5399.777759233767
+        ],
+        "interest_old": [
+          0.0,
+          540.0,
+          495.0,
+          450.0,
+          405.0,
+          360.0
+        ],
+        "interest_acq": [
+          0.0,
+          117.68030295720969,
+          117.68030295720969,
+          117.68030295720969,
+          117.68030295720969,
+          117.68030295720969
+        ],
+        "amortisation": [
+          0.0,
+          1000.0,
+          1000.0,
+          1000.0,
+          1000.0,
+          1000.0
+        ],
+        "dividends_in": [
+          0.0,
+          2272.4668189823324,
+          2404.7822594756126,
+          2526.0127235670443,
+          2648.9689252120306,
+          2775.280735523923
+        ],
+        "cash_available_for_reinvestment": [
+          430.92929390387053,
+          891.2158099289932,
+          1524.1827664473963,
+          2318.6061370572315,
+          3276.068437812053,
+          4399.777759233767
+        ],
+        "ebitda": [
+          -150.0,
+          -154.5,
+          -159.135,
+          -163.90905,
+          -168.82632150000003,
+          -173.891111145
+        ],
+        "acq_ev": 3922.676765240323,
+        "acq_debt": 2353.6060591441938,
+        "acq_equity": 1569.0707060961295
+      },
+      "intercompany": {
+        "film_purchases_at_transfer": [
+          0.0,
+          2.6765839999999996,
+          5.353167999999999,
+          8.029751999999998,
+          9.368044,
+          10.706335999999999
+        ],
+        "film_inventory_at_transfer": [
+          0.0,
+          0.32998980821917806,
+          0.6599796164383561,
+          0.9899694246575341,
+          1.1549643287671232,
+          1.3199592328767122
+        ],
+        "unrealised_profit_closing": [
+          0.0,
+          0.059044440092861764,
+          0.11808888018572353,
+          0.17713332027858528,
+          0.20665554032501618,
+          0.23617776037144705
+        ],
+        "unrealised_profit_change": [
+          0.0,
+          0.059044440092861764,
+          0.059044440092861764,
+          0.05904444009286175,
+          0.029522220046430903,
+          0.029522220046430875
+        ],
+        "packaging_margin_on_film": [
+          0.0,
+          0.4789160140865454,
+          0.9578320281730908,
+          1.4367480422596361,
+          1.676206049302909,
+          1.9156640563461815
+        ]
+      },
+      "consolidation": {
+        "revenue_sum_of_parts": [
+          57791.03,
+          59087.257183999995,
+          60414.394779999995,
+          61773.22288824001,
+          63154.2787757248,
+          64568.647307102096
+        ],
+        "intragroup_revenue_eliminated": [
+          -0.0,
+          -2.6765839999999996,
+          -5.353167999999999,
+          -8.029751999999998,
+          -9.368044,
+          -10.706335999999999
+        ],
+        "revenue": [
+          57791.03,
+          59084.580599999994,
+          60409.04161199999,
+          61765.19313624001,
+          63144.9107317248,
+          64557.94097110209
+        ],
+        "cogs_sum_of_parts": [
+          38343.37508839785,
+          39187.652967405775,
+          40051.917040305496,
+          40936.66583016427,
+          41837.59404443069,
+          42760.04317270976
+        ],
+        "intragroup_cogs_eliminated": [
+          0.0,
+          -2.617539559907138,
+          -5.2941235599071375,
+          -7.970707559907137,
+          -9.338521779953568,
+          -10.676813779953568
+        ],
+        "cogs": [
+          38343.37508839785,
+          39185.03542784587,
+          40046.62291674559,
+          40928.69512260436,
+          41828.25552265074,
+          42749.36635892981
+        ],
+        "ebitda_sum_of_parts": [
+          9718.558863197082,
+          9943.692310618897,
+          10189.628380029884,
+          10441.519658311385,
+          10694.076338171264,
+          10952.905959813366
+        ],
+        "unrealised_profit_closing": [
+          0.0,
+          0.059044440092861764,
+          0.11808888018572353,
+          0.17713332027858528,
+          0.20665554032501618,
+          0.23617776037144705
+        ],
+        "unrealised_profit_change": [
+          0.0,
+          0.059044440092861764,
+          0.059044440092861764,
+          0.05904444009286175,
+          0.029522220046430903,
+          0.029522220046430875
+        ],
+        "net_elimination_ebitda": [
+          -0.0,
+          -0.059044440092861764,
+          -0.059044440092861764,
+          -0.05904444009286175,
+          -0.029522220046430903,
+          -0.029522220046430875
+        ],
+        "ebitda": [
+          9718.55886319708,
+          9943.633266178802,
+          10189.569335589791,
+          10441.460613871288,
+          10694.046815951215,
+          10952.876437593317
+        ],
+        "net_debt": [
+          63220.08201551962,
+          60244.81762017294,
+          57008.662490670795,
+          53530.23063768292,
+          49806.78905345342,
+          45832.89257501576
+        ]
+      },
+      "sotp": {
+        "lines": [
+          {
+            "name": "Beverage core (beer and NAB)",
+            "value": 48227.5505869245,
+            "multiple": 8.8
+          },
+          {
+            "name": "Cube (SOTP line, transfer-price EBITDA)",
+            "value": -40.35532270349208,
+            "multiple": 8.8
+          },
+          {
+            "name": "Packaging (acquired)",
+            "value": 4043.7094802961387,
+            "multiple": 7.0
+          },
+          {
+            "name": "Property",
+            "value": 33826.23,
+            "multiple": 9.0
+          },
+          {
+            "name": "Food",
+            "value": 2289.855072463768,
+            "multiple": 8.0
+          },
+          {
+            "name": "Holding company overhead (capitalised)",
+            "value": -1359.6000000000001,
+            "multiple": 8.8
+          },
+          {
+            "name": "Unrealised profit adjustment (capitalised)",
+            "value": -0.5195910728171835,
+            "multiple": 8.8
+          }
+        ],
+        "sum_of_parts_ev": 86986.8702259081,
+        "holdco_cash_pro_forma": 1430.9292939038705,
+        "holdco_debt_pro_forma": 14353.606059144193,
+        "equity_as_specified": 74064.19346066778,
+        "subsidiary_net_debt": {
+          "beverage": 19484.05742419234,
+          "packaging": 0.0,
+          "property": 30384.0,
+          "food": 429.3478260869565
+        },
+        "subsidiary_net_debt_total": 50297.4052502793,
+        "equity_after_subsidiary_debt": 23766.788210388484
+      },
+      "capital_allocation": {
+        "acquisition_ev": 3922.676765240323,
+        "acquisition_debt": 2353.6060591441938,
+        "acquisition_equity": 1569.0707060961295,
+        "acquisition_ev_over_ebitda0": 7.0,
+        "invested_capital": [
+          3922.676765240323,
+          3812.6905140945855,
+          3699.4046754144756,
+          3582.7202615739625,
+          3462.5353153182336,
+          3338.744820674833
+        ],
+        "nopat": [
+          null,
+          224.47318378655342,
+          231.57901812708124,
+          238.88653351348677,
+          246.21021397151176,
+          253.74785785110845
+        ],
+        "roic": [
+          null,
+          0.05803814497243982,
+          0.061654974354023236,
+          0.06560901813153444,
+          0.06989390556080297,
+          0.07461767572497094
+        ],
+        "wacc": 0.08,
+        "breakeven_multiple_at_wacc": 5.0071430191164605
+      },
+      "cube_value": {
+        "group_ebitda": [
+          0.0,
+          -4.165960551403144,
+          6.727123337286574,
+          17.620207225976298,
+          23.096271390367587,
+          28.54281333471244
+        ],
+        "share_of_group_ebitda": [
+          0.0,
+          -0.0004189575821920938,
+          0.000660197022634735,
+          0.0016875232189803194,
+          0.0021597316514378115,
+          0.002605965062907637
+        ],
+        "invested_capital": [
+          25.0,
+          21.772705429810827,
+          18.545410859621654,
+          15.318116289432485,
+          11.204469004337898,
+          7.090821719243311
+        ],
+        "nopat": [
+          null,
+          -7.332768441122515,
+          1.3816986698292597,
+          10.096165780781039,
+          14.477017112294071,
+          18.834250667769954
+        ],
+        "roic": [
+          null,
+          -0.31354903992570576,
+          0.06853984248224453,
+          0.5962855396805906,
+          1.09167465780151,
+          2.058917887923373
+        ],
+        "ufcf": [
+          null,
+          -30.938665981213973,
+          4.608993240018432,
+          13.32346035097021,
+          18.590664397388657,
+          22.94789795286454
+        ],
+        "terminal_value_y5": 251.1767573454695,
+        "npv": 186.1104758742784,
+        "sotp_line_value": -40.35532270349208
+      },
+      "break_even": {
+        "unit_margin_group": 5.446541944344859,
+        "servings_for_zero_ebitda_m": 2.754041032507698,
+        "servings_for_one_pct_of_group_ebitda_m": 22.863821787920187
+      },
+      "summary": {
+        "group_ebitda": [
+          9718.55886319708,
+          9943.633266178802,
+          10189.569335589791,
+          10441.460613871288,
+          10694.046815951215,
+          10952.876437593317
+        ],
+        "group_revenue": [
+          57791.03,
+          59084.580599999994,
+          60409.04161199999,
+          61765.19313624001,
+          63144.9107317248,
+          64557.94097110209
+        ],
+        "equity_as_specified": 74064.19346066778,
+        "equity_after_subsidiary_debt": 23766.788210388484,
+        "sum_of_parts_ev": 86986.8702259081,
+        "cube_group_ebitda": [
+          0.0,
+          -4.165960551403144,
+          6.727123337286574,
+          17.620207225976298,
+          23.096271390367587,
+          28.54281333471244
+        ],
+        "cube_npv": 186.1104758742784,
+        "min_cash_available_for_reinvestment": 430.92929390387053,
+        "cash_available_for_reinvestment": [
+          430.92929390387053,
+          891.2158099289932,
+          1524.1827664473963,
+          2318.6061370572315,
+          3276.068437812053,
+          4399.777759233767
+        ]
+      }
+    },
+    "downside": {
+      "case": "downside",
+      "derived": {
+        "bev_rev0": 36803.03,
+        "bev_gm": 0.31348893350542567,
+        "bev_margin": 0.1309919083864774,
+        "bev_lev": 3.626327634540214,
+        "pkg_gm": 0.17892807178349174,
+        "pkg_margin": 0.13009559875858298,
+        "prop_margin": 0.24086645696311124,
+        "food_margin": 0.08541062801932367,
+        "prop_nd0": 30384.0,
+        "cube_price": 7.800000000000001,
+        "cube_cost_ps": 5.31476375026455,
+        "cube_pouch_ps": 1.6728649999999998,
+        "cube_comp": {
+          "low": {
+            "ingredients": 1.1107993751322751,
+            "sweetener": 0.006549999999999999,
+            "pouch_film": 1.0037189999999998,
+            "print": 0.0
+          },
+          "high": {
+            "ingredients": 2.0763987502645502,
+            "sweetener": 0.0655,
+            "pouch_film": 1.6728649999999998,
+            "print": 1.5
+          },
+          "mid": {
+            "ingredients": 1.5935990626984127,
+            "sweetener": 0.036025,
+            "pouch_film": 1.3382919999999998,
+            "print": 0.75
+          }
+        },
+        "bev_dso": 19.472250107557723,
+        "bev_dpo": 21.322298044199183,
+        "pkg_dso": 65.00940711081094,
+        "pkg_dio": 62.03427340383862,
+        "pkg_dpo": 52.11936936936937,
+        "prop_dso": 28.650986559908496,
+        "prop_dio": 280.8736059479554,
+        "prop_dpo": 8.193190591935945,
+        "bev_da_pct": 0.03091089440221808,
+        "bev_capex_pct": 0.0388343133036952,
+        "pkg_da_pct": 0.07210711241899433,
+        "pkg_capex_pct": 0.03957418753115603,
+        "prop_da_pct": 0.09300829282241922,
+        "prop_capex_pct": 0.06355376036602803
+      },
+      "operating": {
+        "beverage_core": {
+          "rev": [
+            36803.03,
+            36066.9694,
+            35345.630011999994,
+            34638.71741175999,
+            33945.94306352479,
+            33267.0242022543
+          ],
+          "cogs": [
+            25265.687375531816,
+            24760.37362802118,
+            24265.166155460753,
+            23779.862832351537,
+            23304.265575704503,
+            22838.180264190418
+          ],
+          "gp": [
+            11537.342624468183,
+            11306.59577197882,
+            11080.463856539242,
+            10858.854579408457,
+            10641.677487820289,
+            10428.843938063885
+          ],
+          "ebitda": [
+            5372.944584104779,
+            4724.481151422684,
+            4629.991528394229,
+            4537.391697826344,
+            4446.643863869817,
+            4357.710986592422
+          ],
+          "da": [
+            1137.614574011664,
+            1114.8622825314308,
+            1092.565036880802,
+            1070.713736143186,
+            1049.2994614203221,
+            1028.313472191916
+          ],
+          "capex": [
+            1429.2203975452937,
+            1400.6359895943879,
+            1372.6232698024999,
+            1345.1708044064499,
+            1318.2673883183206,
+            1291.9020405519545
+          ],
+          "nwc": [
+            3256.281598313898,
+            3191.15596634762,
+            3127.332847020667,
+            3064.7861900802536,
+            3003.490466278648,
+            2943.4206569530756
+          ]
+        },
+        "beverage": {
+          "rev": [
+            36803.03,
+            36074.769400000005,
+            35361.23001199999,
+            34662.117411759995,
+            33973.243063524795,
+            33298.2242022543
+          ],
+          "cogs": [
+            25265.687375531816,
+            24765.688391771448,
+            24275.79568296128,
+            23795.80712360233,
+            23322.86724883043,
+            22859.439319191475
+          ],
+          "ebitda": [
+            5372.944584104779,
+            4706.96638767242,
+            4614.9620008937,
+            4524.847406575551,
+            4435.3421907438915,
+            4347.651931591364
+          ],
+          "da": [
+            1137.614574011664,
+            1119.8622825314308,
+            1097.565036880802,
+            1075.713736143186,
+            1054.2994614203221,
+            1033.313472191916
+          ],
+          "capex": [
+            1429.2203975452937,
+            1425.6359895943879,
+            1372.6232698024999,
+            1345.1708044064499,
+            1318.2673883183206,
+            1291.9020405519545
+          ],
+          "nwc": [
+            3256.281598313898,
+            3192.015477186672,
+            3129.051868698771,
+            3067.3647225974096,
+            3006.49875421533,
+            2946.8587003092834
+          ],
+          "gp": [
+            11537.342624468183,
+            11309.081008228557,
+            11085.434329038711,
+            10866.310288157663,
+            10650.375814694366,
+            10438.784883062825
+          ]
+        },
+        "cube": {
+          "serv": [
+            0.0,
+            1.0,
+            2.0,
+            3.0,
+            3.5,
+            4.0
+          ],
+          "rev": [
+            0.0,
+            7.800000000000001,
+            15.600000000000001,
+            23.400000000000002,
+            27.300000000000004,
+            31.200000000000003
+          ],
+          "cogs": [
+            0.0,
+            5.31476375026455,
+            10.6295275005291,
+            15.94429125079365,
+            18.601673125925927,
+            21.2590550010582
+          ],
+          "fixed": [
+            0.0,
+            20.0,
+            20.0,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "tp_ebitda": [
+            0.0,
+            -17.51476375026455,
+            -15.029527500529099,
+            -12.544291250793648,
+            -11.301673125925923,
+            -10.059055001058198
+          ],
+          "film_purch": [
+            0.0,
+            1.6728649999999998,
+            3.3457299999999996,
+            5.0185949999999995,
+            5.855027499999999,
+            6.691459999999999
+          ],
+          "film_inv": [
+            0.0,
+            0.20624363013698627,
+            0.41248726027397253,
+            0.6187308904109589,
+            0.721852705479452,
+            0.8249745205479451
+          ],
+          "up": [
+            0.0,
+            0.0369027750580386,
+            0.0738055501160772,
+            0.1107083251741158,
+            0.12915971270313512,
+            0.1476111002321544
+          ],
+          "dup": [
+            0.0,
+            0.0369027750580386,
+            0.0369027750580386,
+            0.0369027750580386,
+            0.018451387529019314,
+            0.018451387529019286
+          ],
+          "pkg_margin_on_film": [
+            0.0,
+            0.2993225088040909,
+            0.5986450176081818,
+            0.8979675264122726,
+            1.047628780814318,
+            1.1972900352163636
+          ],
+          "group_ebitda": [
+            0.0,
+            -17.252344016518496,
+            -14.467785257978957,
+            -11.683226499439414,
+            -10.272495732640625,
+            -8.880216353370853
+          ],
+          "da": [
+            0.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "capex": [
+            0.0,
+            25.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "ppe": [
+            25.0,
+            20.0,
+            15.0,
+            10.0,
+            5.0,
+            0.0
+          ],
+          "nwc": [
+            0.0,
+            0.8595108390519678,
+            1.7190216781039356,
+            2.578532517155903,
+            3.0082879366818878,
+            3.438043356207871
+          ]
+        },
+        "packaging": {
+          "rev": [
+            4000.0,
+            4001.672865,
+            4003.34573,
+            4005.018595,
+            4005.8550275,
+            4006.69146
+          ],
+          "cogs": [
+            3284.287712866033,
+            3285.661255357229,
+            3287.0347978484247,
+            3288.4083403396207,
+            3289.0951115852185,
+            3289.781882830817
+          ],
+          "ebitda": [
+            560.3823950343319,
+            520.681717543136,
+            520.9810400519401,
+            521.2803625607442,
+            521.4300238151462,
+            521.5796850695483
+          ],
+          "da": [
+            288.42844967597733,
+            288.42844967597733,
+            288.42844967597733,
+            288.42844967597733,
+            288.42844967597733,
+            288.42844967597733
+          ],
+          "capex": [
+            158.29675012462414,
+            158.29675012462414,
+            158.29675012462414,
+            158.29675012462414,
+            158.29675012462414,
+            158.29675012462414
+          ],
+          "nwc": [
+            801.6466464051972,
+            801.6466464051972,
+            801.6466464051972,
+            801.6466464051972,
+            801.6466464051972,
+            801.6466464051972
+          ],
+          "gp": [
+            715.712287133967,
+            716.011609642771,
+            716.3109321515753,
+            716.6102546603793,
+            716.7599159147812,
+            716.9095771691832
+          ]
+        },
+        "property": {
+          "rev": [
+            13988.0,
+            13988.0,
+            13988.0,
+            13988.0,
+            13988.0,
+            13988.0
+          ],
+          "cogs": [
+            7693.400000000001,
+            7693.400000000001,
+            7693.400000000001,
+            7693.400000000001,
+            7693.400000000001,
+            7693.400000000001
+          ],
+          "gp": [
+            6294.599999999999,
+            6294.599999999999,
+            6294.599999999999,
+            6294.599999999999,
+            6294.599999999999,
+            6294.599999999999
+          ],
+          "ebitda": [
+            3649.0,
+            3369.24,
+            3369.24,
+            3369.24,
+            3369.24,
+            3369.24
+          ],
+          "da": [
+            1301.0,
+            1301.0,
+            1301.0,
+            1301.0,
+            1301.0,
+            1301.0
+          ],
+          "capex": [
+            888.99,
+            888.99,
+            888.99,
+            888.99,
+            888.99,
+            888.99
+          ],
+          "nwc": [
+            11548.010000000002,
+            11548.010000000002,
+            11548.010000000002,
+            11548.010000000002,
+            11548.010000000002,
+            11548.010000000002
+          ]
+        },
+        "food": {
+          "rev": [
+            3000.0,
+            2910.0,
+            2822.7,
+            2738.019,
+            2655.8784299999998,
+            2576.2020770999998
+          ],
+          "cogs": [
+            2100.0,
+            2036.9999999999998,
+            1975.8899999999996,
+            1916.6132999999998,
+            1859.1149009999997,
+            1803.3414539699997
+          ],
+          "gp": [
+            900.0,
+            873.0000000000002,
+            846.8100000000002,
+            821.4057,
+            796.7635290000001,
+            772.86062313
+          ],
+          "ebitda": [
+            286.231884057971,
+            248.54492753623188,
+            241.0885797101449,
+            233.85592231884056,
+            226.84024464927535,
+            220.03503730979708
+          ],
+          "da": [
+            90.0,
+            87.3,
+            84.681,
+            82.14057,
+            79.67635289999998,
+            77.28606231299999
+          ],
+          "capex": [
+            60.0,
+            58.2,
+            56.454,
+            54.76038,
+            53.1175686,
+            51.524041542
+          ],
+          "nwc": [
+            275.3424657534247,
+            267.08219178082186,
+            259.0697260273972,
+            251.29763424657534,
+            243.7587052191781,
+            236.4459440626027
+          ]
+        }
+      },
+      "financing": {
+        "beverage": {
+          "nd": [
+            19484.05742419234,
+            18775.706555587298,
+            18065.429812255024,
+            17362.766571277116,
+            16667.658372954418,
+            15980.00025909219
+          ],
+          "interest": [
+            0.0,
+            1071.6231583305787,
+            1032.6638605573014,
+            993.5986396740263,
+            954.9521614202414,
+            916.721210512493
+          ],
+          "net_income": [
+            0.0,
+            2012.3847574483284,
+            1987.7864827644771,
+            1964.4280246066708,
+            1940.8724543226624,
+            1918.0937991095639
+          ],
+          "fcfe": [
+            0.0,
+            1770.8771715125977,
+            1775.69185833068,
+            1756.6581024447687,
+            1737.7704958067434,
+            1719.1452846555717
+          ],
+          "dividend": [
+            0.0,
+            1062.5263029075586,
+            1065.415114998408,
+            1053.9948614668613,
+            1042.662297484046,
+            1031.487170793343
+          ]
+        },
+        "packaging": {
+          "nd": [
+            0.0,
+            -126.37372553803203,
+            -255.06741184835076,
+            -386.1218902405484,
+            -519.5308190538574,
+            -655.3356366156893
+          ],
+          "interest": [
+            0.0,
+            0.0,
+            -6.950554904591762,
+            -14.028707651659293,
+            -21.236703963230163,
+            -28.574195047962156
+          ],
+          "net_income": [
+            0.0,
+            185.8026142937269,
+            191.60251622444363,
+            197.5044964291409,
+            203.39062248191925,
+            209.38034435322652
+          ],
+          "fcfe": [
+            0.0,
+            315.93431384508006,
+            321.73421577579677,
+            327.6361959804941,
+            333.5223220332724,
+            339.51204390457974
+          ],
+          "dividend": [
+            0.0,
+            189.56058830704802,
+            193.04052946547804,
+            196.58171758829647,
+            200.11339321996346,
+            203.70722634274784
+          ]
+        },
+        "property": {
+          "nd": [
+            30384.0,
+            30092.1176,
+            29795.098069760003,
+            29492.85099578778,
+            29185.284373313643,
+            28872.30457828396
+          ],
+          "interest": [
+            0.0,
+            1671.1200000000001,
+            1655.066468,
+            1638.7303938368002,
+            1622.106804768328,
+            1605.1906405322504
+          ],
+          "net_income": [
+            0.0,
+            317.69599999999974,
+            330.5388255999998,
+            343.6076849305597,
+            356.9065561853375,
+            370.43948757419946
+          ],
+          "fcfe": [
+            0.0,
+            729.7059999999997,
+            742.5488255999999,
+            755.6176849305596,
+            768.9165561853374,
+            782.4494875741996
+          ],
+          "dividend": [
+            0.0,
+            437.8235999999998,
+            445.52929535999994,
+            453.3706109583357,
+            461.3499337112024,
+            469.4696925445197
+          ]
+        },
+        "food": {
+          "nd": [
+            429.3478260869565,
+            370.3618614254516,
+            312.3340183779233,
+            255.22127164701703,
+            198.9816353372775,
+            143.57412734920837
+          ],
+          "interest": [
+            0.0,
+            23.61413043478261,
+            20.36990237839984,
+            17.17837101078578,
+            14.037169940585937,
+            10.943989943550264
+          ],
+          "net_income": [
+            0.0,
+            110.10463768115942,
+            108.83014186539603,
+            107.62958504644382,
+            106.50137744695155,
+            105.44398804259745
+          ],
+          "fcfe": [
+            0.0,
+            147.46491165376221,
+            145.06960761882067,
+            142.7818668272657,
+            140.59909077434878,
+            138.51876997017283
+          ],
+          "dividend": [
+            0.0,
+            88.47894699225732,
+            87.0417645712924,
+            85.66912009635942,
+            84.35945446460927,
+            83.1112619821037
+          ]
+        }
+      },
+      "holding_company": {
+        "overhead": [
+          150.0,
+          154.5,
+          159.135,
+          163.90905,
+          168.82632150000003,
+          173.891111145
+        ],
+        "debt_old": [
+          12000.0,
+          11000.0,
+          10000.0,
+          9000.0,
+          8000.0,
+          7000.0
+        ],
+        "debt_acq": [
+          2353.6060591441938,
+          2353.6060591441938,
+          2353.6060591441938,
+          2353.6060591441938,
+          2353.6060591441938,
+          2353.6060591441938
+        ],
+        "debt_total": [
+          14353.606059144193,
+          13353.606059144193,
+          12353.606059144193,
+          11353.606059144193,
+          10353.606059144193,
+          9353.606059144193
+        ],
+        "cash": [
+          1430.9292939038705,
+          1253.6023685620826,
+          1139.277709408609,
+          1073.7686059698099,
+          1057.2109998009792,
+          1089.8788767700416
+        ],
+        "interest_old": [
+          0.0,
+          660.0,
+          605.0,
+          550.0,
+          495.0,
+          440.0
+        ],
+        "interest_acq": [
+          0.0,
+          141.21636354865163,
+          141.21636354865163,
+          141.21636354865163,
+          141.21636354865163,
+          141.21636354865163
+        ],
+        "amortisation": [
+          0.0,
+          1000.0,
+          1000.0,
+          1000.0,
+          1000.0,
+          1000.0
+        ],
+        "dividends_in": [
+          0.0,
+          1778.3894382068638,
+          1791.0267043951783,
+          1789.6163101098527,
+          1788.485078879821,
+          1787.7753516627142
+        ],
+        "cash_available_for_reinvestment": [
+          430.92929390387053,
+          253.60236856208257,
+          139.2777094086091,
+          73.76860596980987,
+          57.21099980097915,
+          89.87887677004164
+        ],
+        "ebitda": [
+          -150.0,
+          -154.5,
+          -159.135,
+          -163.90905,
+          -168.82632150000003,
+          -173.891111145
+        ],
+        "acq_ev": 3922.676765240323,
+        "acq_debt": 2353.6060591441938,
+        "acq_equity": 1569.0707060961295
+      },
+      "intercompany": {
+        "film_purchases_at_transfer": [
+          0.0,
+          1.6728649999999998,
+          3.3457299999999996,
+          5.0185949999999995,
+          5.855027499999999,
+          6.691459999999999
+        ],
+        "film_inventory_at_transfer": [
+          0.0,
+          0.20624363013698627,
+          0.41248726027397253,
+          0.6187308904109589,
+          0.721852705479452,
+          0.8249745205479451
+        ],
+        "unrealised_profit_closing": [
+          0.0,
+          0.0369027750580386,
+          0.0738055501160772,
+          0.1107083251741158,
+          0.12915971270313512,
+          0.1476111002321544
+        ],
+        "unrealised_profit_change": [
+          0.0,
+          0.0369027750580386,
+          0.0369027750580386,
+          0.0369027750580386,
+          0.018451387529019314,
+          0.018451387529019286
+        ],
+        "packaging_margin_on_film": [
+          0.0,
+          0.2993225088040909,
+          0.5986450176081818,
+          0.8979675264122726,
+          1.047628780814318,
+          1.1972900352163636
+        ]
+      },
+      "consolidation": {
+        "revenue_sum_of_parts": [
+          57791.03,
+          56974.442265000005,
+          56175.27574199999,
+          55393.15500676,
+          54622.97652102479,
+          53869.1177393543
+        ],
+        "intragroup_revenue_eliminated": [
+          -0.0,
+          -1.6728649999999998,
+          -3.3457299999999996,
+          -5.0185949999999995,
+          -5.855027499999999,
+          -6.691459999999999
+        ],
+        "revenue": [
+          57791.03,
+          56972.769400000005,
+          56171.93001199999,
+          55388.136411759995,
+          54617.12149352479,
+          53862.426279354295
+        ],
+        "cogs_sum_of_parts": [
+          38343.37508839785,
+          37781.74964712868,
+          37232.1204808097,
+          36694.22876394195,
+          36164.477261415646,
+          35645.96265599229
+        ],
+        "intragroup_cogs_eliminated": [
+          0.0,
+          -1.6359622249419612,
+          -3.308827224941961,
+          -4.981692224941961,
+          -5.83657611247098,
+          -6.67300861247098
+        ],
+        "cogs": [
+          38343.37508839785,
+          37780.113684903736,
+          37228.81165358476,
+          36689.24707171701,
+          36158.64068530317,
+          35639.28964737982
+        ],
+        "ebitda_sum_of_parts": [
+          9718.558863197082,
+          8690.933032751787,
+          8587.136620655785,
+          8485.314641455136,
+          8384.026137708312,
+          8284.61554282571
+        ],
+        "unrealised_profit_closing": [
+          0.0,
+          0.0369027750580386,
+          0.0738055501160772,
+          0.1107083251741158,
+          0.12915971270313512,
+          0.1476111002321544
+        ],
+        "unrealised_profit_change": [
+          0.0,
+          0.0369027750580386,
+          0.0369027750580386,
+          0.0369027750580386,
+          0.018451387529019314,
+          0.018451387529019286
+        ],
+        "net_elimination_ebitda": [
+          -0.0,
+          -0.0369027750580386,
+          -0.0369027750580386,
+          -0.0369027750580386,
+          -0.018451387529019314,
+          -0.018451387529019286
+        ],
+        "ebitda": [
+          9718.55886319708,
+          8690.896129976729,
+          8587.09971788073,
+          8485.27773868008,
+          8384.007686320785,
+          8284.59709143818
+        ],
+        "net_debt": [
+          63220.08201551962,
+          61211.81598205683,
+          59132.12283828018,
+          57004.55440164575,
+          54828.788621894695,
+          52604.270510483824
+        ]
+      },
+      "sotp": {
+        "lines": [
+          {
+            "name": "Beverage core (beer and NAB)",
+            "value": 41575.43413251962,
+            "multiple": 8.8
+          },
+          {
+            "name": "Cube (SOTP line, transfer-price EBITDA)",
+            "value": -154.12992100232805,
+            "multiple": 8.8
+          },
+          {
+            "name": "Packaging (acquired)",
+            "value": 3644.7720228019516,
+            "multiple": 7.0
+          },
+          {
+            "name": "Property",
+            "value": 30323.159999999996,
+            "multiple": 9.0
+          },
+          {
+            "name": "Food",
+            "value": 1988.359420289855,
+            "multiple": 8.0
+          },
+          {
+            "name": "Holding company overhead (capitalised)",
+            "value": -1359.6000000000001,
+            "multiple": 8.8
+          },
+          {
+            "name": "Unrealised profit adjustment (capitalised)",
+            "value": -0.3247444205107397,
+            "multiple": 8.8
+          }
+        ],
+        "sum_of_parts_ev": 76017.67091018858,
+        "holdco_cash_pro_forma": 1430.9292939038705,
+        "holdco_debt_pro_forma": 14353.606059144193,
+        "equity_as_specified": 63094.99414494826,
+        "subsidiary_net_debt": {
+          "beverage": 19484.05742419234,
+          "packaging": 0.0,
+          "property": 30384.0,
+          "food": 429.3478260869565
+        },
+        "subsidiary_net_debt_total": 50297.4052502793,
+        "equity_after_subsidiary_debt": 12797.58889466896
+      },
+      "capital_allocation": {
+        "acquisition_ev": 3922.676765240323,
+        "acquisition_debt": 2353.6060591441938,
+        "acquisition_equity": 1569.0707060961295,
+        "acquisition_ev_over_ebitda0": 7.0,
+        "invested_capital": [
+          3922.676765240323,
+          3792.5450656889698,
+          3662.4133661376163,
+          3532.281666586263,
+          3402.1499670349094,
+          3272.018267483556
+        ],
+        "nopat": [
+          null,
+          185.80261429372692,
+          186.04207230077023,
+          186.28153030781345,
+          186.40125931133514,
+          186.5209883148568
+        ],
+        "roic": [
+          null,
+          0.04816520337726884,
+          0.04991096167794108,
+          0.05178302331385632,
+          0.05376107780991882,
+          0.05589340327089136
+        ],
+        "wacc": 0.08,
+        "breakeven_multiple_at_wacc": 4.144549684736788
+      },
+      "cube_value": {
+        "group_ebitda": [
+          0.0,
+          -17.252344016518496,
+          -14.467785257978957,
+          -11.683226499439414,
+          -10.272495732640625,
+          -8.880216353370853
+        ],
+        "share_of_group_ebitda": [
+          0.0,
+          -0.0019851053054254705,
+          -0.0016848279085257393,
+          -0.0013768820372468782,
+          -0.0012252488448216796,
+          -0.0010718947771821304
+        ],
+        "invested_capital": [
+          25.0,
+          20.859510839051968,
+          16.719021678103935,
+          12.578532517155903,
+          8.008287936681889,
+          3.438043356207871
+        ],
+        "nopat": [
+          null,
+          -17.801875213214796,
+          -15.574228206383166,
+          -13.346581199551531,
+          -12.2179965861125,
+          -11.104173082696683
+        ],
+        "roic": [
+          null,
+          -0.7763656823855825,
+          -0.8288896432702895,
+          -0.9111054875502833,
+          -1.1869726666640086,
+          -1.9402152180575765
+        ],
+        "ufcf": [
+          null,
+          -43.11185485557046,
+          -15.327296097030924,
+          -12.542737338491381,
+          -10.70225115216661,
+          -9.309971772896837
+        ],
+        "terminal_value_y5": -78.14590390966352,
+        "npv": -130.40337293010586,
+        "sotp_line_value": -154.12992100232805
+      },
+      "break_even": {
+        "unit_margin_group": 2.7845587585395415,
+        "servings_for_zero_ebitda_m": 7.1824664998233665,
+        "servings_for_one_pct_of_group_ebitda_m": 36.93438703671778
+      },
+      "summary": {
+        "group_ebitda": [
+          9718.55886319708,
+          8690.896129976729,
+          8587.09971788073,
+          8485.27773868008,
+          8384.007686320785,
+          8284.59709143818
+        ],
+        "group_revenue": [
+          57791.03,
+          56972.769400000005,
+          56171.93001199999,
+          55388.136411759995,
+          54617.12149352479,
+          53862.426279354295
+        ],
+        "equity_as_specified": 63094.99414494826,
+        "equity_after_subsidiary_debt": 12797.58889466896,
+        "sum_of_parts_ev": 76017.67091018858,
+        "cube_group_ebitda": [
+          0.0,
+          -17.252344016518496,
+          -14.467785257978957,
+          -11.683226499439414,
+          -10.272495732640625,
+          -8.880216353370853
+        ],
+        "cube_npv": -130.40337293010586,
+        "min_cash_available_for_reinvestment": 57.21099980097915,
+        "cash_available_for_reinvestment": [
+          430.92929390387053,
+          253.60236856208257,
+          139.2777094086091,
+          73.76860596980987,
+          57.21099980097915,
+          89.87887677004164
+        ]
+      }
+    }
+  },
+  "checks": {
+    "base": {
+      "ebitda_cons_equals_sum_less_dUP": 3.637978807091713e-12,
+      "elim_revenue_plus_cogs_net_is_minus_dUP": 5.551115123125783e-17,
+      "sotp_bridge": 0.0,
+      "holdco_cash_roll": 0.0
+    },
+    "downside": {
+      "ebitda_cons_equals_sum_less_dUP": 3.637978807091713e-12,
+      "elim_revenue_plus_cogs_net_is_minus_dUP": 2.7755575615628914e-17,
+      "sotp_bridge": 0.0,
+      "holdco_cash_roll": 0.0
+    }
+  },
+  "sensitivities": [
+    {
+      "sensitivity": "base case",
+      "equity_after_subsidiary_debt": 23766.788210388484,
+      "equity_as_specified": 74064.19346066778,
+      "sum_of_parts_ev": 86986.8702259081,
+      "group_ebitda_y1": 9943.633266178802,
+      "group_ebitda_y5": 10952.876437593317,
+      "cube_group_ebitda_y5": 28.54281333471244,
+      "cube_share_y5": 0.002605965062907637,
+      "cube_npv": 186.1104758742784
+    },
+    {
+      "sensitivity": "beverage EV/EBITDA 7.0x (base 8.8x, proxy)",
+      "equity_after_subsidiary_debt": 14188.522731789992,
+      "equity_as_specified": 64485.92798206929,
+      "sum_of_parts_ev": 77408.60474730961,
+      "group_ebitda_y1": 9943.633266178802,
+      "group_ebitda_y5": 10952.876437593317,
+      "cube_group_ebitda_y5": 28.54281333471244,
+      "cube_share_y5": 0.002605965062907637,
+      "cube_npv": 151.14410940126118
+    },
+    {
+      "sensitivity": "beverage EV/EBITDA 10.0x (base 8.8x, proxy)",
+      "equity_after_subsidiary_debt": 30152.29852945415,
+      "equity_as_specified": 80449.70377973345,
+      "sum_of_parts_ev": 93372.38054497377,
+      "group_ebitda_y1": 9943.633266178802,
+      "group_ebitda_y5": 10952.876437593317,
+      "cube_group_ebitda_y5": 28.54281333471244,
+      "cube_share_y5": 0.002605965062907637,
+      "cube_npv": 209.42138685628984
+    },
+    {
+      "sensitivity": "property EV/EBITDA 7.0x (base 9.0x, assumption)",
+      "equity_after_subsidiary_debt": 16249.848210388482,
+      "equity_as_specified": 66547.25346066778,
+      "sum_of_parts_ev": 79469.9302259081,
+      "group_ebitda_y1": 9943.633266178802,
+      "group_ebitda_y5": 10952.876437593317,
+      "cube_group_ebitda_y5": 28.54281333471244,
+      "cube_share_y5": 0.002605965062907637,
+      "cube_npv": 186.1104758742784
+    },
+    {
+      "sensitivity": "property EV/EBITDA 11.0x (base 9.0x, assumption)",
+      "equity_after_subsidiary_debt": 31283.728210388486,
+      "equity_as_specified": 81581.13346066778,
+      "sum_of_parts_ev": 94503.8102259081,
+      "group_ebitda_y1": 9943.633266178802,
+      "group_ebitda_y5": 10952.876437593317,
+      "cube_group_ebitda_y5": 28.54281333471244,
+      "cube_share_y5": 0.002605965062907637,
+      "cube_npv": 186.1104758742784
+    },
+    {
+      "sensitivity": "beverage revenue anchor: Boon Rawd Brewery directory US$341m",
+      "equity_after_subsidiary_debt": 3933.7779281032927,
+      "equity_as_specified": 40787.18355568987,
+      "sum_of_parts_ev": 53709.860320930195,
+      "group_ebitda_y1": 6162.154867885862,
+      "group_ebitda_y5": 6859.682606935741,
+      "cube_group_ebitda_y5": 28.54281333471244,
+      "cube_share_y5": 0.004160952476992616,
+      "cube_npv": 186.1104758742784
+    },
+    {
+      "sensitivity": "beverage revenue anchor: aggregator US$578.5m",
+      "equity_after_subsidiary_debt": 10139.759406420453,
+      "equity_as_specified": 51199.95015968493,
+      "sum_of_parts_ev": 64122.62692492526,
+      "group_ebitda_y1": 7345.423800158026,
+      "group_ebitda_y5": 8140.490953155998,
+      "cube_group_ebitda_y5": 28.54281333471244,
+      "cube_share_y5": 0.003506276648295597,
+      "cube_npv": 186.1104758742784
+    },
+    {
+      "sensitivity": "cube volume scale 0.0 (no cube sales)",
+      "equity_after_subsidiary_debt": 23672.31071206618,
+      "equity_as_specified": 73969.71596234548,
+      "sum_of_parts_ev": 86892.3927275858,
+      "group_ebitda_y1": 9932.799226730207,
+      "group_ebitda_y5": 10909.333624258603,
+      "cube_group_ebitda_y5": -15.0,
+      "cube_share_y5": -0.0013749694084563666,
+      "cube_npv": -172.8757807127748
+    },
+    {
+      "sensitivity": "cube volume scale 0.5 (half volume)",
+      "equity_after_subsidiary_debt": 23719.54946122734,
+      "equity_as_specified": 74016.95471150664,
+      "sum_of_parts_ev": 86939.63147674696,
+      "group_ebitda_y1": 9938.216246454505,
+      "group_ebitda_y5": 10931.105030925964,
+      "cube_group_ebitda_y5": 6.771406667356221,
+      "cube_share_y5": 0.0006194622271214808,
+      "cube_npv": 10.458549671326018
+    },
+    {
+      "sensitivity": "cube volume scale 3.0 (3x volume)",
+      "equity_after_subsidiary_debt": 23955.743207033076,
+      "equity_as_specified": 74253.14845731237,
+      "sum_of_parts_ev": 87175.8252225527,
+      "group_ebitda_y1": 9965.301345075997,
+      "group_ebitda_y5": 11039.962064262745,
+      "cube_group_ebitda_y5": 115.62844000413735,
+      "cube_share_y5": 0.010473626569645199,
+      "cube_npv": 877.2335090580954
+    },
+    {
+      "sensitivity": "cube volume scale 10.0 (10x volume)",
+      "equity_after_subsidiary_debt": 24617.085695289155,
+      "equity_as_specified": 74914.49094556845,
+      "sum_of_parts_ev": 87837.16771080878,
+      "group_ebitda_y1": 10041.139621216174,
+      "group_ebitda_y5": 11344.761757605724,
+      "cube_group_ebitda_y5": 420.42813334712434,
+      "cube_share_y5": 0.03705922983047767,
+      "cube_npv": 3290.2232248440623
+    },
+    {
+      "sensitivity": "cube cost case low (rework/53)",
+      "equity_after_subsidiary_debt": 23794.1845244332,
+      "equity_as_specified": 74091.5897747125,
+      "sum_of_parts_ev": 87014.26653995282,
+      "group_ebitda_y1": 9946.721993660436,
+      "group_ebitda_y5": 10965.179683634771,
+      "cube_group_ebitda_y5": 40.84605937616661,
+      "cube_share_y5": 0.0037250697712804676,
+      "cube_npv": 286.20953715006965
+    },
+    {
+      "sensitivity": "cube cost case high (rework/53)",
+      "equity_after_subsidiary_debt": 23739.391896343768,
+      "equity_as_specified": 74036.79714662307,
+      "sum_of_parts_ev": 86959.47391186339,
+      "group_ebitda_y1": 9940.544538697168,
+      "group_ebitda_y5": 10940.573191551865,
+      "cube_group_ebitda_y5": 16.23956729325828,
+      "cube_share_y5": 0.0014843433711314333,
+      "cube_npv": 85.25085723978378
+    },
+    {
+      "sensitivity": "inventory days 15 (cube and intragroup film)",
+      "equity_after_subsidiary_debt": 23767.134604437022,
+      "equity_as_specified": 74064.53985471632,
+      "sum_of_parts_ev": 86987.21661995664,
+      "group_ebitda_y1": 9943.672629138868,
+      "group_ebitda_y5": 10952.896119073346,
+      "cube_group_ebitda_y5": 28.562494814743395,
+      "cube_share_y5": 0.0026077573003732537,
+      "cube_npv": 188.34669882036542
+    },
+    {
+      "sensitivity": "inventory days 90 (cube and intragroup film)",
+      "equity_after_subsidiary_debt": 23766.268619315662,
+      "equity_as_specified": 74063.67386959496,
+      "sum_of_parts_ev": 86986.35063483528,
+      "group_ebitda_y1": 9943.574221738707,
+      "group_ebitda_y5": 10952.846915373273,
+      "cube_group_ebitda_y5": 28.51329111466601,
+      "cube_share_y5": 0.002603276694632254,
+      "cube_npv": 182.75614145514783
+    },
+    {
+      "sensitivity": "holding debt rate +1 pp",
+      "equity_after_subsidiary_debt": 23766.788210388484,
+      "equity_as_specified": 74064.19346066778,
+      "sum_of_parts_ev": 86986.8702259081,
+      "group_ebitda_y1": 9943.633266178802,
+      "group_ebitda_y5": 10952.876437593317,
+      "cube_group_ebitda_y5": 28.54281333471244,
+      "cube_share_y5": 0.002605965062907637,
+      "cube_npv": 186.1104758742784
+    },
+    {
+      "sensitivity": "downside case (for reference)",
+      "equity_after_subsidiary_debt": 12797.58889466896,
+      "equity_as_specified": 63094.99414494826,
+      "sum_of_parts_ev": 76017.67091018858,
+      "group_ebitda_y1": 8690.896129976729,
+      "group_ebitda_y5": 8284.59709143818,
+      "cube_group_ebitda_y5": -8.880216353370853,
+      "cube_share_y5": -0.0010718947771821304,
+      "cube_npv": -130.40337293010586
+    }
+  ]
+}

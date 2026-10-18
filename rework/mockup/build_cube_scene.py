@@ -202,7 +202,7 @@ def build_materials(tok, label_img):
     mats = {}
 
     # PET film: IOR 1.575 (isotropic average at about 589 nm; sourced, see MATERIALS_cube.md).
-    body_mat, body_bsdf = principled("PackFilm", lin["off-white"], 0.25, {"IOR": 1.575})
+    body_mat, body_bsdf = principled("PackFilm", lin["paper"], 0.25, {"IOR": 1.575})
     # Fine micro-texture for a printed laminate (ASSUMPTION: strength and scale, no measured source).
     film_noise = body_mat.node_tree.nodes.new("ShaderNodeTexNoise")
     film_noise.inputs["Scale"].default_value = 1400.0
@@ -213,7 +213,7 @@ def build_materials(tok, label_img):
     body_mat.node_tree.links.new(film_noise.outputs["Fac"], film_bump.inputs["Height"])
     body_mat.node_tree.links.new(film_bump.outputs["Normal"], body_bsdf.inputs["Normal"])
     mats["body"] = body_mat
-    mats["seal"] = principled("PackSeal", lin["off-white-deep"], 0.30, {"IOR": 1.575})[0]
+    mats["seal"] = principled("PackSeal", lin["paper"], 0.30, {"IOR": 1.575})[0]  # not used by the pillow pouch
 
     label_mat, label_bsdf = principled("PackLabel", (1.0, 1.0, 1.0), 0.35)
     label_tex = label_mat.node_tree.nodes.new("ShaderNodeTexImage")

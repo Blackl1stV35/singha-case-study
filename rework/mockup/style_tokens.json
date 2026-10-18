@@ -1,18 +1,16 @@
 {
   "basis": {
-    "colour": "ASSUMPTION (design choice). Lime, deep ink and warm off-white are not verified brand colours. No Singha colour is verified (48 section 4.2).",
+    "colour": "DESIGN CHOICE from the modern pack direction (workflow wg0nz9dbo, merged and checked 19 October 2026). Not verified brand colours. The lion's own colours are not sampled.",
     "background": "ASSUMPTION (design choice).",
     "type": "ASSUMPTION (design choice). Sarabun is our choice; the organiser's typeface was not read (48 section 5.1). Sizes, weights and line heights are ASSUMPTION.",
     "layout": "ASSUMPTION (design choice). The grid, gutters and bands are ours (48 section 5.5)."
   },
   "colour": {
-    "lime": "#9ED83A",
-    "lime-deep": "#5C9A12",
-    "lime-pale": "#E3F3BE",
-    "ink": "#12241B",
-    "ink-soft": "#3A5246",
-    "off-white": "#F6F3E8",
-    "off-white-deep": "#E6E0CB"
+    "ink": "#0B0C0A",
+    "ink-soft": "#3A3F36",
+    "lime": "#C5F03A",
+    "violet": "#6A3CFF",
+    "paper": "#F2F0E6"
   },
   "type": {
     "family": "'Sarabun', 'Noto Sans Thai', Arial, sans-serif",
@@ -45,23 +43,27 @@
     "pack_d": {
       "value": 20,
       "basis": "ASSUMPTION: 15 mm cube plus about 2.5 mm of film and seal allowance per face. No film, seal or sealant specification is sourced."
+    },
+    "net_weight_g": {
+      "value": 5.3,
+      "basis": "DERIVED. 4.23 g of reactants from stoichiometry at 1.75 volumes (2.58 g potassium bicarbonate and 1.65 g citric acid, rework/50 gate G3 and rework/screen/final_gate_sim.py) plus 1.05 g ASSUMPTION for binder, filler, flavour, sweetener and excess citric acid. The sum is 5.28 g, rounded to 5.3 g. Nothing is weighed; confirm on weighed production cubes before print."
     }
   },
   "copy_front": [
-    "Plunk Lime Cube · lime drink cube",
+    "Tarlo · lime drink cube",
     "Drop one cube into 330 ml of water and stir.",
     "Serving: 1 cube made up to 330 ml",
+    "Contains an intensive sweetener.",
     "Single-serve pouch",
-    "Contains an intensive sweetener: [specific name to be set]",
-    "Net weight: [x] g"
+    "Net weight: 5.3 g"
   ],
   "copy_back": [
     "Thai-language particulars: [to be set]",
-    "Ingredients: [to be set]",
+    "Preparation: 1 drop one cube into 330 ml of water. 2 stir until dissolved. 3 drink.",
+    "Ingredients: potassium bicarbonate, citric acid, binder and filler [to be set], intensive sweetener [name to be set], flavour",
     "Potassium: present. Amount per serving: [to be set]",
     "Sweetener: [functional class and specific name to be set]",
     "Flavour: [natural or artificial] flavour added [origin to be set]",
-    "Preparation: dissolve one cube in 330 ml of water.",
     "Storage: keep dry and sealed.",
     "Should consume by: [to be set]",
     "Food serial number: [to be issued by the authority]",
@@ -92,9 +94,9 @@
   ],
   "background": "#DCE5D1",
   "type_system": {
-    "display": "Georgia Bold (installed). Product name only. Matches the flared-serif character of the SINGHA wordmark, which stays as artwork.",
-    "text": "Leelawadee UI regular and bold (installed). All copy. Covers Latin and Thai.",
-    "wordmark": "The SINGHA lion emblem and wordmark are reproduced from the supplied artwork and are not re-typeset.",
-    "minimum_legal_size_note": "Keep the legal particulars at or above the sizes in the layout section; check cap height before print."
+    "display": "Georgia Bold, caps, for the product name. Free fallback: Gelasio Bold (metric-compatible). Georgia is taken as installed on target machines and is not checked there.",
+    "text": "Leelawadee UI Regular and Bold for all copy, with bold caps for the descriptor. Free fallback: Noto Sans Thai. Leelawadee UI is taken as installed on target machines and is not checked there.",
+    "wordmark": "The lion is the authorised SINGHA lion, recoloured and cut from the supplied artwork. The SINGHA wordmark is removed and no lettering appears beside or under the lion.",
+    "minimum_legal_size_note": "Legal particulars at or above 2.2 mm (the pack-particulars size in type). The back copy is set at 2.3 mm in this layout. Check the printed size before print."
   }
 }

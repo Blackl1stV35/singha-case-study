@@ -13,7 +13,8 @@ This folder holds the numbered records of the competition work. The current stat
 | Frozen pour-over lime cube | Superseded by the primary candidate | [42](42_working_candidate_lime_cube.md) |
 | Gates | Resolved by design or scope; the rest are stated limits or open | [50](50_final_gate_resolution.md) |
 | Unit cost and value chain | Variable cost clears the can; value chain not yet shown | [53](53_unit_cost_and_value_chain.md) |
-| Package | Redesigned with regard to the can; lion emblem is the only restriction | [54](54_package_redesign_vs_singha_can.md) |
+| Package | Tarlo, modern direction: lion recoloured, SINGHA wordmark removed, net weight 5.3 g derived | [57](57_package_revision_tarlo.md); earlier rules in [54](54_package_redesign_vs_singha_can.md) |
+| Product name | Tarlo (working name; one web search, no register search) | [57](57_package_revision_tarlo.md) |
 | Trademark and trade dress | SINGHA name and lion emblem authorized by the user for the product proposal (18 October 2026); registry search partial, recorded as a stated limit | [54](54_package_redesign_vs_singha_can.md) |
 | 330 ml reference | Not cleared | [54](54_package_redesign_vs_singha_can.md) |
 | Conversion lead | Synthesis only; no respondents | [49](49_conversion_test_synthesis.md) |
@@ -30,7 +31,7 @@ This folder holds the numbered records of the competition work. The current stat
 
 ## Documents by status
 
-**Active (primary candidate and decisions):** 00, 45, 49, 50, 51, 52, 53, 54.
+**Active (primary candidate and decisions):** 00, 45, 49, 50, 51, 52, 53, 54, 56, 57.
 
 **Supporting (still used):**
 - 01, 02, 04: idea catalogue, desk kill tests, and the price audit.
@@ -66,4 +67,5 @@ The numbering has gaps (35 to 39) because those numbers were never used.
 ## Open items
 
 - Trademark rights are authorized by the user for the product proposal. The registry search stays partial and is recorded as a stated limit. See [54](54_package_redesign_vs_singha_can.md).
+- The lion on a non-alcoholic pack needs brand and legal sign-off before print (gate G1 in [57](57_package_revision_tarlo.md)).
 - The textures in `archive/leaf_wrapped_mockup/textures/` came from earlier downloads whose approval is not on record.

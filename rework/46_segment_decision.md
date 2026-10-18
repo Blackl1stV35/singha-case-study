@@ -1,5 +1,7 @@
 # Segment decision: optimise conversion, pend volume (18 October 2026)
 
+> Correction, 19 October 2026: the everyday-drinker rates for 25 to 44 and 45 to 59 (17.9% and 15.8% above) count Unknown answers in the denominator; the printed rates are 18.2% and 16.0%. The 68.6% and 46.9% cells come from NSO Social Indicators 2025 Table 4.6.2, not from the 2021 report, and the pooled 15.8% sugar-sweetened share is not a printed 2021 figure. Read [55](55_consumer_persona_and_acquisition.md) before quoting any figure from this record.
+
 **Decision (taken by the user):** lead with conversion. Volume is pended for later.
 
 **Lead segment for conversion:** men aged 25–34.

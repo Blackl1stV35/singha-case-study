@@ -11,7 +11,7 @@
     "patterns_checked": 62,
     "forbidden_pattern_hits": [],
     "bare_new_occurrences": 0,
-    "new_as_constructor": 37,
+    "new_as_constructor": 38,
     "organiser_digest_hits": 0
   },
   "cases": [
@@ -41,13 +41,12 @@
         ],
         "sarabunFacesLoaded": 3,
         "liveWidthMm": 58.8,
-        "nameLineMm": 56.2,
-        "nameLineFitsAtSpec": true,
-        "nameLineSizeMm": {
-          "trade": 6.4
-        },
-        "frontBottomPx": 884,
-        "backBottomPx": 778.9333333333333,
+        "nameLineMm": null,
+        "labelImagesLoaded": true,
+        "nameLineFitsAtSpec": null,
+        "nameLineSizeMm": null,
+        "frontBottomPx": null,
+        "backBottomPx": null,
         "scrollWidth": 1280,
         "bodyScrollWidth": 1280,
         "innerWidth": 1280
@@ -111,13 +110,12 @@
         ],
         "sarabunFacesLoaded": 3,
         "liveWidthMm": 58.8,
-        "nameLineMm": 56.2,
-        "nameLineFitsAtSpec": true,
-        "nameLineSizeMm": {
-          "trade": 6.4
-        },
-        "frontBottomPx": 884,
-        "backBottomPx": 778.9333333333333,
+        "nameLineMm": null,
+        "labelImagesLoaded": true,
+        "nameLineFitsAtSpec": null,
+        "nameLineSizeMm": null,
+        "frontBottomPx": null,
+        "backBottomPx": null,
         "scrollWidth": 375,
         "bodyScrollWidth": 375,
         "innerWidth": 375
@@ -125,7 +123,7 @@
       "idle_screenshot": "rework/screen/cube_3d_phone_idle.png",
       "idle_screenshot_size": [
         375,
-        1132
+        1155
       ],
       "drop": {
         "drop_phases": [
@@ -172,13 +170,12 @@
         "webglCanvasBuffer": null,
         "sarabunFacesLoaded": 3,
         "liveWidthMm": 58.8,
-        "nameLineMm": 56.2,
-        "nameLineFitsAtSpec": true,
-        "nameLineSizeMm": {
-          "trade": 6.4
-        },
-        "frontBottomPx": 884,
-        "backBottomPx": 778.9333333333333,
+        "nameLineMm": null,
+        "labelImagesLoaded": true,
+        "nameLineFitsAtSpec": null,
+        "nameLineSizeMm": null,
+        "frontBottomPx": null,
+        "backBottomPx": null,
         "scrollWidth": 1280,
         "bodyScrollWidth": 1280,
         "innerWidth": 1280
@@ -236,14 +233,9 @@
       "detail": "console_errors=0; page_errors=0; failed_requests=0; http_errors=0"
     },
     {
-      "check": "desktop name line fits the 62 mm live width at spec",
+      "check": "desktop front and back label artwork decoded and drawn on the canvas",
       "pass": true,
-      "detail": "nameLineMm=56.2; fitsAtSpec=True; sizeMm={'trade': 6.4}; sarabunFacesLoaded=3"
-    },
-    {
-      "check": "desktop front and back label text inside the 90 mm label",
-      "pass": true,
-      "detail": "frontBottomPx=884; backBottomPx=778.9333333333333; limit=900"
+      "detail": "labelImagesLoaded=True; sarabunFacesLoaded=3"
     },
     {
       "check": "desktop idle screenshot saved",
@@ -291,19 +283,14 @@
       "detail": "console_errors=0; page_errors=0; failed_requests=0; http_errors=0"
     },
     {
-      "check": "phone name line fits the 62 mm live width at spec",
+      "check": "phone front and back label artwork decoded and drawn on the canvas",
       "pass": true,
-      "detail": "nameLineMm=56.2; fitsAtSpec=True; sizeMm={'trade': 6.4}; sarabunFacesLoaded=3"
-    },
-    {
-      "check": "phone front and back label text inside the 90 mm label",
-      "pass": true,
-      "detail": "frontBottomPx=884; backBottomPx=778.9333333333333; limit=900"
+      "detail": "labelImagesLoaded=True; sarabunFacesLoaded=3"
     },
     {
       "check": "phone idle screenshot saved",
       "pass": true,
-      "detail": "rework/screen/cube_3d_phone_idle.png size=[375, 1132]"
+      "detail": "rework/screen/cube_3d_phone_idle.png size=[375, 1155]"
     },
     {
       "check": "phone drop sequence in order and cube hidden when dissolved",
@@ -337,8 +324,8 @@
     }
   ],
   "summary": {
-    "passed": 26,
-    "total": 26,
+    "passed": 24,
+    "total": 24,
     "failed": []
   }
 }

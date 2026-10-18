@@ -72,6 +72,7 @@ STATE_JS = """() => {
     sarabunFacesLoaded: sarabun,
     liveWidthMm: round1(c.liveWidthMm),
     nameLineMm: round1(c.nameLineMm),
+    labelImagesLoaded: c.labelImagesLoaded === true,
     nameLineFitsAtSpec: c.nameLineFitsAtSpec === undefined ? null : c.nameLineFitsAtSpec,
     nameLineSizeMm: c.nameLineSizeMm || null,
     frontBottomPx: c.frontBottomPx === undefined ? null : c.frontBottomPx,
@@ -294,15 +295,9 @@ def build_checks(report):
             n_console == 0 and n_page == 0,
             f"console_errors={n_console}; page_errors={n_page}; "
             f"failed_requests={len(case['failed_requests'])}; http_errors={len(case['http_errors'])}")
-        add(f"{tag} name line fits the 62 mm live width at spec",
-            st.get("nameLineFitsAtSpec") is True and st.get("nameLineMm") is not None
-            and st["nameLineMm"] <= LIVE_W_MM,
-            f"nameLineMm={st.get('nameLineMm')}; fitsAtSpec={st.get('nameLineFitsAtSpec')}; "
-            f"sizeMm={st.get('nameLineSizeMm')}; sarabunFacesLoaded={st.get('sarabunFacesLoaded')}")
-        fb_px, bb_px = st.get("frontBottomPx"), st.get("backBottomPx")
-        add(f"{tag} front and back label text inside the 90 mm label",
-            fb_px is not None and bb_px is not None and fb_px <= LABEL_H_PX and bb_px <= LABEL_H_PX,
-            f"frontBottomPx={fb_px}; backBottomPx={bb_px}; limit={LABEL_H_PX}")
+        add(f"{tag} front and back label artwork decoded and drawn on the canvas",
+            st.get("labelImagesLoaded") is True,
+            f"labelImagesLoaded={st.get('labelImagesLoaded')}; sarabunFacesLoaded={st.get('sarabunFacesLoaded')}")
         add(f"{tag} idle screenshot saved",
             case["idle_screenshot_size"] is not None,
             f"{case['idle_screenshot']} size={case['idle_screenshot_size']}")

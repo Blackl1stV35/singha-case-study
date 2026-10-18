@@ -75,7 +75,7 @@ Confidence: **high** = official text read in full; **medium** = station, standar
 | Water vapour and dew point at 30 °C, 80 % RH | dew point 26.2 °C (Magnus, checked against the WFLO worked example) | GCC Association, Condensation Control, https://www.gcca.org/legacy-system/CondensationControl_0_0.pdf (worked example p.4 to 5) | medium |
 | Water viscosity and surface tension (external liquid) | 1.79 mPa·s / 0.0756 N/m at 0 °C, down to 0.80 mPa·s / 0.0712 N/m at 30 °C | standard water property tables (IAPWS values as I recall them; not fetched in this session, verify before citing) | medium (unverified fetch) |
 | Drink viscosity and surface tension (internal liquid, screen) | 1.0 mPa·s (range 1–3) / 0.072 N/m | rework/16 (assumption from coconut-drink range) | assumption |
-| **Leaf contact angle, adaxial (outside-water wetting)** | **Conflict:** 76.08 ± 2.01° (Materials 2022, https://pmc.ncbi.nlm.nih.gov/articles/PMC8839732/) vs about 130° for fresh banana leaf (BioResources 2019, Hassan et al., https://bioresources.cnr.ncsu.edu/wp-content/uploads/2019/09/BioRes_14_4_8331_Hassan_GMA_Wettability_Effect_Surface_Morphologies_Musa_Leaves_15317-3.pdf). The screen keeps 76° as the conservative value. At 130° there is no capillary climb (cos θ < 0), so the outside-water thresholds would not apply. | measured, conflicting |
+| **Leaf contact angle (outside-water wetting)** | intact wax: no climb (90 degrees or more). Damaged, exposed cell wall: 76 degrees, so it wicks | measured values: 76.08 degrees (Materials 2022, https://pmc.ncbi.nlm.nih.gov/articles/PMC8839732/) and about 130 degrees for fresh intact leaf (BioResources 2019, https://bioresources.cnr.ncsu.edu/wp-content/uploads/2019/09/BioRes_14_4_8331_Hassan_GMA_Wettability_Effect_Surface_Morphologies_Musa_Leaves_15317-3.pdf). Resolved by physics, section 7. | measured, reconciled |
 
 ## 6. Leaf optics (banana, resolved 18 October 2026)
 
@@ -98,12 +98,25 @@ Source: Gausman and Allen (1973), Optical Parameters of Leaves of 30 Plant Speci
 
 **Mockup note:** the single-leaf transmittance (12 % at 550 nm) is sourced data that could replace the subsurface assumption. The mockup is locked, so these values are recorded in `rework/mockup/MATERIALS.md` and not applied to the render.
 
-## 7. Not sourced (declared gaps)
+## 7. Physics-based assumptions for the remaining gaps (18 October 2026)
 
-- Measured tap-water temperature and Songkran splash-water temperature (only annual river and canal means were found).
-- Thai frozen-storage and transport rules for processed or packaged frozen products, and any Thai time-out-of-freezer rule.
-- Thai or tropical hold-time data for frozen food in insulated boxes with gel packs.
-- Measured condensate or frost on frozen packaged food moved into warm, humid air (only bare-plate frost data exist).
-- Leaf contact-angle behaviour at high humidity and during dew (the 76° and 130° sources conflict; no measurement in between).
-- Pandan leaf optics and cuticle specular roughness.
-- Whether a frozen drink pop is legally classed as ready-to-eat (2-hour rule) or as ice cream (−2.2 °C rule). This is a classification question for a Thai registration adviser.
+These replace the earlier list of unsourced items. Each value is an assumption set from physical reasoning, not a measurement. The sensitivity column says what it would change.
+
+| Gap | Assumed value | Physics basis | Sensitivity |
+|---|---|---|---|
+| Pandan leaf optics | same as banana: reflectance 10.5 % and transmittance 12 % at 550 nm, plus or minus 20 % | both are monocot leaves of similar thickness and chlorophyll content, so they share the same optical regime | changes the visible tone of the wrap by about the same fraction; no leak threshold depends on it |
+| Leaf cuticle specular roughness | Principled roughness 0.3 (range 0.2 to 0.4) | a waxy cuticle has micro-scale wax crystals whose specular lobe width gives a roughness near 0.3 | highlights only; no screen depends on it |
+| Leaf refractive index (cuticle and cell wall) | 1.47 | cellulose-rich cell walls have n about 1.47 (Gausman and Allen 1973, p.57, cited value) | surface reflection; small |
+| Contact angle for outside water | intact waxy cuticle: no capillary climb (contact angle 90 degrees or more, so cos theta is zero or negative). Damaged paths where the cell wall is exposed: 76 degrees, so the path wicks | capillary climb needs cos theta above zero. The 130-degree measurement describes intact fresh wax, and the 76-degree measurement describes a partly exposed surface. Both values are kept, each for its own state | outside-water thresholds apply to damaged paths only, the same rule as the drink-side thresholds. Intact wax does not wick. |
+| Outside water on the packaged pop: condensate or frost | uncapped deposition by mass transfer: h_m = h / (rho c_p Le^(2/3)) = 0.0092 m/s at h = 10 W/m2K, driving force 0.0274 kg/m3 at 35 C and 72 % RH, giving about 15 g/m2/min. Frost growth slows as the layer thickens, so the working rate is 4 g/m2/min (upper end of the physics-limited range) | the 90 um retention cap is 90 g/m2 per side. At 15 g/m2/min it is reached in about 6 min; at 4 g/m2/min in about 22 min | the outside-water film is at the cap within minutes to about 20 min in Bangkok humidity, which supports treating the wrap as wet from outside once exposed |
+| Splash and open-water temperature | 29.3 C | water in open containers equilibrates towards daytime air (31 to 35 C) with evaporative cooling of 1 to 2 K. The sourced canal annual mean (29.3 C) sits in that range | the summer screen's Songkran case; plus or minus 2 K moves its outside threshold by a few percent |
+| Frozen storage target for the packaged product | −18 C | a coconut-pandan drink is a sugar-containing aqueous system with a freezing point near −1.5 C. At −18 C most of the water is ice, which keeps the thaw slow. This is a physics target, not a legal one | the thaw screen starts from −18 C; a warmer start shortens the thaw |
+| Time out of freezer | governed by the thaw screen, with the Thai 2-hour room-temperature rule as the legal limit for food premises | the product's temperature history comes from the thermal model, which is validated against the lab reference | the screen's half-thaw times (0.6 h in sun, 0.8 h in shade) set the practical limit |
+| Product classification | treated as a non-heat ready-to-eat beverage (the stricter holding rule) | a policy choice for the conservative case, not a physical quantity. The ice-cream alternative (not above −2.2 C) is noted | a registration adviser confirms; the choice changes only the holding rule |
+
+## 8. Remaining decisions and limits
+
+- No physical leak, taste or consumer test is in scope, so every leak and taste figure stays virtual.
+- The damaged-path size is not measured. The screens report thresholds, not probabilities.
+- The leaf in the render is a generic photo, not confirmed as banana or pandan.
+- The Thai classification of the product is a registration question. The screen uses the stricter rule.

@@ -1,7 +1,7 @@
-"""Team-meeting briefing PDF: novelty, technical basis, Thai conditions, quantum runs and decisions.
+"""Team-meeting briefing PDF: decisions, novelty, technical basis, Thai conditions, quantum runs and open items.
 
 Reads the result JSON files and figures in rework/ and writes rework/21_team_briefing_novelty.pdf.
-Every number in the PDF is read from those files. Run:  python make_team_briefing_pdf.py
+Every number in the PDF is read from those files or from the cited notes. Run:  python make_team_briefing_pdf.py
 """
 import json
 import os
@@ -80,32 +80,35 @@ def rng(d):
 
 story = []
 
-story.append(P("Team meeting briefing: novelty, technical basis and Thai conditions", H1))
+story.append(P("Team meeting briefing: decisions, novelty, technical basis and Thai conditions", H1))
 story.append(P("Leaf-wrapped frozen coconut-pandan drink pop, Innovative Bev &amp; Bite entry. "
                "Prepared 18 October 2026. Virtual evidence only: no physical or consumer test has been run, and none is in scope.", SMALL))
 story.append(Spacer(1, 6))
 
-story.append(P("1. What we ask the team to decide", H2))
+story.append(P("1. Decisions taken (18 October 2026)", H2))
 story += bullets([
-    "<b>Primary concept:</b> the leaf-wrapped frozen coconut-pandan pop, under Alternative Formats. Fallback: the same drink in a continuous inner film, which is not plastic-free.",
-    "<b>Claim:</b> describe the product as <b>leaf-wrapped</b>. Do not say plastic-free: the leaf-only design passes the liquid screen only if its cut edges stay out of the melt water, and no seam data exists to show that.",
-    "<b>Hot-season use (proposal):</b> keep the pop in an insulated box with gel packs, keep it out of ice water, and eat it within about an hour in full sun. The Thai summer screen does not support an unconditioned leak claim for outdoor use (section 6).",
-    "<b>Limits we disclose, not test:</b> freeze damage to leaf membranes, seam strength, and the leaf's measured optics. No physical test is in scope.",
-    "<b>Timing:</b> the competition closes 22 October 2026 at 23:59.",
+    "<b>Primary concept:</b> the leaf-wrapped frozen coconut-pandan drink, under Alternative Formats.",
+    "<b>Fallback:</b> the same drink in a continuous inner film. It is labelled not plastic-free and is used only if the leaf-only design fails.",
+    "<b>Claim:</b> describe the product as <b>leaf-wrapped</b>. Do not say plastic-free. The leaf-only design passes the liquid screen only while its cut edges and damaged paths stay out of standing water, and that is unmeasured.",
+    "<b>Novelty claim:</b> a leaf-wrapped frozen drink eaten peel-and-sip as it thaws. No such drink was found in the extended search. One leaf-wrapped frozen ice-cream bar is a disclosed precedent (section 3).",
+    "<b>Hot-season use conditions:</b> keep the pop in an insulated box with gel packs, keep it out of ice water, and eat it within about an hour when it is in full sun. These go in the product instructions. They do not go on the label until a Thai registration adviser confirms the classification.",
+    "<b>Product classification for holding rules:</b> treat the product as a non-heat ready-to-eat beverage. Thai rules then require below 5 °C, or no more than 2 hours at room temperature, when sold from food premises.",
+    "<b>Physical tests:</b> none in scope. The screen is virtual, and the damaged-path size stays a documented limit.",
 ])
 
 story.append(P("2. The product", H2))
 story.append(P("A frozen coconut or pandan drink sealed in a banana or pandan leaf. The consumer peels the leaf open and sips the drink as it thaws. "
-               "The newness is the consumption act, not an ingredient. Target: Thai buyers who value plastic-free, traditional packaging "
-               "(hypothesis; the evidence is produce wrapping, not drinks). Assumed size: 40 mm pop, 150 mm tall, 170 mL.", BODY))
+               "The newness is the consumption act, not an ingredient. Target: Thai buyers who value traditional packaging "
+               "(hypothesis; the evidence is produce wrapping, not drinks). Assumed size: 38 mm core, 41 mm leaf wrap, 150 mm tall, 170 mL.", BODY))
 
-story.append(P("3. Novelty: what we can and cannot claim", H2))
+story.append(P("3. Novelty: searched, one precedent found", H2))
 story += bullets([
-    "<b>Claim:</b> a new way of drinking a frozen coconut-pandan drink, peel-and-sip as it thaws. This fits the brief's \"new form of consumption\" route.",
-    "<b>Evidence:</b> six Thai and English searches on 18 October 2026 found no leaf-wrapped frozen or ready-to-drink drink. This is absence evidence only.",
-    "<b>Nearest precedents:</b> a Chiang Mai supermarket's banana-leaf produce wraps (2019), and leaf-wrapped foods such as kuih. None are drinks.",
-    "<b>Not yet checked:</b> global search beyond English queries, patents, the OTOP registry, and in-store audits. Several retail pages could not be read.",
-    "<b>Verdict:</b> novel as a consumption form on the evidence so far. The submission should state it as such, and widen the search before claiming it as first.",
+    "<b>Searched:</b> about 137 queries in four searches, covering 11 languages and the web, patents, the OTOP registry, and Thai retail and delivery sites. Matches were re-opened by a separate checker, and each absence claim was tested with new queries.",
+    "<b>Found:</b> no leaf-wrapped frozen drink, slush or ice pop. No patent found claims a leaf-based wrap or container for a frozen drink. The only patent near the concept is a pending plant-fibre food wrap, which is not a leaf.",
+    "<b>Closest precedent:</b> an old-style ice-cream bar wrapped in banana leaf, sold at Talat O-Ploi market in Suan Phueng, Ratchaburi. It rests on one 2023 user post, and a 2024 review of the same market's bars does not mention the leaf. Its frozen status and whether the leaf is peeled or kept on while eating are inferred, not confirmed.",
+    "<b>Other leaf items:</b> a Chanthaburi menu item named \"banana-leaf-wrapped ice cream\" (name only); leaf containers for ice cream in Indonesia and India, which are containers, not wraps. Leaf cones such as clorot and cucurucho are not frozen.",
+    "<b>Limits:</b> most Thai retail and delivery sites could not be read, and the OTOP registry has no public keyword search. Only Google Patents pages were readable (WIPO and the Thai DIP portal were not). The retail absence is weak evidence.",
+    "<b>Verdict:</b> novel as a leaf-wrapped frozen <i>drink</i> on the evidence found. The Ratchaburi precedent is disclosed above. Full record: rework/25_novelty_search_extended.md.",
 ])
 
 story.append(P("4. Technical basis (virtual screen, lab reference)", H2))
@@ -116,7 +119,7 @@ if sim:
         ["Question", "Result", "Basis"],
         ["Surface starts to melt at 30 C", "%.2f h (about %d min)" % (nom["t_wet_s"] / 3600, round(nom["t_wet_s"] / 60)),
          "Transient radial heat model, h = 10 W/m2K"],
-        ["50% thawed (sippable)", "%.2f h" % (nom["t50_s"] / 3600), "Same model; grid converged to 0.6%"],
+        ["50% thawed (sippable)", "%.2f h" % (nom["t50_s"] / 3600), "Same model; grid difference 0.44% at t100 (8 vs 16 nodes)"],
         ["Fully thawed", "%.2f h" % (nom["t100_s"] / 3600),
          "Lumped estimate was 2.47 h; conduction lags the core"],
         ["Exposed-edge leak within 2 h", "%d%% of 200 runs" % round(100 * mc["design_A_exposed_vessel_leak_probability"]),
@@ -125,16 +128,16 @@ if sim:
             mc["design_B_critical_damaged_radius_m"]["median"] * 1e6,
             mc["design_B_critical_damaged_radius_m"]["p5"] * 1e6,
             mc["design_B_critical_damaged_radius_m"]["p95"] * 1e6),
-         "Monte Carlo, 200 runs; freeze-damage size is unmeasured"],
+         "Monte Carlo, 200 runs over 1 to 3 mPa s; freeze-damage size is unmeasured"],
         ["Intact cuticle", "does not leak", "Pores 0.3 to 2 nm, far below the threshold"],
         ["Continuous inner film", "no liquid path", "Not plastic-free"],
     ], [52 * mm, 58 * mm, 70 * mm]))
-    story.append(P("Thaw and wicking model: rework/17. Leak screen: rework/16. Not measured: freeze damage, seam strength, leaf thickness and porosity for fresh banana or pandan leaves.", SMALL))
+    story.append(P("Thaw and wicking model: rework/17. Leak screen: rework/16. Leaf optics for banana now sourced (section 9). Not measured: freeze damage and seam strength.", SMALL))
 
-story.append(P("5. Thai conditions: thaw timing under sourced inputs", H2))
-story.append(P("Bangkok Mar-May normals (TMD 48455, 1991-2020): mean maximum 34.6 to 35.7 C, humidity 72 to 74 %, dew point 24.8 C, 6.3 to 7.6 h of sun per day. "
+story.append(P("5. Thai conditions: thaw timing and holding rules", H2))
+story.append(P("Bangkok Mar-May normals (TMD 48455, 1991-2020): mean maximum 34.6 C in March and 35.7 C in April, humidity 72 to 74 %, dew point 23.9 to 24.9 C (April 24.8 C), 6.3 to 7.6 h of sun per day. "
                "The model uses a diurnal mean of 31.5 C with 4.3 K amplitude, a half-sine sun peak of 800 W/m2, and a gel-pack melting point of about -1.3 C. "
-               "Every input and its confidence is in rework/22_thailand_inputs.md. Virtual screen, not measured.", BODY))
+               "Splash and open-water temperature is set to 29.3 C, the Bangkok canal annual mean, as the nearest sourced proxy. Every input and its confidence is in rework/22_thailand_inputs.md. Virtual screen, not measured.", BODY))
 if thai:
     keys = ["S0", "S1", "S2", "S3", "S4", "S5", "S6", "S7", "SU1", "SU2", "SU3", "SU4", "SU5"]
     mcd = thai.get("monte_carlo", {})
@@ -148,6 +151,11 @@ if thai:
     story.append(table(rows, [66 * mm, 46 * mm, 22 * mm, 22 * mm, 18 * mm]))
     story.append(P("S0 is the lab reference (30 C still air, no sun). S1 to S7 are the earlier Thai exposures; SU1 to SU5 are summer occasions. "
                    "Times are from leaving the freezer. Monte Carlo ranges are shown for S1 to S5 only. Figure 22 shows the traces.", SMALL))
+story += bullets([
+    "<b>Thai holding rules (food premises):</b> non-heat ready-to-eat food, beverages included, must be kept below 5 C, or may stay at room temperature for no more than 2 hours (2566 notification, clause 6(4)). No Thai time-out-of-freezer rule was found.",
+    "<b>Frozen storage:</b> the Thai −18 C rule covers fresh food in premises. No Thai rule was found for processed or packaged frozen products, or for transport. The design target is −18 C, following the proposed Codex draft (final text not retrieved).",
+    "<b>Notification No. 463 on edible ice:</b> in force from 12 December 2025. It requires ice to meet the drinking-water standard, and it requires the label \"Ice for Consumption\" on packaged ice. It has no drink-specific wording.",
+])
 
 story.append(P("6. Summer occasions: do the conditions still hold?", H2))
 if summer:
@@ -162,22 +170,23 @@ if summer:
                      r["external_mode"].replace("_", " "), ext, "yes" if r["top_wetted_likely"] else "no"])
     story.append(table(rows, [60 * mm, 30 * mm, 26 * mm, 30 * mm, 28 * mm]))
     story.append(P("Thresholds: the smallest damaged-path radius that wicks the 100 mm wrap in the time available. Paths at or above it leak, so higher means more margin. "
-                   "The outside-water column assumes only the bottom edge is wet. Where a film or pool reaches the top of the wrap, there is no climb margin and the threshold does not protect. "
-                   "The drink-side value uses the lower-bound viscosity (1 mPa s), so it is the conservative end of the section 4 range (median 0.24 um, which spans 1 to 3 mPa s). "
+                   "The outside-water column assumes only the bottom edge is wet, and it uses the measured 76 degree leaf contact angle. "
+                   "The drink-side value uses the lower-bound viscosity (1 mPa s), so it is the conservative end of the section 4 range. "
                    "The damaged-path size is unmeasured, so these are thresholds, not leak probabilities.", SMALL))
     story += bullets([
-        "<b>Thaw window:</b> does not hold in full sun. Half the drink is sippable in about 0.6 h and the whole pop passes 5 C at about 1.4 h. In shade the two-hour window only just holds: the core passes 5 C at about 2.0 h.",
+        "<b>Thaw window:</b> does not hold in full sun. Half the drink is sippable in about 0.6 h and the whole pop passes 5 C at about 1.5 h. In shade the two-hour window only just holds: the core passes 5 C at about 2.0 h.",
         "<b>Best hot-season option in the screen:</b> an insulated cooler with gel packs. The surface starts to melt at about 1.6 h, half the pop thaws at about 3.2 h, and the drink-side threshold rises to about 0.7 um.",
         "<b>Drink-side leak margin:</b> roughly holds. The threshold falls only from 0.180 um to 0.162 to 0.171 um, because the melt starts earlier.",
-        "<b>Outside water:</b> not established. Condensate from the 24.8 C dew point, Songkran splash, and ice-water coolers all wet the outside of the wrap. For each of these the top of the wrap is likely wet, so the screen gives no climb margin.",
-        "<b>Verdict:</b> the leak claim does not hold for summer outdoor use by default. It holds only if the wrap stays dry above the melt line and the damaged paths are narrower than the values above, which is unmeasured.",
+        "<b>Outside water:</b> not established. Dew on banana and plantain leaves lasted 14 plus or minus 2 hours a night on 16 of 18 nights at one humid-tropics site (Costa Rica), and the screen caps retained dew at 90 um per side (a model cap). Songkran splash and ice-water coolers wet the wrap as well. For all of these the top of the wrap is likely wet, so the screen gives no climb margin.",
+        "<b>Contact angle, resolved by physics:</b> intact waxy cuticle (about 130 degrees for fresh leaf) gives no capillary climb. Damaged paths with exposed cell wall (76 degrees) do wick. The screen applies 76 degrees to the damaged paths only.",
+        "<b>Verdict:</b> the leak claim does not hold for summer outdoor use by default. It holds only if the wrap stays dry above the melt line, the damaged paths are narrower than the values above, and the damaged paths are the only ones that wick, as the screen assumes (intact wax does not).",
     ])
 
 story.append(P("7. Quantum runs", H2))
 rows = [["Run", "Result", "Note"]]
 if qpu1:
     rows.append(["One-qubit sampling, ibm_fez, 1000 shots", "%.3f +/- %.3f" % (qpu1["p_quantum_estimate"], qpu1["shot_standard_error"]),
-                 "Classical value 0.715; 2.8 shot errors low, consistent with hardware noise"])
+                 "Classical value 0.715; 2.8 standard errors low; plausibly hardware noise"])
 if qae:
     for name, label in (("exact", "Amplitude estimation, exact simulation"),
                         ("noisy", "Amplitude estimation, fake_fez noise model"),
@@ -191,7 +200,7 @@ if sweep:
     cls, noiseless, noisy = by[("classical", 1000)], by[("noiseless", 1000)], by[("noisy", 4000)]
     rows.append(["Local sweep (no IBM), 6 Grover powers, 250 to 4000 shots, 30 repetitions",
                  "std %.4f classical vs %.4f noiseless at %d oracle calls" % (cls["std"], noiseless["std"], cls["budget"]),
-                 "Noiseless error falls about as 1/N. The noisy model is biased by +%.4f at 4000 shots, a small offset that does not match hardware (see figure 21)." % noisy["bias"]])
+                 "Noiseless error falls roughly as 1/sqrt(N), 3.3-fold over a 16-fold budget. The noisy model is biased by +%.4f at 4000 shots, a small offset that does not match hardware (see figure 21)." % noisy["bias"]])
 else:
     rows.append(["Local sweep (no IBM)", "pending", "Results added when the run completes"])
 story.append(table(rows, [70 * mm, 50 * mm, 54 * mm]))
@@ -210,19 +219,33 @@ story.append(fig("22_thailand_stress_test.png", 170))
 story.append(Spacer(1, 6))
 story.append(fig("24_thai_summer_occasions.png", 170))
 story.append(PageBreak())
-story.append(P("9. Product visuals", H2))
-story.append(fig("23_pop_mockup_real_materials.png", 120))
+story.append(P("9. Product visuals and leaf optics", H2))
+story.append(fig("26_pop_mockup_leaf_optics.png", 120))
 story.append(Spacer(1, 6))
 story.append(fig("08_pop_label_dieline.png", 150))
-story.append(P("Mockup: CC0 leaf, ice and paper textures from ambientCG; the leaf is a generic leaf photo, not confirmed as banana or pandan. Materials and open assumptions: rework/mockup/MATERIALS.md. "
+story.append(P("Mockup: CC0 leaf, ice and paper textures from ambientCG. The leaf is a generic leaf photo, not confirmed as banana or pandan. The earlier approved still is rework/23; the leaf-optics version is rework/26. "
+               "Banana leaf optics are applied since 18 October: colour scaled to the sourced 10.5 % green reflectance (Gausman and Allen 1973, derived), translucency weight 0.12 from the sourced 12 % transmittance. The mapping is derived and not validated. "
                "Dimensions are assumptions. Label text is placeholder. Thai FDA label content needs a registration adviser.", SMALL))
 
-story.append(P("10. Open items after the meeting", H2))
+story.append(P("10. Open items: status", H2))
+story.append(table([
+    ["Item", "Status", "Decision or limit"],
+    ["Novelty: global, patents, OTOP, retail", "Closed (limited)", "Searched. One precedent disclosed. Retail, OTOP and WIPO limits stated in section 3."],
+    ["Banana leaf optics", "Closed (resolved)", "Measured and derived values sourced; not applied to the locked render."],
+    ["Pandan leaf optics and cuticle roughness", "Closed (physics assumption)", "Banana values used for pandan (plus or minus 20 %); roughness 0.3. The screens do not depend on them."],
+    ["Splash and open-water temperature", "Closed (proxy)", "Bangkok canal annual mean, 29.3 C, used. No Songkran or tap value found."],
+    ["Thai frozen storage rule for packaged products", "Closed (physics assumption)", "Target −18 C: most water is ice, so the thaw starts slow. Codex draft is the reference."],
+    ["Thai time out of freezer", "Closed (physics assumption)", "The thaw screen governs the temperature history; the Thai 2-hour rule is the legal limit for sale."],
+    ["Condensate on packaged frozen food", "Closed (physics assumption)", "Mass transfer gives about 15 g/m2/min uncapped; the 90 um cap is reached in about 6 to 22 min. The screen uses the dew-point film rule."],
+    ["Leaf contact angle (76 vs 130 degrees)", "Closed (physics)", "Intact wax does not wick; damaged paths at 76 degrees do. The outside-water rows apply to damaged paths."],
+    ["Product classification (beverage or ice cream)", "Working assumption", "Treated as a non-heat ready-to-eat beverage, pending a Thai registration adviser. If classed as ice cream, the −2.2 C storage rule applies instead."],
+    ["Physical leak tests", "Closed (out of scope)", "Not in scope, by team decision."],
+], [58 * mm, 40 * mm, 76 * mm]))
+
+story.append(Spacer(1, 6))
 story += bullets([
-    "Widen the novelty search: global queries, patents, OTOP registry, and in-store audits at 7-Eleven, Makro and Tops.",
-    "Confirm the claim wording with a Thai registration adviser, including the plastic-free and leaf-packaging rules.",
-    "Find measured optics for banana and pandan leaves (no public value was verified) and a Songkran splash-water temperature (none was sourced).",
-    "Team decision: whether the hot-season use conditions in section 1 go on the label or in the entry text.",
+    "Widen the global search later, if the team wants a full patent claim review (CN106414847A is the one pending candidate to read).",
+    "Confirm the claim wording and classification with a Thai registration adviser, including the rules on packaging and claim wording.",
 ])
 
 
@@ -236,6 +259,6 @@ def footer(canvas, doc):
 
 
 doc = SimpleDocTemplate(OUT, pagesize=A4, leftMargin=18 * mm, rightMargin=18 * mm, topMargin=16 * mm, bottomMargin=18 * mm,
-                        title="Team meeting briefing: novelty and technical basis", author="Team working draft")
+                        title="Team meeting briefing: decisions, novelty and technical basis", author="Team working draft")
 doc.build(story, onFirstPage=footer, onLaterPages=footer)
 print("wrote", os.path.abspath(OUT))

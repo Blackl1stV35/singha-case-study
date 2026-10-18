@@ -1,113 +1,43 @@
-# Innovative Bev & Bite: final conclusion (slide draft, 18 October 2026)
+# Innovative Bev & Bite: team conclusion (18 October 2026)
 
-Status: draft for the team. Nothing here is validated by a physical, taste or consumer test. Submission closes 22 October 2026 at 23:59.
+Status: team conclusion. All evidence is virtual: no physical, taste or consumer test is in scope. Submission-facing text is held separately and is pended (see rework/27).
 
-## Readiness verdict
+## Decisions
 
-- **Ready:** the concept, the evidence map, the test plan and the honest limits. This can go into the idea submission now, with each claim labelled by its evidence status.
-- **Not ready:** any claim that the product works. There is no bench test, taste test, consumer test or unit cost for any finalist. Novelty rests on search absence only.
+- **Primary concept:** a leaf-wrapped frozen coconut-pandan drink, under Alternative Formats. The consumer peels the leaf and sips as it thaws.
+- **Claim:** "leaf-wrapped". Not "plastic-free".
+- **Novelty claim:** a leaf-wrapped frozen drink. No such drink was found in the extended search. A leaf-wrapped frozen ice-cream bar in Ratchaburi is a disclosed precedent: one 2023 user post shows it; its sale and frozen status are unconfirmed (rework/25).
+- **Fallback:** the same drink in a continuous inner film, labelled not plastic-free. It is held as a documented fallback. Nothing in the virtual screens calls for it.
+- **Hot-season use:** keep in an insulated box with gel packs, keep out of ice water, and eat within about an hour in full sun. These go in the product instructions. They go on the label only after a Thai registration check.
+- **Holding rule:** the product is treated as a non-heat ready-to-eat beverage (working assumption, pending registration check). Thai food-premises rules then require below 5 °C, or no more than 2 hours at room temperature.
+- **Ranking:** A (above) is primary. B (midlife isoflavone soy drink) is second-ranked and conditional on a regulator's written confirmation. C (the reframed non-alcoholic Thai-herb drink) is dropped, because its viability and unit cost are both open.
 
-## Conclusion (speaking version, about 30 seconds)
+## Virtual evidence
 
-We propose a leaf-wrapped frozen coconut-pandan drink pop. It is a new way to drink: peel the leaf and sip as it thaws. It targets Thai buyers who want plastic-free packaging. It is untested. Before we claim it works, we must show that it does not leak in a two-hour thaw. If it leaks without an inner film, we change the claim. If it does not leak, the concept goes forward with a fallback.
-
-## Slide 1: the brief
-
-- Develop a food or beverage product with a new ingredient or raw material, a production innovation, or a new form of consumption. It should never have existed before, and it should change the food and beverage industry.
-- The form expects three components: Ingredients & Nutrition, Alternative Formats, and New Trend-Driven Target. Our reading is that one component is enough (team decision, 18 October).
-- Teams of 2 to 4 members. The form publishes no judging criteria or submission format.
-- Our assumption: the home market is Thailand. Novelty is tested on Thai shelves and online stores.
-
-Source: [rework/00](00_case_brief_from_screenshot.md)
-
-## Slide 2: what we did
-
-- 22 ideas generated from zero, one component each, scored by one judge on novelty (Thailand only), fit, feasibility and consumer case: [rework/01](01_ideas_from_zero.md).
-- Desk kill tests on the three finalists: [rework/02](02_desk_kill_tests.md).
-- Desk price audit across five channels, with browser reads after the user cleared two checks: [rework/04](04_price_audit.md).
-
-## Slide 3: the answer
-
-| Rank | Finalist | Component | Score (our rubric, out of 8) | Verdict |
-|---|---|---|---|---|
-| Primary | A. Leaf-wrapped frozen coconut-pandan pop | Alternative Formats | 6 (novelty 2, fit 2, feasibility 1, consumer 1) | Go to the leak test |
-| Fallback | B. Midlife isoflavone soy drink | New Trend-Driven Target | 6 (2, 2, 1, 1) | Only if the regulator confirms in writing that hot flushes or sleep are not a "disease" for claim purposes |
-| Dropped for now | C. Non-alcoholic Thai-herb RTD, reframed for price-led switchers | New Trend-Driven Target | 4 proposed (novelty 1, fit 1, feasibility 1, consumer 1) | Thai prices do not support the 50 to 70 THB test point, and unit cost is unknown |
-
-The scores for A and B are unchanged from the screen. The score for C is my proposal. The reframe removed its trend-led fit, and the price evidence removed its feasibility.
-
-## Slide 4: the product (A)
-
-- **What it is:** a frozen coconut or pandan drink sealed in a banana or pandan leaf. Peel it open and sip while it thaws.
-- **Where the newness is:** the consumption act, not an ingredient. The brief allows a new form of consumption, so this is the claim we test.
-- **Target:** Thai buyers who value plastic-free, traditional packaging.
-- **Novelty evidence:** no leaf-wrapped frozen drink found after six Thai and English searches on 18 October 2026. The closest product is Rimping supermarket's banana-leaf produce wrap in Chiang Mai (2019). This is absence only, and global search was not run beyond English queries.
-
-## Slide 5: evidence status
-
-| Check | Status | Where |
+| Question | Result | Basis |
 |---|---|---|
-| Novelty (six searches) | None found, absence only | [rework/01](01_ideas_from_zero.md) |
-| Thai food-safety rule on leaf packaging | Unresolved. The Notification 92 prohibition list could not be read | [rework/02](02_desk_kill_tests.md) |
-| Existing leaf-wrapped frozen drink in Thailand | Unresolved. Audit incomplete | [rework/02](02_desk_kill_tests.md) |
-| "Plastic-free" claim rules | Unresolved. The general false-advertising rule (Food Act s.40) applies | [rework/02](02_desk_kill_tests.md) |
-| Two-hour thaw leak test at 30 °C | Not run | Gating test |
-| Taste and cold-chain cost | Not run | Not started |
-| Consumer test | Not run | Not started |
-| Unit cost | Not quoted | [rework/05](05_team_note_c_price_ladder.md) (the cost questions apply to any finalist) |
+| Novelty | no leaf-wrapped frozen drink found; one unconfirmed leaf-wrapped ice-cream bar | extended search: about 137 queries, 11 languages, patents (Google Patents only), OTOP, Thai retail (partly blocked) |
+| Thaw, lab (30 °C still air) | surface melts at 13 min; half thawed at 1.5 h; fully thawed at 3.3 h | radial thermal model (rework/17) |
+| Thaw, street stall in sun | half thawed at about 38 min (0.63 h); whole pop above 5 °C at about 1.5 h | Thai screen, sourced Bangkok inputs (rework/22) |
+| Thaw, street stall in shade | half thawed at about 50 min (0.84 h); above 5 °C at about 2.0 h | same |
+| Thaw, insulated cooler with gel packs (festival) | surface melts at about 1.6 h; half thawed at about 3.2 h | summer screen (rework/24) |
+| Leak, drink side (sealed edges) | damaged-path threshold, Monte Carlo over 1 to 3 mPa s: median 0.24 µm, 5 to 95 % range 0.14 to 0.45 µm. Lower-viscosity case in the summer screen: 0.16 to 0.17 µm. Exposed edges leak in all runs. Damage size is unmeasured | leak screen (rework/16, rework/17) and summer screen |
+| Leak, outside water | only damaged paths wick: intact wax (about 130 degrees) does not, damaged exposed cell wall (76 degrees) does. Dew film reaches its 90 µm cap in about 6 to 22 min in Bangkok humidity. No margin where the film reaches the top of the wrap | physics assumptions (rework/22, section 7) and summer screen |
+| Quantum runs | method check only. Hardware noise dominates the deeper circuits, so no precision gain is claimed | rework/18, rework/20, rework/21 |
+| Thai holding and ice rules | non-heat ready-to-eat beverages: below 5 °C, or 2 hours at room temperature in food premises. No Thai rule for processed frozen products. Ice notification 463 in force, no drink wording | Thai gazette and FDA texts (rework/22, section 3) |
 
-## Slide 6: the gating test (pended by the user, 18 October; raise on "pending decisions")
+## Physics assumptions set in place of the open gaps (rework/22, section 7)
 
-- **Leak test:** freeze 30 pops, 15 in a leaf-only wrap and 15 in a leaf wrap with a food-grade inner film. Thaw each group at 30 °C for two hours and log leaks.
-- **Blind intercept:** 20 people in a Bangkok office or market. Peel-and-sip against a cup, plus a purchase-intent question.
-- **Kill rule:** if the leaf-only wrap leaks and the inner film needed to stop leaks removes the plastic-free reason to buy, drop the concept.
-- **Time and cost:** one to two days with a freezer and a room thermometer. This is the only test that can change the verdict before submission.
+- **Pandan leaf optics:** the same as banana, plus or minus 20 %.
+- **Leaf cuticle roughness:** 0.3 (range 0.2 to 0.4), from the waxy cuticle's micro-scale structure.
+- **Outside-water wetting:** capillary climb needs cos theta above zero. Intact wax does not wick, and the damaged paths do.
+- **Splash and open-water temperature:** 29.3 °C, within the range that open water reaches under daytime air with evaporative cooling.
+- **Frozen storage target:** −18 °C, because most of the water is ice at that temperature.
+- **Time out of freezer:** governed by the thaw screen, with the Thai 2-hour rule as the legal limit for sale.
 
-## Slide 7: risks
+## Limits that remain
 
-- **Claim accuracy:** if an inner film is needed, "plastic-free" is not accurate. Use "leaf-wrapped" instead.
-- **Leaf supply and food contact:** not verified. Leaf safety with drinks is unknown.
-- **Cold chain:** frozen distribution cost and melt time in Thai heat are unknown.
-- **Consumer evidence:** produce-only, not drinks.
-
-## Slide 8: honest limits
-
-- Novelty is an absence search: six searches, Thai and English. It is not proof.
-- No test of any kind has run on any finalist.
-- The price audit used online listings and partial browser reads. Single-can shelf prices at 7-Eleven and Makro are open.
-- The judging criteria are not published. Our rubric is ours.
-- The team's workspace corpus and the earlier export study were not used.
-
-## Slide 9: decisions for the team
-
-1. Confirm the primary concept (A) and the fallback (B). Decide whether C is dropped.
-2. Approve the leak test and the intercept for 19 to 21 October.
-3. Agree the claim wording: "plastic-free" only if the leak test passes without an inner film.
-4. Before submitting, remove team identity from the repository and its commit metadata. The repository is on GitHub under a personal account.
-
-## Appendix: elevator pitch for the primary concept (A)
-
-**Tagline:** Peel it, sip it, as it thaws.
-
-**30-second version:**
-Thai drinks come in cans and bottles. Ours comes in a leaf. It is a frozen coconut-pandan drink, sealed in a banana or pandan leaf. You peel it open and sip it as it thaws, so the drink turns from ice to liquid in your hand. We aim it at Thai buyers who want plastic-free, traditional packaging. We found no leaf-wrapped frozen drink in six Thai and English searches, which is not proof it does not exist. The concept is not tested yet. Our first test checks whether the leaf leaks during a two-hour thaw. If it leaks, we add a film and drop the plastic-free claim.
-
-**End to end, for a longer slot:**
-- **Insight (hypothesis):** plastic-free buyers may pay for a wrap that reads local. Evidence so far is produce, not drinks (Rimping supermarket, Chiang Mai, 2019).
-- **Product:** frozen coconut or pandan drink in a leaf wrap, peel-and-sip while thawing.
-- **What is new:** the way you drink it, not the ingredients. No leaf-wrapped frozen drink found (absence search only).
-- **Target:** Thai buyers who value plastic-free, traditional packaging.
-- **Make:** a co-packer or small community maker hand-wraps, with frozen distribution. Unverified; cost not quoted.
-- **Proof so far:** none. The leak test and the intercept are pended.
-- **Ask:** feedback on whether a new drinking ritual counts as innovation under Alternative Formats.
-
-**If asked:**
-- *What is actually new?* The consumption act. The ingredients are standard coconut and pandan.
-- *Does the leaf leak?* Not tested yet. That test is pended.
-- *Is it really plastic-free?* Only if the leaf holds without a film. Otherwise we change the claim.
-- *What does it cost?* Not set. We need a co-packer cost quote first.
-
-## Not in this draft
-
-- The final choice of the price ladder (see [rework/05](05_team_note_c_price_ladder.md), not sent).
-- Any claim of consumer demand for leaf-wrapped drinks.
+- No physical leak, taste or consumer test is in scope. Every leak and taste figure is virtual.
+- The damaged-path size is not measured. The screens report thresholds, not probabilities.
+- The leaf in the render is a generic photo, not confirmed as banana or pandan.
+- Whether the product is legally a beverage or an ice cream is a registration question. The screen uses the stricter beverage rule.

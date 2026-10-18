@@ -288,7 +288,14 @@ def build_front(tok, C, name):
     fx = round(MARGIN + (880 - bbox_w) / 2)
     fy = round(260 + (600 - bbox_h) / 2) - oy
     d.ellipse([fx + 40, fy + e - 10, fx + e + ox + 40, fy + e + 56], fill=C["off-white-deep"])
-    draw_cube(d, fx, fy, e, C)
+    if EMBLEM_PATH.exists():
+        # Lion emblem as the main hero of the front panel (user direction, 18 October 2026).
+        hero = Image.open(EMBLEM_PATH).convert("RGBA")
+        hh = 520
+        hw = round(hero.width * hh / hero.height)
+        p.img.paste(hero.resize((hw, hh), Image.LANCZOS), (round((MARGIN + 1000) / 2 - hw / 2), 560 - hh // 2), hero.resize((hw, hh), Image.LANCZOS))
+    else:
+        draw_cube(d, fx, fy, e, C)
 
     x0, max_w = 1080, 2280 - 1080
     for s1 in (104, 96, 88, 80, 72):

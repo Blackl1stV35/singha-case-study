@@ -252,11 +252,12 @@ def build_front(tok, C, name):
     d = p.draw
     # Top band: name line.
     band_top = 220
-    d.rectangle([0, 0, W, band_top], fill=C["lime"])
-    name_line(p, name, band_top, C["ink"])
+    d.rectangle([0, 0, W, band_top], fill=C["ink"])
+    d.rectangle([0, band_top, W, band_top + 10], fill=C["lime"])
+    name_line(p, name, band_top, C["off-white"])
 
     # Middle band: cube on a lime-pale panel, instruction copy on the right.
-    d.rounded_rectangle([MARGIN, 260, 1000, 860], radius=40, fill=C["lime-pale"])
+    d.rounded_rectangle([MARGIN, 260, 1000, 860], radius=40, fill=C["off-white-deep"])
     e = 330
     ox, oy = round(0.42 * e), round(-0.30 * e)
     bbox_w, bbox_h = e + ox, e - oy
@@ -320,8 +321,9 @@ def build_back(tok, C, name):
     p = Panel(C["off-white"])
     d = p.draw
     band_top = 220
-    d.rectangle([0, 0, W, band_top], fill=C["lime"])
-    name_line(p, name, band_top, C["ink"])
+    d.rectangle([0, 0, W, band_top], fill=C["ink"])
+    d.rectangle([0, band_top, W, band_top + 10], fill=C["lime"])
+    name_line(p, name, band_top, C["off-white"])
 
     top_y = 290
     col_w = 1020

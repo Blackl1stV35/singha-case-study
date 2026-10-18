@@ -285,7 +285,7 @@ function drawNameLine(ctx, baseline) {
   labelCheck.nameLineMm = (tW + yW) / PX_PER_MM;
   labelCheck.nameLineFitsAtSpec = !shrunk && (tW + yW) <= LIVE_W;
   labelCheck.nameLineSizeMm = { trade: Math.round(tSize * 100) / 100, type: Math.round(ySize * 100) / 100 };
-  ctx.fillStyle = C.ink;
+  ctx.fillStyle = C['off-white'];
   ctx.font = fontFor(T.weight, tSize);
   ctx.fillText(tradeName, MARGIN, baseline);
   ctx.font = fontFor(Y.weight, ySize);
@@ -389,11 +389,13 @@ function drawFront(ctx) {
   ctx.textAlign = 'left';
   ctx.fillStyle = C['off-white'];
   ctx.fillRect(0, 0, LABEL_W, LABEL_H);
-  ctx.fillStyle = C.lime;                     // top name band, 8 mm
+  ctx.fillStyle = C.ink;                      // top name band, deep ink (not the can's lime field)
   ctx.fillRect(0, 0, LABEL_W, 80);
   drawNameLine(ctx, 54);
-  ctx.fillStyle = C['lime-pale'];             // middle band, cube artwork
+  ctx.fillStyle = C['off-white-deep'];        // middle band, cube artwork
   ctx.fillRect(0, 80, LABEL_W, 400);
+  ctx.fillStyle = C.lime;                     // thin accent rule under the name band
+  ctx.fillRect(0, 80, LABEL_W, 10);
   drawIsoCube(ctx, LABEL_W / 2, 280, 100);
   ctx.fillStyle = C.ink;
   ctx.fillRect(0, 480, LABEL_W, 4);
@@ -412,9 +414,11 @@ function drawBack(ctx) {
   ctx.textAlign = 'left';
   ctx.fillStyle = C['off-white'];
   ctx.fillRect(0, 0, LABEL_W, LABEL_H);
-  ctx.fillStyle = C.lime;
-  ctx.fillRect(0, 0, LABEL_W, 80);
   ctx.fillStyle = C.ink;
+  ctx.fillRect(0, 0, LABEL_W, 80);
+  ctx.fillStyle = C.lime;
+  ctx.fillRect(0, 80, LABEL_W, 10);
+  ctx.fillStyle = C['off-white'];
   ctx.font = fontFor(TOKENS.typeMm.tradeName.weight, TOKENS.typeMm.tradeName.size);
   ctx.fillText(TOKENS.copyFront[0].split(' · ')[0], MARGIN, 54);
   let y = 136;

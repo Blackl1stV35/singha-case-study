@@ -304,13 +304,15 @@ def make_chart(scen, mc):
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
 
-    fig, axes = plt.subplots(1, 2, figsize=(15, 5.4))
+    fig, axes = plt.subplots(1, 2, figsize=(15, 5.8))
     ax = axes[0]
-    for key, label, _ in SCENARIOS:
-        if key == "S0":
-            continue
+    plotted = [key for key, _, _ in SCENARIOS if key != "S0"]
+    cmap = plt.get_cmap("tab20")
+    for i, key in enumerate(plotted):
         tr = scen[key]["trace"]
-        ax.plot(np.array(tr["t_s"]) / 3600.0, tr["T_surface_C"], lw=1.4, label="%s %s" % (key, label))
+        label = [lab for k, lab, _ in SCENARIOS if k == key][0]
+        ax.plot(np.array(tr["t_s"]) / 3600.0, tr["T_surface_C"], lw=1.4, color=cmap(i % 20),
+                label="%s %s" % (key, label))
     tr4 = scen["S4"]["trace"]
     ax.plot(np.array(tr4["t_s"]) / 3600.0, tr4["T_box_C"], "k--", lw=1, label="S4 box air")
     ax.axhline(0.0, color="grey", lw=0.8, ls=":")
@@ -340,7 +342,7 @@ def make_chart(scen, mc):
     ax.set_yticklabels(labels, fontsize=7)
     ax.set_xlabel("time (h); thick bars = 5 to 95 percent of Monte Carlo draws")
     ax.set_title("When the pop starts to melt and when the core passes 5 C")
-    ax.legend(fontsize=8, loc="lower right")
+    ax.legend(fontsize=8, loc="upper center", bbox_to_anchor=(0.45, -0.14), ncol=2, frameon=False)
     fig.suptitle("Thailand stress test, frozen leaf-wrapped pop (virtual screen, not measured)", fontsize=11)
     fig.tight_layout(rect=[0, 0, 1, 0.94])
     fig.savefig(OUT_PNG, dpi=130)

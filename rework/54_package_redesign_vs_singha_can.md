@@ -59,3 +59,7 @@ We read the instruction as: design the package with regard to the can. That mean
 ## Closed as a stated limit (18 October 2026)
 
 The trademark search is closed as a stated limit, as the user instructed when the WIPO search could not be completed. The WIPO Global Brand Database search for PLUNK returned 51 results across several offices, with no Thailand filter applied, because the designation-country and Nice class filters returned errors. The Thai DIP public page reached in that pass lists goods and services, not marks, so the Thai mark register was not searched. No registry result clears or blocks the name Plunk Lime Cube. This is a limit on the search, not a finding of freedom to operate.
+
+## Authorization (18 October 2026, from the user)
+
+SINGHA name and lion emblem: authorized by the user for the product proposal (18 October 2026). The user dropped the trademark rights concern. This is the user's statement, not a licence document. The lion-only restriction in the correction above and rule R-P1 are superseded for the proposal. The package artwork is not yet changed: the choice among options A, B and C is still open, and the lion is not yet on any front. The 330 ml reference and the physics stress test remain open.

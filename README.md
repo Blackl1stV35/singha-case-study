@@ -9,7 +9,7 @@ This repository is public on GitHub. Its team records are not written for judges
 - The primary candidate is the sodium-free lime fizz cube, made with potassium bicarbonate and citric acid. See [rework/45](rework/45_working_candidate_rework.md) and [rework/52](rework/52_pivot_and_retirement.md).
 - The leaf-wrapped frozen drink and the midlife soy drink are retired. Their records are kept, not deleted.
 - The entry decision is open. Registration closes on 22 October 2026 at 23:59. No submission has been made, and the submission text is pended.
-- Trademark and trade dress are not cleared. The 330 ml serving reference is not cleared. See [rework/54](rework/54_package_redesign_vs_singha_can.md).
+- The SINGHA name and the lion emblem are authorized for the product proposal (user, 18 October 2026). The 330 ml serving reference is not cleared. See [rework/54](rework/54_package_redesign_vs_singha_can.md).
 
 ## Where to start
 

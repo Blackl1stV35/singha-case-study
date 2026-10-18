@@ -59,6 +59,7 @@ Status: spec drafted, and the 3D mockup built from it (section 9). Colours and t
 ## 3 What is NOT matched and why
 
 3.1 Marks and identity. The competition rule bars the Singha name, logo, lion emblem, wordmark and any trademark in artwork. Trademark status was not checked, so every mark is treated as protected.
+Update, 18 October 2026: the user has authorized the SINGHA name and the lion emblem for the product proposal and dropped the trademark rights concern. The bar above is superseded for this proposal. The competition post does not contain the bar; it was our own reading.
 
 - The Singha lion emblem in any colour or pose, including the gold lion of the 2019 animation.
 - The Garuda on the bottle neck, and any royal-warrant or royal-approval seal. The source reports a 1939 royal warrant. This is royal insignia.

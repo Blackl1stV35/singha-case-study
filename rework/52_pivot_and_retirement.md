@@ -14,6 +14,7 @@ Status: the user confirmed these decisions on 18 October 2026. The repo is merge
 | D6 | **Retire candidate A** (the leaf-wrapped frozen coconut-pandan drink) and **candidate B** (the midlife isoflavone soy drink). Candidate C was already dropped. | Section 2 |
 | D7 | **Judge-facing scrub resolved.** See section 4. | Section 4 |
 | D8 | **Registration and submission are not done.** They need a separate explicit yes with the submission text, which is not drafted for the cube. | [rework/27](27_submission_draft_pended.md) is retired with A |
+| D9 | The SINGHA name and the lion emblem are usable for the product proposal. The trademark rights concern is dropped | User authorization, 18 October 2026. Not a licence document |
 
 ## 2. Retirements
 

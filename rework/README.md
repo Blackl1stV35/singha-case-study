@@ -14,7 +14,7 @@ This folder holds the numbered records of the competition work. The current stat
 | Gates | Resolved by design or scope; the rest are stated limits or open | [50](50_final_gate_resolution.md) |
 | Unit cost and value chain | Variable cost clears the can; value chain not yet shown | [53](53_unit_cost_and_value_chain.md) |
 | Package | Redesigned with regard to the can; lion emblem is the only restriction | [54](54_package_redesign_vs_singha_can.md) |
-| Trademark and trade dress | Not cleared; WIPO search partial; closed as a stated limit | [54](54_package_redesign_vs_singha_can.md) |
+| Trademark and trade dress | SINGHA name and lion emblem authorized by the user for the product proposal (18 October 2026); registry search partial, recorded as a stated limit | [54](54_package_redesign_vs_singha_can.md) |
 | 330 ml reference | Not cleared | [54](54_package_redesign_vs_singha_can.md) |
 | Conversion lead | Synthesis only; no respondents | [49](49_conversion_test_synthesis.md) |
 | Submission draft | Pended; nothing submitted | [27](27_submission_draft_pended.md) (retired draft, kept for the record) |
@@ -66,5 +66,5 @@ The numbering has gaps (35 to 39) because those numbers were never used.
 ## Open items
 
 - The 4K product still is not rendered. The machine did not have the memory headroom for it on 18 October. The scene defaults to 3840 by 2160 but has not yet produced an output.
-- The trademark search is partial and is closed as a stated limit. See [54](54_package_redesign_vs_singha_can.md).
+- Trademark rights are authorized by the user for the product proposal. The registry search stays partial and is recorded as a stated limit. See [54](54_package_redesign_vs_singha_can.md).
 - The textures in `archive/leaf_wrapped_mockup/textures/` came from earlier downloads whose approval is not on record.

@@ -1,0 +1,94 @@
+{
+  "percolation": {
+    "local_cell_scale": {
+      "d_c 0.03 mm": {
+        "critical_damaged_fraction": 2.32,
+        "reachable": false,
+        "note": "above one damaged cell per cell is impossible"
+      },
+      "d_c 0.10 mm": {
+        "critical_damaged_fraction": 0.208,
+        "reachable": true,
+        "note": ""
+      },
+      "d_c 0.50 mm": {
+        "critical_damaged_fraction": 0.00834,
+        "reachable": true,
+        "note": ""
+      }
+    },
+    "connected_airspace": {
+      "f 1e-10": {
+        "expected_qualifying_breaches_per_wrap": 0.00107,
+        "leak_probability_stomata_closed": 0.0,
+        "leak_probability_stomata_open": 0.0003
+      },
+      "f 1e-09": {
+        "expected_qualifying_breaches_per_wrap": 0.0107,
+        "leak_probability_stomata_closed": 0.0,
+        "leak_probability_stomata_open": 0.0027
+      },
+      "f 1e-08": {
+        "expected_qualifying_breaches_per_wrap": 0.107,
+        "leak_probability_stomata_closed": 0.0007,
+        "leak_probability_stomata_open": 0.0263
+      },
+      "f 1e-07": {
+        "expected_qualifying_breaches_per_wrap": 1.07,
+        "leak_probability_stomata_closed": 0.0548,
+        "leak_probability_stomata_open": 0.234
+      },
+      "f 1e-06": {
+        "expected_qualifying_breaches_per_wrap": 10.7,
+        "leak_probability_stomata_closed": 0.8658,
+        "leak_probability_stomata_open": 0.9305
+      },
+      "f 1e-05": {
+        "expected_qualifying_breaches_per_wrap": 107.0,
+        "leak_probability_stomata_closed": 1.0,
+        "leak_probability_stomata_open": 1.0
+      },
+      "f 1e-04": {
+        "expected_qualifying_breaches_per_wrap": 1070.0,
+        "leak_probability_stomata_closed": 1.0,
+        "leak_probability_stomata_open": 1.0
+      },
+      "f_50_percent_stomata_closed": 4.61e-07,
+      "f_50_percent_stomata_open": 2.6e-07,
+      "stomata_per_wrap_if_open": 3100
+    }
+  },
+  "taste": {
+    "polyethylene (PE)": {
+      "aroma_uptake_fraction_2h": 5.63,
+      "uptake_fraction_if_D_tenfold": 17.8,
+      "basis": "non-polar; strong uptake of terpene-like aromas",
+      "decision": "avoid"
+    },
+    "polypropylene (PP)": {
+      "aroma_uptake_fraction_2h": 5.63,
+      "uptake_fraction_if_D_tenfold": 17.8,
+      "basis": "non-polar; similar uptake to PE",
+      "decision": "avoid"
+    },
+    "PET": {
+      "aroma_uptake_fraction_2h": 0.00178,
+      "uptake_fraction_if_D_tenfold": 0.00563,
+      "basis": "polar, dense, low diffusivity for small molecules",
+      "decision": "acceptable on physics"
+    },
+    "EVOH": {
+      "aroma_uptake_fraction_2h": 0.000282,
+      "uptake_fraction_if_D_tenfold": 0.000891,
+      "basis": "polar barrier; very low uptake of aroma",
+      "decision": "acceptable on physics"
+    }
+  },
+  "assumptions": {
+    "cells_per_m2": 1111111111.1111112,
+    "p_qual": 0.62,
+    "lambda_crit_factor": 4.51,
+    "contact_time_h": 2.0,
+    "A_over_V_per_m": 117.6470588235294
+  }
+}

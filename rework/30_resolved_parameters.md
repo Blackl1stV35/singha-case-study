@@ -39,6 +39,7 @@ One leaking path per wrap needs a damaged fraction of about 10^-7. Connection al
 
 ## Limits
 
+- Resolved in rework/31: percolation (connected airspace network), taste (PET selected), and consumer effect (positioning decision).
 - The freeze-damaged fraction is unmeasured. The decision rests on the physical bound of about 10^-7, which is far below any plausible freeze damage. An edible or barrier-free option would need its own physical case.
 - The percolation estimate is a spacing argument, not a full network model.
 - The stomatal state and the damage radius are assumed, and the resolved values are conservative in the direction that favours the barrier.

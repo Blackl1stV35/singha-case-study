@@ -87,7 +87,7 @@ story.append(Spacer(1, 6))
 
 story.append(P("1. Decisions taken (18 October 2026)", H2))
 story += bullets([
-    "<b>Working design:</b> the leaf-wrapped frozen coconut-pandan drink with a food-grade inner barrier, under Alternative Formats. Leaf-only (no barrier) is rejected on physical grounds: freeze damage and stomata would leak (rework/30).",
+    "<b>Working design (confirmed by the user, 18 October):</b> the leaf-wrapped frozen coconut-pandan drink with a food-grade inner barrier, under Alternative Formats. Leaf-only (no barrier) is rejected on physical grounds: freeze damage and stomata would leak (rework/30, rework/31).",
     "<b>Inner barrier:</b> the inner film is plastic, so the product is not plastic-free. It is the working design, not a fallback.",
     "<b>Claim:</b> describe the product as <b>leaf-wrapped</b>. Do not say plastic-free. The outer wrap is leaf; the inner barrier is plastic.",
     "<b>Novelty claim:</b> a leaf-wrapped frozen drink eaten peel-and-sip as it thaws. No such drink was found in the extended search. One leaf-wrapped frozen ice-cream bar is a disclosed precedent (section 3).",
@@ -242,6 +242,9 @@ story.append(table([
     ["Product classification (beverage or ice cream)", "Working assumption", "Treated as a non-heat ready-to-eat beverage, pending a Thai registration adviser. If classed as ice cream, the −2.2 C storage rule applies instead."],
     ["Physical leak tests", "Closed (out of scope)", "Not in scope, by team decision."],
     ["Unknown parameters (drink, damage, stomata, process)", "Closed (physics)", "Resolved in rework/30: water activity 0.995, pH 6.3, lag from h0 = 2. Leaf-only seal not supported; inner barrier is the working design."],
+    ["Percolation of damage (rework/31)", "Closed (physics)", "Connected airspace network adopted. Leaf-only seal survives only below about 1e-8 damaged cells; 50 percent leak near 3 to 5 x 1e-7."],
+    ["Taste of inner barrier (rework/31)", "Closed (physics)", "PE and PP scalp aroma completely; PET takes up about 0.2 percent in 2 h. PET selected; EVOH the alternative."],
+    ["Consumer effect of inner barrier (rework/31)", "Closed (decision)", "Positioned on leaf format and peel-and-sip; the plastic-free buyer hypothesis is withdrawn for the barrier version. Consumer test out of scope."],
     ["Spoilage after thaw (rotten condition)", "Closed (physics screen)", "Growth screen: sealed drink spoils in about 6 to 12 h at 30 C; contaminated, in about 3.5 to 7 h. The 2-hour rule governs. Rules in rework/28."],
     ["Pathogens and microbial load", "Closed (physics screen)", "From one cell per serving, hazard in about 6 to 27 h at 30 C. The start load decides the risk, so a kill step or pathogen-free raw material is required. Rules in rework/29."],
 ], [58 * mm, 40 * mm, 76 * mm]))

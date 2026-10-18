@@ -40,6 +40,8 @@ Status: team conclusion. Evidence is virtual, except one approved physical test:
 ## Limits that remain
 
 - No physical leak, taste or consumer test is in scope. Every leak and taste figure is virtual.
+- **Stomatal state after freezing is not measured.** The dye-penetration simulation (rework/34) shows the leaf-only result depends on whether stomata are open or closed: with open stomata, even a breach fraction of 10⁻⁸ fails almost always. The approved protocol (rework/33) records stomata density only. The stomatal-state scoring rule is adopted in rework/33 (step 7a, with a pilot and an agreement check). The physical run is not scheduled.
+- **PET migration and fat content are open.** The 76× overall-migration margin (rework/32) holds only if the drink's fat content is measured and a migration test on the finished pouch and drink passes. Both are physical or lab steps that need approval.
 - The damaged-path size is not measured. The screens report thresholds, not probabilities.
 - The leaf in the render is a generic photo, not confirmed as banana or pandan.
 - Whether the product is legally a beverage or an ice cream is a registration question. The screen uses the stricter beverage rule.

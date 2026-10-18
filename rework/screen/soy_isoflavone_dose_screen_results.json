@@ -1,0 +1,520 @@
+{
+  "script": "rework/screen/soy_isoflavone_dose_screen.py",
+  "stdlib_only": true,
+  "run_date": "2026-10-18",
+  "seed": 20261018,
+  "mc_n": 200000,
+  "source_inputs": {
+    "base_low_mg_per_250ml": 25.5,
+    "base_high_mg_per_250ml": 63.5,
+    "serving_ml": 250,
+    "source": "Hirattanapun E, Teekachunhatean S. Variability of Isoflavone Content in Soy Milk Products Commercially Available in Thailand. J Health Sci Med Res. 2018;36(2):117-26. DOI 10.31584/jhsmr.2018.36.2.5. https://he01.tci-thaijo.org/index.php/jhsmr/article/view/125491",
+    "status": "Range read from the journal article page abstract (2026-10-18). Full PDF not read."
+  },
+  "parameters": {
+    "coa_tolerance_on_added_extract": 0.1,
+    "in_window_fraction_of_label": 0.15,
+    "target_share_for_solve": 0.9,
+    "added_mg_grid": [
+      10.0,
+      20.0,
+      30.0,
+      40.0,
+      50.0
+    ],
+    "labelled_totals_mg": [
+      40.0,
+      50.0,
+      60.0,
+      70.0,
+      80.0,
+      90.0,
+      100.0
+    ]
+  },
+  "assumptions": [
+    "Base soy isoflavones per 250 ml are uniform on 25.5 to 63.5 mg. ASSUMPTION: the 2018 study reports the range of eight products, not a distribution.",
+    "The 2018 products were two flavours per brand. Whether a plain, unsweetened UHT product falls inside the range is unverified.",
+    "Certificate-of-analysis tolerance on the added extract is +/-10 percent, uniform, and independent per serving. ASSUMPTION: not sourced.",
+    "Base soy and added extract are independent. ASSUMPTION.",
+    "The in-window test is 0.85 T to 1.15 T, where T is the labelled total per serving (brief).",
+    "For the sourcing solve, the nominal label is the 2018 base midpoint (44.5 mg) plus the added dose. ASSUMPTION.",
+    "The sourcing solve uses TARGET_SHARE = 0.90. ASSUMPTION.",
+    "The extract's labelled content is accurate to its certificate of analysis. No supplier was verified. ASSUMPTION.",
+    "No lot-to-lot shift in base content beyond the 2018 range. ASSUMPTION."
+  ],
+  "sanity_checks": {
+    "cdf_at_minus_inf_ok": true,
+    "cdf_at_plus_inf_ok": true,
+    "exact_share_T80_A30": 0.626645,
+    "mc_share_T80_A30": 0.62827
+  },
+  "grid_share_within_window": [
+    {
+      "added_extract_mg": 10.0,
+      "labelled_total_mg": 40.0,
+      "window_mg": [
+        34.0,
+        46.0
+      ],
+      "share_within_15pct_exact": 0.2763,
+      "share_within_15pct_monte_carlo": 0.2753,
+      "mc_minus_exact": -0.001
+    },
+    {
+      "added_extract_mg": 10.0,
+      "labelled_total_mg": 50.0,
+      "window_mg": [
+        42.5,
+        57.5
+      ],
+      "share_within_15pct_exact": 0.3947,
+      "share_within_15pct_monte_carlo": 0.3929,
+      "mc_minus_exact": -0.0018
+    },
+    {
+      "added_extract_mg": 10.0,
+      "labelled_total_mg": 60.0,
+      "window_mg": [
+        51.0,
+        69.0
+      ],
+      "share_within_15pct_exact": 0.4737,
+      "share_within_15pct_monte_carlo": 0.4747,
+      "mc_minus_exact": 0.001
+    },
+    {
+      "added_extract_mg": 10.0,
+      "labelled_total_mg": 70.0,
+      "window_mg": [
+        59.5,
+        80.5
+      ],
+      "share_within_15pct_exact": 0.3684,
+      "share_within_15pct_monte_carlo": 0.3719,
+      "mc_minus_exact": 0.0034
+    },
+    {
+      "added_extract_mg": 10.0,
+      "labelled_total_mg": 80.0,
+      "window_mg": [
+        68.0,
+        92.0
+      ],
+      "share_within_15pct_exact": 0.1447,
+      "share_within_15pct_monte_carlo": 0.1462,
+      "mc_minus_exact": 0.0015
+    },
+    {
+      "added_extract_mg": 10.0,
+      "labelled_total_mg": 90.0,
+      "window_mg": [
+        76.5,
+        103.5
+      ],
+      "share_within_15pct_exact": 0.0,
+      "share_within_15pct_monte_carlo": 0.0,
+      "mc_minus_exact": 0.0
+    },
+    {
+      "added_extract_mg": 10.0,
+      "labelled_total_mg": 100.0,
+      "window_mg": [
+        85.0,
+        115.0
+      ],
+      "share_within_15pct_exact": 0.0,
+      "share_within_15pct_monte_carlo": 0.0,
+      "mc_minus_exact": 0.0
+    },
+    {
+      "added_extract_mg": 20.0,
+      "labelled_total_mg": 40.0,
+      "window_mg": [
+        34.0,
+        46.0
+      ],
+      "share_within_15pct_exact": 0.0206,
+      "share_within_15pct_monte_carlo": 0.0202,
+      "mc_minus_exact": -0.0003
+    },
+    {
+      "added_extract_mg": 20.0,
+      "labelled_total_mg": 50.0,
+      "window_mg": [
+        42.5,
+        57.5
+      ],
+      "share_within_15pct_exact": 0.3158,
+      "share_within_15pct_monte_carlo": 0.314,
+      "mc_minus_exact": -0.0018
+    },
+    {
+      "added_extract_mg": 20.0,
+      "labelled_total_mg": 60.0,
+      "window_mg": [
+        51.0,
+        69.0
+      ],
+      "share_within_15pct_exact": 0.4737,
+      "share_within_15pct_monte_carlo": 0.4714,
+      "mc_minus_exact": -0.0022
+    },
+    {
+      "added_extract_mg": 20.0,
+      "labelled_total_mg": 70.0,
+      "window_mg": [
+        59.5,
+        80.5
+      ],
+      "share_within_15pct_exact": 0.5526,
+      "share_within_15pct_monte_carlo": 0.5542,
+      "mc_minus_exact": 0.0015
+    },
+    {
+      "added_extract_mg": 20.0,
+      "labelled_total_mg": 80.0,
+      "window_mg": [
+        68.0,
+        92.0
+      ],
+      "share_within_15pct_exact": 0.4079,
+      "share_within_15pct_monte_carlo": 0.4111,
+      "mc_minus_exact": 0.0032
+    },
+    {
+      "added_extract_mg": 20.0,
+      "labelled_total_mg": 90.0,
+      "window_mg": [
+        76.5,
+        103.5
+      ],
+      "share_within_15pct_exact": 0.1842,
+      "share_within_15pct_monte_carlo": 0.186,
+      "mc_minus_exact": 0.0018
+    },
+    {
+      "added_extract_mg": 20.0,
+      "labelled_total_mg": 100.0,
+      "window_mg": [
+        85.0,
+        115.0
+      ],
+      "share_within_15pct_exact": 0.0008,
+      "share_within_15pct_monte_carlo": 0.0009,
+      "mc_minus_exact": 0.0
+    },
+    {
+      "added_extract_mg": 30.0,
+      "labelled_total_mg": 40.0,
+      "window_mg": [
+        34.0,
+        46.0
+      ],
+      "share_within_15pct_exact": 0.0,
+      "share_within_15pct_monte_carlo": 0.0,
+      "mc_minus_exact": 0.0
+    },
+    {
+      "added_extract_mg": 30.0,
+      "labelled_total_mg": 50.0,
+      "window_mg": [
+        42.5,
+        57.5
+      ],
+      "share_within_15pct_exact": 0.0548,
+      "share_within_15pct_monte_carlo": 0.0541,
+      "mc_minus_exact": -0.0007
+    },
+    {
+      "added_extract_mg": 30.0,
+      "labelled_total_mg": 60.0,
+      "window_mg": [
+        51.0,
+        69.0
+      ],
+      "share_within_15pct_exact": 0.3553,
+      "share_within_15pct_monte_carlo": 0.3526,
+      "mc_minus_exact": -0.0027
+    },
+    {
+      "added_extract_mg": 30.0,
+      "labelled_total_mg": 70.0,
+      "window_mg": [
+        59.5,
+        80.5
+      ],
+      "share_within_15pct_exact": 0.5526,
+      "share_within_15pct_monte_carlo": 0.55,
+      "mc_minus_exact": -0.0026
+    },
+    {
+      "added_extract_mg": 30.0,
+      "labelled_total_mg": 80.0,
+      "window_mg": [
+        68.0,
+        92.0
+      ],
+      "share_within_15pct_exact": 0.6266,
+      "share_within_15pct_monte_carlo": 0.6283,
+      "mc_minus_exact": 0.0016
+    },
+    {
+      "added_extract_mg": 30.0,
+      "labelled_total_mg": 90.0,
+      "window_mg": [
+        76.5,
+        103.5
+      ],
+      "share_within_15pct_exact": 0.4474,
+      "share_within_15pct_monte_carlo": 0.4502,
+      "mc_minus_exact": 0.0028
+    },
+    {
+      "added_extract_mg": 30.0,
+      "labelled_total_mg": 100.0,
+      "window_mg": [
+        85.0,
+        115.0
+      ],
+      "share_within_15pct_exact": 0.2237,
+      "share_within_15pct_monte_carlo": 0.2263,
+      "mc_minus_exact": 0.0026
+    },
+    {
+      "added_extract_mg": 40.0,
+      "labelled_total_mg": 40.0,
+      "window_mg": [
+        34.0,
+        46.0
+      ],
+      "share_within_15pct_exact": 0.0,
+      "share_within_15pct_monte_carlo": 0.0,
+      "mc_minus_exact": 0.0
+    },
+    {
+      "added_extract_mg": 40.0,
+      "labelled_total_mg": 50.0,
+      "window_mg": [
+        42.5,
+        57.5
+      ],
+      "share_within_15pct_exact": 0.0,
+      "share_within_15pct_monte_carlo": 0.0,
+      "mc_minus_exact": 0.0
+    },
+    {
+      "added_extract_mg": 40.0,
+      "labelled_total_mg": 60.0,
+      "window_mg": [
+        51.0,
+        69.0
+      ],
+      "share_within_15pct_exact": 0.0925,
+      "share_within_15pct_monte_carlo": 0.0915,
+      "mc_minus_exact": -0.001
+    },
+    {
+      "added_extract_mg": 40.0,
+      "labelled_total_mg": 70.0,
+      "window_mg": [
+        59.5,
+        80.5
+      ],
+      "share_within_15pct_exact": 0.3947,
+      "share_within_15pct_monte_carlo": 0.3917,
+      "mc_minus_exact": -0.003
+    },
+    {
+      "added_extract_mg": 40.0,
+      "labelled_total_mg": 80.0,
+      "window_mg": [
+        68.0,
+        92.0
+      ],
+      "share_within_15pct_exact": 0.6279,
+      "share_within_15pct_monte_carlo": 0.6259,
+      "mc_minus_exact": -0.002
+    },
+    {
+      "added_extract_mg": 40.0,
+      "labelled_total_mg": 90.0,
+      "window_mg": [
+        76.5,
+        103.5
+      ],
+      "share_within_15pct_exact": 0.6842,
+      "share_within_15pct_monte_carlo": 0.6852,
+      "mc_minus_exact": 0.001
+    },
+    {
+      "added_extract_mg": 40.0,
+      "labelled_total_mg": 100.0,
+      "window_mg": [
+        85.0,
+        115.0
+      ],
+      "share_within_15pct_exact": 0.4868,
+      "share_within_15pct_monte_carlo": 0.4894,
+      "mc_minus_exact": 0.0025
+    },
+    {
+      "added_extract_mg": 50.0,
+      "labelled_total_mg": 40.0,
+      "window_mg": [
+        34.0,
+        46.0
+      ],
+      "share_within_15pct_exact": 0.0,
+      "share_within_15pct_monte_carlo": 0.0,
+      "mc_minus_exact": 0.0
+    },
+    {
+      "added_extract_mg": 50.0,
+      "labelled_total_mg": 50.0,
+      "window_mg": [
+        42.5,
+        57.5
+      ],
+      "share_within_15pct_exact": 0.0,
+      "share_within_15pct_monte_carlo": 0.0,
+      "mc_minus_exact": 0.0
+    },
+    {
+      "added_extract_mg": 50.0,
+      "labelled_total_mg": 60.0,
+      "window_mg": [
+        51.0,
+        69.0
+      ],
+      "share_within_15pct_exact": 0.0,
+      "share_within_15pct_monte_carlo": 0.0,
+      "mc_minus_exact": 0.0
+    },
+    {
+      "added_extract_mg": 50.0,
+      "labelled_total_mg": 70.0,
+      "window_mg": [
+        59.5,
+        80.5
+      ],
+      "share_within_15pct_exact": 0.1316,
+      "share_within_15pct_monte_carlo": 0.1303,
+      "mc_minus_exact": -0.0013
+    },
+    {
+      "added_extract_mg": 50.0,
+      "labelled_total_mg": 80.0,
+      "window_mg": [
+        68.0,
+        92.0
+      ],
+      "share_within_15pct_exact": 0.4342,
+      "share_within_15pct_monte_carlo": 0.4316,
+      "mc_minus_exact": -0.0026
+    },
+    {
+      "added_extract_mg": 50.0,
+      "labelled_total_mg": 90.0,
+      "window_mg": [
+        76.5,
+        103.5
+      ],
+      "share_within_15pct_exact": 0.6895,
+      "share_within_15pct_monte_carlo": 0.6875,
+      "mc_minus_exact": -0.002
+    },
+    {
+      "added_extract_mg": 50.0,
+      "labelled_total_mg": 100.0,
+      "window_mg": [
+        85.0,
+        115.0
+      ],
+      "share_within_15pct_exact": 0.7339,
+      "share_within_15pct_monte_carlo": 0.7349,
+      "mc_minus_exact": 0.001
+    }
+  ],
+  "sourcing_solve_base_spread": [
+    {
+      "added_extract_mg": 10.0,
+      "nominal_label_mg": 54.5,
+      "share_at_nominal_with_full_2018_range": 0.4303,
+      "target_share": 0.9,
+      "max_base_full_width_mg": 18.1617,
+      "max_base_half_width_mg": 9.0809,
+      "max_base_half_width_pct_of_base_mid": 20.41
+    },
+    {
+      "added_extract_mg": 20.0,
+      "nominal_label_mg": 64.5,
+      "share_at_nominal_with_full_2018_range": 0.5092,
+      "target_share": 0.9,
+      "max_base_full_width_mg": 21.17,
+      "max_base_half_width_mg": 10.585,
+      "max_base_half_width_pct_of_base_mid": 23.79
+    },
+    {
+      "added_extract_mg": 30.0,
+      "nominal_label_mg": 74.5,
+      "share_at_nominal_with_full_2018_range": 0.5882,
+      "target_share": 0.9,
+      "max_base_full_width_mg": 23.9281,
+      "max_base_half_width_mg": 11.964,
+      "max_base_half_width_pct_of_base_mid": 26.89
+    },
+    {
+      "added_extract_mg": 40.0,
+      "nominal_label_mg": 84.5,
+      "share_at_nominal_with_full_2018_range": 0.6671,
+      "target_share": 0.9,
+      "max_base_full_width_mg": 26.571,
+      "max_base_half_width_mg": 13.2855,
+      "max_base_half_width_pct_of_base_mid": 29.86
+    },
+    {
+      "added_extract_mg": 50.0,
+      "nominal_label_mg": 94.5,
+      "share_at_nominal_with_full_2018_range": 0.746,
+      "target_share": 0.9,
+      "max_base_full_width_mg": 29.1477,
+      "max_base_half_width_mg": 14.5739,
+      "max_base_half_width_pct_of_base_mid": 32.75
+    }
+  ],
+  "min_added_mg_for_every_serving_inside_one_window": 246.5,
+  "floor_label_options_2018_range": [
+    {
+      "floor_label_mg": 40.0,
+      "min_added_extract_mg": 16.1111,
+      "serving_range_mg_at_that_dose": [
+        40.0,
+        81.2222
+      ]
+    },
+    {
+      "floor_label_mg": 50.0,
+      "min_added_extract_mg": 27.2222,
+      "serving_range_mg_at_that_dose": [
+        50.0,
+        93.4444
+      ]
+    },
+    {
+      "floor_label_mg": 60.0,
+      "min_added_extract_mg": 38.3333,
+      "serving_range_mg_at_that_dose": [
+        60.0,
+        105.6667
+      ]
+    }
+  ],
+  "cross_check_mahidol_table_not_used_in_screen": {
+    "table_value": 9.65,
+    "unit": "UNVERIFIED. The PDF table header (mg per 100 g or per 100 ml) could not be decoded.",
+    "scaled_to_250_ml_mg": 24.125,
+    "note": "Arithmetic only. The result sits just under the 2018 lower bound of 25.5 mg.",
+    "source": "https://pharmacy.mahidol.ac.th/knowledge/files/0002.pdf (undated; PDF metadata 2010-02-03)"
+  }
+}

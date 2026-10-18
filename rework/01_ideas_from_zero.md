@@ -41,10 +41,10 @@ Novelty scale, as the judge applied it, with Thailand as the only market:
 ### B. Midlife women standardised-isoflavone unsweetened soy drink (New Trend-Driven Target)
 
 - **Format:** a 250 ml unsweetened UHT soy drink with a labelled isoflavone dose per serving, sold as an evening drink.
-- **Target:** Thai women aged 40 to 59 with hot flushes or disturbed sleep, who prefer a daily food to capsules.
+- **Target:** Thai women aged 40 to 59 with hot flushes or disturbed sleep. The preference for a food over capsules is unsourced (rework/40, section 2).
 - **Novelty (2):** none found after 4 Thai and English product searches. Closest is Holistic Way Menopause Relief, a Singapore capsule (press release, 6 August 2026). It is a capsule, not a drink.
-- **Fit (2):** a named group with a named reason. The reason is tied to a Mintel Thailand women's wellness report (June 2026). Only the public summary was read; the full report is paywalled.
-- **Feasibility (1):** no Thai isoflavone extract supplier was verified. The route (supplement or food), the menopause claim wording and dose safety are unresolved. The agent reported that plain Thai soy milk carries little isoflavone naturally (not checked by me), so a labelled dose needs added extract.
+- **Fit (2):** a named group with a named reason. The Mintel report cited for the reason does not mention menopause, soy or isoflavone on its public page, so the link is unsourced (rework/40, section 2).
+- **Feasibility (1):** no Thai isoflavone extract supplier was verified. The route (supplement or food), the menopause claim wording and dose safety are unresolved. Plain Thai soy milk already carries isoflavone: 25.5 to 63.5 mg per 250 ml across eight products in the 2018 Chiang Mai study (abstract verified). The labelled dose must therefore count the base soy as well as any added extract.
 - **Consumer case (1):** a named target, but no Thai demand test.
 - **Kill test:** a desk check of Thai FDA food and supplement rules, or a registration adviser, shows the pack can carry only nutrient content and no menopause-linked benefit. That removes the midlife reason to buy.
 - **First test (3 days):** spike plain soy milk with a standardised isoflavone powder at two doses. Then a blind taste and purchase-intent test with 30 Thai women aged 40 to 59. Check the powder's certificate of analysis. **Gate:** the dose range needs a safety review before any consumer tasting.

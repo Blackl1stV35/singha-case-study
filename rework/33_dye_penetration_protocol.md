@@ -45,8 +45,9 @@ Does a leaf-only wrap, with no inner barrier, leak a drink on thaw? The screen p
 
 ## Interpretation
 
-- **Pass (k = 0 in 300, controls valid):** the leaf-only wrap leak probability is below 1 % at 95 % confidence in this test. The leaf-only option moves forward as a candidate, and the team decides whether to keep the barrier or switch.
-- **Fail (k ≥ 1, controls valid):** the leaf-only option is rejected for this product. The working design stays the barrier.
+- **Pass (k = 0 among closed-state wraps, at least 270 of 300 closed, controls valid):** for closed-state wraps, the leaf-only leak probability is below about 1.1 % at 95 % confidence (1 − 0.05^(1/270)). The leaf-only option moves forward as a candidate, and the team decides whether to keep the barrier or switch. Step 7a sets the closed-state rule.
+- **Fail (k ≥ 1 among closed-state wraps, controls valid):** the leaf-only option is rejected for this product. The working design stays the barrier.
+- **Inconclusive (fewer than 270 of 300 closed):** the run does not answer the leaf-only question. Report the open-state results as a stomatal-state finding.
 - **Pattern check:** compare k with the screen's prediction. If k is far above the screen's value at the measured stomata density, that points to a mechanism the screen does not include.
 - **Confirmation step:** on a pass, repeat with 30 wraps of the actual coconut-pandan drink in place of the sucrose core, because the drink's viscosity may differ.
 
@@ -56,6 +57,29 @@ Does a leaf-only wrap, with no inner barrier, leak a drink on thaw? The screen p
 - A freezer at −18 °C and an incubator at 30 °C.
 - A flatbed scanner, E133 food colour, 8 % sucrose, a 38 mm mould, and PET film for the negative control.
 - Around one week for the batches, with about 50 wraps per day.
+
+## Amendment: stomatal-state check (adopted 18 October, per recommendation; reviewable)
+
+Source: the simulation in rework/34 shows that the stomatal state changes the outcome more than breach fraction does. The rule below is adopted as the working protocol for any future run. The physical run is not scheduled in the desk plan. The team can reopen the rule after a pilot, if the agreement check in step 5 fails.
+
+**Order.** Steps 5 and 6 (scan and dye count) come first. Step 7 (imprint) follows on the same wrap, after the dye count. The stomatal scorer is blind to the group and to the dye result.
+
+**Step 7a: scoring rule (final).**
+
+1. **Fields.** Score three fixed fields per imprint. Every field has the same area and the same magnification on a stereo microscope. The field area is set in a pilot on 5 fresh leaves so that a field holds about 5 stomata on average. The pilot is done before any wrap is made.
+2. **Open or closed, per stoma.** A stoma is open if the pore shows a visible gap between its two guard cells at the fixed magnification. Otherwise it is closed.
+3. **Open or closed, per wrap (presence rule).** A wrap is open-state if at least one stoma in its three fields is called open. A wrap is closed-state if no stoma is called open and at least 15 stomata are counted across the three fields. The 15 is proposed and may be changed in the pilot.
+4. **Not scorable.** A wrap with fewer than 15 stomata counted, or an unreadable imprint, is re-imprinted once. If it is still not scorable, it is reported as not scorable and left out of both groups. The count is stated.
+5. **Agreement check before the run.** Two scorers call the state on the same 10 pilot imprints, independently. They must agree on at least 9 of 10 wraps. Any open call that the two scorers dispute goes to a third scorer. If agreement fails, the rule is changed and re-tested before any wrap is scored.
+6. **Baseline.** Take imprints from 10 fresh, unfrozen leaves from the same batch and score them with the same rule. Report the baseline open fraction. This shows whether freezing and thawing change the state. It has no pass or fail.
+7. **Direction of error.** The presence rule calls more wraps open than a majority rule would. This is deliberate. One open stoma is enough for the outer surface to connect, as modelled in rework/34, so the rule errs toward the barrier.
+
+**Reporting and interpretation (replaces the earlier text).**
+
+- Report k of N among closed-state wraps, k of N among open-state wraps, and the count of not-scorable wraps.
+- The leaf-only pass needs k = 0 among closed-state wraps, controls valid, and at least 270 of the 300 wraps scored closed (90 %, proposed). With fewer closed wraps, the run is inconclusive for leaf-only.
+- An open-state wrap that leaks is a stomatal-state finding, not a breach result. An open-state wrap that does not leak is reported and does not count toward the pass.
+- Production implication: a leaf-only product needs closed stomata after freeze and thaw. The test can show whether that happens. The product cannot control it directly, so a leaf-only design carries a stomatal-state risk that the barrier design does not.
 
 ## Limits
 

@@ -1,5 +1,7 @@
 # Finalist B: midlife isoflavone soy drink, desk track result (18 October 2026)
 
+> **Retired 18 October 2026**, candidate B, the midlife soy drink. Closed as a stated limit and not advanced. See [rework/52](52_pivot_and_retirement.md).
+
 Status: desk research complete on four tracks (regulatory, dose, consumer, supply and price). Each track had adversarial checks on its verified claims, then a completeness critic. Raw output: [raw/waexezeqk_finalist_b_desk_track.json](raw/waexezeqk_finalist_b_desk_track.json). No physical, consumer or registration step has run. Nothing was submitted or contacted.
 
 **Verdict: not advanced, not killed.** B stays second-ranked and conditional. Its regulatory route is open, not passed. Its dose recommendation from the first pass is withdrawn (section 3).

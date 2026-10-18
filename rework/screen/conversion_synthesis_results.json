@@ -1,0 +1,166 @@
+{
+  "basis": "synthesis (model-based); no respondents; no outside contact",
+  "seed": 20261018,
+  "draws": 200000,
+  "inputs": {
+    "OR_per_year_mid": 0.996,
+    "OR_per_year_interval_95": [
+      0.991,
+      1.001
+    ],
+    "drinking_25_44_pct": 68.6,
+    "drinking_45_59_pct": 65.4,
+    "drinking_uncertainty_pts": 3.0,
+    "elasticity_range": [
+      0.5,
+      1.0
+    ],
+    "baselines_pct": [
+      20.0,
+      30.0,
+      40.0,
+      50.0
+    ],
+    "material_size_pts": 5.0,
+    "direction_probability_threshold": 0.9
+  },
+  "ratio_A_potency_median": 1.041,
+  "consistent_with_rework_47": true,
+  "results_by_baseline": {
+    "20": {
+      "comparison_cell_top2_box_pct": 20.0,
+      "share_scale": {
+        "diff_25_34_minus_35_44_pts": {
+          "median": 0.5884,
+          "p05": -0.031,
+          "p95": 1.3492
+        },
+        "P_diff_gt_0": 0.941,
+        "P_diff_lt_0": 0.059,
+        "P_diff_ge_5": 0.0,
+        "direction": "lead supported",
+        "size": "5-point lead not supported"
+      },
+      "odds_scale": {
+        "diff_25_34_minus_35_44_pts": {
+          "median": 0.468,
+          "p05": -0.0248,
+          "p95": 1.065
+        },
+        "P_diff_gt_0": 0.941,
+        "P_diff_lt_0": 0.059,
+        "P_diff_ge_5": 0.0,
+        "direction": "lead supported",
+        "size": "5-point lead not supported"
+      },
+      "diff_25_34_minus_45_59_pts_reference_share_scale": {
+        "median": 2.1009,
+        "p05": 0.3695,
+        "p95": 4.4558
+      }
+    },
+    "30": {
+      "comparison_cell_top2_box_pct": 30.0,
+      "share_scale": {
+        "diff_25_34_minus_35_44_pts": {
+          "median": 0.8827,
+          "p05": -0.0465,
+          "p95": 2.0238
+        },
+        "P_diff_gt_0": 0.941,
+        "P_diff_lt_0": 0.059,
+        "P_diff_ge_5": 0.0,
+        "direction": "lead supported",
+        "size": "5-point lead not supported"
+      },
+      "odds_scale": {
+        "diff_25_34_minus_35_44_pts": {
+          "median": 0.6125,
+          "p05": -0.0325,
+          "p95": 1.3886
+        },
+        "P_diff_gt_0": 0.941,
+        "P_diff_lt_0": 0.059,
+        "P_diff_ge_5": 0.0,
+        "direction": "lead supported",
+        "size": "5-point lead not supported"
+      },
+      "diff_25_34_minus_45_59_pts_reference_share_scale": {
+        "median": 3.1513,
+        "p05": 0.5543,
+        "p95": 6.6837
+      }
+    },
+    "40": {
+      "comparison_cell_top2_box_pct": 40.0,
+      "share_scale": {
+        "diff_25_34_minus_35_44_pts": {
+          "median": 1.1769,
+          "p05": -0.062,
+          "p95": 2.6984
+        },
+        "P_diff_gt_0": 0.941,
+        "P_diff_lt_0": 0.059,
+        "P_diff_ge_5": 0.0001,
+        "direction": "lead supported",
+        "size": "5-point lead not supported"
+      },
+      "odds_scale": {
+        "diff_25_34_minus_35_44_pts": {
+          "median": 0.6979,
+          "p05": -0.0372,
+          "p95": 1.5765
+        },
+        "P_diff_gt_0": 0.941,
+        "P_diff_lt_0": 0.059,
+        "P_diff_ge_5": 0.0,
+        "direction": "lead supported",
+        "size": "5-point lead not supported"
+      },
+      "diff_25_34_minus_45_59_pts_reference_share_scale": {
+        "median": 4.2018,
+        "p05": 0.7391,
+        "p95": 8.9116
+      }
+    },
+    "50": {
+      "comparison_cell_top2_box_pct": 50.0,
+      "share_scale": {
+        "diff_25_34_minus_35_44_pts": {
+          "median": 1.4711,
+          "p05": -0.0775,
+          "p95": 3.373
+        },
+        "P_diff_gt_0": 0.941,
+        "P_diff_lt_0": 0.059,
+        "P_diff_ge_5": 0.0027,
+        "direction": "lead supported",
+        "size": "5-point lead not supported"
+      },
+      "odds_scale": {
+        "diff_25_34_minus_35_44_pts": {
+          "median": 0.7249,
+          "p05": -0.0388,
+          "p95": 1.6315
+        },
+        "P_diff_gt_0": 0.941,
+        "P_diff_lt_0": 0.059,
+        "P_diff_ge_5": 0.0,
+        "direction": "lead supported",
+        "size": "5-point lead not supported"
+      },
+      "diff_25_34_minus_45_59_pts_reference_share_scale": {
+        "median": 5.2522,
+        "p05": 0.9238,
+        "p95": 11.1395
+      }
+    }
+  },
+  "assumptions": [
+    "Intent-to-potency link: intent proportional to potency^e, e uniform 0.5 to 1.0. No source. e = 0 would make the test empty.",
+    "Comparison-cell top-2-box baseline: no source; grid 20, 30, 40, 50 percent.",
+    "Age gradient applied to mid-ages 29.5, 39.5 and 52.0, from the 2021 survey (per-year OR, sampling error only).",
+    "Drinking cell shared by 25-34 and 35-44 (NSO publishes 25-44 only).",
+    "Sugar base cancels in all ratios."
+  ]
+}

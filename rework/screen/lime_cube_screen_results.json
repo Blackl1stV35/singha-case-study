@@ -1,0 +1,443 @@
+{
+  "meta": {
+    "screen": "lime_cube_screen.py",
+    "scope": "Thailand domestic only; Singapore and Korea excluded",
+    "product": "Sweetened lime soda, 330 ml can reformatted to a frozen cube (working name Lime Soda Cube)",
+    "double_blind_note": "Public information only. No team or group data is used. Repo notes were treated as leads.",
+    "cost_rule": "No cost computed. Only public price in the record: Singha Sparkling Water Lime, 15 baht, 330 ml can, 7-Eleven, dated 17/03/2026 (a can, not a cube). Cube cost: none.",
+    "constants": {
+      "R_GAS_J_per_mol_K": 8.314462618,
+      "P_std_Pa": 101325.0,
+      "T_std_K": 273.15,
+      "M_CO2_g_per_mol": 44.01,
+      "Vm_STP_L_per_mol": 22.414,
+      "C_water_J_per_gK": 4.184,
+      "C_ice_J_per_gK": 2.05,
+      "L_fus_J_per_g": 334.7,
+      "rho_ice_g_per_cm3": 0.92
+    }
+  },
+  "sources": {
+    "lange_bunsen_table": {
+      "url": "https://en.wikipedia.org/wiki/Carbon_dioxide_(data_page)",
+      "content": "CO2 solubility in water at 101.3 kPa: Bunsen-type volumes and g CO2 per 100 mL water; table cited to Lange's Handbook of Chemistry, 10th ed., p. 1100. Rows used: 0, 4, 5, 25 C.",
+      "status": "sourced (read via WebFetch 2026-10-18; secondary page citing Lange)"
+    },
+    "sander_henry_compilation": {
+      "url": "https://henrys-law.org/henry/casrn/124-38-9",
+      "content": "Henry's law constant Hscp for CO2 at 298.15 K = 3.3e-4 mol/(m3 Pa); d ln(Hscp)/d(1/T) = 2400 K (Sander 2006 and 2011; Wilhelm 1977 also 2400 K). Table is flattened; value and slope pairing checked by order only.",
+      "status": "sourced (read via WebFetch 2026-10-18; verify live table before publication)"
+    },
+    "fao_water_ice": {
+      "url": "https://www.fao.org/4/T0713E/T0713E0c.htm",
+      "content": "Latent heat of melting 80 kcal/kg; specific heat of water 1.0 kcal/(kg C); ice 0.49 kcal/(kg C) at 0 C (unit inferred, no unit printed); ice density 0.92 kg/L at 0 C.",
+      "status": "sourced (read via WebFetch 2026-10-18)"
+    },
+    "ifas_carbonation": {
+      "url": "https://ask.ifas.ufl.edu/publication/FS379",
+      "content": "Most soft drinks such as tonic water carbonated to 3-3.5 volumes of CO2; colas 3.5-4 vol (Table 1); minimum detectable ~0.6 vol; absolute maximum recommended 8 vol.",
+      "status": "sourced (read via WebFetch 2026-10-18)"
+    },
+    "singha_sparkling_lime_price": {
+      "url": "https://www.kaohooninternational.com/?p=579263",
+      "content": "Singha Sparkling Water Lime Flavour: 330 ml can, sugar-free and 0% calorie, 15 baht, all 7-Eleven branches nationwide. Article dated 17/03/2026. Public shelf price for the can, not for a cube.",
+      "status": "sourced (read via WebFetch 2026-10-18; trade press reprint of company announcement)"
+    },
+    "dspe_htc": {
+      "url": "https://www.dspe.nl/knowledge/thermomechanics/chapter-1-basics/1-2-heat-transfer/convection/",
+      "content": "Typical h: forced convection water laminar 500-1000 W/(m2 K), turbulent 2000-10000 W/(m2 K); natural convection water not listed.",
+      "status": "sourced (read via WebFetch 2026-10-18)"
+    },
+    "waterloo_htc_snippet": {
+      "url": "https://www.mhtlab.uwaterloo.ca/courses/ece309_mechatronics/lectures/pdffiles/chapter6.pdf",
+      "content": "Natural convection water 60-900 W/(m2 K) (search snippet only; PDF text not readable by WebFetch).",
+      "status": "unverified (search snippet only)"
+    }
+  },
+  "A_henry_and_solubility": {
+    "rows": [
+      {
+        "t_C": 0,
+        "bunsen_volumes_per_volume": 1.713,
+        "g_CO2_per_100mL_water_lange": 0.3346,
+        "g_CO2_per_L_at_1atm_lange": 3.346,
+        "M_per_atm_lange": 0.07603,
+        "Hscp_mol_per_m3_Pa_lange": 0.0007503,
+        "Hscp_mol_per_m3_Pa_compilation_vanthoff": 0.0006894,
+        "M_per_atm_compilation_vanthoff": 0.06985,
+        "compilation_over_lange_ratio": 0.9188,
+        "status": "lange values sourced; compilation values derived from sourced Hscp and slope"
+      },
+      {
+        "t_C": 4,
+        "bunsen_volumes_per_volume": 1.473,
+        "g_CO2_per_100mL_water_lange": 0.2871,
+        "g_CO2_per_L_at_1atm_lange": 2.871,
+        "M_per_atm_lange": 0.06524,
+        "Hscp_mol_per_m3_Pa_lange": 0.0006438,
+        "Hscp_mol_per_m3_Pa_compilation_vanthoff": 0.0006073,
+        "M_per_atm_compilation_vanthoff": 0.06153,
+        "compilation_over_lange_ratio": 0.9433,
+        "status": "lange values sourced; compilation values derived from sourced Hscp and slope"
+      },
+      {
+        "t_C": 25,
+        "bunsen_volumes_per_volume": 0.759,
+        "g_CO2_per_100mL_water_lange": 0.1449,
+        "g_CO2_per_L_at_1atm_lange": 1.449,
+        "M_per_atm_lange": 0.03292,
+        "Hscp_mol_per_m3_Pa_lange": 0.0003249,
+        "Hscp_mol_per_m3_Pa_compilation_vanthoff": 0.00033,
+        "M_per_atm_compilation_vanthoff": 0.03344,
+        "compilation_over_lange_ratio": 1.0156,
+        "status": "lange values sourced; compilation values derived from sourced Hscp and slope"
+      }
+    ],
+    "implied_dlnH_d_invT_from_lange_0_to_25C_K": 2726.0,
+    "reading": "Lange 0 C and 4 C values are used as primary. The compilation van 't Hoff with 2400 K is about 6-8 percent lower at 0 and 4 C. The Lange-implied slope between 0 and 25 C is about 2700 K, so the constant-slope form is an approximation."
+  },
+  "B_can_co2": {
+    "can_volume_ml": 330.0,
+    "carbonation_volumes": 3.5,
+    "temperature_C": 4.0,
+    "co2_volume_STP_L": 1.155,
+    "co2_mol": 0.05153,
+    "co2_mass_g": 2.2679,
+    "co2_mass_per_25g_of_same_liquid_g": 0.17181,
+    "headspace_CO2_partial_pressure_atm_abs_lange_linear": 2.376,
+    "headspace_CO2_partial_pressure_atm_abs_compilation": 2.538,
+    "headspace_CO2_partial_pressure_kPa_abs_lange_linear": 240.8,
+    "saturation_CO2_at_1atm_g_per_L_lange_4C": 2.871,
+    "status": "volumes sourced (IFAS); Lange values sourced; mass and pressure derived (ideal gas, linear Henry)"
+  },
+  "C_freeze_partition": {
+    "model": "retained = k_ice * ice_mass_fraction + pocket_mass_fraction * pocket_retention; concentration-ratio form, first order, no Scheil correction",
+    "scenarios": [
+      {
+        "id": "base_premise",
+        "k_ice_CO2_ice_to_liquid_ratio": 0.0,
+        "unfrozen_pocket_mass_fraction": 0.0,
+        "pocket_CO2_retention_fraction": 0.0,
+        "retained_fraction": 0.0,
+        "lost_fraction": 1.0,
+        "co2_lost_g_per_330ml_batch": 2.2679,
+        "co2_retained_g_per_25g_cube": 0.0,
+        "status": "team premise: CO2 leaves the ice and is not recovered; no retained pockets"
+      },
+      {
+        "id": "k_ice_1e-4",
+        "k_ice_CO2_ice_to_liquid_ratio": 0.0001,
+        "unfrozen_pocket_mass_fraction": 0.0,
+        "pocket_CO2_retention_fraction": 0.0,
+        "retained_fraction": 0.0001,
+        "lost_fraction": 0.9999,
+        "co2_lost_g_per_330ml_batch": 2.2677,
+        "co2_retained_g_per_25g_cube": 1.7e-05,
+        "status": "assumed illustrative ice-to-liquid CO2 ratio; no sourced value found"
+      },
+      {
+        "id": "k_ice_1e-3",
+        "k_ice_CO2_ice_to_liquid_ratio": 0.001,
+        "unfrozen_pocket_mass_fraction": 0.0,
+        "pocket_CO2_retention_fraction": 0.0,
+        "retained_fraction": 0.001,
+        "lost_fraction": 0.999,
+        "co2_lost_g_per_330ml_batch": 2.2656,
+        "co2_retained_g_per_25g_cube": 0.000172,
+        "status": "assumed illustrative ice-to-liquid CO2 ratio; no sourced value found"
+      },
+      {
+        "id": "k_ice_1e-2",
+        "k_ice_CO2_ice_to_liquid_ratio": 0.01,
+        "unfrozen_pocket_mass_fraction": 0.0,
+        "pocket_CO2_retention_fraction": 0.0,
+        "retained_fraction": 0.01,
+        "lost_fraction": 0.99,
+        "co2_lost_g_per_330ml_batch": 2.2452,
+        "co2_retained_g_per_25g_cube": 0.001718,
+        "status": "assumed illustrative ice-to-liquid CO2 ratio; no sourced value found"
+      },
+      {
+        "id": "pockets_2pct_half_retained",
+        "k_ice_CO2_ice_to_liquid_ratio": 0.0,
+        "unfrozen_pocket_mass_fraction": 0.02,
+        "pocket_CO2_retention_fraction": 0.5,
+        "retained_fraction": 0.01,
+        "lost_fraction": 0.99,
+        "co2_lost_g_per_330ml_batch": 2.2452,
+        "co2_retained_g_per_25g_cube": 0.001718,
+        "status": "assumed unfrozen pocket fraction and retention; not measured"
+      },
+      {
+        "id": "pockets_5pct_fully_retained",
+        "k_ice_CO2_ice_to_liquid_ratio": 0.0,
+        "unfrozen_pocket_mass_fraction": 0.05,
+        "pocket_CO2_retention_fraction": 1.0,
+        "retained_fraction": 0.05,
+        "lost_fraction": 0.95,
+        "co2_lost_g_per_330ml_batch": 2.1545,
+        "co2_retained_g_per_25g_cube": 0.008591,
+        "status": "assumed upper bound for pocket retention; not measured"
+      }
+    ]
+  },
+  "D_pour_over": [
+    {
+      "cubes": 1,
+      "cube_mass_g_total": 25.0,
+      "carbonated_water_ml": 305.0,
+      "water_temperature_C": 4.0,
+      "co2_mass_g_from_water": 2.096,
+      "retained_fraction_of_can_co2_immediately_after_mix": 0.9242,
+      "final_temperature_C_adiabatic": 0.0,
+      "cube_mass_melted_g": 12.49,
+      "residual_ice_g": 12.51,
+      "drink_liquid_g_after_melt": 317.49,
+      "drink_CO2_volumes_after_melt": 3.362,
+      "saturation_CO2_volumes_at_final_T_1atm_linear_interp": 1.713,
+      "excess_over_1atm_saturation_volumes": 1.649,
+      "flavour_solute_factor_vs_can_if_cube_carries_soda_solutes": 0.0758,
+      "co2_factor_vs_can_immediate": 0.9242,
+      "status": "water and cube inputs assumed; CO2 from sourced volumes; energy balance derived; cube CO2 taken as zero (team premise)"
+    },
+    {
+      "cubes": 2,
+      "cube_mass_g_total": 50.0,
+      "carbonated_water_ml": 280.0,
+      "water_temperature_C": 4.0,
+      "co2_mass_g_from_water": 1.9242,
+      "retained_fraction_of_can_co2_immediately_after_mix": 0.8485,
+      "final_temperature_C_adiabatic": 0.0,
+      "cube_mass_melted_g": 8.49,
+      "residual_ice_g": 41.51,
+      "drink_liquid_g_after_melt": 288.49,
+      "drink_CO2_volumes_after_melt": 3.397,
+      "saturation_CO2_volumes_at_final_T_1atm_linear_interp": 1.713,
+      "excess_over_1atm_saturation_volumes": 1.684,
+      "flavour_solute_factor_vs_can_if_cube_carries_soda_solutes": 0.1515,
+      "co2_factor_vs_can_immediate": 0.8485,
+      "status": "water and cube inputs assumed; CO2 from sourced volumes; energy balance derived; cube CO2 taken as zero (team premise)"
+    },
+    {
+      "cubes": 3,
+      "cube_mass_g_total": 75.0,
+      "carbonated_water_ml": 255.0,
+      "water_temperature_C": 4.0,
+      "co2_mass_g_from_water": 1.7524,
+      "retained_fraction_of_can_co2_immediately_after_mix": 0.7727,
+      "final_temperature_C_adiabatic": 0.0,
+      "cube_mass_melted_g": 4.48,
+      "residual_ice_g": 70.52,
+      "drink_liquid_g_after_melt": 259.48,
+      "drink_CO2_volumes_after_melt": 3.44,
+      "saturation_CO2_volumes_at_final_T_1atm_linear_interp": 1.713,
+      "excess_over_1atm_saturation_volumes": 1.727,
+      "flavour_solute_factor_vs_can_if_cube_carries_soda_solutes": 0.2273,
+      "co2_factor_vs_can_immediate": 0.7727,
+      "status": "water and cube inputs assumed; CO2 from sourced volumes; energy balance derived; cube CO2 taken as zero (team premise)"
+    },
+    {
+      "cubes": 4,
+      "cube_mass_g_total": 100.0,
+      "carbonated_water_ml": 230.0,
+      "water_temperature_C": 4.0,
+      "co2_mass_g_from_water": 1.5806,
+      "retained_fraction_of_can_co2_immediately_after_mix": 0.697,
+      "final_temperature_C_adiabatic": 0.0,
+      "cube_mass_melted_g": 0.48,
+      "residual_ice_g": 99.52,
+      "drink_liquid_g_after_melt": 230.48,
+      "drink_CO2_volumes_after_melt": 3.493,
+      "saturation_CO2_volumes_at_final_T_1atm_linear_interp": 1.713,
+      "excess_over_1atm_saturation_volumes": 1.78,
+      "flavour_solute_factor_vs_can_if_cube_carries_soda_solutes": 0.303,
+      "co2_factor_vs_can_immediate": 0.697,
+      "status": "water and cube inputs assumed; CO2 from sourced volumes; energy balance derived; cube CO2 taken as zero (team premise)"
+    }
+  ],
+  "E_melt_time": {
+    "base_h_W_per_m2K": 300.0,
+    "geometry": "cube, full immersion assumed, side from 25 g at 0.92 g/cm3",
+    "rows": [
+      {
+        "h_W_per_m2K": 100.0,
+        "area_shrinks_with_melt": true,
+        "cube_start_C": -18.0,
+        "melt_time_s": 2834.67,
+        "melt_time_min": 47.24,
+        "time_to_90pct_melt_s": 1400.24,
+        "time_to_90pct_melt_min": 23.34,
+        "cube_surface_area_start_cm2": 54.23,
+        "final_liquid_temperature_C_ode": 14.653,
+        "final_temperature_C_energy_balance": 14.653,
+        "closure_difference_C": 0.0,
+        "final_liquid_mass_g": 275.0,
+        "status": "h assumed (range 100-900 W/(m2 K) bracketed by natural-convection water snippet and dspe laminar-forced range); geometry, densities and heat capacities sourced or assumed"
+      },
+      {
+        "h_W_per_m2K": 300.0,
+        "area_shrinks_with_melt": true,
+        "cube_start_C": -18.0,
+        "melt_time_s": 944.85,
+        "melt_time_min": 15.75,
+        "time_to_90pct_melt_s": 466.74,
+        "time_to_90pct_melt_min": 7.78,
+        "cube_surface_area_start_cm2": 54.23,
+        "final_liquid_temperature_C_ode": 14.653,
+        "final_temperature_C_energy_balance": 14.653,
+        "closure_difference_C": 0.0,
+        "final_liquid_mass_g": 275.0,
+        "status": "h assumed (range 100-900 W/(m2 K) bracketed by natural-convection water snippet and dspe laminar-forced range); geometry, densities and heat capacities sourced or assumed"
+      },
+      {
+        "h_W_per_m2K": 900.0,
+        "area_shrinks_with_melt": true,
+        "cube_start_C": -18.0,
+        "melt_time_s": 314.91,
+        "melt_time_min": 5.25,
+        "time_to_90pct_melt_s": 155.58,
+        "time_to_90pct_melt_min": 2.59,
+        "cube_surface_area_start_cm2": 54.23,
+        "final_liquid_temperature_C_ode": 14.653,
+        "final_temperature_C_energy_balance": 14.653,
+        "closure_difference_C": 0.0,
+        "final_liquid_mass_g": 275.0,
+        "status": "h assumed (range 100-900 W/(m2 K) bracketed by natural-convection water snippet and dspe laminar-forced range); geometry, densities and heat capacities sourced or assumed"
+      },
+      {
+        "h_W_per_m2K": 300.0,
+        "area_shrinks_with_melt": false,
+        "cube_start_C": -18.0,
+        "melt_time_s": 290.28,
+        "melt_time_min": 4.84,
+        "time_to_90pct_melt_s": 256.18,
+        "time_to_90pct_melt_min": 4.27,
+        "cube_surface_area_start_cm2": 54.23,
+        "final_liquid_temperature_C_ode": 14.653,
+        "final_temperature_C_energy_balance": 14.653,
+        "closure_difference_C": -0.0,
+        "final_liquid_mass_g": 275.0,
+        "status": "h assumed (range 100-900 W/(m2 K) bracketed by natural-convection water snippet and dspe laminar-forced range); geometry, densities and heat capacities sourced or assumed"
+      },
+      {
+        "h_W_per_m2K": 300.0,
+        "area_shrinks_with_melt": true,
+        "cube_start_C": 0.0,
+        "melt_time_s": 883.26,
+        "melt_time_min": 14.72,
+        "time_to_90pct_melt_s": 429.67,
+        "time_to_90pct_melt_min": 7.16,
+        "cube_surface_area_start_cm2": 54.23,
+        "final_liquid_temperature_C_ode": 15.455,
+        "final_temperature_C_energy_balance": 15.455,
+        "closure_difference_C": 0.0,
+        "final_liquid_mass_g": 275.0,
+        "status": "h assumed (range 100-900 W/(m2 K) bracketed by natural-convection water snippet and dspe laminar-forced range); geometry, densities and heat capacities sourced or assumed"
+      }
+    ]
+  },
+  "F_dilution": {
+    "soda_g": 250.0,
+    "cube_g": 25.0,
+    "final_mass_g_after_full_melt": 275.0,
+    "water_dilution_percent": 9.09,
+    "solute_factor_if_cube_carries_soda_solutes_uniformly": 1.0,
+    "solute_factor_if_cube_is_pure_ice": 0.9091,
+    "cubes_per_330ml_of_liquid_at_25g": 13.2,
+    "status": "derived from mass balance; which solute case applies is a freezing-mode question for the physical test"
+  },
+  "assumptions": [
+    {
+      "id": "A1",
+      "text": "Soda density 1.0 g/mL",
+      "status": "assumed"
+    },
+    {
+      "id": "A2",
+      "text": "Soda specific heat equal to water (4.184 J/g K)",
+      "status": "assumed"
+    },
+    {
+      "id": "A3",
+      "text": "Ideal-gas molar volume at 0 C, 1 atm (22.414 L/mol); CO2 molar mass 44.01 g/mol",
+      "status": "derived"
+    },
+    {
+      "id": "A4",
+      "text": "Henry's law linear from 1 atm to the pressure needed for 3.5 volumes at 4 C",
+      "status": "assumed"
+    },
+    {
+      "id": "A5",
+      "text": "CO2 partition ratio k_ice = 0 in base case (team premise; no sourced ice solubility number found)",
+      "status": "assumed"
+    },
+    {
+      "id": "A6",
+      "text": "Unfrozen pocket fraction and pocket CO2 retention: 0 in base case; sensitivity values not sourced",
+      "status": "assumed"
+    },
+    {
+      "id": "A7",
+      "text": "Cube size 25 g; 0.92 g/cm3 ice; cube geometry",
+      "status": "assumed"
+    },
+    {
+      "id": "A8",
+      "text": "Cube start -18 C (freezer); sensitivity case 0 C",
+      "status": "assumed"
+    },
+    {
+      "id": "A9",
+      "text": "Heat transfer coefficient h = 300 W/(m2 K) base; sweep 100 and 900",
+      "status": "assumed"
+    },
+    {
+      "id": "A10",
+      "text": "Cube surface area scales as (mass)^(2/3) during melt; constant-area variant also reported",
+      "status": "assumed"
+    },
+    {
+      "id": "A11",
+      "text": "Lumped liquid, adiabatic container, full immersion, no ambient heat gain",
+      "status": "assumed"
+    },
+    {
+      "id": "A12",
+      "text": "Pour-over water at 4 C and 3.5 vol; total serving 330 ml; melt water counted in total volume",
+      "status": "assumed"
+    },
+    {
+      "id": "A13",
+      "text": "Cube CO2 content zero for pour-over (team premise: CO2 lost on freezing)",
+      "status": "assumed"
+    },
+    {
+      "id": "A14",
+      "text": "CO2 is not modelled during the melt step; degassing during mixing is not modelled",
+      "status": "assumed"
+    },
+    {
+      "id": "A15",
+      "text": "Saturation at intermediate temperatures by linear interpolation between Lange points",
+      "status": "assumed"
+    },
+    {
+      "id": "A16",
+      "text": "Melt step runs in a 250 ml soda at 25 C with a 25 g cube (team computed task)",
+      "status": "given"
+    },
+    {
+      "id": "A17",
+      "text": "Heat of fusion 334.7 J/g; ice 2.05 J/g K; water 4.184 J/g K",
+      "status": "sourced (FAO)"
+    }
+  ],
+  "open_items": [
+    "Ice-phase CO2 segregation coefficient at atmospheric pressure: no sourced number found (k_ice = 0 is a premise).",
+    "Natural-convection h for a cube in still soda: only a search snippet (Waterloo 60-900) is available.",
+    "Solubility in ice: Dye-3 ice-core work says earlier lab CO2-in-ice values were too high; the new value is not given in the read text.",
+    "Pour-over at 4 C does not fully melt 2 cubes; the drink ends at 0 C with residual ice in the base case.",
+    "CO2 at pour-over and open-glass equilibrium with air (about 0.04 percent CO2) is not sourced in this run."
+  ]
+}

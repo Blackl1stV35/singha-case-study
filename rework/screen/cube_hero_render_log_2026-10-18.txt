@@ -1,0 +1,10 @@
+Render log, 18 October 2026 (filtered: no local paths)
+Script: rework/mockup/build_cube_scene.py
+Command options: --out cube_hero.png --samples 128 (default 1600 x 1200, Cycles, CPU)
+Exit code: 0
+Wall time: 252 s
+label artwork 2400x1200, aspect 2.000
+label on front: 65.0 x 32.5 mm
+rendering 1600x1200, 128 samples, CPU
+PNG chunks removed: ['cHRM', 'eXIf', 'oFFs', 'tEXt', 'tEXt', 'tEXt', 'tEXt', 'tEXt', 'tEXt', 'tEXt', 'tEXt', 'tEXt', 'tEXt', 'tEXt']
+done in 248.0 s

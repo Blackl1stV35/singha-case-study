@@ -1,5 +1,7 @@
 # Innovative Bev & Bite: team conclusion (18 October 2026)
 
+> **Superseded 18 October 2026.** The primary is now the sodium-free potassium-bicarbonate lime cube ([rework/51](51_final_conclusion_and_recommendation.md), [rework/52](52_pivot_and_retirement.md)). Candidate A, the leaf-wrapped frozen drink, is retired. The body below is the record of the earlier ranking.
+
 Status: team conclusion. Evidence is virtual, except one approved physical test: the dye-penetration test on leaf-only wraps (rework/33, approved 18 October, not yet run). Submission-facing text is held separately and is pended (see rework/27).
 
 ## Decisions

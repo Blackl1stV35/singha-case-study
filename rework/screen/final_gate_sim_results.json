@@ -1,0 +1,775 @@
+{
+  "meta": {
+    "screen": "final_gate_sim.py",
+    "product": "sodium-free potassium-bicarbonate lime fizz cube, 330 ml serving, Thailand domestic",
+    "read_date": "2026-10-18",
+    "claim_policy": "No sugar claim of any kind. Sweetness is disclosed as an intensive sweetener. No sodium-free claim is made unless G1 passes on the stated water specification.",
+    "method": "Stoichiometry for potassium; first-order degassing mass balance for fizz; calculation for sodium. Replaces the bench and medical tests per team decision of 18 October 2026.",
+    "public_info_only": true
+  },
+  "sources": {
+    "lange_bunsen_table": {
+      "url": "https://en.wikipedia.org/wiki/Carbon_dioxide_(data_page)",
+      "content": "Bunsen volumes of CO2 in water at 101.3 kPa: 0 C 1.713; 4 C 1.473; 5 C 1.424; 20 C 0.878; 25 C 0.759. Cited to Lange's Handbook, 10th ed.",
+      "status": "sourced (read in effervescent_cube_screen.py, WebFetch 2026-10-18; secondary page)"
+    },
+    "thai_p445": {
+      "url": "https://food.fda.moph.go.th/media.php?id=689363893683888128&name=P445_EN.pdf",
+      "content": "Notification 445 (2023), English text: Table 1 sodium free less than 5 mg per reference serving; Annex 2 reference serving for carbonated beverages 200 ml; Annex 3 Thai RDI sodium 2000 mg and potassium 3500 mg.",
+      "status": "sourced earlier (English PDF text recorded in effervescent_cube_screen.py, 2026-10-18); re-fetch on 2026-10-18 returned a binary PDF, not re-read; Thai text not read; the sodium-free threshold conflicts with the US 21 CFR 101.61 values flagged in rework/44 (unresolved)"
+    },
+    "chemlinked_thai_labelling": {
+      "url": "https://food.chemlinked.com/news/food-news/thailand-implements-new-nutrition-labeling-regulations",
+      "content": "Trade summary (secondary): nine mandatory nutrients on the Thai nutrition panel, listed as energy, total fat, saturated fat, cholesterol, protein, carbohydrate, total sugars, sodium and potassium; potassium newly added. Says Thai RDIs were updated against Codex NRVs; gives no numeric potassium RDI; points to Notification 445 Attachment 3.",
+      "status": "snippet and secondary (WebFetch and WebSearch 2026-10-18; not the Thai FDA text)"
+    },
+    "ifas_carbonation": {
+      "url": "https://ask.ifas.ufl.edu/publication/FS379",
+      "content": "Minimum detectable carbonation about 0.6 volumes; most soft drinks carbonated to 3 to 3.5 volumes.",
+      "status": "sourced earlier (lime_cube_screen.py SOURCES, WebFetch 2026-10-18); not re-read in this run"
+    },
+    "bionumbers_co2_diffusion_25C": {
+      "url": "https://bionumbers.hms.harvard.edu/bionumber.aspx?id=102625",
+      "content": "Title: coefficient for diffusion of CO2 in water at 25 C. Search snippet lists about 1.88e-9 m2/s (1980 wetted-wall study).",
+      "status": "snippet (WebSearch 2026-10-18; page not read)"
+    },
+    "lu_2013_speedy_angell_fit": {
+      "url": "not recorded (WebSearch summary citing Lu et al. 2013, 2026-10-18)",
+      "content": "Speedy-Angell fit D = D0 (T/Ts - 1)^m, D0 = 13.942e-9 m2/s, Ts = 227.0 K, m = 1.7094, measured 268 to 473 K. Recomputed here: 1.92e-9 m2/s at 298.15 K, about 1.05e-9 at 277.15 K.",
+      "status": "snippet (fit parameters from a search summary; original page not read)"
+    },
+    "plos_one_2012_liger_belair": {
+      "url": "https://doi.org/10.1371/journal.pone.0030628",
+      "content": "Champagne CO2 release by bubble and free-surface routes. No numeric mass-transfer coefficient or degassing rate constant on the page (WebFetch 2026-10-18).",
+      "status": "read (no numeric value used; context only)"
+    },
+    "penetration_theory_estimate": {
+      "url": "derived in final_gate_sim.py (no external source)",
+      "content": "Quiescent-surface penetration theory k_L = 2 sqrt(D/(pi t)) with D = 2e-9 m2/s and t = 10 to 60 s gives about 6e-6 to 2e-5 m/s.",
+      "status": "derived (own calculation; not a sourced value)"
+    },
+    "us_bottled_water_snippet": {
+      "url": "https://getfoodfacts.com/food/water-bottled-non-carbonated-naya-173657",
+      "content": "Database snippet: non-carbonated bottled water about 1 mg sodium per 100 g. US entry, not Thai.",
+      "status": "snippet (WebSearch 2026-10-18; page not read); sensitivity only"
+    },
+    "thai_bottled_water_sodium": {
+      "url": "not found",
+      "content": "No Thai bottled-water sodium label value found (two WebSearch queries on 2026-10-18, including Singha drinking water). No page read; no bot check bypassed.",
+      "status": "limit (value not found; water sodium is set as a specification in this screen)"
+    },
+    "thai_rdi_potassium_recheck": {
+      "url": "https://food.chemlinked.com/news/food-news/thailand-implements-new-nutrition-labeling-regulations",
+      "content": "The potassium Thai RDI 3500 mg is the earlier repo read of the P445 English text. This run did not reconfirm it, and the Codex-NRV remark above means the figure should be checked.",
+      "status": "limit (Thai potassium RDI not reconfirmed; 2000 mg kept as a sensitivity only)"
+    }
+  },
+  "pass_rule_fixed_before_run": {
+    "release_min_ml_at_2min": 5.0,
+    "dissolved_floor_vol_at_10min": 0.6,
+    "dissolution_spec_max_s": 60.0,
+    "measure_times_s": [
+      120.0,
+      600.0
+    ],
+    "sensitivity_release_ml": [
+      1.0,
+      10.0
+    ]
+  },
+  "calibration": {
+    "kl25_base_m_per_s": 2e-05,
+    "kl25_low_m_per_s": 5e-06,
+    "kl25_high_m_per_s": 0.0001,
+    "f0_base": 1.0,
+    "f0_sens": 0.5,
+    "t_dissolve_base_s": 60.0,
+    "t_dissolve_sens_s": 120.0
+  },
+  "constants": {
+    "R_GAS": 8.314462618,
+    "T_std_K": 273.15,
+    "P_std_Pa": 101325.0,
+    "molar_volume_L_per_mol": 22.414,
+    "M_KHCO3": 100.115,
+    "M_K_derived": 39.099,
+    "M_citric": 192.123,
+    "A_over_V_m_inv": 10.0,
+    "P_air_atm_assumed": 0.00042,
+    "SA_D0": 1.3942e-08,
+    "SA_Ts": 227.0,
+    "SA_m": 1.7094,
+    "D_CO2_25C_m2_s": 1.918855448935269e-09,
+    "D_CO2_4C_m2_s": 1.055304082979987e-09,
+    "kl_ratio_4C_over_25C": 0.7416,
+    "Thai_RDI_potassium_mg_sourced_not_reconfirmed": 3500.0,
+    "Thai_NA_free_threshold_mg": 5.0
+  },
+  "G1_sodium": {
+    "carbonate_sodium_mg": 0.0,
+    "sweetener_sodium_mg_assumed": 0.0,
+    "flavour_sodium_mg_assumed": 0.0,
+    "rows": [
+      {
+        "water_case": "design_spec_5_mg_per_L",
+        "water_sodium_mg_per_L": 5.0,
+        "sodium_mg_per_330ml": 1.65,
+        "sodium_mg_per_200ml": 1.0,
+        "pass_sodium_free_lt5mg_330ml": true,
+        "pass_sodium_free_lt5mg_200ml": true
+      },
+      {
+        "water_case": "us_snippet_10_mg_per_L",
+        "water_sodium_mg_per_L": 10.0,
+        "sodium_mg_per_330ml": 3.3,
+        "sodium_mg_per_200ml": 2.0,
+        "pass_sodium_free_lt5mg_330ml": true,
+        "pass_sodium_free_lt5mg_200ml": true
+      },
+      {
+        "water_case": "stress_20_mg_per_L",
+        "water_sodium_mg_per_L": 20.0,
+        "sodium_mg_per_330ml": 6.6,
+        "sodium_mg_per_200ml": 4.0,
+        "pass_sodium_free_lt5mg_330ml": false,
+        "pass_sodium_free_lt5mg_200ml": true
+      }
+    ],
+    "max_water_sodium_mg_per_L_for_pass_330ml": 15.15,
+    "max_water_sodium_mg_per_L_for_pass_200ml": 25.0
+  },
+  "G2_fizz": {
+    "base_case": {
+      "kl25_m_per_s": 2e-05,
+      "f0": 1.0,
+      "t_dissolve_s": 60.0,
+      "release_min_ml_at_2min": 5.0
+    },
+    "rows_base": [
+      {
+        "volumes": 1.0,
+        "temp_C": 4.0,
+        "kl_m_per_s": 1.4831930269209151e-05,
+        "released_ml_at_2min": 2.92,
+        "released_ml_at_10min": 25.38,
+        "dissolved_vol_at_2min": 0.991,
+        "dissolved_vol_at_10min": 0.923,
+        "R1_dissolution_within_spec": true,
+        "R2_release_at_2min_measurable": false,
+        "R3_dissolved_floor_at_10min": true,
+        "pass": false
+      },
+      {
+        "volumes": 1.0,
+        "temp_C": 25.0,
+        "kl_m_per_s": 2e-05,
+        "released_ml_at_2min": 3.94,
+        "released_ml_at_10min": 33.77,
+        "dissolved_vol_at_2min": 0.988,
+        "dissolved_vol_at_10min": 0.898,
+        "R1_dissolution_within_spec": true,
+        "R2_release_at_2min_measurable": false,
+        "R3_dissolved_floor_at_10min": true,
+        "pass": false
+      },
+      {
+        "volumes": 1.5,
+        "temp_C": 4.0,
+        "kl_m_per_s": 1.4831930269209151e-05,
+        "released_ml_at_2min": 4.38,
+        "released_ml_at_10min": 38.08,
+        "dissolved_vol_at_2min": 1.487,
+        "dissolved_vol_at_10min": 1.385,
+        "R1_dissolution_within_spec": true,
+        "R2_release_at_2min_measurable": false,
+        "R3_dissolved_floor_at_10min": true,
+        "pass": false
+      },
+      {
+        "volumes": 1.5,
+        "temp_C": 25.0,
+        "kl_m_per_s": 2e-05,
+        "released_ml_at_2min": 5.9,
+        "released_ml_at_10min": 50.66,
+        "dissolved_vol_at_2min": 1.482,
+        "dissolved_vol_at_10min": 1.346,
+        "R1_dissolution_within_spec": true,
+        "R2_release_at_2min_measurable": true,
+        "R3_dissolved_floor_at_10min": true,
+        "pass": true
+      },
+      {
+        "volumes": 2.0,
+        "temp_C": 4.0,
+        "kl_m_per_s": 1.4831930269209151e-05,
+        "released_ml_at_2min": 5.85,
+        "released_ml_at_10min": 50.78,
+        "dissolved_vol_at_2min": 1.982,
+        "dissolved_vol_at_10min": 1.846,
+        "R1_dissolution_within_spec": true,
+        "R2_release_at_2min_measurable": true,
+        "R3_dissolved_floor_at_10min": true,
+        "pass": true
+      },
+      {
+        "volumes": 2.0,
+        "temp_C": 25.0,
+        "kl_m_per_s": 2e-05,
+        "released_ml_at_2min": 7.87,
+        "released_ml_at_10min": 67.56,
+        "dissolved_vol_at_2min": 1.976,
+        "dissolved_vol_at_10min": 1.795,
+        "R1_dissolution_within_spec": true,
+        "R2_release_at_2min_measurable": true,
+        "R3_dissolved_floor_at_10min": true,
+        "pass": true
+      }
+    ],
+    "design_dose_lowest_passing_base_vol": 1.75,
+    "R4_no_release_before_dissolution_checked": true,
+    "sensitivity": [
+      {
+        "kl_case": "kl_low",
+        "f0_case": "f0_base",
+        "dissolution_case": "td_base",
+        "release_min_ml": 5.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": false,
+          "2.0": false
+        },
+        "lowest_passing_vol_fine_grid": null
+      },
+      {
+        "kl_case": "kl_low",
+        "f0_case": "f0_base",
+        "dissolution_case": "td_base",
+        "release_min_ml": 1.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": true,
+          "2.0": true
+        },
+        "lowest_passing_vol_fine_grid": 1.4
+      },
+      {
+        "kl_case": "kl_low",
+        "f0_case": "f0_base",
+        "dissolution_case": "td_base",
+        "release_min_ml": 10.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": false,
+          "2.0": false
+        },
+        "lowest_passing_vol_fine_grid": null
+      },
+      {
+        "kl_case": "kl_low",
+        "f0_case": "f0_base",
+        "dissolution_case": "td_sens",
+        "release_min_ml": 5.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": false,
+          "2.0": false
+        },
+        "lowest_passing_vol_fine_grid": null
+      },
+      {
+        "kl_case": "kl_low",
+        "f0_case": "f0_base",
+        "dissolution_case": "td_sens",
+        "release_min_ml": 1.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": false,
+          "2.0": false
+        },
+        "lowest_passing_vol_fine_grid": null
+      },
+      {
+        "kl_case": "kl_low",
+        "f0_case": "f0_base",
+        "dissolution_case": "td_sens",
+        "release_min_ml": 10.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": false,
+          "2.0": false
+        },
+        "lowest_passing_vol_fine_grid": null
+      },
+      {
+        "kl_case": "kl_low",
+        "f0_case": "f0_sens",
+        "dissolution_case": "td_base",
+        "release_min_ml": 5.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": true,
+          "2.0": true
+        },
+        "lowest_passing_vol_fine_grid": 1.25
+      },
+      {
+        "kl_case": "kl_low",
+        "f0_case": "f0_sens",
+        "dissolution_case": "td_base",
+        "release_min_ml": 1.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": true,
+          "2.0": true
+        },
+        "lowest_passing_vol_fine_grid": 1.25
+      },
+      {
+        "kl_case": "kl_low",
+        "f0_case": "f0_sens",
+        "dissolution_case": "td_base",
+        "release_min_ml": 10.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": true,
+          "2.0": true
+        },
+        "lowest_passing_vol_fine_grid": 1.25
+      },
+      {
+        "kl_case": "kl_low",
+        "f0_case": "f0_sens",
+        "dissolution_case": "td_sens",
+        "release_min_ml": 5.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": false,
+          "2.0": false
+        },
+        "lowest_passing_vol_fine_grid": null
+      },
+      {
+        "kl_case": "kl_low",
+        "f0_case": "f0_sens",
+        "dissolution_case": "td_sens",
+        "release_min_ml": 1.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": false,
+          "2.0": false
+        },
+        "lowest_passing_vol_fine_grid": null
+      },
+      {
+        "kl_case": "kl_low",
+        "f0_case": "f0_sens",
+        "dissolution_case": "td_sens",
+        "release_min_ml": 10.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": false,
+          "2.0": false
+        },
+        "lowest_passing_vol_fine_grid": null
+      },
+      {
+        "kl_case": "kl_base",
+        "f0_case": "f0_base",
+        "dissolution_case": "td_base",
+        "release_min_ml": 5.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": false,
+          "2.0": true
+        },
+        "lowest_passing_vol_fine_grid": 1.75
+      },
+      {
+        "kl_case": "kl_base",
+        "f0_case": "f0_base",
+        "dissolution_case": "td_base",
+        "release_min_ml": 1.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": true,
+          "1.5": true,
+          "2.0": true
+        },
+        "lowest_passing_vol_fine_grid": 1.0
+      },
+      {
+        "kl_case": "kl_base",
+        "f0_case": "f0_base",
+        "dissolution_case": "td_base",
+        "release_min_ml": 10.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": false,
+          "2.0": false
+        },
+        "lowest_passing_vol_fine_grid": null
+      },
+      {
+        "kl_case": "kl_base",
+        "f0_case": "f0_base",
+        "dissolution_case": "td_sens",
+        "release_min_ml": 5.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": false,
+          "2.0": false
+        },
+        "lowest_passing_vol_fine_grid": null
+      },
+      {
+        "kl_case": "kl_base",
+        "f0_case": "f0_base",
+        "dissolution_case": "td_sens",
+        "release_min_ml": 1.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": false,
+          "2.0": false
+        },
+        "lowest_passing_vol_fine_grid": null
+      },
+      {
+        "kl_case": "kl_base",
+        "f0_case": "f0_base",
+        "dissolution_case": "td_sens",
+        "release_min_ml": 10.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": false,
+          "2.0": false
+        },
+        "lowest_passing_vol_fine_grid": null
+      },
+      {
+        "kl_case": "kl_base",
+        "f0_case": "f0_sens",
+        "dissolution_case": "td_base",
+        "release_min_ml": 5.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": true,
+          "2.0": true
+        },
+        "lowest_passing_vol_fine_grid": 1.35
+      },
+      {
+        "kl_case": "kl_base",
+        "f0_case": "f0_sens",
+        "dissolution_case": "td_base",
+        "release_min_ml": 1.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": true,
+          "2.0": true
+        },
+        "lowest_passing_vol_fine_grid": 1.35
+      },
+      {
+        "kl_case": "kl_base",
+        "f0_case": "f0_sens",
+        "dissolution_case": "td_base",
+        "release_min_ml": 10.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": true,
+          "2.0": true
+        },
+        "lowest_passing_vol_fine_grid": 1.35
+      },
+      {
+        "kl_case": "kl_base",
+        "f0_case": "f0_sens",
+        "dissolution_case": "td_sens",
+        "release_min_ml": 5.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": false,
+          "2.0": false
+        },
+        "lowest_passing_vol_fine_grid": null
+      },
+      {
+        "kl_case": "kl_base",
+        "f0_case": "f0_sens",
+        "dissolution_case": "td_sens",
+        "release_min_ml": 1.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": false,
+          "2.0": false
+        },
+        "lowest_passing_vol_fine_grid": null
+      },
+      {
+        "kl_case": "kl_base",
+        "f0_case": "f0_sens",
+        "dissolution_case": "td_sens",
+        "release_min_ml": 10.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": false,
+          "2.0": false
+        },
+        "lowest_passing_vol_fine_grid": null
+      },
+      {
+        "kl_case": "kl_high",
+        "f0_case": "f0_base",
+        "dissolution_case": "td_base",
+        "release_min_ml": 5.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": true,
+          "2.0": true
+        },
+        "lowest_passing_vol_fine_grid": 1.05
+      },
+      {
+        "kl_case": "kl_high",
+        "f0_case": "f0_base",
+        "dissolution_case": "td_base",
+        "release_min_ml": 1.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": true,
+          "2.0": true
+        },
+        "lowest_passing_vol_fine_grid": 1.05
+      },
+      {
+        "kl_case": "kl_high",
+        "f0_case": "f0_base",
+        "dissolution_case": "td_base",
+        "release_min_ml": 10.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": true,
+          "2.0": true
+        },
+        "lowest_passing_vol_fine_grid": 1.05
+      },
+      {
+        "kl_case": "kl_high",
+        "f0_case": "f0_base",
+        "dissolution_case": "td_sens",
+        "release_min_ml": 5.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": false,
+          "2.0": false
+        },
+        "lowest_passing_vol_fine_grid": null
+      },
+      {
+        "kl_case": "kl_high",
+        "f0_case": "f0_base",
+        "dissolution_case": "td_sens",
+        "release_min_ml": 1.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": false,
+          "2.0": false
+        },
+        "lowest_passing_vol_fine_grid": null
+      },
+      {
+        "kl_case": "kl_high",
+        "f0_case": "f0_base",
+        "dissolution_case": "td_sens",
+        "release_min_ml": 10.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": false,
+          "2.0": false
+        },
+        "lowest_passing_vol_fine_grid": null
+      },
+      {
+        "kl_case": "kl_high",
+        "f0_case": "f0_sens",
+        "dissolution_case": "td_base",
+        "release_min_ml": 5.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": false,
+          "2.0": false
+        },
+        "lowest_passing_vol_fine_grid": null
+      },
+      {
+        "kl_case": "kl_high",
+        "f0_case": "f0_sens",
+        "dissolution_case": "td_base",
+        "release_min_ml": 1.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": false,
+          "2.0": false
+        },
+        "lowest_passing_vol_fine_grid": null
+      },
+      {
+        "kl_case": "kl_high",
+        "f0_case": "f0_sens",
+        "dissolution_case": "td_base",
+        "release_min_ml": 10.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": false,
+          "2.0": false
+        },
+        "lowest_passing_vol_fine_grid": null
+      },
+      {
+        "kl_case": "kl_high",
+        "f0_case": "f0_sens",
+        "dissolution_case": "td_sens",
+        "release_min_ml": 5.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": false,
+          "2.0": false
+        },
+        "lowest_passing_vol_fine_grid": null
+      },
+      {
+        "kl_case": "kl_high",
+        "f0_case": "f0_sens",
+        "dissolution_case": "td_sens",
+        "release_min_ml": 1.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": false,
+          "2.0": false
+        },
+        "lowest_passing_vol_fine_grid": null
+      },
+      {
+        "kl_case": "kl_high",
+        "f0_case": "f0_sens",
+        "dissolution_case": "td_sens",
+        "release_min_ml": 10.0,
+        "pass_at_1.0_1.5_2.0_both_temps": {
+          "1.0": false,
+          "1.5": false,
+          "2.0": false
+        },
+        "lowest_passing_vol_fine_grid": null
+      }
+    ],
+    "equilibrium_pco2_atm_needed": {
+      "1.0_vol_4C": 0.679,
+      "1.5_vol_4C": 1.018,
+      "2.0_vol_4C": 1.358,
+      "1.0_vol_25C": 1.318,
+      "1.5_vol_25C": 1.976,
+      "2.0_vol_25C": 2.635
+    },
+    "interpretation": "R2 counts gas that leaves the drink at generation as release, so a low f0 can pass R2 while the drink is flat. R3 (dissolved CO2 at 10 min) is the retained-fizz check."
+  },
+  "G3_potassium": {
+    "rows": [
+      {
+        "volumes": 1.0,
+        "co2_mol_per_330ml": 0.01472,
+        "khco3_g_per_330ml": 1.474,
+        "citric_acid_g_per_330ml": 0.943,
+        "potassium_mg_per_330ml": 575.7,
+        "potassium_pct_RDI_330ml_3500": 16.4,
+        "potassium_pct_RDI_330ml_2000_alt": 28.8,
+        "potassium_mg_per_200ml_reference": 348.9,
+        "potassium_pct_RDI_200ml_3500": 10.0,
+        "good_source_flag_gt15pct_330ml": true,
+        "high_flag_ge30pct_330ml": false,
+        "claim_made": false,
+        "label_declaration": "potassium declared on the nutrition panel as a fact (secondary source: mandatory)"
+      },
+      {
+        "volumes": 1.5,
+        "co2_mol_per_330ml": 0.02208,
+        "khco3_g_per_330ml": 2.211,
+        "citric_acid_g_per_330ml": 1.414,
+        "potassium_mg_per_330ml": 863.5,
+        "potassium_pct_RDI_330ml_3500": 24.7,
+        "potassium_pct_RDI_330ml_2000_alt": 43.2,
+        "potassium_mg_per_200ml_reference": 523.3,
+        "potassium_pct_RDI_200ml_3500": 15.0,
+        "good_source_flag_gt15pct_330ml": true,
+        "high_flag_ge30pct_330ml": false,
+        "claim_made": false,
+        "label_declaration": "potassium declared on the nutrition panel as a fact (secondary source: mandatory)"
+      },
+      {
+        "volumes": 1.75,
+        "co2_mol_per_330ml": 0.02577,
+        "khco3_g_per_330ml": 2.579,
+        "citric_acid_g_per_330ml": 1.65,
+        "potassium_mg_per_330ml": 1007.4,
+        "potassium_pct_RDI_330ml_3500": 28.8,
+        "potassium_pct_RDI_330ml_2000_alt": 50.4,
+        "potassium_mg_per_200ml_reference": 610.5,
+        "potassium_pct_RDI_200ml_3500": 17.4,
+        "good_source_flag_gt15pct_330ml": true,
+        "high_flag_ge30pct_330ml": false,
+        "claim_made": false,
+        "label_declaration": "potassium declared on the nutrition panel as a fact (secondary source: mandatory)"
+      },
+      {
+        "volumes": 2.0,
+        "co2_mol_per_330ml": 0.02945,
+        "khco3_g_per_330ml": 2.948,
+        "citric_acid_g_per_330ml": 1.886,
+        "potassium_mg_per_330ml": 1151.3,
+        "potassium_pct_RDI_330ml_3500": 32.9,
+        "potassium_pct_RDI_330ml_2000_alt": 57.6,
+        "potassium_mg_per_200ml_reference": 697.8,
+        "potassium_pct_RDI_200ml_3500": 19.9,
+        "good_source_flag_gt15pct_330ml": true,
+        "high_flag_ge30pct_330ml": true,
+        "claim_made": false,
+        "label_declaration": "potassium declared on the nutrition panel as a fact (secondary source: mandatory)"
+      }
+    ],
+    "design_dose_volumes": 1.75,
+    "design_potassium_mg_per_330ml": 1007.4,
+    "claim_policy": "no potassium claim; potassium declared as a fact; medical question stated as a limit"
+  },
+  "gate_verdicts": [
+    {
+      "gate": "G1 sodium-free",
+      "resolution": "resolved_with_design_change",
+      "basis": "Carbonate contributes 0 mg sodium (KHCO3). With base water at 5 mg per litre (specification, not a Thai label value), sodium is 1.65 mg per 330 ml and 1.00 mg per 200 ml, below 5 mg on both bases. Passes only if base water is at or below 15.15 mg per litre (330 ml basis). A 20 mg per litre water fails. Design change: water specification and a sodium-free intensive sweetener. Calculation only; the Thai 5 mg threshold stays conflicted in rework/44."
+    },
+    {
+      "gate": "G2 fizz",
+      "resolution": "stated_limit",
+      "basis": "Calibration parameter, not measured: k_L25 base 2e-5 m/s (no sourced value; derived bracket 6e-6 to 2e-5 m/s, sensitivity 5e-6 to 1e-4). Base case: lowest dose passing both temperatures is 1.75 volumes (design dose). Low calibration (5e-6 m/s): no dose up to 2.0 passes. High calibration: lowest pass 1.05. Retained-fizz check (R3) binds at high calibration; release check (R2) can be met by bubbles that do not stay in the drink (f0 0.5 case). Dissolution time (60 s) is an untested design spec; at 120 s no release is measured at 2 min. Open-glass equilibrium needs 2.64 atm at 2.0 volumes, 25 C, so the drink is supersaturated; the fizz gate is kinetic. Stated limit until a measured k_L or a comparable beverage record exists."
+    },
+    {
+      "gate": "G3 potassium",
+      "resolution": "resolved_with_design_change",
+      "basis": "Design: lowest carbonate dose that passes the base-case fizz rule, 1.75 volumes, gives 1007.4 mg potassium per 330 ml (28.8 percent of the Thai RDI of 3500 mg, not reconfirmed). Potassium declared on the panel as a fact; no potassium claim. Medical question NOT resolved by this simulation: safety for people with reduced potassium excretion or on potassium-retaining medicines needs a medical reviewer. Acesulfame potassium (if used as sweetener) adds potassium, unquantified here."
+    }
+  ],
+  "open_items": [
+    "Thai bottled-water sodium label value not found; base water sodium is a specification (5 mg per litre).",
+    "Degassing coefficient k_L not sourced; treated as a calibration parameter with a 2e-5 m/s base and a 5e-6 to 1e-4 m/s bracket.",
+    "Fraction of generated CO2 dissolved at generation (f0) and cube dissolution time are untested; the fizz result depends on both.",
+    "Thai potassium RDI (3500 mg) from the earlier repo read; not reconfirmed; a Codex-NRV-based value may differ.",
+    "Thai sodium-free threshold (5 mg per serving) read from the English text only; conflicts with the US values flagged in rework/44.",
+    "Medical potassium safety is not resolved by physics; needs a medical reviewer and a stated label wording.",
+    "Acesulfame potassium or other potassium-containing sweeteners would add potassium; not quantified.",
+    "Conversion test (men 25-34 against men 35-44, rework/46): design confirmed as pended. It needs a panel, which is outside contact and needs approval; not run here. rework/47 finds ratio A has a 0.94 probability of being ahead, with a 90 percent interval of 1.00 to 1.09, from the age gradient alone, and no survey source for the 25-34 against 35-44 split (rework/47 section 7). The conversion lead stays an estimate."
+  ],
+  "limits": [
+    "No Thai bottled-water sodium label found (two searches, 2026-10-18). Water sodium is set as a specification.",
+    "No sourced surface degassing coefficient for a beverage found; the screen treats it as a calibration parameter.",
+    "The cube dissolution time and the dissolved fraction at generation are assumed; no measurement is available in this run.",
+    "The Thai potassium RDI and the sodium-free threshold were not reconfirmed on the Thai primary text in this run.",
+    "No medical safety conclusion is drawn from the potassium figures."
+  ]
+}

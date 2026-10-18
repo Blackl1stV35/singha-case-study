@@ -1,0 +1,41 @@
+{
+  "seed": 20261019,
+  "draws": 200000,
+  "P_ratio_A_25_34_over_35_44_gt_1": 0.94113,
+  "P_ratio_B_25_34_over_45_59_gt_1": 0.97867,
+  "ratio_A_median": 1.0408829387485201,
+  "ratio_A_p05": 0.9979060344946077,
+  "ratio_A_p95": 1.0854925999254845,
+  "ratio_B_median": 1.1474370914494973,
+  "ratio_B_p05": 1.0260110469248869,
+  "ratio_B_p95": 1.2836928062547666,
+  "log_ratio_B_decomposition_central": {
+    "drinking_cells": 0.047770276268686386,
+    "age_gradient": 0.09018048144462348,
+    "total": 0.13795075771330986,
+    "share_drinking_pct": 34.62849864729476,
+    "share_age_gradient_pct": 65.37150135270524
+  },
+  "sobol_total_order_ratio_B_log": {
+    "OR per year": 0.7168569744341663,
+    "drinking 25-34": 0.1405406217065014,
+    "drinking 45-59": 0.1534561913285886,
+    "sugar base s0": 0.0
+  },
+  "sobol_ratio_A": {
+    "OR per year": 1.0,
+    "drinking cell (shared)": 0.0,
+    "sugar base s0": 0.0
+  },
+  "or_interval_published": [
+    0.991,
+    1.001
+  ],
+  "or_log_sd_derived": 0.0025612869860286974,
+  "assumptions": [
+    "OR log-normal from the published 95% interval (sampling error only).",
+    "Drinking shares uniform published value +/- 3 points (no 2024 interval published).",
+    "Sugar base s0 uniform 15.5 to 16.2 (published 2021 interval).",
+    "Age gradient applied to mid-ages 29.5, 39.5 and 52.0."
+  ]
+}

@@ -1,0 +1,3382 @@
+{
+  "meta": {
+    "screen": "effervescent_cube_screen.py",
+    "scope": "Thailand domestic only; Singapore and Korea excluded",
+    "product": "Sweetened dissolvable lime cube (citric acid plus carbonate), dosed into 330 ml",
+    "read_date": "2026-10-18",
+    "double_blind_note": "Public information only. No team or group data is used. Repo notes were treated as leads.",
+    "cost_rule": "Public price: Makro PRO listed prices read 2026-10-18 (shown without login). Derived ingredient cost is labelled as derived. Potassium bicarbonate and calcium carbonate: none.",
+    "limits_rule": "Items that could not be verified are closed as stated limits in 'limits'.",
+    "claim_basis": "Thai nutrition claims: Notification 445 (2023) Tables 1 and 2, read in English translation. Notification 467 (2025) changes display format only.",
+    "constants": {
+      "R_GAS_J_per_mol_K": 8.314462618,
+      "P_std_Pa": 101325.0,
+      "T_std_K": 273.15,
+      "Vm_ideal_STP_L_per_mol": 22.414,
+      "Vm_real_density_basis_L_per_mol": 22.2605,
+      "M_CO2_g_per_mol": 44.009,
+      "M_NaHCO3": 84.006,
+      "M_KHCO3": 100.115,
+      "M_CaCO3": 100.0869,
+      "M_Na2CO3_derived": 105.988,
+      "M_citric_anhydrous": 192.123,
+      "M_Ca_citrate_anhydrous": 498.4334,
+      "element_Na_derived": 22.99,
+      "element_K_derived": 39.099,
+      "element_Ca_derived": 40.079,
+      "P_air_atm_432ppm": 0.000432,
+      "Thai_RDI_mg": {
+        "sodium_mg": 2000.0,
+        "potassium_mg": 3500.0,
+        "calcium_mg": 1000.0
+      }
+    },
+    "fizz_definition": "Usable fizz floor = 1.5 volumes retained as dissolved CO2 at serving (lowest target in the team brief). This is an assumption for the screen."
+  },
+  "sources": {
+    "lange_bunsen_table": {
+      "url": "https://en.wikipedia.org/wiki/Carbon_dioxide_(data_page)",
+      "content": "CO2 solubility in water at 101.3 kPa, volumes per volume at the given temperature: 0 C 1.713; 4 C 1.473; 5 C 1.424; 20 C 0.878; 25 C 0.759. Footnote: volume as measured at 101.3 kPa and 0 C. Cited to Lange's Handbook of Chemistry, 10th ed., p. 1100.",
+      "status": "sourced (WebFetch 2026-10-18; secondary page; same values as lime_cube_screen.py)"
+    },
+    "molar_mass_NaHCO3": {
+      "url": "https://en.wikipedia.org/wiki/Sodium_bicarbonate",
+      "content": "Infobox molar mass 84.006 g/mol (no reference marker on the value).",
+      "status": "sourced (WebFetch 2026-10-18)"
+    },
+    "molar_mass_KHCO3": {
+      "url": "https://en.wikipedia.org/wiki/Potassium_bicarbonate",
+      "content": "Infobox molar mass 100.115 g/mol.",
+      "status": "sourced (WebFetch 2026-10-18)"
+    },
+    "molar_mass_CaCO3": {
+      "url": "https://en.wikipedia.org/wiki/Calcium_carbonate",
+      "content": "Infobox molar mass 100.0869 g/mol.",
+      "status": "sourced (WebFetch 2026-10-18)"
+    },
+    "molar_mass_citric_acid": {
+      "url": "https://en.wikipedia.org/wiki/Citric_acid",
+      "content": "Infobox molar mass 192.123 g/mol (anhydrous); 210.14 g/mol (monohydrate).",
+      "status": "sourced (WebFetch 2026-10-18)"
+    },
+    "molar_mass_CO2_and_density": {
+      "url": "https://en.wikipedia.org/wiki/Carbon_dioxide",
+      "content": "Molar mass 44.009 g/mol; gas density 1.977 kg/m3 at 1 atm and 0 C.",
+      "status": "sourced (WebFetch 2026-10-18)"
+    },
+    "calcium_citrate_solubility": {
+      "url": "https://en.wikipedia.org/wiki/Calcium_citrate",
+      "content": "Anhydrous molar mass 498.4334 g/mol. Solubility in water 0.95 g/L at 25 C and 0.85 g/L at 18 C. Described as sparingly soluble.",
+      "status": "sourced (WebFetch 2026-10-18; secondary page; solubility at 4 C not given)"
+    },
+    "atmospheric_CO2": {
+      "url": "https://en.wikipedia.org/wiki/Carbon_dioxide_in_Earth%27s_atmosphere",
+      "content": "In 2026 the CO2 concentration reached 432 ppm (0.0432 percent, molar basis); cites NASA Earth Science.",
+      "status": "sourced (WebFetch 2026-10-18; secondary page)"
+    },
+    "thai_P445_nutrition_labelling": {
+      "url": "https://food.fda.moph.go.th/media.php?id=689363893683888128&name=P445_EN.pdf",
+      "content": "Notification No. 445 B.E. 2566 (2023), English translation. Clause 2.1: a nutrition claim follows Table 1 (per reference serving size and per consumed serving) for foods with a reference serving, otherwise Table 2 (per 100 g or 100 mL). Annex 2 Category 2 No. 2: carbonated and non-carbonated beverages, reference serving 200 mL. Table 1: free of sodium less than 5 mg; very low sodium less than 35 mg; low sodium less than 140 mg (per serving); sugar free less than 0.5 g (per serving). Table 2: sodium free not more than 5 mg, very low 40 mg (per 100 g) or 20 mg (per 100 mL), low 120 mg or 60 mg; sugar free not more than 0.5 g (per 100 g and per 100 mL). Table 1 vitamins and minerals excluding sodium: good source more than 15 percent of Thai RDI; high at least 30 percent. Clause 2.2: a claim needs an attached statement when sodium exceeds 300 mg per serving. Annex 3 Thai RDI: sodium 2000 mg, potassium 3500 mg, calcium 1000 mg. Clause 8: in force 180 days after gazette publication.",
+      "status": "sourced (English PDF text extracted with pdftotext 2026-10-18; the Thai text is authoritative; clause-to-table wording on dual basis needs a Thai adviser)"
+    },
+    "thai_P447_health_claims": {
+      "url": "https://food.fda.moph.go.th/media.php?id=607838556769099776&name=P447_EN.pdf",
+      "content": "Notification No. 447 B.E. 2566 (2023), health claims. Clause 2(4): nutrition claims comply with the Nutrition labelling notification (No. 445). Clause 3(3): function claims with sodium more than 300 mg, total sugar more than 13 g, or other listed nutrients need a disclosure statement.",
+      "status": "sourced (English PDF text extracted with pdftotext 2026-10-18); FDA list gives effective date 02/07/67"
+    },
+    "thai_P467_amendment": {
+      "url": "https://food.fda.moph.go.th/media.php?id=841484892608012288&name=P467_EN.pdf",
+      "content": "Notification No. 467 B.E. 2568 (2025), Nutrition labelling (No. 2). Replaces only the display font and format text in Annex 1 section 2.1 of No. 445. The claim tables (Table 1, Table 2) are not mentioned. FDA list gives effective date 12/12/68.",
+      "status": "sourced (English unofficial translation extracted with pdftotext 2026-10-18)"
+    },
+    "thai_fda_notification_list": {
+      "url": "https://food.fda.moph.go.th/food-law/category/food-labeling-and-nutrition-labeling",
+      "content": "Lists P182 (1998, repealed), P445 (2023), P447 (2023, health claims), P466 (2025, GDA), P467 (2025, nutrition labelling No. 2).",
+      "status": "sourced (WebFetch 2026-10-18)"
+    },
+    "healthier_choice_beverage": {
+      "url": "https://food.chemlinked.com/news/food-news/thailand-updates-the-criteria-for-labeling-healthier-choice-nutritional-logo",
+      "content": "Healthier Choice logo, from 3 Jan 2025: beverages except 100 percent juice, sugar at most 5 g per 100 mL and 15 g per serving. No beverage sodium limit stated in the article.",
+      "status": "sourced (WebFetch 2026-10-18; trade summary of the Thai FDA change; logo scheme, not a claim rule)"
+    },
+    "thai_sodium_intake_2021": {
+      "url": "https://doaj.org/article/ecceca0bd5744d8f9dcc0c9a1782440a",
+      "content": "Estimated dietary sodium intake in Thailand, nationwide 24-hour urine study, J Clin Hypertens 2021: mean 3636 mg/day (SD 1722) in 1599 completers; urinary potassium 1221 mg/day (excretion, not intake).",
+      "status": "snippet (WebSearch snippet only; the page was not read); unverified"
+    },
+    "thai_low_sugar_consumer": {
+      "url": "https://www.kantar.com/inspiration/fmcg/60-of-thai-shoppers-are-still-consuming-no-sugar-carbonated-soft-drinks-out-of-the-home",
+      "content": "Kantar: 60 percent of Thai shoppers still consume no-sugar carbonated soft drinks out of home; most Thai consumers want less or zero sugar that still tastes good (article c. 2023-2024).",
+      "status": "snippet (WebSearch snippet only; page not read); unverified; date older than 2026"
+    },
+    "singha_company_claim": {
+      "url": "https://www.nationthailand.com/pr-news/40063747",
+      "content": "Company release: Singha Sparkling Water 330 ml, 0 percent calorie, 15 baht, March 2026; company cites over 57 percent of Thai consumers cutting sugary drinks over five years.",
+      "status": "snippet (company-cited claim; not read on page); unverified; treat as company claim"
+    },
+    "euromonitor_thailand_soft_drinks": {
+      "url": "https://www-euromonitor-com.lib.ezproxy.hkust.edu.hk/hw-soft-drinks-in-thailand/report",
+      "content": "Euromonitor January 2026 overview: health and wellness shaped soft drinks in 2024; reformulation ahead of phase 4 of the sugar tax in 2025.",
+      "status": "snippet (overview only; full report paywalled); unverified"
+    },
+    "makro_pro_sodium_bicarbonate_search": {
+      "url": "https://www.makro.pro/en/c/search?q=sodium+bicarbonate",
+      "content": "Makro PRO search page read via Claude Browser 2026-10-18 (page banner: 'Login to see accurate price and promotions'). Listed prices shown without login: McGarrett Baking Soda 1 kg 107 baht (list 110); BEST ODOUR Baking Soda 500 g 36 baht; Peter Rich Baking Soda 300 g 45 baht.",
+      "status": "sourced (read on page 2026-10-18); public price, accurate member price not read"
+    },
+    "makro_pro_potassium_bicarbonate_search": {
+      "url": "https://www.makro.pro/en/c/search?q=potassium+bicarbonate",
+      "content": "Makro PRO search, 576 hits, first page read 2026-10-18: no potassium bicarbonate product on the first page. Same page lists 'Mizae PURE Food Grade baking soda 750 g, sodium bicarbonate 100 percent' at 99 baht.",
+      "status": "sourced (first page read 2026-10-18); potassium bicarbonate: none found on page 1"
+    },
+    "makro_pro_citric_acid_search": {
+      "url": "https://www.makro.pro/en/c/search?q=citric+acid",
+      "content": "Makro PRO search, 355 hits, first page read 2026-10-18: 'Pack of 2, McGarrett citric acid (lemon acid) 100 g' at 95 baht (list 100 baht).",
+      "status": "sourced (read on page 2026-10-18); public price; accurate member price not read"
+    },
+    "makro_pro_calcium_carbonate_search": {
+      "url": "https://www.makro.pro/en/c/search?q=calcium+carbonate+food+grade",
+      "content": "Makro PRO search, 889 hits, first page read 2026-10-18: no food-grade calcium carbonate product; results are supplements and milk powders.",
+      "status": "sourced (first page read 2026-10-18); food-grade calcium carbonate: none found on page 1"
+    },
+    "retail_lazada_blocked": {
+      "url": "https://www.lazada.co.th/catalog/?q=sodium%20bicarbonate%20food%20grade",
+      "content": "Claude Browser navigation to lazada.co.th was denied or failed on 2026-10-18; no page read.",
+      "status": "limit (site not read; site permission or access failed in this run; not bypassed)"
+    },
+    "pubchem_blocked": {
+      "url": "https://pubchem.ncbi.nlm.nih.gov/compound/Sodium-bicarbonate",
+      "content": "WebFetch returned a browser verification screen ('Checking your browser') for PubChem pages on 2026-10-18. Not bypassed. Molar masses taken from Wikipedia infoboxes instead.",
+      "status": "limit (bot check; not bypassed)"
+    }
+  },
+  "assumptions": [
+    {
+      "id": "A1",
+      "text": "Sodium, potassium and calcium load is set by CO2 generated, not retained; f_ret = retained/generated",
+      "status": "assumed"
+    },
+    {
+      "id": "A2",
+      "text": "f_ret cases 1.0 (upper bound), 0.5 and 0.25. No source; to be measured",
+      "status": "assumed"
+    },
+    {
+      "id": "A3",
+      "text": "Citric acid molar excess 0 in base case; sensitivity 10 and 20 percent",
+      "status": "assumed"
+    },
+    {
+      "id": "A4",
+      "text": "Stoichiometric reactions: 3 CO2 per citric acid with 3 bicarbonate; 3 CO2 per 2 citric acid with 3 carbonate",
+      "status": "derived"
+    },
+    {
+      "id": "A5",
+      "text": "1 volume = 1 L CO2 at 0 C and 1 atm per litre of liquid; ideal molar volume 22.414 L/mol (real-gas density basis 22.26 also shown)",
+      "status": "derived"
+    },
+    {
+      "id": "A6",
+      "text": "Serving 330 ml; drink volume equals serving volume; cube volume ignored",
+      "status": "assumed"
+    },
+    {
+      "id": "A7",
+      "text": "Thai reference serving for carbonated beverages 200 ml (P445 Annex 2)",
+      "status": "sourced"
+    },
+    {
+      "id": "A8",
+      "text": "Henry's law linear to the required pressure; required pressure = V / Bunsen(T)",
+      "status": "assumed"
+    },
+    {
+      "id": "A9",
+      "text": "Open-glass headspace CO2 is 432 ppm (0.000432 atm); equilibrium dissolved CO2 = Bunsen(T) x 0.000432",
+      "status": "derived"
+    },
+    {
+      "id": "A10",
+      "text": "Base drink sodium is zero for the carbonate-only sodium count; actual base drink not read",
+      "status": "assumed"
+    },
+    {
+      "id": "A11",
+      "text": "Cube contains no sugar and no sodium other than the carbonate; sweetener and flavour are outside this screen",
+      "status": "assumed"
+    },
+    {
+      "id": "A12",
+      "text": "Calcium citrate solubility 0.95 g/L at 25 C applied at serving temperature (4 C value not sourced)",
+      "status": "assumed"
+    },
+    {
+      "id": "A13",
+      "text": "Atomic masses: H 1.008, C 12.011, O 15.999; element masses derived from sourced compound masses",
+      "status": "derived"
+    }
+  ],
+  "stoichiometry_per_mol_CO2": {
+    "NaHCO3": {
+      "name": "sodium bicarbonate",
+      "reaction": "C6H8O7 + 3 NaHCO3 -> Na3C6H5O7 + 3 CO2 + 3 H2O",
+      "citric_mol_per_mol_CO2": 0.333333,
+      "carbonate_g_per_mol_CO2": 84.006,
+      "citric_acid_g_per_mol_CO2": 64.041,
+      "cation_g_per_mol_CO2": {
+        "Na": 22.99
+      }
+    },
+    "KHCO3": {
+      "name": "potassium bicarbonate",
+      "reaction": "C6H8O7 + 3 KHCO3 -> K3C6H5O7 + 3 CO2 + 3 H2O",
+      "citric_mol_per_mol_CO2": 0.333333,
+      "carbonate_g_per_mol_CO2": 100.115,
+      "citric_acid_g_per_mol_CO2": 64.041,
+      "cation_g_per_mol_CO2": {
+        "K": 39.099
+      }
+    },
+    "CaCO3": {
+      "name": "calcium carbonate",
+      "reaction": "2 C6H8O7 + 3 CaCO3 -> Ca3(C6H5O7)2 + 3 CO2 + 3 H2O",
+      "citric_mol_per_mol_CO2": 0.666667,
+      "carbonate_g_per_mol_CO2": 100.0869,
+      "citric_acid_g_per_mol_CO2": 128.082,
+      "cation_g_per_mol_CO2": {
+        "Ca": 40.0789
+      }
+    },
+    "NaHCO3_KHCO3_50_50": {
+      "name": "50:50 mol blend of sodium and potassium bicarbonate",
+      "reaction": "C6H8O7 + 1.5 NaHCO3 + 1.5 KHCO3 -> 3 CO2 + Na1.5K1.5C6H5O7 + 3 H2O (mol-weighted)",
+      "citric_mol_per_mol_CO2": 0.333333,
+      "carbonate_g_per_mol_CO2": 92.0605,
+      "citric_acid_g_per_mol_CO2": 64.041,
+      "cation_g_per_mol_CO2": {
+        "Na": 11.495,
+        "K": 19.5495
+      }
+    },
+    "Na2CO3": {
+      "name": "sodium carbonate (comparator only)",
+      "reaction": "2 C6H8O7 + 3 Na2CO3 -> 2 Na3C6H5O7 + 3 CO2 + 3 H2O",
+      "citric_mol_per_mol_CO2": 0.666667,
+      "carbonate_g_per_mol_CO2": 105.988,
+      "citric_acid_g_per_mol_CO2": 128.082,
+      "cation_g_per_mol_CO2": {
+        "Na": 45.98
+      }
+    }
+  },
+  "saturation_1atm_check": [
+    {
+      "target_retained_vol": 1.5,
+      "temperature_C": 4,
+      "bunsen_volumes_at_1atm_pure_CO2_sourced": 1.473,
+      "required_CO2_partial_pressure_atm_linear_henry_assumed": 1.0183,
+      "feasible_at_1atm_pure_CO2_headspace": false,
+      "open_glass_equilibrium_dissolved_vol_air_432ppm_derived": 0.000636,
+      "target_over_open_glass_equilibrium_x": 2357.0
+    },
+    {
+      "target_retained_vol": 1.5,
+      "temperature_C": 25,
+      "bunsen_volumes_at_1atm_pure_CO2_sourced": 0.759,
+      "required_CO2_partial_pressure_atm_linear_henry_assumed": 1.9763,
+      "feasible_at_1atm_pure_CO2_headspace": false,
+      "open_glass_equilibrium_dissolved_vol_air_432ppm_derived": 0.000328,
+      "target_over_open_glass_equilibrium_x": 4575.0
+    },
+    {
+      "target_retained_vol": 2.0,
+      "temperature_C": 4,
+      "bunsen_volumes_at_1atm_pure_CO2_sourced": 1.473,
+      "required_CO2_partial_pressure_atm_linear_henry_assumed": 1.3578,
+      "feasible_at_1atm_pure_CO2_headspace": false,
+      "open_glass_equilibrium_dissolved_vol_air_432ppm_derived": 0.000636,
+      "target_over_open_glass_equilibrium_x": 3143.0
+    },
+    {
+      "target_retained_vol": 2.0,
+      "temperature_C": 25,
+      "bunsen_volumes_at_1atm_pure_CO2_sourced": 0.759,
+      "required_CO2_partial_pressure_atm_linear_henry_assumed": 2.635,
+      "feasible_at_1atm_pure_CO2_headspace": false,
+      "open_glass_equilibrium_dissolved_vol_air_432ppm_derived": 0.000328,
+      "target_over_open_glass_equilibrium_x": 6100.0
+    },
+    {
+      "target_retained_vol": 3.5,
+      "temperature_C": 4,
+      "bunsen_volumes_at_1atm_pure_CO2_sourced": 1.473,
+      "required_CO2_partial_pressure_atm_linear_henry_assumed": 2.3761,
+      "feasible_at_1atm_pure_CO2_headspace": false,
+      "open_glass_equilibrium_dissolved_vol_air_432ppm_derived": 0.000636,
+      "target_over_open_glass_equilibrium_x": 5500.0
+    },
+    {
+      "target_retained_vol": 3.5,
+      "temperature_C": 25,
+      "bunsen_volumes_at_1atm_pure_CO2_sourced": 0.759,
+      "required_CO2_partial_pressure_atm_linear_henry_assumed": 4.6113,
+      "feasible_at_1atm_pure_CO2_headspace": false,
+      "open_glass_equilibrium_dissolved_vol_air_432ppm_derived": 0.000328,
+      "target_over_open_glass_equilibrium_x": 10674.0
+    }
+  ],
+  "dose_table": [
+    {
+      "choice": "NaHCO3",
+      "retained_target_vol": 1.5,
+      "fraction_retained_assumed": 1.0,
+      "generated_vol_required": 1.5,
+      "escaped_vol_assumed": 0.0,
+      "serving_330ml": {
+        "co2_generated_mol": 0.022084,
+        "carbonate_g": 1.8552,
+        "citric_acid_g_stoich": 1.4143,
+        "cube_reactant_g": 3.2695,
+        "gas_generated_ml_STP": 495.0,
+        "cation_mg": {
+          "Na": 507.7
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 507.7,
+          "sodium_mg_per_100ml": 153.9,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Na": 307.7
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 307.7,
+          "sodium_mg_per_100ml": 153.9,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "NaHCO3",
+      "retained_target_vol": 1.5,
+      "fraction_retained_assumed": 0.5,
+      "generated_vol_required": 3.0,
+      "escaped_vol_assumed": 1.5,
+      "serving_330ml": {
+        "co2_generated_mol": 0.044169,
+        "carbonate_g": 3.7105,
+        "citric_acid_g_stoich": 2.8286,
+        "cube_reactant_g": 6.5391,
+        "gas_generated_ml_STP": 990.0,
+        "cation_mg": {
+          "Na": 1015.4
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 1015.4,
+          "sodium_mg_per_100ml": 307.7,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Na": 615.4
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 615.4,
+          "sodium_mg_per_100ml": 307.7,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "NaHCO3",
+      "retained_target_vol": 1.5,
+      "fraction_retained_assumed": 0.25,
+      "generated_vol_required": 6.0,
+      "escaped_vol_assumed": 4.5,
+      "serving_330ml": {
+        "co2_generated_mol": 0.088338,
+        "carbonate_g": 7.4209,
+        "citric_acid_g_stoich": 5.6572,
+        "cube_reactant_g": 13.0781,
+        "gas_generated_ml_STP": 1980.0,
+        "cation_mg": {
+          "Na": 2030.9
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 2030.9,
+          "sodium_mg_per_100ml": 615.4,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Na": 1230.8
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 1230.8,
+          "sodium_mg_per_100ml": 615.4,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "NaHCO3",
+      "retained_target_vol": 2.0,
+      "fraction_retained_assumed": 1.0,
+      "generated_vol_required": 2.0,
+      "escaped_vol_assumed": 0.0,
+      "serving_330ml": {
+        "co2_generated_mol": 0.029446,
+        "carbonate_g": 2.4736,
+        "citric_acid_g_stoich": 1.8857,
+        "cube_reactant_g": 4.3594,
+        "gas_generated_ml_STP": 660.0,
+        "cation_mg": {
+          "Na": 677.0
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 677.0,
+          "sodium_mg_per_100ml": 205.1,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Na": 410.3
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 410.3,
+          "sodium_mg_per_100ml": 205.1,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "NaHCO3",
+      "retained_target_vol": 2.0,
+      "fraction_retained_assumed": 0.5,
+      "generated_vol_required": 4.0,
+      "escaped_vol_assumed": 2.0,
+      "serving_330ml": {
+        "co2_generated_mol": 0.058892,
+        "carbonate_g": 4.9473,
+        "citric_acid_g_stoich": 3.7715,
+        "cube_reactant_g": 8.7188,
+        "gas_generated_ml_STP": 1320.0,
+        "cation_mg": {
+          "Na": 1353.9
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 1353.9,
+          "sodium_mg_per_100ml": 410.3,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Na": 820.6
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 820.6,
+          "sodium_mg_per_100ml": 410.3,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "NaHCO3",
+      "retained_target_vol": 2.0,
+      "fraction_retained_assumed": 0.25,
+      "generated_vol_required": 8.0,
+      "escaped_vol_assumed": 6.0,
+      "serving_330ml": {
+        "co2_generated_mol": 0.117784,
+        "carbonate_g": 9.8945,
+        "citric_acid_g_stoich": 7.543,
+        "cube_reactant_g": 17.4375,
+        "gas_generated_ml_STP": 2640.0,
+        "cation_mg": {
+          "Na": 2707.8
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 2707.8,
+          "sodium_mg_per_100ml": 820.6,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Na": 1641.1
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 1641.1,
+          "sodium_mg_per_100ml": 820.6,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "NaHCO3",
+      "retained_target_vol": 3.5,
+      "fraction_retained_assumed": 1.0,
+      "generated_vol_required": 3.5,
+      "escaped_vol_assumed": 0.0,
+      "serving_330ml": {
+        "co2_generated_mol": 0.05153,
+        "carbonate_g": 4.3289,
+        "citric_acid_g_stoich": 3.3001,
+        "cube_reactant_g": 7.6289,
+        "gas_generated_ml_STP": 1155.0,
+        "cation_mg": {
+          "Na": 1184.7
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 1184.7,
+          "sodium_mg_per_100ml": 359.0,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Na": 718.0
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 718.0,
+          "sodium_mg_per_100ml": 359.0,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "NaHCO3",
+      "retained_target_vol": 3.5,
+      "fraction_retained_assumed": 0.5,
+      "generated_vol_required": 7.0,
+      "escaped_vol_assumed": 3.5,
+      "serving_330ml": {
+        "co2_generated_mol": 0.103061,
+        "carbonate_g": 8.6577,
+        "citric_acid_g_stoich": 6.6001,
+        "cube_reactant_g": 15.2578,
+        "gas_generated_ml_STP": 2310.0,
+        "cation_mg": {
+          "Na": 2369.4
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 2369.4,
+          "sodium_mg_per_100ml": 718.0,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Na": 1436.0
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 1436.0,
+          "sodium_mg_per_100ml": 718.0,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "NaHCO3",
+      "retained_target_vol": 3.5,
+      "fraction_retained_assumed": 0.25,
+      "generated_vol_required": 14.0,
+      "escaped_vol_assumed": 10.5,
+      "serving_330ml": {
+        "co2_generated_mol": 0.206121,
+        "carbonate_g": 17.3154,
+        "citric_acid_g_stoich": 13.2002,
+        "cube_reactant_g": 30.5157,
+        "gas_generated_ml_STP": 4620.0,
+        "cation_mg": {
+          "Na": 4738.7
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 4738.7,
+          "sodium_mg_per_100ml": 1436.0,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Na": 2872.0
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 2872.0,
+          "sodium_mg_per_100ml": 1436.0,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "KHCO3",
+      "retained_target_vol": 1.5,
+      "fraction_retained_assumed": 1.0,
+      "generated_vol_required": 1.5,
+      "escaped_vol_assumed": 0.0,
+      "serving_330ml": {
+        "co2_generated_mol": 0.022084,
+        "carbonate_g": 2.211,
+        "citric_acid_g_stoich": 1.4143,
+        "cube_reactant_g": 3.6253,
+        "gas_generated_ml_STP": 495.0,
+        "cation_mg": {
+          "K": 863.5
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 863.5,
+          "potassium_pct_thai_rdi": 24.7,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "K": 523.3
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 523.3,
+          "potassium_pct_thai_rdi": 15.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "KHCO3",
+      "retained_target_vol": 1.5,
+      "fraction_retained_assumed": 0.5,
+      "generated_vol_required": 3.0,
+      "escaped_vol_assumed": 1.5,
+      "serving_330ml": {
+        "co2_generated_mol": 0.044169,
+        "carbonate_g": 4.422,
+        "citric_acid_g_stoich": 2.8286,
+        "cube_reactant_g": 7.2506,
+        "gas_generated_ml_STP": 990.0,
+        "cation_mg": {
+          "K": 1727.0
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 1727.0,
+          "potassium_pct_thai_rdi": 49.3,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": true,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "K": 1046.6
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 1046.6,
+          "potassium_pct_thai_rdi": 29.9,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "KHCO3",
+      "retained_target_vol": 1.5,
+      "fraction_retained_assumed": 0.25,
+      "generated_vol_required": 6.0,
+      "escaped_vol_assumed": 4.5,
+      "serving_330ml": {
+        "co2_generated_mol": 0.088338,
+        "carbonate_g": 8.8439,
+        "citric_acid_g_stoich": 5.6572,
+        "cube_reactant_g": 14.5012,
+        "gas_generated_ml_STP": 1980.0,
+        "cation_mg": {
+          "K": 3453.9
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 3453.9,
+          "potassium_pct_thai_rdi": 98.7,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": true,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "K": 2093.3
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 2093.3,
+          "potassium_pct_thai_rdi": 59.8,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": true,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "KHCO3",
+      "retained_target_vol": 2.0,
+      "fraction_retained_assumed": 1.0,
+      "generated_vol_required": 2.0,
+      "escaped_vol_assumed": 0.0,
+      "serving_330ml": {
+        "co2_generated_mol": 0.029446,
+        "carbonate_g": 2.948,
+        "citric_acid_g_stoich": 1.8857,
+        "cube_reactant_g": 4.8337,
+        "gas_generated_ml_STP": 660.0,
+        "cation_mg": {
+          "K": 1151.3
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 1151.3,
+          "potassium_pct_thai_rdi": 32.9,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": true,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "K": 697.8
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 697.8,
+          "potassium_pct_thai_rdi": 19.9,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "KHCO3",
+      "retained_target_vol": 2.0,
+      "fraction_retained_assumed": 0.5,
+      "generated_vol_required": 4.0,
+      "escaped_vol_assumed": 2.0,
+      "serving_330ml": {
+        "co2_generated_mol": 0.058892,
+        "carbonate_g": 5.896,
+        "citric_acid_g_stoich": 3.7715,
+        "cube_reactant_g": 9.6674,
+        "gas_generated_ml_STP": 1320.0,
+        "cation_mg": {
+          "K": 2302.6
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 2302.6,
+          "potassium_pct_thai_rdi": 65.8,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": true,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "K": 1395.5
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 1395.5,
+          "potassium_pct_thai_rdi": 39.9,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": true,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "KHCO3",
+      "retained_target_vol": 2.0,
+      "fraction_retained_assumed": 0.25,
+      "generated_vol_required": 8.0,
+      "escaped_vol_assumed": 6.0,
+      "serving_330ml": {
+        "co2_generated_mol": 0.117784,
+        "carbonate_g": 11.7919,
+        "citric_acid_g_stoich": 7.543,
+        "cube_reactant_g": 19.3349,
+        "gas_generated_ml_STP": 2640.0,
+        "cation_mg": {
+          "K": 4605.2
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 4605.2,
+          "potassium_pct_thai_rdi": 131.6,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": true,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "K": 2791.0
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 2791.0,
+          "potassium_pct_thai_rdi": 79.7,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": true,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "KHCO3",
+      "retained_target_vol": 3.5,
+      "fraction_retained_assumed": 1.0,
+      "generated_vol_required": 3.5,
+      "escaped_vol_assumed": 0.0,
+      "serving_330ml": {
+        "co2_generated_mol": 0.05153,
+        "carbonate_g": 5.159,
+        "citric_acid_g_stoich": 3.3001,
+        "cube_reactant_g": 8.459,
+        "gas_generated_ml_STP": 1155.0,
+        "cation_mg": {
+          "K": 2014.8
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 2014.8,
+          "potassium_pct_thai_rdi": 57.6,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": true,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "K": 1221.1
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 1221.1,
+          "potassium_pct_thai_rdi": 34.9,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": true,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "KHCO3",
+      "retained_target_vol": 3.5,
+      "fraction_retained_assumed": 0.5,
+      "generated_vol_required": 7.0,
+      "escaped_vol_assumed": 3.5,
+      "serving_330ml": {
+        "co2_generated_mol": 0.103061,
+        "carbonate_g": 10.3179,
+        "citric_acid_g_stoich": 6.6001,
+        "cube_reactant_g": 16.918,
+        "gas_generated_ml_STP": 2310.0,
+        "cation_mg": {
+          "K": 4029.6
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 4029.6,
+          "potassium_pct_thai_rdi": 115.1,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": true,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "K": 2442.2
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 2442.2,
+          "potassium_pct_thai_rdi": 69.8,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": true,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "KHCO3",
+      "retained_target_vol": 3.5,
+      "fraction_retained_assumed": 0.25,
+      "generated_vol_required": 14.0,
+      "escaped_vol_assumed": 10.5,
+      "serving_330ml": {
+        "co2_generated_mol": 0.206121,
+        "carbonate_g": 20.6358,
+        "citric_acid_g_stoich": 13.2002,
+        "cube_reactant_g": 33.8361,
+        "gas_generated_ml_STP": 4620.0,
+        "cation_mg": {
+          "K": 8059.1
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 8059.1,
+          "potassium_pct_thai_rdi": 230.3,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": true,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "K": 4884.3
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 4884.3,
+          "potassium_pct_thai_rdi": 139.6,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": true,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "CaCO3",
+      "retained_target_vol": 1.5,
+      "fraction_retained_assumed": 1.0,
+      "generated_vol_required": 1.5,
+      "escaped_vol_assumed": 0.0,
+      "serving_330ml": {
+        "co2_generated_mol": 0.022084,
+        "carbonate_g": 2.2104,
+        "citric_acid_g_stoich": 2.8286,
+        "cube_reactant_g": 5.039,
+        "gas_generated_ml_STP": 495.0,
+        "cation_mg": {
+          "Ca": 885.1
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 885.1,
+          "calcium_pct_thai_rdi": 88.5,
+          "calcium_good_source_gt15pct": true,
+          "calcium_high_ge30pct": true
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Ca": 536.4
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 536.4,
+          "calcium_pct_thai_rdi": 53.6,
+          "calcium_good_source_gt15pct": true,
+          "calcium_high_ge30pct": true
+        }
+      }
+    },
+    {
+      "choice": "CaCO3",
+      "retained_target_vol": 1.5,
+      "fraction_retained_assumed": 0.5,
+      "generated_vol_required": 3.0,
+      "escaped_vol_assumed": 1.5,
+      "serving_330ml": {
+        "co2_generated_mol": 0.044169,
+        "carbonate_g": 4.4207,
+        "citric_acid_g_stoich": 5.6572,
+        "cube_reactant_g": 10.078,
+        "gas_generated_ml_STP": 990.0,
+        "cation_mg": {
+          "Ca": 1770.2
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 1770.2,
+          "calcium_pct_thai_rdi": 177.0,
+          "calcium_good_source_gt15pct": true,
+          "calcium_high_ge30pct": true
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Ca": 1072.9
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 1072.9,
+          "calcium_pct_thai_rdi": 107.3,
+          "calcium_good_source_gt15pct": true,
+          "calcium_high_ge30pct": true
+        }
+      }
+    },
+    {
+      "choice": "CaCO3",
+      "retained_target_vol": 1.5,
+      "fraction_retained_assumed": 0.25,
+      "generated_vol_required": 6.0,
+      "escaped_vol_assumed": 4.5,
+      "serving_330ml": {
+        "co2_generated_mol": 0.088338,
+        "carbonate_g": 8.8415,
+        "citric_acid_g_stoich": 11.3145,
+        "cube_reactant_g": 20.1559,
+        "gas_generated_ml_STP": 1980.0,
+        "cation_mg": {
+          "Ca": 3540.5
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 3540.5,
+          "calcium_pct_thai_rdi": 354.0,
+          "calcium_good_source_gt15pct": true,
+          "calcium_high_ge30pct": true
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Ca": 2145.7
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 2145.7,
+          "calcium_pct_thai_rdi": 214.6,
+          "calcium_good_source_gt15pct": true,
+          "calcium_high_ge30pct": true
+        }
+      }
+    },
+    {
+      "choice": "CaCO3",
+      "retained_target_vol": 2.0,
+      "fraction_retained_assumed": 1.0,
+      "generated_vol_required": 2.0,
+      "escaped_vol_assumed": 0.0,
+      "serving_330ml": {
+        "co2_generated_mol": 0.029446,
+        "carbonate_g": 2.9472,
+        "citric_acid_g_stoich": 3.7715,
+        "cube_reactant_g": 6.7186,
+        "gas_generated_ml_STP": 660.0,
+        "cation_mg": {
+          "Ca": 1180.2
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 1180.2,
+          "calcium_pct_thai_rdi": 118.0,
+          "calcium_good_source_gt15pct": true,
+          "calcium_high_ge30pct": true
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Ca": 715.2
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 715.2,
+          "calcium_pct_thai_rdi": 71.5,
+          "calcium_good_source_gt15pct": true,
+          "calcium_high_ge30pct": true
+        }
+      }
+    },
+    {
+      "choice": "CaCO3",
+      "retained_target_vol": 2.0,
+      "fraction_retained_assumed": 0.5,
+      "generated_vol_required": 4.0,
+      "escaped_vol_assumed": 2.0,
+      "serving_330ml": {
+        "co2_generated_mol": 0.058892,
+        "carbonate_g": 5.8943,
+        "citric_acid_g_stoich": 7.543,
+        "cube_reactant_g": 13.4373,
+        "gas_generated_ml_STP": 1320.0,
+        "cation_mg": {
+          "Ca": 2360.3
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 2360.3,
+          "calcium_pct_thai_rdi": 236.0,
+          "calcium_good_source_gt15pct": true,
+          "calcium_high_ge30pct": true
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Ca": 1430.5
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 1430.5,
+          "calcium_pct_thai_rdi": 143.0,
+          "calcium_good_source_gt15pct": true,
+          "calcium_high_ge30pct": true
+        }
+      }
+    },
+    {
+      "choice": "CaCO3",
+      "retained_target_vol": 2.0,
+      "fraction_retained_assumed": 0.25,
+      "generated_vol_required": 8.0,
+      "escaped_vol_assumed": 6.0,
+      "serving_330ml": {
+        "co2_generated_mol": 0.117784,
+        "carbonate_g": 11.7886,
+        "citric_acid_g_stoich": 15.086,
+        "cube_reactant_g": 26.8746,
+        "gas_generated_ml_STP": 2640.0,
+        "cation_mg": {
+          "Ca": 4720.6
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 4720.6,
+          "calcium_pct_thai_rdi": 472.1,
+          "calcium_good_source_gt15pct": true,
+          "calcium_high_ge30pct": true
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Ca": 2861.0
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 2861.0,
+          "calcium_pct_thai_rdi": 286.1,
+          "calcium_good_source_gt15pct": true,
+          "calcium_high_ge30pct": true
+        }
+      }
+    },
+    {
+      "choice": "CaCO3",
+      "retained_target_vol": 3.5,
+      "fraction_retained_assumed": 1.0,
+      "generated_vol_required": 3.5,
+      "escaped_vol_assumed": 0.0,
+      "serving_330ml": {
+        "co2_generated_mol": 0.05153,
+        "carbonate_g": 5.1575,
+        "citric_acid_g_stoich": 6.6001,
+        "cube_reactant_g": 11.7576,
+        "gas_generated_ml_STP": 1155.0,
+        "cation_mg": {
+          "Ca": 2065.3
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 2065.3,
+          "calcium_pct_thai_rdi": 206.5,
+          "calcium_good_source_gt15pct": true,
+          "calcium_high_ge30pct": true
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Ca": 1251.7
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 1251.7,
+          "calcium_pct_thai_rdi": 125.2,
+          "calcium_good_source_gt15pct": true,
+          "calcium_high_ge30pct": true
+        }
+      }
+    },
+    {
+      "choice": "CaCO3",
+      "retained_target_vol": 3.5,
+      "fraction_retained_assumed": 0.5,
+      "generated_vol_required": 7.0,
+      "escaped_vol_assumed": 3.5,
+      "serving_330ml": {
+        "co2_generated_mol": 0.103061,
+        "carbonate_g": 10.315,
+        "citric_acid_g_stoich": 13.2002,
+        "cube_reactant_g": 23.5153,
+        "gas_generated_ml_STP": 2310.0,
+        "cation_mg": {
+          "Ca": 4130.6
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 4130.6,
+          "calcium_pct_thai_rdi": 413.1,
+          "calcium_good_source_gt15pct": true,
+          "calcium_high_ge30pct": true
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Ca": 2503.4
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 2503.4,
+          "calcium_pct_thai_rdi": 250.3,
+          "calcium_good_source_gt15pct": true,
+          "calcium_high_ge30pct": true
+        }
+      }
+    },
+    {
+      "choice": "CaCO3",
+      "retained_target_vol": 3.5,
+      "fraction_retained_assumed": 0.25,
+      "generated_vol_required": 14.0,
+      "escaped_vol_assumed": 10.5,
+      "serving_330ml": {
+        "co2_generated_mol": 0.206121,
+        "carbonate_g": 20.6301,
+        "citric_acid_g_stoich": 26.4004,
+        "cube_reactant_g": 47.0305,
+        "gas_generated_ml_STP": 4620.0,
+        "cation_mg": {
+          "Ca": 8261.1
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 8261.1,
+          "calcium_pct_thai_rdi": 826.1,
+          "calcium_good_source_gt15pct": true,
+          "calcium_high_ge30pct": true
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Ca": 5006.7
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 0.0,
+          "sodium_mg_per_100ml": 0.0,
+          "sodium_free_claim_table1_lt5mg": true,
+          "sodium_very_low_claim_table1_lt35mg": true,
+          "sodium_low_claim_table1_lt140mg": true,
+          "sodium_low_claim_table2_le60mg_per_100ml": true,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 5006.7,
+          "calcium_pct_thai_rdi": 500.7,
+          "calcium_good_source_gt15pct": true,
+          "calcium_high_ge30pct": true
+        }
+      }
+    },
+    {
+      "choice": "NaHCO3_KHCO3_50_50",
+      "retained_target_vol": 1.5,
+      "fraction_retained_assumed": 1.0,
+      "generated_vol_required": 1.5,
+      "escaped_vol_assumed": 0.0,
+      "serving_330ml": {
+        "co2_generated_mol": 0.022084,
+        "carbonate_g": 2.0331,
+        "citric_acid_g_stoich": 1.4143,
+        "cube_reactant_g": 3.4474,
+        "gas_generated_ml_STP": 495.0,
+        "cation_mg": {
+          "Na": 253.9,
+          "K": 431.7
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 253.9,
+          "sodium_mg_per_100ml": 76.9,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 431.7,
+          "potassium_pct_thai_rdi": 12.3,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Na": 153.9,
+          "K": 261.7
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 153.9,
+          "sodium_mg_per_100ml": 76.9,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 261.7,
+          "potassium_pct_thai_rdi": 7.5,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "NaHCO3_KHCO3_50_50",
+      "retained_target_vol": 1.5,
+      "fraction_retained_assumed": 0.5,
+      "generated_vol_required": 3.0,
+      "escaped_vol_assumed": 1.5,
+      "serving_330ml": {
+        "co2_generated_mol": 0.044169,
+        "carbonate_g": 4.0662,
+        "citric_acid_g_stoich": 2.8286,
+        "cube_reactant_g": 6.8948,
+        "gas_generated_ml_STP": 990.0,
+        "cation_mg": {
+          "Na": 507.7,
+          "K": 863.5
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 507.7,
+          "sodium_mg_per_100ml": 153.9,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 863.5,
+          "potassium_pct_thai_rdi": 24.7,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Na": 307.7,
+          "K": 523.3
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 307.7,
+          "sodium_mg_per_100ml": 153.9,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 523.3,
+          "potassium_pct_thai_rdi": 15.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "NaHCO3_KHCO3_50_50",
+      "retained_target_vol": 1.5,
+      "fraction_retained_assumed": 0.25,
+      "generated_vol_required": 6.0,
+      "escaped_vol_assumed": 4.5,
+      "serving_330ml": {
+        "co2_generated_mol": 0.088338,
+        "carbonate_g": 8.1324,
+        "citric_acid_g_stoich": 5.6572,
+        "cube_reactant_g": 13.7897,
+        "gas_generated_ml_STP": 1980.0,
+        "cation_mg": {
+          "Na": 1015.4,
+          "K": 1727.0
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 1015.4,
+          "sodium_mg_per_100ml": 307.7,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 1727.0,
+          "potassium_pct_thai_rdi": 49.3,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": true,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Na": 615.4,
+          "K": 1046.6
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 615.4,
+          "sodium_mg_per_100ml": 307.7,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 1046.6,
+          "potassium_pct_thai_rdi": 29.9,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "NaHCO3_KHCO3_50_50",
+      "retained_target_vol": 2.0,
+      "fraction_retained_assumed": 1.0,
+      "generated_vol_required": 2.0,
+      "escaped_vol_assumed": 0.0,
+      "serving_330ml": {
+        "co2_generated_mol": 0.029446,
+        "carbonate_g": 2.7108,
+        "citric_acid_g_stoich": 1.8857,
+        "cube_reactant_g": 4.5966,
+        "gas_generated_ml_STP": 660.0,
+        "cation_mg": {
+          "Na": 338.5,
+          "K": 575.7
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 338.5,
+          "sodium_mg_per_100ml": 102.6,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 575.7,
+          "potassium_pct_thai_rdi": 16.4,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Na": 205.1,
+          "K": 348.9
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 205.1,
+          "sodium_mg_per_100ml": 102.6,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": false,
+          "potassium_mg": 348.9,
+          "potassium_pct_thai_rdi": 10.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "NaHCO3_KHCO3_50_50",
+      "retained_target_vol": 2.0,
+      "fraction_retained_assumed": 0.5,
+      "generated_vol_required": 4.0,
+      "escaped_vol_assumed": 2.0,
+      "serving_330ml": {
+        "co2_generated_mol": 0.058892,
+        "carbonate_g": 5.4216,
+        "citric_acid_g_stoich": 3.7715,
+        "cube_reactant_g": 9.1931,
+        "gas_generated_ml_STP": 1320.0,
+        "cation_mg": {
+          "Na": 677.0,
+          "K": 1151.3
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 677.0,
+          "sodium_mg_per_100ml": 205.1,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 1151.3,
+          "potassium_pct_thai_rdi": 32.9,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": true,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Na": 410.3,
+          "K": 697.8
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 410.3,
+          "sodium_mg_per_100ml": 205.1,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 697.8,
+          "potassium_pct_thai_rdi": 19.9,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "NaHCO3_KHCO3_50_50",
+      "retained_target_vol": 2.0,
+      "fraction_retained_assumed": 0.25,
+      "generated_vol_required": 8.0,
+      "escaped_vol_assumed": 6.0,
+      "serving_330ml": {
+        "co2_generated_mol": 0.117784,
+        "carbonate_g": 10.8432,
+        "citric_acid_g_stoich": 7.543,
+        "cube_reactant_g": 18.3862,
+        "gas_generated_ml_STP": 2640.0,
+        "cation_mg": {
+          "Na": 1353.9,
+          "K": 2302.6
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 1353.9,
+          "sodium_mg_per_100ml": 410.3,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 2302.6,
+          "potassium_pct_thai_rdi": 65.8,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": true,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Na": 820.6,
+          "K": 1395.5
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 820.6,
+          "sodium_mg_per_100ml": 410.3,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 1395.5,
+          "potassium_pct_thai_rdi": 39.9,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": true,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "NaHCO3_KHCO3_50_50",
+      "retained_target_vol": 3.5,
+      "fraction_retained_assumed": 1.0,
+      "generated_vol_required": 3.5,
+      "escaped_vol_assumed": 0.0,
+      "serving_330ml": {
+        "co2_generated_mol": 0.05153,
+        "carbonate_g": 4.7439,
+        "citric_acid_g_stoich": 3.3001,
+        "cube_reactant_g": 8.044,
+        "gas_generated_ml_STP": 1155.0,
+        "cation_mg": {
+          "Na": 592.3,
+          "K": 1007.4
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 592.3,
+          "sodium_mg_per_100ml": 179.5,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 1007.4,
+          "potassium_pct_thai_rdi": 28.8,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Na": 359.0,
+          "K": 610.5
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 359.0,
+          "sodium_mg_per_100ml": 179.5,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 610.5,
+          "potassium_pct_thai_rdi": 17.4,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "NaHCO3_KHCO3_50_50",
+      "retained_target_vol": 3.5,
+      "fraction_retained_assumed": 0.5,
+      "generated_vol_required": 7.0,
+      "escaped_vol_assumed": 3.5,
+      "serving_330ml": {
+        "co2_generated_mol": 0.103061,
+        "carbonate_g": 9.4878,
+        "citric_acid_g_stoich": 6.6001,
+        "cube_reactant_g": 16.0879,
+        "gas_generated_ml_STP": 2310.0,
+        "cation_mg": {
+          "Na": 1184.7,
+          "K": 2014.8
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 1184.7,
+          "sodium_mg_per_100ml": 359.0,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 2014.8,
+          "potassium_pct_thai_rdi": 57.6,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": true,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Na": 718.0,
+          "K": 1221.1
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 718.0,
+          "sodium_mg_per_100ml": 359.0,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 1221.1,
+          "potassium_pct_thai_rdi": 34.9,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": true,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "NaHCO3_KHCO3_50_50",
+      "retained_target_vol": 3.5,
+      "fraction_retained_assumed": 0.25,
+      "generated_vol_required": 14.0,
+      "escaped_vol_assumed": 10.5,
+      "serving_330ml": {
+        "co2_generated_mol": 0.206121,
+        "carbonate_g": 18.9756,
+        "citric_acid_g_stoich": 13.2002,
+        "cube_reactant_g": 32.1759,
+        "gas_generated_ml_STP": 4620.0,
+        "cation_mg": {
+          "Na": 2369.4,
+          "K": 4029.6
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 2369.4,
+          "sodium_mg_per_100ml": 718.0,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 4029.6,
+          "potassium_pct_thai_rdi": 115.1,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": true,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Na": 1436.0,
+          "K": 2442.2
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 1436.0,
+          "sodium_mg_per_100ml": 718.0,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 2442.2,
+          "potassium_pct_thai_rdi": 69.8,
+          "potassium_good_source_gt15pct": true,
+          "potassium_high_ge30pct": true,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "Na2CO3",
+      "retained_target_vol": 1.5,
+      "fraction_retained_assumed": 1.0,
+      "generated_vol_required": 1.5,
+      "escaped_vol_assumed": 0.0,
+      "serving_330ml": {
+        "co2_generated_mol": 0.022084,
+        "carbonate_g": 2.3407,
+        "citric_acid_g_stoich": 2.8286,
+        "cube_reactant_g": 5.1693,
+        "gas_generated_ml_STP": 495.0,
+        "cation_mg": {
+          "Na": 1015.4
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 1015.4,
+          "sodium_mg_per_100ml": 307.7,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Na": 615.4
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 615.4,
+          "sodium_mg_per_100ml": 307.7,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "Na2CO3",
+      "retained_target_vol": 1.5,
+      "fraction_retained_assumed": 0.5,
+      "generated_vol_required": 3.0,
+      "escaped_vol_assumed": 1.5,
+      "serving_330ml": {
+        "co2_generated_mol": 0.044169,
+        "carbonate_g": 4.6814,
+        "citric_acid_g_stoich": 5.6572,
+        "cube_reactant_g": 10.3386,
+        "gas_generated_ml_STP": 990.0,
+        "cation_mg": {
+          "Na": 2030.9
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 2030.9,
+          "sodium_mg_per_100ml": 615.4,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Na": 1230.8
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 1230.8,
+          "sodium_mg_per_100ml": 615.4,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "Na2CO3",
+      "retained_target_vol": 1.5,
+      "fraction_retained_assumed": 0.25,
+      "generated_vol_required": 6.0,
+      "escaped_vol_assumed": 4.5,
+      "serving_330ml": {
+        "co2_generated_mol": 0.088338,
+        "carbonate_g": 9.3627,
+        "citric_acid_g_stoich": 11.3145,
+        "cube_reactant_g": 20.6772,
+        "gas_generated_ml_STP": 1980.0,
+        "cation_mg": {
+          "Na": 4061.8
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 4061.8,
+          "sodium_mg_per_100ml": 1230.8,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Na": 2461.7
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 2461.7,
+          "sodium_mg_per_100ml": 1230.8,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "Na2CO3",
+      "retained_target_vol": 2.0,
+      "fraction_retained_assumed": 1.0,
+      "generated_vol_required": 2.0,
+      "escaped_vol_assumed": 0.0,
+      "serving_330ml": {
+        "co2_generated_mol": 0.029446,
+        "carbonate_g": 3.1209,
+        "citric_acid_g_stoich": 3.7715,
+        "cube_reactant_g": 6.8924,
+        "gas_generated_ml_STP": 660.0,
+        "cation_mg": {
+          "Na": 1353.9
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 1353.9,
+          "sodium_mg_per_100ml": 410.3,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Na": 820.6
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 820.6,
+          "sodium_mg_per_100ml": 410.3,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "Na2CO3",
+      "retained_target_vol": 2.0,
+      "fraction_retained_assumed": 0.5,
+      "generated_vol_required": 4.0,
+      "escaped_vol_assumed": 2.0,
+      "serving_330ml": {
+        "co2_generated_mol": 0.058892,
+        "carbonate_g": 6.2418,
+        "citric_acid_g_stoich": 7.543,
+        "cube_reactant_g": 13.7848,
+        "gas_generated_ml_STP": 1320.0,
+        "cation_mg": {
+          "Na": 2707.8
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 2707.8,
+          "sodium_mg_per_100ml": 820.6,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Na": 1641.1
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 1641.1,
+          "sodium_mg_per_100ml": 820.6,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "Na2CO3",
+      "retained_target_vol": 2.0,
+      "fraction_retained_assumed": 0.25,
+      "generated_vol_required": 8.0,
+      "escaped_vol_assumed": 6.0,
+      "serving_330ml": {
+        "co2_generated_mol": 0.117784,
+        "carbonate_g": 12.4837,
+        "citric_acid_g_stoich": 15.086,
+        "cube_reactant_g": 27.5696,
+        "gas_generated_ml_STP": 2640.0,
+        "cation_mg": {
+          "Na": 5415.7
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 5415.7,
+          "sodium_mg_per_100ml": 1641.1,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Na": 3282.2
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 3282.2,
+          "sodium_mg_per_100ml": 1641.1,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "Na2CO3",
+      "retained_target_vol": 3.5,
+      "fraction_retained_assumed": 1.0,
+      "generated_vol_required": 3.5,
+      "escaped_vol_assumed": 0.0,
+      "serving_330ml": {
+        "co2_generated_mol": 0.05153,
+        "carbonate_g": 5.4616,
+        "citric_acid_g_stoich": 6.6001,
+        "cube_reactant_g": 12.0617,
+        "gas_generated_ml_STP": 1155.0,
+        "cation_mg": {
+          "Na": 2369.4
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 2369.4,
+          "sodium_mg_per_100ml": 718.0,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Na": 1436.0
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 1436.0,
+          "sodium_mg_per_100ml": 718.0,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "Na2CO3",
+      "retained_target_vol": 3.5,
+      "fraction_retained_assumed": 0.5,
+      "generated_vol_required": 7.0,
+      "escaped_vol_assumed": 3.5,
+      "serving_330ml": {
+        "co2_generated_mol": 0.103061,
+        "carbonate_g": 10.9232,
+        "citric_acid_g_stoich": 13.2002,
+        "cube_reactant_g": 24.1234,
+        "gas_generated_ml_STP": 2310.0,
+        "cation_mg": {
+          "Na": 4738.7
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 4738.7,
+          "sodium_mg_per_100ml": 1436.0,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Na": 2872.0
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 2872.0,
+          "sodium_mg_per_100ml": 1436.0,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    },
+    {
+      "choice": "Na2CO3",
+      "retained_target_vol": 3.5,
+      "fraction_retained_assumed": 0.25,
+      "generated_vol_required": 14.0,
+      "escaped_vol_assumed": 10.5,
+      "serving_330ml": {
+        "co2_generated_mol": 0.206121,
+        "carbonate_g": 21.8464,
+        "citric_acid_g_stoich": 26.4004,
+        "cube_reactant_g": 48.2468,
+        "gas_generated_ml_STP": 4620.0,
+        "cation_mg": {
+          "Na": 9477.5
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 9477.5,
+          "sodium_mg_per_100ml": 2872.0,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      },
+      "reference_200ml": {
+        "cation_mg": {
+          "Na": 5743.9
+        },
+        "thai_check": {
+          "sodium_scope_note": "carbonate-derived sodium only; sodium in the base drink was not read",
+          "sodium_mg": 5743.9,
+          "sodium_mg_per_100ml": 2872.0,
+          "sodium_free_claim_table1_lt5mg": false,
+          "sodium_very_low_claim_table1_lt35mg": false,
+          "sodium_low_claim_table1_lt140mg": false,
+          "sodium_low_claim_table2_le60mg_per_100ml": false,
+          "sodium_disclosure_triggered_gt300mg": true,
+          "potassium_mg": 0.0,
+          "potassium_pct_thai_rdi": 0.0,
+          "potassium_good_source_gt15pct": false,
+          "potassium_high_ge30pct": false,
+          "calcium_mg": 0.0,
+          "calcium_pct_thai_rdi": 0.0,
+          "calcium_good_source_gt15pct": false,
+          "calcium_high_ge30pct": false
+        }
+      }
+    }
+  ],
+  "citric_excess_sensitivity_at_1.5vol_f1": [
+    {
+      "choice": "NaHCO3",
+      "citric_excess_fraction_assumed": 0.0,
+      "citric_acid_g_per_330ml_at_1.5vol_f1": 1.4143,
+      "cation_mg_unchanged": {
+        "Na": 507.7
+      }
+    },
+    {
+      "choice": "NaHCO3",
+      "citric_excess_fraction_assumed": 0.1,
+      "citric_acid_g_per_330ml_at_1.5vol_f1": 1.5557,
+      "cation_mg_unchanged": {
+        "Na": 507.7
+      }
+    },
+    {
+      "choice": "NaHCO3",
+      "citric_excess_fraction_assumed": 0.2,
+      "citric_acid_g_per_330ml_at_1.5vol_f1": 1.6972,
+      "cation_mg_unchanged": {
+        "Na": 507.7
+      }
+    },
+    {
+      "choice": "KHCO3",
+      "citric_excess_fraction_assumed": 0.0,
+      "citric_acid_g_per_330ml_at_1.5vol_f1": 1.4143,
+      "cation_mg_unchanged": {
+        "K": 863.5
+      }
+    },
+    {
+      "choice": "KHCO3",
+      "citric_excess_fraction_assumed": 0.1,
+      "citric_acid_g_per_330ml_at_1.5vol_f1": 1.5557,
+      "cation_mg_unchanged": {
+        "K": 863.5
+      }
+    },
+    {
+      "choice": "KHCO3",
+      "citric_excess_fraction_assumed": 0.2,
+      "citric_acid_g_per_330ml_at_1.5vol_f1": 1.6972,
+      "cation_mg_unchanged": {
+        "K": 863.5
+      }
+    },
+    {
+      "choice": "CaCO3",
+      "citric_excess_fraction_assumed": 0.0,
+      "citric_acid_g_per_330ml_at_1.5vol_f1": 2.8286,
+      "cation_mg_unchanged": {
+        "Ca": 885.1
+      }
+    },
+    {
+      "choice": "CaCO3",
+      "citric_excess_fraction_assumed": 0.1,
+      "citric_acid_g_per_330ml_at_1.5vol_f1": 3.1115,
+      "cation_mg_unchanged": {
+        "Ca": 885.1
+      }
+    },
+    {
+      "choice": "CaCO3",
+      "citric_excess_fraction_assumed": 0.2,
+      "citric_acid_g_per_330ml_at_1.5vol_f1": 3.3943,
+      "cation_mg_unchanged": {
+        "Ca": 885.1
+      }
+    },
+    {
+      "choice": "NaHCO3_KHCO3_50_50",
+      "citric_excess_fraction_assumed": 0.0,
+      "citric_acid_g_per_330ml_at_1.5vol_f1": 1.4143,
+      "cation_mg_unchanged": {
+        "Na": 253.9,
+        "K": 431.7
+      }
+    },
+    {
+      "choice": "NaHCO3_KHCO3_50_50",
+      "citric_excess_fraction_assumed": 0.1,
+      "citric_acid_g_per_330ml_at_1.5vol_f1": 1.5557,
+      "cation_mg_unchanged": {
+        "Na": 253.9,
+        "K": 431.7
+      }
+    },
+    {
+      "choice": "NaHCO3_KHCO3_50_50",
+      "citric_excess_fraction_assumed": 0.2,
+      "citric_acid_g_per_330ml_at_1.5vol_f1": 1.6972,
+      "cation_mg_unchanged": {
+        "Na": 253.9,
+        "K": 431.7
+      }
+    },
+    {
+      "choice": "Na2CO3",
+      "citric_excess_fraction_assumed": 0.0,
+      "citric_acid_g_per_330ml_at_1.5vol_f1": 2.8286,
+      "cation_mg_unchanged": {
+        "Na": 1015.4
+      }
+    },
+    {
+      "choice": "Na2CO3",
+      "citric_excess_fraction_assumed": 0.1,
+      "citric_acid_g_per_330ml_at_1.5vol_f1": 3.1115,
+      "cation_mg_unchanged": {
+        "Na": 1015.4
+      }
+    },
+    {
+      "choice": "Na2CO3",
+      "citric_excess_fraction_assumed": 0.2,
+      "citric_acid_g_per_330ml_at_1.5vol_f1": 3.3943,
+      "cation_mg_unchanged": {
+        "Na": 1015.4
+      }
+    }
+  ],
+  "volume_definition_sensitivity": [
+    {
+      "choice": "NaHCO3",
+      "cation_mg_ideal_22.414": {
+        "Na": 507.7
+      },
+      "cation_mg_real_density_22.26": {
+        "Na": 511.2
+      },
+      "difference_pct": 0.69
+    },
+    {
+      "choice": "KHCO3",
+      "cation_mg_ideal_22.414": {
+        "K": 863.5
+      },
+      "cation_mg_real_density_22.26": {
+        "K": 869.4
+      },
+      "difference_pct": 0.69
+    }
+  ],
+  "calcium_citrate_precipitation_check_CaCO3_route": {
+    "1.5": {
+      "calcium_mg_per_serving": 885.1,
+      "calcium_citrate_salt_g_per_serving": 3.669,
+      "calcium_citrate_g_per_L": 11.119,
+      "ratio_to_25C_solubility": 11.7,
+      "within_25C_solubility": false
+    },
+    "2.0": {
+      "calcium_mg_per_serving": 1180.2,
+      "calcium_citrate_salt_g_per_serving": 4.892,
+      "calcium_citrate_g_per_L": 14.825,
+      "ratio_to_25C_solubility": 15.61,
+      "within_25C_solubility": false
+    },
+    "3.5": {
+      "calcium_mg_per_serving": 2065.3,
+      "calcium_citrate_salt_g_per_serving": 8.561,
+      "calcium_citrate_g_per_L": 25.944,
+      "ratio_to_25C_solubility": 27.31,
+      "within_25C_solubility": false
+    },
+    "max_CO2_volumes_before_25C_saturation": 0.128
+  },
+  "ranking_at_usable_fizz_floor": {
+    "f_ret_1.0": {
+      "rows": [
+        {
+          "choice": "NaHCO3",
+          "sodium_mg_per_330ml": 507.7,
+          "potassium_mg_per_330ml": 0.0,
+          "calcium_mg_per_330ml": 0.0,
+          "cube_reactant_g_per_330ml": 3.2695,
+          "calcium_citrate_within_25C_solubility": true
+        },
+        {
+          "choice": "KHCO3",
+          "sodium_mg_per_330ml": 0.0,
+          "potassium_mg_per_330ml": 863.5,
+          "calcium_mg_per_330ml": 0.0,
+          "cube_reactant_g_per_330ml": 3.6253,
+          "calcium_citrate_within_25C_solubility": true
+        },
+        {
+          "choice": "CaCO3",
+          "sodium_mg_per_330ml": 0.0,
+          "potassium_mg_per_330ml": 0.0,
+          "calcium_mg_per_330ml": 885.1,
+          "cube_reactant_g_per_330ml": 5.039,
+          "calcium_citrate_within_25C_solubility": false
+        },
+        {
+          "choice": "NaHCO3_KHCO3_50_50",
+          "sodium_mg_per_330ml": 253.9,
+          "potassium_mg_per_330ml": 431.7,
+          "calcium_mg_per_330ml": 0.0,
+          "cube_reactant_g_per_330ml": 3.4474,
+          "calcium_citrate_within_25C_solubility": true
+        },
+        {
+          "choice": "Na2CO3",
+          "sodium_mg_per_330ml": 1015.4,
+          "potassium_mg_per_330ml": 0.0,
+          "calcium_mg_per_330ml": 0.0,
+          "cube_reactant_g_per_330ml": 5.1693,
+          "calcium_citrate_within_25C_solubility": true
+        }
+      ],
+      "lowest_sodium_passing_solubility": "KHCO3",
+      "lowest_sodium_value_mg": 0.0
+    },
+    "f_ret_0.5": {
+      "rows": [
+        {
+          "choice": "NaHCO3",
+          "sodium_mg_per_330ml": 1015.4,
+          "potassium_mg_per_330ml": 0.0,
+          "calcium_mg_per_330ml": 0.0,
+          "cube_reactant_g_per_330ml": 6.5391,
+          "calcium_citrate_within_25C_solubility": true
+        },
+        {
+          "choice": "KHCO3",
+          "sodium_mg_per_330ml": 0.0,
+          "potassium_mg_per_330ml": 1727.0,
+          "calcium_mg_per_330ml": 0.0,
+          "cube_reactant_g_per_330ml": 7.2506,
+          "calcium_citrate_within_25C_solubility": true
+        },
+        {
+          "choice": "CaCO3",
+          "sodium_mg_per_330ml": 0.0,
+          "potassium_mg_per_330ml": 0.0,
+          "calcium_mg_per_330ml": 1770.2,
+          "cube_reactant_g_per_330ml": 10.078,
+          "calcium_citrate_within_25C_solubility": false
+        },
+        {
+          "choice": "NaHCO3_KHCO3_50_50",
+          "sodium_mg_per_330ml": 507.7,
+          "potassium_mg_per_330ml": 863.5,
+          "calcium_mg_per_330ml": 0.0,
+          "cube_reactant_g_per_330ml": 6.8948,
+          "calcium_citrate_within_25C_solubility": true
+        },
+        {
+          "choice": "Na2CO3",
+          "sodium_mg_per_330ml": 2030.9,
+          "potassium_mg_per_330ml": 0.0,
+          "calcium_mg_per_330ml": 0.0,
+          "cube_reactant_g_per_330ml": 10.3386,
+          "calcium_citrate_within_25C_solubility": true
+        }
+      ],
+      "lowest_sodium_passing_solubility": "KHCO3",
+      "lowest_sodium_value_mg": 0.0
+    },
+    "f_ret_0.25": {
+      "rows": [
+        {
+          "choice": "NaHCO3",
+          "sodium_mg_per_330ml": 2030.9,
+          "potassium_mg_per_330ml": 0.0,
+          "calcium_mg_per_330ml": 0.0,
+          "cube_reactant_g_per_330ml": 13.0781,
+          "calcium_citrate_within_25C_solubility": true
+        },
+        {
+          "choice": "KHCO3",
+          "sodium_mg_per_330ml": 0.0,
+          "potassium_mg_per_330ml": 3453.9,
+          "calcium_mg_per_330ml": 0.0,
+          "cube_reactant_g_per_330ml": 14.5012,
+          "calcium_citrate_within_25C_solubility": true
+        },
+        {
+          "choice": "CaCO3",
+          "sodium_mg_per_330ml": 0.0,
+          "potassium_mg_per_330ml": 0.0,
+          "calcium_mg_per_330ml": 3540.5,
+          "cube_reactant_g_per_330ml": 20.1559,
+          "calcium_citrate_within_25C_solubility": false
+        },
+        {
+          "choice": "NaHCO3_KHCO3_50_50",
+          "sodium_mg_per_330ml": 1015.4,
+          "potassium_mg_per_330ml": 1727.0,
+          "calcium_mg_per_330ml": 0.0,
+          "cube_reactant_g_per_330ml": 13.7897,
+          "calcium_citrate_within_25C_solubility": true
+        },
+        {
+          "choice": "Na2CO3",
+          "sodium_mg_per_330ml": 4061.8,
+          "potassium_mg_per_330ml": 0.0,
+          "calcium_mg_per_330ml": 0.0,
+          "cube_reactant_g_per_330ml": 20.6772,
+          "calcium_citrate_within_25C_solubility": true
+        }
+      ],
+      "lowest_sodium_passing_solubility": "KHCO3",
+      "lowest_sodium_value_mg": 0.0
+    }
+  },
+  "public_price_cost_derived": {
+    "prices": {
+      "sodium_bicarbonate_food_grade_Mizae": {
+        "price_baht": 99.0,
+        "pack_g": 750.0,
+        "label": "Mizae PURE Food Grade baking soda, sodium bicarbonate 100 percent, 750 g",
+        "source": "makro_pro_potassium_bicarbonate_search",
+        "status": "public price (read 2026-10-18; shown without login)"
+      },
+      "citric_acid_McGarrett_pack": {
+        "price_baht": 95.0,
+        "pack_g": 200.0,
+        "label": "McGarrett citric acid (lemon acid) 100 g, pack of 2 (200 g total)",
+        "source": "makro_pro_citric_acid_search",
+        "status": "public price (read 2026-10-18; shown without login)"
+      },
+      "sodium_bicarbonate_McGarrett_1kg": {
+        "price_baht": 107.0,
+        "pack_g": 1000.0,
+        "label": "McGarrett Baking Soda 1 kg (baking soda; food-grade status not stated)",
+        "source": "makro_pro_sodium_bicarbonate_search",
+        "status": "public price (read 2026-10-18; shown without login)"
+      }
+    },
+    "price_per_g_baht": {
+      "sodium_bicarbonate_food_grade_Mizae": 0.132,
+      "citric_acid_McGarrett_pack": 0.475,
+      "sodium_bicarbonate_McGarrett_1kg": 0.107
+    },
+    "rows": [
+      {
+        "choice": "NaHCO3",
+        "retained_target_vol": 1.5,
+        "fraction_retained_assumed": 1.0,
+        "carbonate_g": 1.8552,
+        "carbonate_baht_public_price_derived": 0.245,
+        "citric_acid_g": 1.4143,
+        "citric_acid_baht_public_price_derived": 0.672,
+        "ingredient_total_baht_derived": 0.917,
+        "scope": "ingredient only; excludes tablet forming, packaging, flavour, sweetener, freight and margin"
+      },
+      {
+        "choice": "NaHCO3",
+        "retained_target_vol": 2.0,
+        "fraction_retained_assumed": 1.0,
+        "carbonate_g": 2.4736,
+        "carbonate_baht_public_price_derived": 0.327,
+        "citric_acid_g": 1.8857,
+        "citric_acid_baht_public_price_derived": 0.896,
+        "ingredient_total_baht_derived": 1.222,
+        "scope": "ingredient only; excludes tablet forming, packaging, flavour, sweetener, freight and margin"
+      },
+      {
+        "choice": "NaHCO3",
+        "retained_target_vol": 3.5,
+        "fraction_retained_assumed": 1.0,
+        "carbonate_g": 4.3289,
+        "carbonate_baht_public_price_derived": 0.571,
+        "citric_acid_g": 3.3001,
+        "citric_acid_baht_public_price_derived": 1.568,
+        "ingredient_total_baht_derived": 2.139,
+        "scope": "ingredient only; excludes tablet forming, packaging, flavour, sweetener, freight and margin"
+      },
+      {
+        "choice": "KHCO3",
+        "cost": "none (no potassium bicarbonate on the first page of the Makro PRO search)"
+      },
+      {
+        "choice": "CaCO3",
+        "cost": "none (no food-grade calcium carbonate on the first page of the Makro PRO search)"
+      }
+    ]
+  },
+  "verdict": {
+    "lowest_sodium_at_usable_fizz": "Potassium bicarbonate (KHCO3) with citric acid. The carbonate itself delivers 0 mg sodium. At the 1.5 volume floor and full retention it delivers 864 mg potassium per 330 ml (24.7 percent of Thai RDI). Calcium carbonate also delivers 0 mg sodium, but calcium citrate reaches its 25 C solubility at about 0.13 volumes, so the calcium route cannot reach the 1.5 volume floor without precipitate.",
+    "sodium_based_routes_at_1.5vol": {
+      "NaHCO3_f1": 507.7,
+      "NaHCO3_f0.5": 1015.4,
+      "NaHCO3_f0.25": 2030.9,
+      "NaHCO3_KHCO3_blend_f1": 253.9,
+      "Na2CO3_f1": 1015.4
+    },
+    "sodium_scales_with_1_over_f_retained": true,
+    "thai_claim_consequence": "Sodium-bicarbonate routes exceed the 140 mg low-sodium limit per 330 ml at every usable target (508 mg at 1.5 volumes, full retention), and exceed 300 mg per 200 ml reference serving at 1.5 volumes, which triggers the sodium disclosure rule. The potassium route has 0 mg carbonate sodium. Its potassium is 24.7 percent of Thai RDI per 330 ml and 15.0 percent per 200 ml at 1.5 volumes (good source needs more than 15 percent; high needs at least 30 percent). At 2.0 volumes it is 32.9 percent per 330 ml (high per 330 ml) and 19.9 percent per 200 ml. Potassium is printed on the Thai nutrition panel.",
+    "reading_caveat": "The dual-basis wording of Table 1 (reference serving and consumed serving) is read here as: both must hold. A Thai adviser must confirm it.",
+    "bench_test_first": [
+      "Dissolved CO2 at 4 C and 25 C in open glass, sampled at 0, 30, 60 and 120 s (f_ret per carbonate). This is the measurement that replaces the f_ret assumption.",
+      "Gas yield per cube in a closed flask by mass loss, against stoichiometry (confirms 3 CO2 per citric acid for bicarbonate and 3 CO2 per 2 citric acid for carbonate).",
+      "Cation content per serving by ICP-OES or flame photometry (Na, K, Ca), with the base drink's own sodium measured separately.",
+      "Calcium route only: visible precipitate or turbidity after 24 h at 4 C.",
+      "Pass rule to be set before the run by the team; no rule is set in this screen."
+    ]
+  },
+  "open_items": [
+    "Base drink sodium (Singha Sparkling Water Lime label not read). The sodium-free claim for the potassium route depends on it.",
+    "Dual-basis reading of Thai Table 1 (reference serving and consumed serving) needs a Thai adviser.",
+    "Whether a dissolvable cube is classed as a food under the nutrition-labelling rules, or under another category, is not settled here.",
+    "f_ret (fraction of generated CO2 still dissolved at serving) is assumed, not measured. Every sodium and potassium figure scales as 1/f_ret.",
+    "Calcium citrate solubility at 4 C is not sourced. The 25 C value is used. Acid, pH and other solutes in a flavoured drink may change it.",
+    "Potassium bicarbonate price: none found. Calcium carbonate price: none found on Makro PRO first page. Lazada and PubChem were not read.",
+    "Potassium citrate solubility is not sourced. Potassium citrate concentration is not checked against solubility.",
+    "Henry's law is taken linear from 1 atm to the required pressure. The real pressure dependence is not checked.",
+    "Thai Notification 447 and 445 text was read in English translation. The Thai text is authoritative and was not read.",
+    "Healthier Choice logo beverage sugar limit (5 g per 100 ml) is a logo scheme, not a claim rule. Not applied here."
+  ],
+  "limits": [
+    "Lazada: navigation denied or failed in Claude Browser; not read.",
+    "PubChem: bot check on WebFetch; not bypassed; molar masses taken from Wikipedia.",
+    "Makro PRO: prices shown without login, but the page says accurate prices need login; login not used; prices are public prices only.",
+    "Potassium bicarbonate and food-grade calcium carbonate: not found on the first search page of Makro PRO.",
+    "Snippet-only sources (sodium intake, Kantar, Singha claim, Euromonitor) are marked unverified."
+  ]
+}

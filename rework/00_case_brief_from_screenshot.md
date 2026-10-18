@@ -1,5 +1,7 @@
 # Case brief: from the competition screenshot only
 
+> **Decision, 18 October 2026:** the three components are **not** expected. One component is enough, with no restriction on the entry's scope beyond the claim set in [rework/51](51_final_conclusion_and_recommendation.md). This replaces the page 2 reading below. See [rework/52](52_pivot_and_retirement.md).
+
 Source: the Singha University post for the SINGHA ULTIMATE CHALLENGE 2026 (Facebook, dated 17 September), attached as a screenshot. This is the only case statement. The team's workspace corpus (Singha.docx and Singha.md) is team working material, not the case, and nothing in this brief is taken from it.
 
 ## What the brief says (translated from the Thai text)

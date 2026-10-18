@@ -1,5 +1,7 @@
 # Submission draft: PENDED (18 October 2026)
 
+> **Retired 18 October 2026** with candidate A, the leaf-wrapped drink. Not for the lime cube. Kept as the record of the pended draft. See [rework/52](52_pivot_and_retirement.md).
+
 **Pended by the user.** This file holds the submission-facing material moved out of the team conclusion (rework/06). Do not use it until the user says "pending decisions" or asks for the submission. The deadline is 22 October 2026 at 23:59.
 
 ## Slide 1: the brief

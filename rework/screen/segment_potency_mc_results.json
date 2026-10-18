@@ -1,0 +1,74 @@
+{
+  "seed": 20261018,
+  "draws": 20000,
+  "bands": [
+    "15-24",
+    "25-34",
+    "35-44",
+    "45-59",
+    "60+"
+  ],
+  "median_index_scaled_to_top_100": {
+    "15-24": 34.568156636377026,
+    "25-34": 77.71884245420313,
+    "35-44": 74.71177047647654,
+    "45-59": 100.00000000000001,
+    "60+": 35.631287014011576
+  },
+  "p05_scaled": {
+    "15-24": 25.815175645515122,
+    "25-34": 59.48375790215099,
+    "35-44": 57.47740555275511,
+    "45-59": 76.20484398227974,
+    "60+": 25.395500163727544
+  },
+  "p95_scaled": {
+    "15-24": 45.258868934632915,
+    "25-34": 97.05860738620058,
+    "35-44": 92.75081375649789,
+    "45-59": 125.41288804878592,
+    "60+": 48.86387006200619
+  },
+  "probability_rank_1": {
+    "15-24": 0.0,
+    "25-34": 0.0,
+    "35-44": 0.0,
+    "45-59": 1.0,
+    "60+": 0.0
+  },
+  "probability_top_2": {
+    "15-24": 0.0,
+    "25-34": 0.73805,
+    "35-44": 0.26195,
+    "45-59": 1.0,
+    "60+": 0.0
+  },
+  "top_band_by_median": "45-59",
+  "second_band": "25-34",
+  "sensitivity_correlation_with_top_over_second_ratio": {
+    "or_per_year": 0.7539814123367398,
+    "sugar_45-59": 0.7073932311131513,
+    "sugar_25-34": -0.6955974308639314,
+    "alc_45-59": 0.4730079201537484,
+    "alc_25-34": -0.4258382456032786,
+    "pop_25-34": -0.0650665051355778,
+    "pop_45-59": 0.05987639683008344,
+    "reach_45-59": 0.03614537450553534,
+    "reach_25-34": 0.028437762716563866
+  },
+  "central_check_index_raw": {
+    "15-24": 259498.2333019218,
+    "25-34": 578568.4544361982,
+    "35-44": 556210.8600835785,
+    "45-59": 745869.4914097503,
+    "60+": 269490.17692565656
+  },
+  "assumptions": [
+    "Fit weight uniform 0.6 to 1.0 (no evidence; largest unevidenced input).",
+    "Online channel share uniform 0.1 to 0.5 (no evidence).",
+    "Alcohol 2024 range +/-3 points (no published interval).",
+    "Sugar age gradient extrapolated to 15-24 and 60+ from the 25-59 pooled survey.",
+    "Alcohol-occasion proxy: current drinking share (not a measure of alcohol-alternative demand).",
+    "Segments are independent across the three propensity inputs (no joint data)."
+  ]
+}

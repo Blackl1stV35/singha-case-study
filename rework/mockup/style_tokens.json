@@ -1,0 +1,94 @@
+{
+  "basis": {
+    "colour": "ASSUMPTION (design choice). Lime, deep ink and warm off-white are not verified brand colours. No Singha colour is verified (48 section 4.2).",
+    "background": "ASSUMPTION (design choice).",
+    "type": "ASSUMPTION (design choice). Sarabun is our choice; the organiser's typeface was not read (48 section 5.1). Sizes, weights and line heights are ASSUMPTION.",
+    "layout": "ASSUMPTION (design choice). The grid, gutters and bands are ours (48 section 5.5)."
+  },
+  "colour": {
+    "lime": "#9ED83A",
+    "lime-deep": "#5C9A12",
+    "lime-pale": "#E3F3BE",
+    "ink": "#12241B",
+    "ink-soft": "#3A5246",
+    "off-white": "#F6F3E8",
+    "off-white-deep": "#E6E0CB"
+  },
+  "type": {
+    "family": "'Sarabun', 'Noto Sans Thai', Arial, sans-serif",
+    "pack-trade-name": "font-size: 3.8mm; font-weight: 800; line-height: 1.1",
+    "pack-type-name": "font-size: 2.4mm; font-weight: 600; line-height: 1.1",
+    "pack-particulars": "font-size: 2.2mm; font-weight: 400; line-height: 1.3",
+    "pack-nutrition": "font-size: 2.2mm; font-weight: 400; line-height: 1.3",
+    "web-headline": "font-size: 48px; font-weight: 800; line-height: 1.05",
+    "web-body": "font-size: 16px; font-weight: 400; line-height: 1.5",
+    "web-label": "font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase"
+  },
+  "layout": {
+    "grid": "Pack front: 12 columns over a 62 mm live width (4 mm side margins), column 3.33 mm. Web: 12 columns at desktop width.",
+    "gutter": "Pack front: 2 mm. Web: 24 px at desktop width, 16 px side gutter at phone width with no horizontal scroll.",
+    "bands": "Pack front: top band about 8 mm for the name line; middle band for the cube; bottom band for particulars and placeholders."
+  },
+  "dimensions_mm": {
+    "cube_side": {
+      "value": 15,
+      "basis": "ASSUMPTION (derived design value). Design dose at 1.75 volumes: 4.23 g of reactants per 330 ml (KHCO3 2.58 g and citric acid 1.65 g, from the gate simulation; the earlier 1.5-volume figure of 3.63 g is superseded). Excipient, flavour, sweetener and excess citric masses are ASSUMPTION. Design mass 5.28 g gives an implied density of 1.56 g/cm3 at 15 mm. The density band 1.25 to 1.60 g/cm3 is ASSUMPTION; the high end of the mass range (5.8 g) gives 1.72 g/cm3, above that band (48 section 6.4)."
+    },
+    "pack_w": {
+      "value": 70,
+      "basis": "ASSUMPTION (design choice). Front 70 x 90 mm = 63 cm2, under the 80 cm2 limit for format 1.3 (Notification 445 Annex 1). No pouch converter quote. Fallback 80 mm width (72 cm2) if the name line does not fit."
+    },
+    "pack_h": {
+      "value": 90,
+      "basis": "ASSUMPTION (design choice), as pack_w. Seal allowance is ASSUMPTION."
+    },
+    "pack_d": {
+      "value": 20,
+      "basis": "ASSUMPTION: 15 mm cube plus about 2.5 mm of film and seal allowance per face. No film, seal or sealant specification is sourced."
+    }
+  },
+  "copy_front": [
+    "Plunk Lime Cube · lime flavour drink cube",
+    "Drop one cube into 330 ml of water and stir.",
+    "Serving: 1 cube made up to 330 ml",
+    "Single-serve pouch",
+    "Contains an intensive sweetener: [specific name to be set]",
+    "Net weight: [x] g"
+  ],
+  "copy_back": [
+    "Thai-language particulars: [to be set]",
+    "Ingredients: [to be set]",
+    "Potassium: present. Amount per serving: [to be set]",
+    "Sweetener: [functional class and specific name to be set]",
+    "Flavour: [natural or artificial] flavour added [origin to be set]",
+    "Preparation: dissolve one cube in 330 ml of water.",
+    "Storage: keep dry and sealed.",
+    "Should consume by: [to be set]",
+    "Food serial number: [to be issued by the authority]",
+    "Manufacturer or importer: [name, address and country to be set]",
+    "Information for food allergy: [to be confirmed]",
+    "Nutrition information: [to be set]"
+  ],
+  "held_back": [
+    "Any sugar wording (sugar-free, zero sugar, no added sugar, low sugar, sugarless): settled rule S1.",
+    "Sodium-free, low sodium, no sodium, salt-free: pending the Thai text check and a water basis.",
+    "Sodium figure (under 5 mg) and potassium amount (about 1,007 mg at the 1.75-volume design dose): held until the salt choice is fixed and an adviser decides whether a bare figure triggers the full nutrition panel. The potassium presence line is printed as a plain fact; its amount is a placeholder.",
+    "Total sugars 0 g panel line: held with the panel; an adviser must confirm it does not read as a sugar-free claim (S1).",
+    "Potassium benefit (muscle, heart, hydration, electrolyte) and source-of-potassium wording: rules 2 and 3.",
+    "Health or function wording (hydration, immunity, energy, digestion, healthy): rule 2.",
+    "Fizz wording (fizz, fizzy, sparkling, effervescent, bubbles, releases CO2) and bubble imagery: not measured (S2).",
+    "Calorie wording (low calorie, zero calorie): no energy value sourced.",
+    "Alcohol cues (cocktail, mocktail, gin, spritz, tonic, beer, bar, happy hour), amber or gold liquid, bottle shapes, glassware, bar settings and night-out scenes: excluded on every occasion (working note 03).",
+    "Organiser name, logo, lion emblem, royal insignia, wordmark and the organiser's public sparkling product name: competition rule and rule R7.",
+    "Organiser campaign taglines and campaign artwork: not reused, not paraphrased.",
+    "Lab-tested, clinically tested, patented, approved, certified or Thai FDA approved wording: S2, S3, G5.",
+    "Novelty wording (first, new, world-first, innovative): rule R5.",
+    "Lime fruit imagery or made-with-real-lime wording: no juice in the formulation (Notification 450 clauses 4(1) and 4(3)).",
+    "Natural flavour claim: pending the Thai text and a flavour origin; shown only as a bracketed choice.",
+    "Recyclable, compostable or plastic-free pouch wording: no source (D-P1).",
+    "Vegan, halal, gluten-free, keto or any certification: no source.",
+    "Trade mark symbol or registered-mark text: trademark status not checked, so no mark is shown.",
+    "Launch price, sales channel and can size: the organiser's launch facts, not this product's facts."
+  ],
+  "background": "#DCE5D1"
+}

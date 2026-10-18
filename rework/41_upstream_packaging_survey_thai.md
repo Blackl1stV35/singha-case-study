@@ -1,5 +1,7 @@
 # Upstream packaging survey, Thailand domestic (18 October 2026)
 
+> **Retired for candidates A and B, 18 October 2026.** Decision D-P1 (inner PET pouch, migration verified in [rework/32](32_pet_compliance.md)) carries forward to the lime cube pouch, which still needs a film and seal specification. See [rework/52](52_pivot_and_retirement.md).
+
 Status: survey complete and track closed with limits. Sixteen agents ran: five tracks, two verification checks per track, and one completeness critic. Raw output: [raw/wue7aai6h_packaging_survey.json](raw/wue7aai6h_packaging_survey.json).
 
 Scope: Thailand domestic only. Singapore and Korea items are removed, including the BCRS fee, Korea tariffs and sugar levy, container freight and export listings. Products: A, the leaf-wrapped frozen drink with a PET inner pouch (working design). B, the 250 ml UHT soy drink, which is not advanced (rework/40, decision D1).

@@ -45,10 +45,20 @@ Mass sensitivity at h = 10: 0.14 kg gives 1.1 h to 50% and 2.0 h to 100%. 0.20 k
 | C4 | Film arm: no leaks through full thaw | Physical | Zero leaks | Leaks → redesign the seal |
 | C5 | Decision: plastic-free claim | Decision | Keep the claim only if C3 passes | If C3 fails and C4 passes, drop the plastic-free claim (film is plastic) |
 
+## Virtual close (18 October 2026, after the physical test was removed)
+
+The physical test will not happen. C2 to C5 are closed virtually in [16_permeability_seam_estimate.md](16_permeability_seam_estimate.md):
+
+- **C3 (leaf-only):** closed as a decision. The leaf-only design is not proven, because cut edges in contact with melt water wick the wrap in minutes (D2 and D3).
+- **C4 (film arm):** closed as a decision. A continuous film passes the liquid screen (D4).
+- **C5 (plastic-free claim):** closed as dropped (D5). The product is described as leaf-wrapped.
+- **C1 and C2 (thaw trace and window):** the thaw screen shows a fully liquid pop at 30 °C takes 1.7 to 4.9 h, so the window needs the measured heat-transfer coefficient. Closed as a limit: the window is set from the screen, not from a trace.
+- **Remaining limits (not closed virtually):** freeze-damage permeability (L1) and seam strength (L2). These are disclosed in the proposal.
+
 ## Gates
 
 - **Gate 0 (done today):** desk checks, criteria set, thaw screen. No kill on thaw timing. Leakage not screened.
-- **Gate 1 (pended):** C1 to C5 on 30 pops, two arms, plus the thermocouple trace.
+- **Gate 1 (closed virtually, 18 October):** C1 to C5 closed as above. No physical test will be run.
 - **Gate 2 (pended):** consumer test of the slush and the leaf wrap.
 
 ## Limits

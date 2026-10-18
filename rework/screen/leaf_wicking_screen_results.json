@@ -1,0 +1,82 @@
+{
+  "critical_radius_m": 1.6037223506074717e-07,
+  "paths": [
+    {
+      "path": "intact cuticle pore, low (ivy-type, analogue)",
+      "radius_m": 3e-10,
+      "theta_deg": 76.08,
+      "basis": "analogue, cuticle",
+      "height_2h_m": 0.004325098837236809,
+      "time_to_wrap_s": 3848933.6414579325,
+      "leak_path": false
+    },
+    {
+      "path": "intact cuticle pore, high (coffee-type, analogue)",
+      "radius_m": 2e-09,
+      "theta_deg": 76.08,
+      "basis": "analogue, cuticle",
+      "height_2h_m": 0.011167357178212815,
+      "time_to_wrap_s": 577340.0462186899,
+      "leak_path": false
+    },
+    {
+      "path": "exposed vessel, narrow (sycamore-type, analogue)",
+      "radius_m": 2.75e-06,
+      "theta_deg": 76.08,
+      "basis": "analogue, vessel",
+      "height_2h_m": 0.4140966870495939,
+      "time_to_wrap_s": 419.883669977229,
+      "leak_path": true
+    },
+    {
+      "path": "exposed vessel, wide (petiole-type, analogue)",
+      "radius_m": 1.25e-05,
+      "theta_deg": 76.08,
+      "basis": "analogue, vessel",
+      "height_2h_m": 0.8828571031945844,
+      "time_to_wrap_s": 92.37440739499037,
+      "leak_path": true
+    },
+    {
+      "path": "intact cuticle, abaxial surface (measured angle)",
+      "radius_m": 2e-09,
+      "theta_deg": 94.32,
+      "basis": "measured angle",
+      "height_2h_m": 0.0,
+      "time_to_wrap_s": null,
+      "leak_path": false
+    }
+  ],
+  "sensitivity": [
+    {
+      "eta_Pa_s": 0.001,
+      "theta_deg": 60.0,
+      "r_crit_m": 7.716049382716048e-08
+    },
+    {
+      "eta_Pa_s": 0.001,
+      "theta_deg": 76.08,
+      "r_crit_m": 1.6037223506074717e-07
+    },
+    {
+      "eta_Pa_s": 0.002,
+      "theta_deg": 60.0,
+      "r_crit_m": 1.5432098765432096e-07
+    },
+    {
+      "eta_Pa_s": 0.002,
+      "theta_deg": 76.08,
+      "r_crit_m": 3.2074447012149434e-07
+    },
+    {
+      "eta_Pa_s": 0.003,
+      "theta_deg": 60.0,
+      "r_crit_m": 2.3148148148148148e-07
+    },
+    {
+      "eta_Pa_s": 0.003,
+      "theta_deg": 76.08,
+      "r_crit_m": 4.811167051822415e-07
+    }
+  ]
+}

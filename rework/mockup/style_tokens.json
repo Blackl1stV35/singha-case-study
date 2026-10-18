@@ -90,5 +90,11 @@
     "Trade mark symbol or registered-mark text: trademark status not checked, so no mark is shown.",
     "Launch price, sales channel and can size: the organiser's launch facts, not this product's facts."
   ],
-  "background": "#DCE5D1"
+  "background": "#DCE5D1",
+  "type_system": {
+    "display": "Georgia Bold (installed). Product name only. Matches the flared-serif character of the SINGHA wordmark, which stays as artwork.",
+    "text": "Leelawadee UI regular and bold (installed). All copy. Covers Latin and Thai.",
+    "wordmark": "The SINGHA lion emblem and wordmark are reproduced from the supplied artwork and are not re-typeset.",
+    "minimum_legal_size_note": "Keep the legal particulars at or above the sizes in the layout section; check cap height before print."
+  }
 }

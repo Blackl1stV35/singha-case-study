@@ -64,10 +64,19 @@ BRACKET = re.compile(r"\[[^\]]*\]")
 _font_cache = {}
 
 
-def font(bold, size):
-    key = (bold, size)
+# Packaging type system (18 October 2026): Georgia Bold for the product name (flared serifs, closest
+# installed match to the SINGHA wordmark character; the wordmark itself stays as artwork), and Leelawadee
+# UI for all copy, which covers Latin and Thai.
+DISPLAY_BOLD = r"C:\Windows\Fonts\georgiab.ttf"
+TEXT_REG = r"C:\Windows\Fonts\leelawad.ttf"
+TEXT_BOLD = r"C:\Windows\Fonts\leelawdb.ttf"
+
+
+def font(bold, size, display=False):
+    key = (bold, size, display)
     if key not in _font_cache:
-        _font_cache[key] = ImageFont.truetype(FONT_BOLD if bold else FONT_REG, size)
+        path = DISPLAY_BOLD if display else (TEXT_BOLD if bold else TEXT_REG)
+        _font_cache[key] = ImageFont.truetype(path, size)
     return _font_cache[key]
 
 
@@ -192,7 +201,7 @@ def name_line(p, text, band_h, ink, max_w=None):
     size = 150
     limit = max_w or (W - 2 * MARGIN)
     while True:
-        ft = font(True, size)
+        ft = font(True, size, display=True)
         fs = font(True, round(size * 2.4 / 3.8))
         gap = ft.getlength(" ")
         width = ft.getlength(trade) + gap + fs.getlength(type_str)

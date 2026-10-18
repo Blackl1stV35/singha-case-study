@@ -46,3 +46,9 @@ The 2K maps were resized to 1024 × 1024 with Lanczos resampling. The archives, 
 - The pop materials changed. Dimensions, lights and backdrop are unchanged.
 - The still camera now starts from the video's first key (0.75 m, 300°, z 0.13, 85 mm). The earlier still camera sat at about 0.57 m and cropped the pack; the 1080p still now frames the whole pop.
 - The 4K marketing video (rework/13) was rendered with the earlier placeholder materials and has not been re-rendered.
+
+## 6. Leaf optics sourced after the lock (not applied to the render)
+
+Resolved 18 October 2026 (see `rework/22_thailand_inputs.md`, section 6). Banana single-leaf values from Gausman and Allen (1973), Tables III to V, derived with the single-layer Kubelka–Munk form: diffuse reflectance 10.5 % and transmittance 12.0 % at 550 nm; reflectance 6.0 % and transmittance 0.69 % at 650 nm. Fresh leaf thickness 0.241 mm (measured).
+
+The mockup is locked at commit `f03dcfe`, so these values are recorded here and not applied. Applying the 12 % transmittance would replace the subsurface assumption in section 1, and would require a new still and your approval. Pandan optics and the cuticle roughness remain unsourced.

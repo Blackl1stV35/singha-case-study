@@ -130,7 +130,7 @@ NOMINAL_X = dict(t_mean=31.5, amp=4.3, G_peak=800.0, alpha=0.75, f_geom=0.40, h_
                  T_plat=-1.3, h_box=8.0,
                  # Thai summer occasions: afternoon peak 35.7 C; diurnal mean/amplitude as above
                  fest_mean=31.5, fest_amp=4.3, fest_peak=35.7, G_fest=800.0, h_calm=10.7, splash_frac=0.2,
-                 h_water=300.0, T_water=26.0, bath_T1=3.0, cabin_dT_fest=23.0)
+                 h_water=300.0, T_water=29.3, bath_T1=3.0, cabin_dT_fest=23.0)
 
 
 def sample_x(rng):

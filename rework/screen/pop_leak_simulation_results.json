@@ -1,0 +1,79 @@
+{
+  "assumptions": {
+    "core_radius_m": 0.019,
+    "ambient_C": 30.0,
+    "start_C": -18.0,
+    "window_s": 7200.0,
+    "wrap_height_m": 0.1
+  },
+  "nominal_h10": {
+    "N8": {
+      "t_wet_s": 776.2269176136465,
+      "t50_s": 5501.532315340429,
+      "t100_s": 11752.370383519023,
+      "dt_s": 0.6409801136363635
+    },
+    "N16": {
+      "t_wet_s": 775.7461825284223,
+      "t50_s": 5509.224076702293,
+      "t100_s": 11804.129527713865,
+      "dt_s": 0.16024502840909088
+    },
+    "lumped_screen_t100_h": 2.47,
+    "grid_convergence_t100_diff_pct": -0.44
+  },
+  "monte_carlo": {
+    "n": 200,
+    "fraction_never_wets_within_3h": 0.0,
+    "t_wet_h": {
+      "p5": 0.1583421539772071,
+      "median": 0.21528660411532796,
+      "p95": 0.33226595601567827
+    },
+    "t50_h": {
+      "median": 1.463703679020497
+    },
+    "t100_h": {
+      "p5": null,
+      "median": null,
+      "p95": null
+    },
+    "design_A_exposed_vessel_leak_probability": 1.0,
+    "design_B_critical_damaged_radius_m": {
+      "p5": 1.3966494303630196e-07,
+      "median": 2.390052788050501e-07,
+      "p95": 4.4792929372399743e-07
+    },
+    "design_B_leak_probability_vs_damaged_radius": [
+      {
+        "r_d_m": 1e-08,
+        "P_leak": 0.0
+      },
+      {
+        "r_d_m": 3e-08,
+        "P_leak": 0.0
+      },
+      {
+        "r_d_m": 1e-07,
+        "P_leak": 0.005
+      },
+      {
+        "r_d_m": 3e-07,
+        "P_leak": 0.715
+      },
+      {
+        "r_d_m": 1e-06,
+        "P_leak": 1.0
+      },
+      {
+        "r_d_m": 3e-06,
+        "P_leak": 1.0
+      },
+      {
+        "r_d_m": 1e-05,
+        "P_leak": 1.0
+      }
+    ],
+    "design_C_film_leak_probability": 0.0
+  }
+}

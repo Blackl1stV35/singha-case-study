@@ -1,6 +1,6 @@
 # Innovative Bev & Bite: team conclusion (18 October 2026)
 
-Status: team conclusion. All evidence is virtual: no physical, taste or consumer test is in scope. Submission-facing text is held separately and is pended (see rework/27).
+Status: team conclusion. Evidence is virtual, except one approved physical test: the dye-penetration test on leaf-only wraps (rework/33, approved 18 October, not yet run). Submission-facing text is held separately and is pended (see rework/27).
 
 ## Decisions
 

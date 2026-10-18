@@ -94,7 +94,7 @@ story += bullets([
     "<b>Hot-season use conditions:</b> keep the pop in an insulated box with gel packs, keep it out of ice water, and eat it within about an hour when it is in full sun. These go in the product instructions. They do not go on the label until a Thai registration adviser confirms the classification.",
     "<b>Product classification for holding rules:</b> treat the product as a non-heat ready-to-eat beverage. Thai rules then require below 5 °C, or no more than 2 hours at room temperature, when sold from food premises.",
     "<b>After thaw (spoilage):</b> eat within 2 hours of leaving the freezer, and within about 1 hour in full sun. Do not refreeze. Keep the wrap dry and out of standing water. Spoilage needs about 6 to 12 h at 30 C (rework/28), so the Thai 2-hour limit is the operative one. Pathogens: one contaminating cell reaches the hazard in about 6 to 27 h at 30 C, but a serving that starts at the hazard level is unsafe at once. Production control (a validated kill step or pathogen-free raw material) is therefore required (rework/29).",
-    "<b>Physical tests:</b> none in scope. The screen is virtual, and the damaged-path size stays a documented limit.",
+    "<b>Physical test (approved 18 October):</b> a dye-penetration test on leaf-only wraps (rework/33), with 300 wraps and a pre-registered pass rule. The leaf-only option is approved for testing; the working design stays the barrier until the result is in. The test has not yet been run.",
 ])
 
 story.append(P("2. The product", H2))
@@ -240,7 +240,7 @@ story.append(table([
     ["Condensate on packaged frozen food", "Closed (physics assumption)", "Mass transfer gives about 15 g/m2/min uncapped; the 90 um cap is reached in about 6 to 22 min. The screen uses the dew-point film rule."],
     ["Leaf contact angle (76 vs 130 degrees)", "Closed (physics)", "Intact wax does not wick; damaged paths at 76 degrees do. The outside-water rows apply to damaged paths."],
     ["Product classification (beverage or ice cream)", "Working assumption", "Treated as a non-heat ready-to-eat beverage, pending a Thai registration adviser. If classed as ice cream, the −2.2 C storage rule applies instead."],
-    ["Physical leak tests", "Closed (out of scope)", "Not in scope, by team decision."],
+    ["Physical leak test: leaf-only wrap (rework/33)", "Open (approved, not yet run)", "Dye-penetration on 300 wraps, controls included. Pass if zero leaks. Lab run needed."],
     ["Unknown parameters (drink, damage, stomata, process)", "Closed (physics)", "Resolved in rework/30: water activity 0.995, pH 6.3, lag from h0 = 2. Leaf-only seal not supported; inner barrier is the working design."],
     ["Percolation of damage (rework/31)", "Closed (physics)", "Connected airspace network adopted. Leaf-only seal survives only below about 1e-8 damaged cells; 50 percent leak near 3 to 5 x 1e-7."],
     ["Taste of inner barrier (rework/31)", "Closed (physics)", "PE and PP scalp aroma completely; PET takes up about 0.2 percent in 2 h. PET selected; EVOH the alternative."],

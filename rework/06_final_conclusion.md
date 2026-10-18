@@ -10,6 +10,7 @@ Status: team conclusion. All evidence is virtual: no physical, taste or consumer
 - **Fallback:** the same drink in a continuous inner film, labelled not plastic-free. It is held as a documented fallback. Nothing in the virtual screens calls for it.
 - **Hot-season use:** keep in an insulated box with gel packs, keep out of ice water, and eat within about an hour in full sun. These go in the product instructions. They go on the label only after a Thai registration check.
 - **Holding rule:** the product is treated as a non-heat ready-to-eat beverage (working assumption, pending registration check). Thai food-premises rules then require below 5 °C, or no more than 2 hours at room temperature.
+- **After thaw:** eat within 2 hours of leaving the freezer, and within about an hour in full sun. Do not refreeze. Keep the wrap dry and out of standing water. Spoilage screen: rework/28.
 - **Ranking:** A (above) is primary. B (midlife isoflavone soy drink) is second-ranked and conditional on a regulator's written confirmation. C (the reframed non-alcoholic Thai-herb drink) is dropped, because its viability and unit cost are both open.
 
 ## Virtual evidence
@@ -41,3 +42,4 @@ Status: team conclusion. All evidence is virtual: no physical, taste or consumer
 - The damaged-path size is not measured. The screens report thresholds, not probabilities.
 - The leaf in the render is a generic photo, not confirmed as banana or pandan.
 - Whether the product is legally a beverage or an ice cream is a registration question. The screen uses the stricter beverage rule.
+- Spoilage is screened for spoilage organisms only (about 6 to 12 h at 30 C for a sealed drink). Pathogen growth after temperature abuse is not modelled; the Thai 2-hour and 5 °C rules are the safeguard.

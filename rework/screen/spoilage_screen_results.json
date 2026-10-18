@@ -1,0 +1,361 @@
+{
+  "assumptions": {
+    "ratkowsky_Tmin_C": 0.0,
+    "ratkowsky_Tmax_C": 45.0,
+    "ratkowsky_c": 0.2,
+    "spoil_log10_CFU_per_mL": 7.0,
+    "mu30_cases_per_h": {
+      "conservative (doubling 21 min)": 2.0,
+      "slower (doubling 42 min)": 1.0
+    },
+    "start_log10_CFU_per_mL": {
+      "sealed, 1e2 CFU/mL": 2.0,
+      "outside water wicked in, 1e4 CFU/mL": 4.0
+    },
+    "temperature_proxy": "mean of core and surface temperature from the thermal screen",
+    "lag_phase": "ignored (conservative)"
+  },
+  "scenarios": {
+    "S1": {
+      "label": "Street stall, shade, hot-season day",
+      "window_h": 6.0,
+      "external_wet_h": 2.5000004932127493,
+      "growth": {
+        "conservative (doubling 21 min)": {
+          "sealed, 1e2 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 3.49
+          },
+          "outside water wicked in, 1e4 CFU/mL": {
+            "hours_to_spoilage": 5.5,
+            "log10_growth_at_window_end": 3.49
+          }
+        },
+        "slower (doubling 42 min)": {
+          "sealed, 1e2 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 1.74
+          },
+          "outside water wicked in, 1e4 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 1.74
+          }
+        }
+      }
+    },
+    "S2": {
+      "label": "Street stall, full sun, hot-season day",
+      "window_h": 6.0,
+      "external_wet_h": 1.6667263454859063,
+      "growth": {
+        "conservative (doubling 21 min)": {
+          "sealed, 1e2 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.85
+          },
+          "outside water wicked in, 1e4 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.85
+          }
+        },
+        "slower (doubling 42 min)": {
+          "sealed, 1e2 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.43
+          },
+          "outside water wicked in, 1e4 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.43
+          }
+        }
+      }
+    },
+    "S3": {
+      "label": "Parked car, closed, 2 h",
+      "window_h": 2.0,
+      "external_wet_h": null,
+      "growth": {
+        "conservative (doubling 21 min)": {
+          "sealed, 1e2 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.27
+          },
+          "outside water wicked in, 1e4 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.27
+          }
+        },
+        "slower (doubling 42 min)": {
+          "sealed, 1e2 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.13
+          },
+          "outside water wicked in, 1e4 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.13
+          }
+        }
+      }
+    },
+    "S4": {
+      "label": "Insulated box + gel packs, motorbike, 3 h",
+      "window_h": 3.0,
+      "external_wet_h": null,
+      "growth": {
+        "conservative (doubling 21 min)": {
+          "sealed, 1e2 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.0
+          },
+          "outside water wicked in, 1e4 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.0
+          }
+        },
+        "slower (doubling 42 min)": {
+          "sealed, 1e2 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.0
+          },
+          "outside water wicked in, 1e4 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.0
+          }
+        }
+      }
+    },
+    "S5": {
+      "label": "Extreme 40 C day, full sun, bare pop",
+      "window_h": 6.0,
+      "external_wet_h": null,
+      "growth": {
+        "conservative (doubling 21 min)": {
+          "sealed, 1e2 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.66
+          },
+          "outside water wicked in, 1e4 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.66
+          }
+        },
+        "slower (doubling 42 min)": {
+          "sealed, 1e2 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.33
+          },
+          "outside water wicked in, 1e4 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.33
+          }
+        }
+      }
+    },
+    "S7": {
+      "label": "Home freezer outage, 28 C kitchen",
+      "window_h": 6.0,
+      "external_wet_h": null,
+      "growth": {
+        "conservative (doubling 21 min)": {
+          "sealed, 1e2 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 1.4
+          },
+          "outside water wicked in, 1e4 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 1.4
+          }
+        },
+        "slower (doubling 42 min)": {
+          "sealed, 1e2 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.7
+          },
+          "outside water wicked in, 1e4 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.7
+          }
+        }
+      }
+    },
+    "SU1": {
+      "label": "Festival stall in sun, hot afternoon, 3 h",
+      "window_h": 3.0,
+      "external_wet_h": 1.583398930713222,
+      "growth": {
+        "conservative (doubling 21 min)": {
+          "sealed, 1e2 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.79
+          },
+          "outside water wicked in, 1e4 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.79
+          }
+        },
+        "slower (doubling 42 min)": {
+          "sealed, 1e2 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.39
+          },
+          "outside water wicked in, 1e4 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.39
+          }
+        }
+      }
+    },
+    "SU2": {
+      "label": "Songkran street stall, splash-wetted, 2 h",
+      "window_h": 2.0,
+      "external_wet_h": 2.0,
+      "growth": {
+        "conservative (doubling 21 min)": {
+          "sealed, 1e2 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 1.01
+          },
+          "outside water wicked in, 1e4 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 1.01
+          }
+        },
+        "slower (doubling 42 min)": {
+          "sealed, 1e2 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.51
+          },
+          "outside water wicked in, 1e4 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.51
+          }
+        }
+      }
+    },
+    "SU3": {
+      "label": "Ice-water cooler at a picnic, 4 h",
+      "window_h": 4.0,
+      "external_wet_h": 4.0,
+      "growth": {
+        "conservative (doubling 21 min)": {
+          "sealed, 1e2 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.0
+          },
+          "outside water wicked in, 1e4 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.0
+          }
+        },
+        "slower (doubling 42 min)": {
+          "sealed, 1e2 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.0
+          },
+          "outside water wicked in, 1e4 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.0
+          }
+        }
+      }
+    },
+    "SU4": {
+      "label": "Insulated cooler with gel packs at a festival, 4 h",
+      "window_h": 4.0,
+      "external_wet_h": 0.0,
+      "growth": {
+        "conservative (doubling 21 min)": {
+          "sealed, 1e2 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.0
+          },
+          "outside water wicked in, 1e4 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.0
+          }
+        },
+        "slower (doubling 42 min)": {
+          "sealed, 1e2 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.0
+          },
+          "outside water wicked in, 1e4 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.0
+          }
+        }
+      }
+    },
+    "SU5": {
+      "label": "Parked car at a festival lot, 3 h",
+      "window_h": 3.0,
+      "external_wet_h": 1.7500537602585906,
+      "growth": {
+        "conservative (doubling 21 min)": {
+          "sealed, 1e2 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.6
+          },
+          "outside water wicked in, 1e4 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.6
+          }
+        },
+        "slower (doubling 42 min)": {
+          "sealed, 1e2 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.3
+          },
+          "outside water wicked in, 1e4 CFU/mL": {
+            "hours_to_spoilage": null,
+            "log10_growth_at_window_end": 0.3
+          }
+        }
+      }
+    }
+  },
+  "constant_temperature_hours_to_spoilage": {
+    "5 C": {
+      "conservative (doubling 21 min) | sealed, 1e2 CFU/mL": 187.24,
+      "conservative (doubling 21 min) | outside water wicked in, 1e4 CFU/mL": 112.34,
+      "slower (doubling 42 min) | sealed, 1e2 CFU/mL": 374.47,
+      "slower (doubling 42 min) | outside water wicked in, 1e4 CFU/mL": 224.68
+    },
+    "10 C": {
+      "conservative (doubling 21 min) | sealed, 1e2 CFU/mL": 46.86,
+      "conservative (doubling 21 min) | outside water wicked in, 1e4 CFU/mL": 28.12,
+      "slower (doubling 42 min) | sealed, 1e2 CFU/mL": 93.73,
+      "slower (doubling 42 min) | outside water wicked in, 1e4 CFU/mL": 56.24
+    },
+    "20 C": {
+      "conservative (doubling 21 min) | sealed, 1e2 CFU/mL": 11.85,
+      "conservative (doubling 21 min) | outside water wicked in, 1e4 CFU/mL": 7.11,
+      "slower (doubling 42 min) | sealed, 1e2 CFU/mL": 23.71,
+      "slower (doubling 42 min) | outside water wicked in, 1e4 CFU/mL": 14.22
+    },
+    "25 C": {
+      "conservative (doubling 21 min) | sealed, 1e2 CFU/mL": 7.77,
+      "conservative (doubling 21 min) | outside water wicked in, 1e4 CFU/mL": 4.66,
+      "slower (doubling 42 min) | sealed, 1e2 CFU/mL": 15.53,
+      "slower (doubling 42 min) | outside water wicked in, 1e4 CFU/mL": 9.32
+    },
+    "30 C": {
+      "conservative (doubling 21 min) | sealed, 1e2 CFU/mL": 5.76,
+      "conservative (doubling 21 min) | outside water wicked in, 1e4 CFU/mL": 3.45,
+      "slower (doubling 42 min) | sealed, 1e2 CFU/mL": 11.51,
+      "slower (doubling 42 min) | outside water wicked in, 1e4 CFU/mL": 6.91
+    },
+    "35 C": {
+      "conservative (doubling 21 min) | sealed, 1e2 CFU/mL": 5.11,
+      "conservative (doubling 21 min) | outside water wicked in, 1e4 CFU/mL": 3.06,
+      "slower (doubling 42 min) | sealed, 1e2 CFU/mL": 10.22,
+      "slower (doubling 42 min) | outside water wicked in, 1e4 CFU/mL": 6.13
+    },
+    "40 C": {
+      "conservative (doubling 21 min) | sealed, 1e2 CFU/mL": 7.32,
+      "conservative (doubling 21 min) | outside water wicked in, 1e4 CFU/mL": 4.39,
+      "slower (doubling 42 min) | sealed, 1e2 CFU/mL": 14.63,
+      "slower (doubling 42 min) | outside water wicked in, 1e4 CFU/mL": 8.78
+    }
+  }
+}

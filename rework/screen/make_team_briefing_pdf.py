@@ -93,6 +93,7 @@ story += bullets([
     "<b>Novelty claim:</b> a leaf-wrapped frozen drink eaten peel-and-sip as it thaws. No such drink was found in the extended search. One leaf-wrapped frozen ice-cream bar is a disclosed precedent (section 3).",
     "<b>Hot-season use conditions:</b> keep the pop in an insulated box with gel packs, keep it out of ice water, and eat it within about an hour when it is in full sun. These go in the product instructions. They do not go on the label until a Thai registration adviser confirms the classification.",
     "<b>Product classification for holding rules:</b> treat the product as a non-heat ready-to-eat beverage. Thai rules then require below 5 °C, or no more than 2 hours at room temperature, when sold from food premises.",
+    "<b>After thaw (spoilage):</b> eat within 2 hours of leaving the freezer, and within about 1 hour in full sun. Do not refreeze. Keep the wrap dry and out of standing water. Spoilage needs about 6 to 12 h at 30 C (rework/28), so the Thai 2-hour limit is the operative one. Pathogens are not modelled.",
     "<b>Physical tests:</b> none in scope. The screen is virtual, and the damaged-path size stays a documented limit.",
 ])
 
@@ -240,6 +241,7 @@ story.append(table([
     ["Leaf contact angle (76 vs 130 degrees)", "Closed (physics)", "Intact wax does not wick; damaged paths at 76 degrees do. The outside-water rows apply to damaged paths."],
     ["Product classification (beverage or ice cream)", "Working assumption", "Treated as a non-heat ready-to-eat beverage, pending a Thai registration adviser. If classed as ice cream, the −2.2 C storage rule applies instead."],
     ["Physical leak tests", "Closed (out of scope)", "Not in scope, by team decision."],
+    ["Spoilage after thaw (rotten condition)", "Closed (physics screen)", "Growth screen: sealed drink spoils in about 6 to 12 h at 30 C; contaminated, in about 3.5 to 7 h. Pathogens not modelled; the 2-hour rule governs. Rules in rework/28."],
 ], [58 * mm, 40 * mm, 76 * mm]))
 
 story.append(Spacer(1, 6))

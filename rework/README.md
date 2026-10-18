@@ -65,6 +65,5 @@ The numbering has gaps (35 to 39) because those numbers were never used.
 
 ## Open items
 
-- The 4K product still is not rendered. The machine did not have the memory headroom for it on 18 October. The scene defaults to 3840 by 2160 but has not yet produced an output.
 - Trademark rights are authorized by the user for the product proposal. The registry search stays partial and is recorded as a stated limit. See [54](54_package_redesign_vs_singha_can.md).
 - The textures in `archive/leaf_wrapped_mockup/textures/` came from earlier downloads whose approval is not on record.

@@ -1,6 +1,6 @@
 # Pivot to the lime cube, retirements and confirmed decisions (18 October 2026)
 
-Status: the user confirmed these decisions on 18 October 2026. The repo is merged to `main` locally, and nothing is pushed. Nothing has been registered, submitted or sent outside the team. The competition closes on 22 October 2026 at 23:59.
+Status: the user confirmed these decisions on 18 October 2026. The repo is merged to `main` locally, and nothing is pushed. Nothing has been registered, submitted or sent outside the team.
 
 ## 1. Decisions confirmed
 

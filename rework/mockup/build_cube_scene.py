@@ -8,8 +8,8 @@ Options:
     --out PATH       output PNG (required)
     --label PATH     front artwork (default: label_front.png beside this script)
     --tokens PATH    style tokens (default: style_tokens.json beside this script)
-    --width N        default 1600
-    --height N       default 1200
+    --width N        default 2560
+    --height N       default 1440
     --samples N      default 128 (use 64 if a render would run past the time limit)
 
 Scene: a single-serve pouch of the stated size and one lime compressed cube resting on the
@@ -26,17 +26,19 @@ rendering choice with no measured or published source behind it.
 
 A1  Pack width and height, 70 x 90 mm: ASSUMPTION (design choice), read from dimensions_mm
     in the tokens file (pack_w, pack_h). The 20 mm depth is an ASSUMPTION recorded there.
-A2  Pack edge bevel 2.5 mm. Heat-seal ridges along the top and bottom, 4 mm tall, the full
-    pack depth, bevelled 1.2 mm. ASSUMPTION.
-A3  Pack film finish: off-white token, roughness 0.35. Seal ridges: off-white-deep token,
-    roughness 0.30. The colours are ASSUMPTION (design choice); the finish is ASSUMPTION.
-A4  Front artwork: label_front.png shown at its own 2:1 aspect, 65 mm wide and 32.5 mm tall,
-    centred on the front face. The artwork is landscape and the pack front is portrait, so it
-    is contained, not stretched. The 65 mm width keeps it on the flat part of the front face,
-    inside the edge bevel. ASSUMPTION (layout).
+A2  Pouch: a pillow shape, 70 x 90 mm, 20 mm deep. Each face bulges from a flat seal flange 1 mm
+    thick to 10 mm from the centre plane. The bulge rises over 6 mm from the side seals and 7 mm
+    from the top and bottom seals. The seal crimp is simplified to that flange. ASSUMPTION (shape).
+A3  Pouch film: off-white token, roughness 0.25, IOR 1.575 (PET, sourced), with a fine
+    micro-texture. The label is printed on the front face only. The colours are ASSUMPTION
+    (design choice).
+A4  Front artwork: label_front.png wrapped over the whole front face, 70 x 90 mm. The artwork is
+    1050 by 1350 px, the same portrait proportion, so it is not stretched; the script stops if the
+    aspects differ. ASSUMPTION (layout).
 A5  Cube: 15 mm side, DERIVED from ASSUMPTION inputs (48 section 6.1). Colour: lime token,
-    ASSUMPTION (design choice). A 1.5 mm edge bevel, roughness 0.55 and a fine noise bump
-    stand in for a compressed surface: ASSUMPTION. Rotated 18 degrees about Z only, so the
+    ASSUMPTION (design choice). A 3 mm edge bevel in 6 segments and one level of subdivision give
+    a pressed, rounded surface. Roughness 0.75 and a fine noise bump add a granular finish:
+    ASSUMPTION. Rotated 18 degrees about Z only, so the
     base sits flat on the floor, its centre 7.5 mm above the floor, beside the pouch:
     ASSUMPTION (staging).
 A6  Cyclorama and matte floor: background token colour, roughness 0.95, curve radius 120 mm.
@@ -82,6 +84,9 @@ CUBE_X_MM = 26.0     # cube centre, right of the pouch
 CUBE_Z_MM = 7.5      # cube centre height: half the 15 mm side, so the base rests on the floor
 TARGET_MM = (-20.0, 0.0, 60.0)      # centred on the pouch and the cube together
 CAMERA_MM = (-20.0, -550.0, 200.0)
+CAMERA_FRONT_MM = (-20.0, -520.0, 45.0)  # straight-on, at pack height
+TARGET_FRONT_MM = (-20.0, 0.0, 45.0)
+ARGS_VIEW = "front"  # set from the command line in main()
 
 
 def parse_args():
@@ -90,9 +95,11 @@ def parse_args():
     p.add_argument("--out", required=True, help="output PNG path")
     p.add_argument("--label", default=os.path.join(HERE, "label_front.png"))
     p.add_argument("--tokens", default=os.path.join(HERE, "style_tokens.json"))
-    p.add_argument("--width", type=int, default=3840)
-    p.add_argument("--height", type=int, default=2160)
+    p.add_argument("--width", type=int, default=2560)
+    p.add_argument("--height", type=int, default=1440)
     p.add_argument("--samples", type=int, default=128)
+    p.add_argument("--view", choices=["hero", "front"], default="front",
+                   help="front: straight-on product view; hero: three-quarter composition")
     p.add_argument("--exposure", type=float, default=-1.2,
                    help="view exposure in stops, set so the backdrop matches the background token")
     return p.parse_args(argv)
@@ -167,26 +174,6 @@ def box_mesh(name, centre_mm, size_mm, bevel_mm=0.0, segments=3, rot_deg=(0.0, 0
     return mesh
 
 
-def label_plane_mesh(name, centre_x_mm, centre_z_mm, width_mm, height_mm, y_mm):
-    """Quad facing -Y (toward the camera), UV 0..1 across the artwork."""
-    bm = bmesh.new()
-    x0 = (centre_x_mm - width_mm / 2) * MM
-    x1 = (centre_x_mm + width_mm / 2) * MM
-    z0 = (centre_z_mm - height_mm / 2) * MM
-    z1 = (centre_z_mm + height_mm / 2) * MM
-    y = y_mm * MM
-    verts = [bm.verts.new((x0, y, z0)), bm.verts.new((x1, y, z0)),
-             bm.verts.new((x1, y, z1)), bm.verts.new((x0, y, z1))]
-    face = bm.faces.new(verts)
-    uv = bm.loops.layers.uv.new("UVMap")
-    for loop, uv_pair in zip(face.loops, [(0, 0), (1, 0), (1, 1), (0, 1)]):
-        loop[uv].uv = uv_pair
-    mesh = bpy.data.meshes.new(name)
-    bm.to_mesh(mesh)
-    bm.free()
-    return mesh
-
-
 def cyclorama_mesh(name, half_width_m=1.2):
     """Floor, a curved cove and a back wall, extruded across X. Quads wind so normals face up and forward."""
     prof = [(-1.2, 0.0), (0.04, 0.0)]
@@ -218,10 +205,10 @@ def build_materials(tok, label_img):
     body_mat, body_bsdf = principled("PackFilm", lin["off-white"], 0.25, {"IOR": 1.575})
     # Fine micro-texture for a printed laminate (ASSUMPTION: strength and scale, no measured source).
     film_noise = body_mat.node_tree.nodes.new("ShaderNodeTexNoise")
-    film_noise.inputs["Scale"].default_value = 900.0
-    film_noise.inputs["Detail"].default_value = 2.0
+    film_noise.inputs["Scale"].default_value = 1400.0
+    film_noise.inputs["Detail"].default_value = 4.0
     film_bump = body_mat.node_tree.nodes.new("ShaderNodeBump")
-    film_bump.inputs["Strength"].default_value = 0.04
+    film_bump.inputs["Strength"].default_value = 0.07
     film_bump.inputs["Distance"].default_value = 0.0003
     body_mat.node_tree.links.new(film_noise.outputs["Fac"], film_bump.inputs["Height"])
     body_mat.node_tree.links.new(film_bump.outputs["Normal"], body_bsdf.inputs["Normal"])
@@ -239,10 +226,10 @@ def build_materials(tok, label_img):
                                      {"Subsurface Weight": 0.10,
                                       "Subsurface Radius": (0.003, 0.002, 0.0015)})
     noise = cube_mat.node_tree.nodes.new("ShaderNodeTexNoise")
-    noise.inputs["Scale"].default_value = 600.0
-    noise.inputs["Detail"].default_value = 3.0
+    noise.inputs["Scale"].default_value = 260.0
+    noise.inputs["Detail"].default_value = 6.0
     bump = cube_mat.node_tree.nodes.new("ShaderNodeBump")
-    bump.inputs["Strength"].default_value = 0.25
+    bump.inputs["Strength"].default_value = 0.35
     bump.inputs["Distance"].default_value = 0.0005
     cube_mat.node_tree.links.new(noise.outputs["Fac"], bump.inputs["Height"])
     cube_mat.node_tree.links.new(bump.outputs["Normal"], cube_bsdf.inputs["Normal"])
@@ -253,34 +240,89 @@ def build_materials(tok, label_img):
     return mats
 
 
+PILLOW_EDGE_MM = 1.0     # ASSUMPTION: flange thickness at the seal line, each face
+SEAL_SIDE_MM = 6.0       # ASSUMPTION: width over which a face bulges up from a side seal
+SEAL_TOP_MM = 7.0        # ASSUMPTION: same, from the top and bottom seals
+GRID_U, GRID_V = 60, 80  # mesh resolution across the width and the height of the pouch
+
+
+def smooth01(t):
+    t = min(max(t, 0.0), 1.0)
+    return t * t * (3.0 - 2.0 * t)
+
+
+def pillow_half_thickness(xd_mm, zd_mm, half_depth_mm):
+    """Distance of a face from the centre plane, at xd_mm from the side seal and zd_mm from the top or bottom seal."""
+    bulge = math.sqrt(smooth01(xd_mm / SEAL_SIDE_MM) * smooth01(zd_mm / SEAL_TOP_MM))
+    return PILLOW_EDGE_MM + (half_depth_mm - PILLOW_EDGE_MM) * bulge
+
+
+def pillow_mesh(name, w, h, half_depth, cx):
+    """Closed pillow pouch: front and back faces bulge from a flat seal flange, joined by a rim.
+    Material 1 (label) is the front face with UV 0..1 across the whole face; material 0 is the film."""
+    bm = bmesh.new()
+    uv = bm.loops.layers.uv.new("UVMap")
+    front, back, grid_uv = {}, {}, {}
+    for i in range(GRID_U + 1):
+        u = i / GRID_U
+        xd = min(u, 1.0 - u) * w
+        x = (cx + (u - 0.5) * w) * MM
+        for j in range(GRID_V + 1):
+            v = j / GRID_V
+            zd = min(v, 1.0 - v) * h
+            t = pillow_half_thickness(xd, zd, half_depth) * MM
+            z = v * h * MM
+            front[i, j] = bm.verts.new((x, -t, z))
+            back[i, j] = bm.verts.new((x, t, z))
+            grid_uv[front[i, j]] = (u, v)
+    faces = []
+    for i in range(GRID_U):
+        for j in range(GRID_V):
+            quad = [(i, j), (i + 1, j), (i + 1, j + 1), (i, j + 1)]
+            faces.append(([front[k] for k in quad], 1))
+            faces.append(([back[k] for k in quad], 0))
+    ring = ([(i, 0) for i in range(GRID_U)] + [(GRID_U, j) for j in range(GRID_V)]
+            + [(i, GRID_V) for i in range(GRID_U, 0, -1)] + [(0, j) for j in range(GRID_V, 0, -1)])
+    for k, p in enumerate(ring):
+        q = ring[(k + 1) % len(ring)]
+        faces.append(([front[p], front[q], back[q], back[p]], 0))
+    for verts, mat_index in faces:
+        f = bm.faces.new(verts)
+        f.material_index = mat_index
+        if mat_index == 1:
+            for loop in f.loops:
+                loop[uv].uv = grid_uv[loop.vert]
+    bmesh.ops.recalc_face_normals(bm, faces=list(bm.faces))
+    mesh = bpy.data.meshes.new(name)
+    bm.to_mesh(mesh)
+    bm.free()
+    return mesh
+
+
 def build_pack(tok, aspect, mats):
     dims = tok["dimensions_mm"]
     w = dims["pack_w"]["value"]
     h = dims["pack_h"]["value"]
     d = dims["pack_d"]["value"]
-    seal = 4.0  # ASSUMPTION: seal ridge height, mm
-    cx = PACK_X_MM
-
-    body = box_mesh("PackBody", (cx, 0.0, h / 2.0), (w, d, h - 2 * seal),
-                    bevel_mm=2.5, segments=4)
-    link("PackBody", body, mats["body"], smooth=True)
-
-    for name, z in (("SealBottom", seal / 2.0), ("SealTop", h - seal / 2.0)):
-        ridge = box_mesh(name, (cx, 0.0, z), (w, d, seal), bevel_mm=1.2, segments=3)
-        link(name, ridge, mats["seal"], smooth=True)
-
-    label_w = 65.0  # ASSUMPTION: fits inside the flat part of the front face
-    label_h = label_w / aspect
-    front_y = -d / 2.0 - 0.03  # 0.03 mm proud of the face to avoid z-fighting
-    plane = label_plane_mesh("PackLabel", cx, h / 2.0, label_w, label_h, front_y)
-    link("PackLabel", plane, mats["label"], smooth=False)
-    print("label on front: %.1f x %.1f mm" % (label_w, label_h))
+    if abs(aspect - w / h) > 0.005:
+        raise SystemExit("label aspect %.4f does not match the pouch front %.4f" % (aspect, w / h))
+    mesh = pillow_mesh("PackPouch", w, h, d / 2.0, PACK_X_MM)
+    obj = bpy.data.objects.new("PackPouch", mesh)
+    bpy.context.scene.collection.objects.link(obj)
+    mesh.materials.append(mats["body"])
+    mesh.materials.append(mats["label"])
+    for poly in mesh.polygons:
+        poly.use_smooth = True
+    print("pouch %.0f x %.0f mm, %.0f mm deep, label on the whole front face" % (w, h, d))
 
 
 def build_cube(mats):
     cube = box_mesh("Cube", (CUBE_X_MM, 0.0, CUBE_Z_MM), (15.0, 15.0, 15.0),
-                    bevel_mm=1.5, segments=2, rot_deg=(0.0, 0.0, 18.0))
-    link("Cube", cube, mats["cube"], smooth=True)
+                    bevel_mm=3.0, segments=6, rot_deg=(0.0, 0.0, 18.0))
+    obj = link("Cube", cube, mats["cube"], smooth=True)
+    sub = obj.modifiers.new("Round", "SUBSURF")
+    sub.levels = 1
+    sub.render_levels = 2
 
 
 def build_cyclorama(mats):
@@ -317,8 +359,12 @@ def build_camera():
     data.sensor_width = 36.0
     cam = bpy.data.objects.new("Camera", data)
     bpy.context.scene.collection.objects.link(cam)
-    cam.location = Vector(tuple(c * MM for c in CAMERA_MM))
-    aim(cam, tuple(c * MM for c in TARGET_MM))
+    if ARGS_VIEW == "front":
+        cam.location = Vector(tuple(c * MM for c in CAMERA_FRONT_MM))
+        aim(cam, tuple(c * MM for c in TARGET_FRONT_MM))
+    else:
+        cam.location = Vector(tuple(c * MM for c in CAMERA_MM))
+        aim(cam, tuple(c * MM for c in TARGET_MM))
     bpy.context.scene.camera = cam
 
 
@@ -400,7 +446,9 @@ def setup_render(scene, args, bg_hex):
 
 
 def main():
+    global ARGS_VIEW
     args = parse_args()
+    ARGS_VIEW = args.view
     t0 = time.time()
     with open(args.tokens, encoding="utf-8") as fh:
         tok = json.load(fh)

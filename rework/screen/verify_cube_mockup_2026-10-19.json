@@ -1,0 +1,344 @@
+{
+  "run_date": "2026-10-19",
+  "cdn_probe": {
+    "reachable": true,
+    "status": 200,
+    "detail": "HTTP 200, first 256 bytes read"
+  },
+  "launch": "Playwright bundled Chromium (headless)",
+  "wording_scan": {
+    "page": "rework/mockup/cube_3d.html",
+    "patterns_checked": 62,
+    "forbidden_pattern_hits": [],
+    "bare_new_occurrences": 0,
+    "new_as_constructor": 37,
+    "organiser_digest_hits": 0
+  },
+  "cases": [
+    {
+      "case": "desktop",
+      "viewport": "1280x800",
+      "cdn_blocked": false,
+      "navigated": true,
+      "goto_error": null,
+      "flag_set": true,
+      "flag_error": null,
+      "state": {
+        "threeLoaded": true,
+        "threeError": null,
+        "phase": "hover",
+        "stageIsFallback": false,
+        "fallbackShown": false,
+        "fallbackLabelCanvas": false,
+        "webglCanvasPresent": true,
+        "webglCanvasCss": [
+          844,
+          556
+        ],
+        "webglCanvasBuffer": [
+          844,
+          556
+        ],
+        "sarabunFacesLoaded": 3,
+        "liveWidthMm": 58.8,
+        "nameLineMm": 56.2,
+        "nameLineFitsAtSpec": true,
+        "nameLineSizeMm": {
+          "trade": 6.4
+        },
+        "frontBottomPx": 884,
+        "backBottomPx": 778.9333333333333,
+        "scrollWidth": 1280,
+        "bodyScrollWidth": 1280,
+        "innerWidth": 1280
+      },
+      "idle_screenshot": "rework/screen/cube_3d_desktop_idle.png",
+      "idle_screenshot_size": [
+        1280,
+        1033
+      ],
+      "drop": {
+        "drop_phases": [
+          "fall",
+          "sink",
+          "dissolve",
+          "dissolved"
+        ],
+        "drop_ok": true,
+        "cube_hidden_when_dissolved": true,
+        "dissolved_screenshot": "rework/screen/cube_3d_desktop_dissolved.png",
+        "dissolved_screenshot_size": [
+          1280,
+          1033
+        ],
+        "reset_phases": [
+          "reset",
+          "hover"
+        ],
+        "reset_ok": true,
+        "cube_visible_after_reset": true,
+        "error": null
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "http_errors": [],
+      "run_error": null
+    },
+    {
+      "case": "phone",
+      "viewport": "375x812",
+      "cdn_blocked": false,
+      "navigated": true,
+      "goto_error": null,
+      "flag_set": true,
+      "flag_error": null,
+      "state": {
+        "threeLoaded": true,
+        "threeError": null,
+        "phase": "hover",
+        "stageIsFallback": false,
+        "fallbackShown": false,
+        "fallbackLabelCanvas": false,
+        "webglCanvasPresent": true,
+        "webglCanvasCss": [
+          339,
+          356
+        ],
+        "webglCanvasBuffer": [
+          339,
+          356
+        ],
+        "sarabunFacesLoaded": 3,
+        "liveWidthMm": 58.8,
+        "nameLineMm": 56.2,
+        "nameLineFitsAtSpec": true,
+        "nameLineSizeMm": {
+          "trade": 6.4
+        },
+        "frontBottomPx": 884,
+        "backBottomPx": 778.9333333333333,
+        "scrollWidth": 375,
+        "bodyScrollWidth": 375,
+        "innerWidth": 375
+      },
+      "idle_screenshot": "rework/screen/cube_3d_phone_idle.png",
+      "idle_screenshot_size": [
+        375,
+        1132
+      ],
+      "drop": {
+        "drop_phases": [
+          "fall",
+          "sink",
+          "dissolve",
+          "dissolved"
+        ],
+        "drop_ok": true,
+        "cube_hidden_when_dissolved": true,
+        "dissolved_screenshot": null,
+        "dissolved_screenshot_size": null,
+        "reset_phases": [
+          "reset",
+          "hover"
+        ],
+        "reset_ok": true,
+        "cube_visible_after_reset": true,
+        "error": null
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "http_errors": [],
+      "run_error": null
+    },
+    {
+      "case": "fallback_cdn_blocked",
+      "viewport": "1280x800",
+      "cdn_blocked": true,
+      "navigated": true,
+      "goto_error": null,
+      "flag_set": true,
+      "flag_error": null,
+      "state": {
+        "threeLoaded": false,
+        "threeError": "Failed to fetch dynamically imported module: https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "phase": null,
+        "stageIsFallback": true,
+        "fallbackShown": true,
+        "fallbackLabelCanvas": true,
+        "webglCanvasPresent": false,
+        "webglCanvasCss": null,
+        "webglCanvasBuffer": null,
+        "sarabunFacesLoaded": 3,
+        "liveWidthMm": 58.8,
+        "nameLineMm": 56.2,
+        "nameLineFitsAtSpec": true,
+        "nameLineSizeMm": {
+          "trade": 6.4
+        },
+        "frontBottomPx": 884,
+        "backBottomPx": 778.9333333333333,
+        "scrollWidth": 1280,
+        "bodyScrollWidth": 1280,
+        "innerWidth": 1280
+      },
+      "idle_screenshot": "rework/screen/cube_3d_fallback_cdn_blocked.png",
+      "idle_screenshot_size": [
+        1280,
+        948
+      ],
+      "drop": null,
+      "console_errors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "page_errors": [],
+      "failed_requests": [
+        "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js :: net::ERR_FAILED",
+        "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js :: net::ERR_FAILED",
+        "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/geometries/RoundedBoxGeometry.js :: net::ERR_FAILED"
+      ],
+      "http_errors": [],
+      "run_error": null
+    }
+  ],
+  "checks": [
+    {
+      "check": "three.js CDN reachable from this machine (urllib probe)",
+      "pass": true,
+      "detail": "HTTP 200, first 256 bytes read"
+    },
+    {
+      "check": "desktop page loads from file://",
+      "pass": true,
+      "detail": "navigated=True; goto_error=None; run_error=None"
+    },
+    {
+      "check": "desktop three.js loaded in page",
+      "pass": true,
+      "detail": "threeLoaded=True; threeError=None; flag_error=None"
+    },
+    {
+      "check": "desktop WebGL canvas under #stage at non-zero size, fallback not shown",
+      "pass": true,
+      "detail": "css=[844, 556]; buffer=[844, 556]; stageIsFallback=False"
+    },
+    {
+      "check": "desktop no horizontal overflow",
+      "pass": true,
+      "detail": "scrollWidth=1280; bodyScrollWidth=1280; innerWidth=1280"
+    },
+    {
+      "check": "desktop no console or page errors",
+      "pass": true,
+      "detail": "console_errors=0; page_errors=0; failed_requests=0; http_errors=0"
+    },
+    {
+      "check": "desktop name line fits the 62 mm live width at spec",
+      "pass": true,
+      "detail": "nameLineMm=56.2; fitsAtSpec=True; sizeMm={'trade': 6.4}; sarabunFacesLoaded=3"
+    },
+    {
+      "check": "desktop front and back label text inside the 90 mm label",
+      "pass": true,
+      "detail": "frontBottomPx=884; backBottomPx=778.9333333333333; limit=900"
+    },
+    {
+      "check": "desktop idle screenshot saved",
+      "pass": true,
+      "detail": "rework/screen/cube_3d_desktop_idle.png size=[1280, 1033]"
+    },
+    {
+      "check": "desktop drop sequence in order and cube hidden when dissolved",
+      "pass": true,
+      "detail": "phases=['fall', 'sink', 'dissolve', 'dissolved']; hiddenWhenDissolved=True; error=None"
+    },
+    {
+      "check": "desktop reset sequence in order and cube back in hover",
+      "pass": true,
+      "detail": "phases=['reset', 'hover']; visibleAfterReset=True"
+    },
+    {
+      "check": "desktop dissolved screenshot saved",
+      "pass": true,
+      "detail": "rework/screen/cube_3d_desktop_dissolved.png size=[1280, 1033]"
+    },
+    {
+      "check": "phone page loads from file://",
+      "pass": true,
+      "detail": "navigated=True; goto_error=None; run_error=None"
+    },
+    {
+      "check": "phone three.js loaded in page",
+      "pass": true,
+      "detail": "threeLoaded=True; threeError=None; flag_error=None"
+    },
+    {
+      "check": "phone WebGL canvas under #stage at non-zero size, fallback not shown",
+      "pass": true,
+      "detail": "css=[339, 356]; buffer=[339, 356]; stageIsFallback=False"
+    },
+    {
+      "check": "phone no horizontal overflow",
+      "pass": true,
+      "detail": "scrollWidth=375; bodyScrollWidth=375; innerWidth=375"
+    },
+    {
+      "check": "phone no console or page errors",
+      "pass": true,
+      "detail": "console_errors=0; page_errors=0; failed_requests=0; http_errors=0"
+    },
+    {
+      "check": "phone name line fits the 62 mm live width at spec",
+      "pass": true,
+      "detail": "nameLineMm=56.2; fitsAtSpec=True; sizeMm={'trade': 6.4}; sarabunFacesLoaded=3"
+    },
+    {
+      "check": "phone front and back label text inside the 90 mm label",
+      "pass": true,
+      "detail": "frontBottomPx=884; backBottomPx=778.9333333333333; limit=900"
+    },
+    {
+      "check": "phone idle screenshot saved",
+      "pass": true,
+      "detail": "rework/screen/cube_3d_phone_idle.png size=[375, 1132]"
+    },
+    {
+      "check": "phone drop sequence in order and cube hidden when dissolved",
+      "pass": true,
+      "detail": "phases=['fall', 'sink', 'dissolve', 'dissolved']; hiddenWhenDissolved=True; error=None"
+    },
+    {
+      "check": "phone reset sequence in order and cube back in hover",
+      "pass": true,
+      "detail": "phases=['reset', 'hover']; visibleAfterReset=True"
+    },
+    {
+      "check": "CDN blocked: fallback text and front label shown, no WebGL canvas",
+      "pass": true,
+      "detail": "threeLoaded=False; threeError=Failed to fetch dynamically imported module: https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js; fallbackShown=True; fallbackLabelCanvas=True; webglCanvasPresent=False; flag_error=None"
+    },
+    {
+      "check": "CDN blocked: no uncaught page errors",
+      "pass": true,
+      "detail": "page_errors=0; run_error=None"
+    },
+    {
+      "check": "CDN blocked: fallback screenshot saved",
+      "pass": true,
+      "detail": "rework/screen/cube_3d_fallback_cdn_blocked.png size=[1280, 948]"
+    },
+    {
+      "check": "cube_3d.html wording scan (make_label.py list and organiser digests)",
+      "pass": true,
+      "detail": "pattern hits=[]; bare new=0; organiser digest hits=0"
+    }
+  ],
+  "summary": {
+    "passed": 26,
+    "total": 26,
+    "failed": []
+  }
+}

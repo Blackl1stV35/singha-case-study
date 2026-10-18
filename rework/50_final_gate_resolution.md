@@ -28,7 +28,7 @@ Rules applied: no sugar-free claim of any kind (S1); no lab test and no medical 
 | F4 | Potassium declared as a fact; no potassium claim; medical question kept as a stated limit | Dropped medical test (S3); the sim cannot answer safety | A medical reviewer signs the label wording |
 | F5 | Patent constraints written into the formulation: no lactobionic acid, calcium carbonate or vacuum pre-treatment; no inorganic potassium acid or potassium phosphate; no sodium bicarbonate or sodium-bearing formula; carbohydrate at or below 50 mmol/L per drink | Avoids the live claims found | A Thai register read clears a constraint |
 
-**The cost of F1.** The Ingredients and Nutrition pillar in [45](45_working_candidate_rework.md) rested on a sodium-free claim. Without the claim, the pillar rests on a formulation fact. That is a weaker case for judges, and I have not hidden it. It is the main reason to decide the "by nature" question before the entry closes.
+**The cost of F1.** The Ingredients and Nutrition pillar in [45](45_working_candidate_rework.md) rested on a sodium-free claim. Without the claim, the pillar rests on a formulation fact. That is a weaker case for judges, and I have not hidden it. It is the main reason to decide the "by nature" question before any entry.
 
 ## 3. Specification constraints (from the patent track)
 
@@ -52,7 +52,7 @@ Binder note: the expired US 5,254,355 used mannitol as sole binder. Potassium ci
 ## 5. Entry position
 
 - **Validated:** no. G2 and G6 are open, and G1's claim is barred until a Thai opinion.
-- **Closable before 22 October 23:59 with no outside contact:** G6 (read-only food-additive check), the Thai patent register if a reader is found, and the internal sugar-free cleanup.
-- **Needs an outside step, which the team has not approved:** the Thai classification opinion (G1), a regulator query (G4), a medical reviewer (G3), a supplier water specification (G1), and a Thai patent attorney (G5). None of these can close in four days without outside contact.
+- **Closable with no outside contact:** G6 (read-only food-additive check), the Thai patent register if a reader is found, and the internal sugar-free cleanup.
+- **Needs an outside step, which the team has not approved:** the Thai classification opinion (G1), a regulator query (G4), a medical reviewer (G3), a supplier water specification (G1), and a Thai patent attorney (G5). None of these can close without outside contact; until then they are stated limits.
 
 The entry decision is the user's. A concept-only entry, with this record presented as stated limits, is possible. An entry that claims the sodium-free and fizz properties as validated is not supported by this record.

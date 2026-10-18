@@ -1,10 +1,10 @@
 # Final conclusion and recommendation (18 October 2026)
 
-Status: conclusion of the desk, simulation and mockup work to date. Nothing has been physically tested, registered, submitted or sent outside the team. The competition closes on 22 October 2026 at 23:59, four days from this note. The submission draft stays pended ([rework/27](27_submission_draft_pended.md)), as the user asked.
+Status: conclusion of the desk, simulation and mockup work to date. Nothing has been physically tested, registered, submitted or sent outside the team. The submission draft stays pended ([rework/27](27_submission_draft_pended.md)), as the user asked.
 
 ## 1. Bottom line
 
-**Recommendation: enter the sodium-free potassium lime fizz cube ([rework/45](45_working_candidate_rework.md), gates in [rework/50](50_final_gate_resolution.md)) as a concept, not as a validated product.** Use only the claims the record supports. Make three decisions before the entry closes: the potassium salt, how the potassium dose is framed, and the claim set. The cube is not validated. Its main open risk is the potassium dose, which no desk step can resolve.
+**Recommendation: enter the sodium-free potassium lime fizz cube ([rework/45](45_working_candidate_rework.md), gates in [rework/50](50_final_gate_resolution.md)) as a concept, not as a validated product.** Use only the claims the record supports. Make three decisions before any entry: the potassium salt, how the potassium dose is framed, and the claim set. The cube is not validated. Its main open risk is the potassium dose, which no desk step can resolve.
 
 This differs from the team's earlier ranking in [rework/06](06_final_conclusion.md), which put the leaf-wrapped frozen drink first. The reasons are in section 3.
 
@@ -27,7 +27,7 @@ This differs from the team's earlier ranking in [rework/06](06_final_conclusion.
 
 Why the cube ranks above the leaf drink:
 - **Coverage.** The cube meets two components and the leaf drink meets one. If the page 2 reading holds, that gap decides it.
-- **Nature of the open items.** The cube's open items are claims, regulation and one medical question. They can be narrowed without a lab. The leaf drink's open items are physical: outside-water leak, freezing damage, fat content and migration. None of those can be closed in four days.
+- **Nature of the open items.** The cube's open items are claims, regulation and one medical question. They can be narrowed without a lab. The leaf drink's open items are physical: outside-water leak, freezing damage, fat content and migration. None of those can be closed by desk work.
 - **Novelty.** The leaf drink's precedent is a leaf-wrapped frozen ice-cream bar. The cube's format precedents abroad (Waterdrop, Ricola, Incrediballs) are a format change, and the potassium-carbonate route is the new part. Both novelty stories are arguable. Neither is proven on Thai shelves.
 
 If the user's choice differs from this recommendation, the leaf drink is the fallback. It needs its own decision on holding rules and the registration route before anything is claimed.
@@ -49,7 +49,7 @@ If the user's choice differs from this recommendation, the leaf drink is the fal
 - That the product is medically safe for people with reduced potassium excretion or on potassium-retaining medicines. Gate G3 cannot answer this.
 - Patent freedom outside the US and EP reads. The Thai register could not be read.
 
-## 5. Decisions needed before 22 October
+## 5. Decisions needed
 
 1. **Potassium salt.** Recommend **potassium bicarbonate**, as modelled. The model, the mockup spec and the gate simulation all use bicarbonate. Decision R1 in [rework/45](45_working_candidate_rework.md) said carbonate; it is now corrected. Carbonate would give about 2,015 mg potassium per 330 ml at 1.75 volumes, twice the bicarbonate figure of about 1,007 mg. One mole of carbonate carries two moles of potassium per mole of CO₂, and bicarbonate carries one. Correction to my earlier message: the factor is two, not 1.7. The "1,730 mg" figure came from the workflow critic and is wrong.
 2. **Potassium dose framing.** Recommend stating the amount on the label as a plain fact and presenting the medical question as an open limit. Recommend against lowering the dose to make the medical question go away, because that fails the fizz gate. A warning for people on potassium-retaining medicines or with kidney disease needs wording from a medical reviewer, which needs outside contact. **Without that wording, judges who know food safety will raise this first.** This is the item most likely to sink the entry.
@@ -69,7 +69,7 @@ If the user's choice differs from this recommendation, the leaf drink is the fal
 - A Thai opinion that the cube is sodium-free by nature and barred from the claim changes nothing, since the claim is already dropped.
 - A medical reviewer who finds the 1,007 mg dose unacceptable for a single drink would make the cube unfit to enter as proposed. Then the leaf drink becomes the fallback, with its own physical gaps.
 - A confirmed page 2 reading (all three components expected) strengthens the cube relative to the leaf drink.
-- A measured degassing coefficient, or a fizz test, would close G2. None is scheduled.
+- A measured degassing coefficient, or a fizz test, would close G2. Neither exists yet; both are stated limits.
 
 ## 8. Limits of this conclusion
 

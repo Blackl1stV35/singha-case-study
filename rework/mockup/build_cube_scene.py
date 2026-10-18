@@ -214,8 +214,9 @@ def build_materials(tok, label_img):
     lin = {k: hex_linear(v) for k, v in col.items()}
     mats = {}
 
-    mats["body"] = principled("PackFilm", lin["off-white"], 0.35)[0]
-    mats["seal"] = principled("PackSeal", lin["off-white-deep"], 0.30)[0]
+    # PET film: IOR 1.575 (isotropic average at about 589 nm; sourced, see MATERIALS_cube.md).
+    mats["body"] = principled("PackFilm", lin["off-white"], 0.25, {"IOR": 1.575})[0]
+    mats["seal"] = principled("PackSeal", lin["off-white-deep"], 0.30, {"IOR": 1.575})[0]
 
     label_mat, label_bsdf = principled("PackLabel", (1.0, 1.0, 1.0), 0.35)
     label_tex = label_mat.node_tree.nodes.new("ShaderNodeTexImage")
@@ -223,14 +224,15 @@ def build_materials(tok, label_img):
     label_mat.node_tree.links.new(label_tex.outputs["Color"], label_bsdf.inputs["Base Color"])
     mats["label"] = label_mat
 
-    cube_mat, cube_bsdf = principled("CubeLime", lin["lime"], 0.55,
-                                     {"Subsurface Weight": 0.15,
-                                      "Subsurface Radius": (0.004, 0.003, 0.002)})
+    # Compressed powder: matte, lightly granular, slight subsurface (ASSUMPTION, no measured source).
+    cube_mat, cube_bsdf = principled("CubeLime", lin["lime"], 0.75,
+                                     {"Subsurface Weight": 0.10,
+                                      "Subsurface Radius": (0.003, 0.002, 0.0015)})
     noise = cube_mat.node_tree.nodes.new("ShaderNodeTexNoise")
     noise.inputs["Scale"].default_value = 600.0
     noise.inputs["Detail"].default_value = 3.0
     bump = cube_mat.node_tree.nodes.new("ShaderNodeBump")
-    bump.inputs["Strength"].default_value = 0.15
+    bump.inputs["Strength"].default_value = 0.25
     bump.inputs["Distance"].default_value = 0.0005
     cube_mat.node_tree.links.new(noise.outputs["Fac"], bump.inputs["Height"])
     cube_mat.node_tree.links.new(bump.outputs["Normal"], cube_bsdf.inputs["Normal"])

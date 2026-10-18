@@ -549,7 +549,7 @@ function buildScene(THREE, OrbitControls, RoundedBoxGeometry) {
   scene.add(pack);
   const pouch = new THREE.Mesh(
     new RoundedBoxGeometry(pw, ph, pd, 4, mm(D.packEdgeRadius)),
-    new THREE.MeshPhysicalMaterial({ color: C['off-white-deep'], roughness: 0.38, clearcoat: 0.5, clearcoatRoughness: 0.3 })
+    new THREE.MeshPhysicalMaterial({ color: C['off-white-deep'], roughness: 0.25, ior: 1.575, clearcoat: 0.3, clearcoatRoughness: 0.3 })
   );
   pouch.position.y = ph / 2;
   pouch.castShadow = true;
@@ -585,7 +585,7 @@ function buildScene(THREE, OrbitControls, RoundedBoxGeometry) {
   const cubeSide = mm(D.cubeSide);
   const cubeGeo = new RoundedBoxGeometry(cubeSide, cubeSide, cubeSide, 3, mm(D.cubeEdgeRadius));
   colourCube(cubeGeo, THREE);
-  const cubeMat = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.5, metalness: 0, transparent: true, opacity: 1 });
+  const cubeMat = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.75, metalness: 0, transparent: true, opacity: 1 });
   const cube = new THREE.Mesh(cubeGeo, cubeMat);
   cube.castShadow = true;
   scene.add(cube);

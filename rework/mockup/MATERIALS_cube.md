@@ -11,10 +11,10 @@ Basis codes:
 
 | Material | Where it is used | Settings | Basis |
 |---|---|---|---|
-| PackFilm | Pouch body (sides, back, and the front outside the label) | Base colour: off-white `#F6F3E8`. Roughness 0.35. Default specular. | Colour: ASSUMPTION (design choice, off-white token). Finish: ASSUMPTION (a glossy film is assumed; no film specification exists). |
-| PackSeal | Heat-seal ridges along the top and bottom | Base colour: off-white-deep `#E6E0CB`. Roughness 0.30. | Colour: ASSUMPTION (design choice). Ridge position and size: ASSUMPTION. |
+| PackFilm | Pouch body (sides, back, and the front outside the label) | Base colour: off-white `#F6F3E8`. Roughness 0.25. IOR 1.575 (PET). Default specular. | Colour: ASSUMPTION (design choice, off-white token). IOR: SOURCED. PET refractive index about 1.575 at 589 nm, from the Wikipedia list of refractive indices and the KLA refractive-index database (read 18 Oct 2026). The value is an isotropic average, and PET film is birefringent, so this is a stated simplification. Roughness 0.25 (satin print): ASSUMPTION, no measured source. |
+| PackSeal | Heat-seal ridges along the top and bottom | Base colour: off-white-deep `#E6E0CB`. Roughness 0.30. IOR 1.575 (same PET film). | Colour: ASSUMPTION (design choice). IOR: as PackFilm. Roughness and ridge size: ASSUMPTION. |
 | PackLabel | Front artwork, 65 x 32.5 mm, centred on the front face | Image texture from `label_front.png` (2400 x 1200, from the label step), used as base colour. Roughness 0.35. | Artwork: the label step, built from the tokens file (ASSUMPTION, design choice). Placement, size and finish: ASSUMPTION. |
-| CubeLime | The compressed cube, resting on the floor beside the pouch | Base colour: lime `#9ED83A`. Roughness 0.55. Subsurface weight 0.15, radius 4 / 3 / 2 mm. Noise bump (scale 600, strength 0.15). | Colour: ASSUMPTION (design choice). Surface look (roughness, subsurface, bump): ASSUMPTION. The real surface is not measured. |
+| CubeLime | The compressed cube, resting on the floor beside the pouch | Base colour: lime `#9ED83A`. Roughness 0.75 (matte compressed powder). Subsurface weight 0.10, radius 3 / 2 / 1.5 mm. Noise bump (scale 600, strength 0.25). | Colour: ASSUMPTION (design choice). Roughness, subsurface and bump: ASSUMPTION (no measured finish for a compressed cube). |
 | Cyclorama | Matte floor and curved backdrop | Base colour: background `#DCE5D1`. Roughness 0.95. Specular IOR level 0.2. | Colour: ASSUMPTION (design choice). Matte finish and curve radius 120 mm: ASSUMPTION. |
 | World (fill only) | Soft ambient fill | Background colour `#DCE5D1` at strength 0.25. | ASSUMPTION. |
 
@@ -60,3 +60,8 @@ Read from `cube_hero.png` with PIL on 18 October 2026, as patch medians:
 - The label is shown at 65 mm wide and 2:1, so it covers only the centre of the front face. The copy layout in 48 section 5.5 was built for a portrait front, and the artwork does not follow that layout.
 - The cube's density at the high end of the mass range (5.80 g) is above the ASSUMPTION band at 15 mm. The render does not depend on mass. The owner must choose between a side of about 15.4 mm or more and a narrower mass range (48 section 6.4, L6).
 - No glass is drawn. If the owner wants a glass, rule 5 must be reopened in writing before judging (48 section 10.3).
+
+
+## Revision, 18 October 2026 (real-material values)
+
+The pouch film and the cube now use the values above. The pack geometry is unchanged: 70 x 90 mm front, 20 mm depth, and seal ridges 4 mm tall. The render still reads as a rigid box. The depth and the ridge profile are ASSUMPTION and need a decision on the pouch form before the shape can read as a flat pouch.

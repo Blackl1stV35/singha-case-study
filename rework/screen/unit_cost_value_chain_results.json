@@ -1,0 +1,187 @@
+{
+  "basis": "desk arithmetic, 18 October 2026; all margins ASSUMPTION; fixed costs excluded",
+  "fx_thb_per_usd": 33.4573,
+  "cube_cost_per_serving_thb": {
+    "low": {
+      "ingredients": 1.1107993751322751,
+      "sweetener": 0.00655,
+      "pouch_and_print": 1.0037189999999998,
+      "total": 2.1210683751322748
+    },
+    "high": {
+      "ingredients": 2.0763987502645502,
+      "sweetener": 0.0655,
+      "pouch_and_print": 3.172865,
+      "total": 5.31476375026455
+    }
+  },
+  "can": {
+    "retail_thb": {
+      "launch_330ml": 15.0,
+      "zero_single_low": 16.0,
+      "zero_single_high": 17.0
+    },
+    "metal_only_thb": 0.996
+  },
+  "cost_to_retail_ratio_vs_can_15": {
+    "low": 0.141,
+    "high": 0.354
+  },
+  "value_chain_grid": [
+    {
+      "cost_case": "low",
+      "cost_thb": 2.121,
+      "margins": "retailer_low, distributor_low",
+      "retailer_margin": 0.25,
+      "distributor_margin": 0.1,
+      "break_even_retail_thb": 3.14,
+      "net_to_brand_at_retail_thb": {
+        "10.0": 6.75,
+        "15.0": 10.12,
+        "20.0": 13.5
+      },
+      "contribution_at_retail_thb": {
+        "10.0": 4.63,
+        "15.0": 8.0,
+        "20.0": 11.38
+      }
+    },
+    {
+      "cost_case": "low",
+      "cost_thb": 2.121,
+      "margins": "retailer_low, distributor_high",
+      "retailer_margin": 0.25,
+      "distributor_margin": 0.2,
+      "break_even_retail_thb": 3.54,
+      "net_to_brand_at_retail_thb": {
+        "10.0": 6.0,
+        "15.0": 9.0,
+        "20.0": 12.0
+      },
+      "contribution_at_retail_thb": {
+        "10.0": 3.88,
+        "15.0": 6.88,
+        "20.0": 9.88
+      }
+    },
+    {
+      "cost_case": "low",
+      "cost_thb": 2.121,
+      "margins": "retailer_high, distributor_low",
+      "retailer_margin": 0.35,
+      "distributor_margin": 0.1,
+      "break_even_retail_thb": 3.63,
+      "net_to_brand_at_retail_thb": {
+        "10.0": 5.85,
+        "15.0": 8.78,
+        "20.0": 11.7
+      },
+      "contribution_at_retail_thb": {
+        "10.0": 3.73,
+        "15.0": 6.65,
+        "20.0": 9.58
+      }
+    },
+    {
+      "cost_case": "low",
+      "cost_thb": 2.121,
+      "margins": "retailer_high, distributor_high",
+      "retailer_margin": 0.35,
+      "distributor_margin": 0.2,
+      "break_even_retail_thb": 4.08,
+      "net_to_brand_at_retail_thb": {
+        "10.0": 5.2,
+        "15.0": 7.8,
+        "20.0": 10.4
+      },
+      "contribution_at_retail_thb": {
+        "10.0": 3.08,
+        "15.0": 5.68,
+        "20.0": 8.28
+      }
+    },
+    {
+      "cost_case": "high",
+      "cost_thb": 5.315,
+      "margins": "retailer_low, distributor_low",
+      "retailer_margin": 0.25,
+      "distributor_margin": 0.1,
+      "break_even_retail_thb": 7.87,
+      "net_to_brand_at_retail_thb": {
+        "10.0": 6.75,
+        "15.0": 10.12,
+        "20.0": 13.5
+      },
+      "contribution_at_retail_thb": {
+        "10.0": 1.44,
+        "15.0": 4.81,
+        "20.0": 8.19
+      }
+    },
+    {
+      "cost_case": "high",
+      "cost_thb": 5.315,
+      "margins": "retailer_low, distributor_high",
+      "retailer_margin": 0.25,
+      "distributor_margin": 0.2,
+      "break_even_retail_thb": 8.86,
+      "net_to_brand_at_retail_thb": {
+        "10.0": 6.0,
+        "15.0": 9.0,
+        "20.0": 12.0
+      },
+      "contribution_at_retail_thb": {
+        "10.0": 0.69,
+        "15.0": 3.69,
+        "20.0": 6.69
+      }
+    },
+    {
+      "cost_case": "high",
+      "cost_thb": 5.315,
+      "margins": "retailer_high, distributor_low",
+      "retailer_margin": 0.35,
+      "distributor_margin": 0.1,
+      "break_even_retail_thb": 9.09,
+      "net_to_brand_at_retail_thb": {
+        "10.0": 5.85,
+        "15.0": 8.78,
+        "20.0": 11.7
+      },
+      "contribution_at_retail_thb": {
+        "10.0": 0.54,
+        "15.0": 3.46,
+        "20.0": 6.39
+      }
+    },
+    {
+      "cost_case": "high",
+      "cost_thb": 5.315,
+      "margins": "retailer_high, distributor_high",
+      "retailer_margin": 0.35,
+      "distributor_margin": 0.2,
+      "break_even_retail_thb": 10.22,
+      "net_to_brand_at_retail_thb": {
+        "10.0": 5.2,
+        "15.0": 7.8,
+        "20.0": 10.4
+      },
+      "contribution_at_retail_thb": {
+        "10.0": -0.11,
+        "15.0": 2.49,
+        "20.0": 5.09
+      }
+    }
+  ],
+  "weight_g": {
+    "cube_design_mass_per_serving": 5.2,
+    "can_330ml_gross_derived": 340.0
+  },
+  "limits": [
+    "No public Thai distributor or retailer margin was found.",
+    "No converted can cost (beyond the metal) was found in Thailand.",
+    "Potassium bicarbonate and citric acid prices are US listings, not Thai prices.",
+    "The pouch price is a non-Thai listing at unconfirmed spec.",
+    "Flavour and binder are not priced. Fixed costs and freight are excluded."
+  ]
+}

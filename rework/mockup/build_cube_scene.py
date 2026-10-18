@@ -90,8 +90,8 @@ def parse_args():
     p.add_argument("--out", required=True, help="output PNG path")
     p.add_argument("--label", default=os.path.join(HERE, "label_front.png"))
     p.add_argument("--tokens", default=os.path.join(HERE, "style_tokens.json"))
-    p.add_argument("--width", type=int, default=1600)
-    p.add_argument("--height", type=int, default=1200)
+    p.add_argument("--width", type=int, default=3840)
+    p.add_argument("--height", type=int, default=2160)
     p.add_argument("--samples", type=int, default=128)
     p.add_argument("--exposure", type=float, default=-1.2,
                    help="view exposure in stops, set so the backdrop matches the background token")
@@ -215,7 +215,17 @@ def build_materials(tok, label_img):
     mats = {}
 
     # PET film: IOR 1.575 (isotropic average at about 589 nm; sourced, see MATERIALS_cube.md).
-    mats["body"] = principled("PackFilm", lin["off-white"], 0.25, {"IOR": 1.575})[0]
+    body_mat, body_bsdf = principled("PackFilm", lin["off-white"], 0.25, {"IOR": 1.575})
+    # Fine micro-texture for a printed laminate (ASSUMPTION: strength and scale, no measured source).
+    film_noise = body_mat.node_tree.nodes.new("ShaderNodeTexNoise")
+    film_noise.inputs["Scale"].default_value = 900.0
+    film_noise.inputs["Detail"].default_value = 2.0
+    film_bump = body_mat.node_tree.nodes.new("ShaderNodeBump")
+    film_bump.inputs["Strength"].default_value = 0.04
+    film_bump.inputs["Distance"].default_value = 0.0003
+    body_mat.node_tree.links.new(film_noise.outputs["Fac"], film_bump.inputs["Height"])
+    body_mat.node_tree.links.new(film_bump.outputs["Normal"], body_bsdf.inputs["Normal"])
+    mats["body"] = body_mat
     mats["seal"] = principled("PackSeal", lin["off-white-deep"], 0.30, {"IOR": 1.575})[0]
 
     label_mat, label_bsdf = principled("PackLabel", (1.0, 1.0, 1.0), 0.35)

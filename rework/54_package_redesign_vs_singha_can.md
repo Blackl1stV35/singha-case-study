@@ -55,3 +55,7 @@ We read the instruction as: design the package with regard to the can. That mean
 - **The lime can itself was not seen.** The redesign follows the lemon soda can. If the lime can differs, rules R-P1 to R-P3 still hold, but the palette should be checked against it.
 - **Pack form still reads as a box** in the render, because the 20 mm depth and the seal-ridge profile are assumptions ([MATERIALS_cube.md](mockup/MATERIALS_cube.md)).
 - **The palette is a design choice.** It has not been tested with shoppers.
+
+## Closed as a stated limit (18 October 2026)
+
+The trademark search is closed as a stated limit, as the user instructed when the WIPO search could not be completed. The WIPO Global Brand Database search for PLUNK returned 51 results across several offices, with no Thailand filter applied, because the designation-country and Nice class filters returned errors. The Thai DIP public page reached in that pass lists goods and services, not marks, so the Thai mark register was not searched. No registry result clears or blocks the name Plunk Lime Cube. This is a limit on the search, not a finding of freedom to operate.

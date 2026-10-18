@@ -56,7 +56,7 @@
       "idle_screenshot": "rework/screen/cube_3d_desktop_idle.png",
       "idle_screenshot_size": [
         1280,
-        1146
+        1033
       ],
       "drop": {
         "drop_phases": [
@@ -70,7 +70,7 @@
         "dissolved_screenshot": "rework/screen/cube_3d_desktop_dissolved.png",
         "dissolved_screenshot_size": [
           1280,
-          1146
+          1033
         ],
         "reset_phases": [
           "reset",
@@ -127,7 +127,7 @@
       "idle_screenshot": "rework/screen/cube_3d_phone_idle.png",
       "idle_screenshot_size": [
         375,
-        1380
+        1132
       ],
       "drop": {
         "drop_phases": [
@@ -189,7 +189,7 @@
       "idle_screenshot": "rework/screen/cube_3d_fallback_cdn_blocked.png",
       "idle_screenshot_size": [
         1280,
-        1060
+        948
       ],
       "drop": null,
       "console_errors": [
@@ -251,7 +251,7 @@
     {
       "check": "desktop idle screenshot saved",
       "pass": true,
-      "detail": "rework/screen/cube_3d_desktop_idle.png size=[1280, 1146]"
+      "detail": "rework/screen/cube_3d_desktop_idle.png size=[1280, 1033]"
     },
     {
       "check": "desktop drop sequence in order and cube hidden when dissolved",
@@ -266,7 +266,7 @@
     {
       "check": "desktop dissolved screenshot saved",
       "pass": true,
-      "detail": "rework/screen/cube_3d_desktop_dissolved.png size=[1280, 1146]"
+      "detail": "rework/screen/cube_3d_desktop_dissolved.png size=[1280, 1033]"
     },
     {
       "check": "phone page loads from file://",
@@ -306,7 +306,7 @@
     {
       "check": "phone idle screenshot saved",
       "pass": true,
-      "detail": "rework/screen/cube_3d_phone_idle.png size=[375, 1380]"
+      "detail": "rework/screen/cube_3d_phone_idle.png size=[375, 1132]"
     },
     {
       "check": "phone drop sequence in order and cube hidden when dissolved",
@@ -331,7 +331,7 @@
     {
       "check": "CDN blocked: fallback screenshot saved",
       "pass": true,
-      "detail": "rework/screen/cube_3d_fallback_cdn_blocked.png size=[1280, 1060]"
+      "detail": "rework/screen/cube_3d_fallback_cdn_blocked.png size=[1280, 948]"
     },
     {
       "check": "cube_3d.html wording scan (make_label.py list and organiser digests)",

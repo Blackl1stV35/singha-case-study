@@ -9,8 +9,12 @@ Dimensions are assumptions (see rework/08_pop_label_dieline.svg notes):
   leaf height 100 mm, core height 150 mm. Not measured; replace with prototype dimensions.
 
 Renders with Cycles on the GPU (CUDA) when available, otherwise CPU. Denoised.
+
+Materials use public CC0 textures (ambientCG Leaf001, Ice002, Paper002; 1K maps in textures/) and
+published optical values (ice index, coconut-milk colour). Sources and assumptions: MATERIALS.md.
 """
 import math
+import os
 import sys
 
 import bpy
@@ -41,7 +45,6 @@ except Exception as exc:  # noqa: BLE001
 scene.cycles.device = "GPU" if gpu_ok else "CPU"
 print("CYCLES DEVICE:", scene.cycles.device)
 scene.cycles.samples = samples
-import os
 scene.cycles.use_denoising = os.environ.get("POP_DENOISE", "1") == "1"
 scene.cycles.denoiser = "OPENIMAGEDENOISE"
 scene.cycles.use_adaptive_sampling = True
@@ -71,41 +74,78 @@ def base_material(name, rgb, roughness, **extras):
     return mat
 
 
-def textured_material(name, color_a, color_b, scale, bump_strength, roughness, wave_bump=False, **extras):
-    """Noise-driven colour ramp plus bump; optional diagonal wave bump for leaf veining."""
-    mat = bpy.data.materials.new(name)
+# Sourced values and their assumptions are listed in rework/mockup/MATERIALS.md
+TEX_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "textures")
+FROZEN_BASE_SRGB = (0.7937, 0.7860, 0.7376)  # coconut milk: Hunter L 80.6, b 6.4 (sourced); a -1.5 assumed; sRGB, D65
+ICE_IOR = 1.311                              # ice Ih at 550 nm, Warren and Brandt (2008), sourced
+
+
+def tex(pack, name):
+    return os.path.join(TEX_DIR, pack, name)
+
+
+def image_node(nt, path, colorspace):
+    node = nt.nodes.new("ShaderNodeTexImage")
+    node.image = bpy.data.images.load(path, check_existing=True)
+    node.image.colorspace_settings.name = colorspace
+    return node
+
+
+def normal_from_map(nt, bsdf, path, strength):
+    img = image_node(nt, path, "Non-Color")
+    nmap = nt.nodes.new("ShaderNodeNormalMap")
+    nmap.inputs["Strength"].default_value = strength
+    nt.links.new(img.outputs["Color"], nmap.inputs["Color"])
+    nt.links.new(nmap.outputs["Normal"], bsdf.inputs["Normal"])
+
+
+def leaf_material():
+    """Leaf wrap: interior crop of a CC0 leaf photo (ambientCG Leaf001) for colour, roughness and normal."""
+    mat = bpy.data.materials.new("LeafWrap")
     mat.use_nodes = True
     nt = mat.node_tree
-    nodes, links = nt.nodes, nt.links
-    bsdf = nodes.get("Principled BSDF")
-    coords = nodes.new("ShaderNodeTexCoord")
-    noise = nodes.new("ShaderNodeTexNoise")
-    noise.inputs["Scale"].default_value = scale
-    noise.inputs["Detail"].default_value = 8.0
-    noise.inputs["Roughness"].default_value = 0.6
-    ramp = nodes.new("ShaderNodeValToRGB")
-    ramp.color_ramp.elements[0].color = (*color_a, 1.0)
-    ramp.color_ramp.elements[1].color = (*color_b, 1.0)
-    bump = nodes.new("ShaderNodeBump")
-    bump.inputs["Strength"].default_value = bump_strength
-    bump.inputs["Distance"].default_value = 0.002
-    links.new(coords.outputs["Object"], noise.inputs["Vector"])
-    links.new(noise.outputs["Fac"], ramp.inputs["Fac"])
-    links.new(ramp.outputs["Color"], bsdf.inputs["Base Color"])
-    if wave_bump:
-        wave = nodes.new("ShaderNodeTexWave")
-        wave.wave_type = "BANDS"
-        wave.bands_direction = "DIAGONAL"
-        wave.inputs["Scale"].default_value = 35.0
-        wave.inputs["Distortion"].default_value = 6.0
-        wave.inputs["Detail"].default_value = 2.0
-        links.new(wave.outputs["Fac"], bump.inputs["Height"])
-    else:
-        links.new(noise.outputs["Fac"], bump.inputs["Height"])
-    links.new(bump.outputs["Normal"], bsdf.inputs["Normal"])
-    set_input(bsdf, "Roughness", roughness)
-    for key, value in extras.items():
-        set_input(bsdf, key, value)
+    bsdf = nt.nodes.get("Principled BSDF")
+    colour = image_node(nt, tex("leaf001", "Leaf001_Color_interior512.jpg"), "sRGB")
+    nt.links.new(colour.outputs["Color"], bsdf.inputs["Base Color"])
+    rough = image_node(nt, tex("leaf001", "Leaf001_Roughness_interior512.jpg"), "Non-Color")
+    nt.links.new(rough.outputs["Color"], bsdf.inputs["Roughness"])
+    normal_from_map(nt, bsdf, tex("leaf001", "Leaf001_NormalGL_interior512.jpg"), 0.6)
+    # ASSUMPTION: no sourced leaf transmittance; translucency is set by hand
+    set_input(bsdf, "Subsurface Weight", 0.25)
+    set_input(bsdf, "Subsurface Radius", (0.2, 0.4, 0.1))
+    set_input(bsdf, "Subsurface Scale", 0.004)
+    return mat
+
+
+def frozen_drink_material():
+    """Frozen coconut-pandan core: sourced ice index and coconut-milk colour, ice normal and roughness."""
+    mat = bpy.data.materials.new("FrozenDrink")
+    mat.use_nodes = True
+    nt = mat.node_tree
+    bsdf = nt.nodes.get("Principled BSDF")
+    set_input(bsdf, "Base Color", (*FROZEN_BASE_SRGB, 1.0))
+    set_input(bsdf, "IOR", ICE_IOR)
+    rough = image_node(nt, tex("ice002", "Ice002_Roughness_1K.jpg"), "Non-Color")
+    nt.links.new(rough.outputs["Color"], bsdf.inputs["Roughness"])
+    normal_from_map(nt, bsdf, tex("ice002", "Ice002_NormalGL_1K.jpg"), 0.3)
+    # ASSUMPTION: transmission and subsurface are not sourced for a frozen drink
+    set_input(bsdf, "Transmission Weight", 0.35)
+    set_input(bsdf, "Subsurface Weight", 0.10)
+    set_input(bsdf, "Subsurface Radius", (0.4, 0.7, 1.0))
+    return mat
+
+
+def label_material(artwork_path):
+    """Printed label: artwork as colour; CC0 paper roughness and fibre normal (ambientCG Paper002)."""
+    mat = bpy.data.materials.new("LabelPaper")
+    mat.use_nodes = True
+    nt = mat.node_tree
+    bsdf = nt.nodes.get("Principled BSDF")
+    art = image_node(nt, artwork_path, "sRGB")
+    nt.links.new(art.outputs["Color"], bsdf.inputs["Base Color"])
+    rough = image_node(nt, tex("paper002", "Paper002_Roughness_1K.jpg"), "Non-Color")
+    nt.links.new(rough.outputs["Color"], bsdf.inputs["Roughness"])
+    normal_from_map(nt, bsdf, tex("paper002", "Paper002_NormalGL_1K.jpg"), 0.2)
     return mat
 
 
@@ -130,33 +170,19 @@ core_bevel = core.modifiers.new("Bevel", "BEVEL")
 core_bevel.width = 0.006
 core_bevel.segments = 8
 smooth(core)
-core.data.materials.append(textured_material(
-    "FrozenDrink", (0.55, 0.78, 0.92), (0.80, 0.92, 0.98), scale=30.0, bump_strength=0.06,
-    roughness=0.12, **{"Transmission Weight": 0.35, "IOR": 1.31,
-                       "Subsurface Weight": 0.10, "Subsurface Radius": (0.4, 0.7, 1.0)}))
+core.data.materials.append(frozen_drink_material())
 
-# Leaf wrap: green, with subsurface translucency and diagonal vein bump
+# Leaf wrap: CC0 leaf photo for colour, roughness and normal
 leaf = add_cylinder("LeafWrap", radius=0.0205, depth=0.100, z_center=0.050)
 smooth(leaf)
-leaf.data.materials.append(textured_material(
-    "LeafGreen", (0.05, 0.20, 0.04), (0.16, 0.36, 0.08), scale=45.0, bump_strength=0.25,
-    roughness=0.55, wave_bump=True,
-    **{"Subsurface Weight": 0.25, "Subsurface Radius": (0.2, 0.4, 0.1), "Subsurface Scale": 0.004}))
+leaf.data.materials.append(leaf_material())
 
 # Label band: paper with the dieline artwork
 label_radius = 0.131 / (2 * math.pi)
 band = add_cylinder("LabelBand", radius=label_radius, depth=0.060, z_center=0.050, fill="NOTHING")
 band.rotation_euler = (0.0, 0.0, math.radians(107))
 smooth(band)
-label_mat = bpy.data.materials.new("LabelPaper")
-label_mat.use_nodes = True
-nt = label_mat.node_tree
-bsdf = nt.nodes.get("Principled BSDF")
-set_input(bsdf, "Roughness", 0.6)
-img_node = nt.nodes.new("ShaderNodeTexImage")
-img_node.image = bpy.data.images.load(label_path)
-nt.links.new(img_node.outputs["Color"], bsdf.inputs["Base Color"])
-band.data.materials.append(label_mat)
+band.data.materials.append(label_material(label_path))
 
 # Studio ground and cyclorama backdrop
 bpy.ops.mesh.primitive_plane_add(size=1.0, location=(0.0, 0.0, 0.0))
@@ -193,7 +219,8 @@ scene.world = world
 bpy.ops.object.empty_add(type="PLAIN_AXES", location=(0.0, 0.0, 0.075))
 target = bpy.context.active_object
 target.name = "Target"
-bpy.ops.object.camera_add(location=(0.36, -0.43, 0.17))
+# Same start as the video's first key (0.75 m, 300 deg, z 0.13): a 16:9 frame that keeps the whole pop
+bpy.ops.object.camera_add(location=(0.375, -0.6495, 0.13))
 cam = bpy.context.active_object
 cam.name = "Camera"
 cam.data.lens = 85

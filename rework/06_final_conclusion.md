@@ -6,6 +6,7 @@ Status: team conclusion. Evidence is virtual, except one approved physical test:
 
 - **Primary concept:** a leaf-wrapped frozen coconut-pandan drink with a food-grade inner barrier, under Alternative Formats. The inner barrier is the working design, confirmed by the user on 18 October (rework/30, rework/31). The barrier is PET. The consumer peels the leaf and sips as it thaws.
 - **Claim:** "leaf-wrapped". Not "plastic-free".
+- **Inner pouch:** PET, antimony-free catalyst. The Thai limits are verified (rework/32): the overall-migration margin is about 76x. Fat content and a migration test (physical, needs approval) remain open.
 - **Novelty claim:** a leaf-wrapped frozen drink. No such drink was found in the extended search. A leaf-wrapped frozen ice-cream bar in Ratchaburi is a disclosed precedent: one 2023 user post shows it; its sale and frozen status are unconfirmed (rework/25).
 - **Leaf-only (no barrier):** rejected on physical grounds. Freeze damage gives about one leaking path per wrap at a damaged fraction of about 10^-7, and open stomata wick the wrap in minutes (rework/30).
 - **Hot-season use:** keep in an insulated box with gel packs, keep out of ice water, and eat within about an hour in full sun. These go in the product instructions. They go on the label only after a Thai registration check.

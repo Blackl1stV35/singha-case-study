@@ -241,6 +241,7 @@ story.append(table([
     ["Leaf contact angle (76 vs 130 degrees)", "Closed (physics)", "Intact wax does not wick; damaged paths at 76 degrees do. The outside-water rows apply to damaged paths."],
     ["Product classification (beverage or ice cream)", "Working assumption", "Treated as a non-heat ready-to-eat beverage, pending a Thai registration adviser. If classed as ice cream, the −2.2 C storage rule applies instead."],
     ["Physical leak test: leaf-only wrap (rework/33)", "Open (approved, not yet run)", "Dye-penetration on 300 wraps, controls included. Pass if zero leaks. Lab run needed."],
+    ["PET pouch compliance (rework/32)", "Open (limits verified)", "Thai No. 435 limits verified. Overall migration margin about 76x; antimony needs antimony-free PET; fat content and a migration test (needs approval) are open."],
     ["Unknown parameters (drink, damage, stomata, process)", "Closed (physics)", "Resolved in rework/30: water activity 0.995, pH 6.3, lag from h0 = 2. Leaf-only seal not supported; inner barrier is the working design."],
     ["Percolation of damage (rework/31)", "Closed (physics)", "Connected airspace network adopted. Leaf-only seal survives only below about 1e-8 damaged cells; 50 percent leak near 3 to 5 x 1e-7."],
     ["Taste of inner barrier (rework/31)", "Closed (physics)", "PE and PP scalp aroma completely; PET takes up about 0.2 percent in 2 h. PET selected; EVOH the alternative."],

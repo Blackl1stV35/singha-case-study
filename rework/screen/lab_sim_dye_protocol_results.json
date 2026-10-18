@@ -1,0 +1,78 @@
+{
+  "simulation": true,
+  "statement": "Simulated run of rework/33 with the screen's breach model. Not a physical measurement.",
+  "protocol": {
+    "wraps": 300,
+    "positive_controls": 10,
+    "negative_controls": 10,
+    "pass_rule": "k = 0 of 300 with controls valid",
+    "p_detect": 0.95,
+    "runs_per_condition": 2000
+  },
+  "conditions": {
+    "stomata closed": {
+      "f=1e-09": {
+        "pass_probability": 0.9975,
+        "median_k": 0,
+        "p95_k": 0,
+        "mean_k": 0.0
+      },
+      "f=1e-08": {
+        "pass_probability": 0.8275,
+        "median_k": 0,
+        "p95_k": 1,
+        "mean_k": 0.19
+      },
+      "f=1e-07": {
+        "pass_probability": 0.0,
+        "median_k": 16,
+        "p95_k": 22,
+        "mean_k": 15.63
+      },
+      "f=3e-07": {
+        "pass_probability": 0.0,
+        "median_k": 86,
+        "p95_k": 99,
+        "mean_k": 86.27
+      },
+      "f=1e-06": {
+        "pass_probability": 0.0,
+        "median_k": 247,
+        "p95_k": 258,
+        "mean_k": 246.8
+      }
+    },
+    "stomata open": {
+      "f=1e-09": {
+        "pass_probability": 0.459,
+        "median_k": 1,
+        "p95_k": 2,
+        "mean_k": 0.77
+      },
+      "f=1e-08": {
+        "pass_probability": 0.001,
+        "median_k": 7,
+        "p95_k": 12,
+        "mean_k": 7.54
+      },
+      "f=1e-07": {
+        "pass_probability": 0.0,
+        "median_k": 67,
+        "p95_k": 78,
+        "mean_k": 66.69
+      },
+      "f=3e-07": {
+        "pass_probability": 0.0,
+        "median_k": 157,
+        "p95_k": 171,
+        "mean_k": 156.99
+      },
+      "f=1e-06": {
+        "pass_probability": 0.0,
+        "median_k": 265,
+        "p95_k": 274,
+        "mean_k": 265.17
+      }
+    }
+  }
+}

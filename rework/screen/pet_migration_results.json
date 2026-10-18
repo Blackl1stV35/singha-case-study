@@ -1,4 +1,9 @@
 {
+  "limits": {
+    "overall_mg_per_dm2": 10.0,
+    "antimony_mg_per_kg": 0.04,
+    "source": "Thai MoPH Notification No. 435 (B.E. 2565), verified in rework/32"
+  },
   "assumptions": {
     "rho_PET_kg_m3": 1380.0,
     "PET_thickness_m": 2.5e-05,
@@ -8,30 +13,30 @@
     "frozen_factor": 0.001,
     "model": "Fickian short-time, sink condition"
   },
-  "substances": {
-    "PET oligomers (overall migration)": {
-      "migrant_mg_per_dm2_2h": 0.1321,
-      "food_mg_per_kg_2h": 1.5545,
-      "limit_mg_per_kg": 60.0,
-      "margin_times": 38.6,
-      "frozen_24h_food_mg_per_kg": 0.17028331,
-      "basis": "EU overall migration 60 mg/kg food (10 mg/dm2)"
-    },
+  "overall_migration": {
+    "migrant_mg_per_dm2_2h": 0.132,
+    "limit_mg_per_dm2": 10.0,
+    "margin_times": 75.68,
+    "frozen_24h_mg_per_dm2": 0.014474
+  },
+  "specific_migration": {
     "acetaldehyde": {
-      "migrant_mg_per_dm2_2h": 0.0042,
       "food_mg_per_kg_2h": 0.0492,
       "limit_mg_per_kg": 6.0,
       "margin_times": 122.1,
-      "frozen_24h_food_mg_per_kg": 0.00538483,
-      "basis": "specific migration limit 6 mg/kg"
+      "basis": "Thai Table 4 s4.7 item 1; EU group restriction"
     },
     "ethylene glycol (residual)": {
-      "migrant_mg_per_dm2_2h": 0.1321,
       "food_mg_per_kg_2h": 1.5545,
-      "limit_mg_per_kg": null,
-      "margin_times": null,
-      "frozen_24h_food_mg_per_kg": 0.17028331,
-      "basis": "limit not yet verified (rework/32); no margin stated"
+      "limit_mg_per_kg": 30.0,
+      "margin_times": 19.3,
+      "basis": "Thai Table 4 s4.7 item 12; EU group restriction"
+    },
+    "diethylene glycol (residual)": {
+      "food_mg_per_kg_2h": 1.5545,
+      "limit_mg_per_kg": 30.0,
+      "margin_times": 19.3,
+      "basis": "Thai Table 4 s4.7 item 5"
     }
   },
   "antimony": {
@@ -41,28 +46,10 @@
     "food_mg_per_kg_if_all_leach": 1.218,
     "limit_mg_per_kg": 0.04,
     "leach_fraction_at_limit": 0.0329,
-    "decision": "specify antimony-free PET (titanium or germanium catalysed); the antimony route is not compliant if more than the leach fraction above is released in 2 h"
+    "decision": "specify antimony-free PET (titanium or germanium catalysed); antimony would otherwise need a leach test below the fraction above"
   },
-  "measurement": {
-    "1e-04": {
-      "cells_to_scan_per_breach": 10000.0,
-      "epidermis_area_cm2_per_breach": 0.09
-    },
-    "1e-05": {
-      "cells_to_scan_per_breach": 99999.99999999999,
-      "epidermis_area_cm2_per_breach": 0.9
-    },
-    "1e-06": {
-      "cells_to_scan_per_breach": 1000000.0,
-      "epidermis_area_cm2_per_breach": 9.0
-    },
-    "1e-07": {
-      "cells_to_scan_per_breach": 10000000.0,
-      "epidermis_area_cm2_per_breach": 90.0
-    },
-    "1e-08": {
-      "cells_to_scan_per_breach": 100000000.0,
-      "epidermis_area_cm2_per_breach": 900.0
-    }
+  "fat_sensitivity": {
+    "overall_margin_times": 75.68,
+    "statement": "migration into a fatty food (fat above 20 %, EU fat correction and olive-oil simulant) must rise by less than this factor to stay within 10 mg/dm2; the fat content of the drink must be measured"
   }
 }

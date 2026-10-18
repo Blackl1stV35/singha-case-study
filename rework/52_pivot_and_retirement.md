@@ -54,7 +54,7 @@ What was checked:
 Kept out of the judge folder (team-only):
 - The team spec [rework/48](48_brand_style_matching.md). It names the organiser and the double-blind rule, so it must not go to judges.
 - The build scripts, the style tokens (which hold the held-claims list), the verification scripts, and the render logs.
-- The downloaded textures in `rework/mockup/textures/`. Their download approval is still open. They are not committed.
+- The downloaded textures in `rework/mockup/textures/`. They are already in the repo history (`f03dcfe`, `20cc373`), and their download approval is still open.
 - The retired leaf and pop artifacts, including `label_artwork.png`. That file has Inkscape metadata and a "team rule" line.
 
 Repo-level caution: the repo itself is team-only. Its commit author is a personal account, and its remote is a personal GitHub repository. Do not share the repo or its history with judges. Only the judge folder is for judges.
@@ -62,7 +62,7 @@ Repo-level caution: the repo itself is team-only. Its commit author is a persona
 ## 5. Git
 
 - The work is committed on branch `pivot-lime-cube`, which was cut from `singha-candidate-b-soy-and-limits`. The branch was then fast-forward merged into `main`. Nothing was pushed.
-- The downloaded textures are left untracked, pending approval.
+- The texture files in `rework/mockup/textures/` were already tracked from earlier mockup commits (`f03dcfe` and `20cc373`), so they are in the repo history. Nothing new was added. Their download approval is still open.
 
 ## 6. Open items before any entry
 

@@ -22,13 +22,13 @@
 
 | Rank | Finalist | Component | Verdict |
 |---|---|---|---|
-| Primary | A. Leaf-wrapped frozen coconut-pandan drink | Alternative Formats | proceed, with the claim "leaf-wrapped" and the hot-season conditions |
+| Primary | A. Leaf-wrapped frozen coconut-pandan drink with an inner barrier | Alternative Formats | proceed, with the claim "leaf-wrapped" and the hot-season conditions |
 | Second-ranked | B. Midlife isoflavone soy drink | New Trend-Driven Target | only if the regulator confirms in writing that the target claim is allowed |
 | Dropped | C. Non-alcoholic Thai-herb RTD, reframed | New Trend-Driven Target | viability of the reframed concept is open, and unit cost is unset |
 
 ## Slide 4: the product (A)
 
-- A frozen coconut or pandan drink, sealed in a banana or pandan leaf. Peel it open and sip as it thaws.
+- A frozen coconut or pandan drink in a banana or pandan leaf wrap, with a food-grade inner barrier. Peel the leaf and sip as it thaws.
 - The newness is the drinking act, not an ingredient.
 - Target: Thai buyers who value traditional packaging (a hypothesis; the evidence so far is about produce, not drinks).
 - Precedent: a leaf-wrapped frozen ice-cream bar in Ratchaburi, one 2023 user post, unconfirmed.

@@ -4,10 +4,10 @@ Status: team conclusion. All evidence is virtual: no physical, taste or consumer
 
 ## Decisions
 
-- **Primary concept:** a leaf-wrapped frozen coconut-pandan drink, under Alternative Formats. The consumer peels the leaf and sips as it thaws.
+- **Primary concept:** a leaf-wrapped frozen coconut-pandan drink with a food-grade inner barrier, under Alternative Formats. The inner barrier is the working design (rework/30). The consumer peels the leaf and sips as it thaws.
 - **Claim:** "leaf-wrapped". Not "plastic-free".
 - **Novelty claim:** a leaf-wrapped frozen drink. No such drink was found in the extended search. A leaf-wrapped frozen ice-cream bar in Ratchaburi is a disclosed precedent: one 2023 user post shows it; its sale and frozen status are unconfirmed (rework/25).
-- **Fallback:** the same drink in a continuous inner film, labelled not plastic-free. It is held as a documented fallback. Nothing in the virtual screens calls for it.
+- **Leaf-only (no barrier):** rejected on physical grounds. Freeze damage gives about one leaking path per wrap at a damaged fraction of about 10^-7, and open stomata wick the wrap in minutes (rework/30).
 - **Hot-season use:** keep in an insulated box with gel packs, keep out of ice water, and eat within about an hour in full sun. These go in the product instructions. They go on the label only after a Thai registration check.
 - **Holding rule:** the product is treated as a non-heat ready-to-eat beverage (working assumption, pending registration check). Thai food-premises rules then require below 5 °C, or no more than 2 hours at room temperature.
 - **After thaw:** eat within 2 hours of leaving the freezer, and within about an hour in full sun. Do not refreeze. Keep the wrap dry and out of standing water. Spoilage screen: rework/28.

@@ -87,9 +87,9 @@ story.append(Spacer(1, 6))
 
 story.append(P("1. Decisions taken (18 October 2026)", H2))
 story += bullets([
-    "<b>Primary concept:</b> the leaf-wrapped frozen coconut-pandan drink, under Alternative Formats.",
-    "<b>Fallback:</b> the same drink in a continuous inner film. It is labelled not plastic-free and is used only if the leaf-only design fails.",
-    "<b>Claim:</b> describe the product as <b>leaf-wrapped</b>. Do not say plastic-free. The leaf-only design passes the liquid screen only while its cut edges and damaged paths stay out of standing water, and that is unmeasured.",
+    "<b>Working design:</b> the leaf-wrapped frozen coconut-pandan drink with a food-grade inner barrier, under Alternative Formats. Leaf-only (no barrier) is rejected on physical grounds: freeze damage and stomata would leak (rework/30).",
+    "<b>Inner barrier:</b> the inner film is plastic, so the product is not plastic-free. It is the working design, not a fallback.",
+    "<b>Claim:</b> describe the product as <b>leaf-wrapped</b>. Do not say plastic-free. The outer wrap is leaf; the inner barrier is plastic.",
     "<b>Novelty claim:</b> a leaf-wrapped frozen drink eaten peel-and-sip as it thaws. No such drink was found in the extended search. One leaf-wrapped frozen ice-cream bar is a disclosed precedent (section 3).",
     "<b>Hot-season use conditions:</b> keep the pop in an insulated box with gel packs, keep it out of ice water, and eat it within about an hour when it is in full sun. These go in the product instructions. They do not go on the label until a Thai registration adviser confirms the classification.",
     "<b>Product classification for holding rules:</b> treat the product as a non-heat ready-to-eat beverage. Thai rules then require below 5 °C, or no more than 2 hours at room temperature, when sold from food premises.",
@@ -241,6 +241,7 @@ story.append(table([
     ["Leaf contact angle (76 vs 130 degrees)", "Closed (physics)", "Intact wax does not wick; damaged paths at 76 degrees do. The outside-water rows apply to damaged paths."],
     ["Product classification (beverage or ice cream)", "Working assumption", "Treated as a non-heat ready-to-eat beverage, pending a Thai registration adviser. If classed as ice cream, the −2.2 C storage rule applies instead."],
     ["Physical leak tests", "Closed (out of scope)", "Not in scope, by team decision."],
+    ["Unknown parameters (drink, damage, stomata, process)", "Closed (physics)", "Resolved in rework/30: water activity 0.995, pH 6.3, lag from h0 = 2. Leaf-only seal not supported; inner barrier is the working design."],
     ["Spoilage after thaw (rotten condition)", "Closed (physics screen)", "Growth screen: sealed drink spoils in about 6 to 12 h at 30 C; contaminated, in about 3.5 to 7 h. The 2-hour rule governs. Rules in rework/28."],
     ["Pathogens and microbial load", "Closed (physics screen)", "From one cell per serving, hazard in about 6 to 27 h at 30 C. The start load decides the risk, so a kill step or pathogen-free raw material is required. Rules in rework/29."],
 ], [58 * mm, 40 * mm, 76 * mm]))

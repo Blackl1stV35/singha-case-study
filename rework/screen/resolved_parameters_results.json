@@ -1,0 +1,54 @@
+{
+  "drink_composition": {
+    "water_activity_ideal_raoult": 0.995,
+    "sucrose_wt": 0.08,
+    "pH": 6.3,
+    "basis": "near-neutral coconut milk; 8 % sugar; ideal water activity (Raoult); no preservative assumed"
+  },
+  "lag_h0": {
+    "value": 2.0,
+    "basis": "Baranyi lag parameter for cold-stressed cells, typical 1 to 3; lag = h0 / mu"
+  },
+  "damage_radius_m": {
+    "lo": 1e-07,
+    "hi": 1e-06,
+    "basis": "order of plant cell-wall thickness after freeze rupture; log-uniform"
+  },
+  "single_path_leak_probability_avg": 0.6201,
+  "cells_per_wrap": 17246000.0,
+  "wrap_area_m2": 0.01552,
+  "damage_fractions": {
+    "1e-06": {
+      "damaged_cells_per_wrap": 17.2,
+      "expected_leaking_paths_per_wrap": 10.69
+    },
+    "1e-04": {
+      "damaged_cells_per_wrap": 1724.6,
+      "expected_leaking_paths_per_wrap": 1069.46
+    },
+    "1e-02": {
+      "damaged_cells_per_wrap": 172456.0,
+      "expected_leaking_paths_per_wrap": 106945.52
+    }
+  },
+  "stomata": {
+    "5 um": {
+      "washburn_climb_time_s": 231.0,
+      "basis": "Washburn climb of the full 100 mm wrap, drink viscosity 1 mPa s, 76 degree contact angle"
+    },
+    "10 um": {
+      "washburn_climb_time_s": 115.0,
+      "basis": "Washburn climb of the full 100 mm wrap, drink viscosity 1 mPa s, 76 degree contact angle"
+    },
+    "15 um": {
+      "washburn_climb_time_s": 77.0,
+      "basis": "Washburn climb of the full 100 mm wrap, drink viscosity 1 mPa s, 76 degree contact angle"
+    }
+  },
+  "critical_damage_fraction_for_one_leaking_path": 9.35e-08,
+  "sensitivity_single_path_leak": {
+    "0.1 to 0.3 um": 0.36,
+    "0.1 to 1 um (resolved)": 0.6201,
+    "0.3 to 1 um": 0.8575
+  }
+}

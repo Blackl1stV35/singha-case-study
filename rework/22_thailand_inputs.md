@@ -53,8 +53,13 @@ Confidence: **medium** = station or standard source read directly; **low** = sec
 | Parameter | Value used | Source | Confidence |
 |---|---|---|---|
 | Festival afternoon peak air temperature | 35.7 °C | section 1 | medium |
-| Songkran splash water temperature | 26 °C; splash fraction 20 %; water film h = 300 W/m²K | **assumption** (research pending, see rework/24) | assumption |
-| Ice-water bath | 0 to 3 °C over 4 h; water convection h = 300 W/m²K (range 100–500) | **assumption** (standard water properties; research pending) | assumption |
+| Songkran splash water temperature | 26 °C; splash fraction 20 %; water film h = 300 W/m²K | **assumption**: no sourced water temperature found. The only source read (Radical Storage travel blog, 2026, https://radicalstorage.com/travel/songkran-2026/) advises room-temperature water and warns against ice water, with no Celsius value. | assumption |
+| Ice-water bath | 0 to 3 °C over 4 h; water convection h = 300 W/m²K (range 100–500) | Ice-water coolers stay near 0 °C for many hours: frozen 5 kg bottles 5.2 h below 0 °C (minimum −11.7 °C); time to 6 °C with ice-water 38.6 to 63.7 h by cooler type. Indoor, 17.6 °C average, so not tropical. PLoS One 2020, https://pmc.ncbi.nlm.nih.gov/articles/PMC7164660/. The 0 to 3 °C warm-up over 4 h is still an assumption. Convection h is an assumption. | partly sourced |
+| Bangkok April normal mean maximum | 35.7 °C (festival peak in SU1, SU5); Songkran forecasts 30 to 37 °C (Naewna, 12 Apr 2025) and 35 to 40 °C (Thansettakij, 10 Apr 2025), both forecasts | Wikipedia Bangkok climate table, https://en.wikipedia.org/wiki/Bangkok (secondary; TMD origin not confirmed) and section 1 | medium |
+| Chiang Mai and Khon Kaen April normal maximum | 36.7 °C and 36.2 °C (not used in the model; context for northern and northeastern festivals) | Wikipedia climate tables, https://en.wikipedia.org/wiki/Chiang_Mai, https://en.wikipedia.org/wiki/Khon_Kaen (WMO and Royal Irrigation Department cited, not TMD) | low |
+| Thai heat-index warning tiers (TMD and Department of Health) | Observation 27 to 32.9 °C; watch 33 to 41.9 °C; danger 42 to 51.9 °C; extreme 52 °C and above (heat index, not air temperature) | Nation Thailand, quoted in the summer research; Thai index formula not confirmed. Context only. | low |
+| Sun-exposure uplift to heat index | up to +15 °F (about +8 °C) under full sun, for shady light-wind index values | US National Weather Service, https://www.weather.gov/safety/heat-index (not a Thai source; context only) | medium (official US) |
+| Saturation vapour pressure over ice at −18 °C | 124.9 Pa (used in the condensation estimate) | Computed from the Goff–Gratch and Murphy–Koop ice formulas (Vömel, https://cires1.colorado.edu/~voemel/vp.html); the FAO table only reaches −14.9 °C (0.166 kPa, https://www.fao.org/4/y7223e/y7223e0i.htm) | medium (derived) |
 | Water viscosity and surface tension (external liquid) | 1.79 mPa·s / 0.0756 N/m at 0 °C, down to 0.80 mPa·s / 0.0712 N/m at 30 °C | standard water property tables (IAPWS values as I recall them; not fetched in this session, verify before citing) | medium (unverified fetch) |
 | Drink viscosity and surface tension (internal liquid, screen) | 1.0 mPa·s (range 1–3) / 0.072 N/m | rework/16 (assumption from coconut-drink range) | assumption |
 | Leaf contact angle, adaxial | 76.08° (measured); 60° wettable bound | rework/16 (measured) | medium |
@@ -64,5 +69,5 @@ Confidence: **medium** = station or standard source read directly; **low** = sec
 - Thai measured cargo temperature in delivery vans and motorbike boxes in service.
 - Thai or tropical hold-time data for frozen food in insulated boxes with gel packs.
 - Thai regulatory frozen-food storage and the cold-holding limit for ready-to-drink products.
-- Songkran splash-water temperature and street-stall exposure duration (pending the summer-occasion research).
-- Condensation rate on frozen packs in Thai humidity (estimated from psychrometrics; check against the research).
+- Songkran splash-water temperature (no public source read gave a Celsius value) and street-stall exposure duration.
+- Condensation rate on frozen packs in humid air: no measured source found. The deposition estimate uses psychrometric values only.

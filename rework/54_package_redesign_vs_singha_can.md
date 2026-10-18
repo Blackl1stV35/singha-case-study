@@ -2,6 +2,8 @@
 
 Status: redesign applied to the front label and the 3D page, and the hero re-rendered. This is a design decision for the team, not a legal clearance. A trade-dress and trademark check is still open (section 6).
 
+Correction, 18 October 2026 (from the user). The restriction taken from the Singha can is its lion emblem only. The package uses no lion emblem. The 330 ml serving reference is not cleared and remains under review, and it is not a settled rule. Rules R-P2 to R-P5 and R-P7 are design preferences, not clearance findings. The trademark and trade dress search is not complete: a WIPO Global Brand Database search for PLUNK returned 51 results across several offices, and the Thai mark register was not reached in that pass.
+
 ## 1. What we looked at
 
 Google image search for "singha lime soda", read through the built-in browser on 18 October 2026. Thumbnails only: nothing was downloaded, and no page beyond the results was opened.

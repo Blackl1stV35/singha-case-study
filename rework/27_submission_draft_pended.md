@@ -80,3 +80,7 @@ Thai drinks come in cans and bottles. Ours comes in a leaf. It is a frozen cocon
 ## Deadline
 
 Competition closes 22 October 2026 at 23:59.
+
+## Form rule (noted 19 October 2026)
+
+The submission file must be a PDF of no more than 100 MB (from the competition form, as read by the user). This draft is still pended and is for the retired leaf-wrapped candidate. A Lime Cube submission text is not drafted here; it waits for the work plan and the user's decision. Nothing is submitted.

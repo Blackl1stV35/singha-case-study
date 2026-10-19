@@ -1,4 +1,4 @@
-# Desk model, Thai stress test and pack economics for the lime cube (19 October 2026)
+﻿# Desk model, Thai stress test and pack economics for the lime cube (19 October 2026)
 
 Status: a desk model only. No bench test, no quote, no outside contact. Scripts: [screen/formulation_desk_model.py](screen/formulation_desk_model.py) (results in [screen/formulation_desk_model_results.json](screen/formulation_desk_model_results.json)) and [screen/pack_economics.py](screen/pack_economics.py) (results in [screen/pack_economics_results.json](screen/pack_economics_results.json)). Both use the standard library only and run with `python -I`. Every figure is a model output or a sourced input with its tier. Page text behind SOURCED figures is not yet saved to `rework/raw/`, so under the repo rule those figures stay UNVERIFIED until saved.
 
@@ -74,7 +74,7 @@ Reading of the stress test:
 
 ## 5. Acid balance and the taste trade-off
 
-Total citric acid per 330 mL needed for a target pH, from the charge balance (citric pKa 3.13, 4.76, 6.40; carbonic pKa 6.35, 10.33; CRC, tier P, with an edition caveat):
+Total citric acid per 330 mL needed for a target pH, from the charge balance (citric pKa 3.13, 4.76, 6.40; carbonic pKa 6.35, 10.33; CRC Handbook copy, tier S, UNVERIFIED for this repository (the text is not saved in the repository)):
 
 | Target pH | Total citric (g per 330 mL) | Per litre (g/L) | Free excess (g per 330 mL) |
 |---|---|---|---|
@@ -190,3 +190,4 @@ Open:
 - The potassium medical question (kidney disease, potassium-sparing drugs) is not answered by any desk figure.
 - Claim thresholds: the potassium share of a reference value could trigger a nutrient claim under other rules. Thai claim rules were not checked. No claim wording is used (S1, F1, D4).
 - Prices are inputs with the status shown. Bulk proxies are not quotes. No quote was requested.
+

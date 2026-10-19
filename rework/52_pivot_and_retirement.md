@@ -1,4 +1,4 @@
-# Pivot to the lime cube, retirements and confirmed decisions (18 October 2026)
+﻿# Pivot to the lime cube, retirements and confirmed decisions (18 October 2026)
 
 Status: the user confirmed these decisions on 18 October 2026. The repo is merged to `main` locally, and nothing is pushed. Nothing has been registered, submitted or sent outside the team.
 
@@ -25,6 +25,7 @@ Status: the user confirmed these decisions on 18 October 2026. The repo is merge
 | D17 | **International expansion framing dropped** from the proposal. Overseas analogues stay as labelled evidence where no domestic evidence exists. | User, 19 October 2026 |
 | D18 | **Judge-facing material stays anonymous.** The judges are Singha executives, and the handover is presented on the stage. | User, 19 October 2026; the double-blind frame |
 | D19 | **Git:** all work committed and pushed, with the remote kept public. | User, 19 October 2026 |
+| D20 | **Singha sparkling water flavour: lime.** The company release (P) and a news reprint (S) both state Lime Flavour, 330 ml, 15 baht, March 2026. The article that said lemon is treated as in error. The product overlaps this competitor on flavour; the cube differs in consumption form and pack. | User, 19 October 2026 (check requested); [capture 86] and [capture 87] in the team folder |
 
 ## 2. Retirements
 
@@ -86,3 +87,4 @@ Repo-level caution: the repo itself is team-only. Its commit author is a persona
 7. **Approval for downloads:** the textures in `rework/mockup/textures/` and the two Thai FDA PDFs saved during the mockup work.
 8. **Sweetener choice and its label name.** Not set.
 9. **Placeholders** on the label: sweetener name, net weight, Thai particulars, ingredients, manufacturer, and the rest of the back panel. They are marked "[to be set]".
+

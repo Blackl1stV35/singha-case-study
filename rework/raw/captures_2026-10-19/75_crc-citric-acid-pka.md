@@ -4,7 +4,7 @@
 - Date read: 19 October 2026
 - Access route: WebFetch. WebFetch returned only raw PDF bytes with no readable text. The file was saved locally by the tool to (a session copy outside the repository) and opened with the Read tool, which rendered the pages as images. The values were read from those rendered images.
 - Tier: S. This is a reproduced copy of the CRC Handbook table, hosted on a university course site.
-- Status: SOURCED. The citric acid rows were visible in the saved copy (printed page 8-46, PDF page 5 of the saved copy).
+- Status: UNVERIFIED for this repository. The values were read from a saved copy held outside the repository; save the table text to rework/raw to upgrade. The citric acid rows were visible in the saved copy (printed page 8-46, PDF page 5 of the saved copy).
 
 ## Extracted facts
 
@@ -24,4 +24,5 @@
 
 - The values were read from rendered images of the saved copy, not from a text layer. Check the three pKa values against the printed handbook before a record cites them.
 - This is a copy hosted on a course site. It is not the publisher's own edition.
+
 

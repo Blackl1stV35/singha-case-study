@@ -27,7 +27,7 @@ Sourcing policy: [SOURCING_POLICY.md](SOURCING_POLICY.md). Primary sources come 
 | 330 ml reference | Not cleared | [54](54_package_redesign_vs_singha_can.md) |
 | Conversion lead | Synthesis only; no respondents | [49](49_conversion_test_synthesis.md) |
 | Submission draft | Pended; nothing submitted | [27](27_submission_draft_pended.md) (retired draft, kept for the record) |
-| Competition proposal sections (00 executive summary; 01 to 08 drafts; 09 feasibility and registration; 10 risk and implementation) and the project valuation model | Written 19 October 2026 at the recommended design (0.55 volume, pH 3.5 working, sucralose). Team-only traceability appendices to delete before submission. Sources captured in [raw/captures_2026-10-19/](raw/captures_2026-10-19/): 65 SOURCED, 16 UNVERIFIED | [proposal/](proposal/), [screen/project_valuation.py](screen/project_valuation.py), [screen/handover_figures.py](screen/handover_figures.py) |
+| Competition proposal sections (executive summary in judge/; 01 to 08 drafts; 09 feasibility and registration; 10 risk and implementation) and the project valuation model | Written 19 October 2026 at the recommended design (0.55 volume, pH 3.5 working, sucralose). Team-only traceability appendices to delete before submission. Sources captured in [raw/captures_2026-10-19/](raw/captures_2026-10-19/): 65 SOURCED, 16 UNVERIFIED | [proposal/](proposal/), [screen/project_valuation.py](screen/project_valuation.py), [screen/handover_figures.py](screen/handover_figures.py) |
 
 ## Reading order
 

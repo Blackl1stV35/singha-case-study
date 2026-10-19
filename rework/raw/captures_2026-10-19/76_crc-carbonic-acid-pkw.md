@@ -4,7 +4,7 @@
 - Date read: 19 October 2026
 - Access route: WebFetch. WebFetch returned only raw PDF bytes with no readable text. The file was saved locally by the tool to (a session copy outside the repository) and opened with the Read tool, which rendered the pages as images. The values were read from those rendered images.
 - Tier: S. This is a reproduced copy of the CRC Handbook table, hosted on a university course site.
-- Status: SOURCED. The carbonic acid and water rows were visible in the saved copy (printed pages 8-40 and 8-41).
+- Status: UNVERIFIED for this repository. The values were read from a saved copy held outside the repository; save the table text to rework/raw to upgrade. The carbonic acid and water rows were visible in the saved copy (printed pages 8-40 and 8-41).
 
 ## Extracted facts
 
@@ -25,4 +25,5 @@
 - The values were read from rendered images of the saved copy, not from a text layer. Check the pKa values and the water row against the printed handbook before a record cites them.
 - This is a copy hosted on a course site. It is not the publisher's own edition.
 - The water row is listed under the pKa column. The page's own text relates it to pKw through pKa + pKb = pKa(water), so the value is reported as printed and not re-derived here.
+
 

@@ -314,3 +314,8 @@ Open (L9, L14).
 - L28. Glass and bubbles. Both are out of the scene. Reopening either needs the owner's written decision (rule 5 and rule S2). See 10.3.
 - L29. Concurrent edit. Another step edited this note while this step was running, and added section 9 and the status line. Sections 1 to 9 were left as they were found. Only the status line gained a pointer to section 10, and section 10 was appended.
 - L30. Brand positions. No position is verified. The URLs in section 2.4 come from search snippets dated 18 October 2026, and no page was opened. Rows with no URL are out of the matching. The style match is a tone and layout choice for the owner to judge, not a verified brand match.
+
+## Update (19 October 2026)
+
+- The exclusion of alcohol cues in section 3.3 is dropped at the user's instruction. Brand-owner and legal sign-off, and any alcohol-cue question for the SINGHA lion, are Singha's department's responsibility.
+- The rule against organiser wording on judge-facing files stays. The lion and the name are used as authorised for the proposal.

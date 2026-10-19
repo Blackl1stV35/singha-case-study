@@ -61,3 +61,9 @@ Mock-up scope: the design asked for a seven-layer laminate with three ink statio
 - The user confirmed the claim that the SINGHA lion may be used for the proposal. Recorded as the user's decision for the competition proposal.
 - This is not a brand-owner or legal clearance. The print and sale conditions are unchanged: brand-owner and legal sign-off before any print or production use, and no beer, bar or beverage-brand cue on the pack.
 - The judge folder is synced to the merged design: label_front.png, label_back.png, cube_3d.html and cube_hero.png (the 2K render with the cleaned lion).
+
+## 8. G1 closed by the user (19 October 2026)
+
+- The user placed the brand-owner and legal sign-off, and the alcohol-cue concern on the lion for a non-alcoholic product, with Singha's department. The team's records no longer carry that condition.
+- The check in section 4 (item 4) raised this concern. It stays on record as the reason the question was asked. It is no longer a team gate.
+- The team's own copy rules stay: no sugar-free, sodium-free, health or fizz wording.

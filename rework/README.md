@@ -13,7 +13,7 @@ Sourcing policy: [SOURCING_POLICY.md](SOURCING_POLICY.md). Primary sources come 
 | Midlife soy drink | Retired | [40](40_candidate_b_soy_drink.md) |
 | Herb drink (reframed) | Reframed on 18 October 2026 (03), then dropped (06); 05 is a team note, not decided | [03](03_c_reframed.md), [05](05_team_note_c_price_ladder.md) |
 | Frozen pour-over lime cube | Superseded by the primary candidate | [42](42_working_candidate_lime_cube.md) |
-| Gates | Resolved by design or scope; the rest are stated limits or open. Gate G1 (lion on a non-alcoholic pack): confirmed by the user for the proposal on 19 October 2026; print and sale conditions still open | [50](50_final_gate_resolution.md), [57](57_package_revision_tarlo.md), [60](60_segment_redesign_lime_cube.md) |
+| Gates | Resolved by design or scope; the rest are stated limits or open. Gate G1 (lion on a non-alcoholic pack) closed on 19 October 2026: the sign-off and the cue concern sit with Singha's department | [50](50_final_gate_resolution.md), [57](57_package_revision_tarlo.md), [60](60_segment_redesign_lime_cube.md) |
 | Unit cost and value chain | Variable cost clears the can; value chain not yet shown. Correction on the metal figure | [53](53_unit_cost_and_value_chain.md) |
 | Can cost per unit (desk model) | Variable THB 3.7 to 6.1 per can; not Singha's cost; mostly secondary sources | [58](58_singha_can_cost_research.md), [61](61_singha_can_cost_model.md) |
 | Consumer persona and acquisition cost | Proxy study on a desk basis; no respondents | [55](55_consumer_persona_and_acquisition.md) |
@@ -76,7 +76,7 @@ The numbering has gaps (35 to 39) because those numbers were never used.
 ## Open items
 
 - Trademark rights are authorized by the user for the product proposal. The registry search stays partial and is recorded as a stated limit. See [54](54_package_redesign_vs_singha_can.md).
-- The lion on a non-alcoholic pack needs brand and legal sign-off before any print or sale. The user confirmed the lion for the proposal on 19 October 2026 (gate G1 in [57](57_package_revision_tarlo.md) and [60](60_segment_redesign_lime_cube.md)).
+- Gate G1 is closed on 19 October 2026. Brand-owner and legal sign-off, and the alcohol-cue question, are Singha's department's responsibility (see [60](60_segment_redesign_lime_cube.md), section 8).
 - The judge folder was synced to the merged design on 19 October 2026. Re-sync after any label change.
 - External links in records 02, 03, 55 and 58 were not fetched. This is a stated limit until they are checked.
 - The textures in `archive/leaf_wrapped_mockup/textures/` came from earlier downloads whose approval is not on record.

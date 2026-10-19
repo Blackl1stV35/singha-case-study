@@ -2,6 +2,8 @@
 
 This folder holds the numbered records of the competition work. The current state is as of 18 October 2026. Records are kept even when they are retired. A banner at the top of each retired record says so.
 
+Sourcing policy: [SOURCING_POLICY.md](SOURCING_POLICY.md). Primary sources come first; secondary sources are allowed and labelled; every figure is tiered and dated.
+
 ## Current state
 
 | Item | Status | Record |

@@ -1,16 +1,16 @@
 {
   "basis": {
-    "colour": "DESIGN CHOICE from the modern pack direction (workflow wg0nz9dbo, merged and checked 19 October 2026). Not verified brand colours. The lion's own colours are not sampled.",
+    "colour": "DESIGN CHOICE from the merged segment design (workflow wf_87c8ab5d-bf0, 19 October 2026). Charcoal, lime, silver foil and paper. Not verified brand colours; no foil swatch matched.",
     "background": "ASSUMPTION (design choice).",
     "type": "ASSUMPTION (design choice). Sarabun is our choice; the organiser's typeface was not read (48 section 5.1). Sizes, weights and line heights are ASSUMPTION.",
     "layout": "ASSUMPTION (design choice). The grid, gutters and bands are ours (48 section 5.5)."
   },
   "colour": {
-    "ink": "#0B0C0A",
-    "ink-soft": "#3A3F36",
-    "lime": "#C5F03A",
-    "violet": "#6A3CFF",
-    "paper": "#F2F0E6"
+    "ink": "#17191C",
+    "lime": "#A8CF3A",
+    "foil": "#C4C9CE",
+    "paper": "#F1F0EB",
+    "ink-soft": "#3A3F36"
   },
   "type": {
     "family": "'Sarabun', 'Noto Sans Thai', Arial, sans-serif",
@@ -50,17 +50,15 @@
     }
   },
   "copy_front": [
-    "Tarlo · lime drink cube",
-    "Drop one cube into 330 ml of water and stir.",
+    "Lime Cube",
+    "One compressed cube is dropped into 330 ml of water.",
     "Serving: 1 cube made up to 330 ml",
     "Contains an intensive sweetener.",
-    "Single-serve pouch",
-    "Net weight: 5.3 g"
+    "Single-serve pouch · Net weight: 5.3 g"
   ],
   "copy_back": [
     "Thai-language particulars: [to be set]",
-    "Preparation: 1 drop one cube into 330 ml of water. 2 stir until dissolved. 3 drink.",
-    "Ingredients: potassium bicarbonate, citric acid, binder and filler [to be set], intensive sweetener [name to be set], flavour",
+    "Ingredients: potassium bicarbonate, citric acid, binder and filler [to be set], intensive sweetener [name to be set], flavour [to be set].",
     "Potassium: present. Amount per serving: [to be set]",
     "Sweetener: [functional class and specific name to be set]",
     "Flavour: [natural or artificial] flavour added [origin to be set]",
@@ -98,5 +96,8 @@
     "text": "Leelawadee UI Regular and Bold for all copy, with bold caps for the descriptor. Free fallback: Noto Sans Thai. Leelawadee UI is taken as installed on target machines and is not checked there.",
     "wordmark": "The lion is the authorised SINGHA lion, recoloured and cut from the supplied artwork. The SINGHA wordmark is removed and no lettering appears beside or under the lion.",
     "minimum_legal_size_note": "Legal particulars at or above 2.2 mm (the pack-particulars size in type). The back copy is set at 2.3 mm in this layout. Check the printed size before print."
-  }
+  },
+  "copy_back_top": [
+    "Preparation: drop one cube into 330 ml of water and stir until dissolved. Drink."
+  ]
 }

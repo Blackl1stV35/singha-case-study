@@ -102,6 +102,8 @@ def parse_args():
                    help="front: straight-on product view; hero: three-quarter composition")
     p.add_argument("--exposure", type=float, default=-1.2,
                    help="view exposure in stops, set so the backdrop matches the background token")
+    p.add_argument("--device", choices=["cpu", "gpu"], default="cpu",
+                   help="cpu: Cycles on the CPU; gpu: Cycles on the CUDA device (NVIDIA)")
     return p.parse_args(argv)
 
 
@@ -215,7 +217,7 @@ def build_materials(tok, label_img):
     body_mat.node_tree.links.new(film_bump.outputs["Normal"], body_bsdf.inputs["Normal"])
     mats["body"] = body_mat
     # Rim (seal flange): aluminium foil layer with a PE sealant tint. ASSUMPTION colour; the foil is the visible barrier.
-    mats["rim"] = principled("PackLaminateEdge", hex_linear("#D7DAD6"), 0.30, {"Metallic": 0.9, "IOR": 1.5})[0]
+    mats["rim"] = principled("PackLaminateEdge", hex_linear("#C4C9CE"), 0.30, {"Metallic": 0.9, "IOR": 1.5})[0]
 
     label_mat, label_bsdf = principled("PackLabel", (1.0, 1.0, 1.0), 0.35)
     label_tex = label_mat.node_tree.nodes.new("ShaderNodeTexImage")
@@ -417,7 +419,15 @@ def strip_png_text(path):
 def setup_render(scene, args, bg_hex):
     scene.render.engine = "CYCLES"
     cy = scene.cycles
-    cy.device = "CPU"
+    cy.device = "GPU" if args.device == "gpu" else "CPU"
+    if args.device == "gpu":
+        # Enable the CUDA device and no other; the CPU stays available for the host work.
+        prefs = bpy.context.preferences.addons["cycles"].preferences
+        prefs.compute_device_type = "CUDA"
+        prefs.get_devices()
+        for dev in prefs.devices:
+            dev.use = dev.type == "CUDA"
+        print("GPU devices in use:", [dev.name for dev in prefs.devices if dev.use])
     cy.samples = args.samples
     cy.use_adaptive_sampling = True
     cy.use_denoising = True
@@ -481,7 +491,7 @@ def main():
 
     out_path = os.path.abspath(args.out)
     scene.render.filepath = out_path
-    print("rendering %dx%d, %d samples, CPU" % (args.width, args.height, args.samples))
+    print("rendering %dx%d, %d samples, %s" % (args.width, args.height, args.samples, args.device.upper()))
     bpy.ops.render.render(write_still=True)
     strip_png_text(out_path)
     print("done in %.1f s" % (time.time() - t0))

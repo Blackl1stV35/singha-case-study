@@ -12,6 +12,8 @@ Status: revision applied to the label artwork, the 3D page and the 2K front rend
 
 ## 2. Decisions
 
+> Update, 19 October 2026: the user picked **Singha Lime Cube** as the product name. This overrides T1 below. Open: whether SINGHA appears as text on the pack, since the wordmark was removed from the lion at the user's request (section 7).
+
 | # | Decision | Basis | Status |
 |---|---|---|---|
 | T1 | **Product name: Tarlo** (descriptor "lime drink cube"). Runner-up: Cubi | Workflow wg0nz9dbo, name phase: a judge scored nine candidates on legibility at 70 mm, Thai-English readability, distinctiveness and trademark risk. Tarlo scored 17 of 20 (trademark scored so 5 is the lowest risk). Cubi scored 14 and describes the cube, so it is weakly distinctive and carries a Cuba association | Working name. One web search only. No register search. Stated limit (section 5) |
@@ -76,3 +78,11 @@ The compliance check returned ok = false with ten findings.
 - `mockup/cube_3d.html` (labels embedded as images), `mockup/cube_front_2k.png` (2K front render).
 - `screen/verify_cube_mockup.py` (checks the label images load; 24 of 24 pass).
 - `judge/`: label_front.png, label_back.png, cube_3d.html, cube_hero.png (the 2K render). Team-only records stay out of judge/.
+
+## 7. Name pick and the SINGHA question (19 October 2026)
+
+- **Picked:** Singha Lime Cube, by the user.
+- **Why Tarlo was first:** the judge scored Tarlo 17 of 20 and Cubi 14. Cubi describes the cube's form, so it is weakly protectable. Cubi also surfaced a Cuba Libre Cola record (abandoned 2002). Tarlo is coined, with no drink or Thai meaning.
+- **Costs of Singha Lime Cube:** "Lime Cube" is descriptive, so the product part of the name is weakly protectable on its own. It overlaps the existing Singha Sparkling Water Lime Flavour recorded in rework/54 (from rework/42), which could confuse shoppers. "Singha + descriptor" follows the pattern in the old workspace document (for example "Singha Lemon Soda").
+- **Open decision:** a product name on the pack carries the word SINGHA as text. That conflicts with the earlier request to remove the wordmark. Options: (a) SINGHA as a small top line above the name, with no text under the lion; (b) the name without SINGHA, with the lion as the only SINGHA reference; (c) keep SINGHA only in the legal name. The pack artwork is not changed until this is decided.
+- **Not done:** no register search for Singha Lime Cube. Authorisation of 18 October 2026 covers the proposal only.

@@ -14,7 +14,7 @@ This folder holds the numbered records of the competition work. The current stat
 | Gates | Resolved by design or scope; the rest are stated limits or open | [50](50_final_gate_resolution.md) |
 | Unit cost and value chain | Variable cost clears the can; value chain not yet shown | [53](53_unit_cost_and_value_chain.md) |
 | Package | Tarlo, modern direction: lion recoloured, SINGHA wordmark removed, net weight 5.3 g derived | [57](57_package_revision_tarlo.md); earlier rules in [54](54_package_redesign_vs_singha_can.md) |
-| Product name | Tarlo (working name; one web search, no register search) | [57](57_package_revision_tarlo.md) |
+| Product name | Singha Lime Cube (picked by the user, 19 October 2026; no register search; overlaps an existing Singha lime sparkling product). Tarlo was the judge's first choice | [57](57_package_revision_tarlo.md) |
 | Trademark and trade dress | SINGHA name and lion emblem authorized by the user for the product proposal (18 October 2026); registry search partial, recorded as a stated limit | [54](54_package_redesign_vs_singha_can.md) |
 | 330 ml reference | Not cleared | [54](54_package_redesign_vs_singha_can.md) |
 | Conversion lead | Synthesis only; no respondents | [49](49_conversion_test_synthesis.md) |

@@ -86,3 +86,10 @@ The compliance check returned ok = false with ten findings.
 - **Costs of Singha Lime Cube:** "Lime Cube" is descriptive, so the product part of the name is weakly protectable on its own. It overlaps the existing Singha Sparkling Water Lime Flavour recorded in rework/54 (from rework/42), which could confuse shoppers. "Singha + descriptor" follows the pattern in the old workspace document (for example "Singha Lemon Soda").
 - **Open decision:** a product name on the pack carries the word SINGHA as text. That conflicts with the earlier request to remove the wordmark. Options: (a) SINGHA as a small top line above the name, with no text under the lion; (b) the name without SINGHA, with the lion as the only SINGHA reference; (c) keep SINGHA only in the legal name. The pack artwork is not changed until this is decided.
 - **Not done:** no register search for Singha Lime Cube. Authorisation of 18 October 2026 covers the proposal only.
+
+## 8. Decisions confirmed (19 October 2026)
+
+- **Name: Lime Cube.** The SINGHA word is not in the product name, so the SINGHA naming question is dropped. The lion is the only SINGHA reference on the pack. Descriptive name, so it is weakly protectable; it still needs a register search. It also sits close to the existing Singha lime sparkling product in rework/54.
+- **Units per package: one cube per pouch.** The proposal sells single-serve pouches, each made up to 330 ml. No multipack is in the proposal. A carton of several pouches would be a later decision with its own pricing.
+- **Segment brief:** men, mainly 25 to 34, sport-minded, with Singha brand presence as a reason to buy. The package redesign follows this brief. The lead segment rests on the synthesis test, which the desk study in rework/55 qualified: sugar-substitute drinkers skew 45 and over.
+- **Laminate:** PET outer, printed ink, aluminium barrier foil, PE sealant, as set out in mockup/MATERIALS_pouch_stack.md. The thicknesses are assumptions.

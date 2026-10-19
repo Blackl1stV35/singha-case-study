@@ -528,10 +528,11 @@ function buildScene(THREE, OrbitControls, RoundedBoxGeometry) {
   pack.position.set(S.packX, 0, 0);
   pack.rotation.y = 0.32;
   scene.add(pack);
-  const filmMat = new THREE.MeshPhysicalMaterial({ color: C['off-white'], roughness: 0.25, ior: 1.575, clearcoat: 0.3, clearcoatRoughness: 0.3 });
+  // Rim (seal flange): aluminium foil barrier with a PE sealant tint. Foil colour and finish are ASSUMPTION.
+  const rimMat = new THREE.MeshPhysicalMaterial({ color: '#D7DAD6', roughness: 0.3, metalness: 0.9, ior: 1.5, clearcoat: 0.3, clearcoatRoughness: 0.3 });
   const frontMat = new THREE.MeshStandardMaterial({ map: makeTexture(labelCanvas.front), roughness: 0.35 });
   const backMat = new THREE.MeshStandardMaterial({ map: makeTexture(labelCanvas.back), roughness: 0.35 });
-  const pouch = new THREE.Mesh(pillowGeometry(THREE, pw, ph, pd / 2, mm(PILLOW_EDGE_MM)), [filmMat, frontMat, backMat]);
+  const pouch = new THREE.Mesh(pillowGeometry(THREE, pw, ph, pd / 2, mm(PILLOW_EDGE_MM)), [rimMat, frontMat, backMat]);
   pouch.castShadow = true;
   pouch.receiveShadow = true;
   pack.add(pouch);

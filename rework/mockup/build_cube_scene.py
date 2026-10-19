@@ -202,7 +202,8 @@ def build_materials(tok, label_img):
     mats = {}
 
     # PET film: IOR 1.575 (isotropic average at about 589 nm; sourced, see MATERIALS_cube.md).
-    body_mat, body_bsdf = principled("PackFilm", lin["paper"], 0.25, {"IOR": 1.575})
+    # Laminate: PET outer (IOR 1.575, sourced) over a foil barrier, so the film carries a metallic sheen under the print.
+    body_mat, body_bsdf = principled("PackFilm", lin["paper"], 0.25, {"IOR": 1.575, "Metallic": 0.35})
     # Fine micro-texture for a printed laminate (ASSUMPTION: strength and scale, no measured source).
     film_noise = body_mat.node_tree.nodes.new("ShaderNodeTexNoise")
     film_noise.inputs["Scale"].default_value = 1400.0
@@ -213,12 +214,21 @@ def build_materials(tok, label_img):
     body_mat.node_tree.links.new(film_noise.outputs["Fac"], film_bump.inputs["Height"])
     body_mat.node_tree.links.new(film_bump.outputs["Normal"], body_bsdf.inputs["Normal"])
     mats["body"] = body_mat
-    mats["seal"] = principled("PackSeal", lin["paper"], 0.30, {"IOR": 1.575})[0]  # not used by the pillow pouch
+    # Rim (seal flange): aluminium foil layer with a PE sealant tint. ASSUMPTION colour; the foil is the visible barrier.
+    mats["rim"] = principled("PackLaminateEdge", hex_linear("#D7DAD6"), 0.30, {"Metallic": 0.9, "IOR": 1.5})[0]
 
     label_mat, label_bsdf = principled("PackLabel", (1.0, 1.0, 1.0), 0.35)
     label_tex = label_mat.node_tree.nodes.new("ShaderNodeTexImage")
     label_tex.image = label_img
     label_mat.node_tree.links.new(label_tex.outputs["Color"], label_bsdf.inputs["Base Color"])
+    # Ink build-up: the printed areas stand a few micrometres proud, shown as a faint relief from the artwork.
+    ink_gray = label_mat.node_tree.nodes.new("ShaderNodeRGBToBW")
+    ink_bump = label_mat.node_tree.nodes.new("ShaderNodeBump")
+    ink_bump.inputs["Strength"].default_value = 0.03  # ASSUMPTION: relief strength, no measured source
+    ink_bump.inputs["Distance"].default_value = 0.0002
+    label_mat.node_tree.links.new(label_tex.outputs["Color"], ink_gray.inputs["Color"])
+    label_mat.node_tree.links.new(ink_gray.outputs["Val"], ink_bump.inputs["Height"])
+    label_mat.node_tree.links.new(ink_bump.outputs["Normal"], label_bsdf.inputs["Normal"])
     mats["label"] = label_mat
 
     # Compressed powder: matte, lightly granular, slight subsurface (ASSUMPTION, no measured source).
@@ -285,7 +295,7 @@ def pillow_mesh(name, w, h, half_depth, cx):
             + [(i, GRID_V) for i in range(GRID_U, 0, -1)] + [(0, j) for j in range(GRID_V, 0, -1)])
     for k, p in enumerate(ring):
         q = ring[(k + 1) % len(ring)]
-        faces.append(([front[p], front[q], back[q], back[p]], 0))
+        faces.append(([front[p], front[q], back[q], back[p]], 2))
     for verts, mat_index in faces:
         f = bm.faces.new(verts)
         f.material_index = mat_index
@@ -309,8 +319,9 @@ def build_pack(tok, aspect, mats):
     mesh = pillow_mesh("PackPouch", w, h, d / 2.0, PACK_X_MM)
     obj = bpy.data.objects.new("PackPouch", mesh)
     bpy.context.scene.collection.objects.link(obj)
-    mesh.materials.append(mats["body"])
-    mesh.materials.append(mats["label"])
+    mesh.materials.append(mats["body"])   # slot 0: laminate film (back face)
+    mesh.materials.append(mats["label"])  # slot 1: printed front face
+    mesh.materials.append(mats["rim"])    # slot 2: foil and sealant rim
     for poly in mesh.polygons:
         poly.use_smooth = True
     print("pouch %.0f x %.0f mm, %.0f mm deep, label on the whole front face" % (w, h, d))

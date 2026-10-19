@@ -19,8 +19,8 @@ OUT_PNG = HERE.parent / "charts" / "can_cost_per_unit.png"
 CAN_L = 0.33  # litres per can
 
 # ---- Inputs: (low, high), tier, status, source note -------------------------------------------
-FX = (33.32, 33.44)                 # THB per USD, XE mid-market 18 Oct 2026 (S); low is a 16 Sep reading
-LME = (2998.5, 3008.5)              # USD per tonne, LME cash bid (S, news report); high is a CFD (S)
+FX = (33.3535, 33.7455)              # THB per USD: BOT average buying sight and selling transfer, 15 Oct 2026 (P, primary)
+LME = (3013.0, 3014.0)              # USD per tonne: LME official cash bid and offer, data valid 16 Oct 2026 (P, primary)
 SHEET_G = (14.4, 18.5)              # g of aluminium sheet per can (ASSUMPTION, from the can mass row)
 CONV_NONMETAL = (0.04, 0.08)        # USD per can, non-metal conversion (PROXY, US 2024, S); corrected range
 FILL_CONSUM = (0.001, 0.004)        # USD per can, filling consumables (ASSUMPTION)

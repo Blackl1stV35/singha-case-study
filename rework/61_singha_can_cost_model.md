@@ -97,3 +97,15 @@ Premium sensitivity (mid inputs, THB per can at zero, USD 100 and USD 200 per to
 - **IMARC:** the sheet-input range (14.4 to 18.5 g) is driven by the 13 to 15 g can mass. IMARC's 18.0 g is a sensitivity, not the basis of the range.
 - **Nameplate citation:** the record says 2012 news and the script says 2018. Use one year when the source is saved.
 - **Not saved in the repo (unverified until the page text is saved to rework/raw/):** the LME prices (alcircle and Trading Economics), the XE rate, the sugar price (21 to 29 THB per kg), the non-metal conversion (sciencefix), the peer canned share (55.3%), utilisation (58.4 to 63.3%), the Crown line capacity, and the scrap figure (1.4 to 3.5 g).
+
+## Primary update (19 October 2026)
+
+The model now uses primary values where they were read:
+- **LME cash:** US$3,013.00 to 3,014.00 per tonne, the official cash bid and offer, data valid 16 October 2026 (`raw/lme_trading_summary_primary_2026-10-19.md`). This replaces the news-report band (2,998.50 to 3,008.50).
+- **USD/THB:** 33.3535 to 33.7455, the Bank of Thailand average buying (sight) and selling (transfer) rates as of 15 October 2026 (`raw/bot_fx_primary_2026-10-15.md`). This replaces the XE band.
+
+Result: variable cost is THB 3.73 to 6.14 per can, middle THB 4.94 (before, THB 3.72 to 6.09). Sheet metal is USD 0.0434 to 0.0558 per can.
+
+Still not primary: the sugar-levy line (the Royal Gazette notice is behind a verification page in the browser; the Excise Department page read was a landing page), the non-metal conversion (a US proxy), the sugar liquid (an assumption), the scrap and the premium. The regional aluminium premium and scrap credit remain missing.
+
+Can capacity, now from the primary filing: BJC's 56-1 One Report 2025 says TBC has 4 can production lines and added a fifth (hybrid) line in 2025. The 2022 expansion of 400 million cans a year is stated as about 10% of current capacity, which derives to roughly 4,000 million cans a year (approximate; `raw/bjc_one_report_2025_tbc_excerpt.md`). The line count and the 2022 timing are not reconciled. This is not used in the cost per can, which does not depend on the can plant's capacity.

@@ -21,3 +21,10 @@ Purpose: close the largest gaps in `rework/61` by reading primary sources, as `S
 ## Effect on the model
 
 No input in `rework/61` changes on the strength of this pass. The gaps stay as stated limits. The sugar-tax excise line and the can-capacity figure are still missing.
+
+## Outcomes after the Claude in Chrome pass (19 October 2026)
+
+- **LME (primary): read.** Official cash bid 3013.00, offer 3014.00 US$/t, data valid 16 Oct 2026. Saved to `lme_trading_summary_primary_2026-10-19.md`.
+- **Bank of Thailand (primary): read.** USD buying sight 33.3535, selling transfer 33.7455, as of 15 Oct 2026. Saved to `bot_fx_primary_2026-10-15.md`.
+- **BJC 56-1 One Report 2025 (primary): read.** TBC has 4 can lines, plus a hybrid line added in 2025; the 2022 expansion is stated as about 10% of current capacity. Saved to `bjc_one_report_2025_tbc_excerpt.md`.
+- **Royal Gazette, sugar-drink tax (primary): blocked.** The ratchakitcha PDF is behind a bot-verification page. Not bypassed. The user opened a separate tab to resolve it. Not read yet.

@@ -10,12 +10,12 @@
   ],
   "inputs": {
     "fx_thb_per_usd": [
-      33.32,
-      33.44
+      33.3535,
+      33.7455
     ],
     "lme_usd_per_t": [
-      2998.5,
-      3008.5
+      3013.0,
+      3014.0
     ],
     "sheet_g_per_can": [
       14.4,
@@ -55,10 +55,10 @@
   },
   "variable_cost_per_can": {
     "low": {
-      "usd": 0.11158,
-      "thb": 3.718,
+      "usd": 0.11179,
+      "thb": 3.728,
       "items_usd": {
-        "sheet_metal": 0.04318,
+        "sheet_metal": 0.04339,
         "conversion_nonmetal": 0.04,
         "filling_consumables": 0.001,
         "seaming": 0.0001,
@@ -67,10 +67,10 @@
       }
     },
     "high": {
-      "usd": 0.18196,
-      "thb": 6.085,
+      "usd": 0.18206,
+      "thb": 6.144,
       "items_usd": {
-        "sheet_metal": 0.05566,
+        "sheet_metal": 0.05576,
         "conversion_nonmetal": 0.08,
         "filling_consumables": 0.004,
         "seaming": 0.0005,
@@ -80,9 +80,9 @@
     }
   },
   "premium_sensitivity_thb_per_can": {
-    "0.0": 1.649,
-    "100.0": 1.704,
-    "200.0": 1.759
+    "0.0": 1.663,
+    "100.0": 1.718,
+    "200.0": 1.773
   },
   "cans_per_year": {
     "at_util_low": 978642424,
@@ -90,25 +90,25 @@
     "at_nameplate_100pct": 1675757576
   },
   "cost_per_can_grid_thb": {
-    "variable_mid_thb": 4.902,
+    "variable_mid_thb": 4.936,
     "rows": [
       {
         "cans_per_year": 500000000,
-        "fixed_0m_thb_per_can": 4.902,
-        "fixed_300m_thb_per_can": 5.502,
-        "fixed_600m_thb_per_can": 6.102
+        "fixed_0m_thb_per_can": 4.936,
+        "fixed_300m_thb_per_can": 5.536,
+        "fixed_600m_thb_per_can": 6.136
       },
       {
         "cans_per_year": 1000000000,
-        "fixed_0m_thb_per_can": 4.902,
-        "fixed_300m_thb_per_can": 5.202,
-        "fixed_600m_thb_per_can": 5.502
+        "fixed_0m_thb_per_can": 4.936,
+        "fixed_300m_thb_per_can": 5.236,
+        "fixed_600m_thb_per_can": 5.536
       },
       {
         "cans_per_year": 1675757576,
-        "fixed_0m_thb_per_can": 4.902,
-        "fixed_300m_thb_per_can": 5.081,
-        "fixed_600m_thb_per_can": 5.26
+        "fixed_0m_thb_per_can": 4.936,
+        "fixed_300m_thb_per_can": 5.115,
+        "fixed_600m_thb_per_can": 5.294
       }
     ]
   }

@@ -35,8 +35,8 @@ Read this first in any new session. These rules are standing instructions from t
 
 ## 5. Gates and decisions (do not change without the user)
 
-- **Gate G1 (open, blocking):** the SINGHA lion on a non-alcoholic pack may read as an alcohol-brand cue. Brand-owner and legal sign-off is needed before any proof, print or sale. The 18 October 2026 authorisation covers the proposal only.
-- The judge folder keeps the earlier labels until the merged design is cleared. Do not sync the new labels into `rework/judge/` until G1 is resolved.
+- **Gate G1:** on 19 October 2026 the user confirmed the claim that the SINGHA lion may be used for the proposal. That is the user's decision, not a brand-owner or legal clearance. Print and sale still need brand-owner and legal sign-off, and no beer or beverage-brand cue may appear on the pack.
+- The judge folder follows the merged design (synced 19 October 2026). Re-sync it from the mockup after any label change, and re-scan it for identifiers.
 - Name: **Lime Cube** (no SINGHA). Units: one cube per pouch (single serve). The SINGHA-as-text question was dropped by the user.
 - Thai particulars, ingredients, sweetener name and manufacturer remain bracketed placeholders.
 - The potassium amount line (decision F4) is kept until the user decides otherwise.

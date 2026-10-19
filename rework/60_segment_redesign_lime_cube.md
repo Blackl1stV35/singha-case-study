@@ -55,3 +55,9 @@ Mock-up scope: the design asked for a seven-layer laminate with three ink statio
 1. **G1:** keep the lion as hero on a non-alcoholic pack, subject to brand and legal clearance, or drop the lion and the brand-presence reason to buy.
 2. **Below-the-lion rule:** does "no text under the lion" cover all front copy, or only the SINGHA wordmark?
 3. **Sales unit:** confirm one pouch as the sold unit.
+
+## 7. Resolution of G1 for the proposal (19 October 2026)
+
+- The user confirmed the claim that the SINGHA lion may be used for the proposal. Recorded as the user's decision for the competition proposal.
+- This is not a brand-owner or legal clearance. The print and sale conditions are unchanged: brand-owner and legal sign-off before any print or production use, and no beer, bar or beverage-brand cue on the pack.
+- The judge folder is synced to the merged design: label_front.png, label_back.png, cube_3d.html and cube_hero.png (the 2K render with the cleaned lion).

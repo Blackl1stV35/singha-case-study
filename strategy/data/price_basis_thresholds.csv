@@ -1,3 +1,0 @@
-market,unit,exporter_cost,required_cif_unit_reading,customs_mid,customs_low,customs_high,required_cif_absorption_1m_cans,required_cif_absorption_3m_cans,required_cif_absorption_5m_cans,required_cif_absorption_10m_cans,customs_mid_passes_unit,customs_mid_passes_absorption_5m
-singapore,S$,0.3425,0.4893,0.478,0.38,0.576,1.1321,0.7036,0.6179,0.5536,False,False
-korea,KRW,386.875,552.6786,528,450,805,1266.9643,790.7738,695.5357,624.1071,False,False

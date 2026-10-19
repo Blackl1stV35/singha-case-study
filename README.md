@@ -24,4 +24,3 @@ Read [rework/README.md](rework/README.md). It gives the reading order, the folde
 - `rework/raw/`: raw workflow outputs and register extracts.
 - `rework/charts/`: chart images.
 - `rework/archive/`: retired assets kept for the record.
-- `strategy/` and `korea-chart/`: earlier export-study material. These are not part of the competition entry.

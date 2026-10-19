@@ -12,7 +12,7 @@ The verification run (an independent re-read of the Gazette, a chemistry recheck
 2. **0.9 volume is above the ceiling, not at it.** It is 18.5% above the 25 °C value (0.759) and 2.5% above the 20 °C value (0.878). It holds fully in a sealed 1-atm pure-CO₂ pack only at or below about 19 °C. At 25 °C it would need about 1.19 atm of CO₂.
 3. **The fizz is a kinetic question.** Equilibrium arithmetic gives the endpoint, not the rate. Section 2 gives a surface-only upper bound on persistence. Nucleation and stirring are not included, so the real time is shorter. The "faint" wording has no sensory source (section 10).
 4. **The free-acid excess is 3 to 6 times the stoichiometric citric acid**, not "roughly double". At a target pH of 3.0, total citric acid is 5.97 g per 330 mL (free 5.12 g). At pH 3.5 it is 3.42 g (free 2.57 g). The stoichiometric product, with no free acid, is near pH 6.0 in the model, not "above pH 4".
-5. **Potassium reference.** The 15% figure in [rework/62](62_component1_food_science_check.md) rested on a circular 3,456 mg reference. The Thai RDI for potassium is 3,500 mg per day: MOPH Notification 182 (B.E. 2541) is read as primary, and the current No. 445 value of 3,500 mg comes from a consultancy page (tier S). The Royal Gazette text of No. 445 was not read. At 518 mg per 330 mL the figure is **14.8%** of the Thai RDI.
+5. **Potassium reference.** The 15% figure in [rework/62](62_component1_food_science_check.md) rested on a circular 3,456 mg reference. The Thai RDI for potassium is 3,500 mg per day: MOPH Notification 182 (B.E. 2541) is read from a third-party copy (tier S; the primary text was not opened), and the current No. 445 value of 3,500 mg comes from a consultancy page (tier S). The Royal Gazette text of No. 445 was not read. At 518 mg per 330 mL the figure is **14.8%** of the Thai RDI.
 6. **The user's 19 October 2026 confirmation of 0.9 volume** was given on the reasoning in items 1 and 2. Both are withdrawn by this record. The dose is under review; see section 9.
 
 ## 2. Model results at 25 °C serve (no ice, 330 mL)
@@ -22,13 +22,13 @@ The verification run (an independent re-read of the Gazette, a chemistry recheck
 | CO₂ generated, 0.9 volume | 13.25 mmol | DERIVED from V × 0.330 L / 22.414 L/mol |
 | Potassium bicarbonate | 1.33 g | DERIVED (stoichiometric) |
 | Potassium per serve | 518 mg | DERIVED (K 39.10) |
-| Potassium, % of Thai RDI 3,500 mg | 14.8% | P (Notification 182); S (No. 445) |
+| Potassium, % of Thai RDI 3,500 mg | 14.8% | S (third-party copy of Notification 182; No. 445 value S) |
 | Citric acid, stoichiometric | 0.85 g | DERIVED |
 | Dissolved at serve (25 °C) | 0.759 volumes; 15.7% of the dose leaves at once | Model; Lange anchor (S) |
 | Mass-transfer time constant | 106 min (surface only, renewal 10 s) | Model; upper bound |
 | Time above the sensory threshold | about 130 min (surface only) | Model; threshold is mineral water (P), a proxy |
 
-The sensory threshold is the BET value of 0.44 g/L, about 0.22 volumes, for sparkling sensation in mineral water (Puleo et al. 2021; tier P, read from the abstract). No soft-drink threshold was found.
+The sensory threshold is the BET value of 0.44 g/L, about 0.22 volumes, for sparkling sensation in mineral water (Puleo et al. 2021; tier S, abstract only, full text not read). No soft-drink threshold was found.
 
 ## 3. Serve temperature and Thai conditions
 

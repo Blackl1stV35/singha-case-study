@@ -27,7 +27,7 @@ Sourcing policy: [SOURCING_POLICY.md](SOURCING_POLICY.md). Primary sources come 
 | 330 ml reference | Not cleared | [54](54_package_redesign_vs_singha_can.md) |
 | Conversion lead | Synthesis only; no respondents | [49](49_conversion_test_synthesis.md) |
 | Submission draft | Pended; nothing submitted | [27](27_submission_draft_pended.md) (retired draft, kept for the record) |
-| Competition proposal sections (problem, pain point, situation analysis, background and trends, strategy, project valuation, KPI, organization audit, case studies) | Eight team-only drafts with a project valuation model; not passing the final check (tier labels, citation completeness); not pushed to the public remote | [proposal/](proposal/), [screen/project_valuation.py](screen/project_valuation.py) |
+| Competition proposal sections (00 executive summary; 01 to 08 drafts; 09 feasibility and registration; 10 risk and implementation) and the project valuation model | Written 19 October 2026 at the recommended design (0.55 volume, pH 3.5 working, sucralose). Team-only traceability appendices to delete before submission. Sources captured in [raw/captures_2026-10-19/](raw/captures_2026-10-19/): 65 SOURCED, 16 UNVERIFIED | [proposal/](proposal/), [screen/project_valuation.py](screen/project_valuation.py), [screen/handover_figures.py](screen/handover_figures.py) |
 
 ## Reading order
 
@@ -68,7 +68,7 @@ The numbering has gaps (35 to 39) because those numbers were never used.
 
 ## Folders
 
-- `judge/`: the four judge-facing files: the hero render, the front and back label, and the 3D page. Nothing else goes here. It is the earlier set, held until gate G1 is cleared, so it does not yet show the merged design.
+- `judge/`: the judge-facing files: the hero render, the front and back label, the 3D page, and the R&D handover for the stage (`handover_rd_figures.md`, written 19 October 2026 at the 0.55-volume recommendation). Nothing else goes here. It is the earlier set, held until gate G1 is cleared, so it does not yet show the merged design.
 - `mockup/`: the team build for the cube. It holds the build scripts, the style tokens, the label and hero renders, the materials records, the GPU render evaluation, and the 3D page.
 - `screen/`: analysis scripts with their results (kill tests, cost model, financial projection, persona model), the browser check, and its screenshots.
 - `raw/`: raw workflow outputs, the literature register extract, and 12 pages of the NSO 2021 survey text used by the conversion study.
@@ -77,7 +77,7 @@ The numbering has gaps (35 to 39) because those numbers were never used.
 
 ## Open items
 
-- Repository visibility: the remote is public. Earlier team records were pushed to it. The proposal drafts were not pushed. Whether to make the remote private, or to remove the earlier records from its history, is the user's decision.
+- Repository visibility: the remote stays public by the user's decision (19 October 2026). The repository is not part of the stage presentation.
 - Dose (0.9 or 0.55 volume), target pH, the gazetted Thai No. 468 annex download (sweetener permission), and whether to draft the executive summary, the feasibility and registration route, and the risk and implementation plan. None is decided.
 - Trademark rights are authorized by the user for the product proposal. The registry search stays partial and is recorded as a stated limit. See [54](54_package_redesign_vs_singha_can.md).
 - Gate G1 is closed on 19 October 2026. Brand-owner and legal sign-off, and the alcohol-cue question, are Singha's department's responsibility (see [60](60_segment_redesign_lime_cube.md), section 8).

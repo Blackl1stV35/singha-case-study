@@ -1,0 +1,198 @@
+{
+  "design": {
+    "co2_volumes_per_330ml": 0.55,
+    "target_ph_working_anchor": 3.5,
+    "sweetener": "sucralose (recommended; permitted at 300 mg/kg in category 14.1.4, condition 127)",
+    "carbonation_agents": "potassium bicarbonate (quantum satis in 14.1.4) and citric acid (quantum satis in 14.1.4)"
+  },
+  "per_330ml_recipe": {
+    "co2_mmol": 8.1,
+    "potassium_bicarbonate_g": 0.811,
+    "citric_acid_stoichiometric_g": 0.519,
+    "citric_acid_total_for_pH_target_g": 2.1,
+    "citric_acid_free_excess_g": 1.582,
+    "potassium_mg": 316.6,
+    "potassium_pct_of_thai_rdi": 9.0,
+    "sucralose_mg": 33.0,
+    "sucralose_mg_per_kg": 100.0,
+    "sucralose_limit_mg_per_kg": 300
+  },
+  "serve_temperature": [
+    {
+      "serve_c": 5,
+      "prepared_ml": 330,
+      "dissolved_vol": 0.55,
+      "fraction_leaving_at_once": 0.0,
+      "time_above_threshold_min_upper_bound": 96.1,
+      "time_constant_min_upper_bound": 106.0
+    },
+    {
+      "serve_c": 10,
+      "prepared_ml": 330,
+      "dissolved_vol": 0.55,
+      "fraction_leaving_at_once": 0.0,
+      "time_above_threshold_min_upper_bound": 96.1,
+      "time_constant_min_upper_bound": 106.0
+    },
+    {
+      "serve_c": 15,
+      "prepared_ml": 330,
+      "dissolved_vol": 0.55,
+      "fraction_leaving_at_once": 0.0,
+      "time_above_threshold_min_upper_bound": 96.0,
+      "time_constant_min_upper_bound": 106.0
+    },
+    {
+      "serve_c": 20,
+      "prepared_ml": 330,
+      "dissolved_vol": 0.55,
+      "fraction_leaving_at_once": 0.0,
+      "time_above_threshold_min_upper_bound": 96.0,
+      "time_constant_min_upper_bound": 106.0
+    },
+    {
+      "serve_c": 25,
+      "prepared_ml": 330,
+      "dissolved_vol": 0.55,
+      "fraction_leaving_at_once": 0.0,
+      "time_above_threshold_min_upper_bound": 96.0,
+      "time_constant_min_upper_bound": 106.0
+    },
+    {
+      "serve_c": 30,
+      "prepared_ml": 330,
+      "dissolved_vol": 0.55,
+      "fraction_leaving_at_once": 0.0,
+      "time_above_threshold_min_upper_bound": 96.0,
+      "time_constant_min_upper_bound": 106.0
+    },
+    {
+      "serve_c": 35,
+      "prepared_ml": 330,
+      "dissolved_vol": 0.55,
+      "fraction_leaving_at_once": 0.0,
+      "time_above_threshold_min_upper_bound": 96.0,
+      "time_constant_min_upper_bound": 106.0
+    }
+  ],
+  "ice_cases": [
+    {
+      "name": "30 C water, 30 g ice",
+      "serve_c": 20.85,
+      "prepared_ml": 360,
+      "dissolved_vol": 0.5042,
+      "fraction_leaving_at_once": 0.0,
+      "time_above_threshold_min_upper_bound": 94.7,
+      "time_constant_min_upper_bound": 115.6
+    },
+    {
+      "name": "30 C water, 60 g ice",
+      "serve_c": 13.1,
+      "prepared_ml": 390,
+      "dissolved_vol": 0.4654,
+      "fraction_leaving_at_once": 0.0,
+      "time_above_threshold_min_upper_bound": 92.6,
+      "time_constant_min_upper_bound": 125.3
+    }
+  ],
+  "citric_by_target_ph_g_per_330ml": {
+    "2.8": {
+      "total": 5.102,
+      "free": 4.583
+    },
+    "3.0": {
+      "total": 3.701,
+      "free": 3.183
+    },
+    "3.5": {
+      "total": 2.1,
+      "free": 1.582
+    },
+    "4.0": {
+      "total": 1.509,
+      "free": 0.99
+    },
+    "4.5": {
+      "total": 1.159,
+      "free": 0.64
+    }
+  },
+  "cost_and_containers": {
+    "reactants_thb_per_cube": 0.118,
+    "pouch_thb": 1.3,
+    "print_thb": 1.5,
+    "processing_thb": 0.5,
+    "per_pouch_before_carton_thb": 3.42,
+    "pouch_mass_g": 4.44,
+    "packs": {
+      "6": {
+        "cost_per_cube_thb": 4.09,
+        "ex_factory_thb_per_cube": 9.0,
+        "containers": {
+          "20ft": {
+            "cartons": 21431,
+            "cubes": 128586,
+            "container_mass_kg": 2714.5,
+            "payload_limit_kg": 28200.0,
+            "limited_by": "volume"
+          },
+          "40ft": {
+            "cartons": 43721,
+            "cubes": 262326,
+            "container_mass_kg": 5537.9,
+            "payload_limit_kg": 26840.0,
+            "limited_by": "volume"
+          }
+        }
+      },
+      "12": {
+        "cost_per_cube_thb": 3.84,
+        "ex_factory_thb_per_cube": 9.0,
+        "containers": {
+          "20ft": {
+            "cartons": 10715,
+            "cubes": 128580,
+            "container_mass_kg": 1642.9,
+            "payload_limit_kg": 28200.0,
+            "limited_by": "volume"
+          },
+          "40ft": {
+            "cartons": 21860,
+            "cubes": 262320,
+            "container_mass_kg": 3351.8,
+            "payload_limit_kg": 26840.0,
+            "limited_by": "volume"
+          }
+        }
+      },
+      "24": {
+        "cost_per_cube_thb": 3.79,
+        "ex_factory_thb_per_cube": 9.0,
+        "containers": {
+          "20ft": {
+            "cartons": 5357,
+            "cubes": 128568,
+            "container_mass_kg": 1107.1,
+            "payload_limit_kg": 28200.0,
+            "limited_by": "volume"
+          },
+          "40ft": {
+            "cartons": 10930,
+            "cubes": 262320,
+            "container_mass_kg": 2258.8,
+            "payload_limit_kg": 26840.0,
+            "limited_by": "volume"
+          }
+        }
+      }
+    }
+  },
+  "limits": [
+    "desk model only; no bench test; the fizz duration is a surface-only upper bound (no nucleation)",
+    "the sweetness target (6 g sugar per 100 mL equivalent) is an assumption; no sensory test",
+    "the pH target is a working anchor; taste is untested",
+    "the pouch and print costs are assumptions or non-Thai listings; no Thai quote was requested",
+    "the 0.55-volume gate is not set; it is for R&D to define",
+    "product classification (beverage, edible ice or electrolyte drink) is open; condition TH3 applies to electrolyte drinks only"
+  ]
+}

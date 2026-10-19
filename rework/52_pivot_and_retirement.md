@@ -19,6 +19,12 @@ Status: the user confirmed these decisions on 18 October 2026. The repo is merge
 | D11 | **Central claim: new consumption form.** A dissolvable pouch cube that makes the drink on the spot, one cube per pouch (the sold unit is still inferred). The records call the dissolvable form a format change, not a new product, and the format novelty search is not run | User, 19 October 2026, adopting the leader's point 3 (the user is Peem) |
 | D12 | **Malt-fibre retired** from the proposal. No further malt-fibre work | User, 19 October 2026 |
 | D13 | **Sweetener: sucralose** (no potassium), on the recommendation. Steviol glycosides are the fallback if the Thai permission check fails. The sweetener dose is not set | User, 19 October 2026 ("proceed your recommend"). The Thai permission check is pending |
+| D14 | **Dose: 0.55 volume of CO₂ per 330 ml, adopted on the recommendation.** The 0.9-volume design holds fully only up to about 19 °C. Solubility at 35 °C is 0.592 volume, so 0.55 volume is within solubility at every serve from 5 °C to 35 °C. The gate for this dose is for R&D to define. | User, 19 October 2026 ("go by your recommendation"); [rework/63](63_desk_model_stress_and_pack_economics.md) sections 3 and 9 |
+| D15 | **Target pH: 3.5 (working anchor)**, the taste trade-off for R&D to test. | User, 19 October 2026 ("go by your recommendation"); [rework/63](63_desk_model_stress_and_pack_economics.md) section 5 |
+| D16 | **Sweetener permission (gate G6) resolved on the level.** Sucralose is 300 mg/kg in category 14.1.4 with condition 127, which applies the level to the drink as consumed. Condition TH3 applies only to electrolyte drinks. Potassium bicarbonate and citric acid are quantum satis. Classification remains an open regulatory question. | [rework/raw/moph_468_annex_flavoured_drinks_extract_2026-10-19.md](raw/moph_468_annex_flavoured_drinks_extract_2026-10-19.md) |
+| D17 | **International expansion framing dropped** from the proposal. Overseas analogues stay as labelled evidence where no domestic evidence exists. | User, 19 October 2026 |
+| D18 | **Judge-facing material stays anonymous.** The judges are Singha executives, and the handover is presented on the stage. | User, 19 October 2026; the double-blind frame |
+| D19 | **Git:** all work committed and pushed, with the remote kept public. | User, 19 October 2026 |
 
 ## 2. Retirements
 

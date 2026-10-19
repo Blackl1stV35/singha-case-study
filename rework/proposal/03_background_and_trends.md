@@ -1,82 +1,95 @@
 # Background and trends: Thailand, domestic market
 
-Scope: Thailand only, domestic market. Thai-language sources are translated into English in this section. No source page used here is saved and read, so no figure in this section is SOURCED; each figure carries the status shown.
+Scope: Thailand, domestic market. Thai-language sources are summarised in English. Overseas analogues are labelled, because no domestic evidence for dissolvable cubes was found.
 
 ## Tier key
 
-P: a government or regulator text read in full, a company's own filing, official statistics, a peer-reviewed article read in full, or a primary database. S: any other source, including press, trade portals, consultancy pages, company web pages that are not filings, handbooks reproduced online, and search snippets. SOURCED: the page text is saved in rework/raw and was read; this is the repository rule. UNVERIFIED: the page was not saved, or only a snippet or summary was read; a figure stays UNVERIFIED until its page is saved. DERIVED: our arithmetic, with the inputs and their tiers shown. PROXY: a stand-in for what is not measured. ASSUMPTION: a value chosen for the model, not sourced.
+P: a government or regulator text read in full, a company's own filing, official statistics, a peer-reviewed article read in full, or a primary database. S: any other source, including press, trade portals, consultancy pages, company web pages that are not filings, handbooks reproduced online, and search snippets. SOURCED: the text was captured and read. UNVERIFIED: not captured, blocked, unreadable, or only a snippet was read. DERIVED: our arithmetic, inputs and tiers shown. PROXY: a stand-in for what is not measured. ASSUMPTION: a value chosen for the model, not sourced.
 
 ## Background: the group and its beverage business
 
-Boon Rawd Brewery is the holding company. According to its website, Singha Corporation was set up in 2001 to oversee more than 150 subsidiaries and reports to the Boon Rawd board, while operating companies run day to day (Source 8). Tier S (company web page, not a filing). UNVERIFIED.
+Boon Rawd Brewery is the holding company, following a 2000 reorganisation. Singha Corporation was set up in 2001 and oversees Boon Rawd's subsidiaries, which the About Us page puts at more than 150 companies, with no date given. It reports directly to the Boon Rawd board (Source 1; S; SOURCED).
 
-The beverage business sits mainly in the non-alcoholic unit (SBU2): Singha Water, Singha Soda, Singha Lemon Soda, Purra, Purra Vitamin Water and FIJI. Other units cover alcoholic drinks, snacks (Masita) and food (Pun Dee rice) (Source 9). Tier S (company web page). UNVERIFIED. Treating SBU2 as the nearest unit for a non-alcoholic product is an ASSUMPTION.
+The two English home pages describe the parent differently: one calls Singha Corporation an affiliate of Boon Rawd, the other a subsidiary. The affiliate-wording page's footer is dated 2014 (Source 2; S; SOURCED).
 
-Single-entity FY2024 ratios: return on assets 10.01%, return on equity 15.73%, debt to equity 0.65x, up from 0.49x in FY2023. DERIVED: 0.65 ÷ 0.49 = 1.33, about 33% higher; inputs are S, UNVERIFIED (Source 10). Tier S: a third-party portal republishes Department of Business Development (DBD) figures, and the underlying DBD filings have not been read. UNVERIFIED. These are single-entity figures, not consolidated results. The very high net margin is not used, because it may reflect holding-company income (ASSUMPTION).
+The beverages category lists Singha Water, Singha Soda, Singha Lemon Soda, Purra, Purra Vitamin Water and FIJI (Source 2). Treating that category as the nearest unit for a non-alcoholic product is an ASSUMPTION.
 
-Limit: no consolidated accounts were available, and no innovation budget or group R&D spend has been disclosed in the sources reviewed. Only public group facts are used.
+A trade article of 11 March 2026 reports a lemon sparkling water from the group, in a 330 ml can at a suggested retail price of 15 baht. Distribution starts in all 7-Eleven branches nationwide. The article gives no launch date, and its health and sugar wording is not used (Source 3; S; SOURCED).
+
+An earlier read of a third-party portal, not saved, reported FY2024 single-entity ratios: return on assets 10.01%, return on equity 15.73%, debt to equity 0.65x (FY2023: 0.49x). The captured profile did not render these values, and the filings have not been read. DERIVED: 0.65 ÷ 0.49 = 1.33, about 33% higher; inputs UNVERIFIED (Source 4). These are single-entity figures, not consolidated results.
+
+Limit: no consolidated accounts, innovation budget or group R&D spend were available.
 
 ## Background: the Thai beverage market
 
 | Evidence (value, date) | Source, tier | Status |
 |---|---|---|
-| Domestic beverage market expected to reach THB 500 billion in 2026 (all beverages, not a category size) | Thai press report, 18 May 2026, citing the ProPak Asia 2026 organiser (Source 1); S | UNVERIFIED |
-| Purchase drivers across products: quality 24.55%, low price 24.12%, convenience 22.06% (5,467 respondents, August 2025) | Thai Ministry of Commerce survey, relayed by TPSO (Source 2); P | PROXY (not beverage-specific); UNVERIFIED (government relay) |
-| 43% often seek new flavours; 37% follow drink trends on social media (2025) | TPSO beverage-trend news item citing Innova research (Source 3); P relay, S underlying | UNVERIFIED; sample scope (Thai or wider) not confirmed |
+| Thai beverage market over 500 billion baht in 2026 (all beverages; not a category size) | Trade article, 18 May 2026 (Source 5); S | SOURCED; no stated basis; promotional |
+| Purchase drivers, all products: quality 24.55%, low price 24.12%, convenience 22.06% (5,467 respondents, August 2025; base not stated) | Government survey release (Source 6); P | SOURCED; PROXY (not beverage-specific) |
+| Innova growth rate, inventive products: 16% a year on average over five years (scope not stated) | Government trends article, 2025 (Source 7); P, Innova data S | SOURCED; PROXY (category growth) |
 
-The purchase survey covers all products, so it is a directional screen for drinks; price sits close to quality. TPSO's September 2026 guidance favours outcome-led functional ingredients and evidence-backed health claims (Source 4; P; UNVERIFIED). Limit: no sourced Thai carbonated soft-drink size is available.
+The survey covers all products, so it is a directional screen for drinks. A government release of 18 September 2026 links health claims with sustainability for Thai food and carries no beverage figure (Source 8; P; SOURCED).
+
+Limit: no sourced Thai carbonated soft-drink size is available.
 
 ## Mega trends in food and beverage
 
 | Trend | Evidence (value, date) | Source, tier | Status |
 |---|---|---|---|
-| Health attention | No sourced figure is used (see Limits) | None retained | Withheld |
-| Beverages with purpose | Innova names beverages with purpose a top 2026 trend; no growth figure is used | Supplier article, undated (Source 5); S | UNVERIFIED; direction only |
-| Dissolvable cubes | Waterdrop cubes in 20 markets, reported 3 October 2024 | Trade press (Source 6); S | UNVERIFIED. The format already exists in other markets |
-| Sugar reduction | No sourced figure is used (see Limits) | None retained | Withheld |
+| Health attention | No figure used | None retained | Withheld |
+| Beverages with purpose | Withheld: the Innova statement attributed to this article is not on the page read | Supplier article, 12 August 2026 (Source 9); S | UNVERIFIED; not used |
+| Dissolvable cubes | Overseas analogues only. Waterdrop: 20 markets across five continents, two named (Source 10). Coca-Cola Japan: freeze-dried cubes, about 15 to a pouch; tea cubes on sale from May and a coffee cube from June, on Amazon Japan; year implied by the article date (Source 11). Ricola: dissolvable drink cubes, released June 2025 (Source 12) | Trade press and company release; S | SOURCED; overseas; domestic evidence not found |
+| Sugar reduction | Mintel, 16 February 2026: 67% for sweets and desserts and 61% for ready-to-drink sugary drinks, framed by the release as sugar-reduction intent (Source 13) | Consultancy press release; S | SOURCED; direction only; not a defined sample |
 
-## Trend fit across the three organiser axes
+## Trend fit across the three brief axes
 
-One component is enough for the product, so fit is shown on all three axes to make coverage visible. The organiser's form wording refers to three components. That reading is an unchecked limit and has not been checked with the organiser. Coverage rating (ASSUMPTION): Ingredients moderate, Formats moderate, Trend weak.
+One component is enough for the product, so fit is shown on all three axes. The brief's wording refers to three components; this reading is an unchecked limit. Coverage rating (ASSUMPTION): Ingredients moderate, Formats moderate, Trend weak.
 
 | Trend | Ingredients and Nutrition | Alternative Formats | New Trend-Driven Target |
 |---|---|---|---|
-| Health attention | Weak. The composition can be stated plainly (potassium bicarbonate, citric acid, no sodium carbonate); no health wording is used | None | Moderate interest (ASSUMPTION); no health claim made |
-| Sugar reduction | Moderate. Sucralose is recommended, not chosen; its Thai permission is open and blocks sale; no sugar-level claim | None | Weak; stated intent only, figures withheld |
-| Convenience and price | None | Moderate. Pouch cube made on the spot; one cube per pouch is inferred and not confirmed with the organiser | Weak; survey is cross-category |
-| Dissolvable cubes | None | Moderate for a new consumption form, the central claim | Weak; the form exists in other markets |
-| Carbonated habit | None | Moderate; carbonated drinks are an established category (size withheld) | Moderate; existing consumption |
+| Health attention | Weak. Composition stated as fact: potassium bicarbonate and citric acid, both quantum satis in category 14.1.4 (Source 16), and no sodium carbonate. No health wording | None | Moderate interest (ASSUMPTION); no health claim made |
+| Sugar reduction | Moderate. Sucralose is the sweetener. Thai regulation sets 300 mg/kg for sucralose in flavoured drinks (category 14.1.4), with condition 127: the level applies to the drink as consumed (Source 16; P; SOURCED). The design level is about 100 mg/kg (DERIVED: 33 mg in the 330 mL design serve). Classification (beverage, edible ice or electrolyte drink) is an open regulatory question; TH3 applies only to electrolyte drinks. The group's lemon soda also names sucralose (Source 14). No sugar-level claim | None | Moderate; stated intent only |
+| Convenience and price | None | Moderate. One cube per pouch is the design, not yet tested with buyers | Weak; cross-category survey. Convenience chain: 15,945 stores at end-2025, read as Thai by inference (Source 15; P; SOURCED) |
+| Dissolvable cubes | None | Moderate for a new consumption form, the central proposition. Overseas, a pouch of about 15 cubes is on sale (Source 11) | Weak; no domestic evidence |
+| Carbonated habit | None | Moderate; established category (size withheld). Recommended serve: 0.55 volume of carbon dioxide per 330 mL (desk-model result) | Moderate; existing consumption |
 
-Overall: the format carries the central claim, a new consumption form, but no trend evidence yet shows a Thai buyer for it. The target is the weakest fit. Conversion figures elsewhere in this proposal are model results, not consumer findings.
+Overall: the format carries the central proposition, but no domestic evidence yet shows a Thai buyer for it. The target is the weakest fit. Conversion figures in this proposal are model results, not consumer findings.
 
-Limits: every external figure is UNVERIFIED until its source page is saved and read. No Thai study of dissolvable cubes has been found, and no Thai shelf search for the format has been run. Global market-size estimates are not used, and a Southeast Asian beverage analysis (Source 7) is not used for its regional figure, because the proposal is domestic only. The following figures have no confirmed link to their original and are withheld from the argument:
+## Limits
 
-- A Thai health-food and supplement survey: 80% bought specialist health food or drink in 12 months (n = 501, 2026); 40% take supplements regularly (2025). Reported through a research firm and a packaging newsroom. S, UNVERIFIED.
-- Mintel's press release of 16 February 2026 reports stated intent to cut sugar, all ages. Its figures are not used because the release has not been read. P, UNVERIFIED.
-- A Thai taxed-drink survey: carbonated drinks were the most-consumed taxed drink (2019 survey, n = 4,736; published 2022). Peer-reviewed article not read in full. P, UNVERIFIED.
+Several pages were read through a text extract; re-check their figures against the live page before any published use. No domestic study of dissolvable cubes has been found, and no Thai retail shelf search has been run. Global market-size estimates are not used.
+
+The carbon dioxide and pH figures are desk-model results. No bench or sensory test has been run, and taste is untested. The target pH of 3.5 is a working anchor. The gate for the 0.55-volume dose is for R&D to define; none is set here. The regulatory classification of the product is open.
+
+Withheld: a Thai health-food survey (80% bought specialist health food or drink in 12 months, n = 501, 2026; 40% take supplements regularly, 2025; S, UNVERIFIED); a Thai taxed-drink survey (carbonated drinks most consumed, 2019 survey; P, article not read in full, UNVERIFIED); and two trend percentages (43% and 37%) that are not on the page read.
 
 ## Sources
 
-Each entry gives publisher, date where known, tier and link.
-
-1. Thai press report, 18 May 2026, on the ProPak Asia 2026 organiser estimate. S. https://www.mitihoon.com/2026/05/18/642085/ (URL not confirmed).
-2. Thai Ministry of Commerce purchase survey, as relayed by TPSO (September 2025 news item). P. https://www.tpso.go.th/news/2509-0000000009 (URL not confirmed).
-3. TPSO beverage-trend news item, 2025, citing Innova research. P relay; S underlying. https://www.tpso.go.th/news/2503-0000000012 (URL not confirmed).
-4. TPSO news item, September 2026, on functional ingredients and health claims. P. https://tpso.go.th/news/2609-0000000010 (URL not confirmed).
-5. Compound Solutions, supplier article on functional beverages, undated. S. https://compoundsolutions.com/what-are-functional-beverages/ (URL not confirmed).
-6. FoodNavigator, beverage cube article, 3 October 2024. S. https://www.foodnavigator.com/Article/2024/10/03/Beverage-cubes-Innovations-from-entrepreneurs-waterdrop-and-more/
-7. NielsenIQ, Southeast Asia beverage analysis, 2025. S. https://nielseniq.com/global/en/insights/analysis/2025/how-beverage-brands-can-show-value-and-win-sales-in-southeast-asia/
-8. Singha Corporation, About Us page (company web page). S. https://www.singhacorporation.com/en/about-us
-9. Singha Corporation, home page with the portfolio (company web page). S. https://singhacorporation.com/en/home
-10. ConnectBizs, company profile for Singha Corporation with DBD-derived ratios. S. https://connectbizs.com/company/biz/0105544082625
+1. Singha Corporation, About Us page (company web page). S. SOURCED; last update not stated. https://www.singhacorporation.com/en/about-us
+2. Singha Corporation, English home pages (affiliate-wording page footer dated 2014). S. SOURCED; the pages conflict on the parent. https://singhacorporation.com/en and https://singhacorporation.com/en/home
+3. Brand news site, 11 March 2026, on the sparkling water. S. SOURCED; no launch date. https://www.brandbuffet.in.th/2026/03/singha-enters-sparkling-beverage-market-with-launch-of-singha-sparkling-water/
+4. ConnectBizs profile, Singha Corporation. S. UNVERIFIED; ratios did not render. https://connectbizs.com/company/biz/0105544082625
+5. Thai financial news site, 18 May 2026, promotional. S. SOURCED; the market figure has no stated source. https://www.mitihoon.com/2026/05/18/642085/
+6. Government news release on a purchase survey (August 2025; released 22 September 2025). P; text extract. SOURCED. https://www.tpso.go.th/news/2509-0000000009
+7. Government news article, 19 March 2025 (Buddhist year 2568), citing Innova data. P; Innova data S. SOURCED. https://www.tpso.go.th/news/2503-0000000012
+8. Government news release, 18 September 2026. P; text extract. SOURCED; no beverage figure. https://tpso.go.th/news/2609-0000000010
+9. Compound Solutions, functional beverages article, 12 August 2026. S. Page SOURCED; the Innova statement is not on it, so UNVERIFIED. https://compoundsolutions.com/what-are-functional-beverages/
+10. FoodNavigator, beverage cubes article, 3 October 2024. S. SOURCED; market count undated. https://www.foodnavigator.com/Article/2024/10/03/Beverage-cubes-Innovations-from-entrepreneurs-waterdrop-and-more/
+11. BeverageDaily, article dated 17 June 2021. S. SOURCED; year of sale implied by the article date. https://www.beveragedaily.com/Article/2021/06/17/Drop-it-then-its-hot-Coca-Cola-Japan-creates-freeze-dried-tea-and-coffee-cubes-to-reduce-packaging-waste
+12. Ricola press release, 5 June 2025, on a company web page. S. SOURCED; pack size and price not stated. https://www.ricola.com/en/about/press-releases/ricola-brings-a-new-product-to-the-market/
+13. Mintel press release, 16 February 2026. S. SOURCED; survey base, wording and fieldwork not on the page. https://www.mintel.com/press-centre/thai-consumers-take-a-more-balanced-and-practical-approach-to-reducing-sugar/
+14. Singha Lemon Soda product page (Thai, company web page). S. SOURCED; undated. https://www.singhacorporation.com/singhalemonsoda/th/
+15. Convenience-store operator, year-end 2025 listed-company snapshot. P; text extract; author not named. SOURCED; the Thailand-only reading is an inference. https://lssmedia.setlink.set.or.th/2025/YE/CPALL-YE68-ListedCompanySnapshot-EN.html
+16. Thai Ministry of Public Health food additive notification No. 468, amendment 4, Annex I rows for flavoured drinks (category 14.1.4). P. SOURCED for those rows only. https://food.fda.moph.go.th/media.php?id=840096266338836480&name=P468.pdf
 
 ## Team-only traceability (delete before submission)
 
-- Thai market table, rows 1 to 3: case working draft, purchase and macro notes (lines 47 to 61) and Thai trend notes (lines 133 to 150 and 214 to 217); literature register, 18 October 2026 (rework/44, sections 3 and 4).
-- Mega-trend table: case working draft, mega-trend notes (lines 337 to 405; the brief's earlier range was wrong and is not used); strategic innovation assessment, cut-off 11 October 2026, sections 1, 2, 4 and 6, source items 1, 2, 7, 8, 9 and 28. Global size rows, the regional eating-out row and the clean-label row removed under decision (i).
-- Group figures: strategic innovation assessment, ratio table; company pages (Sources 8 to 10 here), checked 11 October 2026, not saved. Tier S under the decision key.
-- Trend fit: final conclusion, 18 October 2026, sections 3, 5 and 8 (coverage rating, conversion model). Decisions record, 18 October 2026: D4 (no health wording), D5 (one component), D11 (central claim; Thai shelf search), D13 (cited in the original sources, not used in the body). Gate G6 (Thai permission for sucralose, sale-blocking, open).
-- Case brief from the competition post (three axes; organiser form wording).
-- Sourcing policy: rework/SOURCING_POLICY.md (19 October 2026). Saved captures in rework/raw were checked; none holds a trend or group page.
-- Link mapping: sources 2, 3 and 5 were matched to rows by date and publisher only; sources 1 and 4 by date. None is confirmed against a saved capture.
-- Revision, 19 October 2026: decision key applied; trend-fit heading renamed; IMARC, PwC and Ricola items removed as international material (decision (i)); Mintel figures withheld until the release is read; Markntel and Food Ingredients First removed as no longer cited; source list renumbered; limit statuses added; company pages retagged S; internal labels removed from the body. The Waterdrop row is kept as the only evidence that the form exists abroad; confirm under decision (i).
+Revision, 19 October 2026 (second pass, after the final-issues review and the 19 October decisions). Captures are under rework/raw/captures_2026-10-19/ unless stated.
+
+- Source map: Source 1 = capture 47; Source 2 = captures 13 and 14; Source 3 = capture 23; Source 4 = capture 03 (UNVERIFIED); Source 5 = capture 41; Source 6 = capture 55; Source 7 = capture 54; Source 8 = capture 16; Source 9 = capture 01; Source 10 = capture 29; Source 11 = capture 21; Source 12 = capture 46 (index tier P, re-tiered S: a company release on a company web page is not a filing under the tier key); Source 13 = capture 40 (index tier S; earlier draft said P, corrected); Source 14 = capture 48; Source 15 = capture 07; Source 16 = capture 82 (index SOURCED, P; file rework/raw/moph_468_annex_flavoured_drinks_extract_2026-10-19.md). Capture 80 is the same address, a URL check only, UNVERIFIED.
+- Decisions: D14 (0.55 volume; the 0.9-volume design is set aside and has no figure in this file; gate left for R&D); D15 (pH 3.5 working anchor; taste untested); D16 (sucralose 300 mg/kg, category 14.1.4, condition 127; TH3 applies only to electrolyte drinks; potassium bicarbonate and citric acid quantum satis; classification open); D17 (international expansion dropped; overseas analogues kept as labelled evidence only: Waterdrop, Coca-Cola Japan, Ricola); D18 (no team, member, university, path or repository in the body); D19 (no body effect).
+- Changes in this pass: (a) tier key replaced with the exact 19 October text, which removes the phrase that the capture file is named; (b) Source 16 moved from UNVERIFIED to P, SOURCED, because capture 82 is now indexed, with the scope limit (category 14.1.4 rows only) stated in the source entry; (c) trend-fit sugar row now gives category 14.1.4, condition 127, TH3 limited to electrolyte drinks, and the 100 mg/kg design level; (d) potassium bicarbonate and citric acid stated as quantum satis; (e) Coca-Cola Japan timing corrected: capture 21 gives two tea cubes from May and a coffee cube from June, so "on sale from May" for the product was overstated; the year stays implied; (f) other statements checked against captures 13, 14, 16, 21, 23, 29, 40, 41, 47, 54 and 55 and the annex extract; no other figure changed; (g) three sentences trimmed (the parent-conflict sentence, the "only public group facts" sentence, the extract-status sentence) to keep the body under 1,500 words (1,496 with table pipes counted; 1,414 rendered).
+- Flag, Singha sparkling water flavour: capture 23 gives lemon (330 ml can, 15 baht). Earlier team records said lime. The body states lemon. The team must resolve this before any lime wording is used for this product.
+- Earlier changes (first pass, kept for traceability): "citing the ProPak organiser" removed (capture 41 gives no source); "SBU2" and "operating companies run day to day" not on the captured pages, replaced by an ASSUMPTION; "outcome-led functional ingredients and evidence-backed health claims" not on capture 16, replaced with the release's own subject; 43% and 37% not on capture 54, withheld; "Innova names beverages with purpose" not on capture 01, kept UNVERIFIED; net margin figure dropped (not on the captured page); Mintel figures now used (read, tier corrected P to S); sucralose "recommended, not chosen, permission open and blocks sale" replaced under D16; Coca-Cola Japan and Ricola added as labelled overseas analogues; Singha sparkling water and lemon soda facts added; "not confirmed with the organiser" replaced by "not yet tested with buyers"; trend-fit heading changed to "brief axes".
+- Open items for the reviewer: (1) Source 16 tier: the P definition says "read in full". The extract reads the category 14.1.4 rows of an 839-page regulator annex (rows from rendered images and the text layer); the full annex was not read. Tagged P, SOURCED per D16 and index row 82. The reviewer may downgrade to S, which would change D16's tier. (2) Index tiers versus the key: captures 46 and 57 to 59 are indexed P but are S under the key (a company release and carrier or lessor specification pages); the body uses S. Captures 07, 16, 54, 55 and 82 are indexed P and were read through an extract or in part; the index tier P is kept. Source 15 (capture 07) is a listed-company snapshot hosted by the exchange; the reviewer should confirm it counts as the company's own disclosure. (3) Captures 01, 07, 13, 14, 16, 21, 23, 29, 40, 41, 46, 47, 48 and 54 were read through a text extract; the captures advise checking figures against the raw pages. (4) The Thai market figure (Source 5) has no stated basis and the article is promotional; a reviewer may drop it. (5) Source 4 ratios stay UNVERIFIED until the filings are read; the DERIVED 1.33 uses those inputs. (6) The Mintel framing ("planning to reduce") is the read's reading of the page (capture 40); the body says the release frames the figures as sugar-reduction intent, with a direction-only limit. The reviewer should confirm the wording. (7) The withheld figures (Thai health-food survey, Thai taxed-drink survey, 43% and 37%) are printed only to show they are not used; a reviewer may remove them from the judge-facing body. (8) The Singha sparkling water flavour conflict (above).
+- Check run against the capture index: every SOURCED tag in the body maps to a SOURCED entry (captures 01, 07, 13, 14, 16, 21, 23, 29, 40, 41, 46, 47, 48, 54, 55, 82 and the others cited above). No figure is tagged SOURCED from capture 03, 80 or 79, all UNVERIFIED.

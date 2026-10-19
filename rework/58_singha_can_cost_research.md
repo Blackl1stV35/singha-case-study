@@ -23,6 +23,8 @@ Status: no public Singha can cost per unit was found. This is desk research from
 - **Our metal figure is uncertain.** The 9.6 g used in `rework/53` is about half the 18 to 21 g implied by the IMARC model. Until the can size is confirmed, the THB 1.00 metal figure has a range of about THB 1.00 to 2.00 at the same aluminium price. The can size and the aluminium price are both to be confirmed.
 - **Nothing here changes the verdict in `rework/57` or `rework/56`.** The pouch-versus-can comparison still has no production cost on the can side.
 
+> Update, 19 October 2026: a desk cost model now runs on these inputs. See [61](61_singha_can_cost_model.md).
+
 ## 3. What would close it
 
 - Singha's own cost per unit for the lime can. This is internal data, and the team has no access to it.

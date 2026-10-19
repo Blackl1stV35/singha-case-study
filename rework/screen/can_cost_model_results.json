@@ -1,0 +1,115 @@
+{
+  "basis": "Desk estimate. No Singha or Boon Rawd can cost found. Tiers: P primary, S secondary.",
+  "excluded_or_missing": [
+    "aluminium regional premium and sheet rolling (no input; see premium scenarios)",
+    "scrap credit (no scrap price; not netted, so cost is overstated by the credit)",
+    "end and tab conversion; lacquer-curing gas; secondary packaging (carton, shrink, pallet)",
+    "excise on sugar-sweetened drinks (Thai sugar levy; primary law not read)",
+    "freight, distribution, marketing, overheads, depreciation, line capex",
+    "lacquer and ink, labour and electricity: sub-components of conversion, not added"
+  ],
+  "inputs": {
+    "fx_thb_per_usd": [
+      33.32,
+      33.44
+    ],
+    "lme_usd_per_t": [
+      2998.5,
+      3008.5
+    ],
+    "sheet_g_per_can": [
+      14.4,
+      18.5
+    ],
+    "conversion_nonmetal_usd": [
+      0.04,
+      0.08
+    ],
+    "filling_usd": [
+      0.001,
+      0.004
+    ],
+    "seaming_usd": [
+      0.0001,
+      0.0005
+    ],
+    "co2_usd": [
+      0.0003,
+      0.0018
+    ],
+    "liquid_usd": [
+      0.027,
+      0.04
+    ],
+    "nameplate_ML": 1000.0,
+    "canned_share": 0.553,
+    "utilisation": [
+      0.584,
+      0.633
+    ],
+    "fixed_thb_m_scenarios": [
+      0.0,
+      300.0,
+      600.0
+    ]
+  },
+  "variable_cost_per_can": {
+    "low": {
+      "usd": 0.11158,
+      "thb": 3.718,
+      "items_usd": {
+        "sheet_metal": 0.04318,
+        "conversion_nonmetal": 0.04,
+        "filling_consumables": 0.001,
+        "seaming": 0.0001,
+        "co2": 0.0003,
+        "liquid_sugar_flavour": 0.027
+      }
+    },
+    "high": {
+      "usd": 0.18196,
+      "thb": 6.085,
+      "items_usd": {
+        "sheet_metal": 0.05566,
+        "conversion_nonmetal": 0.08,
+        "filling_consumables": 0.004,
+        "seaming": 0.0005,
+        "co2": 0.0018,
+        "liquid_sugar_flavour": 0.04
+      }
+    }
+  },
+  "premium_sensitivity_thb_per_can": {
+    "0.0": 1.649,
+    "100.0": 1.704,
+    "200.0": 1.759
+  },
+  "cans_per_year": {
+    "at_util_low": 978642424,
+    "at_util_high": 1060754545,
+    "at_nameplate_100pct": 1675757576
+  },
+  "cost_per_can_grid_thb": {
+    "variable_mid_thb": 4.902,
+    "rows": [
+      {
+        "cans_per_year": 500000000,
+        "fixed_0m_thb_per_can": 4.902,
+        "fixed_300m_thb_per_can": 5.502,
+        "fixed_600m_thb_per_can": 6.102
+      },
+      {
+        "cans_per_year": 1000000000,
+        "fixed_0m_thb_per_can": 4.902,
+        "fixed_300m_thb_per_can": 5.202,
+        "fixed_600m_thb_per_can": 5.502
+      },
+      {
+        "cans_per_year": 1675757576,
+        "fixed_0m_thb_per_can": 4.902,
+        "fixed_300m_thb_per_can": 5.081,
+        "fixed_600m_thb_per_can": 5.26
+      }
+    ]
+  }
+}

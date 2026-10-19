@@ -1,5 +1,7 @@
 # Unit cost and value chain: the lime cube against the 330 ml can (18 October 2026)
 
+> Correction, 19 October 2026: the metal figure below (9.6 g per can, THB 1.00 of metal) is not supported by the sourced can mass. The sourced 13 to 15 g can implies about 14.4 to 18.5 g of sheet, or THB 1.44 to 1.86 of metal per can at the LME price. See [61](61_singha_can_cost_model.md).
+
 Status: desk arithmetic from public prices read on 18 October 2026. No quote was requested, no supplier was contacted, and nothing was downloaded or logged into. Every margin is an ASSUMPTION, because no public Thai distributor or retailer margin was found. Fixed costs are excluded.
 
 Calculation: [screen/unit_cost_value_chain.py](screen/unit_cost_value_chain.py), results in [screen/unit_cost_value_chain_results.json](screen/unit_cost_value_chain_results.json).

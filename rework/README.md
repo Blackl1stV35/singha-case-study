@@ -9,7 +9,7 @@ Sourcing policy: [SOURCING_POLICY.md](SOURCING_POLICY.md). Primary sources come 
 | Item | Status | Record |
 |---|---|---|
 | Primary candidate | Sodium-free lime fizz cube, made with potassium bicarbonate and citric acid | [45](45_working_candidate_rework.md), [51](51_final_conclusion_and_recommendation.md), [52](52_pivot_and_retirement.md) |
-| Component 1 (ingredients and nutrition) food-science check | Dose recorrected to 0.9 volume of CO₂ (518 mg potassium per 330 ml, was 1,007 mg); acid excess and sweetener choice still open; desk model only | [62](62_component1_food_science_check.md) |
+| Component 1 (ingredients and nutrition) food-science check | Dose recorrected to 0.9 volume of CO₂ (518 mg potassium per 330 ml, was 1,007 mg); acid excess and sweetener choice still open; desk model only | [62](62_component1_food_science_check.md); desk model, stress test and pack economics in [63](63_desk_model_stress_and_pack_economics.md) |
 | Leaf-wrapped frozen drink | Superseded (record 06 banner) | [06](06_final_conclusion.md), [52](52_pivot_and_retirement.md) |
 | Midlife soy drink | Retired | [40](40_candidate_b_soy_drink.md) |
 | Herb drink (reframed) | Reframed on 18 October 2026 (03), then dropped (06); 05 is a team note, not decided | [03](03_c_reframed.md), [05](05_team_note_c_price_ladder.md) |

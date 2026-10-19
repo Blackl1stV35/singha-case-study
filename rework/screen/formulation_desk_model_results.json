@@ -1,0 +1,413 @@
+{
+  "design_dose_vol": 0.9,
+  "dose_basis_ml": 330,
+  "constants": {
+    "alpha_anchor_c": {
+      "0": 1.713,
+      "4": 1.473,
+      "5": 1.424,
+      "10": 1.194,
+      "20": 0.878,
+      "25": 0.759,
+      "30": 0.655,
+      "35": 0.592
+    },
+    "co2_air_atm": 0.00042,
+    "cit_pka": [
+      3.13,
+      4.76,
+      6.4
+    ],
+    "carb_pka": [
+      6.35,
+      10.33
+    ],
+    "pkw": 13.995,
+    "diff_co2_m2_s": 1.92e-09,
+    "glass_diam_m": 0.065,
+    "thresh_vol": 0.2226,
+    "ice_latent_j_g": 333.55,
+    "cp_water_j_gk": 4.1787,
+    "sucralose_rs": 600.0,
+    "sweet_anchor_g_per_100ml": 6.0,
+    "store_c": 35.0,
+    "headspace_ml": 20.0
+  },
+  "design_at_25c": {
+    "serve_c": 25.0,
+    "v_total_L": 0.33,
+    "alpha_at_serve": 0.759,
+    "dissolved_vol_at_serve": 0.759,
+    "escaped_fraction": 0.1567,
+    "kl_m_s": 1.5635280380893438e-05,
+    "tau_min": 106.0,
+    "t_above_threshold_min": 130.2,
+    "ceq_vol": 0.00031878,
+    "potassium_mg_per_serve": 518.1,
+    "khco3_g": 1.327,
+    "citric_stoich_g": 0.849,
+    "citric_total_for_target_g": 5.965,
+    "citric_free_for_target_g": 5.116,
+    "target_ph": 3.0,
+    "ph_at_design_acid": 3.0
+  },
+  "potassium_bases_pct": {
+    "thai_rdi_3500_mg": 14.8,
+    "who_adult_minimum_3510_mg": 14.8,
+    "eu_nrv_2000_mg_not_thai": 25.9
+  },
+  "dose_by_temperature": {
+    "temps_c": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35
+    ],
+    "alpha_by_temp_c": {
+      "5": 1.424,
+      "10": 1.194,
+      "15": 1.021,
+      "20": 0.878,
+      "25": 0.759,
+      "30": 0.655,
+      "35": 0.592
+    },
+    "alpha_band_pct_by_temp_c": {
+      "5": 2.0,
+      "10": 2.0,
+      "15": 2.0,
+      "20": 2.0,
+      "25": 2.0,
+      "30": 3.0,
+      "35": 3.0
+    },
+    "rows": [
+      {
+        "dose_vol": 0.5,
+        "dissolved_by_temp_c": {
+          "5": 0.5,
+          "10": 0.5,
+          "15": 0.5,
+          "20": 0.5,
+          "25": 0.5,
+          "30": 0.5,
+          "35": 0.5
+        }
+      },
+      {
+        "dose_vol": 0.6,
+        "dissolved_by_temp_c": {
+          "5": 0.6,
+          "10": 0.6,
+          "15": 0.6,
+          "20": 0.6,
+          "25": 0.6,
+          "30": 0.6,
+          "35": 0.592
+        }
+      },
+      {
+        "dose_vol": 0.7,
+        "dissolved_by_temp_c": {
+          "5": 0.7,
+          "10": 0.7,
+          "15": 0.7,
+          "20": 0.7,
+          "25": 0.7,
+          "30": 0.655,
+          "35": 0.592
+        }
+      },
+      {
+        "dose_vol": 0.76,
+        "dissolved_by_temp_c": {
+          "5": 0.76,
+          "10": 0.76,
+          "15": 0.76,
+          "20": 0.76,
+          "25": 0.759,
+          "30": 0.655,
+          "35": 0.592
+        }
+      },
+      {
+        "dose_vol": 0.8,
+        "dissolved_by_temp_c": {
+          "5": 0.8,
+          "10": 0.8,
+          "15": 0.8,
+          "20": 0.8,
+          "25": 0.759,
+          "30": 0.655,
+          "35": 0.592
+        }
+      },
+      {
+        "dose_vol": 0.9,
+        "dissolved_by_temp_c": {
+          "5": 0.9,
+          "10": 0.9,
+          "15": 0.9,
+          "20": 0.878,
+          "25": 0.759,
+          "30": 0.655,
+          "35": 0.592
+        }
+      },
+      {
+        "dose_vol": 1.0,
+        "dissolved_by_temp_c": {
+          "5": 1.0,
+          "10": 1.0,
+          "15": 1.0,
+          "20": 0.878,
+          "25": 0.759,
+          "30": 0.655,
+          "35": 0.592
+        }
+      }
+    ]
+  },
+  "serve_scenarios": {
+    "chilled water 5 C, no ice": {
+      "serve_c": 5.0,
+      "v_total_L": 0.33,
+      "alpha_at_serve": 1.424,
+      "dissolved_vol_at_serve": 0.9,
+      "escaped_fraction": 0.0,
+      "kl_m_s": 1.5635280380893438e-05,
+      "tau_min": 106.0,
+      "t_above_threshold_min": 148.3,
+      "ceq_vol": 0.00059808,
+      "potassium_mg_per_serve": 518.1,
+      "khco3_g": 1.327,
+      "citric_stoich_g": 0.849,
+      "citric_total_for_target_g": 5.964,
+      "citric_free_for_target_g": 5.116,
+      "target_ph": 3.0,
+      "ph_at_design_acid": 3.0
+    },
+    "room water 25 C, no ice": {
+      "serve_c": 25.0,
+      "v_total_L": 0.33,
+      "alpha_at_serve": 0.759,
+      "dissolved_vol_at_serve": 0.759,
+      "escaped_fraction": 0.1567,
+      "kl_m_s": 1.5635280380893438e-05,
+      "tau_min": 106.0,
+      "t_above_threshold_min": 130.2,
+      "ceq_vol": 0.00031878,
+      "potassium_mg_per_serve": 518.1,
+      "khco3_g": 1.327,
+      "citric_stoich_g": 0.849,
+      "citric_total_for_target_g": 5.965,
+      "citric_free_for_target_g": 5.116,
+      "target_ph": 3.0,
+      "ph_at_design_acid": 3.0
+    },
+    "ambient water 30 C, no ice": {
+      "serve_c": 30.0,
+      "v_total_L": 0.33,
+      "alpha_at_serve": 0.655,
+      "dissolved_vol_at_serve": 0.655,
+      "escaped_fraction": 0.2722,
+      "kl_m_s": 1.5635280380893438e-05,
+      "tau_min": 106.0,
+      "t_above_threshold_min": 114.5,
+      "ceq_vol": 0.0002751,
+      "potassium_mg_per_serve": 518.1,
+      "khco3_g": 1.327,
+      "citric_stoich_g": 0.849,
+      "citric_total_for_target_g": 5.965,
+      "citric_free_for_target_g": 5.116,
+      "target_ph": 3.0,
+      "ph_at_design_acid": 3.0
+    },
+    "hot day 35 C, no ice": {
+      "serve_c": 35.0,
+      "v_total_L": 0.33,
+      "alpha_at_serve": 0.592,
+      "dissolved_vol_at_serve": 0.592,
+      "escaped_fraction": 0.3422,
+      "kl_m_s": 1.5635280380893438e-05,
+      "tau_min": 106.0,
+      "t_above_threshold_min": 103.8,
+      "ceq_vol": 0.00024864,
+      "potassium_mg_per_serve": 518.1,
+      "khco3_g": 1.327,
+      "citric_stoich_g": 0.849,
+      "citric_total_for_target_g": 5.965,
+      "citric_free_for_target_g": 5.116,
+      "target_ph": 3.0,
+      "ph_at_design_acid": 3.0
+    },
+    "ambient 30 C with 30 g ice": {
+      "serve_c": 20.85,
+      "v_total_L": 0.36,
+      "alpha_at_serve": 0.8563,
+      "dissolved_vol_at_serve": 0.825,
+      "escaped_fraction": 0.0,
+      "kl_m_s": 1.5635280380893438e-05,
+      "tau_min": 115.6,
+      "t_above_threshold_min": 151.7,
+      "ceq_vol": 0.00035963499797176995,
+      "potassium_mg_per_serve": 518.1,
+      "khco3_g": 1.327,
+      "citric_stoich_g": 0.849,
+      "citric_total_for_target_g": 5.977,
+      "citric_free_for_target_g": 5.129,
+      "target_ph": 3.0,
+      "ph_at_design_acid": 3.0
+    },
+    "ambient 30 C with 60 g ice": {
+      "serve_c": 13.1,
+      "v_total_L": 0.39,
+      "alpha_at_serve": 1.0828,
+      "dissolved_vol_at_serve": 0.7615,
+      "escaped_fraction": 0.0,
+      "kl_m_s": 1.5635280380893438e-05,
+      "tau_min": 125.3,
+      "t_above_threshold_min": 154.3,
+      "ceq_vol": 0.00045478755772447837,
+      "potassium_mg_per_serve": 518.1,
+      "khco3_g": 1.327,
+      "citric_stoich_g": 0.849,
+      "citric_total_for_target_g": 5.99,
+      "citric_free_for_target_g": 5.142,
+      "target_ph": 3.0,
+      "ph_at_design_acid": 3.0
+    }
+  },
+  "sensitivity_mass_transfer_tr_s": {
+    "1.0": {
+      "kl_m_s": 4.9443097858968264e-05,
+      "tau_min": 33.5,
+      "t_above_threshold_min": 41.2
+    },
+    "5.0": {
+      "kl_m_s": 2.211162556616547e-05,
+      "tau_min": 75.0,
+      "t_above_threshold_min": 92.0
+    },
+    "10.0": {
+      "kl_m_s": 1.5635280380893438e-05,
+      "tau_min": 106.0,
+      "t_above_threshold_min": 130.2
+    },
+    "30.0": {
+      "kl_m_s": 9.027033336764102e-06,
+      "tau_min": 183.6,
+      "t_above_threshold_min": 225.4
+    }
+  },
+  "sensitivity_target_ph": {
+    "2.8": {
+      "citric_total_g": 8.152,
+      "citric_free_g": 7.304
+    },
+    "3.0": {
+      "citric_total_g": 5.965,
+      "citric_free_g": 5.116
+    },
+    "3.2": {
+      "citric_total_g": 4.601,
+      "citric_free_g": 3.753
+    },
+    "3.5": {
+      "citric_total_g": 3.42,
+      "citric_free_g": 2.572
+    },
+    "4.0": {
+      "citric_total_g": 2.467,
+      "citric_free_g": 1.618
+    },
+    "4.5": {
+      "citric_total_g": 1.899,
+      "citric_free_g": 1.051
+    }
+  },
+  "alkalinity_sensitivity": {
+    "0": {
+      "citric_total_g": 5.965,
+      "citric_free_g": 5.116
+    },
+    "50": {
+      "citric_total_g": 6.109,
+      "citric_free_g": 5.261
+    },
+    "100": {
+      "citric_total_g": 6.254,
+      "citric_free_g": 5.406
+    },
+    "150": {
+      "citric_total_g": 6.399,
+      "citric_free_g": 5.551
+    }
+  },
+  "storage_gas": {
+    "store_c": 35.0,
+    "headspace_ml": 20.0,
+    "rows": {
+      "0.001": {
+        "gas_ml": 0.34,
+        "pressure_rise_pct_in_headspace": 1.7
+      },
+      "0.005": {
+        "gas_ml": 1.68,
+        "pressure_rise_pct_in_headspace": 8.4
+      },
+      "0.01": {
+        "gas_ml": 3.35,
+        "pressure_rise_pct_in_headspace": 16.8
+      },
+      "0.05": {
+        "gas_ml": 16.75,
+        "pressure_rise_pct_in_headspace": 83.8
+      }
+    }
+  },
+  "sucralose_mg_per_330ml": 33.0,
+  "monte_carlo": {
+    "n": 10000,
+    "seed": 20261019,
+    "inputs": {
+      "serve_c": "U(5,35)",
+      "t_r_s": "logU(1,30)",
+      "alk_mg_caco3_L": "U(0,150)",
+      "target_ph": "U(2.8,3.5)"
+    },
+    "dissolved_vol_at_serve": {
+      "p5": 0.61,
+      "p50": 0.882,
+      "p95": 0.9
+    },
+    "escaped_fraction": {
+      "p5": 0.0,
+      "p50": 0.02,
+      "p95": 0.323
+    },
+    "tau_min": {
+      "p5": 36.4,
+      "p50": 79.2,
+      "p95": 168.6
+    },
+    "t_above_threshold_min": {
+      "p5": 46.1,
+      "p50": 100.6,
+      "p95": 222.2
+    },
+    "citric_total_g": {
+      "p5": 3.657,
+      "p50": 5.055,
+      "p95": 7.96
+    },
+    "citric_free_g": {
+      "p5": 2.808,
+      "p50": 4.207,
+      "p95": 7.112
+    }
+  }
+}

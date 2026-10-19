@@ -44,13 +44,13 @@ Lime Cube is a dissolvable drink cube for domestic Thailand. One cube dissolved 
 
 ## Sources (public URLs only)
 
-- Thai FDA Notification 468 annex, category 14.1.4 (P, SOURCED): https://food.fda.moph.go.th/media.php?id=840096266338836480&name=P468.pdf
-- CO2 solubility, handbook table, including 35°C (S, SOURCED): https://en.wikipedia.org/wiki/Carbon_dioxide_(data_page)
-- Citric acid constants, handbook copy (S, SOURCED): https://diverdi.colostate.edu/all_courses/CRC%20reference%20data/dissociation%20constants%20of%20organic%20acids%20and%20bases.pdf
-- Thai potassium reference, secondary copy (S, SOURCED): https://www.lovefitt.com/system/wp-content/uploads/2017/05/4-4-2ThaiRDI.pdf
-- Sparkling-water threshold, abstract only (S, SOURCED): https://research.wur.nl/en/publications/is-it-still-water-relationships-between-sparkling-sensitivity-and/
-- Overseas cube analogue (S, SOURCED): https://www.foodnavigator.com/Article/2024/10/03/Beverage-cubes-Innovations-from-entrepreneurs-waterdrop-and-more/
-- Segment inputs, NSO Social Indicators 2025 (P, UNVERIFIED): https://www.nso.go.th/public/e-book/Indicators-Social/Social-Indicators-2025/284/
+- Thai FDA Notification 468 annex, category 14.1.4 (P, SOURCED, accessed 19 October 2026): https://food.fda.moph.go.th/media.php?id=840096266338836480&name=P468.pdf
+- CO2 solubility, handbook table, including 35°C (S, SOURCED, accessed 19 October 2026): https://en.wikipedia.org/wiki/Carbon_dioxide_(data_page)
+- Citric acid constants, handbook copy (S, SOURCED, accessed 19 October 2026): https://diverdi.colostate.edu/all_courses/CRC%20reference%20data/dissociation%20constants%20of%20organic%20acids%20and%20bases.pdf
+- Thai potassium reference, secondary copy (S, SOURCED, accessed 19 October 2026): https://www.lovefitt.com/system/wp-content/uploads/2017/05/4-4-2ThaiRDI.pdf
+- Sparkling-water threshold, abstract only (S, SOURCED, accessed 19 October 2026): https://research.wur.nl/en/publications/is-it-still-water-relationships-between-sparkling-sensitivity-and/
+- Overseas cube analogue (S, SOURCED, published 3 October 2024, accessed 19 October 2026): https://www.foodnavigator.com/Article/2024/10/03/Beverage-cubes-Innovations-from-entrepreneurs-waterdrop-and-more/
+- Segment inputs, NSO Social Indicators 2025 (P, UNVERIFIED, 2025 edition, accessed 19 October 2026): https://www.nso.go.th/public/e-book/Indicators-Social/Social-Indicators-2025/284/
 
 ## Tier key
 

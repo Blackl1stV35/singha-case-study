@@ -40,10 +40,10 @@ None of these has been decided. The project does not decide them and has not con
 
 - Desk model only: no bench test, no sensory test, no measured fizz decay.
 - Taste is untested. pH 3.5 is a working anchor. The 0.55-volume gate is not set; R&D must define it.
-- The sucralose limit comes from an annex extract [E] that is not in the capture index. The potassium reference rests on secondary copies [C].
+- The sucralose limit comes from an annex extract [E]. The potassium reference rests on secondary copies [C].
 - Pouch and print costs are assumptions. The figure of about 128,580 cubes per 20 ft container (DERIVED, [H]) assumes 12-cube cartons and volume limits. It is not a load plan.
-- Overseas analogues [I, L] are cited only because no domestic evidence for dissolvable cubes is in the captures. International expansion is out of scope.
-- Several captures were unreadable or blocked (a climate table, a container PDF and three retailer listings). No figure relies on them.
+- Overseas analogues [I, L] are cited only because no domestic evidence for dissolvable cubes is among the sources used here. International expansion is out of scope.
+- Several sources were unreadable or blocked (a climate table, a container PDF and three retailer listings). No figure relies on them.
 - Claims are barred: no sugar-free, zero-sugar, sodium-free, health, electrolyte, hydration, potassium-benefit or validated-fizz claim. The composition may be stated as fact: potassium bicarbonate, citric acid and sucralose, with no sodium carbonate.
 
 ## Tier key
@@ -52,9 +52,9 @@ P: a government or regulator text read in full, a company's own filing, official
 
 S: any other source, including press, trade portals, consultancy pages, company web pages that are not filings, handbooks reproduced online, and search snippets.
 
-SOURCED: the page text was captured and read; name the capture file.
+SOURCED: the page text was read; the public URL is listed under Sources.
 
-UNVERIFIED: not captured, blocked, unreadable, or only a snippet read.
+UNVERIFIED: page text not read, blocked, unreadable, or only a snippet read.
 
 DERIVED: our arithmetic, inputs and tiers shown.
 
@@ -64,30 +64,58 @@ ASSUMPTION: a value chosen for the model, not sourced.
 
 ## Sources
 
-All captures were read on 19 October 2026 unless a date is shown.
+All sources were read on 19 October 2026 unless a date is shown.
 
-A. Capture 73 (73_bionumbers-co2-solubility.md). CO2 solubility table, reproduced handbook. https://bionumbers.hms.harvard.edu/bionumber.aspx?id=106208 S, SOURCED.
+A. CO2 solubility table, reproduced handbook. https://bionumbers.hms.harvard.edu/bionumber.aspx?id=106208 S, SOURCED.
 
-B. Capture 75 (75_crc-citric-acid-pka.md). Citric acid pKa values. https://diverdi.colostate.edu/all_courses/CRC%20reference%20data/dissociation%20constants%20of%20organic%20acids%20and%20bases.pdf S, SOURCED.
+B. Citric acid pKa values. https://diverdi.colostate.edu/all_courses/CRC%20reference%20data/dissociation%20constants%20of%20organic%20acids%20and%20bases.pdf S, SOURCED.
 
-C. Captures 67 and 78 (67_thai_rdi_potassium_secondary.md; 78_thai-fda-potassium-rdi.md). Thai potassium reference, secondary copies. https://www.lovefitt.com/system/wp-content/uploads/2017/05/4-4-2ThaiRDI.pdf and https://www.siamdevelopment.com/thai-fda-rdi-nutrition-standards-in-thailand/ S, SOURCED.
+C. Thai potassium reference, secondary copies. https://www.lovefitt.com/system/wp-content/uploads/2017/05/4-4-2ThaiRDI.pdf and https://www.siamdevelopment.com/thai-fda-rdi-nutrition-standards-in-thailand/ S, SOURCED.
 
-D. Capture 69 (69_efsa_2016_potassium_ai.md). EFSA adult potassium intake, dated 25 October 2016. https://www.efsa.europa.eu/en/press/news/161025 P, SOURCED.
+D. EFSA adult potassium intake, dated 25 October 2016. https://www.efsa.europa.eu/en/press/news/161025 P, SOURCED.
 
-E. Annex extract (moph_468_annex_flavoured_drinks_extract_2026-10-19.md). Thai MoPH Notification 468, amendment 4, category 14.1, read 19 October 2026. Not a capture-index entry. https://food.fda.moph.go.th/media.php?id=840096266338836480&name=P468.pdf P, SOURCED.
+E. Annex extract, Thai MoPH Notification 468, amendment 4, category 14.1, read 19 October 2026. https://food.fda.moph.go.th/media.php?id=840096266338836480&name=P468.pdf P, SOURCED.
 
-F. Capture 66 (66_thai_fda_468_subcat_rule.md). Thai FDA clarification of Notification 468 (B.E. 2568), pages 1 to 3; translation ours. https://food.fda.moph.go.th/media.php?id=849894195891150848&name=468_FoodAdditives.pdf P, SOURCED.
+F. Thai FDA clarification of Notification 468 (B.E. 2568), pages 1 to 3; translation ours. https://food.fda.moph.go.th/media.php?id=849894195891150848&name=468_FoodAdditives.pdf P, SOURCED.
 
-G. Capture 63 (63_jecfa-tgs-sweetness.md). JECFA monograph on sucralose sweetness. http://www.inchem.org/documents/jecfa/jecmono/v28je14.htm S, SOURCED.
+G. JECFA monograph on sucralose sweetness. http://www.inchem.org/documents/jecfa/jecmono/v28je14.htm S, SOURCED.
 
-H. Capture 57 (57_one-dry-containers.md). 20 ft dry container dimensions. https://www.one-line.com/en/dry-containers P, SOURCED.
+H. 20 ft dry container dimensions. https://www.one-line.com/en/dry-containers P, SOURCED.
 
-I. Capture 21 (21_beveragedaily-coke-japan-cubes.md). Overseas analogue, about 15 cubes per pouch, article dated 17 June 2021. https://www.beveragedaily.com/Article/2021/06/17/Drop-it-then-its-hot-Coca-Cola-Japan-creates-freeze-dried-tea-and-coffee-cubes-to-reduce-packaging-waste S, SOURCED.
+I. Overseas analogue, about 15 cubes per pouch, article dated 17 June 2021. https://www.beveragedaily.com/Article/2021/06/17/Drop-it-then-its-hot-Coca-Cola-Japan-creates-freeze-dried-tea-and-coffee-cubes-to-reduce-packaging-waste S, SOURCED.
 
-J. Capture 77 (77_wur-sparkling-threshold-abstract.md). Abstract only. https://research.wur.nl/en/publications/is-it-still-water-relationships-between-sparkling-sensitivity-and/ S, SOURCED.
+J. Abstract only. https://research.wur.nl/en/publications/is-it-still-water-relationships-between-sparkling-sensitivity-and/ S, SOURCED.
 
-K. Capture 48 (48_singha-lemon-soda-th.md). Product page naming sucralose. https://www.singhacorporation.com/singhalemonsoda/th/ S, SOURCED.
+K. Product page naming sucralose. https://www.singhacorporation.com/singhalemonsoda/th/ S, SOURCED.
 
-L. Capture 46 (46_ricola-drink-cubes-release.md). Overseas analogue, release dated 5 June 2025. https://www.ricola.com/en/about/press-releases/ricola-brings-a-new-product-to-the-market/ P, SOURCED.
+L. Overseas analogue, release dated 5 June 2025. https://www.ricola.com/en/about/press-releases/ricola-brings-a-new-product-to-the-market/ P, SOURCED.
 
-M. Desk model results (handover_figures_results.json). Arithmetic only; DERIVED.
+M. Desk model results, the proposal's own arithmetic, with no external source. Arithmetic only; DERIVED.
+
+## Team-only traceability (delete before submission)
+
+Capture and file references removed from the body during the scrub of 19 October 2026. This section is the only place they appear. The body contained no record numbers (for example "record 52" or "D14"), no repository paths and no team names.
+
+Capture files behind each source letter:
+
+- A: capture 73, 73_bionumbers-co2-solubility.md
+- B: capture 75, 75_crc-citric-acid-pka.md
+- C: captures 67 and 78, 67_thai_rdi_potassium_secondary.md and 78_thai-fda-potassium-rdi.md
+- D: capture 69, 69_efsa_2016_potassium_ai.md
+- E: moph_468_annex_flavoured_drinks_extract_2026-10-19.md. Not a capture-index entry.
+- F: capture 66, 66_thai_fda_468_subcat_rule.md
+- G: capture 63, 63_jecfa-tgs-sweetness.md
+- H: capture 57, 57_one-dry-containers.md
+- I: capture 21, 21_beveragedaily-coke-japan-cubes.md
+- J: capture 77, 77_wur-sparkling-threshold-abstract.md
+- K: capture 48, 48_singha-lemon-soda-th.md
+- L: capture 46, 46_ricola-drink-cubes-release.md
+- M: handover_figures_results.json (desk model arithmetic, no public URL)
+
+Wording changed in the body (team record):
+
+- Tier key, SOURCED: "captured and read; name the capture file" became "read; the public URL is listed under Sources." The label is unchanged.
+- Tier key, UNVERIFIED: "not captured" became "page text not read." The label is unchanged.
+- Sources intro: "All captures were read" became "All sources were read".
+- Limits: "not in the capture index" (source E) was removed from the body. "captures" became "sources" in two bullets.
+- The tier key sits after Limits, not at the top as the scrub brief described. It was not moved.

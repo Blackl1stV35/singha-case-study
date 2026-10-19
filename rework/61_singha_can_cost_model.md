@@ -1,5 +1,7 @@
 # Singha 330 ml can: cost per unit and production scenarios (desk model, 19 October 2026)
 
+> Audit, 19 October 2026: the corrections at the end of this record supersede the figures they name.
+
 Status: a desk estimate. No Singha or Boon Rawd can cost was found, and no quote was requested (per the user). The model runs on public figures, mostly secondary, and labelled assumptions. Treat it as a range for a 330 ml can at a Thai-style plant, not as Singha's cost. Script: `screen/can_cost_model.py`. Results: `screen/can_cost_model_results.json`. Chart: `charts/can_cost_per_unit.png`.
 
 Sourcing follows `SOURCING_POLICY.md`. Every input is tiered: **P** primary, **S** secondary. Most inputs are S; no primary (LME settlement, Bank of Thailand rate, Excise Department, a company filing) was read.
@@ -86,3 +88,12 @@ Premium sensitivity (mid inputs, THB per can at zero, USD 100 and USD 200 per to
 - Mostly US and regional proxies, not Thai.
 - The group nameplate and utilisation may refer to different scopes.
 - The model is not a cost-to-serve for the lime product; it covers the can only.
+
+## Audit corrections (19 October 2026)
+
+- **Desk total:** the variable cost is THB 3.7 to 6.1 per can. With the fixed-cost adder, the total is THB 3.9 to 7.3. The earlier 'about THB 4 to 6.5' is withdrawn.
+- **Fixed-cost adder:** THB 0.2 to 1.2 per can, by volume and fixed cost (0.18 at full nameplate with THB 300 million; up to 1.2 at 0.5 billion cans with THB 600 million). Not 0.1 to 0.6.
+- **FX:** the 33.32 low is a 16 September reading. The 18 October XE rate is 33.44. Use 33.44 as the one FX input across rework/53, 56 and 61, and reconcile the 33.46 in the older script.
+- **IMARC:** the sheet-input range (14.4 to 18.5 g) is driven by the 13 to 15 g can mass. IMARC's 18.0 g is a sensitivity, not the basis of the range.
+- **Nameplate citation:** the record says 2012 news and the script says 2018. Use one year when the source is saved.
+- **Not saved in the repo (unverified until the page text is saved to rework/raw/):** the LME prices (alcircle and Trading Economics), the XE rate, the sugar price (21 to 29 THB per kg), the non-metal conversion (sciencefix), the peer canned share (55.3%), utilisation (58.4 to 63.3%), the Crown line capacity, and the scrap figure (1.4 to 3.5 g).

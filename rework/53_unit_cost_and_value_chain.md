@@ -1,5 +1,7 @@
 # Unit cost and value chain: the lime cube against the 330 ml can (18 October 2026)
 
+> Audit, 19 October 2026: the corrections at the end of this record supersede the figures they name.
+
 > Correction, 19 October 2026: the metal figure below (9.6 g per can, THB 1.00 of metal) is not supported by the sourced can mass. The sourced 13 to 15 g can implies about 14.4 to 18.5 g of sheet, or THB 1.44 to 1.86 of metal per can at the LME price. See [61](61_singha_can_cost_model.md).
 
 Status: desk arithmetic from public prices read on 18 October 2026. No quote was requested, no supplier was contacted, and nothing was downloaded or logged into. Every margin is an ASSUMPTION, because no public Thai distributor or retailer margin was found. Fixed costs are excluded.
@@ -80,3 +82,12 @@ Break-even retail price (mid margins): about **THB 3.6** at the low cost and **T
 - The pouch price is non-Thai and the spec is unconfirmed.
 - Flavour, binder, freight, duty, VAT and fixed costs are excluded.
 - The weight of the can and the cube is derived, not sourced.
+
+## Audit corrections (19 October 2026)
+
+- **Metal only, per can:** THB 1.44 to 1.86 (14.4 to 18.5 g of sheet at about USD 3,000 per tonne; see [61](61_singha_can_cost_model.md)). The 9.6 g and THB 1.00 figures are withdrawn.
+- **Design mass:** 5.28 g (rework/57 section 3 and the style tokens), not 5.2 g. The cube is about 64 times lighter than the can, not 60.
+- **The 340 g gross can:** no derivation is saved. Unverified.
+- **Cube serving total:** THB 2.12 to 5.31. The JSON high is 5.315, which rounds to 5.31. The high includes the THB 1.50 print placeholder, so 'ingredients, sweetener and pouch' alone understates it.
+- **Flavour and binder:** 1.05 g (rework/57 section 3), not about 0.9 g.
+- **Listings not saved in the repo:** the US potassium bicarbonate and citric acid prices, the pouch listing and MOQ, the 7-Eleven launch price, the Tops zero-sugar prices, and the multipack prices. Unverified until the page text is saved to rework/raw/.

@@ -1,5 +1,7 @@
 # Package revision: Tarlo, modern direction, lion recoloured, net weight derived (19 October 2026)
 
+> Audit, 19 October 2026: the corrections at the end of this record supersede the figures they name.
+
 Status: revision applied to the label artwork, the 3D page and the 2K front render. The lion treatment, the brand-cue question and the trademark check are open gates before any print or production use. Nothing is printed, registered or submitted.
 
 ## 1. What the user asked
@@ -93,3 +95,11 @@ The compliance check returned ok = false with ten findings.
 - **Units per package: one cube per pouch.** The proposal sells single-serve pouches, each made up to 330 ml. No multipack is in the proposal. A carton of several pouches would be a later decision with its own pricing.
 - **Segment brief:** men, mainly 25 to 34, sport-minded, with Singha brand presence as a reason to buy. The package redesign follows this brief. The lead segment rests on the synthesis test, which the desk study in rework/55 qualified: sugar-substitute drinkers skew 45 and over.
 - **Laminate:** PET outer, printed ink, aluminium barrier foil, PE sealant, as set out in mockup/MATERIALS_pouch_stack.md. The thicknesses are assumptions.
+
+## Audit corrections (19 October 2026)
+
+- The compliance check returned ok = false with **eleven** findings (rows 1 to 11 in section 4), not ten.
+- **Safe margin:** the generator's constant M is 6 mm (90 px), not 75 px (5 mm). Row 5 of section 4 is corrected accordingly.
+- **The 5.8 g high end** is cited to rework/48 section 6.4. That passage was not traced in the audit. Unverified.
+- **The scores** (Tarlo 17 of 20, Cubi 14) come from a workflow output that is not saved in the repo. Unverified until saved to rework/raw/.
+- **The 80 cm2 format limit** (Notification 445 Annex 1) is not traced to its text. Unverified.

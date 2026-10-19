@@ -28,7 +28,7 @@ Total laminate: about 0.08 to 0.10 mm (ASSUMPTION). At the hero-shot distance th
 
 ## 4. Trade-offs and limits
 
-- **Recycling.** A PET, foil and PE laminate is generally not recyclable in common Thai collection streams (ASSUMPTION; not checked). The packaging survey in `rework/41` found that environmentally friendly packaging was chosen by only 5.8% of consumers in the old workspace document. A foil laminate works against that.
+- **Recycling.** A PET, foil and PE laminate is generally not recyclable in common Thai collection streams (ASSUMPTION; not checked). The old workspace document (`Singha (1).docx`, not in the repo) reports that environmentally friendly packaging was chosen by only 5.8% of consumers. It does not give its source table. `rework/41` does not contain this figure. A foil laminate works against that.
 - **Converter quote.** No pouch converter quote exists, so the thicknesses, the adhesive system and the seal parameters are unpriced and unverified.
 - **Physical test.** Nothing is made, sealed, dropped or stored. Moisture uptake and seal strength are untested.
 - **Food contact.** The PE sealant, the foil and the inks need a food-contact check. Not done.

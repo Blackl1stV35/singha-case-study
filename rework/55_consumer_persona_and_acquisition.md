@@ -1,5 +1,7 @@
 # Consumer persona and cost per acquired customer (19 October 2026)
 
+> Audit, 19 October 2026: the corrections at the end of this record supersede the figures they name.
+
 Team-only record. Desk study: public proxies, no respondents, no outside contact, nothing committed or pushed.
 
 Files: [screen/persona_acquisition_model.py](screen/persona_acquisition_model.py), results [screen/persona_acquisition_results.json](screen/persona_acquisition_results.json), chart [charts/cost_per_acquired_customer_scenarios.png](charts/cost_per_acquired_customer_scenarios.png).
@@ -105,3 +107,10 @@ Persona fit enters through the LPR, so the first lever is also the one the perso
 - Contribution per serving depends on ASSUMPTION margins ([rework/53](53_unit_cost_and_value_chain.md)).
 - The Monte Carlo treats the four inputs as independent. Persona fit is not measured separately.
 - Snippets used only as context, not as data: Sphere Agency and Mack Media CPM ranges; TikTok global CPM and CPC benchmarks; Euromonitor (paywalled); DataReportal (no ad split by age and sex).
+
+## Audit corrections (19 October 2026)
+
+- **NSO cells:** 68.6% (men 25 to 44), 46.9% (both sexes 25 to 44), 25.2% (women 25 to 44), 65.4% (men 45 to 59), and the 2021 cross-check (58.1 and 15.2 averaging to 36.5). These come from a WebFetch of NSO Social Indicators 2025, Table 4.6.2, read from a garbled text layer. The printed page is not saved and not checked. Unverified.
+- **Everyday-drinker counts** (17.9, 15.8, 38.5, 30.3, 60.2): these reproduce from the Table 50 counts in the script. The printed page is not saved, so they stay unverified.
+- **Ad costs and benchmarks** (CPM THB 120, CPC THB 11.5, the ECDB conversion benchmark), the 15,945 7-Eleven stores (CP All snapshot), and the 14.1 million Meta reach: cited to pages that are not saved. Read them as 'cited, page not saved'.
+- **The 700 stores opened in 2025:** no file holds this figure. Remove it or source it.

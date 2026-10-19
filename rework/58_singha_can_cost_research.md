@@ -1,5 +1,7 @@
 # Singha can cost per unit: public research (19 October 2026)
 
+> Audit, 19 October 2026: the corrections at the end of this record supersede the figures they name.
+
 Status: no public Singha can cost per unit was found. This is desk research from search results only. Snippets are marked as snippets; no page was read in full unless stated. No quote was requested and no outside contact was made, as the user asked. Nothing was submitted.
 
 ## 1. Findings
@@ -30,3 +32,9 @@ Status: no public Singha can cost per unit was found. This is desk research from
 - Singha's own cost per unit for the lime can. This is internal data, and the team has no access to it.
 - Boon Rawd's financial statements for 2025, to get cost of sales and volumes. These are not in the search results. Filings would need to be read directly.
 - A can-maker quote. Dropped, as the user asked.
+
+## Audit corrections (19 October 2026)
+
+- **The 9.6 g metal figure** from earlier records is withdrawn (see [61](61_singha_can_cost_model.md)). The 14.4 to 18.5 g sheet range replaces it.
+- **The IMARC plant model** gives about 18.0 g of can per can (1,000,000 g / 48,000 cans x 86.5%). It is not an 18 to 21 g range. Use 18.0 g.
+- **Metal shares** (58%, 78%, 60 to 65%, 70%), the Thai can market size and the Thai Beverage Can volume growth come from search snippets. The pages are not saved in the repo. Unverified.

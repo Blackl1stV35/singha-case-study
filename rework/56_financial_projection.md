@@ -1,5 +1,7 @@
 # 56. Financial projection: the lime cube inside a group (team-only)
 
+> Audit, 19 October 2026: the corrections at the end of this record supersede the figures they name.
+
 - Status: team-only record. Nothing here goes to rework/judge/. This is arithmetic under stated proxies, not a valuation of Singha, and it is not a finding about the market. No outside contact. Nothing is sent or submitted.
 - Model: [screen/financial_projection.py](screen/financial_projection.py). Results: [screen/financial_projection_results.json](screen/financial_projection_results.json). Chart: [charts/sotp_bridge_base.png](charts/sotp_bridge_base.png). Reproduce with `python rework/screen/financial_projection.py`.
 - Units: million THB (MTHB) unless stated. Year 0 is the base year (proxy FY2025 values). Years 1 to 5 are projection years, not calendar years. Servings are in millions.
@@ -200,3 +202,11 @@ Valuation at start of Year 1, pro forma for the acquisition, on Year 1 EBITDA.
 - Two cases only, with no probability weighting.
 - This is not a valuation opinion, an investment view, or material for judges.
 - Checks that pass: consolidated EBITDA equals the sum of parts less the change in unrealised profit; the SOTP bridge adds up; the holding company cash roll reconciles. All are at rounding precision.
+
+## Audit corrections (19 October 2026)
+
+- **Gross margin:** 31.3% (31.35%, from ThaiBev gross profit 104,926 over revenue 334,704), not 31.4%.
+- **Cube NPV at half the base volume:** THB 10 million, not 11 million.
+- **Packaging EBITDA margin:** 13.8% from operating income plus D&A. The model's 14.0% also adds other amortisation (209). Name that term or use 13.8%.
+- **rework/55 exists.** The statement that it does not is withdrawn. No volume is taken from it in this model; volume is a scenario.
+- **Not saved in the repo (unverified until the page text is saved):** the MarketScreener multiple (8.8x), the press summary (EBITDA 57.01 billion), the Revenue Department tax rate (20%, a secondary summary), the lease figure (4,358) and the Singha Estate balance-sheet figures.

@@ -23,6 +23,7 @@ Read this first in any new session. These rules are standing instructions from t
   - Quote a number only from the results file or source you have read. If you cannot trace a number, write UNVERIFIED.
   - Never invent a breakdown of a total (the checker rejected such an invented split on 19 October 2026).
   - A search snippet is a lead until you open the page.
+- **Sources in the repo:** save the page text or table behind every SOURCED figure in `rework/raw/` (with the URL and date) before a record cites it. A figure whose page is not saved is UNVERIFIED.
 - **Stale notifications:** background timers and waits send "task completed" notices that carry no new result. Check the actual output file or journal before you report anything from a notice.
 
 ## 4. Actions that need the user's explicit permission
@@ -44,7 +45,7 @@ Read this first in any new session. These rules are standing instructions from t
 ## 6. Renders
 
 - Cycles uses the **GPU by default** (NVIDIA GeForce GTX 1650, 4 GB VRAM, CUDA). `--device cpu` forces the CPU. The script falls back to the CPU when no CUDA device is found.
-- Host RAM is the binding limit (8 GB total; Claude processes take about 1.2 GB). Check free RAM before a render (`Get-CimInstance Win32_OperatingSystem`). A 2K render needs about 2.1 GB of working set. Close other large applications first.
+- Host RAM is the binding limit (8 GB total; Claude processes take about 1.2 GB). Check free RAM before a render (`Get-CimInstance Win32_OperatingSystem`). The 2K GPU render's Blender process was observed at about 2.1 GB working set (one reading, not logged). Close other large applications first.
 - Run renders in the background and check the log. The log is buffered, so a missing print does not mean a failure. Confirm with the "Saved" and "done in" lines and the file's time.
 - Do not overwrite `rework/mockup/cube_front_2k.png` with a test render. Test renders go to the session scratch folder.
 - Verify the 3D page after any label change: `python rework/screen/verify_cube_mockup.py` (24 checks).

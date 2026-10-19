@@ -1,0 +1,13 @@
+<path> DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat.use_nodes = True
+<path> DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world.use_nodes = True
+04:10.813  render           | Saved: '<path>'
+label artwork 2400x1200, aspect 2.000
+label on front: 65.0 x 32.5 mm
+rendering 1600x1200, 128 samples, CPU
+PNG chunks removed: ['cHRM', 'eXIf', 'oFFs', 'tEXt', 'tEXt', 'tEXt', 'tEXt', 'tEXt', 'tEXt', 'tEXt', 'tEXt', 'tEXt', 'tEXt', 'tEXt']
+done in 248.0 s
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

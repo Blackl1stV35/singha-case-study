@@ -80,3 +80,4 @@ The numbering has gaps (35 to 39) because those numbers were never used.
 - The judge folder was synced to the merged design on 19 October 2026. Re-sync after any label change.
 - External links in records 02, 03, 55 and 58 were not fetched. This is a stated limit until they are checked.
 - The textures in `archive/leaf_wrapped_mockup/textures/` came from earlier downloads whose approval is not on record.
+- Audit (19 October 2026): records 53, 55, 56, 57, 58 and 61 carry corrections at their end. Figures cited to pages that are not saved in the repo are UNVERIFIED until the page text is saved to `rework/raw/`. Render logs are in `screen/render_logs/`.

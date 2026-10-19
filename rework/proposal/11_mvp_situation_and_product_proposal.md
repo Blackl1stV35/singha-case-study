@@ -8,6 +8,7 @@ Tiers: P (regulator text, company filing or release, official statistics), S (pr
 
 - The MVP product is Singha Lemon Soda, a ready-to-drink lemon soda in a 330 mL can. We read "addition way of consumption" as the Cube: one cube dropped into 330 mL of water to make the same lemon drink in the glass.
 - Only lemon is in scope. Other Singha flavours appear only as options in the proposal, not as a plan.
+- Proposing entity: Singha Corporation, confirmed on 19 October 2026. Boon Rawd Brewery is the holding company; the SINGHA marks are held by Boon Rawd Brewery as far as found (S), so a licence or written confirmation from the holding company is a condition before pack print.
 - Product-level figures for Singha Lemon Soda are mostly launch-era or press figures. No audited product figure is public. Where a figure is missing, section 4 says so and no figure is estimated.
 
 ## 1. Validation
@@ -215,7 +216,24 @@ Manufacturing cost:
 - Before any judge-facing use, obtain raw saves of the company product page and the 2026 retail listing, confirm the trademark owner, and search the DIP register.
 - Treat every unit-economics figure as assumption-driven until a co-packer quote and a shelf-price check are in the file.
 
-## 6. Sources
+## 6. Entity focus and shareholder value
+
+Entity. The case is framed for Singha Corporation, confirmed on 19 October 2026. Boon Rawd Brewery is the holding company (S, Singha Corporation site). Value from the Cube reaches the shareholders of the group through the holding company.
+
+Scale. Singha Corporation's 2025 net profit was about THB 3,085 million (press, S, 23 May 2026). The base-case desk NPV of THB 0.88 million is about 0.03% of one year's profit (DERIVED). The case is small in the base case and must be judged on volume and on capped fixed cost.
+
+Value drivers (desk model, DERIVED from ASSUMPTION inputs, five years, 10% discount rate, no terminal value, pre-tax):
+
+- Contribution: THB 4.91 per cube in the base case.
+- Volume: break-even at 146,230 cubes a year. At 200,000 cubes the NPV is THB 0.88 million; at 500,000 cubes it is about THB 5.80 million; at 1,000,000 cubes it is THB 13.99 million.
+- Fixed cost: NPV is positive below about THB 0.68 million a year at 200,000 cubes. At THB 250,000 it is THB 2.08 million; at THB 1,000,000 it is minus THB 1.51 million.
+- Option: the pilot reads after 13 weeks and can stop. Spend before that decision is one budget still to be set (decision 9).
+
+Leverage of the existing can (S unless marked). The Singha Lemon Soda can already provides a brand and a lemon flavour since August 2020, a family of flavours (Yuzu, Red, Ume, Pink, Lemon Cream), a 330 mL pack with shelf prices of THB 16 to 17 (2020 to 2023), and routes named in 2024 and 2025 press (7-Eleven, supermarkets and the Singha Online Shop). The Cube uses the same brand, flavour, pack reference and routes. Any new listing cost is an ASSUMPTION to test at Gate 8.
+
+Not verified: line capacity at the group's plants, the can's unit cost and its current shelf price. These are checked before any sale or pilot batch (Gates 5, 6 and 8).
+
+## 7. Sources
 
 Company and press (S unless stated)
 

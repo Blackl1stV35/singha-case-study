@@ -28,7 +28,7 @@ The 2K CPU time comes from earlier runs, not from the same session. The GPU is a
 blender -b -P build_cube_scene.py -- --out X.png --width 2560 --height 1440 --samples 64 --device gpu
 ```
 
-The default stays `cpu`. With `--device gpu` the script prints "GPU devices in use" once the CUDA device is active.
+From 19 October 2026 the default is `gpu`, so ongoing renders use the GTX 1650. If no CUDA device is found, the script falls back to the CPU and says so. `--device cpu` forces the CPU. With the GPU active the script prints "GPU devices in use".
 
 ## 5. Batch options
 

@@ -102,8 +102,8 @@ def parse_args():
                    help="front: straight-on product view; hero: three-quarter composition")
     p.add_argument("--exposure", type=float, default=-1.2,
                    help="view exposure in stops, set so the backdrop matches the background token")
-    p.add_argument("--device", choices=["cpu", "gpu"], default="cpu",
-                   help="cpu: Cycles on the CPU; gpu: Cycles on the CUDA device (NVIDIA)")
+    p.add_argument("--device", choices=["cpu", "gpu"], default="gpu",
+                   help="gpu (default): Cycles on the CUDA device; falls back to the CPU if none is found. cpu: CPU only")
     return p.parse_args(argv)
 
 
@@ -425,9 +425,13 @@ def setup_render(scene, args, bg_hex):
         prefs = bpy.context.preferences.addons["cycles"].preferences
         prefs.compute_device_type = "CUDA"
         prefs.get_devices()
-        for dev in prefs.devices:
-            dev.use = dev.type == "CUDA"
-        print("GPU devices in use:", [dev.name for dev in prefs.devices if dev.use])
+        if any(dev.type == "CUDA" for dev in prefs.devices):
+            for dev in prefs.devices:
+                dev.use = dev.type == "CUDA"
+            print("GPU devices in use:", [dev.name for dev in prefs.devices if dev.use])
+        else:
+            cy.device = "CPU"
+            print("No CUDA device found; rendering on the CPU")
     cy.samples = args.samples
     cy.use_adaptive_sampling = True
     cy.use_denoising = True

@@ -2,6 +2,16 @@
 
 Read this first in any new session. These rules are standing instructions from the user. They apply to Claude working in this repo, on any model.
 
+## 0. Update of 20 October 2026 (supersedes the lime-cube lines below)
+
+- The product is the **Singha Lemon Soda Cube**, shown as "Lemon Soda": one dissolvable lemon cube in 330 mL of water. The proposer is **Singha Corporation**; Boon Rawd Brewery is the holding company. The SINGHA name and the lion are authorised for the proposal. Wherever a section below says Lime Cube or `rework/judge/`, read Lemon Soda and `rework/submission/` (the judge folder is archived in `rework/archive/judge_2026-10-19/`).
+- Judge-facing files live only in `rework/submission/`. The slide content is `rework/deck/deck_content.md`. Deck work is paused; the old deck is archived.
+- The executives receive a finished proposal. Do not hand decisions to Singha Corporation in judge-facing text, and keep internal notes out of it; report them to the user in chat. Items that cannot be closed from sources become stated limits.
+- The saved in-loop workflow for the deck diligence is `.claude/workflows/singha-deck-diligence-loop.js`; its prompt is `rework/workflows/deck_diligence_prompt_2026-10-20.md`.
+- Model routing (20 October 2026): authors and routine verifiers run on Haiku 5.5; hard statistical and chemistry tasks (T8, T9, T10, T11, T12, T14, T15) verify and revise on Sonnet or higher. Respect the Claude Max x20 weekly meter before any Sonnet or Opus pass. See `rework/workflows/model_routing_2026-10-20.md`.
+- The older folders `strategy/` and `korea-chart/` were removed on 20 October 2026 (recoverable from git history).
+- Commit trailers name the model that wrote the commit.
+
 ## 1. What the repo is
 
 - A student team's competition entry, "The Innovative Bev & Bite" (SINGHA Ultimate Challenge 2026). The product is a sodium-free lime drink cube, working name **Lime Cube**. The name has no SINGHA word. The lion is the only SINGHA reference.

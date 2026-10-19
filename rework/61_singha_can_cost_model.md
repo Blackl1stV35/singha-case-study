@@ -67,7 +67,7 @@ Premium sensitivity (mid inputs, THB per can at zero, USD 100 and USD 200 per to
 - **Regional aluminium premium and sheet rolling.** No input. The premium scenarios above show the effect.
 - **Scrap credit.** Scrap generated is 1.4 to 3.5 g per can, but no scrap price. Not netted, so the cost is overstated by the credit.
 - **End and tab conversion, lacquer-curing gas, secondary packaging** (carton, shrink, pallet). No input.
-- **Excise on sugar-sweetened drinks** (the Thai sugar levy). The primary law was not read, so no figure is used. This is likely to be material for a sugared lime soda.
+- **Excise on sugar-sweetened drinks** (item 02.02). The primary rates are now read (`raw/gazette_sugar_drink_excise_primary_2560_A095_111.md`): 14% ad valorem in every tier, plus 0, 1, 3 or 5 baht per litre by sugar per 100 ml from 1 October 2566. Per 330 ml that is 0, 0.33, 0.99 or 1.65 baht. Not in the model yet: the ad valorem base is not read, so the 14% has no baht figure. A sugar-free lime drink is in the 0-baht tier, but still under 02.02 at 14% ad valorem. Later amendments are not checked.
 - **Freight, distribution, marketing, overheads, depreciation, line capex.** Only a company-level D&A ratio was found, and the Heineken Malaysia report it cites was unreadable.
 - **Lacquer and ink, labour, electricity.** Sub-components of the conversion proxy. Adding them would double-count (the checker flagged this).
 
@@ -106,6 +106,6 @@ The model now uses primary values where they were read:
 
 Result: variable cost is THB 3.73 to 6.14 per can, middle THB 4.94 (before, THB 3.72 to 6.09). Sheet metal is USD 0.0434 to 0.0558 per can.
 
-Still not primary: the sugar-levy line (the Royal Gazette notice is behind a verification page in the browser; the Excise Department page read was a landing page), the non-metal conversion (a US proxy), the sugar liquid (an assumption), the scrap and the premium. The regional aluminium premium and scrap credit remain missing.
+Still not primary: the excise ad valorem base (the Gazette rates are primary now; see section 5), the non-metal conversion (a US proxy), the sugar liquid (an assumption), the scrap and the premium. The regional aluminium premium and scrap credit remain missing.
 
 Can capacity, now from the primary filing: BJC's 56-1 One Report 2025 says TBC has 4 can production lines and added a fifth (hybrid) line in 2025. The 2022 expansion of 400 million cans a year is stated as about 10% of current capacity, which derives to roughly 4,000 million cans a year (approximate; `raw/bjc_one_report_2025_tbc_excerpt.md`). The line count and the 2022 timing are not reconciled. This is not used in the cost per can, which does not depend on the can plant's capacity.

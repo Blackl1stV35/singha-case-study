@@ -9,6 +9,7 @@ Sourcing policy: [SOURCING_POLICY.md](SOURCING_POLICY.md). Primary sources come 
 | Item | Status | Record |
 |---|---|---|
 | Primary candidate | Sodium-free lime fizz cube, made with potassium bicarbonate and citric acid | [45](45_working_candidate_rework.md), [51](51_final_conclusion_and_recommendation.md), [52](52_pivot_and_retirement.md) |
+| Component 1 (ingredients and nutrition) food-science check | Dose recorrected to 0.9 volume of CO₂ (518 mg potassium per 330 ml, was 1,007 mg); acid excess and sweetener choice still open; desk model only | [62](62_component1_food_science_check.md) |
 | Leaf-wrapped frozen drink | Superseded (record 06 banner) | [06](06_final_conclusion.md), [52](52_pivot_and_retirement.md) |
 | Midlife soy drink | Retired | [40](40_candidate_b_soy_drink.md) |
 | Herb drink (reframed) | Reframed on 18 October 2026 (03), then dropped (06); 05 is a team note, not decided | [03](03_c_reframed.md), [05](05_team_note_c_price_ladder.md) |
@@ -39,7 +40,7 @@ Sourcing policy: [SOURCING_POLICY.md](SOURCING_POLICY.md). Primary sources come 
 
 ## Documents by status
 
-**Active (primary candidate and decisions):** 00, 45, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61. The storyboard for the drop animation is at `mockup/ANIMATION_storyboard.md`.
+**Active (primary candidate and decisions):** 00, 45, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62. The storyboard for the drop animation is at `mockup/ANIMATION_storyboard.md`.
 
 **Supporting (still used):**
 - 01, 02, 04: idea catalogue, desk kill tests, and the price audit.
@@ -80,4 +81,5 @@ The numbering has gaps (35 to 39) because those numbers were never used.
 - The judge folder was synced to the merged design on 19 October 2026. Re-sync after any label change.
 - External links in records 02, 03, 55 and 58 were not fetched. This is a stated limit until they are checked.
 - The textures in `archive/leaf_wrapped_mockup/textures/` came from earlier downloads whose approval is not on record.
+- Sugar-drink excise: the Royal Gazette schedule for item 02.02 is read as primary (1 October 2566 onwards: 0, 1, 3 or 5 baht per litre by sugar per 100 ml, plus 14% ad valorem). Later amendments and the ad valorem base are not checked. See [61](61_singha_can_cost_model.md) and `raw/gazette_sugar_drink_excise_primary_2560_A095_111.md`.
 - Audit (19 October 2026): records 53, 55, 56, 57, 58 and 61 carry corrections at their end. Figures cited to pages that are not saved in the repo are UNVERIFIED until the page text is saved to `rework/raw/`. Render logs are in `screen/render_logs/`.

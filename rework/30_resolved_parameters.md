@@ -1,5 +1,7 @@
 # Resolved parameters and the working design (18 October 2026)
 
+> **Retired 18 October 2026.** This record belongs to candidate A (the leaf-wrapped frozen drink) or to a retired step of the desk work. See [README](README.md). Kept for the record.
+
 The screens had unknown parameters: drink composition, lag, damage size and density, stomata, and the process. This note resolves each one from physical reasoning, states its basis and sensitivity, and records the consequence for the design. Values are physics-based assumptions, not measurements. Code: `rework/screen/resolve_parameters.py`, results `rework/screen/resolved_parameters_results.json`.
 
 ## Resolved values

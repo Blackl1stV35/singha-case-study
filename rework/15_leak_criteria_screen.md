@@ -1,5 +1,7 @@
 # Leak test: criteria set from physics, then a screen (stage-gate)
 
+> **Retired 18 October 2026.** This record belongs to candidate A (the leaf-wrapped frozen drink) or to a retired step of the desk work. See [README](README.md). Kept for the record.
+
 Status: criteria set before any sample is made. The thaw screen is run. The leak itself is not screened and stays a physical test (pended, as instructed).
 
 ## Stage-gate approach

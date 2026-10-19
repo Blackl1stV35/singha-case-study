@@ -1,5 +1,7 @@
 # Dye-penetration protocol: leaf-only wrap leak test (approved 18 October 2026)
 
+> **Retired 18 October 2026.** This record belongs to candidate A (the leaf-wrapped frozen drink) or to a retired step of the desk work. See [README](README.md). Kept for the record.
+
 Status: **approved** by the user on 18 October 2026, together with the leaf-only option for testing. Not yet run. The working design stays the leaf wrap with a food-grade PET inner barrier until this test reports.
 
 ## Question

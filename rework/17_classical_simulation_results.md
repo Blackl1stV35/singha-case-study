@@ -1,5 +1,7 @@
 # Coupled thaw and wicking simulation: classical results
 
+> **Retired 18 October 2026.** This record belongs to candidate A (the leaf-wrapped frozen drink) or to a retired step of the desk work. See [README](README.md). Kept for the record.
+
 Date: 18 October 2026. Script: [screen/pop_leak_simulation.py](screen/pop_leak_simulation.py). Raw output: [screen/pop_leak_simulation_results.json](screen/pop_leak_simulation_results.json). Plot: [screen/pop_leak_simulation.png](screen/pop_leak_simulation.png).
 
 Status: virtual screen only. Inputs are assumptions or analogue values (see [16](16_permeability_seam_estimate.md)). Nothing here is a measurement.

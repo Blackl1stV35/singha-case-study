@@ -1,5 +1,7 @@
 # Novelty search, extended (18 October 2026)
 
+> **Retired 18 October 2026.** This record belongs to candidate A (the leaf-wrapped frozen drink) or to a retired step of the desk work. See [README](README.md). Kept for the record.
+
 This note closes the four unchecked items from the team briefing (section 3): global multi-language search, patents, the OTOP registry, and in-store and online retail. It replaces the six-search absence check in `rework/01_ideas_from_zero.md` as the basis for the novelty claim.
 
 ## What was searched

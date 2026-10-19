@@ -1,5 +1,7 @@
 # Thailand stress-test inputs and sources (updated 18 October 2026)
 
+> **Retired 18 October 2026.** This record belongs to candidate A (the leaf-wrapped frozen drink) or to a retired step of the desk work. See [README](README.md). Kept for the record.
+
 Virtual screen inputs for the frozen leaf-wrapped pop. Each value is either sourced (URL or citation given, confidence stated) or marked **assumption**. Used by `rework/screen/thailand_stress_test.py` and `rework/screen/thai_summer_occasions.py`.
 
 Confidence: **high** = official text read in full; **medium** = station, standard or measured source read directly; **low** = secondary, reanalysis, single-source or model-derived value; **assumption** = no public source found.

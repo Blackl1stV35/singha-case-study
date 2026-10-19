@@ -1,5 +1,7 @@
 # Leaf permeability and seam quality: virtual estimate and decisions
 
+> **Retired 18 October 2026.** This record belongs to candidate A (the leaf-wrapped frozen drink) or to a retired step of the desk work. See [README](README.md). Kept for the record.
+
 Status: virtual only. No physical test was run, and none will be run. Each decision below is closed on the evidence stated, with its uncertainty. Limits that virtual evidence cannot close are listed at the end as limits, not as pending work.
 
 ## 1. Sourced inputs (research workflow wuilchzkv, 18 October 2026)

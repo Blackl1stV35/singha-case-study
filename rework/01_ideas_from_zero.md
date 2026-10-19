@@ -4,7 +4,7 @@ Status: screening result from workflow wqrcxrdmc, 18 October 2026. Nothing is va
 
 **Decision (18 October 2026, the user):** the entry may cover one component. It does not have to cover all three. The three finalists stand as they are, and open question 2 is closed.
 
-**Desk kill tests (18 October 2026):** no finalist is killed. Finalist C's Thai Post citation fails, and its 9.6 percent figure is unsourced. The results and proposed changes are in [02_desk_kill_tests.md](02_desk_kill_tests.md). Novelty is an absence search with 2 to 6 searches per idea, so "none found" is not proof of absence.
+**Desk kill tests (18 October 2026):** one finalist (C) is killed on one citation: its Thai Post citation fails, and its 9.6 percent figure is unsourced. It is reframed in [03](03_c_reframed.md). The results and proposed changes are in [02_desk_kill_tests.md](02_desk_kill_tests.md). Novelty is an absence search with 2 to 6 searches per idea, so "none found" is not proof of absence.
 
 ## How this was made
 

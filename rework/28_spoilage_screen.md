@@ -1,5 +1,7 @@
 # Spoilage screen: the rotten condition on the package (18 October 2026)
 
+> **Retired 18 October 2026.** This record belongs to candidate A (the leaf-wrapped frozen drink) or to a retired step of the desk work. See [README](README.md). Kept for the record.
+
 Question: after the pop thaws, does the drink or the leaf wrap rot before it is eaten, and what time limit follows?
 
 Short answer: the drink does not spoil within the time it takes to reach the Thai 2-hour limit. Spoilage needs about 4 to 12 hours of warm holding. The two-hour rule therefore stays the operative limit. Contamination from outside water shortens the time to spoilage by about 40 %. The leaf does not rot within a single event, but a wrapped pop stored wet after an event would.

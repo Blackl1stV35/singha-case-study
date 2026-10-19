@@ -1,5 +1,7 @@
 # Quantum check of one Monte Carlo probability (IBM hardware)
 
+> **Retired 18 October 2026.** This record belongs to candidate A (the leaf-wrapped frozen drink) or to a retired step of the desk work. See [README](README.md). Kept for the record.
+
 Date: 18 October 2026. Script: [screen/quantum_leak_probability.py](screen/quantum_leak_probability.py). Raw result: [screen/quantum_leak_probability_results.json](screen/quantum_leak_probability_results.json).
 
 Status: pipeline test on hardware. It is not evidence for the leak question and it is not a quantum advantage claim.

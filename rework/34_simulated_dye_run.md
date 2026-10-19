@@ -1,5 +1,7 @@
 # Simulated run of the dye-penetration protocol (18 October 2026)
 
+> **Retired 18 October 2026.** This record belongs to candidate A (the leaf-wrapped frozen drink) or to a retired step of the desk work. See [README](README.md). Kept for the record.
+
 **This is a simulation, not a physical test.** No leaves were cut, frozen, dyed or scanned. The run applies the protocol in rework/33 to virtual wraps, using the breach model in rework/31. It shows what the protocol would most likely report for each true breach fraction. It is not a result for any real wrap. Code: `rework/screen/lab_sim_dye_protocol.py`, results `lab_sim_dye_protocol_results.json`.
 
 ## Setup

@@ -1,5 +1,7 @@
 # Pathogens and microbial load for the thawed pop (18 October 2026)
 
+> **Retired 18 October 2026.** This record belongs to candidate A (the leaf-wrapped frozen drink) or to a retired step of the desk work. See [README](README.md). Kept for the record.
+
 Question: after thaw, can pathogens grow to a hazard in one serving, and does the microbial start load matter more than the time after thaw?
 
 Short answer: the start load decides the risk. From one contaminating cell per serving, the hazard is reached after about 6 to 27 hours at 30 °C, so the 2-hour limit leaves a wide margin. But a serving that starts at or above the hazard level is hazardous at once, whatever the time. Production control is therefore the binding requirement, and the time rules are secondary.

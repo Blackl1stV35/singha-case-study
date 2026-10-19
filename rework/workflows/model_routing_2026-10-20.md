@@ -11,23 +11,11 @@ Set by the user on 20 October 2026. The script is `.claude/workflows/singha-deck
 | Verify and revise, hard | T8, T9, T10, T11, T12, T14, T15 | Sonnet (or higher) | Chemistry, stoichiometry, medical-regulatory reading, value and Monte Carlo statistics |
 | Critic (coverage check) | Once | Haiku 5.5 | Reads summaries only |
 
-Opus is reserved for a single final check of T14 (the significance conclusion), and only when the weekly meter has clear headroom. It is not part of the default run.
+Opus is reserved for a single final check of T14 (the significance conclusion). It is not part of the default run.
 
-## Usage limit (Claude Max plan, x20)
+## Usage
 
-Snapshot read by the user on 20 October 2026 at about 02:07 (phone clock):
-
-- Current session: 32% used, resets in about 1 hour 13 minutes.
-- Weekly, all models: 80% used, resets in about 10 hours 53 minutes.
-- Weekly, Fable only: 0% used.
-- Usage credits: off, balance 7.41 credits. When a limit is reached the run stops; it does not buy more usage.
-
-Rules that follow from this:
-
-1. Check the weekly meter before any Sonnet or Opus pass. The workflow cannot read the meter.
-2. Proposed thresholds, for the user to confirm: launch the hard-task Sonnet pass only when the weekly meter is at 60% or below, or after the weekly reset. Launch Opus only when it is at 50% or below.
-3. Run the hard-task pass with `args.only` set to the hard tasks, so routine tasks are not repeated.
-4. Keep `args.maxRounds` at 2 unless the user asks for more. Each extra round adds a Sonnet verify and a Sonnet revise per hard task.
+The user dropped the usage concern on 20 October 2026 and confirmed this routing. No meter check gates the Sonnet pass. Keep `args.maxRounds` at 2 unless the user asks for more, because each extra round adds a Sonnet verify and a Sonnet revise per hard task.
 
 ## How the pass is resumed without repeating work
 

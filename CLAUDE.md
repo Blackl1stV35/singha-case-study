@@ -8,7 +8,7 @@ Read this first in any new session. These rules are standing instructions from t
 - Judge-facing files live only in `rework/submission/`. The slide content is `rework/deck/deck_content.md`. Deck work is paused; the old deck is archived.
 - The executives receive a finished proposal. Do not hand decisions to Singha Corporation in judge-facing text, and keep internal notes out of it; report them to the user in chat. Items that cannot be closed from sources become stated limits.
 - The saved in-loop workflow for the deck diligence is `.claude/workflows/singha-deck-diligence-loop.js`; its prompt is `rework/workflows/deck_diligence_prompt_2026-10-20.md`.
-- Model routing (20 October 2026): authors and routine verifiers run on Haiku 5.5; hard statistical and chemistry tasks (T8, T9, T10, T11, T12, T14, T15) verify and revise on Sonnet or higher. Respect the Claude Max x20 weekly meter before any Sonnet or Opus pass. See `rework/workflows/model_routing_2026-10-20.md`.
+- Model routing (20 October 2026): authors and routine verifiers run on Haiku 5.5; hard statistical and chemistry tasks (T8, T9, T10, T11, T12, T14, T15) verify and revise on Sonnet or higher. The user dropped the usage concern on 20 October 2026, so no usage gate applies. See `rework/workflows/model_routing_2026-10-20.md`.
 - The older folders `strategy/` and `korea-chart/` were removed on 20 October 2026 (recoverable from git history).
 - Commit trailers name the model that wrote the commit.
 

@@ -2,6 +2,8 @@
 
 Status: a desk check of the chemistry and arithmetic of the cube recorded in [rework/45](45_working_candidate_rework.md). No bench test: the lab test is dropped (S2), so every figure is a model output and every check below is a stated limit. The check finds that the cube can be recorrected in three places. None of the changes creates a sodium-free, fizz, health or sugar-free claim.
 
+**Recorrection confirmed by the user (19 October 2026):** (1) the dose is set by what the drink holds, 0.9 volume of CO₂ per 330 ml, not 1.75 volumes; (2) the free-acid excess is set by titration to a target pH, not left at the stoichiometric 1:3 ratio; (3) any potassium-bearing sweetener has its potassium counted. Sweetener: sucralose (no potassium), recommended and confirmed by the user on 19 October 2026. The Thai permission check is pending, with steviol glycosides as the fallback. The next step is a desk test to resolve the limits in section 5. Its figures are to be handed to the company's internal R&D department.
+
 ## 1. The recorded construction
 
 - Potassium bicarbonate and citric acid, stoichiometric, dosed at 1.5 and 1.75 volumes of CO₂ per 330 ml.

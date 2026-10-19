@@ -1,5 +1,7 @@
 # Working candidate, reworked: sodium-free lime fizz cube (18 October 2026)
 
+> **Dose superseded 19 October 2026:** the design dose is 0.9 volume of CO₂ per 330 ml, confirmed by the user (see [rework/62](62_component1_food_science_check.md) and [rework/52](52_pivot_and_retirement.md) D10). The 1.5 and 1.75 volume figures in this record, including G2, G3 and F3, are superseded.
+>
 > **Primary candidate, confirmed 18 October 2026** (see [rework/52](52_pivot_and_retirement.md)). The salt is potassium bicarbonate. The earlier text that said carbonate is corrected below.
 
 Status: the dissolvable construction failed its first pass on the brief's own tests. Under the authority recorded on 18 October 2026, I reworked the construction. On the same day the user set three rules: no sugar-free claim (S1); the lab test and the medical test are dropped (S2, S3); and each gate that needed them is resolved by a physics simulation, a desk reading of public texts, or a stated limit. The reworked candidate is below. It is not validated by any bench or clinical test. Section 6 gives the resolution of each gate.

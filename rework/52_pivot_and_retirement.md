@@ -15,6 +15,10 @@ Status: the user confirmed these decisions on 18 October 2026. The repo is merge
 | D7 | **Judge-facing scrub resolved.** See section 4. | Section 4 |
 | D8 | **Registration and submission are not done.** They need a separate explicit yes with the submission text, which is not drafted for the cube. | [rework/27](27_submission_draft_pended.md) is retired with A |
 | D9 | The SINGHA name and the lion emblem are usable for the product proposal. The trademark rights concern is dropped | User authorization, 18 October 2026. Not a licence document |
+| D10 | **Dose: 0.9 volume of CO₂ per 330 ml**, not 1.75 volumes. This supersedes the 1.75-volume dose in D2, in [rework/45](45_working_candidate_rework.md) (G2, G3, F3) and in [rework/50](50_final_gate_resolution.md) (F3) | User, 19 October 2026, on the recorrection in [rework/62](62_component1_food_science_check.md) |
+| D11 | **Central claim: new consumption form.** A dissolvable pouch cube that makes the drink on the spot, one cube per pouch (the sold unit is still inferred). The records call the dissolvable form a format change, not a new product, and the format novelty search is not run | User, 19 October 2026, adopting the leader's point 3 (the user is Peem) |
+| D12 | **Malt-fibre retired** from the proposal. No further malt-fibre work | User, 19 October 2026 |
+| D13 | **Sweetener: sucralose** (no potassium), on the recommendation. Steviol glycosides are the fallback if the Thai permission check fails. The sweetener dose is not set | User, 19 October 2026 ("proceed your recommend"). The Thai permission check is pending |
 
 ## 2. Retirements
 

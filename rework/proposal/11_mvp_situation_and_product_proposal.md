@@ -1,8 +1,8 @@
-# MVP situational analysis and product proposal: Singha Lemon Soda and the Cube
+# Appendix B: MVP evidence and product case (Singha Lemon Soda and the Cube)
 
 Date: 19 October 2026. Scope: the Singha Lemon Soda product line, consumed from the 330 mL can, and the addition form (the Cube, one dissolvable cube dropped into 330 mL of water). No other product is in scope.
 
-Tiers: P (regulator text, company filing or release, official statistics), S (press, trade or consultancy page, company claim relayed by press, search snippet opened), DERIVED (our arithmetic, inputs shown), ASSUMPTION (chosen value, not sourced), UNVERIFIED (not opened, blocked or not found). Every sourced figure carries its date and its source in section 9.
+Tiers are defined once, in Appendix A.
 
 ## 0. Reading of the brief
 
@@ -55,7 +55,7 @@ Persona (proposed, ASSUMPTION): urban adults aged 25 to 44 who buy sparkling sof
 | Volume target | 45 million litres for 2022; +61% over 2021 (target, not realised) | S, DERIVED | 16 August 2022 | 9.2 |
 | Sales value | THB 1,357 million (prior year, as stated) | S | 16 August 2022 | 9.2 |
 | Canned carbonated market | THB 13,172 million (year not stated) | S | 16 August 2022 | 9.2 |
-| Singha share of canned carbonated value | about 10.3% (not a market share) | DERIVED | from the two figures above | |
+| Singha brand share of canned carbonated value | about 10.3% (not a market share) | DERIVED | from the two figures above | |
 | Market share claims | 4% (2020, unsourced); 12% (2022 press); 52% of cans (2023 press) | UNVERIFIED | conflicting | not used |
 | Growth since 2021 | No actual volume after 2021; 30% growth after the Ume launch is a forecast | S | 4 September 2023 | section 4 |
 | Promotion | None confirmed | UNVERIFIED | none | section 4 |
@@ -75,9 +75,9 @@ Margins. The company publishes no product-level margin, cost, revenue split or c
 
 Singha Corporation's press-reported net profit of about 79% to 85% of revenue (2021, 2024 and 2025) is an entity figure for a group company. It is not a product or beverage margin and is not used as a benchmark.
 
-Contribution cost. Not confirmed for the can. For the Cube, the plan gives THB 4.91 per cube (DERIVED from ASSUMPTION inputs). For the can, the desk model gives a variable cost of THB 3.73 to 6.14 per can, THB 4.94 at the mid input (DERIVED; no Singha or Boon Rawd can cost was found; excise, freight, distribution, marketing and overheads are excluded).
+Contribution cost. Not confirmed for the can. For the Cube, the plan gives THB 4.91 per cube (DERIVED from ASSUMPTION inputs). For the can, the desk model gives a variable cost of THB 3.73 to 6.14 per can, THB 4.94 at the mid input (DERIVED; no can cost for Singha Lemon Soda or for any Boon Rawd company was found; excise, freight, distribution, marketing and overheads are excluded).
 
-Revenue share of the lemon soda within the Singha portfolio: not disclosed.
+Revenue share of the lemon soda within the portfolio of the Boon Rawd Brewery group: not disclosed.
 
 Asset turnover (peers, DERIVED): ThaiBev 0.66 times; Carabao 1.16 times; Osotspa 1.04 times. Inventory turnover: ThaiBev 3.6 times; Carabao 8.5 times.
 
@@ -98,7 +98,7 @@ Market structure (S, 16 March 2024, volume share 2023 to 2024): Coca-Cola group 
 
 Advantages, as confirmed claims:
 
-- Singha: a sugar-free wording at launch (company release, 2020, S); a Healthier Choice mark reported by press (registry not opened, S).
+- Singha Lemon Soda: sugar-free wording at launch (company claim), from the company release of 2020 (S); a Healthier Choice mark reported by press (registry not opened, S).
 - Sprite: national distribution and a sugar-free lemon variant at about THB 15 (2022).
 - No head-to-head taste or price claim is confirmed for either.
 
@@ -149,10 +149,12 @@ Regulation (Thai FDA, P):
 Trademark:
 
 - The Department of Intellectual Property register was not reachable on 19 October 2026 (HTTP 403). No Thai status is confirmed for SINGHA LEMON SODA or SINGHA LEMON SODA (CUBE).
-- Owner: an aggregator lists 12 SINGHA marks owned by Boon Rawd Brewery Co., Ltd. (S), none labelled for Thailand. The brief names Singha Corporation. The owner of the Thai SINGHA mark is not confirmed.
+- Owner: an aggregator lists 12 SINGHA marks owned by Boon Rawd Brewery Co., Ltd. (S), none labelled for Thailand. The brief says "Singha". The proposer is Singha Corporation, confirmed on 19 October 2026. The owner of the Thai SINGHA mark is not confirmed.
 - A US application for SINGHA lemon soda goods (serial 98124128, filed 9 August 2023) was seen in a snippet only (UNVERIFIED).
 - Thai trademark term is 10 years, first to file (original 1991 Act, P). The amended text was not read.
-- Name conflict: the repo's working name is Lime Cube (no SINGHA). The brief uses SINGHA LEMON SODA (CUBE). The company's flavour list includes "Lemon Soda" as a name (capture 48), which a judge may read as close to the product line.
+- Name conflict: The product was earlier called by a different working name; the name Lemon Soda is not cleared. The brief uses SINGHA LEMON SODA (CUBE). The company's flavour list includes "Lemon Soda" as a name (capture 48), which a judge may read as close to the product line.
+
+The full trademark and registration section is in proposal 09.
 
 Registrations to resolve before pack print:
 
@@ -169,7 +171,7 @@ Ingredients per 330 mL serve (plan, DERIVED or ASSUMPTION as shown):
 |---|---|---|
 | Potassium bicarbonate | 0.81 g | DERIVED from the CO2 dose |
 | Citric acid | 2.10 g in total; 0.52 g to neutralise the bicarbonate | DERIVED |
-| Sucralose | about 33 mg (about 100 mg/kg) | ASSUMPTION; the sweetener is named in the company extract (capture 48) and not in any other opened source |
+| Sucralose | about 33 mg (about 100 mg/kg) | ASSUMPTION; the sweetener is named in the company product page (S; capture 48) and not in any other opened source |
 | Binder and filler | 0.80 g | ASSUMPTION; not yet named |
 | Lemon flavour | 0.05 g | ASSUMPTION |
 | CO2 dose | 0.55 volume per serve | DERIVED design value |
@@ -189,7 +191,7 @@ Manufacturing cost:
 - Cube, six-cube pack: THB 4.09 per cube (DERIVED from ASSUMPTION inputs): reactants 0.12; pouch and print 2.80 (pouch 1.30, print 1.50); processing 0.50; carton 0.67. Twelve-cube pack: THB 3.84 per cube.
 - Contribution: THB 4.91 per cube at a THB 9.00 ex-factory price (DERIVED from the planning price, 60% of THB 15).
 - Co-packers: three Thai dry-powder makers were found (Korn Thai, OJ Squeeze, Arnifo). Their certifications are self-reported and none is verified for the Cube's site. Arnifo states a minimum of 500,000 units per SKU.
-- Can (desk, DERIVED): THB 4.94 variable per can at the mid input, before excise, freight and overheads. No Singha can cost is known.
+- Can (desk, DERIVED): THB 4.94 variable per can at the mid input, before excise, freight and overheads. No can cost for Singha Lemon Soda is known.
 
 ## 4. Limits and gaps
 
@@ -198,27 +200,26 @@ Manufacturing cost:
 - No promotion data for the lemon soda or for any soda competitor.
 - No age, sex, income, generation or purchase channel for Singha Lemon Soda buyers, and no switching or loyalty data for lemon soda.
 - Consumer reasons are category-level. No lemon-specific survey was found.
-- The sweetener is named only in the company page extract (capture 48). The 2020 launch release and the press do not name it. The extract is not a raw save, and no raw save is held. This is a limit before judge use.
+- The sweetener is named only in the company product page (S; capture 48). The 2020 launch release and the press do not name it. The company page figures were read through an automated summary and are tiered S. No copy of the page text is held in the file. This is a limit before judge use.
 - Sugar-free wording is a company claim (2020 and 2022 releases, S). It is not checked against a label.
 - The DIP register was not reachable. The trademark owner is unresolved. Class 30 is not checked.
 - The annex limits for intense sweeteners in flavoured drinks are not verified.
 - The plan's Cube inputs are ASSUMPTIONS. The pouch band in the plan runs from THB 0.67 to 2.70; the listed pouch is THB 1.30. THB 0.12 per cube is not itemised.
 - Competitor prices are undated listings or 2022 figures. No current price has been verified for any competitor.
 - Quotes are limited to one verbatim fragment per response; the research paraphrased the rest.
-- No raw page saves were made to rework/raw in this pass. CLAUDE.md section 3 requires saved page text before a SOURCED figure is cited in a record. Until then, the company-page figures are extract-based.
-- The Singha financial statements were not read; the press figures are entity-level and used only as context.
-- Team-only: the financial projection in rework/56 and the Boon Rawd and Singha group proxy inputs are internal and are not used here.
+- No page text was saved in this pass. Company page figures are tiered S.
+- Singha Corporation's financial statements were not read; the press figures are entity-level and used only as context.
 
 ## 5. Recommendation
 
 - Keep the MVP to the lemon can and the Cube, as the brief says.
 - Lead the consumer test with men aged 27 to 44 (confirmed band) and keep 25 to 34 as a labelled test.
-- Before any judge-facing use, obtain raw saves of the company product page and the 2026 retail listing, confirm the trademark owner, and search the DIP register.
+- Company page figures remain tiered S until the page text is checked against the company's own site. Before any judge-facing use, confirm the trademark owner and search the DIP register.
 - Treat every unit-economics figure as assumption-driven until a co-packer quote and a shelf-price check are in the file.
 
 ## 6. Entity focus and shareholder value
 
-Entity. The case is framed for Singha Corporation, confirmed on 19 October 2026. Boon Rawd Brewery is the holding company (S, Singha Corporation site). Value from the Cube reaches the shareholders of the group through the holding company.
+Entity. The case is framed for Singha Corporation, confirmed on 19 October 2026. Boon Rawd Brewery is the holding company (S, Singha Corporation site). The desk model values the project for Singha Corporation. How value passes to the shareholders of Boon Rawd Brewery is not modelled.
 
 Scale. Singha Corporation's 2025 net profit was about THB 3,085 million (press, S, 23 May 2026). The base-case desk NPV of THB 0.88 million is about 0.03% of one year's profit (DERIVED). The case is small in the base case and must be judged on volume and on capped fixed cost.
 
@@ -267,6 +268,6 @@ Specification and cost
 - ONE container specification (S): https://www.one-line.com/en/dry-containers.
 - Co-packer statement (S): https://www.arnifo.com/oem-beverage/ (minimum 500,000 units per SKU).
 - Cost-structure context (S, undated): https://www.imarcgroup.com/insight/carbonated-soft-drink-cost-model.
-- Company product page, extract only (S): capture 48, rework/raw/captures_2026-10-19/48_singha-lemon-soda-th.md (company page, singhacorporation.com/singhalemonsoda/th/). No raw save.
-- Plan inputs and tiers: rework/proposal/10_risk_and_implementation.md and rework/proposal/05_finance_and_project_valuation.md.
-- Desk can-cost model: rework/screen/can_cost_model_results.json (DERIVED; no Singha can cost found).
+- Company product page (S): capture 48 (company page, singhacorporation.com/singhalemonsoda/th/).
+- Plan inputs and tiers: proposal 10 (risk and implementation) and proposal 05 (finance and project valuation).
+- Desk can-cost model (DERIVED; no can cost for Singha Lemon Soda found).

@@ -1,8 +1,9 @@
-"""Product-level project valuation for the Lime Cube (desk model, team-only).
+"""Product-level project valuation for the Lemon Soda (desk model, team-only).
 
 Standard library only. Deterministic: no random draws and no clock.
 Run with:  python -I project_valuation.py
-Reads:     pack_economics_results.json and formulation_desk_model_results.json (this folder).
+Reads:     pack_economics_results.json (prices) and handover_figures_results.json (0.55-volume design
+           and pack rows) in this folder. Rebased 19 October 2026 from the 0.9-volume design.
 Writes:    project_valuation_results.json (this folder).
 
 Every input is listed in INPUTS with a tier (P, S or none) and a status
@@ -23,7 +24,7 @@ import os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PACK_PATH = os.path.join(HERE, "pack_economics_results.json")
-FORM_PATH = os.path.join(HERE, "formulation_desk_model_results.json")
+HANDOVER_PATH = os.path.join(HERE, "handover_figures_results.json")
 OUT_PATH = os.path.join(HERE, "project_valuation_results.json")
 
 # Scenario and method choices (all ASSUMPTION).
@@ -33,7 +34,7 @@ RATES = [0.08, 0.10, 0.12]                                    # discount rate ra
 BASE_RATE = 0.10
 FIXED_GRID = [250000, 500000, 1000000, 2000000]               # THB per year, not sourced
 BASE_VOLUME_KEY = "base"
-BASE_PACK = 12
+BASE_PACK = 6   # recommended portable pack, 19 October 2026 (user)
 CPA_BASE = 1150.0   # THB per first purchase, paid social base case (acquisition record; UNVERIFIED inputs)
 ACQ_CUBES = (12, 50, 225)
 
@@ -49,7 +50,7 @@ def load(path):
 
 
 PACK = load(PACK_PATH)
-FORM = load(FORM_PATH)
+HAND = load(HANDOVER_PATH)
 PRICES = PACK["prices"]
 
 
@@ -66,10 +67,14 @@ def inp(key, label, value, unit, tier, kind, status, source):
     }
 
 
-KHCO3_G = FORM["design_at_25c"]["khco3_g"]                    # 1.327 g at 0.9 volume
-CITRIC_G_PH35 = FORM["sensitivity_target_ph"]["3.5"]["citric_total_g"]   # 3.42 g at pH 3.5
-CITRIC_G_PH30 = FORM["sensitivity_target_ph"]["3.0"]["citric_total_g"]   # 5.965 g at pH 3.0
-SUCRALOSE_MG = FORM["sucralose_mg_per_330ml"]                 # 33.0 mg
+DESIGN = HAND["design"]
+RECIPE = HAND["per_330ml_recipe"]
+KHCO3_G = RECIPE["potassium_bicarbonate_g"]                   # 0.811 g at 0.55 volume
+CITRIC_G_PH35 = RECIPE["citric_acid_total_for_pH_target_g"]   # 2.10 g at pH 3.5
+CITRIC_G_PH30 = HAND["citric_by_target_ph_g_per_330ml"]["3.0"]["total"]   # 3.701 g at pH 3.0
+SUCRALOSE_MG = RECIPE["sucralose_mg"]                         # 33.0 mg
+DOSE_VOL = DESIGN["co2_volumes_per_330ml"]                    # 0.55 volume (decision D14)
+POTASSIUM_MG_HAND = RECIPE["potassium_mg"]                    # 316.6 mg per serve
 
 INPUTS = [
     inp("khco3_price", "Potassium bicarbonate price", PRICES["khco3_thb_per_kg"]["base"], "THB/kg",
@@ -95,6 +100,9 @@ INPUTS = [
         "none", "ASSUMPTION", "ASSUMPTION", "Scaled from the 12-cube price"),
     inp("carton_24", "Carton, 24 cubes", PRICES["carton_thb"]["24"]["base"], "THB/carton",
         "none", "ASSUMPTION", "ASSUMPTION", "Scaled from the 12-cube price"),
+    inp("binder_flavour", "Binder, filler and lemon flavour per cube", "not priced", "text", "none",
+        "ASSUMPTION", "ASSUMPTION",
+        "Masses assumed in rework/48 section 6.1 (binder 0.80 g, flavour 0.05 g); no price, so the cost per cube excludes them"),
     inp("shelf", "Shelf price per cube", PRICES["shelf_thb_per_cube"]["base"], "THB/cube",
         "S", "ASSUMPTION", "ASSUMPTION",
         "The cube is not priced. Reference: 330 ml zero-sugar cans at 16 to 17 THB, Thai online retailer, captured 18 October 2026 (SOURCED, secondary)"),
@@ -110,15 +118,15 @@ INPUTS = [
     inp("excise_tier_per_l", "Excise per-litre tier, up to 6 g sugar per 100 ml", 0.0, "THB/litre",
         "P", "SOURCED", "SOURCED", "Same schedule; a sugar-free sweetened drink falls in tier (a) at 0 THB per litre"),
     inp("khco3_g", "Potassium bicarbonate per cube", KHCO3_G, "g", "none", "DERIVED", "DERIVED",
-        "Stoichiometry at 0.9 volume of CO2 per 330 ml (formulation desk model)"),
+        "Stoichiometry at 0.55 volume of CO2 per 330 ml (handover figures)"),
     inp("citric_g_ph35", "Total citric acid per cube at pH 3.5", CITRIC_G_PH35, "g", "none", "DERIVED",
-        "DERIVED", "Charge balance, citric pKa 3.13, 4.76, 6.40 (tier P, CRC); formulation desk model"),
+        "DERIVED", "Charge balance, citric pKa 3.13, 4.76, 6.40 (tier P, CRC); handover figures at 0.55 volume"),
     inp("citric_g_ph30", "Total citric acid per cube at pH 3.0", CITRIC_G_PH30, "g", "none", "DERIVED",
-        "DERIVED", "Formulation desk model, sensitivity"),
+        "DERIVED", "Handover figures, pH 3.0 sensitivity at 0.55 volume"),
     inp("sucralose_mg", "Sucralose per cube", SUCRALOSE_MG, "mg", "none", "DERIVED", "DERIVED",
-        "Formulation desk model (sweetness 600 times sucrose; JECFA monograph, tier P)"),
-    inp("dose_vol", "CO2 dose per 330 ml", FORM["design_dose_vol"], "volumes", "none", "ASSUMPTION",
-        "ASSUMPTION", "Team decision of 19 October 2026; under review because its basis was withdrawn"),
+        "Handover figures at 0.55 volume (sweetness 600 times sucrose; JECFA monograph, tier P)"),
+    inp("dose_vol", "CO2 dose per 330 ml", DOSE_VOL, "volumes", "none", "DECIDED",
+        "DECIDED", "User decision, 19 October 2026 (rework/52 D14); recommended over the 0.9-volume design"),
     inp("target_ph", "Target pH", 3.5, "pH", "none", "ASSUMPTION", "ASSUMPTION", "Working assumption"),
     inp("vol_low", "Volume scenario, low", VOLUMES["low"], "cubes per year", "none", "ASSUMPTION",
         "ASSUMPTION", "Scenario; no volume basis in the record"),
@@ -149,21 +157,26 @@ def value(key):
 
 # ---- Unit economics -------------------------------------------------------
 
-PACK_ROWS = {row["pack_size"]: row for row in PACK["pack_rows_target_ph_3_5"]}
-COST_JSON = {size: PACK_ROWS[size]["cost_per_cube_thb"] for size in (1, 6, 12, 24)}
-CARTON_JSON = {size: PACK_ROWS[size]["carton_thb"] for size in (1, 6, 12, 24)}
-BREAKDOWN_35 = PACK["cost_breakdown_target_ph_3_5"]
-BREAKDOWN_30 = PACK["cost_breakdown_target_ph_3_0"]
-REACTANTS_35 = BREAKDOWN_35["reactants_thb"]
-REACTANTS_30 = BREAKDOWN_30["reactants_thb"]
+HCOST = HAND["cost_and_containers"]
+HAND_PACKS = HCOST["packs"]
+REACTANTS_35 = HCOST["reactants_thb_per_cube"]
+BREAKDOWN_35 = {"per_pouch_before_carton_thb": HCOST["per_pouch_before_carton_thb"], "reactants_thb": REACTANTS_35}
+COST_JSON = {1: HCOST["per_pouch_before_carton_thb"]}   # single pouch, no carton
+COST_JSON.update({size: HAND_PACKS[str(size)]["cost_per_cube_thb"] for size in (6, 12, 24)})
+CARTON_JSON = {1: 0.0}
+CARTON_JSON.update({size: PRICES["carton_thb"][str(size)]["base"] for size in (6, 12, 24)})
 
-# Cross-check 1: reactant cost recomputed from masses and prices.
-REACT_RECOMP = (
-    KHCO3_G * value("khco3_price") / 1000.0
-    + CITRIC_G_PH35 * value("citric_price") / 1000.0
-    + SUCRALOSE_MG * value("sucralose_price") / 1e6
-)
+
+def reactants_for(citric_g):
+    return (KHCO3_G * value("khco3_price") / 1000.0
+            + citric_g * value("citric_price") / 1000.0
+            + SUCRALOSE_MG * value("sucralose_price") / 1e6)
+
+
+# Cross-check 1: reactant cost recomputed from masses and prices (0.55 volume, pH 3.5 and pH 3.0).
+REACT_RECOMP = reactants_for(CITRIC_G_PH35)
 assert abs(REACT_RECOMP - REACTANTS_35) < 0.005, (REACT_RECOMP, REACTANTS_35)
+REACTANTS_30 = reactants_for(CITRIC_G_PH30)
 
 # Cross-check 2: cost per cube by pack size recomputed from components.
 PACK_CHECK = {}
@@ -184,13 +197,13 @@ for size in (1, 6, 12, 24):
 
 # Cross-check 3: potassium per serve from the bicarbonate mass.
 K_MG_RECOMP = KHCO3_G * K_ATOMIC / KHCO3_MOLAR * 1000.0
-assert abs(K_MG_RECOMP - FORM["design_at_25c"]["potassium_mg_per_serve"]) < 0.5
+assert abs(K_MG_RECOMP - POTASSIUM_MG_HAND) < 0.5
 
 SHELF = value("shelf")
 SHARE = value("ex_share")
 EX = SHELF * SHARE
 assert abs(EX - PACK["prices"]["shelf_thb_per_cube"]["base"] * PACK["prices"]["ex_factory_share"]["base"]) < 1e-9
-assert abs(EX - PACK["pack_rows_target_ph_3_5"][2]["ex_factory_thb_per_cube"]) < 1e-9
+assert abs(EX - HAND_PACKS["6"]["ex_factory_thb_per_cube"]) < 1e-9
 
 C_BY_PACK = {str(size): round(EX - COST_JSON[size], 4) for size in (1, 6, 12, 24)}
 COST_BASE = COST_JSON[BASE_PACK]
@@ -293,9 +306,13 @@ proc_b = value("processing")
 carton_b = CARTON_JSON[BASE_PACK]
 dose_scale = value("dose_vol")
 
+# Carton listing range is per 12 cubes (3 to 7 THB); scaled to a 6-cube carton by half (ASSUMPTION).
+CARTON_LOW_6 = 3.0 * 6 / 12
+CARTON_HIGH_6 = 7.0 * 6 / 12
+
 SENS = [
-    sens_row("Base: 12-cube carton, pH 3.5, 0.9 volume, shelf 15 THB, ex-factory 60%", C_BASE,
-             "Model base"),
+    sens_row("Base: 6-cube carton, pH 3.5, 0.55 volume, shelf 15 THB, ex-factory 60%", C_BASE,
+             "Model base (decision 19 October 2026)"),
     sens_row("Shelf price 10 THB (ex-factory 6.00)", 10 * SHARE - COST_BASE, "ASSUMPTION range"),
     sens_row("Shelf price 20 THB (ex-factory 12.00)", 20 * SHARE - COST_BASE, "ASSUMPTION range"),
     sens_row("Ex-factory share 50%", SHELF * 0.5 - COST_BASE, "ASSUMPTION range"),
@@ -306,22 +323,27 @@ SENS = [
     sens_row("Print 2.50 THB (high)", EX - (COST_BASE + (2.5 - print_b)), "ASSUMPTION range"),
     sens_row("Processing 0.25 THB (low)", EX - (COST_BASE + (0.25 - proc_b)), "ASSUMPTION range"),
     sens_row("Processing 1.00 THB (high)", EX - (COST_BASE + (1.0 - proc_b)), "ASSUMPTION range"),
-    sens_row("Carton 3 THB per 12 (low)", EX - (COST_BASE + (3.0 - carton_b) / BASE_PACK), "UNVERIFIED listing range"),
-    sens_row("Carton 7 THB per 12 (high)", EX - (COST_BASE + (7.0 - carton_b) / BASE_PACK), "UNVERIFIED listing range"),
-    sens_row("All four packaging inputs at low", EX - (COST_BASE + (0.67 - pouch_b) + (0.8 - print_b)
-                                                       + (0.25 - proc_b) + (3.0 - carton_b) / BASE_PACK),
+    sens_row("Carton 1.50 THB per 6 (low, scaled from 3 THB per 12)",
+             EX - (COST_BASE + (CARTON_LOW_6 - carton_b) / BASE_PACK), "UNVERIFIED listing range, scaled"),
+    sens_row("Carton 3.50 THB per 6 (high, scaled from 7 THB per 12)",
+             EX - (COST_BASE + (CARTON_HIGH_6 - carton_b) / BASE_PACK), "UNVERIFIED listing range, scaled"),
+    sens_row("All four packaging inputs at low",
+             EX - (COST_BASE + (0.67 - pouch_b) + (0.8 - print_b) + (0.25 - proc_b)
+                   + (CARTON_LOW_6 - carton_b) / BASE_PACK),
              "Combined bound, not a probability"),
-    sens_row("All four packaging inputs at high", EX - (COST_BASE + (2.70 - pouch_b) + (2.5 - print_b)
-                                                        + (1.0 - proc_b) + (7.0 - carton_b) / BASE_PACK),
+    sens_row("All four packaging inputs at high",
+             EX - (COST_BASE + (2.70 - pouch_b) + (2.5 - print_b) + (1.0 - proc_b)
+                   + (CARTON_HIGH_6 - carton_b) / BASE_PACK),
              "Combined bound, not a probability"),
-    sens_row("Target pH 3.0 (reactants 0.259 THB)", EX - (COST_BASE + (REACTANTS_30 - REACTANTS_35)),
-             "Formulation model"),
-    sens_row("Dose 0.55 volume (reactants scaled linearly)",
-             EX - (COST_BASE + (REACTANTS_35 * 0.55 / dose_scale - REACTANTS_35)),
-             "DERIVED approximation; assumes free-acid excess scales with dose"),
+    sens_row("Target pH 3.0 (reactants {:.3f} THB)".format(REACTANTS_30),
+             EX - (COST_BASE + (REACTANTS_30 - REACTANTS_35)), "Handover figures, 0.55 volume"),
+    sens_row("Dose 0.9 volume (earlier design; reactants scaled linearly)",
+             EX - (COST_BASE + (REACTANTS_35 * (0.9 / DOSE_VOL - 1.0))),
+             "DERIVED approximation; the 0.9-volume design is superseded"),
     sens_row("Excise 14% of an assumed ex-factory base (1.26 THB per cube)",
              C_BASE - EXCISE_RATE_02_02 * EX, "Base not read; classification open"),
     sens_row("Pack: single pouch, no carton", EX - COST_JSON[1], "Flatters: carries no carton"),
+    sens_row("Pack: 12-cube carton (larger option)", EX - COST_JSON[12], "Model comparison"),
     sens_row("Pack: 24-cube carton", EX - COST_JSON[24], "Model comparison"),
 ]
 
@@ -354,7 +376,7 @@ summary = {
 }
 
 RESULT = {
-    "model": "Lime Cube product-level project valuation, desk model, pre-tax, domestic Thailand",
+    "model": "Lemon Soda product-level project valuation, desk model, pre-tax, domestic Thailand",
     "scope_note": "Model output for the proposal. Not a valuation opinion. Not the group sum-of-parts.",
     "method": {
         "cash_flow_year_t": "c * V * ramp_t - F, t = 1..5",
@@ -370,7 +392,7 @@ RESULT = {
         "reactants_json_thb": REACTANTS_35,
         "pack_cost_check": PACK_CHECK,
         "potassium_mg_recomputed": round(K_MG_RECOMP, 2),
-        "potassium_mg_json": FORM["design_at_25c"]["potassium_mg_per_serve"],
+        "potassium_mg_json": POTASSIUM_MG_HAND,
         "all_asserts_passed": True,
     },
     "unit_economics": {

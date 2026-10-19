@@ -13,16 +13,17 @@ Record references for the body. Capture numbers refer to the 19 October 2026 cap
 - Fizz threshold: capture 77 (abstract only; 0.44 g/L CO2 by BET; five sparkling mineral waters; 100 participants). The 106-minute time constant (upper bound) is from the desk model and was not re-read here. Arithmetic re-checked: 0.50 after 10 minutes; about 96 minutes to fall to 0.22 volume.
 - Excise: desk record gazette_sugar_drink_excise_primary_2560_A095_111.md in the raw folder (P, SOURCED from a saved copy). Its item 02.02 says an intensive sweetener counts and a sweetened or flavoured drink falls there. Capture 45 is blocked (HTTP 403) and was not used. Later notices were not searched.
 - Containers: captures 57 (ONE) and 58 (SeaCube 20 ft); index tier P, body tier S per the rule set. Capture 59 (40 ft) not used. Packing and carton size are ASSUMPTIONS (the proposal file 05 uses 92% packing).
-- Competitor: capture 86 (company release, P, SOURCED; 330 mL can, 15 baht; the company's sugar-free and 0% calories claim). Capture 87 (news reprint, S). Capture 23 says lemon and is treated as in error on flavour (S). Capture 48 (Singha Lemon Soda) is a separate product and is not in the body.
+- Competitor: the comparison product is the Singha Lemon Soda can (capture 48; S; a WebFetch extract, not a raw save; 330 mL can; price not verified; retail sale not dated). The sparkling lime water, a different product, is capture 86 (company release, P, SOURCED; 330 mL can, 15 baht; the company's sugar-free and 0% calories claim) and capture 87 (news reprint, S). Capture 23 says lemon for that sparkling water and is treated as in error (S).
 - Overseas analogues: captures 21 (2021 pouch cubes) and 29 (2024 drink cubes) are not used in the body. Capture 29 names no source for its market figures.
 - Segment inputs: capture 43 (NSO; UNVERIFIED; drink-use table not on the page).
 - Bank of Thailand rate of 33.55 baht per dollar (15 October 2026 reading; index entry 83): not used, because the body has no dollar figure.
 - Earlier design: 0.9 volume of CO2 per serve, superseded by 0.55. It appears only in this appendix.
 - Not used: Bangkok climate (capture 17, UNVERIFIED); patent records (captures 09 and 10).
+- Basis B (confirmed 19 October 2026): binder and filler 0.80 g (range 0.5 to 1.2) and lemon flavour 0.05 g (range 0.02 to 0.10) are ASSUMPTIONS from rework/48 section 6.1. Central cube mass 3.79 g, 14 mm side and packed unit 5.29 g are from rework/64 section 8 (DERIVED on ASSUMPTION inputs; not weighed). Container mass for the recommended 6-cube carton, 2,823.8 kg, and for the 12-cube larger option, 1,752.2 kg, is from rework/screen/handover_figures_results.json. Binder and flavour are not priced (rework/53). The binder is unnamed and its sodium content unconfirmed (gate G3, rework/57 item 8).
 
 Decisions and conflicts for the parent:
 
-1. Flavour: captures 86 and 87 say lime; capture 23 says lemon. The body uses lime and has no lemon wording.
+1. Flavour: the product is lemon. Captures 86 and 87 say lime for the Singha sparkling water, a different product; capture 23 says lemon for that sparkling water and is treated as in error. Parent to check whether capture 23 describes the Singha Lemon Soda, which is now the comparison product.
 2. Condition 127 wording: the annex reads it as ready to drink. The body follows the annex.
 3. The annex is P, SOURCED for the flavoured-drink rows only. The full annex was not read, and capture 80 conflicts on whether the PDF was read.
 4. Potassium: notification numbers differ (182 and 445). Both pages give 3,500 mg. The primary texts were not opened.

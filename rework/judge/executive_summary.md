@@ -1,26 +1,28 @@
-﻿# Lime Cube: executive summary (19 October 2026)
+﻿# Lemon Soda: executive summary (19 October 2026)
+
+Proposer: Singha Corporation. Holding company: Boon Rawd Brewery.
 
 ## The proposal in one paragraph
 
-Lime Cube is a dissolvable drink cube for domestic Thailand. One cube in one 330 mL serve makes a lime drink in the glass; carbonation is designed and not yet measured. It is a new form of consumption, not a new flavour. Men aged 25 to 34 are the proposed lead, a proposal decision whose desk gap includes zero; the lead rests on sugar-sweetened drinking, so transfer to a sweetener-only product is untested. Men aged 45 to 59 are a later volume segment, pended.
+Lemon Soda is a dissolvable drink cube for domestic Thailand. One cube in one 330 mL serve makes a lemon drink in the glass; carbonation is designed and not yet measured. It is a new form of consumption, not a new flavour. Men aged 25 to 34 are the proposed lead, a proposal decision whose desk gap includes zero; the lead rests on sugar-sweetened drinking, so transfer to a sweetener-only product is untested. Men aged 45 to 59 are a later volume segment, pended.
 
 ## What is handed over
 
 - Dose: 0.55 volume of carbon dioxide per 330 mL, a working design value. R&D restates the fizz pass rule before any test (section 10, Gate 3).
 - Working pH anchor of 3.5; taste untested.
-- Composition, stated as fact: potassium bicarbonate, citric acid, sucralose, a binder and filler (not yet named; not yet checked for sodium; sodium not claimed) and natural lime flavour; no sodium carbonate. Binder and flavour amounts are assumptions until a cube is weighed.
+- Composition, stated as fact: potassium bicarbonate, citric acid, sucralose, a binder and filler (not yet named; not yet checked for sodium; sodium not claimed) and natural lemon flavour; no sodium carbonate. Binder and flavour amounts are assumptions until a cube is weighed.
 - One cube per pouch is inferred. No nutrition, health or performance claim is made.
 - Domestic only; no domestic cube listing was found.
 
 ## The nearest competing product
 
-Boon Rawd Trading launched Singha Sparkling Water Lime Flavour in March 2026: a 330 mL can at 15 baht. It overlaps Lime Cube on flavour. The forms differ: Lime Cube dissolves in the glass, one cube per pouch; the competitor is a ready-to-drink can. The company's can carries its own nutrition claim, which Lime Cube does not make.
+The nearest competing product is the Singha Lemon Soda can, a 330 mL can. It is listed on the company product page (tier S); retail sale not dated. Its price is not verified. It overlaps Lemon Soda on flavour, since both are lemon. The forms differ: Lemon Soda dissolves in the glass, one cube per pouch; the competitor is a ready-to-drink can. The company's page carries its own nutrition claim, a general statement of no sugar and no calories (tier S). Lemon Soda makes no nutrition claim.
 
 ## The figures at the recommended dose
 
 - Potassium bicarbonate 0.81 g; citric acid 0.52 g to neutralise it, or 2.10 g for pH 3.5 (DERIVED; acid constants S, UNVERIFIED in this handover).
-- Binder and filler 0.80 g and lime flavour 0.05 g (ASSUMPTIONS; ranges 0.5 to 1.2 g and 0.02 to 0.10 g). Central cube mass 3.79 g at a 14 mm side (DERIVED on these ASSUMPTIONS; not weighed). Packed unit 5.29 g with a 1.5 g pouch (ASSUMPTION). Net weight on the label: [to be set].
-- Potassium 317 mg, about 9% of a Thai reference of 3,500 mg a day (DERIVED; reference S, secondary copies, primary not opened).
+- Binder and filler 0.80 g and lemon flavour 0.05 g (ASSUMPTIONS; ranges 0.5 to 1.2 g and 0.02 to 0.10 g). Central cube mass 3.79 g at a 14 mm side (DERIVED on these ASSUMPTIONS; not weighed). Packed unit 5.29 g with a 1.5 g pouch (ASSUMPTION). Net weight on the label: 3.8 g specification, verified by weighing before print (Gate 9).
+- Potassium 317 mg, about 9% of a Thai reference of 3,500 mg a day (DERIVED; reference S, from secondary copies).
 - Sucralose 33 mg, about 100 mg/kg (DERIVED; sweetness target an ASSUMPTION; 600 times sucrose, S). Category 14.1.4 permits 300 mg/kg under condition 127. The annex wording reads 'ready to drink'; the regulatory opinion settles it (P, SOURCED for flavoured-drink rows; edition check open).
 - Solubility 0.592 volume at 35°C, the lowest in the 5 to 35°C serve range (S, SOURCED).
 - Desk model (DERIVED, surface-only upper bound): above a 0.44 g/L threshold for about 96 minutes at most. The threshold is an abstract-only PROXY for a soft drink. Neither is a gate or validated.
@@ -30,15 +32,15 @@ Boon Rawd Trading launched Singha Sparkling Water Lime Flavour in March 2026: a 
 ## Gates and asks (section 10 of the proposal)
 
 1. Gate 3, dissolved CO2: R&D restates the pass rule for a 0.55-volume dose, which the earlier rule cannot meet, and fixes the measurement method before the run.
-2. Gate 4, taste: a blind sensory test at pH 3.5 and either side, with two or three sweetness levels, against the company's lime can. The 33 mg sucralose per serve is an assumption until then.
+2. Gate 4, taste: a blind sensory test at pH 3.5 and either side, with two or three sweetness levels, against the Singha Lemon Soda can. The 33 mg sucralose per serve is an assumption until then.
 3. Gate 1, class and sweetener: a written Thai regulatory opinion on the class, condition 127 and the sub-category rows. Excise item 02.02 covers sweetened or flavoured drinks (P, SOURCED); the 14 percent ad valorem rate applies if the value base applies, and the base was not read. Condition TH3 covers electrolyte drinks only.
 4. Gate 2, potassium: confirm the permission for potassium bicarbonate, and obtain a medical adviser's view on about 317 mg per serve, including people on potassium-retaining medicines or with kidney disease.
-5. Gate 5, pack and quotes: film and seal specification, a warm and humid storage test with a stated duration, and Thai quotes only after Singha approves outreach.
+5. Gate 5, pack and quotes: film and seal specification, a warm and humid storage test with a stated duration, and Thai quotes only after Singha Corporation approves outreach.
 6. Gate 6, route: a named plant or co-packer for dry solids and pouch sealing, with a verified certificate for that site.
 7. Gate 7, brand and copy: written sign-off on the lion and SINGHA, rulings on alcohol cues, and a register search for the name.
 8. Gates 8 and 9, pilot and pack release: one budget, the pilot routes and a click-to-purchase threshold; net weight and shelf life printed only from weighed and stored samples.
 
-Section 10 sets the thirteen-week marketing pilot, the concept pre-test, the stop and scale rules, and twelve decisions for Singha.
+Section 10 sets the thirteen-week marketing pilot, the concept pre-test, the stop and scale rules, and twelve decisions for Singha Corporation.
 
 ## What is not yet known
 
@@ -46,7 +48,7 @@ Section 10 sets the thirteen-week marketing pilot, the concept pre-test, the sto
 - The binder is not yet named, and its sodium content is not checked. Binder and flavour are not priced.
 - Pack pressure is an estimate only, from an assumed reaction limit; storage is not tested; novelty and freedom to operate are unassessed.
 - The Thai patent register is unsearched.
-- The lion emblem is authorised for this proposal only. Brand-owner and legal sign-off sit with Singha's brand department and are not held here; the alcohol-cue question is unchecked. No campaign creative or sampling material is released before that sign-off.
+- The lion emblem is authorised for this proposal only. Brand-owner and legal sign-off sit with the SINGHA mark holder's brand department and are not held here; the alcohol-cue question is unchecked. No campaign creative or sampling material is released before that sign-off.
 
 ## Sources (public URLs only)
 
@@ -60,8 +62,7 @@ Accessed 19 October 2026 unless dated.
 - Potassium reference (S): https://www.lovefitt.com/system/wp-content/uploads/2017/05/4-4-2ThaiRDI.pdf ; https://www.siamdevelopment.com/thai-fda-rdi-nutrition-standards-in-thailand/
 - Sucralose sweetness (S): http://www.inchem.org/documents/jecfa/jecmono/v28je14.htm
 - Sparkling-water threshold (S): https://research.wur.nl/en/publications/is-it-still-water-relationships-between-sparkling-sensitivity-and/
-- Singha launch, company release, 13 March 2026 (P): https://www.nationthailand.com/pr-news/40063747
-- Singha launch, news reprint, 17 March 2026 (S): https://www.kaohooninternational.com/?p=579263
+- Singha Lemon Soda product page, company website, page text read (S, SOURCED): https://www.singhacorporation.com/singhalemonsoda/th/
 - Container specifications (S): https://www.one-line.com/en/dry-containers ; https://seacubecontainers.com/product_specs/20-foot-dry/
 - Segment inputs, NSO 2025 (P, UNVERIFIED): https://www.nso.go.th/public/e-book/Indicators-Social/Social-Indicators-2025/284/
 

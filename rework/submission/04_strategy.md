@@ -1,0 +1,83 @@
+﻿# Strategy: Lemon Soda (19 October 2026)
+
+Scope: the Thai domestic market only.
+
+## Tiers
+
+Tiers are defined once, in Appendix A.
+
+## 1. Target segment
+
+The proposer is Singha Corporation; Boon Rawd Brewery is the holding company (see section 02). The lead segment is men aged 25 to 34; men aged 45 to 59 are a later volume segment.
+
+- Alcohol drinking is 68.6% of men aged 25 to 44 and 65.4% of men aged 45 to 59 (2024) [P, UNVERIFIED; source 1]. These drinkers are a PROXY for the non-alcoholic audience, and 25 to 44 stands in for 25 to 34.
+- Potency is 1.15 for men 25 to 34 against men 45 to 59 (90% interval 1.03 to 1.28) [DERIVED; UNVERIFIED inputs; ASSUMPTION].
+- Everyday sugar-substitute drink use, a PROXY for sweetener use, is higher at 45 to 59 (1.0%) than at 25 to 44 (0.6%) [P, UNVERIFIED; source 2]. It does not support the lead segment.
+- The hot-season occasion is a hypothesis; no climate figure is used [ASSUMPTION]. No mixing or chilled-use test has been run.
+
+## 2. Proposition, format and cost
+
+**Strategic position: compete on form, not flavour.** The Singha Lemon Soda can is the competitor on flavour. It is listed on the company product page (source 18; S, SOURCED; retail sale not dated), and its price is not verified. Lemon Soda overlaps it on flavour; the difference is form: one dissolvable cube per pouch that makes the drink in the glass, not a ready-to-drink can. Lemon Soda makes no sugar-free claim. The group's sparkling lime water, a different product, is a 330 mL can at THB 15, launched March 2026 [P, SOURCED; source 11; S for a news reprint, source 12]; the company claims sugar-free with 0% calories for that can. The group's own lemon soda can is the closest substitute, so cannibalisation is tracked as a KPI.
+
+The format is one dissolvable cube per 330 mL serve, which releases carbon dioxide and makes the drink [ASSUMPTION]. Waterdrop [S, SOURCED; source 16] and Ricola [P, SOURCED; source 15] have launched overseas cubes, cited only because no domestic example was found.
+
+At 0.55 volume of CO2 per 330 mL, the dose is about 8.1 mmol [DERIVED]: potassium bicarbonate 0.81 g; citric acid 0.52 g stoichiometric and 2.10 g at the working pH of 3.5; sucralose 33 mg (about 100 mg/kg); a binder and filler 0.80 g and natural lemon flavour 0.05 g (both ASSUMPTIONS, ranges 0.5 to 1.2 g and 0.02 to 0.10 g; basis B). The carbonating agent is potassium bicarbonate; no sodium carbonate is used. The binder is not yet named and its sodium content is not checked, so no sodium claim is made. Reactants are 2.94 g; the central cube mass is 3.79 g (range 3.46 to 4.24 g; DERIVED on ASSUMPTION inputs, not weighed), in a 14 mm cube (density 1.38 g/cm3; band 1.25 to 1.60 an ASSUMPTION). The packed unit with a 1.5 g pouch (ASSUMPTION) is 5.29 g; the net weight is a 3.8 g specification, verified by weighing before print (Gate 9). Potassium is 317 mg, 9.1% of the Thai reference of 3,500 mg a day [DERIVED; S, SOURCED from third-party copies of Notification 182; the primary text was not read; source 3], a composition figure, not a benefit claim. Citric acid, carbonic acid and water pKa values are S, UNVERIFIED [source 20]. Taste is untested.
+
+One cube per pouch. The recommended pack is a 6-cube carton, 190 x 150 x 50 mm outside, for portable sport and recreation use [ASSUMPTION]. The larger option is a 12-cube carton, 190 x 150 x 100 mm [ASSUMPTION]. A 20-foot container holds about 128,586 cubes in 6-cube cartons [DERIVED; container dimensions S, source 10], or about 128,580 in 12-cube cartons.
+
+Cost: THB 4.09 per cube in the recommended 6-cube carton, and THB 3.84 in the 12-cube carton, the larger option. The 6-cube cost includes a carton share of THB 0.67 per cube (THB 4 per 6-cube carton, an ASSUMPTION scaled from the 12-cube price; no listing). The 12-cube cost includes a carton share of THB 0.42 per cube (THB 5 per 12-cube carton, from a retail box listing used as a PROXY). Reactants THB 0.12 [DERIVED; source 7; PROXY]. Pouch THB 1.30, print THB 1.50 and processing THB 0.50 are ASSUMPTIONS. An overseas pouch listing (USD 0.03 to 0.05; S, PROXY, UNVERIFIED; source 8) is THB 1.01 to 1.68 at the 15 October 2026 rate of 33.55 THB per USD [P, SOURCED; source 6]. The pouch band of THB 0.67 to 2.70 is an ASSUMPTION, giving THB 3.46 to 5.49 per cube in the 6-cube carton (THB 3.21 to 5.24 in the 12-cube carton; DERIVED). The binder and filler and the lemon flavour are not priced; these costs exclude them.
+
+## 3. Price and channel
+
+The pilot channel is Singha Corporation's decision (Gate 8). Two pilot routes are proposed: in-store trial in pilot stores, and paid social to one online listing.
+
+- The Singha Lemon Soda can's price is not verified [UNVERIFIED; source 18]. Singha Soda, a different product, is about THB 8 a can [DERIVED; source 19].
+- Shelf price THB 10 to 20 (base THB 15), ex-factory share 60% [ASSUMPTION]. The base price is not tied to a verified competitor price; gross margin at THB 15 is 57.3% on the 12-cube cost, not rebased to the 6-cube pack (open decision), before freight and overhead [DERIVED; cost excludes binder and flavour, which are not priced].
+- Break-even shelf price is THB 6.40 at the 12-cube base cost and THB 5.35 to 8.73 across the pouch band [DERIVED; not rebased to the 6-cube pack, an open decision]. Registration, tooling, trademark and marketing are excluded, and so are binder and flavour, which are not priced.
+- About 15,945 7-Eleven stores at end-2025, read as Thailand-only by inference [P, SOURCED; source 13].
+- On these inputs, a first purchase costs about THB 1,150 in paid clicks (THB 11.5 per click [S, SOURCED, PROXY; source 14]; 1% conversion [ASSUMPTION]), about 234 cubes to recover at THB 4.91 contribution per serve on the 6-cube cost [DERIVED; contribution excludes binder and flavour, which are not priced].
+
+## 4. Decisions, limits and claims
+
+Open decisions:
+
+- Dose: 0.55 volume of CO2 per 330 mL is recommended. Solubility at 35 °C is 0.592 volume [S, SOURCED, Lange-attributed table; source 4]; the desk model keeps the full dose dissolved from 5 to 35 °C [DERIVED; no bench test]. R&D is to set the release gate; no value is given.
+- Sweetener: sucralose at about 100 mg/kg is within the 300 mg/kg limit for category 14.1.4 under condition 127 [P, SOURCED; source 5]; only the relevant flavoured-drink rows were read, not the full annex. The amount rests on an untested sweetness target. Condition TH3 applies only to electrolyte drinks.
+- Classification and sub-category placement within 14.1.4 are open; placement decides the sucralose limit, so a regulatory adviser must decide.
+- Brand: the SINGHA lion appears only as the SINGHA mark holder's brand; the product is named Lemon Soda. The lion emblem was confirmed for this proposal. Brand-owner and legal sign-off sit with the SINGHA mark holder's department and are not held here; the alcohol-cue question is unchecked.
+
+Limits:
+
+- Desk model only: no bench, sensory or shelf test. Fizz duration is a surface-only upper bound; no decay curve is measured. The only threshold found, 0.44 g/L CO2 for sparkling water, is from an abstract [S, abstract only; source 21] and is a PROXY for a soft drink.
+- One cube per pouch and the one-component reading (the brief's sense, not an ingredient count) are unconfirmed; no Thai reactant, binder or pouch price was found.
+- The NSO inputs are UNVERIFIED, so the segment ranking is a model output.
+- Two Singha Corporation pages conflict on the parent company; the strategy does not depend on it [source 18].
+- The name Lemon Soda is the same as the competitor's product name, Singha Lemon Soda, without the Singha word. A register and shopper-confusion check is open, and no legal view is given.
+- No desk figure answers the question for people on potassium-retaining medicines or with kidney disease.
+- The EP 4,516,115 A2 pending status is the register mirror's assumption [P, SOURCED; source 17]; US 5,254,355 A is unchecked, with no freedom-to-operate view.
+
+Claims: no benefit, nutrition or function statement is made, and Lemon Soda carries no sugar-free status. The composition is stated as fact: potassium bicarbonate, citric acid, sucralose, a binder and filler (not yet named; not yet checked for sodium; sodium not claimed) and natural lemon flavour, with no sodium carbonate; the binder and flavour amounts are assumptions until a cube is weighed. The fizz is a mechanism only. No Thai novelty, consumer result, market size or sales forecast is claimed.
+
+## Sources
+
+1. NSO, Social Indicators 2025, Table 4.6.2: https://www.nso.go.th/public/e-book/Indicators-Social/Social-Indicators-2025/284/ . P, UNVERIFIED.
+2. NSO, Health Behaviour Survey 2021, Tables 20 and 22. P, UNVERIFIED.
+3. Thai RDI potassium, third-party copies of Notification 182 (B.E. 2541): https://www.lovefitt.com/system/wp-content/uploads/2017/05/4-4-2ThaiRDI.pdf ; consultancy page on Notification 445: https://www.siamdevelopment.com/thai-fda-rdi-nutrition-standards-in-thailand/ . S, SOURCED; the primary text was not read.
+4. CO2 solubility table, Lange-attributed, online: https://en.wikipedia.org/wiki/Carbon_dioxide_(data_page) . S, SOURCED.
+5. Thai FDA Notification 468 (B.E. 2568), amendment 4, Annex I: https://food.fda.moph.go.th/media.php?id=840096266338836480&name=P468.pdf . P, SOURCED; flavoured-drink rows read.
+6. Bank of Thailand, average USD counter rates, 15 October 2026: https://www.bot.or.th/en/statistics/exchange-rate.html . P, SOURCED.
+7. UN Comtrade, Thailand imports, HS 2836.40 and HS 2918.14: https://comtradeapi.un.org/public/v1/preview/C/A/HS . P, SOURCED.
+8. Overseas pouch listing, USD 0.03 to 0.05; no URL recorded. S, PROXY, UNVERIFIED.
+9. HomePro, mailer box 20 x 14 x 12 cm: https://www.homepro.co.th/p/1114450 . S, SOURCED; carton PROXY.
+10. ONE and SeaCube, 20-foot container specifications: https://www.one-line.com/en/dry-containers ; https://seacubecontainers.com/product_specs/20-foot-dry/ . S, SOURCED.
+11. Company release, Singha Sparkling Water Lime Flavour, 13 March 2026: https://www.nationthailand.com/pr-news/40063747 . P, SOURCED.
+12. News reprint of the launch, 17 March 2026: https://www.kaohooninternational.com/?p=579263 . S, SOURCED.
+13. CP All, year-end 2025 listed-company snapshot: https://lssmedia.setlink.set.or.th/2025/YE/CPALL-YE68-ListedCompanySnapshot-EN.html . P, SOURCED.
+14. Phoenix Media, Thai advertising costs 2025, one agency: https://www.phoenixmedia.co.th/the-costs-of-facebook-google-and-line-ads-in-thailand-for-2025/ . S, SOURCED.
+15. Ricola, Drink Cubes company release, 5 June 2025: https://www.ricola.com/en/about/press-releases/ricola-brings-a-new-product-to-the-market/ . P, SOURCED.
+16. Waterdrop, FoodNavigator, 3 October 2024: https://www.foodnavigator.com/Article/2024/10/03/Beverage-cubes-Innovations-from-entrepreneurs-waterdrop-and-more/ . S, SOURCED.
+17. EP 4,516,115 A2, published 5 March 2025: https://patents.google.com/patent/EP4516115A2/en . P, SOURCED; pending status is the mirror's assumption.
+18. Singha Corporation pages, including the lemon soda page: https://singhacorporation.com/en ; https://singhacorporation.com/en/home ; https://www.singhacorporation.com/singhalemonsoda/th/ . S, SOURCED.
+19. Retailer listing, Singha Soda 325 mL, pack of 24, 19 October 2026: https://www.allonline.7eleven.co.th/p/%E0%B9%82%E0%B8%8B%E0%B8%94%E0%B8%B2%E0%B8%AA%E0%B8%B4%E0%B8%87%E0%B8%AB%E0%B9%8C-325-%E0%B8%A1%E0%B8%A5-%E0%B9%81%E0%B8%9E%E0%B9%87%E0%B8%81-24-%E0%B8%82%E0%B8%A7%E0%B8%94/452565/ . S, SOURCED.
+20. Dissociation constants, online handbook copies (citric acid; carbonic acid and water): https://diverdi.colostate.edu/all_courses/CRC%20reference%20data/dissociation%20constants%20of%20organic%20acids%20and%20bases.pdf ; https://diverdi.colostate.edu/all_courses/CRC%20reference%20data/dissociation%20constants%20of%20inorganic%20acids%20and%20bases.pdf . S, UNVERIFIED.
+21. Sparkling-water CO2 threshold, journal abstract, 2021: https://research.wur.nl/en/publications/is-it-still-water-relationships-between-sparkling-sensitivity-and/ . S, abstract only.

@@ -2,23 +2,23 @@
 
 Public sources only; no outside contact or plant access. Evidence reviewed to 19 October 2026.
 
-## Tier key
+## Tiers
 
-P: a government or regulator text read in full, a company's own filing or release, official statistics, a peer-reviewed article read in full, or a primary database. S: any other source, including press, trade portals, consultancy pages, company web pages that are not filings, handbooks reproduced online, and search snippets. SOURCED: the page text was read, and the public URL is given. UNVERIFIED: not read, blocked, unreadable, or only a snippet was read. DERIVED: our arithmetic, with the inputs and their tiers shown. PROXY: a stand-in for what is not measured. ASSUMPTION: a value chosen for the model, not sourced.
+Tiers are defined once, in Appendix A.
 
-## Scope: the organiser's group
+## Scope: the proposer and its holding company
 
-- The organiser is Singha: Boon Rawd Brewery (holding company) and Singha Corporation, which oversees subsidiaries its About page puts at more than 150 (S, SOURCED; undated).
-- The group is the organiser, not a client. Its data and factories are assumed unavailable, so group capability is a benchmark only.
-- Lime Cube is a lime drink cube for domestic Thailand only, read as one component in the brief's sense (an unchecked reading, not an ingredient count); its ingredients are potassium bicarbonate, citric acid, sucralose, a binder and filler and lime flavour (basis B). Its carbonation is an untested desk model.
-- Competitor overlap: the group's lime sparkling water (P, SOURCED) overlaps on flavour. Lime Cube differs in form (a dissolvable cube made in the glass, one per pouch) and in pack from the group's lime sparkling water, a 330 ml ready-to-drink can at 15 baht. The company's sugar-free, 0% calories wording is its own claim; Lime Cube makes no sugar claim. The lemon soda is a separate product.
+- The proposer is Singha Corporation, and its holding company is Boon Rawd Brewery. The About page puts the companies Singha Corporation manages at more than 150 (S, SOURCED; undated).
+- Singha Corporation is the proposer, not a client. The group's data and factories are assumed unavailable, so group capability is a benchmark only.
+- Lemon Soda is a lemon drink cube for domestic Thailand only, read as one component in the brief's sense (an unchecked reading, not an ingredient count); its ingredients are potassium bicarbonate, citric acid, sucralose, a binder and filler and lemon flavour (basis B). Its carbonation is an untested desk model.
+- Competitor overlap: the comparison product is the Singha Lemon Soda can, a 330 ml ready-to-drink can (S, SOURCED; price not verified). It overlaps on flavour. Lemon Soda differs in form (a dissolvable cube made in the glass, one per pouch) and in pack from that can. Lemon Soda makes no sugar claim. The group's lime sparkling water (P, SOURCED) is a different product and is not the comparison product.
 
 ## Structure and units
 
 Units: baht; CO2 in volumes per volume of drink.
 
 - Boon Rawd Brewery became the holding company in 2000. Singha Corporation, set up in 2001, reports directly to the Boon Rawd board (S, SOURCED).
-- The two English home pages conflict on the parent, as affiliate or subsidiary (S, SOURCED). Their footer dates are UNVERIFIED and are not relied on.
+- The current English home page describes Singha Corporation as a subsidiary of Boon Rawd Brewery (S, SOURCED). An older affiliate wording, on a page with a 2014 footer, is superseded and is not used. Footer dates are UNVERIFIED and are not relied on.
 - The plant page lists eight manufacturing companies in eight provinces; the history page names nine. The lists are unreconciled (S, SOURCED).
 
 ## Capability audit
@@ -27,15 +27,15 @@ The frame covers formulation, compaction, pouch sealing, registration, food safe
 
 | Capability | Evidence reviewed | Tier and status | Verdict |
 |---|---|---|---|
-| Formulation | Desk model: 0.55 volume of CO2 per 330 mL; one cube per pouch (ASSUMPTION). Per serve: potassium bicarbonate 0.81 g; citric acid 2.10 g at pH 3.5 (working anchor); potassium 317 mg, 9.1% of the Thai reference of 3,500 mg (comparison only); sucralose about 33 mg; binder and filler 0.80 g and natural lime flavour 0.05 g (both ASSUMPTIONS; binder not yet named, sodium unconfirmed, gate G3; basis B); central cube mass 3.79 g, 14 mm cube, not weighed; no sodium carbonate. | DERIVED. Solubility, sweetness factor and Thai reference: S, SOURCED. Acid pKa: S, UNVERIFIED here. Molar masses: UNVERIFIED. | Desk model only |
+| Formulation | Desk model: 0.55 volume of CO2 per 330 mL; one cube per pouch (ASSUMPTION). Per serve: potassium bicarbonate 0.81 g; citric acid 2.10 g at pH 3.5 (working anchor); potassium 317 mg, 9.1% of the Thai reference of 3,500 mg (comparison only); sucralose about 33 mg; binder and filler 0.80 g and natural lemon flavour 0.05 g (both ASSUMPTIONS; binder not yet named, sodium unconfirmed, gate G3; basis B); central cube mass 3.79 g, 14 mm cube, not weighed; no sodium carbonate. | DERIVED. Solubility, sweetness factor and Thai reference: S, SOURCED. Acid pKa: S, UNVERIFIED here. Molar masses: UNVERIFIED. | Desk model only |
 | Compaction | None; the 0.50 THB processing allowance has no sourced figure. | ASSUMPTION | Unknown |
 | Pouch sealing | Packaging is a named group area (S, SOURCED); no pouch line evidenced. Base THB 1.30 is an assumption near the midpoint of a non-Thai listing (about THB 1.34). | Listing: S, PROXY, UNVERIFIED. Rate: P, SOURCED, 15 October 2026. Base: ASSUMPTION. | Unknown |
 | Registration | Sucralose is permitted in category 14.1.4 at 300 mg/kg under condition 127 (as ready to drink); potassium bicarbonate and citric acid are quantum satis; the binder, filler and flavour are not yet checked against that rule. TH3 applies only to electrolyte drinks, which this product is not claimed to be. | Flavoured-drink rows of the Thai annex read: P, SOURCED; full annex and sub-category rows not read. | Partly read; sale blocked |
 | Food safety | Standards claimed; no certificate verified. | UNVERIFIED | Claimed only |
 | Distribution | One group brand's full distribution began 8 December 2009 (S, SOURCED). No channel evidence for the cube. | Group-level | Unknown for the cube |
-| Carbonation and cans | The group sells a 330 ml lemon soda can (S, SOURCED) and the lime can above (P, SOURCED). Carbonation and canning capacity are not evidenced here. | Off route | Not assessed |
+| Carbonation and cans | The Singha Lemon Soda, a 330 ml can, is listed on the company product page (S, SOURCED); retail sale not dated. A separate lime sparkling water can is also in the group's range (P, SOURCED). Carbonation and canning capacity are not evidenced here. | Off route | Not assessed |
 
-**Cost per cube.** DERIVED: THB 4.09 at pH 3.5 in the recommended six-cube carton, and THB 3.84 in the twelve-cube carton, the larger option. Reactants of THB 0.12 use import unit values for the acids (P, SOURCED), a potassium carbonate proxy for bicarbonate, and an UNVERIFIED sucralose price. Pouch 1.30, print 1.50 and processing 0.50 are ASSUMPTIONS; pouch and print make up THB 2.80. The binder and filler and the lime flavour are not priced (rework/53), so this cost excludes them. The 6-cube cost includes a carton share of THB 0.67 per cube (THB 4 per 6-cube carton, an ASSUMPTION scaled from the 12-cube price). The 12-cube cost includes a carton share of THB 0.42 per cube (THB 5 per 12-cube carton, from a retail box listing used as a PROXY). A 20 ft container holds about 128,586 cubes in six-cube cartons, limited by volume (DERIVED from S container capacity and assumed carton size), and about 128,580 in twelve-cube cartons.
+**Cost per cube.** DERIVED: THB 4.09 at pH 3.5 in the recommended six-cube carton, and THB 3.84 in the twelve-cube carton, the larger option. Reactants of THB 0.12 use import unit values for the acids (P, SOURCED), a potassium carbonate proxy for bicarbonate, and an UNVERIFIED sucralose price. Pouch 1.30, print 1.50 and processing 0.50 are ASSUMPTIONS; pouch and print make up THB 2.80. The binder and filler and the lemon flavour are not priced, so this cost excludes them. The 6-cube cost includes a carton share of THB 0.67 per cube (THB 4 per 6-cube carton, an ASSUMPTION scaled from the 12-cube price). The 12-cube cost includes a carton share of THB 0.42 per cube (THB 5 per 12-cube carton, from a retail box listing used as a PROXY). A 20 ft container holds about 128,586 cubes in six-cube cartons, limited by volume (DERIVED from S container capacity and assumed carton size), and about 128,580 in twelve-cube cartons.
 
 ## Plant allocation: can an existing line take this cube?
 
@@ -51,29 +51,31 @@ No financial ratio is used; none could be traced to a cited source. The EMIS pro
 
 | Area | Group support (tier, status) | Gap for the cube |
 |---|---|---|
-| Brand and reach | The lion emblem was confirmed for this proposal. Brand-owner and legal sign-off sit with Singha's department and are not held here; the alcohol-cue question is unchecked. | No channel or shelf test |
+| Brand and reach | The lion emblem was confirmed for this proposal. Brand-owner and legal sign-off sit with the SINGHA mark holder's department and are not held here; the alcohol-cue question is unchecked. | No channel or shelf test |
 | Plants and quality | Eight manufacturing companies (S, SOURCED); standards claimed, UNVERIFIED. | No dry-process line or site certificate |
-| Flavour and R&D | The group's lime sparkling water (P, SOURCED) overlaps on flavour. | Taste untested; effect on the group's own lime can is unmeasured |
+| Flavour and R&D | The Singha Lemon Soda can (S, SOURCED) overlaps on flavour. | Taste untested; effect on the group's own lemon soda can is unmeasured |
 | Finance | EMIS profile reports growth only (S, SOURCED; year UNVERIFIED); no figure is quoted. | Capacity unproven; no pilot budget |
 
 Distribution is documented for one group brand (S, SOURCED); nothing shows it can carry a dry-cube SKU. The critical gaps are compaction, pouch sealing and the product class.
 
 ## Limits
 
-1. No Singha or Boon Rawd cost, supply, capacity, line or innovation-budget data was found; Singha has not been asked.
+1. No Singha Corporation or Boon Rawd Brewery cost, supply, capacity, line or innovation-budget data was found; Singha Corporation has not been asked.
 2. The product class is an open regulatory question; sale is blocked until settled.
 3. Sucralose is checked at flavoured-drink level only (300 mg/kg); sub-category rows were not read, so the design holds only if none sets a level below about 100 mg/kg.
 4. The recommended dose, 0.55 volume of CO2 per 330 mL, is below solubility at every serve from 5 to 35 °C (0.592 volume at 35 °C). The dose gate is for R&D to restate before the run (section 10, Gate 3); this audit sets none.
 5. Taste is untested; the pH 3.5 target is a working anchor; carbonation is unmeasured. The Bangkok April temperature for the 35 °C serve limit is UNVERIFIED.
-6. The organiser's registration form refers to three components; this is unchecked. The design uses one component in the brief's sense (one cube, one of the brief's axes), not one ingredient: its recipe lists potassium bicarbonate, citric acid, sucralose, a binder and filler and lime flavour (basis B).
-7. One cube per pouch is an ASSUMPTION. The alcohol-cue risk is not assessed here; sign-off sits with Singha's brand department.
+6. Singha Corporation's registration form refers to three components; this is unchecked. The design uses one component in the brief's sense (one cube, one of the brief's axes), not one ingredient: its recipe lists potassium bicarbonate, citric acid, sucralose, a binder and filler and lemon flavour (basis B).
+7. One cube per pouch is an ASSUMPTION. The alcohol-cue risk is not assessed here; sign-off sits with the SINGHA mark holder's brand department.
 8. Pouch, print and sucralose costs are assumptions or unverified listings.
 
 ## Sources
 
 - Launch release, Boon Rawd Trading Co., Ltd., https://www.nationthailand.com/pr-news/40063747. P, SOURCED; 13 March 2026; sugar-free and 0% calories are the company's claim.
 - Launch news reprint, https://www.kaohooninternational.com/?p=579263. S, SOURCED; 17 March 2026.
-- Singha Corporation About Us, https://www.singhacorporation.com/en/about-us; home pages, https://singhacorporation.com/en and https://singhacorporation.com/en/home. S, SOURCED; undated.
+- Singha Corporation About Us, https://www.singhacorporation.com/en/about-us. S, SOURCED; undated.
+- Singha Corporation English home page, current, https://singhacorporation.com/en/home (subsidiary wording). S, SOURCED; undated; footer dates UNVERIFIED and not relied on.
+- Singha Corporation English home page, superseded, https://singhacorporation.com/en (affiliate wording; superseded; not used). S, SOURCED; undated; footer dates UNVERIFIED and not relied on.
 - Boon Rawd plant and history pages, https://plant.boonrawd.co.th/en/about and https://plant.boonrawd.co.th/en/history. S, SOURCED.
 - Singha Lemon Soda, https://www.singhacorporation.com/singhalemonsoda/th/. S, SOURCED.
 - EMIS profile, Singha Corporation, https://www.emis.com/php/company-profile/TH/Singha_Corporation_Company_Limited_en_4169857.html. S, SOURCED for growth; year UNVERIFIED.
@@ -92,9 +94,10 @@ Distribution is documented for one group brand (S, SOURCED); nothing shows it ca
 
 ## Team-only traceability (delete before submission)
 
-- Final-check fixes (19 October 2026): tier key replaced with the canonical paragraph; "as ready to drink" for condition 127; potassium 9.1%; one carton-share sentence in the cost paragraph; EMIS growth figures removed from the body (year UNVERIFIED); footer dates UNVERIFIED; brand sign-off sentence per Gate G1; Thai Flavour and Fragrance name and citation removed; competitor pack sentence corrected (Lime Cube against the group's lime can); HomePro listing labelled a retail box listing; acid pKa and address wording aligned.
-- Changes in this pass (19 October 2026): sparkling water corrected to lime per the company release (capture 86, P, SOURCED) and the news reprint (capture 87, S, SOURCED). Capture 23 (brandbuffet, dated 11 March 2026) states lemon, which is in error on flavour; it is corrected here and its URL is removed from the body. Lemon-or-lime conflict statements are removed from the body. The lemon soda is capture 48, a separate product.
-- Competitor overlap written into Scope and Evaluation: flavour overlap; form and pack differ; company sugar-free claim attributed. Group lime sparkling water added as a capability fact (capture 86); carbonation and canning capacity stated as not evidenced. Cannibalisation of the group's own lime can belongs to the KPI file (06).
+- Final-check fixes (19 October 2026): tier key replaced with the canonical paragraph; "as ready to drink" for condition 127; potassium 9.1%; one carton-share sentence in the cost paragraph; EMIS growth figures removed from the body (year UNVERIFIED); footer dates UNVERIFIED; brand sign-off sentence per Gate G1; Thai Flavour and Fragrance name and citation removed; competitor pack sentence corrected (Lemon Soda against the group's lime can); HomePro listing labelled a retail box listing; acid pKa and address wording aligned.
+- Changes in this pass (19 October 2026): the Singha sparkling water, a different product from Lemon Soda, corrected to lime per the company release (capture 86, P, SOURCED) and the news reprint (capture 87, S, SOURCED). Capture 23 (brandbuffet, dated 11 March 2026) states lemon for that sparkling water, which is in error on flavour; it is corrected here and its URL is removed from the body. Lemon-or-lime conflict statements are removed from the body. The Singha Lemon Soda is capture 48, the comparison product.
+- Competitor overlap written into Scope and Evaluation: flavour overlap with the Singha Lemon Soda can; form and pack differ; company sugar-free claim attributed to the sparkling lime water. The group's sparkling lime water, a different product, added as a capability fact (capture 86); carbonation and canning capacity stated as not evidenced. Cannibalisation of the group's own lemon soda can belongs to the KPI file (06).
+- Lemon Soda pass (19 October 2026): product renamed from Lime Cube; flavour lemon; comparison product the Singha Lemon Soda can (capture 48, extract, price not verified); sale status as in capture 48.
 - Removed from the body: the ratio table (captures 2 and 3 not rendered; the 11 October portal read not saved); the 2015 vendor article on glass-soda carbonation (no URL; UNVERIFIED); the EFSA potassium item (capture 69, overseas cross-check, not needed); the international framing; the 0.9-volume design. Kept: the About-page count of more than 150 companies, undated (capture 47).
 - Tier decisions: captures 57 to 59 are indexed P but tagged S here, because a shipping-line product page is a company web page under the tier key. Annex (capture 82) P, SOURCED, flavoured-drink rows only. Bank of Thailand mid-rate from the saved 15 October 2026 record (capture 83); no capture file cited in the body. Potassium 3,500 mg is S (captures 67, 78). CO2 table S, SOURCED (capture 4; 0.592 at 35 C, 0.655 at 30 C). Acid pKa values (captures 75, 76) S, UNVERIFIED here. Climate PDF (capture 17) unreadable: UNVERIFIED.
 - Reactant check (captures 61, 62; rework/screen/handover_figures_results.json): 0.81 g potassium bicarbonate at THB 38.1 per kg (0.031); 2.10 g citric acid at THB 31.4 per kg (0.066); 33 mg sucralose at THB 655 per kg (0.022); total 0.118. The binder, filler and flavour are not in this total: they are not priced (rework/53). The pack-economics script cites rework/53 for the THB 655 per kg sucralose price; no saved page with that price was found in rework/raw, so it is UNVERIFIED. HS 2836.40 is potassium carbonates and may mix carbonate and bicarbonate.
@@ -107,5 +110,6 @@ Distribution is documented for one group brand (S, SOURCED); nothing shows it ca
 - Conflicts stated, not resolved: parent (captures 13, 14, 47); plant count 8 (capture 11) against 9 (capture 12); notification 182 (capture 67) against No. 445 (capture 78); EMIS profile dates (capture 79); footer dates on both English home pages are UNVERIFIED and not relied on.
 - Capture index as used. SOURCED and cited: 4, 11, 12, 13, 14, 23 (corrected), 26, 47, 48, 50, 57, 58, 59, 60, 61, 62, 63, 66, 67, 75, 76, 78, 82, 83, 86, 87. UNVERIFIED and cited: 2, 3, 17, 56, 79. Not cited: 22 (Bank of Thailand page showed no table), 45 (gazette, blocked; desk record), 69 (EFSA; removed). Not in the index: the 2015 vendor article, the non-Thai pouch listing, the 11 October portal read, molar masses, the sucralose price (rework/53).
 - Gate G1 (organiser's department holds brand-owner and legal sign-off and the alcohol-cue concern). SINGHA name and emblem authorised 18 October 2026 for the proposal; the 17 October not-available note is superseded for this entry.
+- Entity pass (19 October 2026): Singha Corporation named as proposer and Boon Rawd Brewery as holding company in Scope; brand sign-off attributed to the SINGHA mark holder; tier key replaced by the Appendix A pointer. The Structure line on the two English home pages is not yet aligned with file 03.
 - Internal records, never cited in the body: case brief; case working draft; working rules; final conclusion; final gate resolution; pivot record; desk model and pack economics (rework/63); can cost model (rework/61); in-house capability assessment; strategic innovation assessment and addenda.
 

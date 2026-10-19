@@ -1,4 +1,6 @@
-# Conversion test design: sweetened lime fizz cube (18 October 2026)
+# Conversion test design: Singha Lemon Soda Cube (lemon), for Singha Corporation (revised 19 October 2026)
+
+Proposer: Singha Corporation. Holding company: Boon Rawd Brewery.
 
 **Basis changed on 18 October 2026: the conversion test now runs on a synthesis basis, with no respondents and no outside contact. See [49 conversion test on a synthesis basis](../49_conversion_test_synthesis.md). This recruited design is deferred. It runs only if the team approves an outside contact separately.**
 
@@ -16,8 +18,8 @@ Scripts and outputs: [conversion_test_power_sim.py](conversion_test_power_sim.py
 ## 2. What the test is for
 
 - **The conversion lead (rework/46):** men aged 25 to 34 convert better per person reached than men aged 35 to 44.
-- **Ratio A (25–34 over 35–44):** median 1.04, 90% interval 1.00 to 1.09, probability above 1 of 0.94 ([47 section 1](../47_statistical_explanation.md)). It comes from the age gradient alone. The drinking cell is shared, and the per-year odds ratio interval (0.991 to 1.001) includes 1.0. The ratio is a model assumption, not a finding.
-- **Ratio B (25–34 over 45–59):** median 1.15, 90% interval 1.03 to 1.28. Reference only.
+- **Ratio A (25 to 34 over 35 to 44):** median 1.04, 90% interval 1.00 to 1.09, probability above 1 of 0.94 ([47 section 1](../47_statistical_explanation.md)). It comes from the age gradient alone. The drinking cell is shared, and the per-year odds ratio interval (0.991 to 1.001) includes 1.0. The ratio is a model assumption, not a finding.
+- **Ratio B (25 to 34 over 45 to 59):** median 1.15, 90% interval 1.03 to 1.28. Reference only.
 - **The outcome is a proxy.** No conversion outcome exists in any source ([47 section 4](../47_statistical_explanation.md)). The test measures purchase intent per person exposed. Ratio A at a 30% baseline is about 1.2 percentage points, which is far below the 5-point design size. Section 10 shows what this means.
 
 ## 3. Cells
@@ -28,7 +30,7 @@ Scripts and outputs: [conversion_test_power_sim.py](conversion_test_power_sim.py
 | B | Men aged 35 to 44 | Comparison cell (closest per-person cell) |
 | C | Men aged 45 to 59 | Reference only. Informs the pended volume item. Not a decision input |
 
-Universe: men resident in Thailand, aged 25 to 59, who drank alcohol in the past 12 months and meet the occasion screen (section 5). National online panel. Bangkok is an optional stratum. The DDC counts make the Bangkok 25–34 and 35–44 cells equal in size (section 9).
+Universe: men resident in Thailand, aged 25 to 59, who drank alcohol in the past 12 months and meet the occasion screen (section 5). National online panel. Bangkok is an optional stratum. The DDC counts make the Bangkok 25 to 34 and 35 to 44 cells equal in size (section 9).
 
 ## 4. Stimulus
 
@@ -36,16 +38,16 @@ Plain product description and a concept image. Neither carries a health, nutriti
 
 Draft text. Square brackets are team inputs, not set in this design:
 
-> [Working name] is a lime-flavoured drink cube. Drop one cube into a glass of water. The cube dissolves and releases carbon dioxide into the water. Pack: [N] cubes. Price: [PRICE] THB per pack.
+> [Working name] is a lemon-flavoured drink cube. Drop one cube into a glass of water. The cube dissolves and releases carbon dioxide into the water. Pack: [N] cubes. Price: [PRICE] THB per pack.
 >
-> Ingredients: potassium bicarbonate, citric acid, lime flavour, [intensive sweetener, name to be fixed by the team].
+> Ingredients: potassium bicarbonate, citric acid, lemon flavour, [intensive sweetener, name to be fixed by the team].
 
 Rules for the stimulus:
 
 - Describe the mechanism only. Do not state a fizz volume or level. Gate G2 (fizz) is closed by physics simulation with stated limits ([45](../45_working_candidate_rework.md), rule S2). A simulation is a model, not a measurement, so no fizz level goes into the stimulus.
 - Do not use: "sugar-free", "no sugar", "zero", "sodium", "sodium-free", "low", "healthy", "natural", "for hydration", or any leaf or botanical health wording.
-- Do not use the public Singha product name ([42](../42_working_candidate_lime_cube.md), [45 section 2](../45_working_candidate_rework.md)).
-- Concept image: one cube dropped into a glass with a lime wedge. No health text, no sugar or sodium text, no brand. No image for this candidate exists in the repo. The team produces it, and a claim check runs before use.
+- Do not use the public Singha product name (an earlier candidate file and [45 section 2](../45_working_candidate_rework.md)).
+- Concept image: one cube dropped into a glass with a lemon wedge. No health text, no sugar or sodium text, no brand. No image for this candidate exists in the repo. The team produces it, and a claim check runs before use.
 
 ## 5. Screening rules
 
@@ -54,7 +56,7 @@ Terminate, quota or record, in this order:
 | Code | Question or check | Rule |
 |---|---|---|
 | S1 | Sex | Male only. Terminate if not |
-| S2 | Exact age | 25 to 59. Assign cell A (25–34), B (35–44) or C (45–59). Terminate outside 25–59 |
+| S2 | Exact age | 25 to 59. Assign cell A (25 to 34), B (35 to 44) or C (45 to 59). Terminate outside 25 to 59 |
 | S3 | "In the past 12 months, have you drunk any alcoholic drink?" | Yes continues. No terminates |
 | S4 | "In the past 3 months, have you done any of these? Select all." (a) had a drink on a hot day, (b) drank alcohol at home, (c) mixed an alcoholic drink with a soft drink or soda, (d) none of these | Terminate if only (d). Record each item. The same rule applies to both cells |
 | S5 | Works in beverage, alcohol, food retail, advertising or market research | Terminate if yes |
@@ -98,7 +100,7 @@ Exact wording. Options are shown in order.
 
 Fix these rules before fieldwork.
 
-- **Primary contrast:** top-2-box share in cell A minus cell B. Two-sided alpha 0.05. Report the 95% confidence interval (Newcombe–Wilson).
+- **Primary contrast:** top-2-box share in cell A minus cell B. Two-sided alpha 0.05. Report the 95% confidence interval (Newcombe-Wilson).
 - **Direction statement:** "lead supported" if the lower bound is above 0. "Lead reversed" if the upper bound is below 0. Otherwise "direction undetermined".
 - **Size statement:** "5-point lead supported" if the lower bound is at or above 5 percentage points. "5-point lead not supported" if the upper bound is below 5 percentage points. Otherwise "size undetermined".
 - Report both statements together. A result can support the direction and still rule out a 5-point lead.
@@ -111,7 +113,7 @@ Two independent cells, two-sided alpha 0.05, power 0.80. Formula, with no contin
 
 n per cell = [z(alpha/2) × sqrt(2 p̄ q̄) + z(beta) × sqrt(p1 q1 + p2 q2)]² / (p1 − p2)²
 
-The baseline top-2-box for men 35–44 is not in any source. The grid below covers 20, 30, 40 and 50 percent. Cell A is p1 = p2 + difference.
+The baseline top-2-box for men 35 to 44 is not in any source. The grid below covers 20, 30, 40 and 50 percent. Cell A is p1 = p2 + difference.
 
 | Baseline (cell B) | 5 points | 10 points | 15 points |
 |---|---|---|---|
@@ -130,23 +132,23 @@ Counts are men, from [47 section 6](../47_statistical_explanation.md). The DDC c
 
 | Band | Men, DOPA Nov 2568 (registration) | Men, DDC mid-year | Current drinkers, DOPA | Current drinkers, DDC | Bangkok men, DDC | Bangkok current drinkers |
 |---|---|---|---|---|---|---|
-| 25–34 | 4,760,000 | 4,705,326 | 3,265,360 (68.6%) | 3,227,854 | 370,367 | 254,072 |
-| 35–44 | 4,750,000 | 4,649,860 | 3,258,500 (68.6%) | 3,189,804 | 370,960 | 254,479 |
-| 45–59 | 6,650,000 | 7,126,743 | 4,349,100 (65.4%) | 4,660,890 | 563,815 | 368,735 |
+| 25 to 34 | 4,760,000 | 4,705,326 | 3,265,360 (68.6%) | 3,227,854 | 370,367 | 254,072 |
+| 35 to 44 | 4,750,000 | 4,649,860 | 3,258,500 (68.6%) | 3,189,804 | 370,960 | 254,479 |
+| 45 to 59 | 6,650,000 | 7,126,743 | 4,349,100 (65.4%) | 4,660,890 | 563,815 | 368,735 |
 
 - **2024 counts:** DOPA Nov 2568 is the Thai year 2568, which is calendar 2025. It is the nearest registration count to the 2024 drinking survey. The DDC file carries no year label, so its year cannot be confirmed from the file.
 - **2021 counts:** none. No 2021 population count by band exists in [47](../47_statistical_explanation.md) or the repo. The 2021 row is a stated limit, not an estimate.
-- **Drinking share:** 68.6% is the published men 25–44 cell. Men 25–34 and 35–44 are not published separately, so both use it. The 2024 definition of current drinking is inferred, not confirmed ([47 section 2](../47_statistical_explanation.md)).
+- **Drinking share:** 68.6% is the published men 25 to 44 cell. Men 25 to 34 and 35 to 44 are not published separately, so both use it. The 2024 definition of current drinking is inferred, not confirmed ([47 section 2](../47_statistical_explanation.md)).
 - **Screening load:** the pool is far larger than the sample. At the 5-point design (1,377 completes per cell), about 2,008 screened men per cell are needed if the occasion screen passes everyone who drinks. At an illustrative occasion pass rate of 0.5, about 4,015. The occasion pass rate is not in any source. A pilot measures it (section 12).
-- **Bangkok:** cells 25–34 and 35–44 are equal in size. A Bangkok stratum would need its own sample size, not derived here.
+- **Bangkok:** cells 25 to 34 and 35 to 44 are equal in size. A Bangkok stratum would need its own sample size, not derived here.
 
 ## 10. Simulation of the test outcome
 
 Method, from the script: two cells of size n. Each person is top-2-box with probability p (cell B) or p × R (cell A). R is drawn from ratio A or ratio B, fitted as log-normal to the median and 90% interval in 47. A pooled two-proportion z-test is run in each of 20,000 draws. Outcomes are the share of draws that confirm the lead, reverse it, or leave it inconclusive. Also reported is the share where the 95% upper bound sits below 5 points.
 
-**Ratio A (25–34 over 35–44), at the 5-point sample size**
+**Ratio A (25 to 34 over 35 to 44), at the 5-point sample size**
 
-| Baseline (cell B) | n per cell | Confirms lead (25–34 significantly higher) | Reverses lead | Inconclusive | Rules out a 5-point lead |
+| Baseline (cell B) | n per cell | Confirms lead (25 to 34 significantly higher) | Reverses lead | Inconclusive | Rules out a 5-point lead |
 |---|---|---|---|---|---|
 | 20% | 1,094 | 7.7% | 0.8% | 91.5% | 67.5% |
 | 30% | 1,377 | 12.7% | 0.8% | 86.5% | 56.4% |
@@ -202,7 +204,7 @@ Cost: not estimated. No quote exists.
 | Gate | Resolution | Basis |
 |---|---|---|
 | Conversion test design (design, power, cell sizes, simulation, decision rules) | resolved | Sections 3 to 10 and the script and JSON above. Execution is outside this track |
-| Conversion lead settled by the test (men 25–34 over men 35–44) | stated_limit | At the 5-point size the test confirms ratio A in about 13% of runs at a 30% baseline. The baseline is unknown. No conversion outcome exists. Ratio A rests on the age gradient alone, whose odds-ratio interval includes 1.0 |
+| Conversion lead settled by the test (men 25 to 34 over men 35 to 44) | stated_limit | At the 5-point size the test confirms ratio A in about 13% of runs at a 30% baseline. The baseline is unknown. No conversion outcome exists. Ratio A rests on the age gradient alone, whose odds-ratio interval includes 1.0 |
 
 ## 14. Open items and inconsistencies
 
@@ -215,7 +217,7 @@ Cost: not estimated. No quote exists.
 **Stated limits**
 - No baseline top-2-box in any source (grid used).
 - No 2021 population count by band.
-- Men 25–34 and 35–44 drinking not published separately.
+- Men 25 to 34 and 35 to 44 drinking not published separately.
 - The intent-to-potency link is assumed.
 - The 2024 drinking definition is inferred.
 
@@ -224,7 +226,7 @@ Cost: not estimated. No quote exists.
 - [45](../45_working_candidate_rework.md) section 6 still lists G1 and G2 as "Open. Bench lab test needed" and "Open. Bench test". Its rule S2 closes both by physics simulation. The gate table should be updated to match S2.
 - The screen scripts below still carry "sugar-free" in product labels. They are internal, not consumer copy, but the rule says "of any kind", so the team should correct them before any label reaches the panel.
 - [effervescent_cube_screen.py](effervescent_cube_screen.py) line 5 and line 612 say "sugar-free". Line 648 (A11) says "contains no sugar and no sodium other than the carbonate", which is a claim-like assumption.
-- [lime_cube_screen.py](lime_cube_screen.py) lines 5 and 404 say "sugar-free lime soda". The line 55 quote is the existing public Singha label, which is a different product and is not this candidate's claim.
-- [segment_potency_mc.py](segment_potency_mc.py) line 222 chart title says "sugar-free dissolvable lime drink".
+- The earlier candidate screens at lines 5 and 404 use earlier candidate wording that says sugar-free. The public Singha lime label at line 55 belongs to the separate Singha lime sparkling water, a different product, and is not this candidate's claim.
+- One earlier candidate screen, at line 222, has a chart title in earlier candidate wording that says sugar-free for a dissolvable drink.
 - [segment_potency_mc.py](segment_potency_mc.py) lines 57 to 58 use both-sex drinking shares (46.9% and 41.9%). [46](../46_segment_decision.md) and [47](../47_statistical_explanation.md) use men-specific shares (68.6% and 65.4%). This affects the volume index, not ratio A.
 - The DOPA Nov 2568 label is calendar 2025, not 2024. The DDC year is not labelled.

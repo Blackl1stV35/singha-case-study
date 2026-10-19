@@ -1,4 +1,4 @@
-"""Conversion test design for the sweetened lime fizz cube: power, expected cell sizes, outcome simulation.
+"""Conversion test design for the Singha Lemon Soda Cube (lemon): power, expected cell sizes, outcome simulation.
 
 Track: men 25-34 (cell A) against men 35-44 (cell B); men 45-59 as a reference cell (cell C).
 Outcome: top-2-box purchase intent on a 5-point scale (4 or 5), per person exposed to the concept.

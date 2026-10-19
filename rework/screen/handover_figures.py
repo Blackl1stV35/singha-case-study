@@ -20,6 +20,10 @@ SERVES_C = [5, 10, 15, 20, 25, 30, 35]
 ICE_CASES = [("30 C water, 30 g ice", 30.0, 30.0), ("30 C water, 60 g ice", 30.0, 60.0)]
 PH_LIST = [2.8, 3.0, 3.5, 4.0, 4.5]
 RDI_K_MG = 3500.0    # Thai RDI for potassium, Notification 182 (primary copy), record 63 section 1
+# Basis B additions (user, 19 October 2026; rework/64 section 8). Both are ASSUMPTION; ranges are in
+# rework/48 section 6.1. Neither is priced (rework/53, row "Flavour and binder").
+BINDER_FILLER_G = 0.80   # row "Binder and filler": 0.80 g (range 0.5 to 1.2). ASSUMPTION
+FLAVOUR_G = 0.05         # row "Lemon flavour powder": 0.05 g (range 0.02 to 0.10). ASSUMPTION
 
 
 def serve_row(t_c, ice_g=0.0):
@@ -44,13 +48,18 @@ def main():
     sucr_mg = fdm.sucralose_mg_per_serve(330.0)
 
     # Cost per cube, base prices from pack_economics.PRICES (status there), pH 3.5 total citric.
+    # Binder and filler and lemon flavour are unpriced, so this cost is on reactants only.
     P = pe.PRICES
     reactants_thb = (khco3_g / 1000.0 * P["khco3_thb_per_kg"]["base"]
                      + citric_total_g / 1000.0 * P["citric_thb_per_kg"]["base"]
                      + sucr_mg / 1e6 * P["sucralose_thb_per_kg"]["base"])
     per_pouch = reactants_thb + P["pouch_thb"]["base"] + P["print_thb"]["base"] + P["processing_thb"]["base"]
 
-    pouch_mass_g = khco3_g + citric_total_g + sucr_mg / 1000.0 + pe.POUCH_MASS_G
+    # Mass, basis B. Reactants are the bicarbonate, the total citric acid at the pH target and the sucralose.
+    # Binder and filler and lemon flavour are added on top. The cube mass is derived, not weighed.
+    reactants_g = khco3_g + citric_total_g + sucr_mg / 1000.0
+    cube_mass_g = reactants_g + BINDER_FILLER_G + FLAVOUR_G
+    pouch_mass_g = cube_mass_g + pe.POUCH_MASS_G      # packed unit (cube plus pouch); used for container mass
     packs = {}
     for n in (6, 12, 24):
         carton_cost = P["carton_thb"][n]["base"]
@@ -61,6 +70,7 @@ def main():
             vol = c["length_m"] * c["width_m"] * c["height_m"]
             cartons = math.floor(vol * pe.PACKING_EFFICIENCY / carton_vol)
             cubes = cartons * n
+            # Container mass: packed units (basis B, pouch_mass_g) plus empty cartons. Volume sets the count.
             mass_kg = cubes * pouch_mass_g / 1000.0 + cartons * pe.CARTON_MASS_KG
             containers[name] = {
                 "cartons": cartons,
@@ -93,6 +103,10 @@ def main():
             "sucralose_mg": sucr_mg,
             "sucralose_mg_per_kg": round(sucr_mg / 0.330, 1),
             "sucralose_limit_mg_per_kg": 300,
+            "reactants_g": round(reactants_g, 3),
+            "binder_filler_g": BINDER_FILLER_G,
+            "flavour_g": FLAVOUR_G,
+            "cube_mass_g": round(cube_mass_g, 3),
         },
         "serve_temperature": [serve_row(t) for t in SERVES_C],
         "ice_cases": [dict(name=name, **serve_row(t, ice_g=g)) for name, t, g in ICE_CASES],
@@ -119,6 +133,8 @@ def main():
             "the pouch and print costs are assumptions or non-Thai listings; no Thai quote was requested",
             "the 0.55-volume gate is not set; it is for R&D to define",
             "product classification (beverage, edible ice or electrolyte drink) is open; condition TH3 applies to electrolyte drinks only",
+            "basis B: binder and filler 0.80 g (range 0.5 to 1.2) and lemon flavour 0.05 g (range 0.02 to 0.10) are ASSUMPTION (rework/48 section 6.1); the cube mass is derived, not weighed; binder and flavour are not priced, so the cost per cube excludes them",
+            "binder name and its sodium content are unconfirmed (gate G3, rework/57 item 8); no sodium-free claim is made",
         ],
     }
     OUT.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")

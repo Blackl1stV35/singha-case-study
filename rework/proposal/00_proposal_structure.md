@@ -6,7 +6,7 @@ Tiers are defined once, in Appendix A. Team-only blocks are removed from the sub
 
 ## 1. Executive summary
 
-- `judge/executive_summary.md`
+- `submission/executive_summary.md` (copy of the judge summary)
 
 ## 2. Singha Corporation and the existing product
 

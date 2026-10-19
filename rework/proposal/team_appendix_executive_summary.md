@@ -1,4 +1,4 @@
-﻿# Team-only appendix for judge/executive_summary.md (delete before submission)
+﻿# Team-only appendix for submission/executive_summary.md (the judge folder is archived) (delete before submission)
 
 ## Team-only traceability (delete before submission)
 

@@ -27,6 +27,7 @@ Sourcing policy: [SOURCING_POLICY.md](SOURCING_POLICY.md). Primary sources come 
 | 330 ml reference | Not cleared | [54](54_package_redesign_vs_singha_can.md) |
 | Conversion lead | Synthesis only; no respondents | [49](49_conversion_test_synthesis.md) |
 | Submission draft | Pended; nothing submitted | [27](27_submission_draft_pended.md) (retired draft, kept for the record) |
+| Competition proposal sections (problem, pain point, situation analysis, background and trends, strategy, project valuation, KPI, organization audit, case studies) | Eight team-only drafts with a project valuation model; not passing the final check (tier labels, citation completeness); not pushed to the public remote | [proposal/](proposal/), [screen/project_valuation.py](screen/project_valuation.py) |
 
 ## Reading order
 
@@ -76,6 +77,8 @@ The numbering has gaps (35 to 39) because those numbers were never used.
 
 ## Open items
 
+- Repository visibility: the remote is public. Earlier team records were pushed to it. The proposal drafts were not pushed. Whether to make the remote private, or to remove the earlier records from its history, is the user's decision.
+- Dose (0.9 or 0.55 volume), target pH, the gazetted Thai No. 468 annex download (sweetener permission), and whether to draft the executive summary, the feasibility and registration route, and the risk and implementation plan. None is decided.
 - Trademark rights are authorized by the user for the product proposal. The registry search stays partial and is recorded as a stated limit. See [54](54_package_redesign_vs_singha_can.md).
 - Gate G1 is closed on 19 October 2026. Brand-owner and legal sign-off, and the alcohol-cue question, are Singha's department's responsibility (see [60](60_segment_redesign_lime_cube.md), section 8).
 - The judge folder was synced to the merged design on 19 October 2026. Re-sync after any label change.

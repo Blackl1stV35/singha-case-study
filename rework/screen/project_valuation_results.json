@@ -1,0 +1,761 @@
+{
+  "acquisition_cross_check": {
+    "acquisition_cost_per_cube_by_cubes_bought": [
+      {
+        "cost_per_cube_thb": 95.83,
+        "cubes_per_first_purchase": 12
+      },
+      {
+        "cost_per_cube_thb": 23.0,
+        "cubes_per_first_purchase": 50
+      },
+      {
+        "cost_per_cube_thb": 5.11,
+        "cubes_per_first_purchase": 225
+      }
+    ],
+    "cpa_thb_per_first_purchase": 1150.0,
+    "cubes_to_recover_cpa_at_base_contribution": 225.5
+  },
+  "break_even_by_fixed_cost": [
+    {
+      "fixed_cost_thb_per_year": 250000,
+      "npv_zero_cubes_per_year": {
+        "0.08": 69337,
+        "0.1": 70391,
+        "0.12": 71469
+      },
+      "simple_cubes_per_year_no_ramp_no_setup": 49020
+    },
+    {
+      "fixed_cost_thb_per_year": 500000,
+      "npv_zero_cubes_per_year": {
+        "0.08": 138673,
+        "0.1": 140783,
+        "0.12": 142938
+      },
+      "simple_cubes_per_year_no_ramp_no_setup": 98039
+    },
+    {
+      "fixed_cost_thb_per_year": 1000000,
+      "npv_zero_cubes_per_year": {
+        "0.08": 277346,
+        "0.1": 281565,
+        "0.12": 285876
+      },
+      "simple_cubes_per_year_no_ramp_no_setup": 196078
+    },
+    {
+      "fixed_cost_thb_per_year": 2000000,
+      "npv_zero_cubes_per_year": {
+        "0.08": 554693,
+        "0.1": 563131,
+        "0.12": 571753
+      },
+      "simple_cubes_per_year_no_ramp_no_setup": 392157
+    }
+  ],
+  "checks": {
+    "all_asserts_passed": true,
+    "pack_cost_check": {
+      "1": {
+        "diff": 0.0,
+        "json_cost": 3.48,
+        "recomputed": 3.48
+      },
+      "12": {
+        "diff": -0.0033,
+        "json_cost": 3.9,
+        "recomputed": 3.8967
+      },
+      "24": {
+        "diff": 0.005,
+        "json_cost": 3.85,
+        "recomputed": 3.855
+      },
+      "6": {
+        "diff": -0.0033,
+        "json_cost": 4.15,
+        "recomputed": 4.1467
+      }
+    },
+    "potassium_mg_json": 518.1,
+    "potassium_mg_recomputed": 518.22,
+    "reactants_json_thb": 0.18,
+    "reactants_recomputed_thb": 0.1796
+  },
+  "inputs": [
+    {
+      "key": "khco3_price",
+      "kind": "PROXY",
+      "label": "Potassium bicarbonate price",
+      "source": "UN Comtrade HS 2836.40 import unit value 2024 (carbonate line, may mix bicarbonate); page not saved; no Thai price found",
+      "status": "UNVERIFIED",
+      "tier": "P",
+      "unit": "THB/kg",
+      "value": 38.1
+    },
+    {
+      "key": "citric_price",
+      "kind": "PROXY",
+      "label": "Citric acid price",
+      "source": "UN Comtrade HS 2918.14 import unit value 2025 (estimated weight); page not saved; no Thai price found",
+      "status": "UNVERIFIED",
+      "tier": "P",
+      "unit": "THB/kg",
+      "value": 31.4
+    },
+    {
+      "key": "sucralose_price",
+      "kind": "LISTED",
+      "label": "Sucralose price",
+      "source": "Retailer asking price, Thai online marketplace; page not saved; cost effect is about 0.02 THB per cube",
+      "status": "UNVERIFIED",
+      "tier": "S",
+      "unit": "THB/kg",
+      "value": 655.0
+    },
+    {
+      "key": "pouch",
+      "kind": "DERIVED",
+      "label": "Pouch, 90 x 70 mm laminate",
+      "source": "Non-Thai listing USD 0.03 to 0.05 per piece, MOQ 1,000, converted; listing page not saved; no Thai converter price",
+      "status": "UNVERIFIED",
+      "tier": "S",
+      "unit": "THB/piece",
+      "value": 1.3
+    },
+    {
+      "key": "print",
+      "kind": "ASSUMPTION",
+      "label": "Print",
+      "source": "Placeholder; no sourced price",
+      "status": "ASSUMPTION",
+      "tier": "none",
+      "unit": "THB/cube",
+      "value": 1.5
+    },
+    {
+      "key": "processing",
+      "kind": "ASSUMPTION",
+      "label": "Compaction, sealing and packing labour",
+      "source": "No sourced figure",
+      "status": "ASSUMPTION",
+      "tier": "none",
+      "unit": "THB/cube",
+      "value": 0.5
+    },
+    {
+      "key": "carton_12",
+      "kind": "LISTED",
+      "label": "Carton, 12 cubes",
+      "source": "Retail asking price for a 20 x 14 x 12 cm box, Thai home-improvement retailer; page not saved",
+      "status": "UNVERIFIED",
+      "tier": "S",
+      "unit": "THB/carton",
+      "value": 5.0
+    },
+    {
+      "key": "carton_6",
+      "kind": "ASSUMPTION",
+      "label": "Carton, 6 cubes",
+      "source": "Scaled from the 12-cube price",
+      "status": "ASSUMPTION",
+      "tier": "none",
+      "unit": "THB/carton",
+      "value": 4.0
+    },
+    {
+      "key": "carton_24",
+      "kind": "ASSUMPTION",
+      "label": "Carton, 24 cubes",
+      "source": "Scaled from the 12-cube price",
+      "status": "ASSUMPTION",
+      "tier": "none",
+      "unit": "THB/carton",
+      "value": 9.0
+    },
+    {
+      "key": "shelf",
+      "kind": "ASSUMPTION",
+      "label": "Shelf price per cube",
+      "source": "The cube is not priced. Reference: 330 ml zero-sugar cans at 16 to 17 THB, Thai online retailer, captured 18 October 2026 (SOURCED, secondary)",
+      "status": "ASSUMPTION",
+      "tier": "S",
+      "unit": "THB/cube",
+      "value": 15.0
+    },
+    {
+      "key": "ex_share",
+      "kind": "ASSUMPTION",
+      "label": "Ex-factory share of shelf price",
+      "source": "No sourced margin. Cross-check: mid-case value-chain factor 0.595 from assumed margins",
+      "status": "ASSUMPTION",
+      "tier": "none",
+      "unit": "fraction",
+      "value": 0.6
+    },
+    {
+      "key": "excise_rate",
+      "kind": "SOURCED",
+      "label": "Excise, item 02.02, ad valorem",
+      "source": "Royal Gazette 2560 (2017) excise schedule, read from page images; a sweetened, flavoured drink falls in 02.02; latest period in the notice 1 October 2566 onwards",
+      "status": "SOURCED",
+      "tier": "P",
+      "unit": "fraction",
+      "value": 0.14
+    },
+    {
+      "key": "excise_base",
+      "kind": "ASSUMPTION",
+      "label": "Excise value base",
+      "source": "The notice does not state the value base and it was not read; the baht amount is UNVERIFIED",
+      "status": "UNVERIFIED",
+      "tier": "P",
+      "unit": "text",
+      "value": "ex-factory (assumed for sensitivity only)"
+    },
+    {
+      "key": "excise_tier_per_l",
+      "kind": "SOURCED",
+      "label": "Excise per-litre tier, up to 6 g sugar per 100 ml",
+      "source": "Same schedule; a sugar-free sweetened drink falls in tier (a) at 0 THB per litre",
+      "status": "SOURCED",
+      "tier": "P",
+      "unit": "THB/litre",
+      "value": 0.0
+    },
+    {
+      "key": "khco3_g",
+      "kind": "DERIVED",
+      "label": "Potassium bicarbonate per cube",
+      "source": "Stoichiometry at 0.9 volume of CO2 per 330 ml (formulation desk model)",
+      "status": "DERIVED",
+      "tier": "none",
+      "unit": "g",
+      "value": 1.327
+    },
+    {
+      "key": "citric_g_ph35",
+      "kind": "DERIVED",
+      "label": "Total citric acid per cube at pH 3.5",
+      "source": "Charge balance, citric pKa 3.13, 4.76, 6.40 (tier P, CRC); formulation desk model",
+      "status": "DERIVED",
+      "tier": "none",
+      "unit": "g",
+      "value": 3.42
+    },
+    {
+      "key": "citric_g_ph30",
+      "kind": "DERIVED",
+      "label": "Total citric acid per cube at pH 3.0",
+      "source": "Formulation desk model, sensitivity",
+      "status": "DERIVED",
+      "tier": "none",
+      "unit": "g",
+      "value": 5.965
+    },
+    {
+      "key": "sucralose_mg",
+      "kind": "DERIVED",
+      "label": "Sucralose per cube",
+      "source": "Formulation desk model (sweetness 600 times sucrose; JECFA monograph, tier P)",
+      "status": "DERIVED",
+      "tier": "none",
+      "unit": "mg",
+      "value": 33.0
+    },
+    {
+      "key": "dose_vol",
+      "kind": "ASSUMPTION",
+      "label": "CO2 dose per 330 ml",
+      "source": "Team decision of 19 October 2026; under review because its basis was withdrawn",
+      "status": "ASSUMPTION",
+      "tier": "none",
+      "unit": "volumes",
+      "value": 0.9
+    },
+    {
+      "key": "target_ph",
+      "kind": "ASSUMPTION",
+      "label": "Target pH",
+      "source": "Working assumption",
+      "status": "ASSUMPTION",
+      "tier": "none",
+      "unit": "pH",
+      "value": 3.5
+    },
+    {
+      "key": "vol_low",
+      "kind": "ASSUMPTION",
+      "label": "Volume scenario, low",
+      "source": "Scenario; no volume basis in the record",
+      "status": "ASSUMPTION",
+      "tier": "none",
+      "unit": "cubes per year",
+      "value": 50000
+    },
+    {
+      "key": "vol_base",
+      "kind": "ASSUMPTION",
+      "label": "Volume scenario, base",
+      "source": "Scenario; no volume basis in the record",
+      "status": "ASSUMPTION",
+      "tier": "none",
+      "unit": "cubes per year",
+      "value": 200000
+    },
+    {
+      "key": "vol_high",
+      "kind": "ASSUMPTION",
+      "label": "Volume scenario, high",
+      "source": "Scenario; no volume basis in the record",
+      "status": "ASSUMPTION",
+      "tier": "none",
+      "unit": "cubes per year",
+      "value": 1000000
+    },
+    {
+      "key": "ramp",
+      "kind": "ASSUMPTION",
+      "label": "Year 1 volume as share of steady state",
+      "source": "Launch ramp; years 2 to 5 at full volume",
+      "status": "ASSUMPTION",
+      "tier": "none",
+      "unit": "fraction",
+      "value": 0.5
+    },
+    {
+      "key": "horizon",
+      "kind": "ASSUMPTION",
+      "label": "Horizon",
+      "source": "Five-year horizon; no terminal value",
+      "status": "ASSUMPTION",
+      "tier": "none",
+      "unit": "years",
+      "value": 5
+    },
+    {
+      "key": "rates",
+      "kind": "ASSUMPTION",
+      "label": "Discount rate range",
+      "source": "Range set for this model; base 10%",
+      "status": "ASSUMPTION",
+      "tier": "none",
+      "unit": "per year",
+      "value": "8% to 12%"
+    },
+    {
+      "key": "fixed_grid",
+      "kind": "ASSUMPTION",
+      "label": "Annual fixed cash cost grid",
+      "source": "Grid, not a sourced figure; tooling, registration, trademark, pouch minimums and marketing are inside it",
+      "status": "ASSUMPTION",
+      "tier": "none",
+      "unit": "THB per year",
+      "value": "250,000 to 2,000,000"
+    },
+    {
+      "key": "setup",
+      "kind": "ASSUMPTION",
+      "label": "Year 0 setup outlay",
+      "source": "Convention so the grid covers the one-off cost; no sourced setup figure",
+      "status": "ASSUMPTION",
+      "tier": "none",
+      "unit": "text",
+      "value": "equal to one year of fixed cost"
+    },
+    {
+      "key": "cpa",
+      "kind": "DERIVED",
+      "label": "Paid-social cost per first purchase (base)",
+      "source": "Acquisition record base case from PROXY and ASSUMPTION inputs; ad-cost pages not saved",
+      "status": "UNVERIFIED",
+      "tier": "S",
+      "unit": "THB",
+      "value": 1150.0
+    }
+  ],
+  "max_fixed_cost_by_scenario_thb_per_year": {
+    "base": {
+      "0.08": 721120,
+      "0.1": 710315,
+      "0.12": 699603
+    },
+    "high": {
+      "0.08": 3605599,
+      "0.1": 3551573,
+      "0.12": 3498014
+    },
+    "low": {
+      "0.08": 180280,
+      "0.1": 177579,
+      "0.12": 174901
+    }
+  },
+  "method": {
+    "break_even_volume": "V* = F * (1 + A) / (c * R), NPV zero, A = sum of discount factors, R = ramp-weighted sum",
+    "cash_flow_year_t": "c * V * ramp_t - F, t = 1..5",
+    "max_fixed_cost": "F* = c * V * R / (1 + A)",
+    "payback": "undiscounted, from year 0 outlay, linear within year",
+    "setup_outlay_year_0": "F (convention)",
+    "terminal_value": "none"
+  },
+  "model": "Lime Cube product-level project valuation, desk model, pre-tax, domestic Thailand",
+  "scenario_results": [
+    {
+      "contribution_per_cube_thb": 5.1,
+      "cubes_per_year": 50000,
+      "fixed_cost_thb_per_year": 250000,
+      "npv_thb": {
+        "0.08": -348092,
+        "0.1": -346955,
+        "0.12": -345815
+      },
+      "payback_years_base_rate": null,
+      "scenario": "low",
+      "setup_outlay_thb": 250000,
+      "steady_state_cash_flow_thb": 5000
+    },
+    {
+      "contribution_per_cube_thb": 5.1,
+      "cubes_per_year": 50000,
+      "fixed_cost_thb_per_year": 500000,
+      "npv_thb": {
+        "0.08": -1596270,
+        "0.1": -1544652,
+        "0.12": -1497009
+      },
+      "payback_years_base_rate": null,
+      "scenario": "low",
+      "setup_outlay_thb": 500000,
+      "steady_state_cash_flow_thb": -245000
+    },
+    {
+      "contribution_per_cube_thb": 5.1,
+      "cubes_per_year": 50000,
+      "fixed_cost_thb_per_year": 1000000,
+      "npv_thb": {
+        "0.08": -4092625,
+        "0.1": -3940045,
+        "0.12": -3799398
+      },
+      "payback_years_base_rate": null,
+      "scenario": "low",
+      "setup_outlay_thb": 1000000,
+      "steady_state_cash_flow_thb": -745000
+    },
+    {
+      "contribution_per_cube_thb": 5.1,
+      "cubes_per_year": 50000,
+      "fixed_cost_thb_per_year": 2000000,
+      "npv_thb": {
+        "0.08": -9085335,
+        "0.1": -8730832,
+        "0.12": -8404174
+      },
+      "payback_years_base_rate": null,
+      "scenario": "low",
+      "setup_outlay_thb": 2000000,
+      "steady_state_cash_flow_thb": -1745000
+    },
+    {
+      "contribution_per_cube_thb": 5.1,
+      "cubes_per_year": 200000,
+      "fixed_cost_thb_per_year": 250000,
+      "npv_thb": {
+        "0.08": 2352165,
+        "0.1": 2205269,
+        "0.12": 2070321
+      },
+      "payback_years_base_rate": 0.96,
+      "scenario": "base",
+      "setup_outlay_thb": 250000,
+      "steady_state_cash_flow_thb": 770000
+    },
+    {
+      "contribution_per_cube_thb": 5.1,
+      "cubes_per_year": 200000,
+      "fixed_cost_thb_per_year": 500000,
+      "npv_thb": {
+        "0.08": 1103987,
+        "0.1": 1007573,
+        "0.12": 919126
+      },
+      "payback_years_base_rate": 1.94,
+      "scenario": "base",
+      "setup_outlay_thb": 500000,
+      "steady_state_cash_flow_thb": 520000
+    },
+    {
+      "contribution_per_cube_thb": 5.1,
+      "cubes_per_year": 200000,
+      "fixed_cost_thb_per_year": 1000000,
+      "npv_thb": {
+        "0.08": -1392368,
+        "0.1": -1387821,
+        "0.12": -1383262
+      },
+      "payback_years_base_rate": null,
+      "scenario": "base",
+      "setup_outlay_thb": 1000000,
+      "steady_state_cash_flow_thb": 20000
+    },
+    {
+      "contribution_per_cube_thb": 5.1,
+      "cubes_per_year": 200000,
+      "fixed_cost_thb_per_year": 2000000,
+      "npv_thb": {
+        "0.08": -6385078,
+        "0.1": -6178607,
+        "0.12": -5988038
+      },
+      "payback_years_base_rate": null,
+      "scenario": "base",
+      "setup_outlay_thb": 2000000,
+      "steady_state_cash_flow_thb": -980000
+    },
+    {
+      "contribution_per_cube_thb": 5.1,
+      "cubes_per_year": 1000000,
+      "fixed_cost_thb_per_year": 250000,
+      "npv_thb": {
+        "0.08": 16753533,
+        "0.1": 15817134,
+        "0.12": 14956379
+      },
+      "payback_years_base_rate": 0.11,
+      "scenario": "high",
+      "setup_outlay_thb": 250000,
+      "steady_state_cash_flow_thb": 4850000
+    },
+    {
+      "contribution_per_cube_thb": 5.1,
+      "cubes_per_year": 1000000,
+      "fixed_cost_thb_per_year": 500000,
+      "npv_thb": {
+        "0.08": 15505355,
+        "0.1": 14619437,
+        "0.12": 13805185
+      },
+      "payback_years_base_rate": 0.24,
+      "scenario": "high",
+      "setup_outlay_thb": 500000,
+      "steady_state_cash_flow_thb": 4600000
+    },
+    {
+      "contribution_per_cube_thb": 5.1,
+      "cubes_per_year": 1000000,
+      "fixed_cost_thb_per_year": 1000000,
+      "npv_thb": {
+        "0.08": 13009000,
+        "0.1": 12224044,
+        "0.12": 11502797
+      },
+      "payback_years_base_rate": 0.65,
+      "scenario": "high",
+      "setup_outlay_thb": 1000000,
+      "steady_state_cash_flow_thb": 4100000
+    },
+    {
+      "contribution_per_cube_thb": 5.1,
+      "cubes_per_year": 1000000,
+      "fixed_cost_thb_per_year": 2000000,
+      "npv_thb": {
+        "0.08": 8016290,
+        "0.1": 7433257,
+        "0.12": 6898021
+      },
+      "payback_years_base_rate": 1.47,
+      "scenario": "high",
+      "setup_outlay_thb": 2000000,
+      "steady_state_cash_flow_thb": 3100000
+    }
+  ],
+  "scope_note": "Model output for the proposal. Not a valuation opinion. Not the group sum-of-parts.",
+  "sensitivities": [
+    {
+      "change": "Base: 12-cube carton, pH 3.5, 0.9 volume, shelf 15 THB, ex-factory 60%",
+      "contribution_per_cube_thb": 5.1,
+      "delta_vs_base_thb": 0.0,
+      "max_fixed_cost_thb_per_year_base_volume_10pct": 710315,
+      "note": "Model base"
+    },
+    {
+      "change": "Shelf price 10 THB (ex-factory 6.00)",
+      "contribution_per_cube_thb": 2.1,
+      "delta_vs_base_thb": -3.0,
+      "max_fixed_cost_thb_per_year_base_volume_10pct": 292483,
+      "note": "ASSUMPTION range"
+    },
+    {
+      "change": "Shelf price 20 THB (ex-factory 12.00)",
+      "contribution_per_cube_thb": 8.1,
+      "delta_vs_base_thb": 3.0,
+      "max_fixed_cost_thb_per_year_base_volume_10pct": 1128147,
+      "note": "ASSUMPTION range"
+    },
+    {
+      "change": "Ex-factory share 50%",
+      "contribution_per_cube_thb": 3.6,
+      "delta_vs_base_thb": -1.5,
+      "max_fixed_cost_thb_per_year_base_volume_10pct": 501399,
+      "note": "ASSUMPTION range"
+    },
+    {
+      "change": "Ex-factory share 70%",
+      "contribution_per_cube_thb": 6.6,
+      "delta_vs_base_thb": 1.5,
+      "max_fixed_cost_thb_per_year_base_volume_10pct": 919231,
+      "note": "ASSUMPTION range"
+    },
+    {
+      "change": "Pouch 0.67 THB (low)",
+      "contribution_per_cube_thb": 5.73,
+      "delta_vs_base_thb": 0.63,
+      "max_fixed_cost_thb_per_year_base_volume_10pct": 798059,
+      "note": "DERIVED listing range, UNVERIFIED"
+    },
+    {
+      "change": "Pouch 2.70 THB (high)",
+      "contribution_per_cube_thb": 3.7,
+      "delta_vs_base_thb": -1.4,
+      "max_fixed_cost_thb_per_year_base_volume_10pct": 515326,
+      "note": "DERIVED listing range, UNVERIFIED"
+    },
+    {
+      "change": "Print 0.80 THB (low)",
+      "contribution_per_cube_thb": 5.8,
+      "delta_vs_base_thb": 0.7,
+      "max_fixed_cost_thb_per_year_base_volume_10pct": 807809,
+      "note": "ASSUMPTION range"
+    },
+    {
+      "change": "Print 2.50 THB (high)",
+      "contribution_per_cube_thb": 4.1,
+      "delta_vs_base_thb": -1.0,
+      "max_fixed_cost_thb_per_year_base_volume_10pct": 571037,
+      "note": "ASSUMPTION range"
+    },
+    {
+      "change": "Processing 0.25 THB (low)",
+      "contribution_per_cube_thb": 5.35,
+      "delta_vs_base_thb": 0.25,
+      "max_fixed_cost_thb_per_year_base_volume_10pct": 745134,
+      "note": "ASSUMPTION range"
+    },
+    {
+      "change": "Processing 1.00 THB (high)",
+      "contribution_per_cube_thb": 4.6,
+      "delta_vs_base_thb": -0.5,
+      "max_fixed_cost_thb_per_year_base_volume_10pct": 640676,
+      "note": "ASSUMPTION range"
+    },
+    {
+      "change": "Carton 3 THB per 12 (low)",
+      "contribution_per_cube_thb": 5.2667,
+      "delta_vs_base_thb": 0.1667,
+      "max_fixed_cost_thb_per_year_base_volume_10pct": 733528,
+      "note": "UNVERIFIED listing range"
+    },
+    {
+      "change": "Carton 7 THB per 12 (high)",
+      "contribution_per_cube_thb": 4.9333,
+      "delta_vs_base_thb": -0.1667,
+      "max_fixed_cost_thb_per_year_base_volume_10pct": 687102,
+      "note": "UNVERIFIED listing range"
+    },
+    {
+      "change": "All four packaging inputs at low",
+      "contribution_per_cube_thb": 6.8467,
+      "delta_vs_base_thb": 1.7467,
+      "max_fixed_cost_thb_per_year_base_volume_10pct": 953586,
+      "note": "Combined bound, not a probability"
+    },
+    {
+      "change": "All four packaging inputs at high",
+      "contribution_per_cube_thb": 2.0333,
+      "delta_vs_base_thb": -3.0667,
+      "max_fixed_cost_thb_per_year_base_volume_10pct": 283197,
+      "note": "Combined bound, not a probability"
+    },
+    {
+      "change": "Target pH 3.0 (reactants 0.259 THB)",
+      "contribution_per_cube_thb": 5.021,
+      "delta_vs_base_thb": -0.079,
+      "max_fixed_cost_thb_per_year_base_volume_10pct": 699312,
+      "note": "Formulation model"
+    },
+    {
+      "change": "Dose 0.55 volume (reactants scaled linearly)",
+      "contribution_per_cube_thb": 5.17,
+      "delta_vs_base_thb": 0.07,
+      "max_fixed_cost_thb_per_year_base_volume_10pct": 720064,
+      "note": "DERIVED approximation; assumes free-acid excess scales with dose"
+    },
+    {
+      "change": "Excise 14% of an assumed ex-factory base (1.26 THB per cube)",
+      "contribution_per_cube_thb": 3.84,
+      "delta_vs_base_thb": -1.26,
+      "max_fixed_cost_thb_per_year_base_volume_10pct": 534825,
+      "note": "Base not read; classification open"
+    },
+    {
+      "change": "Pack: single pouch, no carton",
+      "contribution_per_cube_thb": 5.52,
+      "delta_vs_base_thb": 0.42,
+      "max_fixed_cost_thb_per_year_base_volume_10pct": 768811,
+      "note": "Flatters: carries no carton"
+    },
+    {
+      "change": "Pack: 24-cube carton",
+      "contribution_per_cube_thb": 5.15,
+      "delta_vs_base_thb": 0.05,
+      "max_fixed_cost_thb_per_year_base_volume_10pct": 717279,
+      "note": "Model comparison"
+    }
+  ],
+  "summary": {
+    "base_case": {
+      "contribution_margin": 0.5667,
+      "contribution_per_cube_thb": 5.1,
+      "cost_per_cube_thb": 3.9,
+      "ex_factory_per_cube_thb": 9.0,
+      "max_fixed_cost_thb_per_year_at_10pct": 710315,
+      "npv_at_fixed_1000000_thb": -1387821,
+      "npv_at_fixed_250000_thb": 2205269,
+      "npv_at_fixed_500000_thb": 1007573,
+      "pack": 12,
+      "rate": 0.1,
+      "volume": 200000
+    }
+  },
+  "unit_economics": {
+    "base_contribution_margin": 0.5667,
+    "base_contribution_thb": 5.1,
+    "base_cost_thb": 3.9,
+    "base_pack": 12,
+    "contribution_per_cube_by_pack_thb": {
+      "1": 5.52,
+      "12": 5.1,
+      "24": 5.15,
+      "6": 4.85
+    },
+    "cost_per_cube_by_pack_thb": {
+      "1": 3.48,
+      "12": 3.9,
+      "24": 3.85,
+      "6": 4.15
+    },
+    "cost_ph30_base_pack_thb": 3.979,
+    "ex_factory_share": 0.6,
+    "ex_factory_thb_per_cube": 9.0,
+    "pouch_plus_print_plus_processing_share_of_cost": 0.9483,
+    "shelf_thb": 15.0
+  },
+  "volume_scenarios_cubes_per_year": {
+    "base": 200000,
+    "high": 1000000,
+    "low": 50000
+  }
+}

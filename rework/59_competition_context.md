@@ -48,3 +48,5 @@ Source: the organiser's Google Form (registration page), read in the user's Chro
 **Points to check against the team's records:**
 - The form's "should contain three key components" conflicts with decision D5 in `rework/52` ("three components are not expected"). The user needs to decide which reading applies.
 - The D-Day onsite pitch at Singha Complex for the top 12 teams is a new fact for the timeline.
+
+**Submission rule (noted 19 October 2026, from the form's later pages as read by the user):** the submission file must be a PDF, and no larger than 100 MB. The remaining form pages were not informative. The form tab was closed by the user; nothing was submitted.

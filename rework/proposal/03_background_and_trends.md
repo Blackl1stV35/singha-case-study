@@ -27,7 +27,7 @@ Limit: no consolidated accounts, innovation budget or group R&D spend were avail
 
 The survey covers all products, so it is a directional screen for drinks. A government release of 18 September 2026 links health claims with sustainability for Thai food and carries no beverage figure (Source 8; P; SOURCED).
 
-Limit: no sourced Thai carbonated soft-drink size is available.
+Limit: press figures for the Thai carbonated soft-drink market differ (over THB 66,000 million, 2024, year not stated; THB 76,900 million, 2026 bottler data; S, Appendix B section 2.3), and neither is checked at source, so no market is sized from them.
 
 ## Mega trends in food and beverage
 
@@ -47,7 +47,7 @@ One component is enough, so fit is shown on all three axes. "Component" here is 
 | Sugar reduction | Moderate. Sucralose is the sweetener. The flavoured-drink rows allow 300 mg/kg under condition 127, which applies the level to the drink as ready to drink (Source 14; P; SOURCED for those rows only). The design level is about 100 mg/kg (ASSUMPTION), or 33 mg per 330 ml serve (DERIVED). Classification (beverage, edible ice or electrolyte drink) is open. Condition TH3 covers electrolyte drinks only and is not relied on. No sugar-level claim | None | Moderate; stated intent only |
 | Convenience and price | None | Moderate. One cube per pouch is the design, not yet tested with buyers | Weak; cross-category survey. Convenience chain: 15,945 stores at end-2025; scope not confirmed, read as Thai by inference (Source 13; P; SOURCED) |
 | Dissolvable cubes | None | Moderate for a new consumption form, the central proposition. Overseas, a pouch of about 15 cubes was sold in Japan (Source 10) | Weak; no domestic evidence |
-| Carbonated habit | None | Moderate; established category (size withheld). Working serve: 0.55 volume of carbon dioxide per 330 ml, a desk-model result against a solubility table (Source 15; S; SOURCED) | Moderate; existing consumption |
+| Carbonated habit | None | Moderate; established category (size not verified; see the limit above). Working serve: 0.55 volume of carbon dioxide per 330 ml, a desk-model result against a solubility table (Source 15; S; SOURCED) | Moderate; existing consumption |
 
 Overall: the format carries the central proposition, but no domestic evidence yet shows a Thai buyer for it. The target is the weakest fit. Conversion figures in this proposal are model results, not consumer findings.
 

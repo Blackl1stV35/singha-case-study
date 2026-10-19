@@ -27,7 +27,7 @@ The named target is men aged 25 to 34, compared with men aged 35 to 44; men aged
 
 - **No consumer test exists.** No panel, sales data or Thai retail audit exists. Taste is untested; pH 3.5 is a working anchor, and no bench test of fizz has been run.
 
-- **The lead is a model result.** The model puts men aged 25 to 34 ahead in about 94% of draws, with a median gap of 0.5 to 0.7 points [DERIVED from NSO 2021 age bands (UNVERIFIED) and an ASSUMPTION elasticity, uniform 0.5 to 1.0]. The per-year odds-ratio interval, 0.991 to 1.001, includes 1.0 [DERIVED; table not located, UNVERIFIED].
+- **The lead is a model result.** The model puts men aged 25 to 34 ahead in about 94% of draws, with a median gap of about 0.6 points at a 30 percent baseline on the odds scale (0.9 on the share scale; 1.2 in the survey power simulation) [DERIVED from NSO 2021 age bands (UNVERIFIED) and an ASSUMPTION elasticity, uniform 0.5 to 1.0]. The per-year odds-ratio interval, 0.991 to 1.001, includes 1.0 [DERIVED; table not located, UNVERIFIED].
 
 - **The proxy may not transfer.** The age pattern is a sugar-based proxy, and the cube uses an intensive sweetener. Drinks with sugar substitutes run the other way: everyday use is 0.6% at 25 to 44 and 1.0% at 45 to 59 [P, UNVERIFIED].
 

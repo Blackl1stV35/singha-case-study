@@ -9,6 +9,7 @@ Sourcing policy: [SOURCING_POLICY.md](SOURCING_POLICY.md). Primary sources come 
 | Item | Status | Record |
 |---|---|---|
 | Primary candidate | Sodium-free lime fizz cube, made with potassium bicarbonate and citric acid | [45](45_working_candidate_rework.md), [51](51_final_conclusion_and_recommendation.md), [52](52_pivot_and_retirement.md) |
+| Cube size and mass at the recommended dose | 14 mm cube and 3.79 g mass on basis B (binder and flavour included; confirmed 19 October 2026); DERIVED on assumed amounts and density band; mock-up source and render not yet updated | [64](64_cube_size_at_0_55_volume.md) |
 | Component 1 (ingredients and nutrition) food-science check | Dose recorrected to 0.9 volume of CO₂ (518 mg potassium per 330 ml, was 1,007 mg); acid excess and sweetener choice still open; desk model only | [62](62_component1_food_science_check.md); desk model, stress test and pack economics in [63](63_desk_model_stress_and_pack_economics.md) |
 | Leaf-wrapped frozen drink | Superseded (record 06 banner) | [06](06_final_conclusion.md), [52](52_pivot_and_retirement.md) |
 | Midlife soy drink | Retired | [40](40_candidate_b_soy_drink.md) |
@@ -27,7 +28,7 @@ Sourcing policy: [SOURCING_POLICY.md](SOURCING_POLICY.md). Primary sources come 
 | 330 ml reference | Not cleared | [54](54_package_redesign_vs_singha_can.md) |
 | Conversion lead | Synthesis only; no respondents | [49](49_conversion_test_synthesis.md) |
 | Submission draft | Pended; nothing submitted | [27](27_submission_draft_pended.md) (retired draft, kept for the record) |
-| Competition proposal sections (executive summary in judge/; 01 to 08 drafts; 09 feasibility and registration; 10 risk and implementation) and the project valuation model | Written 19 October 2026 at the recommended design (0.55 volume, pH 3.5 working, sucralose). Team-only traceability appendices to delete before submission. Sources captured in [raw/captures_2026-10-19/](raw/captures_2026-10-19/): 65 SOURCED, 16 UNVERIFIED | [proposal/](proposal/), [screen/project_valuation.py](screen/project_valuation.py), [screen/handover_figures.py](screen/handover_figures.py) |
+| Competition proposal sections (executive summary in judge/; 01 to 08 drafts; 09 feasibility and registration; 10 risk and implementation, rebuilt 19 October 2026 from Singha's go decision with gates 0 to 9, a marketing pilot and twelve decisions for Singha) and the project valuation model | Written 19 October 2026 at the recommended design (0.55 volume, pH 3.5 working, sucralose). Team-only traceability appendices to delete before submission. Sources captured in [raw/captures_2026-10-19/](raw/captures_2026-10-19/): 65 SOURCED, 16 UNVERIFIED | [proposal/](proposal/), [screen/project_valuation.py](screen/project_valuation.py), [screen/handover_figures.py](screen/handover_figures.py) |
 
 ## Reading order
 
@@ -41,7 +42,7 @@ Sourcing policy: [SOURCING_POLICY.md](SOURCING_POLICY.md). Primary sources come 
 
 ## Documents by status
 
-**Active (primary candidate and decisions):** 00, 45, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62. The storyboard for the drop animation is at `mockup/ANIMATION_storyboard.md`.
+**Active (primary candidate and decisions):** 00, 45, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 64. The storyboard for the drop animation is at `mockup/ANIMATION_storyboard.md`.
 
 **Supporting (still used):**
 - 01, 02, 04: idea catalogue, desk kill tests, and the price audit.
@@ -77,13 +78,17 @@ The numbering has gaps (35 to 39) because those numbers were never used.
 
 ## Open items
 
+- Open decisions, stated limits and conflicts as of 19 October 2026: [52](52_pivot_and_retirement.md) section 7 (O1 to O12; L1 to L22).
 - Repository visibility: the remote stays public by the user's decision (19 October 2026). The repository is not part of the stage presentation.
-- Dose (0.9 or 0.55 volume), target pH, the gazetted Thai No. 468 annex download (sweetener permission), and whether to draft the executive summary, the feasibility and registration route, and the risk and implementation plan. None is decided.
+- Dose and pH are decided (0.55 volume, D14; pH 3.5, D15). The sweetener permission is resolved on the level (D16); its classification and the potassium bicarbonate read are stated limits ([50](50_final_gate_resolution.md) G6). The proposal drafts were written on 19 October 2026. The fizz gate G2 at 0.55 volume is open ([52](52_pivot_and_retirement.md) section 7, O1).
 - Trademark rights are authorized by the user for the product proposal. The registry search stays partial and is recorded as a stated limit. See [54](54_package_redesign_vs_singha_can.md).
 - Gate G1 is closed on 19 October 2026. Brand-owner and legal sign-off, and the alcohol-cue question, are Singha's department's responsibility (see [60](60_segment_redesign_lime_cube.md), section 8).
-- The judge folder was synced to the merged design on 19 October 2026. Re-sync after any label change.
+- MOCK ON HOLD (19 October 2026): the mock-up is held as it stands and is to be finalized later. The render is 14 mm cube, basis B, with a 6-cube carton (190 x 150 x 50 mm, ASSUMPTION). The judge 3D page and PNGs are synced to it. The page verify passes 23 of 23. Before finalizing, decide the carton material (open; see [64](64_cube_size_at_0_55_volume.md) section 9) and the net weight (kept as "[to be set]"). Re-sync `judge/` after any label or page change.
+- The judge handover, the executive summary and the proposal drafts were moved to the 6-cube pack on 19 October 2026. The valuation model is rebased to the 0.55-volume design and the 6-cube base (base NPV THB 0.88 million at THB 500,000 fixed cost; [64](64_cube_size_at_0_55_volume.md) section 11). The proposal's valuation statements are being re-synced to it.
+- Proposed 22-slide outline (19 October 2026): reviewed in [66](66_proposed_outline_validation.md). It describes a product called "Capsule Soda", not the Lime Cube, and 12 of its topics are only partly supported. Nothing is built from it. The Canva deck draft has eight pages, all edited and unsaved, awaiting an outline choice and approval to save.
+- Carton material is resolved as printed folding paperboard (19 October 2026). Board grade, print and price need a carton maker's quote, and the Thai paper rule is a stated limit ([64](64_cube_size_at_0_55_volume.md) section 9).
 - External links in records 02, 03, 55 and 58 were not fetched. This is a stated limit until they are checked.
 - The textures in `archive/leaf_wrapped_mockup/textures/` came from earlier downloads whose approval is not on record.
 - Sugar-drink excise: the Royal Gazette schedule for item 02.02 is read as primary (1 October 2566 onwards: 0, 1, 3 or 5 baht per litre by sugar per 100 ml, plus 14% ad valorem). Later amendments and the ad valorem base are not checked. See [61](61_singha_can_cost_model.md) and `raw/gazette_sugar_drink_excise_primary_2560_A095_111.md`.
-- Dose: the confirmed design dose is 0.9 volume of CO₂ per 330 ml (user, 19 October 2026; [62](62_component1_food_science_check.md), [52](52_pivot_and_retirement.md) D10). The 1.75-volume figures still appear in records 45 (superseded by banner), 48, 50, 51 and 57, in `mockup/MATERIALS_cube.md`, `mockup/style_tokens.json` and the screen scripts. Re-derive the cube mass and the potassium figure from 0.9 volume before the mockup is re-rendered.
+- Dose: the recommended dose is 0.55 volume of CO₂ per 330 ml, pH 3.5, adopted on the recommendation (user, 19 October 2026; [52](52_pivot_and_retirement.md) D14 and D15; [63](63_desk_model_stress_and_pack_economics.md) section 9). The 0.9 and 1.75-volume figures are superseded. The cube is re-derived at 0.55 volume in [64](64_cube_size_at_0_55_volume.md). Basis B is confirmed (binder and flavour included): 14 mm, 3.79 g central, 5.29 g packed. Record 64 section 8 corrects its earlier binder figure. The mock-up source (`mockup/style_tokens.json`, `MATERIALS_cube.md`, the build script and the label text), the render, `judge/`, the handover composition line and the proposal's 4.44 g figure still show basis A or the old cube. They need the team's go-ahead before the update, as [64](64_cube_size_at_0_55_volume.md) sections 7 and 8 set out.
 - Audit (19 October 2026): records 53, 55, 56, 57, 58 and 61 carry corrections at their end. Figures cited to pages that are not saved in the repo are UNVERIFIED until the page text is saved to `rework/raw/`. Render logs are in `screen/render_logs/`.

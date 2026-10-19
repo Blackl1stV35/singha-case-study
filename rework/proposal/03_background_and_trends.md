@@ -39,11 +39,11 @@ Limit: no sourced Thai carbonated soft-drink size is available.
 
 ## Trend fit across the three brief axes
 
-One component is enough, so fit is shown on all three axes. The brief's wording refers to three components; this reading is an unchecked limit. Coverage rating (ASSUMPTION): Ingredients moderate, Formats moderate, Trend weak.
+One component is enough, so fit is shown on all three axes. "Component" here is the brief's sense, a count of its axes, not a count of ingredients; the cube's ingredients are listed in the recipe in the problem section (file 01). The brief's wording refers to three components; this reading is an unchecked limit. Coverage rating (ASSUMPTION): Ingredients moderate, Formats moderate, Trend weak.
 
 | Trend | Ingredients and Nutrition | Alternative Formats | New Trend-Driven Target |
 |---|---|---|---|
-| Health attention | Weak. Composition stated as fact: potassium bicarbonate and citric acid, both quantum satis in the flavoured-drink category (Source 14), and no sodium carbonate. No health wording | None | Moderate interest (ASSUMPTION); no health claim made |
+| Health attention | Weak. Composition stated as fact: potassium bicarbonate, citric acid and sucralose; a binder and filler (not yet named; not yet checked for sodium; sodium not claimed) and natural lime flavour (amounts are assumptions until a cube is weighed); no sodium carbonate. Potassium bicarbonate and citric acid are quantum satis in the flavoured-drink category (Source 14); the binder, filler and flavour are not yet checked against it. No health wording | None | Moderate interest (ASSUMPTION); no health claim made |
 | Sugar reduction | Moderate. Sucralose is the sweetener. The flavoured-drink rows allow 300 mg/kg under condition 127, which applies the level to the drink as ready to drink (Source 14; P; SOURCED for those rows only). The design level is about 100 mg/kg (ASSUMPTION), or 33 mg per 330 ml serve (DERIVED). Classification (beverage, edible ice or electrolyte drink) is open. Condition TH3 covers electrolyte drinks only and is not relied on. No sugar-level claim | None | Moderate; stated intent only |
 | Convenience and price | None | Moderate. One cube per pouch is the design, not yet tested with buyers | Weak; cross-category survey. Convenience chain: 15,945 stores at end-2025; scope not confirmed, read as Thai by inference (Source 13; P; SOURCED) |
 | Dissolvable cubes | None | Moderate for a new consumption form, the central proposition. Overseas, a pouch of about 15 cubes was sold in Japan (Source 10) | Weak; no domestic evidence |
@@ -55,7 +55,7 @@ Overall: the format carries the central proposition, but no domestic evidence ye
 
 Several pages were read through a text extract; re-check their figures against the live page before any published use. No domestic study of dissolvable cubes has been found, and no Thai retail shelf search has been run. Global market-size estimates are not used.
 
-The carbon dioxide and pH figures are desk-model results. No bench or sensory test has been run, and taste is untested. The working pH of 3.5 is an ASSUMPTION. The gate for the 0.55-volume dose is for R&D to define; none is set here.
+The carbon dioxide and pH figures are desk-model results. No bench or sensory test has been run, and taste is untested. The working pH of 3.5 is an ASSUMPTION. The gate for the 0.55-volume dose is for R&D to restate before the run (section 10, Gate 3); none is set here.
 
 Only the flavoured-drink rows of the Thai food-additive annex were read, not the full annex. Unverifiable figures, including two Thai consumer surveys and two trend percentages, are not used. The lime can's national retail reach is not verified here.
 

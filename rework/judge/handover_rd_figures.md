@@ -4,9 +4,9 @@
 
 ## What is handed over
 
-The Lime Cube is a dissolvable drink cube. One cube dissolves in one 330 mL serve to make a carbonated lime drink. One cube per pouch is inferred, not confirmed with the organiser. The composition is potassium bicarbonate, citric acid and sucralose; no sodium carbonate is used.
+The Lime Cube is a dissolvable drink cube. One cube dissolves in one 330 mL serve to make a carbonated lime drink. One cube per pouch is inferred, not yet confirmed with Singha. The composition is potassium bicarbonate, citric acid, sucralose (an intensive sweetener), a binder and filler (not yet named), and natural lime flavour; no sodium carbonate is used. The binder's sodium content is not yet checked, so no sodium claim is made. The binder and flavour amounts are assumptions until a cube is weighed.
 
-The recommended dose is 0.55 volume of carbon dioxide per 330 mL. The working pH anchor is 3.5; taste at that pH is untested. Packs are cartons of 6, 12 or 24 cubes.
+The recommended dose is 0.55 volume of carbon dioxide per 330 mL. The working pH anchor is 3.5; taste at that pH is untested. The portable pack for sport and recreation use is a carton of 6 cubes, 190 x 150 x 50 mm outside (width, depth, height; ASSUMPTION; no carton maker's quote). The 12-cube and 24-cube cartons are larger options.
 
 Only the composition is stated as fact: no health, hydration, electrolyte, potassium-benefit, sugar, sodium or fizz-performance claim is made. No domestic cube listing was found, so overseas cube products are cited as analogues (PROXY): Japanese freeze-dried tea and coffee cubes in pouches (2021), and cube brands abroad (2018, 2024).
 
@@ -25,7 +25,13 @@ The Singha lemon soda is a separate product, cited below only for its sweetener.
 - Citric acid: 0.52 g to neutralise the bicarbonate (DERIVED: 8.1 mmol divided by three acid protons). The total for pH 3.5 is 2.10 g, about 6.4 g per litre (DERIVED from citric and carbonic acid pKa values, S, UNVERIFIED in this handover).
 - Potassium: about 317 mg (DERIVED: 8.1 mmol at 39.1 mg per mmol). This is 9.1% of the Thai reference of 3,500 mg per day (S: a third-party copy of Notification 182 and a consultancy page on the current Notification 445 value; primary text not opened). The two pages cite different notification numbers. The EFSA adult adequate intake is also 3,500 mg (P, SOURCED).
 - Sucralose: 33 mg, about 100 mg per kg (DERIVED: a sweetness target of 6 g sugar per 100 mL, an ASSUMPTION, divided by 600, the low end of the 600 to 650 times sucrose range, S, SOURCED).
-- Sucralose ceiling: 300 mg per kg in category 14.1.4, under condition 127, applying to the drink as ready to drink (P, SOURCED for the flavoured-drink rows only; the full annex was not read). Condition TH3 applies only to electrolyte drinks. Potassium bicarbonate and citric acid are quantum satis in the same category (P, SOURCED for the same rows). A Singha lemon soda product page names sucralose (S, SOURCED).
+- Sucralose ceiling: 300 mg per kg in category 14.1.4, under condition 127, applying to the drink as ready to drink (P, SOURCED for the flavoured-drink rows only; the full annex was not read). Condition TH3 applies only to electrolyte drinks. Potassium bicarbonate and citric acid are quantum satis in the same category (P, SOURCED for the same rows). The binder, filler and flavour are not yet checked against these rules. A Singha lemon soda product page names sucralose (S, SOURCED).
+- Binder and filler: 0.80 g (ASSUMPTION; range 0.5 to 1.2 g). The binder is not yet named, and its sodium content is not checked.
+- Natural lime flavour powder: 0.05 g (ASSUMPTION; range 0.02 to 0.10 g).
+- Reactants: 2.94 g (DERIVED). Central cube mass: 3.79 g (DERIVED on the ASSUMPTION inputs above; range 3.46 to 4.24 g). Not weighed.
+- Cube side: 14 mm (recommended design side), giving a density of 1.38 g per cm3 at the central mass (the 1.25 to 1.60 band is an ASSUMPTION).
+- Packed unit, cube plus a 1.5 g pouch: 5.29 g (ASSUMPTION for the pouch).
+- Net weight on the label: [to be set] until a cube is weighed.
 
 ## Serve temperature and carbon dioxide retention
 
@@ -37,11 +43,11 @@ Ice lowers the starting level: 30 g of ice gives about 21 C at 0.50 volume, and 
 
 ## Cost per cube and per container
 
-Cost per pouch before carton is THB 3.42 (DERIVED from four inputs): reactants THB 0.12, pouch THB 1.30, print THB 1.50 and processing THB 0.50. Pouch and print are ASSUMPTIONS or non-Thai listings, reactants and processing are ASSUMPTIONS, and no Thai quote was requested. The pouch figure ranges from 0.67 to 2.70; a non-Thai listing stands in for a Thai price (PROXY).
+Cost per pouch before carton is THB 3.42 (DERIVED from four inputs): reactants THB 0.12, pouch THB 1.30, print THB 1.50 and processing THB 0.50. Pouch and print are ASSUMPTIONS or non-Thai listings, reactants and processing are ASSUMPTIONS, and no Thai quote was requested. Binder and filler and lime flavour are not priced, so this figure excludes them. The pouch figure ranges from 0.67 to 2.70; a non-Thai listing stands in for a Thai price (PROXY).
 
-At 0.55 volume and pH 3.5, cost per cube is THB 4.09 in a 6-cube carton, THB 3.84 in a 12-cube carton and THB 3.79 in a 24-cube carton (DERIVED). The 12-cube cost includes a carton share of THB 0.42 per cube (THB 5 per 12-cube carton, from a retail box listing used as a PROXY). The model's THB 9.00 ex-factory figure is a placeholder, not a price (ASSUMPTION).
+At 0.55 volume and pH 3.5, cost per cube in the recommended 6-cube carton is THB 4.09 (DERIVED), with a carton share of THB 0.67 per cube (THB 4.00 per 6-cube carton, an ASSUMPTION with no listing for that size). The 12-cube carton, the larger option, costs THB 3.84 per cube (DERIVED), with a carton share of THB 0.42 per cube (THB 5 per 12-cube carton, from a retail box listing used as a PROXY). The 24-cube carton costs THB 3.79 per cube (DERIVED). These costs exclude the binder and filler and the lime flavour, which are not priced; no price is given for either. The model's THB 9.00 ex-factory figure is a placeholder, not a price (ASSUMPTION).
 
-A 20-foot container holds about 128,580 cubes in 12-cube cartons (10,715 cartons). Volume, not weight, is the limit (DERIVED; container dimensions S, SOURCED). This implies about 0.26 litres of container volume per cube, an unstated packing assumption. The modelled load is about 1.6 tonnes against a payload of 28.2 tonnes.
+A 20-foot container holds about 128,586 cubes in 6-cube cartons (21,431 cartons), the recommended pack. Volume, not weight, is the limit (DERIVED; container dimensions S, SOURCED). This implies about 0.26 litres of container volume per cube, an unstated packing assumption. The modelled load is about 2.82 tonnes against a payload of 28.2 tonnes, from 128,586 cubes at 5.29 g packed plus 21,431 cartons at 0.10 kg (ASSUMPTIONS for the pouch and carton masses). The 12-cube carton, the larger option, holds about 128,580 cubes in 10,715 cartons, a modelled load of about 1.75 tonnes (DERIVED on the same inputs).
 
 ## What R&D must define
 
@@ -62,6 +68,7 @@ A 20-foot container holds about 128,580 cubes in 12-cube cartons (10,715 cartons
 - Pack pressure, headspace and storage temperature are not modelled.
 - The 25 C solubility values differ by convention (0.759 and 0.839 volume; S and P, SOURCED), so the gate must state its basis.
 - The excise numerals were read from page images, with no second reading.
+- The binder is not yet named, and its sodium content is not checked. Binder and flavour amounts are assumptions until a cube is weighed, and neither is priced.
 
 ## Tier key
 

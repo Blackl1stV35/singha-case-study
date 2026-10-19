@@ -1,6 +1,6 @@
 ﻿# Feasibility and Thai registration route
 
-Status at 19 October 2026: desk study only, with no bench test, supplier quote or submission. The product is Lime Cube; one cube per pouch is inferred, not confirmed with the organiser.
+Status at 19 October 2026: desk study only, with no bench test, supplier quote or submission. The product is Lime Cube; one cube per pouch is inferred, not yet confirmed with Singha.
 
 ## Tier key
 
@@ -8,7 +8,7 @@ P: a government or regulator text read in full, a company's own filing or releas
 
 ## Technical feasibility (desk)
 
-The design dose is 0.55 volumes of CO2 per 330 mL serve (ASSUMPTION) at a working pH of 3.5 (ASSUMPTION). Taste is untested. Potassium bicarbonate at 0.81 g releases about 8.1 mmol of CO2 (DERIVED). Citric acid is 0.52 g stoichiometrically but 2.10 g to reach pH 3.5, leaving about 1.58 g free (DERIVED). The acid and CO2 calculations use citric acid, carbonic acid and water pKa values (S, UNVERIFIED: not read).
+The design dose is 0.55 volumes of CO2 per 330 mL serve (ASSUMPTION) at a working pH of 3.5 (ASSUMPTION). Taste is untested. Potassium bicarbonate at 0.81 g releases about 8.1 mmol of CO2 (DERIVED). Citric acid is 0.52 g stoichiometrically but 2.10 g to reach pH 3.5, leaving about 1.58 g free (DERIVED). Basis B adds a binder and filler of 0.80 g (ASSUMPTION; range 0.5 to 1.2 g; not yet named; sodium unconfirmed, gate G3) and natural lime flavour of 0.05 g (ASSUMPTION; range 0.02 to 0.10 g). Reactants are 2.94 g, and the central cube mass is 3.79 g (DERIVED on ASSUMPTION inputs; range 3.46 to 4.24 g), in a 14 mm cube at 1.38 g/cm3 (band 1.25 to 1.60 an ASSUMPTION). Nothing is weighed. The acid and CO2 calculations use citric acid, carbonic acid and water pKa values (S, UNVERIFIED: not read).
 
 CO2 solubility at 35 C is 0.592 volumes (S, SOURCED, Lange-attributed; 35 C page basis ambiguous). The 0.55 dose sits below it at every modelled serve from 5 to 35 C (DERIVED). The NIST table (P, SOURCED) has no 35 C row and is not used.
 
@@ -22,15 +22,15 @@ Limit: the bench gate that would confirm that 0.55 volumes is reached and kept a
 
 ## Ingredients and supply
 
-Potassium bicarbonate and citric acid are quantum satis in category 14.1.4. Sucralose is limited to 300 mg/kg there, under condition 127 (P, SOURCED). The design uses 33 mg per serve, about 100 mg/kg (DERIVED).
+Potassium bicarbonate and citric acid are quantum satis in category 14.1.4; the binder, filler and flavour are not yet checked against that rule. Sucralose is limited to 300 mg/kg there, under condition 127 (P, SOURCED). The design uses 33 mg per serve, about 100 mg/kg (DERIVED).
 
 - Potassium bicarbonate (38.1 baht per kg) and citric acid (31.4 baht per kg) are PROXY values from UN Comtrade import unit values (P, SOURCED; 2024 and 2025 data), converted at 33.55 baht per US dollar (P, SOURCED: Bank of Thailand, 15 October 2026). The weights are estimates; the potassium line may mix carbonate and bicarbonate.
-- Sucralose at 655 baht per kg is a Thai online asking price with no URL given (UNVERIFIED: not read). Reactants: 0.118 baht per cube (DERIVED).
+- Sucralose at 655 baht per kg is a Thai online asking price with no URL given (UNVERIFIED: not read). Reactants: 0.118 baht per cube (DERIVED). The binder and filler and the lime flavour are not priced (rework/53) and are not in this figure.
 - Pouch 1.30 (range 0.67 to 2.70), print 1.50 and processing 0.50 are ASSUMPTIONS, or rest on a non-Thai listing (UNVERIFIED: not read). No Thai quote was requested.
-- The 12-cube cost includes a carton share of THB 0.42 per cube (THB 5 per 12-cube carton, from a retail box listing used as a PROXY). Six-cube and 24-cube cartons at 4 and 9 baht are ASSUMPTIONS.
-- Cost per cube at 0.55 volumes and pH 3.5: THB 3.84 in a 12-cube carton (DERIVED). The ex-factory planning value of 9.00 baht per cube is an ASSUMPTION (60% of an assumed 15-baht shelf price).
+- The recommended 6-cube cost includes a carton share of THB 0.67 per cube (THB 4 per 6-cube carton, an ASSUMPTION scaled from the 12-cube price; no listing). The 12-cube cost includes a carton share of THB 0.42 per cube (THB 5 per 12-cube carton, from a retail box listing used as a PROXY). The 24-cube carton at 9 baht is an ASSUMPTION.
+- Cost per cube at 0.55 volumes and pH 3.5: THB 4.09 in the recommended 6-cube carton and THB 3.84 in the 12-cube carton, the larger option (DERIVED; both exclude binder and flavour, which are not priced). The ex-factory planning value of 9.00 baht per cube is an ASSUMPTION (60% of an assumed 15-baht shelf price).
 
-About 128,580 cubes fit a 20-foot container in 12-cube cartons, limited by volume (DERIVED from 33.2 cubic metres; S, SOURCED: SeaCube and ONE pages). Carton size and packing are ASSUMPTIONS.
+The recommended pack is a 6-cube carton, 190 x 150 x 50 mm outside (ASSUMPTION). Six flat pouches of 90 x 70 x 20 mm fit in two layers of up to four (two by two per layer), using 40 mm of the 50 mm height (ASSUMPTION; checked by arithmetic, not by a packing trial). About 128,586 cubes fit a 20-foot container in 21,431 six-cube cartons, limited by volume, with a container mass of 2,823.8 kg against a 28.2-tonne payload. A 40-foot container holds about 262,326 cubes in 43,721 cartons (5,760.9 kg; 26.84-tonne payload). These counts are DERIVED from 33.2 cubic metres at a 92% packing share (S, SOURCED: SeaCube and ONE pages); the carton sizes and the packing share are ASSUMPTIONS. The larger option is a 12-cube carton, 190 x 150 x 100 mm (ASSUMPTION): about 128,580 cubes in 10,715 cartons in a 20-foot container (1,752.2 kg), and 262,320 cubes in 21,860 cartons in a 40-foot container (3,574.7 kg).
 
 ## Competitor overlap
 
@@ -48,7 +48,7 @@ A Thai food registration step applies as classified; its step, form, fees and ti
 
 ## Labelling and claims
 
-The composition may be stated as fact: potassium bicarbonate, citric acid and sucralose, with no sodium carbonate.
+The composition may be stated as fact: potassium bicarbonate, citric acid, sucralose, a binder and filler (not yet named; not yet checked for sodium; sodium not claimed) and natural lime flavour, with no sodium carbonate. The binder and flavour amounts are assumptions until a cube is weighed. Net weight on the label is [to be set] until a cube is weighed; no number is printed.
 
 Barred claims: sugar-free, zero-sugar, sodium-free, health, electrolyte, hydration, potassium-benefit and validated-fizz. The 9.1% figure and fizz duration stay internal and off pack.
 

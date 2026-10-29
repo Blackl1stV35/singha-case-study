@@ -1,0 +1,1449 @@
+{
+  "osotspa_sales_change_2025_vs_2024_pct": -5.571,
+  "osotspa_osathanugrah_holders_in_top10_pct": 38.18,
+  "inputs_note": "All inputs typed from saved pages in rework/raw/diligence_2026-10-20/T4 (read 20 October 2026), and for the cross-referenced rows from the T2 and T5 folders named per row.",
+  "osotspa_margins_on_revenue_from_sales": {
+    "2023": {
+      "gross_margin_pct": 34.545,
+      "net_margin_profit_for_year_pct": 9.297,
+      "net_margin_attributable_pct": 9.216
+    },
+    "2024": {
+      "gross_margin_pct": 37.323,
+      "net_margin_profit_for_year_pct": 6.495,
+      "net_margin_attributable_pct": 6.051
+    },
+    "2025": {
+      "gross_margin_pct": 40.147,
+      "net_margin_profit_for_year_pct": 15.078,
+      "net_margin_attributable_pct": 14.346
+    }
+  },
+  "thaibev_group_margins": {
+    "FY2023": {
+      "gross_margin_pct": 29.642,
+      "net_margin_profit_for_year_pct": 10.532,
+      "net_margin_attributable_pct": 8.24
+    },
+    "FY2024": {
+      "gross_margin_pct": 30.33,
+      "net_margin_profit_for_year_pct": 10.365,
+      "net_margin_attributable_pct": 7.998
+    },
+    "FY2025": {
+      "gross_margin_pct": 31.057,
+      "net_margin_profit_for_year_pct": 9.347,
+      "net_margin_attributable_pct": 7.609
+    }
+  },
+  "thaibev_non_alcoholic_segment_margins": {
+    "FY2023": {
+      "gross_margin_pct": 33.769,
+      "ebitda_margin_pct": 16.122,
+      "net_margin_profit_for_year_pct": 8.6,
+      "net_margin_attributable_pct": 1.894,
+      "share_of_group_sales_pct": 18.966
+    },
+    "FY2024": {
+      "gross_margin_pct": 35.999,
+      "ebitda_margin_pct": 17.557,
+      "net_margin_profit_for_year_pct": 9.018,
+      "net_margin_attributable_pct": 2.211,
+      "share_of_group_sales_pct": 19.337,
+      "net_margin_attributable_restated_pct": 1.742
+    },
+    "FY2025": {
+      "gross_margin_pct": 36.579,
+      "ebitda_margin_pct": 17.458,
+      "net_margin_profit_for_year_pct": 7.937,
+      "net_margin_attributable_pct": 3.727,
+      "share_of_group_sales_pct": 19.435
+    }
+  },
+  "thaibev_fy2025_segment_checks": {
+    "segment_sales_sum": 333286,
+    "group_sales_printed": 333286,
+    "segment_sales_sum_equals_group": true,
+    "segment_gross_profit_sum": 103508,
+    "group_gross_profit_printed": 103508,
+    "segment_gross_profit_sum_equals_group": true,
+    "non_alcoholic_gross_margin_pct": 36.579
+  },
+  "sermsuk_consolidated_margins": {
+    "FY2022": {
+      "gross_profit": 3081,
+      "gross_margin_pct": 28.253,
+      "net_margin_pct": 0.119
+    },
+    "FY2023": {
+      "gross_profit": 3501,
+      "gross_margin_pct": 28.3,
+      "net_margin_pct": 2.005
+    },
+    "FY2024": {
+      "gross_profit": 3847,
+      "gross_margin_pct": 29.248,
+      "net_margin_pct": 3.072
+    }
+  },
+  "retail_group_margins_aggregator_S": {
+    "CP Axtra PCL": {
+      "2023": {
+        "gross_margin_pct": 16.075,
+        "net_margin_pct": 1.776
+      },
+      "2024": {
+        "gross_margin_pct": 16.447,
+        "net_margin_pct": 2.077
+      },
+      "2025": {
+        "gross_margin_pct": 16.08,
+        "net_margin_pct": 1.807
+      }
+    },
+    "Berli Jucker PCL": {
+      "2023": {
+        "gross_margin_pct": 20.629,
+        "net_margin_pct": 3.054
+      },
+      "2024": {
+        "gross_margin_pct": 21.431,
+        "net_margin_pct": 2.5
+      },
+      "2025": {
+        "gross_margin_pct": 21.565,
+        "net_margin_pct": 2.567
+      }
+    },
+    "Central Retail Corporation PCL": {
+      "2023": {
+        "gross_margin_pct": 33.349,
+        "net_margin_pct": 3.227
+      },
+      "2024": {
+        "gross_margin_pct": 31.627,
+        "net_margin_pct": 3.335
+      },
+      "2025": {
+        "gross_margin_pct": 31.659,
+        "net_margin_pct": 3.012
+      }
+    }
+  },
+  "prices_per_330ml": [
+    {
+      "item": "est Cola 325 mL, 6 pack THB 79, Makro (T4/est_retail_listings_makro_7eleven_2026-10-20.md; not deliverable to the area selected)",
+      "thb_per_pack_unit": 13.17,
+      "thb_per_330ml": 13.37,
+      "thb_per_litre": 40.5
+    },
+    {
+      "item": "est Cola 325 mL, 6 pack THB 138, 7-Eleven online (T4/est_retail_listings_makro_7eleven_2026-10-20.md)",
+      "thb_per_pack_unit": 23.0,
+      "thb_per_330ml": 23.35,
+      "thb_per_litre": 70.8
+    },
+    {
+      "item": "est Sugar Free 325 mL, 6 pack THB 99, Sermsuk Click on Lazada (T4/est_priceza_listing_2026-10-20.md)",
+      "thb_per_pack_unit": 16.5,
+      "thb_per_330ml": 16.75,
+      "thb_per_litre": 50.8
+    },
+    {
+      "item": "est Kamikaze Lime 325 mL, 24 pack THB 408, Lazada reseller (T4/est_priceza_listing_2026-10-20.md)",
+      "thb_per_pack_unit": 17.0,
+      "thb_per_330ml": 17.26,
+      "thb_per_litre": 52.3
+    },
+    {
+      "item": "M-150 Sparkling Pink Lemonade 245 mL, single THB 20, Lotus's Shop Online (T4/lemon_lime_soda_listings_priceza_2026-10-20.md)",
+      "thb_per_pack_unit": 20.0,
+      "thb_per_330ml": 26.94,
+      "thb_per_litre": 81.6
+    },
+    {
+      "item": "M-150 Sparkling Pink Lemonade 245 mL, 6 pack THB 105, Lotus's Shop Online (T4/lemon_lime_soda_listings_priceza_2026-10-20.md)",
+      "thb_per_pack_unit": 17.5,
+      "thb_per_330ml": 23.57,
+      "thb_per_litre": 71.4
+    },
+    {
+      "item": "Chang Soda 325 mL, 24 pack THB 180, Makro PRO (T4/lemon_lime_soda_listings_priceza_2026-10-20.md)",
+      "thb_per_pack_unit": 7.5,
+      "thb_per_330ml": 7.62,
+      "thb_per_litre": 23.1
+    },
+    {
+      "item": "Rock Mountain Soda 325 mL, single THB 10, Lotus's Shop Online (T4/lemon_lime_soda_listings_priceza_2026-10-20.md)",
+      "thb_per_pack_unit": 10.0,
+      "thb_per_330ml": 10.15,
+      "thb_per_litre": 30.8
+    },
+    {
+      "item": "Fanta Red Lime Soda 500 mL, single THB 19, Lotus's Shop Online (T4/lemon_lime_soda_listings_priceza_2026-10-20.md)",
+      "thb_per_pack_unit": 19.0,
+      "thb_per_330ml": 12.54,
+      "thb_per_litre": 38.0
+    },
+    {
+      "item": "Nestle Pure Life Soda Plus Lemon Lime 330 mL, 24 tray THB 377, 7-Eleven online, out of stock (T5/r32_7eleven_nestle_pure_life_soda_lemon_lime_out_of_stock.md; read by T5)",
+      "thb_per_pack_unit": 15.71,
+      "thb_per_330ml": 15.71,
+      "thb_per_litre": 47.6
+    },
+    {
+      "item": "Castown craft soda lemonade 265 mL, single bottle THB 59, Lazada (T4/castown_craft_soda_priceza_2026-10-20.md)",
+      "thb_per_pack_unit": 59.0,
+      "thb_per_330ml": 73.47,
+      "thb_per_litre": 222.6
+    },
+    {
+      "item": "San Pellegrino Limonata 330 mL, 4 pack THB 255, Lazada (T4/lemon_lime_soda_listings_priceza_2026-10-20.md)",
+      "thb_per_pack_unit": 63.75,
+      "thb_per_330ml": 63.75,
+      "thb_per_litre": 193.2
+    },
+    {
+      "item": "Limca lemon 250 mL, single THB 45, Lazada India Mart seller (T4/lemon_lime_soda_listings_priceza_2026-10-20.md)",
+      "thb_per_pack_unit": 45.0,
+      "thb_per_330ml": 59.4,
+      "thb_per_litre": 180.0
+    },
+    {
+      "item": "Wanglaoji green lime soda drink 330 mL, 12 pack THB 280, Shopee (T4/lemon_lime_soda_listings_priceza_2026-10-20.md; origin not established)",
+      "thb_per_pack_unit": 23.33,
+      "thb_per_330ml": 23.33,
+      "thb_per_litre": 70.7
+    },
+    {
+      "item": "เซียโล่ honey lime soda 600 mL, 12 pack THB 159, ALL ONLINE (T4/lemon_lime_soda_listings_priceza_2026-10-20.md; brand name as printed in Thai, owner not established)",
+      "thb_per_pack_unit": 13.25,
+      "thb_per_330ml": 7.29,
+      "thb_per_litre": 22.1
+    },
+    {
+      "item": "Singha Soda 325 mL bottle, 24 pack THB 195, 7-Eleven ALL Online (T5/r28_7eleven_singha_soda_24bottle.md; retailer page, tier S)",
+      "thb_per_pack_unit": 8.13,
+      "thb_per_330ml": 8.25,
+      "thb_per_litre": 25.0
+    },
+    {
+      "item": "Singha Soda 325 mL bottle, 24 pack THB 190, Makro PRO (T5/r30_makro_singha_soda_24bottle.md)",
+      "thb_per_pack_unit": 7.92,
+      "thb_per_330ml": 8.04,
+      "thb_per_litre": 24.4
+    },
+    {
+      "item": "Singha Soda 325 mL bottle, 6 pack THB 48, Lotus's Shop Online (T5/r29_lotuss_singha_soda_6bottle.md; container read from the size and the other retailers)",
+      "thb_per_pack_unit": 8.0,
+      "thb_per_330ml": 8.12,
+      "thb_per_litre": 24.6
+    }
+  ],
+  "lemon_lime_and_singha_cross_reference_2026": {
+    "rows": [
+      {
+        "id": "SF01",
+        "item": "Sprite No Sugar 325 mL x24, Coca-Cola Official Store (LazMall), Priceza row 9",
+        "group": "sugar_free_sprite",
+        "source": "T2/priceza_sprite_2026-10-20.md (row 9; struck price 384)",
+        "shown_price_thb": 334,
+        "pack_count": 24,
+        "unit_ml": 325,
+        "thb_per_pack_unit": 13.92,
+        "thb_per_330ml": 14.13
+      },
+      {
+        "id": "SF02",
+        "item": "Sprite No Sugar 325 mL x24 (Sprite Soft Drink No Sugar 325 ml Pack 24), Lazada listing, seller not stated",
+        "group": "sugar_free_sprite",
+        "source": "T2/retail_prices_2026-10-20.md (Lazada rows; struck price 384)",
+        "shown_price_thb": 365,
+        "pack_count": 24,
+        "unit_ml": 325,
+        "thb_per_pack_unit": 15.21,
+        "thb_per_330ml": 15.44
+      },
+      {
+        "id": "SF03",
+        "item": "Sprite No Sugar 325 mL x24, Fresh Mart, Priceza row 18",
+        "group": "sugar_free_sprite",
+        "source": "T2/priceza_sprite_2026-10-20.md (row 18; struck price 828)",
+        "shown_price_thb": 414,
+        "pack_count": 24,
+        "unit_ml": 325,
+        "thb_per_pack_unit": 17.25,
+        "thb_per_330ml": 17.52
+      },
+      {
+        "id": "SF04",
+        "item": "Sprite No Sugar 325 mL x24, CR7 ManU, Priceza row 10",
+        "group": "sugar_free_sprite",
+        "source": "T2/priceza_sprite_2026-10-20.md (row 10)",
+        "shown_price_thb": 456,
+        "pack_count": 24,
+        "unit_ml": 325,
+        "thb_per_pack_unit": 19.0,
+        "thb_per_330ml": 19.29
+      },
+      {
+        "id": "SF05",
+        "item": "7UP No Sugar lemon soda 325 mL x24, Suntory PepsiCo official store, LazMall, Priceza row 17",
+        "group": "sugar_free_7up",
+        "source": "T5/r23_priceza_7up_listing.md (row 17; struck price 384)",
+        "shown_price_thb": 293,
+        "pack_count": 24,
+        "unit_ml": 325,
+        "thb_per_pack_unit": 12.21,
+        "thb_per_330ml": 12.4
+      },
+      {
+        "id": "SF06",
+        "item": "7UP No Sugar lemon soda 325 mL x12, Suntory PepsiCo official store, LazMall, Priceza row 20",
+        "group": "sugar_free_7up",
+        "source": "T5/r23_priceza_7up_listing.md (row 20; struck price 192)",
+        "shown_price_thb": 161,
+        "pack_count": 12,
+        "unit_ml": 325,
+        "thb_per_pack_unit": 13.42,
+        "thb_per_330ml": 13.62
+      },
+      {
+        "id": "SF07",
+        "item": "7UP Zero Sugar Lemon Soda 325 mL x6, Lotus's Shop Online (list price 80)",
+        "group": "sugar_free_7up",
+        "source": "T5/r09_lotuss_7up_zero_325_6can.md",
+        "shown_price_thb": 75,
+        "pack_count": 6,
+        "unit_ml": 325,
+        "thb_per_pack_unit": 12.5,
+        "thb_per_330ml": 12.69
+      },
+      {
+        "id": "SF08",
+        "item": "7UP No Sugar lemon soda 325 mL x6, Suntory PepsiCo official store, LazMall, Priceza row 21",
+        "group": "sugar_free_7up",
+        "source": "T5/r23_priceza_7up_listing.md (row 21)",
+        "shown_price_thb": 96,
+        "pack_count": 6,
+        "unit_ml": 325,
+        "thb_per_pack_unit": 16.0,
+        "thb_per_330ml": 16.25
+      },
+      {
+        "id": "SG01",
+        "item": "Singha Lemon Soda 330 mL single can, Lotus's Shop Online (proposer's product; retailer price)",
+        "group": "singha_lemon_soda",
+        "source": "T2/lotus_singha_lemon_soda_can_2026-10-20.md; T5/r10_lotuss_singha_lemon_single_can.md",
+        "shown_price_thb": 17,
+        "pack_count": 1,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 17.0,
+        "thb_per_330ml": 17.0
+      },
+      {
+        "id": "SG02",
+        "item": "Singha Lemon Soda 330 mL x6, Lotus's Shop Online (list price 85; member price 81)",
+        "group": "singha_lemon_soda",
+        "source": "T5/r06_lotuss_singha_lemon_6can.md",
+        "shown_price_thb": 85,
+        "pack_count": 6,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 14.17,
+        "thb_per_330ml": 14.17
+      },
+      {
+        "id": "SG03",
+        "item": "Singha Lemon Soda 330 mL x24, Lotus's Shop Online (pack reading DERIVED from a per-each label)",
+        "group": "singha_lemon_soda",
+        "source": "T5/r05_lotuss_singha_lemon_24can.md",
+        "shown_price_thb": 330,
+        "pack_count": 24,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 13.75,
+        "thb_per_330ml": 13.75
+      },
+      {
+        "id": "SW01",
+        "item": "Schweppes Lime Soda no sugar 330 mL x12, Coca-Cola Official Store, LazMall, Priceza row 15",
+        "group": "schweppes_lime_sugar_free",
+        "source": "T5/priceza_aggregator_2026-10-20.md (P4, product 10615542238); T5/r24_priceza_schweppes_listing.md (row 15)",
+        "shown_price_thb": 196,
+        "pack_count": 12,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 16.33,
+        "thb_per_330ml": 16.33
+      },
+      {
+        "id": "SW02",
+        "item": "Schweppes Lime Soda Zero Sugar 330 mL x6, Makro PRO (unavailable in the area selected; excluded)",
+        "group": "excluded_unavailable",
+        "source": "T5/r33_makro_schweppes_lime_zero_unavailable.md",
+        "shown_price_thb": 84,
+        "pack_count": 6,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 14.0,
+        "thb_per_330ml": 14.0
+      },
+      {
+        "id": "SL01",
+        "item": "Sprite Lemon Plus 325 mL single can, 2022 price (dated; excluded from 2026 bands)",
+        "group": "excluded_dated_2022",
+        "source": "T5/r27_thaiger_sprite_lemon_plus_2022.md",
+        "shown_price_thb": 15,
+        "pack_count": 1,
+        "unit_ml": 325,
+        "thb_per_pack_unit": 15.0,
+        "thb_per_330ml": 15.23
+      },
+      {
+        "id": "SW01R",
+        "item": "Schweppes Lime Soda 330 mL x12, regular (no sugar wording in the name), Coca-Cola Official Store, LazMall (product 10247417739)",
+        "group": "schweppes_lime_regular",
+        "source": "T5/priceza_aggregator_2026-10-20.md (P4)",
+        "shown_price_thb": 196,
+        "pack_count": 12,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 16.33,
+        "thb_per_330ml": 16.33
+      },
+      {
+        "id": "SW03",
+        "item": "Schweppes Lime Soda no sugar 330 mL x24, Coca-Cola Official Store, LazMall (product 10615452638; delivery limited to Bangkok metro, Nonthaburi and Chonburi)",
+        "group": "schweppes_lime_sugar_free",
+        "source": "T5/priceza_aggregator_2026-10-20.md (P4); T5/r24_priceza_schweppes_listing.md (row 21)",
+        "shown_price_thb": 351,
+        "pack_count": 24,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 14.63,
+        "thb_per_330ml": 14.63
+      },
+      {
+        "id": "SW04",
+        "item": "Schweppes Lime Soda no sugar 330 mL x12, Lotus's Shop Online (Priceza row; the Lotus's page for this pack was not opened)",
+        "group": "schweppes_lime_sugar_free",
+        "source": "T5/priceza_aggregator_2026-10-20.md (P4); T5/r24_priceza_schweppes_listing.md (row 5)",
+        "shown_price_thb": 167,
+        "pack_count": 12,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 13.92,
+        "thb_per_330ml": 13.92
+      },
+      {
+        "id": "SW05",
+        "item": "Schweppes Lime Soda no sugar 330 mL x6, Lotus's Shop Online (Priceza row, product 51616830; page not opened)",
+        "group": "schweppes_lime_sugar_free",
+        "source": "T5/priceza_aggregator_2026-10-20.md (P4); T5/r24_priceza_schweppes_listing.md (row 7)",
+        "shown_price_thb": 85,
+        "pack_count": 6,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 14.17,
+        "thb_per_330ml": 14.17
+      },
+      {
+        "id": "SW06",
+        "item": "Schweppes Lime Soda 330 mL x6, regular, Lotus's Shop Online (Priceza row, product 15514234; page not opened)",
+        "group": "schweppes_lime_regular",
+        "source": "T5/priceza_aggregator_2026-10-20.md (P4); T5/r24_priceza_schweppes_listing.md (row 6)",
+        "shown_price_thb": 85,
+        "pack_count": 6,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 14.17,
+        "thb_per_330ml": 14.17
+      },
+      {
+        "id": "SW07",
+        "item": "Schweppes Soft Drink Lime Soda 330 mL x6, regular, Makro PRO (page read; no unavailability notice on this page)",
+        "group": "schweppes_lime_regular",
+        "source": "T5/t5_recheck_makro_pro_2026-10-20.md (section 5)",
+        "shown_price_thb": 84,
+        "pack_count": 6,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 14.0,
+        "thb_per_330ml": 14.0
+      },
+      {
+        "id": "SW08",
+        "item": "Schweppes Lime Soda Zero Sugar 330 mL x6, 7-Eleven ALL Online (page shows 170, struck 190; 28.33 a can, unreconciled outlier)",
+        "group": "excluded_outlier",
+        "source": "T5/r13_7eleven_schweppes_lime_zero_6can.md; T5/t5_recheck_7eleven_allonline_2026-10-20.md (section 3)",
+        "shown_price_thb": 170,
+        "pack_count": 6,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 28.33,
+        "thb_per_330ml": 28.33
+      },
+      {
+        "id": "SW09",
+        "item": "Schweppes Manao Soda 330CC single can, Lotus's Shop Online page (name carries no sugar-free wording; Priceza shows 17 for the same code and the page governs)",
+        "group": "schweppes_lime_regular",
+        "source": "T5/r11_lotuss_schweppes_manao_lime_single.md; T5/r24_priceza_schweppes_listing.md (row 4)",
+        "shown_price_thb": 18,
+        "pack_count": 1,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 18.0,
+        "thb_per_330ml": 18.0
+      },
+      {
+        "id": "SG04",
+        "item": "Singha Lemon Soda 330 mL x6, Makro PRO (single-pack price 82; the buy-3-or-more figure of 78 is not used)",
+        "group": "singha_lemon_retail",
+        "source": "T5/r04_makro_singha_lemon_6can.md; T5/t5_recheck_makro_pro_2026-10-20.md (section 2)",
+        "shown_price_thb": 82,
+        "pack_count": 6,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 13.67,
+        "thb_per_330ml": 13.67
+      },
+      {
+        "id": "SG05",
+        "item": "Singha Lemon Soda 330 mL x24, Makro PRO (325; 330 shown as the earlier price)",
+        "group": "singha_lemon_retail",
+        "source": "T5/r03_makro_singha_lemon_24can.md; T5/t5_recheck_makro_pro_2026-10-20.md (section 1)",
+        "shown_price_thb": 325,
+        "pack_count": 24,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 13.54,
+        "thb_per_330ml": 13.54
+      },
+      {
+        "id": "SG06",
+        "item": "Singha Lemon Soda 330 mL x24, 7-Eleven ALL Online (330; 408 shown as the earlier price)",
+        "group": "singha_lemon_retail",
+        "source": "T5/r01_7eleven_singha_lemon_24can.md; T5/t5_recheck_7eleven_allonline_2026-10-20.md (section 1)",
+        "shown_price_thb": 330,
+        "pack_count": 24,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 13.75,
+        "thb_per_330ml": 13.75
+      },
+      {
+        "id": "SG07",
+        "item": "Singha Lemon Soda 330 mL x6, 7-Eleven ALL Online (172; 182 shown as the earlier price; 28.67 a can, unreconciled outlier)",
+        "group": "singha_lemon_outlier",
+        "source": "T5/r02_7eleven_singha_lemon_6can.md; T5/t5_recheck_7eleven_allonline_2026-10-20.md (section 2)",
+        "shown_price_thb": 172,
+        "pack_count": 6,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 28.67,
+        "thb_per_330ml": 28.67
+      },
+      {
+        "id": "SG08",
+        "item": "Singha Lemon Soda 330 mL x6, Lotus's Shop Online as printed by Priceza (83; the Lotus's page read gives 85 and governs)",
+        "group": "excluded_conflict",
+        "source": "T5/priceza_aggregator_2026-10-20.md (P5)",
+        "shown_price_thb": 83,
+        "pack_count": 6,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 13.83,
+        "thb_per_330ml": 13.83
+      },
+      {
+        "id": "SG09",
+        "item": "Singha Lemon Soda 330 mL x6, Lazada third-party seller (114; not a retailer of record)",
+        "group": "excluded_third_party",
+        "source": "T5/priceza_aggregator_2026-10-20.md (P5)",
+        "shown_price_thb": 114,
+        "pack_count": 6,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 19.0,
+        "thb_per_330ml": 19.0
+      },
+      {
+        "id": "SG10",
+        "item": "Singha Lemon Soda 330 mL x6, Lazada third-party seller (126; not a retailer of record)",
+        "group": "excluded_third_party",
+        "source": "T5/priceza_aggregator_2026-10-20.md (P5)",
+        "shown_price_thb": 126,
+        "pack_count": 6,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 21.0,
+        "thb_per_330ml": 21.0
+      },
+      {
+        "id": "SG11",
+        "item": "Singha Lemon Soda 330 mL x24, Lazada third-party seller (369; not a retailer of record)",
+        "group": "excluded_third_party",
+        "source": "T5/priceza_aggregator_2026-10-20.md (P5)",
+        "shown_price_thb": 369,
+        "pack_count": 24,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 15.38,
+        "thb_per_330ml": 15.38
+      },
+      {
+        "id": "SG12",
+        "item": "Singha Lemon Soda 330 mL single, Lazada third-party seller (16; not a retailer of record)",
+        "group": "excluded_third_party",
+        "source": "T5/priceza_aggregator_2026-10-20.md (P5)",
+        "shown_price_thb": 16,
+        "pack_count": 1,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 16.0,
+        "thb_per_330ml": 16.0
+      },
+      {
+        "id": "SG13",
+        "item": "Singha Lemon Soda 330 mL single, Lazada third-party seller (17; not a retailer of record)",
+        "group": "excluded_third_party",
+        "source": "T5/priceza_aggregator_2026-10-20.md (P5)",
+        "shown_price_thb": 17,
+        "pack_count": 1,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 17.0,
+        "thb_per_330ml": 17.0
+      },
+      {
+        "id": "VR01",
+        "item": "Singha Red Lemon Soda 330 mL x6, Makro PRO (79)",
+        "group": "singha_variant",
+        "source": "T6/04_retail_listings_2026-10-20.md (Makro PRO table)",
+        "shown_price_thb": 79,
+        "pack_count": 6,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 13.17,
+        "thb_per_330ml": 13.17
+      },
+      {
+        "id": "VR02",
+        "item": "Singha Lemon Cream Soda 330 mL x6, Makro PRO (79)",
+        "group": "singha_variant",
+        "source": "T6/04_retail_listings_2026-10-20.md (Makro PRO table)",
+        "shown_price_thb": 79,
+        "pack_count": 6,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 13.17,
+        "thb_per_330ml": 13.17
+      },
+      {
+        "id": "VR03",
+        "item": "Singha Pink Lemon Soda 330 mL x6, Makro PRO (82)",
+        "group": "singha_variant",
+        "source": "T6/04_retail_listings_2026-10-20.md (Makro PRO table)",
+        "shown_price_thb": 82,
+        "pack_count": 6,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 13.67,
+        "thb_per_330ml": 13.67
+      },
+      {
+        "id": "VR04",
+        "item": "Singha Ume Lemon Soda 330 mL x6, Makro PRO (82)",
+        "group": "singha_variant",
+        "source": "T6/04_retail_listings_2026-10-20.md (Makro PRO table)",
+        "shown_price_thb": 82,
+        "pack_count": 6,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 13.67,
+        "thb_per_330ml": 13.67
+      },
+      {
+        "id": "VR05",
+        "item": "Singha Pink Lemon Soda 330 mL x24, Makro PRO (325)",
+        "group": "singha_variant",
+        "source": "T6/04_retail_listings_2026-10-20.md (Makro PRO table)",
+        "shown_price_thb": 325,
+        "pack_count": 24,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 13.54,
+        "thb_per_330ml": 13.54
+      },
+      {
+        "id": "VR06",
+        "item": "Singha Red Lemon Soda 330 mL x24, Makro PRO (325)",
+        "group": "singha_variant",
+        "source": "T6/04_retail_listings_2026-10-20.md (Makro PRO table)",
+        "shown_price_thb": 325,
+        "pack_count": 24,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 13.54,
+        "thb_per_330ml": 13.54
+      },
+      {
+        "id": "VR07",
+        "item": "Singha Pink Lemon Soda 330 mL x24, Lotus's Shop Online (337)",
+        "group": "singha_variant",
+        "source": "T6/04_retail_listings_2026-10-20.md (Lotus's table)",
+        "shown_price_thb": 337,
+        "pack_count": 24,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 14.04,
+        "thb_per_330ml": 14.04
+      },
+      {
+        "id": "VR08",
+        "item": "Singha Pink Lemon Soda 330 mL x24, 7-Eleven ALL Online (330)",
+        "group": "singha_variant",
+        "source": "T6/04_retail_listings_2026-10-20.md (7-Eleven table)",
+        "shown_price_thb": 330,
+        "pack_count": 24,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 13.75,
+        "thb_per_330ml": 13.75
+      },
+      {
+        "id": "VR09",
+        "item": "Singha Ume Lemon Soda 330 mL x24, 7-Eleven ALL Online (330)",
+        "group": "singha_variant",
+        "source": "T6/04_retail_listings_2026-10-20.md (7-Eleven table)",
+        "shown_price_thb": 330,
+        "pack_count": 24,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 13.75,
+        "thb_per_330ml": 13.75
+      },
+      {
+        "id": "VR10",
+        "item": "Singha Red Lemon Soda 330 mL x24, 7-Eleven ALL Online (330)",
+        "group": "singha_variant",
+        "source": "T6/04_retail_listings_2026-10-20.md (7-Eleven table)",
+        "shown_price_thb": 330,
+        "pack_count": 24,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 13.75,
+        "thb_per_330ml": 13.75
+      },
+      {
+        "id": "VR11",
+        "item": "Singha Watermelon Lemon Soda 330 mL x24, 7-Eleven ALL Online (330; 342 shown as the earlier price)",
+        "group": "singha_variant",
+        "source": "T6/04_retail_listings_2026-10-20.md (7-Eleven table)",
+        "shown_price_thb": 330,
+        "pack_count": 24,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 13.75,
+        "thb_per_330ml": 13.75
+      },
+      {
+        "id": "VR12",
+        "item": "Singha Lemon Cream Soda 330 mL x24, 7-Eleven ALL Online (330; 400 shown as the earlier price)",
+        "group": "singha_variant",
+        "source": "T6/04_retail_listings_2026-10-20.md (7-Eleven table)",
+        "shown_price_thb": 330,
+        "pack_count": 24,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 13.75,
+        "thb_per_330ml": 13.75
+      },
+      {
+        "id": "VR13",
+        "item": "Singha Red Lemon Soda (Thai name says no sugar) 330 mL single, Lotus's Shop Online (17)",
+        "group": "singha_variant",
+        "source": "T6/04_retail_listings_2026-10-20.md (Lotus's table)",
+        "shown_price_thb": 17,
+        "pack_count": 1,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 17.0,
+        "thb_per_330ml": 17.0
+      },
+      {
+        "id": "VR14",
+        "item": "Singha Pink Lemon Soda 330 mL single, Lotus's Shop Online (17)",
+        "group": "singha_variant",
+        "source": "T6/04_retail_listings_2026-10-20.md (Lotus's table)",
+        "shown_price_thb": 17,
+        "pack_count": 1,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 17.0,
+        "thb_per_330ml": 17.0
+      },
+      {
+        "id": "VR15",
+        "item": "Singha Lemon Cream Soda 330 mL single, Lotus's Shop Online (17)",
+        "group": "singha_variant",
+        "source": "T6/04_retail_listings_2026-10-20.md (Lotus's table)",
+        "shown_price_thb": 17,
+        "pack_count": 1,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 17.0,
+        "thb_per_330ml": 17.0
+      },
+      {
+        "id": "VR16",
+        "item": "Singha Red Lemon Soda 330 mL x6, 7-Eleven ALL Online (172; the same anomaly as the lemon six-pack, not used)",
+        "group": "singha_variant_outlier",
+        "source": "T6/04_retail_listings_2026-10-20.md (7-Eleven table)",
+        "shown_price_thb": 172,
+        "pack_count": 6,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 28.67,
+        "thb_per_330ml": 28.67
+      },
+      {
+        "id": "LW01",
+        "item": "Singha Sparkling Water Lime 330 mL x24, 7-Eleven ALL Online (302; 304 shown as the earlier price)",
+        "group": "singha_lime_water",
+        "source": "T5/r14_7eleven_singha_sparkling_lime_24can.md; T5/t5_recheck_7eleven_allonline_2026-10-20.md (section 4)",
+        "shown_price_thb": 302,
+        "pack_count": 24,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 12.58,
+        "thb_per_330ml": 12.58
+      },
+      {
+        "id": "LW02",
+        "item": "Singha Sparkling Water Lime 330 mL x24, Makro PRO (312; 319 shown as the list price)",
+        "group": "singha_lime_water",
+        "source": "T5/r20_makro_singha_sparkling_lime_24can.md; T5/t5_recheck_makro_pro_2026-10-20.md (section 8)",
+        "shown_price_thb": 312,
+        "pack_count": 24,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 13.0,
+        "thb_per_330ml": 13.0
+      },
+      {
+        "id": "LW03",
+        "item": "Singha Sparkling Water Lime 330 mL can, launch price of March 2026 (a launch price, not a shelf price)",
+        "group": "singha_lime_launch",
+        "source": "T5/t5_recheck_brands_press_2026-10-20.md (section 5)",
+        "shown_price_thb": 15,
+        "pack_count": 1,
+        "unit_ml": 330,
+        "thb_per_pack_unit": 15.0,
+        "thb_per_330ml": 15.0
+      }
+    ],
+    "bands_per_330ml": {
+      "sugar_free_sprite_no_sugar_24_pack_2026": {
+        "rows": 4,
+        "min": 14.13,
+        "max": 19.29,
+        "median": 16.48
+      },
+      "sugar_free_7up_lemon_2026": {
+        "rows": 4,
+        "min": 12.4,
+        "max": 16.25,
+        "median": 13.15
+      },
+      "sugar_free_lemon_lime_cans_2026_all_listings": {
+        "rows": 8,
+        "min": 12.4,
+        "max": 19.29,
+        "median": 14.79
+      },
+      "singha_lemon_soda_retail_of_record_2026": {
+        "rows": 6,
+        "min": 13.54,
+        "max": 17.0,
+        "median": 13.75
+      },
+      "singha_lemon_soda_retail_incl_7eleven_six_pack_outlier_2026": {
+        "rows": 7,
+        "min": 13.54,
+        "max": 28.67,
+        "median": 13.75
+      },
+      "singha_lemon_soda_same_range_variants_2026": {
+        "rows": 15,
+        "min": 13.17,
+        "max": 17.0,
+        "median": 13.75
+      },
+      "schweppes_lime_sugar_free_2026": {
+        "rows": 4,
+        "min": 13.92,
+        "max": 16.33,
+        "median": 14.4
+      },
+      "schweppes_lime_regular_2026": {
+        "rows": 4,
+        "min": 14.0,
+        "max": 18.0,
+        "median": 15.25
+      },
+      "singha_sparkling_water_lime_2026": {
+        "rows": 2,
+        "min": 12.58,
+        "max": 13.0,
+        "median": 12.79
+      },
+      "sugar_free_lemon_and_lime_cans_2026_all_listings": {
+        "rows": 18,
+        "min": 12.4,
+        "max": 19.29,
+        "median": 14.15
+      }
+    }
+  },
+  "est_price_rows_by_format": [
+    {
+      "id": "E01",
+      "item": "est Cola 325 mL x6, Makro (listing says it cannot be delivered to the selected area)",
+      "format": "can",
+      "size_class": "can pack (325 mL)",
+      "source_code": "RT",
+      "seller": "Makro",
+      "shown_price_thb": 79,
+      "listed_price_thb": null,
+      "discount_pct": null,
+      "thb_per_pack_unit": 13.17,
+      "thb_per_330ml": 13.37,
+      "thb_per_litre": 40.5,
+      "promotion_50pct_or_more": false
+    },
+    {
+      "id": "E02",
+      "item": "est Cola 325 mL x6, 7-Eleven online",
+      "format": "can",
+      "size_class": "can pack (325 mL)",
+      "source_code": "RT",
+      "seller": "7-Eleven online",
+      "shown_price_thb": 138,
+      "listed_price_thb": 176,
+      "discount_pct": 21.6,
+      "thb_per_pack_unit": 23.0,
+      "thb_per_330ml": 23.35,
+      "thb_per_litre": 70.8,
+      "promotion_50pct_or_more": false
+    },
+    {
+      "id": "E03",
+      "item": "est Sugar Free 325 mL x6, Sermsuk Click (LazMall)",
+      "format": "can",
+      "size_class": "can pack (325 mL)",
+      "source_code": "PZ",
+      "seller": "Sermsuk Click",
+      "shown_price_thb": 99,
+      "listed_price_thb": null,
+      "discount_pct": null,
+      "thb_per_pack_unit": 16.5,
+      "thb_per_330ml": 16.75,
+      "thb_per_litre": 50.8,
+      "promotion_50pct_or_more": false
+    },
+    {
+      "id": "E04",
+      "item": "est Strawberry red 325 mL x6, Sermsuk Click (LazMall)",
+      "format": "can",
+      "size_class": "can pack (325 mL)",
+      "source_code": "PZ",
+      "seller": "Sermsuk Click",
+      "shown_price_thb": 99,
+      "listed_price_thb": null,
+      "discount_pct": null,
+      "thb_per_pack_unit": 16.5,
+      "thb_per_330ml": 16.75,
+      "thb_per_litre": 50.8,
+      "promotion_50pct_or_more": false
+    },
+    {
+      "id": "E05",
+      "item": "est Kamikaze Lime 325 mL x24, CR7 ManU (Lazada reseller)",
+      "format": "can",
+      "size_class": "can pack (325 mL)",
+      "source_code": "PZ",
+      "seller": "CR7 ManU",
+      "shown_price_thb": 408,
+      "listed_price_thb": null,
+      "discount_pct": null,
+      "thb_per_pack_unit": 17.0,
+      "thb_per_330ml": 17.26,
+      "thb_per_litre": 52.3,
+      "promotion_50pct_or_more": false
+    },
+    {
+      "id": "E06",
+      "item": "est Cola 515 mL x24, 7-Eleven online",
+      "format": "bottle",
+      "size_class": "bottle multipack, 360 to 515 mL",
+      "source_code": "RT",
+      "seller": "7-Eleven online",
+      "shown_price_thb": 309,
+      "listed_price_thb": 345,
+      "discount_pct": 10.4,
+      "thb_per_pack_unit": 12.88,
+      "thb_per_330ml": 8.25,
+      "thb_per_litre": 25.0,
+      "promotion_50pct_or_more": false
+    },
+    {
+      "id": "E07",
+      "item": "est Cola 1 L x12, 7-Eleven online",
+      "format": "bottle",
+      "size_class": "bottle multipack, 1 L and above",
+      "source_code": "RT",
+      "seller": "7-Eleven online",
+      "shown_price_thb": 235,
+      "listed_price_thb": 239,
+      "discount_pct": 1.7,
+      "thb_per_pack_unit": 19.58,
+      "thb_per_330ml": 6.46,
+      "thb_per_litre": 19.6,
+      "promotion_50pct_or_more": false
+    },
+    {
+      "id": "E08",
+      "item": "est Cola 1.6 L x6, 7-Eleven online",
+      "format": "bottle",
+      "size_class": "bottle multipack, 1 L and above",
+      "source_code": "RT",
+      "seller": "7-Eleven online",
+      "shown_price_thb": 148,
+      "listed_price_thb": 159,
+      "discount_pct": 6.9,
+      "thb_per_pack_unit": 24.67,
+      "thb_per_330ml": 5.09,
+      "thb_per_litre": 15.4,
+      "promotion_50pct_or_more": false
+    },
+    {
+      "id": "E09",
+      "item": "est Kamikaze Lime 1 L x12, CR7 ManU",
+      "format": "bottle",
+      "size_class": "bottle multipack, 1 L and above",
+      "source_code": "PZ",
+      "seller": "CR7 ManU",
+      "shown_price_thb": 264,
+      "listed_price_thb": null,
+      "discount_pct": null,
+      "thb_per_pack_unit": 22.0,
+      "thb_per_330ml": 7.26,
+      "thb_per_litre": 22.0,
+      "promotion_50pct_or_more": false
+    },
+    {
+      "id": "E10",
+      "item": "est Kamikaze Lime 360 mL x12, CR7 ManU",
+      "format": "bottle",
+      "size_class": "bottle multipack, 360 to 515 mL",
+      "source_code": "PZ",
+      "seller": "CR7 ManU",
+      "shown_price_thb": 144,
+      "listed_price_thb": null,
+      "discount_pct": null,
+      "thb_per_pack_unit": 12.0,
+      "thb_per_330ml": 11.0,
+      "thb_per_litre": 33.3,
+      "promotion_50pct_or_more": false
+    },
+    {
+      "id": "E11",
+      "item": "est Play Kamikaze 360 mL x12, CR7 ManU (sale price)",
+      "format": "bottle",
+      "size_class": "bottle multipack, 360 to 515 mL",
+      "source_code": "PZ",
+      "seller": "CR7 ManU",
+      "shown_price_thb": 96,
+      "listed_price_thb": 132,
+      "discount_pct": 27.3,
+      "thb_per_pack_unit": 8.0,
+      "thb_per_330ml": 7.33,
+      "thb_per_litre": 22.2,
+      "promotion_50pct_or_more": false
+    },
+    {
+      "id": "E12",
+      "item": "est Sugar Free cola 1 L x12, third-party Lazada seller",
+      "format": "bottle",
+      "size_class": "bottle multipack, 1 L and above",
+      "source_code": "PZ",
+      "seller": "Lazada seller",
+      "shown_price_thb": 293,
+      "listed_price_thb": null,
+      "discount_pct": null,
+      "thb_per_pack_unit": 24.42,
+      "thb_per_330ml": 8.06,
+      "thb_per_litre": 24.4,
+      "promotion_50pct_or_more": false
+    },
+    {
+      "id": "E13",
+      "item": "est Cocomansi (coconut and calamansi) 1.6 L x12, Sermsuk Click (LazMall, sale price)",
+      "format": "bottle",
+      "size_class": "bottle multipack, 1 L and above",
+      "source_code": "PZ",
+      "seller": "Sermsuk Click",
+      "shown_price_thb": 328,
+      "listed_price_thb": 348,
+      "discount_pct": 5.7,
+      "thb_per_pack_unit": 27.33,
+      "thb_per_330ml": 5.64,
+      "thb_per_litre": 17.1,
+      "promotion_50pct_or_more": false
+    },
+    {
+      "id": "E14",
+      "item": "est Electric Green (apple kiwi) 1.6 L x12, Sermsuk Click (LazMall)",
+      "format": "bottle",
+      "size_class": "bottle multipack, 1 L and above",
+      "source_code": "PZ",
+      "seller": "Sermsuk Click",
+      "shown_price_thb": 382,
+      "listed_price_thb": null,
+      "discount_pct": null,
+      "thb_per_pack_unit": 31.83,
+      "thb_per_330ml": 6.57,
+      "thb_per_litre": 19.9,
+      "promotion_50pct_or_more": false
+    },
+    {
+      "id": "E15",
+      "item": "est Cream Soda Green 490 mL x12, Sermsuk Click (LazMall)",
+      "format": "bottle",
+      "size_class": "bottle multipack, 360 to 515 mL",
+      "source_code": "PZ",
+      "seller": "Sermsuk Click",
+      "shown_price_thb": 215,
+      "listed_price_thb": null,
+      "discount_pct": null,
+      "thb_per_pack_unit": 17.92,
+      "thb_per_330ml": 12.07,
+      "thb_per_litre": 36.6,
+      "promotion_50pct_or_more": false
+    },
+    {
+      "id": "E16",
+      "item": "est Cola Cool Hand 250 mL x24, Sermsuk Click (LazMall)",
+      "format": "bottle",
+      "size_class": "bottle multipack, 250 mL",
+      "source_code": "PZ",
+      "seller": "Sermsuk Click",
+      "shown_price_thb": 325,
+      "listed_price_thb": null,
+      "discount_pct": null,
+      "thb_per_pack_unit": 13.54,
+      "thb_per_330ml": 17.88,
+      "thb_per_litre": 54.2,
+      "promotion_50pct_or_more": false
+    },
+    {
+      "id": "E17",
+      "item": "est Salty Lychee 1 L x12, ALL ONLINE (sale price)",
+      "format": "bottle",
+      "size_class": "bottle multipack, 1 L and above",
+      "source_code": "PZ",
+      "seller": "ALL ONLINE",
+      "shown_price_thb": 204,
+      "listed_price_thb": 239,
+      "discount_pct": 14.6,
+      "thb_per_pack_unit": 17.0,
+      "thb_per_330ml": 5.61,
+      "thb_per_litre": 17.0,
+      "promotion_50pct_or_more": false
+    },
+    {
+      "id": "E18",
+      "item": "est Play Lychee plus vitamin B 1 L x12, CR7 ManU",
+      "format": "bottle",
+      "size_class": "bottle multipack, 1 L and above",
+      "source_code": "PZ",
+      "seller": "CR7 ManU",
+      "shown_price_thb": 240,
+      "listed_price_thb": null,
+      "discount_pct": null,
+      "thb_per_pack_unit": 20.0,
+      "thb_per_330ml": 6.6,
+      "thb_per_litre": 20.0,
+      "promotion_50pct_or_more": false
+    },
+    {
+      "id": "E19",
+      "item": "est Play Grapeberry 1 L x12, Fresh Mart (50 percent off)",
+      "format": "bottle",
+      "size_class": "bottle multipack, 1 L and above",
+      "source_code": "PZ",
+      "seller": "Fresh Mart",
+      "shown_price_thb": 295,
+      "listed_price_thb": 590,
+      "discount_pct": 50.0,
+      "thb_per_pack_unit": 24.58,
+      "thb_per_330ml": 8.11,
+      "thb_per_litre": 24.6,
+      "promotion_50pct_or_more": true
+    },
+    {
+      "id": "E20",
+      "item": "est Play Kamikaze 1 L x12, US Mart (50 percent off)",
+      "format": "bottle",
+      "size_class": "bottle multipack, 1 L and above",
+      "source_code": "PZ",
+      "seller": "US Mart",
+      "shown_price_thb": 341,
+      "listed_price_thb": 682,
+      "discount_pct": 50.0,
+      "thb_per_pack_unit": 28.42,
+      "thb_per_330ml": 9.38,
+      "thb_per_litre": 28.4,
+      "promotion_50pct_or_more": true
+    },
+    {
+      "id": "E21",
+      "item": "est Cola 1.6 L x6, Fresh Mart (50 percent off)",
+      "format": "bottle",
+      "size_class": "bottle multipack, 1 L and above",
+      "source_code": "PZ",
+      "seller": "Fresh Mart",
+      "shown_price_thb": 203,
+      "listed_price_thb": 406,
+      "discount_pct": 50.0,
+      "thb_per_pack_unit": 33.83,
+      "thb_per_330ml": 6.98,
+      "thb_per_litre": 21.1,
+      "promotion_50pct_or_more": true
+    },
+    {
+      "id": "E22",
+      "item": "est Cola 360 mL x12, WHOLESALER SHOP (50 percent off)",
+      "format": "bottle",
+      "size_class": "bottle multipack, 360 to 515 mL",
+      "source_code": "PZ",
+      "seller": "WHOLESALER SHOP",
+      "shown_price_thb": 169,
+      "listed_price_thb": 338,
+      "discount_pct": 50.0,
+      "thb_per_pack_unit": 14.08,
+      "thb_per_330ml": 12.91,
+      "thb_per_litre": 39.1,
+      "promotion_50pct_or_more": true
+    },
+    {
+      "id": "E23",
+      "item": "est Play Orange 360 mL x12, Malee Supermart (50 percent off)",
+      "format": "bottle",
+      "size_class": "bottle multipack, 360 to 515 mL",
+      "source_code": "PZ",
+      "seller": "Malee Supermart",
+      "shown_price_thb": 159,
+      "listed_price_thb": 318,
+      "discount_pct": 50.0,
+      "thb_per_pack_unit": 13.25,
+      "thb_per_330ml": 12.15,
+      "thb_per_litre": 36.8,
+      "promotion_50pct_or_more": true
+    },
+    {
+      "id": "E24",
+      "item": "est Cola 250 mL x24, Fresh Mart (50 percent off)",
+      "format": "bottle",
+      "size_class": "bottle multipack, 250 mL",
+      "source_code": "PZ",
+      "seller": "Fresh Mart",
+      "shown_price_thb": 294,
+      "listed_price_thb": 588,
+      "discount_pct": 50.0,
+      "thb_per_pack_unit": 12.25,
+      "thb_per_330ml": 16.17,
+      "thb_per_litre": 49.0,
+      "promotion_50pct_or_more": true
+    },
+    {
+      "id": "E25",
+      "item": "est Cola 250 mL x24, Malee Supermart (50 percent off)",
+      "format": "bottle",
+      "size_class": "bottle multipack, 250 mL",
+      "source_code": "PZ",
+      "seller": "Malee Supermart",
+      "shown_price_thb": 307,
+      "listed_price_thb": 614,
+      "discount_pct": 50.0,
+      "thb_per_pack_unit": 12.79,
+      "thb_per_330ml": 16.89,
+      "thb_per_litre": 51.2,
+      "promotion_50pct_or_more": true
+    },
+    {
+      "id": "E26",
+      "item": "est Cream Soda 325 mL single, Lotus's Shop Online (sale price, container not stated)",
+      "format": "single",
+      "size_class": "single unit",
+      "source_code": "LT",
+      "seller": "Lotus's Shop Online",
+      "shown_price_thb": 13,
+      "listed_price_thb": 15,
+      "discount_pct": 13.3,
+      "thb_per_pack_unit": 13.0,
+      "thb_per_330ml": 13.2,
+      "thb_per_litre": 40.0,
+      "promotion_50pct_or_more": false
+    },
+    {
+      "id": "E27",
+      "item": "est Cream Soda 1 L single, GROCER LOCK",
+      "format": "single",
+      "size_class": "single unit",
+      "source_code": "PZ",
+      "seller": "GROCER LOCK",
+      "shown_price_thb": 21,
+      "listed_price_thb": null,
+      "discount_pct": null,
+      "thb_per_pack_unit": 21.0,
+      "thb_per_330ml": 6.93,
+      "thb_per_litre": 21.0,
+      "promotion_50pct_or_more": false
+    },
+    {
+      "id": "E28",
+      "item": "est Cream Soda 1.6 L single, Lotus's Shop Online",
+      "format": "single",
+      "size_class": "single unit",
+      "source_code": "LT",
+      "seller": "Lotus's Shop Online",
+      "shown_price_thb": 29,
+      "listed_price_thb": null,
+      "discount_pct": null,
+      "thb_per_pack_unit": 29.0,
+      "thb_per_330ml": 5.98,
+      "thb_per_litre": 18.1,
+      "promotion_50pct_or_more": false
+    }
+  ],
+  "est_price_bands_per_330ml": {
+    "can pack (325 mL)": {
+      "all_rows": {
+        "rows": 5,
+        "min": 13.37,
+        "max": 23.35,
+        "median": 16.75
+      }
+    },
+    "bottle multipack, 1 L and above": {
+      "all_rows": {
+        "rows": 11,
+        "min": 5.09,
+        "max": 9.38,
+        "median": 6.6
+      },
+      "excluding_50pct_promotions": {
+        "rows": 8,
+        "min": 5.09,
+        "max": 8.06,
+        "median": 6.52
+      }
+    },
+    "bottle multipack, 360 to 515 mL": {
+      "all_rows": {
+        "rows": 6,
+        "min": 7.33,
+        "max": 12.91,
+        "median": 11.54
+      },
+      "excluding_50pct_promotions": {
+        "rows": 4,
+        "min": 7.33,
+        "max": 12.07,
+        "median": 9.62
+      }
+    },
+    "bottle multipack, 250 mL": {
+      "all_rows": {
+        "rows": 3,
+        "min": 16.17,
+        "max": 17.88,
+        "median": 16.89
+      },
+      "excluding_50pct_promotions": {
+        "rows": 1,
+        "min": 17.88,
+        "max": 17.88,
+        "median": 17.88
+      }
+    },
+    "single unit": {
+      "all_rows": {
+        "rows": 3,
+        "min": 5.98,
+        "max": 13.2,
+        "median": 6.93
+      }
+    },
+    "all bottle multipacks (every size)": {
+      "all_rows": {
+        "rows": 20,
+        "min": 5.09,
+        "max": 17.88,
+        "median": 8.09
+      },
+      "excluding_50pct_promotions": {
+        "rows": 13,
+        "min": 5.09,
+        "max": 17.88,
+        "median": 7.26
+      }
+    },
+    "can pack (325 mL), excluding E01 (Makro, not deliverable to the area selected)": {
+      "all_rows": {
+        "rows": 4,
+        "min": 16.75,
+        "max": 23.35,
+        "median": 17.01
+      }
+    },
+    "bottle multipacks, 360 mL and above (round 3 combined)": {
+      "all_rows": {
+        "rows": 17,
+        "min": 5.09,
+        "max": 12.91,
+        "median": 7.33
+      },
+      "excluding_50pct_promotions": {
+        "rows": 12,
+        "min": 5.09,
+        "max": 12.07,
+        "median": 6.93
+      }
+    }
+  },
+  "est_vs_cube_price": {
+    "cube_price_thb_assumption": 15.0,
+    "can_rows_at_or_below_cube_price": 1,
+    "can_rows_total": 5,
+    "can_rows_deliverable_at_or_below_cube_price": 0,
+    "can_rows_deliverable_total": 4,
+    "bottle_multipack_rows_below_cube_price": 17,
+    "bottle_multipack_rows_total": 20,
+    "bottle_multipack_rows_below_half_cube_price": 9,
+    "bottle_250ml_rows_above_cube_price": 3,
+    "bottle_250ml_rows_total": 3,
+    "promotion_rows_50pct_or_more": 7,
+    "est_rows_total": 28
+  },
+  "singha_lemon_vs_cube_price": {
+    "cube_price_thb_assumption": 15.0,
+    "singha_lemon_retail_rows": 6,
+    "singha_lemon_retail_rows_at_or_below_cube_price": 5,
+    "singha_lemon_retail_rows_above_cube_price": 1,
+    "makro_can_row_E01_per_330ml_at_or_below_cube_price": true,
+    "est_can_deliverable_min_per_330ml": 16.75
+  },
+  "coloured_soda_share_check": {
+    "coloured_soda_value_thb_million": 17391,
+    "total_soda_value_2024_thb_million": 68000,
+    "computed_share_pct": 25.575,
+    "share_printed_by_source_pct": 30,
+    "value_if_30pct_of_68000_thb_million": 20400.0,
+    "gotomanager_2023_printed_coloured_share_pct": 25,
+    "note": "The article's 30 percent does not reconcile with its own two figures (25.6 percent computed); Gotomanager (29 October 2023) prints 25 percent."
+  },
+  "sermsuk_carbonated_revenue_p": {
+    "FY2021": {
+      "carbonated_revenue_thb_million": 3708.03,
+      "total_revenue_thb_million": 9618.49,
+      "carbonated_share_pct": 38.551
+    },
+    "FY2022": {
+      "carbonated_revenue_thb_million": 3972.69,
+      "total_revenue_thb_million": 10904.85,
+      "carbonated_share_pct": 36.43
+    },
+    "FY2023": {
+      "carbonated_revenue_thb_million": 4550.15,
+      "total_revenue_thb_million": 12371.03,
+      "carbonated_share_pct": 36.781
+    },
+    "9M2024": {
+      "carbonated_revenue_thb_million": 3964.26,
+      "total_revenue_thb_million": 9926.54,
+      "carbonated_share_pct": 39.936
+    },
+    "FY2023_vs_FY2022_growth_pct": 14.536
+  },
+  "sermsuk_carbonated_volume_price_proxy": {
+    "carbonated_volume_FY2024_million_litres_IFA_base": 275.6,
+    "carbonated_average_selling_price_thb_per_litre_IFA_assumption": 18.42,
+    "price_per_330ml_thb": 6.08,
+    "volume_over_thai_csd_consumption_pct_upper_bound_proxy": 13.124,
+    "caveats": "The carbonated line covers est, 100 Plus and Sarsi, so it is an upper bound for est alone; the volume is the adviser's FY2024 base including a July to September 2024 estimate; the 2,100 million litres is Marketeer's figure for a different 12 months; this is not a share figure."
+  }
+}

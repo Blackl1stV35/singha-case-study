@@ -1,0 +1,221 @@
+{
+  "price_per_330ml": [
+    {
+      "item": "Schweppes Lime Soda Zero Sugar 330 mL, 6 cans, Makro PRO 20 Oct 2026",
+      "pack_price_thb": 84.0,
+      "units": 6,
+      "ml_per_unit": 330,
+      "price_per_unit_thb": 14.0,
+      "price_per_330ml_thb": 14.0,
+      "price_per_litre_thb": 42.4
+    },
+    {
+      "item": "Coke No Sugar 330 mL x 12, Makro PRO 20 Oct 2026 (unit 8.50)",
+      "pack_price_thb": 102.0,
+      "units": 12,
+      "ml_per_unit": 330,
+      "price_per_unit_thb": 8.5,
+      "price_per_330ml_thb": 8.5,
+      "price_per_litre_thb": 25.8
+    },
+    {
+      "item": "Sprite Original 325 mL x 24, Lazada, read 20 Oct 2026",
+      "pack_price_thb": 365.0,
+      "units": 24,
+      "ml_per_unit": 325,
+      "price_per_unit_thb": 15.21,
+      "price_per_330ml_thb": 15.44,
+      "price_per_litre_thb": 46.8
+    },
+    {
+      "item": "Sprite No Sugar 325 mL x 24, Lazada, read 20 Oct 2026",
+      "pack_price_thb": 365.0,
+      "units": 24,
+      "ml_per_unit": 325,
+      "price_per_unit_thb": 15.21,
+      "price_per_330ml_thb": 15.44,
+      "price_per_litre_thb": 46.8
+    },
+    {
+      "item": "Fanta Orange 325 mL pack 5+1 (6 cans), Lazada, read 20 Oct 2026",
+      "pack_price_thb": 85.0,
+      "units": 6,
+      "ml_per_unit": 325,
+      "price_per_unit_thb": 14.17,
+      "price_per_330ml_thb": 14.38,
+      "price_per_litre_thb": 43.6
+    },
+    {
+      "item": "Fanta Pineapple 6 x 325 mL, Lazada, read 20 Oct 2026",
+      "pack_price_thb": 85.0,
+      "units": 6,
+      "ml_per_unit": 325,
+      "price_per_unit_thb": 14.17,
+      "price_per_330ml_thb": 14.38,
+      "price_per_litre_thb": 43.6
+    },
+    {
+      "item": "7UP NS Strawberry Lemon 6 x 325 mL, Lazada, read 20 Oct 2026 (context)",
+      "pack_price_thb": 75.0,
+      "units": 6,
+      "ml_per_unit": 325,
+      "price_per_unit_thb": 12.5,
+      "price_per_330ml_thb": 12.69,
+      "price_per_litre_thb": 38.5
+    },
+    {
+      "item": "Sprite Zero Sugar 325 mL can, Tops, 18 Oct 2026 browser read (lead)",
+      "pack_price_thb": 16.0,
+      "units": 1,
+      "ml_per_unit": 325,
+      "price_per_unit_thb": 16.0,
+      "price_per_330ml_thb": 16.25,
+      "price_per_litre_thb": 49.2
+    },
+    {
+      "item": "Sprite Lemon Plus 325 mL can, Thaiger 29 Aug 2022 (dated)",
+      "pack_price_thb": 15.0,
+      "units": 1,
+      "ml_per_unit": 325,
+      "price_per_unit_thb": 15.0,
+      "price_per_330ml_thb": 15.23,
+      "price_per_litre_thb": 46.2
+    },
+    {
+      "item": "Sprite sugar-free 325 mL can, release of 1 Apr 2019 (dated)",
+      "pack_price_thb": 14.0,
+      "units": 1,
+      "ml_per_unit": 325,
+      "price_per_unit_thb": 14.0,
+      "price_per_330ml_thb": 14.22,
+      "price_per_litre_thb": 43.1
+    },
+    {
+      "item": "Fanta Strawberry 1.5 L single, Lazada, read 20 Oct 2026",
+      "pack_price_thb": 32.0,
+      "units": 1,
+      "ml_per_unit": 1500,
+      "price_per_unit_thb": 32.0,
+      "price_per_330ml_thb": 7.04,
+      "price_per_litre_thb": 21.3
+    },
+    {
+      "item": "Sprite No Sugar 325 mL x 24, Coca-Cola Official Store on LazMall via Priceza, record 68d row Z2 (aggregator, retailer page not opened)",
+      "pack_price_thb": 334.0,
+      "units": 24,
+      "ml_per_unit": 325,
+      "price_per_unit_thb": 13.92,
+      "price_per_330ml_thb": 14.13,
+      "price_per_litre_thb": 42.8
+    },
+    {
+      "item": "Sprite single can 325 mL, Lotus's Shop Online, record 68d row L1",
+      "pack_price_thb": 16.0,
+      "units": 1,
+      "ml_per_unit": 325,
+      "price_per_unit_thb": 16.0,
+      "price_per_330ml_thb": 16.25,
+      "price_per_litre_thb": 49.2
+    }
+  ],
+  "tncc": {
+    "FY2022": {
+      "gross_margin_on_sales_of_goods_pct": 38.22,
+      "net_margin_on_total_revenue_pct": 8.57,
+      "check_sales_minus_cost_equals_gross_profit": 0.0
+    },
+    "FY2023": {
+      "gross_margin_on_sales_of_goods_pct": 38.6,
+      "net_margin_on_total_revenue_pct": 8.59,
+      "check_sales_minus_cost_equals_gross_profit": 0.0
+    },
+    "FY2024": {
+      "gross_margin_on_sales_of_goods_pct": 38.5,
+      "net_margin_on_total_revenue_pct": 10.6,
+      "check_sales_minus_cost_equals_gross_profit": 0.0
+    },
+    "6M2024": {
+      "gross_margin_on_sales_of_goods_pct": 38.87,
+      "net_margin_on_total_revenue_pct": 9.61,
+      "check_sales_minus_cost_equals_gross_profit": -0.01
+    },
+    "6M2025": {
+      "gross_margin_on_sales_of_goods_pct": 39.15,
+      "net_margin_on_total_revenue_pct": 5.23,
+      "check_sales_minus_cost_equals_gross_profit": -0.0
+    },
+    "total_revenue_growth_pct": {
+      "FY2023_vs_FY2022": 9.2,
+      "FY2024_vs_FY2023": 5.1,
+      "6M2025_vs_6M2024": -14.9,
+      "net_profit_6M2025_vs_6M2024": -53.7
+    },
+    "channel_mix_FY2024_pct_of_sales_of_goods": {
+      "modern_trade": 50.0,
+      "traditional_trade": 48.0,
+      "laos_and_export": 1.9
+    },
+    "channel_sum_check": 39828.4,
+    "capacity_utilisation_2024_pct": {
+      "V1_404m": 71.6,
+      "V2_400m": 70.9
+    },
+    "volume_6M2025_vs_6M2024_pct": -16.2,
+    "cola_share_of_total_revenue_FY2024_pct": 58.2,
+    "capacity_utilisation_2024_on_450m_pct": {
+      "V1_404m": 89.8,
+      "V2_400m": 88.9
+    },
+    "six_month_2025_vs_2024_pct": {
+      "cola_10872.74_vs_12745.80": -14.7,
+      "other_carbonated_5080.19_vs_6365.02": -20.2
+    },
+    "carbonated_revenue_FY2024_thb_m": 35669.21,
+    "implied_market_if_51_4pct_thb_bn": 69.4,
+    "carbonated_revenue_as_pct_of_press_market_sizes": {
+      "of_66_bn_thansettakij_2024": 54.0,
+      "of_76_9_bn_marketeer_2026": 46.4
+    }
+  },
+  "haad_thip": {
+    "FY2023_net_margin_on_total_revenue_pct": 7.61,
+    "FY2024_net_margin_on_total_revenue_pct": 7.35,
+    "FY2025_net_margin_on_sales_pct": 6.88,
+    "FY2024_gross_margin_derived_pct": 42.7,
+    "net_profit_FY2025_vs_FY2024_pct": -5.5,
+    "revenue_FY2024_vs_FY2023_pct": 4.1,
+    "fy2025_8258_4_vs_fy2024_total_revenue_8189_09_pct": 0.8,
+    "fy2025_8368_vs_fy2024_total_revenue_8189_09_pct": 2.2,
+    "fy2024_comparator_implied_by_release_growth_1_6pct": 8128.3,
+    "fy2025_net_margin_on_8368_pct": 6.79,
+    "difference_8368_minus_8258_4": 109.6
+  },
+  "coca_cola_company_group": {
+    "FY2023": {
+      "gross_margin_pct": 59.5,
+      "net_margin_pct": 23.4
+    },
+    "FY2024": {
+      "gross_margin_pct": 61.1,
+      "net_margin_pct": 22.6
+    },
+    "FY2025": {
+      "gross_margin_pct": 61.6,
+      "net_margin_pct": 27.3
+    }
+  },
+  "gross_margin_gap_pct_points_FY2024": 22.6,
+  "cube_base_case_price_thb": 15.0,
+  "SUPERSEDED_note": "Fields prefixed SUPERSEDED_ use two Sprite No Sugar 24-pack listings (Lazada THB 365 and one other row). They are superseded by t2_coca_cola_system_check_results.json, which uses four listings. Do not cite them.",
+  "SUPERSEDED_cube_vs_sprite_no_sugar_325_pack24_per_330": -0.44,
+  "SUPERSEDED_sprite_no_sugar_pack24_per_330_range_thb": [
+    14.13,
+    15.44
+  ],
+  "SUPERSEDED_cube_vs_pack24_low_and_high_thb": [
+    0.87,
+    -0.44
+  ],
+  "sprite_single_can_per_330_thb": 16.25,
+  "cube_vs_single_can_thb": -1.25
+}

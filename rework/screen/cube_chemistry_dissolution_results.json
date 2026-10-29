@@ -1,0 +1,761 @@
+{
+  "task": "T8 part b, dissolution time model (model estimate, not a measurement)",
+  "date": "2026-10-20",
+  "inputs": {
+    "cube_side_mm": {
+      "value": 14.0,
+      "tier": "design"
+    },
+    "cube_mass_g": {
+      "value": 3.79,
+      "tier": "design; DERIVED from ASSUMPTION inputs (submission 09)"
+    },
+    "cube_mass_range_g": {
+      "value": [
+        3.46,
+        4.24
+      ],
+      "tier": "submission 09 (ASSUMPTION range)"
+    },
+    "bulk_density_g_cm3": {
+      "value": 1.3812,
+      "tier": "DERIVED from mass and volume"
+    },
+    "porosity": {
+      "value": [
+        0.1,
+        0.2,
+        0.3
+      ],
+      "tier": "ASSUMPTION (low, central, high)"
+    },
+    "solid_density_g_cm3_central": {
+      "value": 1.7265,
+      "tier": "DERIVED from bulk density and porosity"
+    },
+    "volume_L": {
+      "value": 0.33,
+      "tier": "design"
+    },
+    "reactant_mass_g": {
+      "value": 2.94,
+      "tier": "design (KHCO3 0.81 and citric 2.10)"
+    },
+    "soluble_fraction": {
+      "value": 1.0,
+      "tier": "ASSUMPTION (binder, filler and flavour dissolve; limit)"
+    },
+    "Cs_KHCO3_g_L_20C": {
+      "value": 224.0,
+      "tier": "S, Wikipedia potassium bicarbonate 22.4 g/100 mL; T dependence ASSUMPTION (none). Applied to the WHOLE cube mass (conservative: KHCO3 is the least soluble reactant read)"
+    },
+    "Cs_citric_g_L_20C": {
+      "value": 751.5,
+      "tier": "DERIVED from S: 59.2 percent w/w (Wikipedia citric acid) times the solution specific gravity 1.2694 (CORECHEM chart at 15 C, interpolated between 58 and 60 percent); used only in the composition-weighted variants"
+    },
+    "Cs_mass_weighted_all_components_g_L": {
+      "value": 516.8,
+      "tier": "DERIVED (heuristic: mass-weighted over KHCO3 224, citric acid 751, sucralose 283; binder, filler and flavour at 224, ASSUMPTION)"
+    },
+    "Cs_mass_weighted_reactants_g_L": {
+      "value": 601.0,
+      "tier": "DERIVED (heuristic: mass-weighted over KHCO3, citric acid and sucralose only)"
+    },
+    "water_viscosity_density": {
+      "value": {
+        "20.0": [
+          1.005,
+          0.9982071
+        ],
+        "25.0": [
+          0.8937,
+          0.9970479
+        ],
+        "30.0": [
+          0.8007,
+          0.9956502
+        ]
+      },
+      "tier": "S, Wikipedia water data page (read 2026-10-20)"
+    },
+    "D_CO2_25C_m2_s": {
+      "value": 1.92e-09,
+      "tier": "S, Wikipedia mass diffusivity (reference only)"
+    },
+    "K_conductivity_S_cm2_mol": {
+      "value": 73.5,
+      "tier": "S, Wikipedia molar conductivity citing Laidler and Meiser (T not stated)"
+    },
+    "D_K_25C_m2_s": {
+      "value": 1.9572e-09,
+      "tier": "DERIVED (Nernst-Hartley from the K+ conductivity, 25 C assumed)"
+    },
+    "D_HCO3_central_25C_m2_s": {
+      "value": 1.1006e-09,
+      "tier": "P, Zeebe 2011 molecular dynamics fit (Table 2); DERIVED from the fit"
+    },
+    "D_HCO3_bracket_m2_s": {
+      "value": [
+        1e-09,
+        1.2e-09
+      ],
+      "tier": "S and P: Falkowski and Raven 2007 1.09e-9 (S, BioNumbers); Zeebe 2011 1.10e-9 (P, MD); Fridlyand 1996 1.15e-9 (S, BioNumbers); conductivity estimate 1.19e-9 (S, printed in Zeebe 2011)"
+    },
+    "D_citric_bracket_m2_s_25C": {
+      "value": [
+        5e-10,
+        9e-10
+      ],
+      "tier": "ASSUMPTION, UNVERIFIED: no opened source gives a value (search snippets give about 0.7e-9 and 0.68e-9 in water-butanol, not opened; Melia et al. record prints no value)"
+    },
+    "disintegration_time_s": {
+      "value": [
+        60.0,
+        210.0,
+        600.0
+      ],
+      "tier": "ASSUMPTION, anchored to Atchade et al. 2025 (opened, P: 156 to 307 s for 0.5 g tablets) and Ph. Eur. effervescent test (5 min, S)"
+    },
+    "fragment_radius_mm": {
+      "value": [
+        0.2,
+        0.5,
+        2.0
+      ],
+      "tier": "ASSUMPTION"
+    },
+    "flow_unstirred_mm_s": {
+      "value": [
+        2.0,
+        0.5,
+        0.1
+      ],
+      "tier": "ASSUMPTION (bubble-driven; low time, central, high time)"
+    },
+    "flow_stirred_mm_s": {
+      "value": [
+        30.0,
+        10.0,
+        5.0
+      ],
+      "tier": "ASSUMPTION (magnetic stirrer)"
+    },
+    "Sherwood_correlation": {
+      "value": "Ranz-Marshall 2 + 0.6 Re^0.5 Sc^(1/3)",
+      "tier": "S, Wikipedia Sherwood number (Sc validity below 250 exceeded: flagged)"
+    }
+  },
+  "gas_balance": {
+    "CO2_mol_per_serve": 0.008091,
+    "gas_volume_if_all_released_mL_25C_1atm": 197.9,
+    "note": "The dose of 0.55 volumes is below the 1 atm saturation at 20 to 30 C (about 0.86 to 0.66 volumes, DERIVED from the Sander constant), so the liquid can hold it at equilibrium. Near the dissolving fragments the local concentration is far higher and bubbles can form there; how much of the 198 mL leaves as bubbles during dissolution (so how much is dissolved at serve) is NOT known. It is the retention input of the fizz model (break-even 0.408)."
+  },
+  "central_by_temperature_s": {
+    "20": {
+      "unstirred": {
+        "U_mm_s_central": 0.5,
+        "t_B_fragments_s": 489.6,
+        "t_total_central_s": 699.6,
+        "intact_cube_t_s_reference": 49293.3
+      },
+      "stirred": {
+        "U_mm_s_central": 10.0,
+        "t_B_fragments_s": 153.6,
+        "t_total_central_s": 363.6,
+        "intact_cube_t_s_reference": 12242.2
+      }
+    },
+    "25": {
+      "unstirred": {
+        "U_mm_s_central": 0.5,
+        "t_B_fragments_s": 435.0,
+        "t_total_central_s": 645.0,
+        "intact_cube_t_s_reference": 44064.4
+      },
+      "stirred": {
+        "U_mm_s_central": 10.0,
+        "t_B_fragments_s": 137.3,
+        "t_total_central_s": 347.3,
+        "intact_cube_t_s_reference": 10969.9
+      }
+    },
+    "30": {
+      "unstirred": {
+        "U_mm_s_central": 0.5,
+        "t_B_fragments_s": 389.2,
+        "t_total_central_s": 599.2,
+        "intact_cube_t_s_reference": 39649.6
+      },
+      "stirred": {
+        "U_mm_s_central": 10.0,
+        "t_B_fragments_s": 123.6,
+        "t_total_central_s": 333.6,
+        "intact_cube_t_s_reference": 9894.0
+      }
+    }
+  },
+  "bounds_25C_s": {
+    "low_stirred": 75.5,
+    "central_stirred": 347.3,
+    "high_unstirred": 11391.8,
+    "central_unstirred": 645.0
+  },
+  "tornado_25C": [
+    {
+      "regime": "unstirred",
+      "input": "fragment radius 0.2 to 2.0 mm",
+      "t_low_s": 300.7,
+      "t_high_s": 4487.2,
+      "swing_s": 4186.5,
+      "base_s": 645.0
+    },
+    {
+      "regime": "unstirred",
+      "input": "flow velocity (regime range)",
+      "t_low_s": 477.3,
+      "t_high_s": 879.7,
+      "swing_s": 402.4,
+      "base_s": 645.0
+    },
+    {
+      "regime": "unstirred",
+      "input": "disintegration time 60 to 600 s",
+      "t_low_s": 495.0,
+      "t_high_s": 1035.0,
+      "swing_s": 540.0,
+      "base_s": 645.0
+    },
+    {
+      "regime": "unstirred",
+      "input": "porosity 0.10 to 0.30",
+      "t_low_s": 596.7,
+      "t_high_s": 707.2,
+      "swing_s": 110.5,
+      "base_s": 645.0
+    },
+    {
+      "regime": "unstirred",
+      "input": "citric D 0.5 to 0.9e-9",
+      "t_low_s": 579.4,
+      "t_high_s": 756.2,
+      "swing_s": 176.8,
+      "base_s": 645.0
+    },
+    {
+      "regime": "unstirred",
+      "input": "HCO3- D 1.0 to 1.2e-9",
+      "t_low_s": 642.1,
+      "t_high_s": 648.6,
+      "swing_s": 6.5,
+      "base_s": 645.0
+    },
+    {
+      "regime": "unstirred",
+      "input": "saturation concentration Cs x1.5 to x0.7 (KHCO3 224 g/L basis)",
+      "t_low_s": 496.7,
+      "t_high_s": 840.8,
+      "swing_s": 344.0,
+      "base_s": 645.0
+    },
+    {
+      "regime": "unstirred",
+      "input": "Cs mass-weighted over all components, 517 g/L (against KHCO3 only, 224 g/L)",
+      "t_low_s": 395.0,
+      "t_high_s": 645.0,
+      "swing_s": 250.0,
+      "base_s": 645.0
+    },
+    {
+      "regime": "unstirred",
+      "input": "Cs mass-weighted over the reactants, 601 g/L (against KHCO3 only, 224 g/L)",
+      "t_low_s": 368.7,
+      "t_high_s": 645.0,
+      "swing_s": 276.3,
+      "base_s": 645.0
+    },
+    {
+      "regime": "stirred",
+      "input": "fragment radius 0.2 to 2.0 mm",
+      "t_low_s": 242.5,
+      "t_high_s": 1380.4,
+      "swing_s": 1137.9,
+      "base_s": 347.3
+    },
+    {
+      "regime": "stirred",
+      "input": "flow velocity (regime range)",
+      "t_low_s": 293.6,
+      "t_high_s": 394.9,
+      "swing_s": 101.3,
+      "base_s": 347.3
+    },
+    {
+      "regime": "stirred",
+      "input": "disintegration time 60 to 600 s",
+      "t_low_s": 197.3,
+      "t_high_s": 737.3,
+      "swing_s": 540.0,
+      "base_s": 347.3
+    },
+    {
+      "regime": "stirred",
+      "input": "porosity 0.10 to 0.30",
+      "t_low_s": 332.1,
+      "t_high_s": 366.9,
+      "swing_s": 34.9,
+      "base_s": 347.3
+    },
+    {
+      "regime": "stirred",
+      "input": "citric D 0.5 to 0.9e-9",
+      "t_low_s": 328.6,
+      "t_high_s": 378.4,
+      "swing_s": 49.8,
+      "base_s": 347.3
+    },
+    {
+      "regime": "stirred",
+      "input": "HCO3- D 1.0 to 1.2e-9",
+      "t_low_s": 346.5,
+      "t_high_s": 348.3,
+      "swing_s": 1.8,
+      "base_s": 347.3
+    },
+    {
+      "regime": "stirred",
+      "input": "saturation concentration Cs x1.5 to x0.7 (KHCO3 224 g/L basis)",
+      "t_low_s": 300.5,
+      "t_high_s": 409.2,
+      "swing_s": 108.7,
+      "base_s": 347.3
+    },
+    {
+      "regime": "stirred",
+      "input": "Cs mass-weighted over all components, 517 g/L (against KHCO3 only, 224 g/L)",
+      "t_low_s": 268.4,
+      "t_high_s": 347.3,
+      "swing_s": 79.0,
+      "base_s": 347.3
+    },
+    {
+      "regime": "stirred",
+      "input": "Cs mass-weighted over the reactants, 601 g/L (against KHCO3 only, 224 g/L)",
+      "t_low_s": 260.1,
+      "t_high_s": 347.3,
+      "swing_s": 87.2,
+      "base_s": 347.3
+    }
+  ],
+  "flow_bracket_25C": {
+    "temperature_C": 25.0,
+    "t_A_s": 210.0,
+    "porosity": 0.2,
+    "Cs_g_L": 224.0,
+    "drho_over_rho_additive_volume": 0.0949,
+    "cases": {
+      "r_0.2_mm": {
+        "no_flow_limit_Sh_2": {
+          "Sh_initial": 2.0,
+          "t_B_s": 193.4,
+          "t_total_s": 403.4
+        },
+        "assumed_unstirred_0.1_mm_s": {
+          "Sh_initial": 3.3,
+          "t_B_s": 127.9,
+          "t_total_s": 337.9,
+          "U_mm_s": 0.1
+        },
+        "assumed_unstirred_0.5_mm_s_central": {
+          "Sh_initial": 4.92,
+          "t_B_s": 90.7,
+          "t_total_s": 300.7,
+          "U_mm_s": 0.5
+        },
+        "assumed_unstirred_2.0_mm_s": {
+          "Sh_initial": 7.83,
+          "t_B_s": 59.7,
+          "t_total_s": 269.7,
+          "U_mm_s": 2.0
+        },
+        "solutal_natural_convection_isolated_sphere": {
+          "Sh_initial": 11.59,
+          "t_B_s": 46.3,
+          "t_total_s": 256.3,
+          "Gr_Sc_initial": 80800.0,
+          "Gr_Sc_below_1e8_validity_limit": true
+        },
+        "gas_driven_120s_all_gas": {
+          "Sh_initial": 16.58,
+          "t_B_s": 29.6,
+          "t_total_s": 239.6,
+          "U_mm_s": 12.493,
+          "u_s_mm_s": 0.497,
+          "epsilon_W_kg": 0.00487,
+          "kolmogorov_length_mm": 0.11,
+          "fragment_diameter_over_kolmogorov": 3.6
+        },
+        "gas_driven_600s_half_gas": {
+          "Sh_initial": 11.93,
+          "t_B_s": 40.4,
+          "t_total_s": 250.4,
+          "U_mm_s": 5.799,
+          "u_s_mm_s": 0.05,
+          "epsilon_W_kg": 0.000487,
+          "kolmogorov_length_mm": 0.196,
+          "fragment_diameter_over_kolmogorov": 2.0
+        },
+        "assumed_stirred_5_mm_s": {
+          "Sh_initial": 11.22,
+          "t_B_s": 42.8,
+          "t_total_s": 252.8,
+          "U_mm_s": 5.0
+        },
+        "assumed_stirred_10_mm_s_central": {
+          "Sh_initial": 15.04,
+          "t_B_s": 32.5,
+          "t_total_s": 242.5,
+          "U_mm_s": 10.0
+        },
+        "assumed_stirred_30_mm_s": {
+          "Sh_initial": 24.59,
+          "t_B_s": 20.3,
+          "t_total_s": 230.3,
+          "U_mm_s": 30.0
+        }
+      },
+      "r_0.5_mm": {
+        "no_flow_limit_Sh_2": {
+          "Sh_initial": 2.0,
+          "t_B_s": 1209.0,
+          "t_total_s": 1419.0
+        },
+        "assumed_unstirred_0.1_mm_s": {
+          "Sh_initial": 4.06,
+          "t_B_s": 669.7,
+          "t_total_s": 879.7,
+          "U_mm_s": 0.1
+        },
+        "assumed_unstirred_0.5_mm_s_central": {
+          "Sh_initial": 6.61,
+          "t_B_s": 435.0,
+          "t_total_s": 645.0,
+          "U_mm_s": 0.5
+        },
+        "assumed_unstirred_2.0_mm_s": {
+          "Sh_initial": 11.22,
+          "t_B_s": 267.3,
+          "t_total_s": 477.3,
+          "U_mm_s": 2.0
+        },
+        "solutal_natural_convection_isolated_sphere": {
+          "Sh_initial": 21.07,
+          "t_B_s": 168.1,
+          "t_total_s": 378.1,
+          "Gr_Sc_initial": 1260000.0,
+          "Gr_Sc_below_1e8_validity_limit": true
+        },
+        "gas_driven_120s_all_gas": {
+          "Sh_initial": 28.86,
+          "t_B_s": 108.5,
+          "t_total_s": 318.5,
+          "U_mm_s": 16.956,
+          "u_s_mm_s": 0.497,
+          "epsilon_W_kg": 0.00487,
+          "kolmogorov_length_mm": 0.11,
+          "fragment_diameter_over_kolmogorov": 9.1
+        },
+        "gas_driven_600s_half_gas": {
+          "Sh_initial": 20.3,
+          "t_B_s": 152.4,
+          "t_total_s": 362.4,
+          "U_mm_s": 7.87,
+          "u_s_mm_s": 0.05,
+          "epsilon_W_kg": 0.000487,
+          "kolmogorov_length_mm": 0.196,
+          "fragment_diameter_over_kolmogorov": 5.1
+        },
+        "assumed_stirred_5_mm_s": {
+          "Sh_initial": 16.58,
+          "t_B_s": 184.9,
+          "t_total_s": 394.9,
+          "U_mm_s": 5.0
+        },
+        "assumed_stirred_10_mm_s_central": {
+          "Sh_initial": 22.62,
+          "t_B_s": 137.3,
+          "t_total_s": 347.3,
+          "U_mm_s": 10.0
+        },
+        "assumed_stirred_30_mm_s": {
+          "Sh_initial": 37.72,
+          "t_B_s": 83.6,
+          "t_total_s": 293.6,
+          "U_mm_s": 30.0
+        }
+      },
+      "r_2.0_mm": {
+        "no_flow_limit_Sh_2": {
+          "Sh_initial": 2.0,
+          "t_B_s": 19343.7,
+          "t_total_s": 19553.7
+        },
+        "assumed_unstirred_0.1_mm_s": {
+          "Sh_initial": 6.12,
+          "t_B_s": 7457.0,
+          "t_total_s": 7667.0,
+          "U_mm_s": 0.1
+        },
+        "assumed_unstirred_0.5_mm_s_central": {
+          "Sh_initial": 11.22,
+          "t_B_s": 4277.2,
+          "t_total_s": 4487.2,
+          "U_mm_s": 0.5
+        },
+        "assumed_unstirred_2.0_mm_s": {
+          "Sh_initial": 20.45,
+          "t_B_s": 2421.6,
+          "t_total_s": 2631.6,
+          "U_mm_s": 2.0
+        },
+        "solutal_natural_convection_isolated_sphere": {
+          "Sh_initial": 55.95,
+          "t_B_s": 1066.7,
+          "t_total_s": 1276.7,
+          "Gr_Sc_initial": 80800000.0,
+          "Gr_Sc_below_1e8_validity_limit": true
+        },
+        "gas_driven_120s_all_gas": {
+          "Sh_initial": 69.67,
+          "t_B_s": 732.4,
+          "t_total_s": 942.4,
+          "U_mm_s": 26.916,
+          "u_s_mm_s": 0.497,
+          "epsilon_W_kg": 0.00487,
+          "kolmogorov_length_mm": 0.11,
+          "fragment_diameter_over_kolmogorov": 36.3
+        },
+        "gas_driven_600s_half_gas": {
+          "Sh_initial": 48.1,
+          "t_B_s": 1054.5,
+          "t_total_s": 1264.5,
+          "U_mm_s": 12.493,
+          "u_s_mm_s": 0.05,
+          "epsilon_W_kg": 0.000487,
+          "kolmogorov_length_mm": 0.196,
+          "fragment_diameter_over_kolmogorov": 20.4
+        },
+        "assumed_stirred_5_mm_s": {
+          "Sh_initial": 31.17,
+          "t_B_s": 1611.3,
+          "t_total_s": 1821.3,
+          "U_mm_s": 5.0
+        },
+        "assumed_stirred_10_mm_s_central": {
+          "Sh_initial": 43.25,
+          "t_B_s": 1170.4,
+          "t_total_s": 1380.4,
+          "U_mm_s": 10.0
+        },
+        "assumed_stirred_30_mm_s": {
+          "Sh_initial": 73.44,
+          "t_B_s": 695.2,
+          "t_total_s": 905.2,
+          "U_mm_s": 30.0
+        }
+      }
+    },
+    "settling": {
+      "r_0.2_mm": {
+        "terminal_velocity_mm_s": 35.5,
+        "Re": 15.9,
+        "fall_time_through_liquid_s": 2.8
+      },
+      "r_0.5_mm": {
+        "terminal_velocity_mm_s": 94.8,
+        "Re": 105.8,
+        "fall_time_through_liquid_s": 1.05
+      },
+      "r_2.0_mm": {
+        "terminal_velocity_mm_s": 313.1,
+        "Re": 1397.3,
+        "fall_time_through_liquid_s": 0.32
+      }
+    },
+    "liquid_depth_m": 0.0994,
+    "note": "Settling acts only until the fragments reach the bottom of the glass (seconds), so it is not a sustained flow. Natural convection is for an isolated sphere in an unbounded quiescent liquid; a fragment bed on the bottom of a glass with a dense solution pooling beneath it would be slower (not modelled). The gas-driven slip velocity is an order of magnitude from scaling, not a correlation fitted to effervescent systems."
+  },
+  "Cs_variants_25C_central": {
+    "Cs_224_KHCO3_only_central_basis": {
+      "Cs_g_L": 224.0,
+      "stirred_total_s": 347.3,
+      "unstirred_total_s": 645.0
+    },
+    "Cs_x0.7": {
+      "Cs_g_L": 156.8,
+      "stirred_total_s": 409.2,
+      "unstirred_total_s": 840.8
+    },
+    "Cs_x1.5": {
+      "Cs_g_L": 336.0,
+      "stirred_total_s": 300.5,
+      "unstirred_total_s": 496.7
+    },
+    "Cs_mass_weighted_all": {
+      "Cs_g_L": 516.8,
+      "stirred_total_s": 268.4,
+      "unstirred_total_s": 395.0
+    },
+    "Cs_mass_weighted_reactants": {
+      "Cs_g_L": 601.0,
+      "stirred_total_s": 260.1,
+      "unstirred_total_s": 368.7
+    }
+  },
+  "monte_carlo": {
+    "n_per_regime_approx": 1500,
+    "seed": 20261020,
+    "Cs_g_L": 224.0,
+    "temperature_C": "pooled 20, 25, 30",
+    "draws": "uniform on the assumed ranges (log-uniform for fragment radius and flow); stirred and unstirred drawn 50/50; NOT a probability distribution of real cubes",
+    "stirred": {
+      "p5_s": 200.9,
+      "p50_s": 584.0,
+      "p95_s": 1321.5
+    },
+    "unstirred": {
+      "p5_s": 309.7,
+      "p50_s": 936.0,
+      "p95_s": 4451.7
+    },
+    "all": {
+      "p5_s": 239.1,
+      "p50_s": 687.3,
+      "p95_s": 3471.1
+    }
+  },
+  "monte_carlo_25C_only": {
+    "n_per_regime_approx": 1500,
+    "seed": 20261021,
+    "Cs_g_L": 224.0,
+    "temperature_C": 25.0,
+    "draws": "uniform on the assumed ranges (log-uniform for fragment radius and flow); stirred and unstirred drawn 50/50; NOT a probability distribution of real cubes",
+    "stirred": {
+      "p5_s": 194.7,
+      "p50_s": 576.9,
+      "p95_s": 1313.9
+    },
+    "unstirred": {
+      "p5_s": 305.8,
+      "p50_s": 982.8,
+      "p95_s": 4446.2
+    },
+    "all": {
+      "p5_s": 239.9,
+      "p50_s": 704.0,
+      "p95_s": 3560.6
+    }
+  },
+  "monte_carlo_25C_only_Cs_mass_weighted_all": {
+    "n_per_regime_approx": 1500,
+    "seed": 20261021,
+    "Cs_g_L": 516.8,
+    "temperature_C": 25.0,
+    "draws": "uniform on the assumed ranges (log-uniform for fragment radius and flow); stirred and unstirred drawn 50/50; NOT a probability distribution of real cubes",
+    "stirred": {
+      "p5_s": 145.3,
+      "p50_s": 460.0,
+      "p95_s": 825.3
+    },
+    "unstirred": {
+      "p5_s": 206.9,
+      "p50_s": 652.1,
+      "p95_s": 2109.2
+    },
+    "all": {
+      "p5_s": 174.2,
+      "p50_s": 534.2,
+      "p95_s": 1736.8
+    }
+  },
+  "cross_checks": {
+    "Ph_Eur_effervescent_limit_s": 300,
+    "Ph_Eur_note": "The 5 minute limit is for one tablet in 200 mL at 15 to 25 C (edition 7.0 mirror: Tablets monograph, not chapter 2.9.1). Pass means disintegration with no agglomerates; the cube test is not run.",
+    "published_effervescent_times_s": {
+      "Atchade_2025_F1_to_F5_opened_P": [
+        307,
+        156,
+        263,
+        209,
+        261
+      ],
+      "Atchade_2025_tablet": "0.45 to 0.52 g, 11.1 mm diameter, 4.28 mm thick, citric acid plus sodium bicarbonate about 20 percent of the mass, 1 tablet in 200 mL distilled water at 25 C, Ph. Eur. 10th ed. test",
+      "cube_comparison": "cube is 7.3 to 8.4 times heavier, 3.3 times thicker and about 78 percent reactants: the tablet times are an order-of-magnitude anchor only",
+      "Elagina_2022_furazolidone_100mL_under_s_abstract_only_S": 300
+    },
+    "central_25C_stirred_total_s": 347.3,
+    "central_25C_unstirred_total_s": 645.0,
+    "intact_cube_25C_unstirred_reference_s": 44064.4,
+    "intact_cube_25C_stirred_reference_s": 10969.9,
+    "Sc_range_20_to_30C_central_D_eff": {
+      "20": 1400.0,
+      "25": 1090.0,
+      "30": 862.0
+    },
+    "Sherwood_validity_note": "Sc is far above the printed range (below 250); the correlation is extrapolated (limit).",
+    "MC_p50_all_s": 687.3,
+    "MC_p5_p95_all_s": [
+      239.1,
+      3471.1
+    ]
+  },
+  "dominant_uncertainty": {
+    "largest_swing_row": {
+      "regime": "unstirred",
+      "input": "fragment radius 0.2 to 2.0 mm",
+      "t_low_s": 300.7,
+      "t_high_s": 4487.2,
+      "swing_s": 4186.5,
+      "base_s": 645.0
+    },
+    "top_three": [
+      {
+        "regime": "unstirred",
+        "input": "fragment radius 0.2 to 2.0 mm",
+        "t_low_s": 300.7,
+        "t_high_s": 4487.2,
+        "swing_s": 4186.5,
+        "base_s": 645.0
+      },
+      {
+        "regime": "stirred",
+        "input": "fragment radius 0.2 to 2.0 mm",
+        "t_low_s": 242.5,
+        "t_high_s": 1380.4,
+        "swing_s": 1137.9,
+        "base_s": 347.3
+      },
+      {
+        "regime": "unstirred",
+        "input": "disintegration time 60 to 600 s",
+        "t_low_s": 495.0,
+        "t_high_s": 1035.0,
+        "swing_s": 540.0,
+        "base_s": 645.0
+      }
+    ],
+    "statement": "The fragment size after break-up has the largest one-at-a-time swing in both regimes; the disintegration time, the flow and the saturation concentration follow (see tornado_25C). The intact cube, with no break-up, is hours."
+  },
+  "limits": [
+    "Model estimate. No dissolution was measured. The result depends on assumed fragment size, bubble and stirrer velocities, and disintegration time.",
+    "The unstirred case rests on an assumed flow (0.1 to 2 mm/s). The derived bracket (flow_bracket_25C) runs from the no-flow limit (Sh = 2, slowest) to natural-convection and gas-driven estimates that approach the stirred case; none is a measurement, and a fragment bed on the glass bottom with dense solution pooling beneath it is not modelled.",
+    "The whole cube mass is dissolved against the potassium bicarbonate solubility (224 g/L, S, conservative). Composition-weighted values (517 to 601 g/L, DERIVED heuristic) shorten the central times (see Cs_variants_25C_central); reaction in the boundary layer is not modelled.",
+    "The citric acid binary diffusivity is not sourced (ASSUMPTION bracket, UNVERIFIED). The HCO3- value is a molecular dynamics fit (P) and three secondary values.",
+    "Sherwood correlation is extrapolated to Sc of about 1000 (printed validity below 250).",
+    "The disintegration range (60, 210 and 600 s) is an ASSUMPTION anchored to 0.5 g tablets, not to a 3.79 g cube.",
+    "The Monte Carlo ranges are assumed uniform ranges, not measured distributions; the percentiles are not probabilities.",
+    "The compendial end point (no agglomerates left) is earlier than full dissolution, and the total here sums disintegration and fragment dissolution without overlap (conservative).",
+    "The gas-driven flow is not modelled from first principles; the flow range is an ASSUMPTION.",
+    "Binder, filler and flavour are assumed fully soluble; insoluble residue would change the end point.",
+    "Temperature effect on KHCO3 solubility is not sourced and is set to zero."
+  ]
+}

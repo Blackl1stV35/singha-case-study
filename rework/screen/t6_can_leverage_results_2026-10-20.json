@@ -1,0 +1,615 @@
+{
+  "note": "DERIVED arithmetic on figures printed on pages read 20 October 2026 and on saved primary files. Tiers and status sit in rework/69_can_leverage_verification.md (fourth pass, revised).",
+  "read_date": "2026-10-20",
+  "revision": "fourth pass, after the second independent verifier round (20 October 2026)",
+  "listings_20oct2026": [
+    {
+      "retailer": "Lotus's online",
+      "product": "Lemon six-can pack, non-member price (printed 'Each', read as the pack price)",
+      "pack_price_thb": 85.0,
+      "cans": 6,
+      "per_can_thb": 14.1667,
+      "per_litre_thb": 42.93,
+      "status": "used (range high, non-member)",
+      "source": "file 13; lotuss.com/en/product/singha-lemon-soda-can-330ml-6-51109221"
+    },
+    {
+      "retailer": "Lotus's online",
+      "product": "Lemon six-can pack, Club Card member price",
+      "pack_price_thb": 81.0,
+      "cans": 6,
+      "per_can_thb": 13.5,
+      "per_litre_thb": 40.91,
+      "status": "used (range low, member price)",
+      "source": "file 13; same page"
+    },
+    {
+      "retailer": "Lotus's online",
+      "product": "Lemon 24-can pack (printed 330.00 'Each', read as the pack price)",
+      "pack_price_thb": 330.0,
+      "cans": 24,
+      "per_can_thb": 13.75,
+      "per_litre_thb": 41.67,
+      "status": "used",
+      "source": "file 04; shopping.lotuss.com/en/product/169912032"
+    },
+    {
+      "retailer": "Makro Pro",
+      "product": "Lemon six-can pack, read as 82 (the page also prints 78 beside 'buy 3 or more')",
+      "pack_price_thb": 82.0,
+      "cans": 6,
+      "per_can_thb": 13.6667,
+      "per_litre_thb": 41.41,
+      "status": "NOT USED: the one-pack price is not labelled and the printed features point in different directions (file 18 item 17)",
+      "source": "files 04, 13 and 18 items 10 and 17; makro.pro/p/02emhsl-6814746706115"
+    },
+    {
+      "retailer": "Makro Pro",
+      "product": "Lemon 24-can pack (printed 325; per unit 13.54; 330 struck through, -1%)",
+      "pack_price_thb": 325.0,
+      "cans": 24,
+      "per_can_thb": 13.5417,
+      "per_litre_thb": 41.04,
+      "status": "used (range low)",
+      "source": "file 13; makro.pro/p/mpnvmxs-7350275997891"
+    },
+    {
+      "retailer": "7-Eleven ALL Online",
+      "product": "Lemon 24-can case (printed 330; 408 struck through, -19%; validity to 20 October 2026)",
+      "pack_price_thb": 330.0,
+      "cans": 24,
+      "per_can_thb": 13.75,
+      "per_litre_thb": 41.67,
+      "status": "used (range high)",
+      "source": "file 13; allonline.7eleven.co.th/p/.../474313/"
+    },
+    {
+      "retailer": "7-Eleven ALL Online",
+      "product": "Lemon six-can pack (printed 172; 182 struck through, -5%; validity to 20 October 2026)",
+      "pack_price_thb": 172.0,
+      "cans": 6,
+      "per_can_thb": 28.6667,
+      "per_litre_thb": 86.87,
+      "status": "excluded as an outlier; disclosed on the slide",
+      "source": "file 13 and file 18 item 7; allonline.7eleven.co.th/p/.../514221/"
+    },
+    {
+      "retailer": "Lotus's online",
+      "product": "Lemon single can",
+      "pack_price_thb": 17.0,
+      "cans": 1,
+      "per_can_thb": 17.0,
+      "per_litre_thb": 51.52,
+      "status": "used",
+      "source": "file 13; shopping.lotuss.com/en/product/singha-lemon-soda-zero-sugar-lemon-soda-330ml-50986847"
+    }
+  ],
+  "flavour_listings_20oct2026": [
+    {
+      "flavour": "Lemon Cream",
+      "listing": "Lotus's single can (pack size not printed; 'Each')",
+      "price_thb": 17.0,
+      "cans": 1,
+      "per_can_thb": 17.0,
+      "per_litre_thb": 51.52,
+      "source": "file 04; file 18 item 9"
+    },
+    {
+      "flavour": "Lemon Cream",
+      "listing": "Makro Pro six-can pack (price as printed; not used in any range)",
+      "price_thb": 79.0,
+      "cans": 6,
+      "per_can_thb": 13.1667,
+      "per_litre_thb": 39.9,
+      "source": "file 04"
+    },
+    {
+      "flavour": "Lemon Cream",
+      "listing": "7-Eleven ALL Online 24-can case",
+      "price_thb": 330.0,
+      "cans": 24,
+      "per_can_thb": 13.75,
+      "per_litre_thb": 41.67,
+      "source": "file 04 search page"
+    },
+    {
+      "flavour": "Pink",
+      "listing": "Lotus's single can",
+      "price_thb": 17.0,
+      "cans": 1,
+      "per_can_thb": 17.0,
+      "per_litre_thb": 51.52,
+      "source": "file 04"
+    },
+    {
+      "flavour": "Pink",
+      "listing": "Lotus's 24-can pack",
+      "price_thb": 337.0,
+      "cans": 24,
+      "per_can_thb": 14.0417,
+      "per_litre_thb": 42.55,
+      "source": "file 04"
+    },
+    {
+      "flavour": "Pink",
+      "listing": "Makro Pro six-can pack (price as printed; not used in any range)",
+      "price_thb": 82.0,
+      "cans": 6,
+      "per_can_thb": 13.6667,
+      "per_litre_thb": 41.41,
+      "source": "file 04"
+    },
+    {
+      "flavour": "Pink",
+      "listing": "Makro Pro 24-can pack",
+      "price_thb": 325.0,
+      "cans": 24,
+      "per_can_thb": 13.5417,
+      "per_litre_thb": 41.04,
+      "source": "file 04"
+    },
+    {
+      "flavour": "Pink",
+      "listing": "7-Eleven ALL Online 24-can case",
+      "price_thb": 330.0,
+      "cans": 24,
+      "per_can_thb": 13.75,
+      "per_litre_thb": 41.67,
+      "source": "file 04 search page"
+    },
+    {
+      "flavour": "Red",
+      "listing": "Lotus's single can",
+      "price_thb": 17.0,
+      "cans": 1,
+      "per_can_thb": 17.0,
+      "per_litre_thb": 51.52,
+      "source": "file 04"
+    },
+    {
+      "flavour": "Red",
+      "listing": "Makro Pro six-can pack (price as printed; not used in any range)",
+      "price_thb": 79.0,
+      "cans": 6,
+      "per_can_thb": 13.1667,
+      "per_litre_thb": 39.9,
+      "source": "file 04"
+    },
+    {
+      "flavour": "Red",
+      "listing": "Makro Pro 24-can pack",
+      "price_thb": 325.0,
+      "cans": 24,
+      "per_can_thb": 13.5417,
+      "per_litre_thb": 41.04,
+      "source": "file 04"
+    },
+    {
+      "flavour": "Red",
+      "listing": "7-Eleven ALL Online 24-can case",
+      "price_thb": 330.0,
+      "cans": 24,
+      "per_can_thb": 13.75,
+      "per_litre_thb": 41.67,
+      "source": "file 04 search page"
+    },
+    {
+      "flavour": "Red",
+      "listing": "7-Eleven ALL Online six-can pack (THB 172, the same as the excluded Lemon six-pack; not used)",
+      "price_thb": 172.0,
+      "cans": 6,
+      "per_can_thb": 28.6667,
+      "per_litre_thb": 86.87,
+      "source": "file 04 search page"
+    },
+    {
+      "flavour": "Ume",
+      "listing": "Makro Pro six-can pack (price as printed; not used in any range)",
+      "price_thb": 82.0,
+      "cans": 6,
+      "per_can_thb": 13.6667,
+      "per_litre_thb": 41.41,
+      "source": "file 04; file 18 item 10"
+    },
+    {
+      "flavour": "Ume",
+      "listing": "7-Eleven ALL Online 24-can case",
+      "price_thb": 330.0,
+      "cans": 24,
+      "per_can_thb": 13.75,
+      "per_litre_thb": 41.67,
+      "source": "file 04 search page"
+    },
+    {
+      "flavour": "Watermelon (limited edition)",
+      "listing": "7-Eleven ALL Online 24-can case (342 struck through; validity 26/02/2026 to 20/10/2026)",
+      "price_thb": 330.0,
+      "cans": 24,
+      "per_can_thb": 13.75,
+      "per_litre_thb": 41.67,
+      "source": "file 18 item 8"
+    }
+  ],
+  "flavour_status_20oct2026": {
+    "Lemon": "on sale: Lotus's, Makro Pro, 7-Eleven online; Lazada page read with no price (S, 20 October 2026)",
+    "Pink": "on sale: Lotus's, Makro Pro, 7-Eleven online (S, 20 October 2026)",
+    "Red": "on sale: Lotus's, Makro Pro, 7-Eleven online (S, 20 October 2026)",
+    "Ume": "on sale: Makro Pro, 7-Eleven online (S, 20 October 2026)",
+    "Lemon Cream": "on sale: Lotus's, Makro Pro, 7-Eleven online (S, 20 October 2026)",
+    "Watermelon (limited edition)": "listed at 7-Eleven online; promotion validity printed to 20 October 2026, the read date (S)",
+    "Yuzu": "NOT FOUND in the reads: no listing in the nine Makro Pro lemon-soda results (file 04), none in the first 20 of 110 Makro Pro results for 'singha yuzu' (file 18 item 12), and the 7-Eleven search feature was unavailable (file 18 item 11). Not closed.",
+    "Melon (limited edition, six months from April 2025)": "no listing read; reported as a six-month summer edition (S). Not closed; not expected on sale."
+  },
+  "makro_unit_price_checks": {
+    "lemon_24_printed_unit_13_54": {
+      "computed_325_over_24": 13.54,
+      "printed": 13.54,
+      "matches": true
+    },
+    "lemon_6_printed_unit_13_67_equals_82_over_6": {
+      "computed_82_over_6": 13.67,
+      "printed": 13.67,
+      "matches": true
+    },
+    "lemon_6_78_over_6_if_78_is_one_pack": 13.0
+  },
+  "makro_discount_label_check": {
+    "pairs": [
+      {
+        "label": "7-Eleven 24-can case, 330 against struck 408",
+        "printed_pct": 19,
+        "computed_floor_pct": 19
+      },
+      {
+        "label": "7-Eleven six-can pack, 172 against struck 182",
+        "printed_pct": 5,
+        "computed_floor_pct": 5
+      },
+      {
+        "label": "Makro Pro 24-can case, 325 against struck 330",
+        "printed_pct": 1,
+        "computed_floor_pct": 1
+      },
+      {
+        "label": "Makro Pro lemon six-can pack, 78 against 82",
+        "printed_pct": 4,
+        "computed_floor_pct": 4
+      },
+      {
+        "label": "Makro Pro lemon six-can pack, 82 against 82 (if 82 were the selling price)",
+        "printed_pct": 4,
+        "computed_floor_pct": 0
+      }
+    ],
+    "reading": "The printed percentages match the whole-percent discount rounded down on the first three pairs and on the 78 against 82 pair. The printed -4% fits 78 against 82 and no other pair. The printed per-unit 13.67 fits 82 over 6, and the Makro 24-can per-unit price fits the selling price, so the two printed features point in different directions. The page does not label the one-pack price. The Makro six-can figure is not used in any range. This is an inference from the page layout (DERIVED), not a printed fact."
+  },
+  "slide_ranges_per_can_thb": {
+    "lemon_six_pack_member_lotuss": 13.5,
+    "lemon_six_pack_nonmember_lotuss": 14.17,
+    "lemon_six_pack_range_lotuss_only": [
+      13.5,
+      14.17
+    ],
+    "lemon_six_pack_makro_if_82_one_pack_not_used": 13.67,
+    "lemon_six_pack_makro_if_78_one_pack_not_used": 13.0,
+    "lemon_six_pack_makro_status": "not used in any range; the one-pack price is not settled (see makro_discount_label_check)",
+    "lemon_case_24_range": [
+      13.54,
+      13.75
+    ],
+    "lemon_case_24_lotuss": 13.75,
+    "single_can_lotuss_online": 17.0,
+    "single_can_per_litre_thb": 51.52,
+    "excluded_six_pack_172_per_can": 28.67,
+    "note": "Online listings read 20 October 2026. Not store shelf prices. The six-can range uses Lotus's only (THB 81 member and THB 85 non-member). The 24-can range uses Makro Pro (THB 325) and Lotus's and 7-Eleven online (THB 330). The 7-Eleven six-can pack at THB 172 is excluded and disclosed on the slide. Lotus's 'Each' is read as the pack price."
+  },
+  "seven_eleven_validity_windows_printed": {
+    "case_24": "11/08/2020 - 20/10/2026",
+    "six_pack": "09/06/2021 - 20/10/2026",
+    "watermelon_case_24": "26/02/2026 - 20/10/2026",
+    "note": "All windows end on the read date. The pages do not say what the window covers. The case window's start date (11 August 2020) is a listing or promotion date, not a launch date, and is not used as one."
+  },
+  "launch_dating_reports": [
+    {
+      "date": "19 Aug 2020",
+      "source": "Brand Buffet, tagged PR (file 12; same article as brandbuffet.in.th/?p=153039)",
+      "statement": "can sold at 330 mL, 16 baht, 7-Eleven nationwide; the product 'launched' with no date printed"
+    },
+    {
+      "date": "20 Aug 2020",
+      "source": "Marketeer, archives/183206 (opened 20 Oct 2026)",
+      "statement": "330 mL can at 16 baht from 7-Eleven nationwide; no launch date printed"
+    },
+    {
+      "date": "22 Sep 2020 (22 ก.ย. 2563)",
+      "source": "Positioning, strategic-move/76404 (file 12)",
+      "statement": "channel plan in the future tense; first-period sales five times the planned target"
+    },
+    {
+      "date": "4 Jun 2021",
+      "source": "MGR Online, 9640000054177 (file 18 item 1)",
+      "statement": "entered the market in late 2563 (late 2020 in the Buddhist calendar)"
+    },
+    {
+      "date": "3 Sep 2023",
+      "source": "Marketeer, archives/321216 (file 18 item 2)",
+      "statement": "first launch in late 2563 (late 2020)"
+    },
+    {
+      "date": "11 Aug 2020 (validity start)",
+      "source": "7-Eleven ALL Online case page (file 13)",
+      "statement": "validity window start only; not a launch date"
+    }
+  ],
+  "launch_month_status": "Not settled. The August 2020 PR article reports the can on sale without a date. Two later articles date the first launch to late 2020. The slide reports both.",
+  "price_history_per_can_thb": [
+    {
+      "date": "2020 (PR article 19 Aug 2020)",
+      "flavour": "Lemon",
+      "price_thb": 16.0,
+      "per_litre_thb": 48.48,
+      "source": "Brand Buffet, 19 Aug 2020, tagged PR"
+    },
+    {
+      "date": "2021 (reported 8 Jun 2021)",
+      "flavour": "Yuzu",
+      "price_thb": 16.0,
+      "per_litre_thb": 48.48,
+      "source": "Brand Inside, 8 Jun 2021"
+    },
+    {
+      "date": "2022 (reported 15 Aug 2022)",
+      "flavour": "Red",
+      "price_thb": 16.0,
+      "per_litre_thb": 48.48,
+      "source": "Thansettakij, 15 Aug 2022; Marketingoops, 15 Aug 2022"
+    },
+    {
+      "date": "2023 (reported 3 Sep 2023)",
+      "flavour": "Ume",
+      "price_thb": 17.0,
+      "per_litre_thb": 51.52,
+      "source": "Marketeer, 3 Sep 2023; Brand Inside, 4 Sep 2023"
+    },
+    {
+      "date": "2024 (reported 25 Jun 2024)",
+      "flavour": "Pink",
+      "price_thb": 17.0,
+      "per_litre_thb": 51.52,
+      "source": "Marketeer, 25 Jun 2024"
+    },
+    {
+      "date": "2026 (Lotus's online, 20 Oct 2026)",
+      "flavour": "Lemon single",
+      "price_thb": 17.0,
+      "per_litre_thb": 51.52,
+      "source": "Lotus's online, read 20 Oct 2026"
+    }
+  ],
+  "price_rise_2022_to_2023_pct": 6.25,
+  "volume_arithmetic": {
+    "cans_2021_million": 84.85,
+    "cans_2022_target_million": 136.36,
+    "target_over_2021_pct_increase": 60.71,
+    "value_check_84_85m_cans_at_16_thb_million": 1357.58,
+    "value_check_difference_pct_vs_printed_1357": 0.04,
+    "press_2021_sales_value_thb_m_thansettakij": 1357.0,
+    "press_2021_revenue_thb_m_marketeer_275740": 1357.0,
+    "press_2022_revenue_target_thb_m_marketeer_275740": 2200.0,
+    "implied_revenue_per_can_at_2022_target_thb": 16.13,
+    "reading": "The printed 1,357 million equals the 2021 volume (84.85 million cans, 28 million litres) at THB 16 a can to within 0.04 per cent. Thansettakij prints no year and no basis. Marketeer (16 Aug 2022) calls the figure the previous year's revenue. Neither article names a source for the 1,357 million figure; its basis is not confirmed."
+  },
+  "press_attribution_2022": {
+    "thansettakij_15_aug_2022": "the 28 and 45 million litre figures and the 1,357 million figure are in the article's own wording; no named source or company statement is attached (checked 20 Oct 2026)",
+    "marketeer_16_aug_2022_275740": "the same figures, with 2021 revenue of 1,357 million and a 2022 target of 2,200 million; the 2022 target of 45 million litres and 2,200 million baht is attributed to Singha's expectations in general terms; the 2021 figures carry no named source (checked 20 Oct 2026)",
+    "marketeer_16_aug_2022_275504": "the same 28, 45, 1,357 and 13,172 million figures in one sentence (checked 20 Oct 2026)"
+  },
+  "limited_edition": {
+    "watermelon_cans_million": 2.0,
+    "watermelon_litres_million": 0.66
+  },
+  "limited_edition_dates": {
+    "melon": {
+      "marketeer_408963": "2 April 2025 (printed 02/04/2025): sold as a limited edition only during the summer season, for six months; the start month is not stated",
+      "brand_buffet_2025_04": "4 April 2025: on sale through this summer for six months; 7-Eleven nationwide and Singha Online Shop",
+      "slide_wording": "Melon, a six-month summer edition reported in April 2025 (S)"
+    },
+    "watermelon": {
+      "brand_buffet_2026_03": "16 March 2026, PR-tagged: two million cans, two label designs, 7-Eleven all branches and Singha Online",
+      "bloody_nanno_name": "the article body uses 'Bloody Nanno' as the product name for the watermelon flavour (file 18 item 16); the slide uses 'Watermelon limited edition'",
+      "7_eleven_case_validity": "26/02/2026 to 20/10/2026 (printed); the promotion ends on the read date"
+    }
+  },
+  "canned_market_year_check": {
+    "csd_2021_times_21pct_million": 13172.25,
+    "difference_to_printed_13172_million": 0.25,
+    "reading": "Read as the 2021 canned figure by arithmetic (DERIVED); Positioning 4 Jul 2022 prints '2564' for the CSD market and no year beside 13,172 million."
+  },
+  "share_claims_company": {
+    "q4_2020_share_pct": 4,
+    "source": "MGR Online, 4 Jun 2021 (company claim; 4% of canned carbonated drinks in the last quarter of 2020)",
+    "canned_format_share_pct_sep2023": 52,
+    "source2": "Marketeer, 3 Sep 2023 (press; 'Singha Lemon Soda holds 52% in the canned format'). The same paragraph gives the sugar-free carbonated soft drink market at about THB 6,930 million and growth above 25%. No period is printed, and the base of the 52% is not stated.",
+    "sugar_free_csd_market_thb_m_marketeer_2023": 6930,
+    "sugar_free_csd_market_thb_m_brandinside_headline_2023": 7000,
+    "note": "Not used on slide 4 as a verified market share. The 52% is shown as a company claim as reported by press."
+  },
+  "share_12pct_mismatch_positioning_4jul2022": {
+    "urls": [
+      "https://positioningmag.com/strategic-move/88360",
+      "https://positioningmag.com/1391149"
+    ],
+    "twelve_pct_of_13172_million": 1580.6,
+    "printed_value_million": 1450,
+    "printed_value_as_share_of_13172_pct": 11.01,
+    "printed_value_as_share_of_csd_2021_pct": 2.31,
+    "printed_2_4_pct_of_csd_2021_million": 1505.4,
+    "reading": "The article does not say which market the 12% refers to. The printed 12% and 1,450 million fit neither the canned base (12% of 13,172 is about 1,581 million) nor the total CSD base. 1,450 is 2.31% of 62,725; the article's own 2.4% share of total CSD would be about 1,505 million. Conflict, not used on slide 4."
+  },
+  "can_maker_bjc_2025": {
+    "capacity_2025_million_cans": 3880,
+    "actual_2025_million_cans": 2307,
+    "usage_2025_computed_pct": 59.46,
+    "usage_2025_printed_pct": 59.46,
+    "spare_2025_million_cans": 1573,
+    "spare_2025_pct": 40.54,
+    "capacity_growth_2023_to_2025_pct": 12.79,
+    "vietnam_actual_2025_million_cans": 1959,
+    "thai_plus_vietnam_actual_2025_million_cans": 4266,
+    "target_2022_cans_as_pct_of_capacity_2025": 3.51,
+    "target_2022_cans_as_pct_of_output_2025": 5.91,
+    "revenue_per_can_blended_upper_thb": 2.78,
+    "revenue_per_can_upper_bracket_thai_cans_only_thb": 5.16,
+    "scope_caution": "Capacity and output are for all can sizes and all customers. They are not the capacity of the 330 mL can or of any Boon Rawd plant."
+  },
+  "can_maker_margins_2025_2024": {
+    "net_margin_2025_pct": 11.39,
+    "net_margin_2024_pct": 12.54,
+    "note": "The can maker's margins, not Singha's."
+  },
+  "singha_corporation_press": {
+    "2021": {
+      "revenue_m": 4226.6397,
+      "net_profit_m": 3590.7008,
+      "source": "Thaiger, 18 Apr 2025 (S; year printed; cites the company site, no filing named)",
+      "net_margin_pct": 84.95,
+      "margin_basis": "not stated in the press"
+    },
+    "2024": {
+      "revenue_m": 3950.0,
+      "net_profit_m": 3135.0,
+      "source": "MGR Online, 23 May 2026 (S; revenue year printed; net profit year inferred by position)",
+      "net_margin_pct": 79.37,
+      "margin_basis": "not stated in the press"
+    },
+    "2025": {
+      "revenue_m": 3892.0,
+      "net_profit_m": 3085.0,
+      "source": "MGR Online, 23 May 2026 (S; revenue year printed; net profit year inferred by position)",
+      "net_margin_pct": 79.27,
+      "margin_basis": "not stated in the press"
+    }
+  },
+  "singha_corporation_changes_2025_vs_2024": {
+    "revenue_pct": -1.47,
+    "net_profit_pct": -1.59,
+    "note": "Derived from press figures; not checked against a filing."
+  },
+  "boon_rawd_2022_press": {
+    "revenue_m": 11711,
+    "net_profit_m": 5793,
+    "source": "Thaiger, 18 Apr 2025 (S; Boon Rawd, not Singha Corporation)"
+  },
+  "tracxn_band": {
+    "text": "$100M - $500M as on Dec 31, 2023 (annual revenue band)",
+    "opened_20_oct_2026": "yes, by WebFetch (the page shows an 'Internal Server Error' banner; the content was readable)",
+    "reported_or_estimated": "not stated on the page",
+    "used_as_figure": false
+  },
+  "metal_cost_per_can_thb": {
+    "status": "NOT REPRODUCED on 20 October 2026 and NOT USED anywhere. The LME page returned HTTP 403 today. The saved LME file says it was read in the user's Chrome on 19 October 2026 (raw line 4). CLAUDE.md section 4 allows Claude in Chrome only on a named request, and none is recorded. The route is not authorised; the lead must confirm it.",
+    "reproduced_20_oct_2026": false,
+    "route_authorised": false,
+    "used_on_slide": false,
+    "lme_cash_usd_per_kg_low": 3.013,
+    "lme_cash_usd_per_kg_high": 3.014,
+    "thb_per_kg_low": 100.49,
+    "thb_per_kg_high": 101.71,
+    "metal_low_thb_per_can": 1.447,
+    "metal_high_thb_per_can": 1.882,
+    "inputs_note": "Sheet mass is an ASSUMPTION (14.4 to 18.5 g). Excludes the regional premium, scrap credit and lids. The Bank of Thailand rate is a saved copy whose route is not recorded and which was not re-verified on 20 October 2026."
+  },
+  "lme_status": {
+    "live_20_oct_2026": "https://www.lme.com/en/metals/non-ferrous/lme-aluminium returned HTTP 403 (re-tested 20 October 2026)",
+    "saved_file": "raw/lme_trading_summary_primary_2026-10-19.md; line 4: 'Read in the user's Chrome, 19 October 2026.'",
+    "route_status": "not authorised: no named request in the record (CLAUDE.md section 4); the lead must confirm",
+    "settlement_price": "not obtained. The brief asked for the settlement price; the saved file holds the official cash bid and offer only",
+    "used_on_slide": false,
+    "limit": "LME input is a stated limit; it is not used in any judge-facing text"
+  },
+  "bot_rates_status": {
+    "saved_copy": "raw/bot_fx_primary_2026-10-15.md (read 19 October 2026): average buying (sight) 33.3535, buying (bill) 33.4246, selling (transfer) 33.7455 baht per USD, as of 15 October 2026",
+    "route_recorded_in_saved_file": false,
+    "live_page_20_oct_2026": "https://www.bot.or.th/en/statistics/exchange-rate.html printed no rate table and no as-of date; it links to thaifxrates.net, which is not a primary source",
+    "tier": "P as a saved copy; NOT re-verified on 20 October 2026",
+    "used_on_slide": false
+  },
+  "excise_02_02_1oct2566": {
+    "ad_valorem_pct": 14,
+    "per_litre_thb_by_sugar_per_100ml": {
+      "up_to_6g": 0,
+      "over_6_to_8g": 1,
+      "over_8_to_10g": 3,
+      "over_10g": 5
+    },
+    "lemon_soda_tier": "up_to_6g (zero sugar, sweetened and flavoured, so 02.02)",
+    "per_litre_thb_for_lemon_soda": 0,
+    "per_can_from_per_litre_part_thb": 0.0,
+    "ad_valorem_base": "not read; the 14% cannot be turned into baht per can",
+    "gazette_pdf_20_oct_2026": "HTTP 403 Forbidden (re-tested 20 October 2026); the saved copy was read from page images",
+    "note": "Later amendments not searched. Figures read from page images; a second reader should check the Thai numerals. Not on slide 4."
+  },
+  "retail_reach_p": {
+    "seven_eleven_stores_end_2025": 15945,
+    "seven_eleven_scope_read": "CP ALL prints 'the total number of stores' at the end of 2025. The scope is not stated in the source. Read as its 7-Eleven network in Thailand by inference: the same document gives 700 new stores in Thailand and 138 international stores separately.",
+    "seven_eleven_international_stores_2025": 138,
+    "big_c_components_tier": "P (BJC One Report 2025, printed component counts)",
+    "big_c_large_formats_thailand_31dec2025": 206,
+    "big_c_all_formats_thailand_31dec2025": 1696,
+    "big_c_total_tier": "DERIVED (sum of the printed components; the source text says 'sum by us')",
+    "big_c_note": "Not a count of outlets that carry the can. Big C product pages returned HTTP 403."
+  },
+  "plant_capacity_s_undated": {
+    "singha_beverage_bang_len_million_litres_per_year": 925,
+    "text": "The Thai history page says the plant 'currently has a capacity of 925 million litres a year'.",
+    "source": "plant.boonrawd.co.th/th/history, read 20 Oct 2026; undated; footer 2016; the plant brews Leo beer; the page does not say which products the figure covers and does not mention cans"
+  },
+  "new_line_plan_2020": {
+    "statement": "Positioning, 22 September 2020: the company was still considering a new line at the existing plant or on a new site; at least THB 1,000 million; the plan was to be finalised by the end of 2021 (end 2564). Tentative wording.",
+    "status": "PLAN (S). No source read shows the line was built or where it is."
+  },
+  "flavour_names_company_page": {
+    "thai_page": "Lemon, Yuzu, Ume, Red and Pink (the Thai page prints the Pink name)",
+    "english_page": "the fifth card is headed 'Pink LEMON SODA' but its 330 ML title reads 'Red Lemon Soda'; the Thai page is cited for Pink"
+  },
+  "slide_numbers_and_source_keys": {
+    "THB 13.5 a can, Club Card member six-pack": "slide_ranges_per_can_thb.lemon_six_pack_member_lotuss",
+    "THB 14.2 a can, non-member six-pack": "slide_ranges_per_can_thb.lemon_six_pack_nonmember_lotuss",
+    "THB 13.5 to 13.8 a can, 24-can packs": "slide_ranges_per_can_thb.lemon_case_24_range",
+    "THB 17.00 single can, about THB 51.5 a litre": "slide_ranges_per_can_thb.single_can_lotuss_online; single_can_per_litre_thb",
+    "THB 172 six-can pack excluded (about THB 28.67 a can)": "slide_ranges_per_can_thb.excluded_six_pack_172_per_can",
+    "28 million litres in 2021; about 84.85 million cans": "volume_arithmetic",
+    "45 million litres target for 2022": "volume_arithmetic.cans_2022_target_million (litres from the press)",
+    "THB 1,357 million, 2021 sales value or revenue (press)": "volume_arithmetic.value_check_difference_pct_vs_printed_1357",
+    "THB 2,200 million, 2022 revenue target (press)": "volume_arithmetic.press_2022_revenue_target_thb_m_marketeer_275740",
+    "THB 13,172 million canned market, 21% of THB 62,725 million": "canned_market_year_check",
+    "15,945 stores, CP ALL, end 2025 (P)": "retail_reach_p.seven_eleven_stores_end_2025",
+    "3,880 million cans capacity; 59.46% used (P, all sizes)": "can_maker_bjc_2025",
+    "925 million litres, Singha Beverage plant (S, undated)": "plant_capacity_s_undated",
+    "52% canned share, press (COMPANY CLAIM as reported)": "share_claims_company.canned_format_share_pct_sep2023",
+    "THB 6,930 million sugar-free CSD market, press 2023": "share_claims_company.sugar_free_csd_market_thb_m_marketeer_2023",
+    "4% last quarter of 2020 (company claim)": "share_claims_company.q4_2020_share_pct"
+  },
+  "self_checks": {
+    "six_pack_range_lotuss_low_round": true,
+    "six_pack_range_lotuss_high_round": true,
+    "makro_78_reading_would_fall_below_lotuss_member_floor": true,
+    "case_24_range_low_round": true,
+    "case_24_range_high_round": true,
+    "volume_2021_cans_million_round": true,
+    "volume_value_check_within_0_1_pct": true,
+    "press_2021_revenue_1357_equals_printed_sales_value": true,
+    "tbc_usage_matches_printed_2025": true,
+    "canned_year_check_within_1_million": true,
+    "share_12pct_mismatch_detected": true,
+    "makro_unit_24_matches": true,
+    "makro_unit_6_82_over_6_matches": true,
+    "makro_discount_floor_matches_first_four_pairs": true,
+    "makro_discount_82_against_82_does_not_match": true,
+    "big_c_total_is_sum_of_printed_components": true,
+    "singha_net_margin_2024_2025_about_79_printed_ratio": true,
+    "metal_cost_flagged_not_reproduced_and_not_used": true,
+    "volume_2022_target_implied_revenue_per_can_near_16": true
+  },
+  "self_checks_all_pass": true
+}

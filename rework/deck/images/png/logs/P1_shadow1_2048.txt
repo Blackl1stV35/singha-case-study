@@ -1,0 +1,15 @@
+00:05.688  cycles           | WARNING HIPEW initialization failed: Error opening HIP dynamic library
+D:\Workspace\singha-case-study\rework\deck\images\render_deck_images.py:474: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world.use_nodes = True
+D:\Workspace\singha-case-study\rework\deck\images\render_deck_images.py:486: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  fm.use_nodes = True
+D:\Workspace\singha-case-study\rework\deck\images\render_deck_images.py:114: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat.use_nodes = True
+01:31.344  render           | Saved: 'D:\Workspace\singha-case-study\rework\deck\images\png\P1_cover_1638x2048.png'
+framed: bbox w=0.337 h=0.300 centre=(0.500, 0.310) distance=16.62
+rendering P1 1638 x 2048 samples 128 device GPU CUDA shadow 1
+saved D:/Workspace/singha-case-study/rework/deck/images/png/P1_cover_1638x2048.png
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit
+D:/Workspace/singha-case-study/rework/deck/images/png/P1_cover_1638x2048.png transparent 53.5% -> 85.9%

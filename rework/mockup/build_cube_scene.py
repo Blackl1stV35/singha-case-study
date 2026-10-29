@@ -12,8 +12,9 @@ Options:
     --height N       default 1440
     --samples N      default 128 (use 64 if a render would run past the time limit)
 
-Scene: a single-serve pouch of the stated size and one lime compressed cube resting on the
-same matte floor beside it, under soft three-point studio light. No glass, no water and no
+Scene: a single-serve pouch of the stated size, one lime compressed cube resting on the same
+matte floor beside it, and a 6-cube carton standing behind them, under soft three-point studio
+light. No glass, no water and no
 bubbles are drawn. Glassware and bubble imagery are excluded on every occasion (48 section
 3.3, decision D7, rule S2). Built only from Blender primitives and procedural node materials.
 No downloaded textures and no network access. The .blend file is never saved. The PNG is
@@ -35,11 +36,11 @@ A3  Pouch film: off-white token, roughness 0.25, IOR 1.575 (PET, sourced), with 
 A4  Front artwork: label_front.png wrapped over the whole front face, 70 x 90 mm. The artwork is
     1050 by 1350 px, the same portrait proportion, so it is not stretched; the script stops if the
     aspects differ. ASSUMPTION (layout).
-A5  Cube: 15 mm side, DERIVED from ASSUMPTION inputs (48 section 6.1). Colour: lime token,
+A5  Cube: 14 mm side, DERIVED from ASSUMPTION inputs (basis B, 3.79 g central; rework/64 section 8). Colour: lime token,
     ASSUMPTION (design choice). A 3 mm edge bevel in 6 segments and one level of subdivision give
     a pressed, rounded surface. Roughness 0.75 and a fine noise bump add a granular finish:
     ASSUMPTION. Rotated 18 degrees about Z only, so the
-    base sits flat on the floor, its centre 7.5 mm above the floor, beside the pouch:
+    base sits flat on the floor, its centre 7.0 mm above the floor, beside the pouch:
     ASSUMPTION (staging).
 A6  Cyclorama and matte floor: background token colour, roughness 0.95, curve radius 120 mm.
     The colour is ASSUMPTION (design choice). The matte finish and the curve radius are
@@ -53,6 +54,10 @@ A9  Render: Cycles on CPU, Standard view transform, exposure -1.2 stops (ASSUMPT
     measuring the backdrop against the background token), OpenImageDenoise if the build
     provides it, caustics off, up to 32 light bounces. The colour is the scene colour, not a
     print or colour-proof match.
+A10 Carton: a 6-cube carton, 190 mm wide, 150 mm deep, 50 mm high, standing behind the pouch
+    and the cube. The outer size is ASSUMPTION (screen/pack_economics.py, 6-pack, 190 x 150 x 50). It is ink
+    with a lime band across the top of the front. It carries no lettering: the carton copy is
+    not designed or checked. The empty-carton mass (0.10 kg) is not shown. ASSUMPTION (staging).
 
 B. Rules applied to the content (see the brand style-matching note):
 B1 Bubbles are not drawn. Bubble imagery is held back under rule S2 (carbonation is not
@@ -81,11 +86,15 @@ MM = 0.001  # the scene is built in metres; 1 mm = 0.001 m
 
 PACK_X_MM = -38.0    # pouch centre, left of centre
 CUBE_X_MM = 26.0     # cube centre, right of the pouch
-CUBE_Z_MM = 7.5      # cube centre height: half the 15 mm side, so the base rests on the floor
-TARGET_MM = (-20.0, 0.0, 60.0)      # centred on the pouch and the cube together
-CAMERA_MM = (-20.0, -550.0, 200.0)
-CAMERA_FRONT_MM = (-20.0, -520.0, 45.0)  # straight-on, at pack height
-TARGET_FRONT_MM = (-20.0, 0.0, 45.0)
+CUBE_SIDE_MM = 14.0  # basis B, rework/64 section 8
+CUBE_Z_MM = 7.0      # cube centre height: half the 14 mm side, so the base rests on the floor
+CARTON_MM = (-30.0, 95.0, 25.0)     # 6-cube carton centre: behind the pouch (front face at y = 20 mm)
+CARTON_SIZE_MM = (190.0, 150.0, 50.0)  # width, depth, height (ASSUMPTION, screen/pack_economics.py: 6-pack 190 x 150 x 50)
+CARTON_BAND_MM = 12.0               # lime band across the top of the carton front
+TARGET_MM = (-20.0, 40.0, 40.0)     # centred on the carton, the pouch and the cube together
+CAMERA_MM = (-20.0, -760.0, 200.0)
+CAMERA_FRONT_MM = (-20.0, -700.0, 40.0)  # straight-on, at carton mid-height, so the carton is in frame
+TARGET_FRONT_MM = (-20.0, 0.0, 40.0)
 ARGS_VIEW = "front"  # set from the command line in main()
 
 
@@ -249,6 +258,9 @@ def build_materials(tok, label_img):
 
     mats["cyc"] = principled("Cyclorama", hex_linear(tok["background"]), 0.95,
                              {"Specular IOR Level": 0.2})[0]
+    # Carton: ink board with a lime band (colours from the palette; ASSUMPTION, no print or board source).
+    mats["carton"] = principled("CartonInk", lin["ink"], 0.60)[0]
+    mats["carton_band"] = principled("CartonLime", lin["lime"], 0.45)[0]
     return mats
 
 
@@ -330,12 +342,25 @@ def build_pack(tok, aspect, mats):
 
 
 def build_cube(mats):
-    cube = box_mesh("Cube", (CUBE_X_MM, 0.0, CUBE_Z_MM), (15.0, 15.0, 15.0),
+    cube = box_mesh("Cube", (CUBE_X_MM, 0.0, CUBE_Z_MM), (CUBE_SIDE_MM, CUBE_SIDE_MM, CUBE_SIDE_MM),
                     bevel_mm=3.0, segments=6, rot_deg=(0.0, 0.0, 18.0))
     obj = link("Cube", cube, mats["cube"], smooth=True)
     sub = obj.modifiers.new("Round", "SUBSURF")
     sub.levels = 1
     sub.render_levels = 2
+
+
+def build_carton(mats):
+    """6-cube carton: an ink box with a lime band across the top of the front face.
+    The band is 1.2 mm thick and stands proud of the front face, so it does not z-fight the face."""
+    cx, cy, cz = CARTON_MM
+    sx, sy, sz = CARTON_SIZE_MM
+    box = box_mesh("Carton", CARTON_MM, CARTON_SIZE_MM, bevel_mm=1.5, segments=2)
+    link("Carton", box, mats["carton"], smooth=False)
+    front_y = cy - sy / 2.0
+    band_centre = (cx, front_y - 0.6, cz + sz / 2.0 - CARTON_BAND_MM / 2.0)  # 0.6 mm either side of the front face
+    band = box_mesh("CartonBand", band_centre, (sx, 1.2, CARTON_BAND_MM))
+    link("CartonBand", band, mats["carton_band"], smooth=False)
 
 
 def build_cyclorama(mats):
@@ -489,6 +514,7 @@ def main():
     build_cyclorama(mats)
     build_pack(tok, aspect, mats)
     build_cube(mats)
+    build_carton(mats)
     build_lights()
     build_camera()
     setup_render(scene, args, tok["background"])

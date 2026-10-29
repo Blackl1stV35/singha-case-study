@@ -1,0 +1,524 @@
+{
+  "task": "T68 fix pass checks",
+  "date_read": "2026-10-20",
+  "method": "String presence in saved raw pages (UTF-8), and arithmetic on the t5 ladder results file and the figures in the record. No web access.",
+  "saved_page_checks": [
+    {
+      "id": "S01",
+      "files": [
+        "T4/osotspa_financial_highlights.md"
+      ],
+      "needle": "25,561",
+      "claim": "Osotspa revenue from sales 2025, 25,561 million baht",
+      "found": true
+    },
+    {
+      "id": "S02",
+      "files": [
+        "T4/osotspa_financial_highlights.md"
+      ],
+      "needle": "3,667",
+      "claim": "Osotspa profit attributable to owners of the parent 2025, 3,667 million baht",
+      "found": true
+    },
+    {
+      "id": "S03",
+      "files": [
+        "T4/thaibev_fy2025_yearend_sgx_extract.md"
+      ],
+      "needle": "23,694",
+      "claim": "ThaiBev non-alcoholic gross profit FY2025, 23,694 million baht",
+      "found": true
+    },
+    {
+      "id": "S04",
+      "files": [
+        "T4/thaibev_fy2025_yearend_sgx_extract.md"
+      ],
+      "needle": "64,774",
+      "claim": "ThaiBev non-alcoholic sales FY2025, 64,774 million baht",
+      "found": true
+    },
+    {
+      "id": "S05",
+      "files": [
+        "T4/thaibev_fy2025_yearend_sgx_extract.md"
+      ],
+      "needle": "5,141",
+      "claim": "ThaiBev non-alcoholic net profit FY2025, 5,141 million baht (before owners' share)",
+      "found": true
+    },
+    {
+      "id": "S06",
+      "files": [
+        "T4/thaibev_fy2025_yearend_sgx_extract.md"
+      ],
+      "needle": "2,414",
+      "claim": "ThaiBev non-alcoholic attributable profit FY2025, 2,414 million baht",
+      "found": true
+    },
+    {
+      "id": "S07",
+      "files": [
+        "T2/haadthip_ir_pages_2026-10-20.md"
+      ],
+      "needle": "4,505",
+      "claim": "Haad Thip total revenue, column 30 June 2026, 4,505 million baht",
+      "found": true
+    },
+    {
+      "id": "S08",
+      "files": [
+        "T2/haadthip_ir_pages_2026-10-20.md"
+      ],
+      "needle": "| 41.90 |",
+      "claim": "Haad Thip gross margin %, column 30 June 2026, 41.90",
+      "found": true
+    },
+    {
+      "id": "S09",
+      "files": [
+        "T2/haadthip_ir_pages_2026-10-20.md"
+      ],
+      "needle": "| 6.70 |",
+      "claim": "Haad Thip net margin %, column 30 June 2026, 6.70",
+      "found": true
+    },
+    {
+      "id": "S10",
+      "files": [
+        "T3/pepsi_system_moves_and_launches_2012_2026.md"
+      ],
+      "needle": "กว่า 2,000 ล้านบาท",
+      "claim": "Suntory PepsiCo: investment over THB 2,000 million for two new Saraburi lines (Thai text)",
+      "found": true
+    },
+    {
+      "id": "S11",
+      "files": [
+        "T3/pepsi_system_moves_and_launches_2012_2026.md"
+      ],
+      "needle": "10 July 2569",
+      "claim": "Suntory PepsiCo release dated 10 July 2569 (2026)",
+      "found": true
+    },
+    {
+      "id": "S12",
+      "files": [
+        "T3/csd_market_share_press_2020_2025.md"
+      ],
+      "needle": "2025 plan",
+      "claim": "Pepsi THB 1,000 million 2025 plan (press, Saraburi)",
+      "found": true
+    },
+    {
+      "id": "S13",
+      "files": [
+        "T3/csd_market_share_press_2020_2025.md"
+      ],
+      "needle": "Saraburi carbonated capacity up 50%",
+      "claim": "Pepsi Saraburi carbonated capacity up 50% (press, 2025)",
+      "found": true
+    },
+    {
+      "id": "S14",
+      "files": [
+        "T5/t5_recheck_lazada_priceza_2026-10-20.md"
+      ],
+      "needle": "16105459253",
+      "claim": "Sprite Lemon Plus Zero Sugar 24-can listing number 16105459253 (2026 row)",
+      "found": true
+    },
+    {
+      "id": "S15",
+      "files": [
+        "T5/t5_recheck_lazada_priceza_2026-10-20.md"
+      ],
+      "needle": "Coca-Cola Official Store",
+      "claim": "Sprite Lemon Plus row seller shown as Coca-Cola Official Store (LazMall, via Priceza)",
+      "found": true
+    },
+    {
+      "id": "S16",
+      "files": [
+        "T6/04_retail_listings_2026-10-20.md"
+      ],
+      "needle": "เรดเลมอนโซดา 330 มล. x 6 | 79",
+      "claim": "Singha Red Lemon Soda six-pack at Makro PRO, THB 79",
+      "found": true
+    },
+    {
+      "id": "S17",
+      "files": [
+        "T6/04_retail_listings_2026-10-20.md"
+      ],
+      "needle": "เลมอน ครีมโซดา 330 มล. x 6 | 79",
+      "claim": "Singha Lemon Cream Soda six-pack at Makro PRO, THB 79",
+      "found": true
+    },
+    {
+      "id": "S18",
+      "files": [
+        "T4/est_cola_thansettakij_2024-03-16_share_and_moves.md"
+      ],
+      "needle": "อยู่ที่ 26%",
+      "claim": "est penetration 26 percent before the 2023 rebrand (Thansettakij, 16 March 2024)",
+      "found": true
+    },
+    {
+      "id": "S19",
+      "files": [
+        "T4/est_cola_thansettakij_2024-03-16_share_and_moves.md"
+      ],
+      "needle": "rising to 28%",
+      "claim": "est penetration rising to 28 percent (no year printed for the 28 percent)",
+      "found": true
+    },
+    {
+      "id": "S20",
+      "files": [
+        "T3/csd_market_share_press_2020_2025.md"
+      ],
+      "needle": "Gen Z is 36%",
+      "claim": "Gen Z is 36 percent of est customers (Thairath, 15 April 2024)",
+      "found": true
+    },
+    {
+      "id": "S21",
+      "files": [
+        "T1/bot_fx_report123_2026-10-20.md"
+      ],
+      "needle": "33.5410",
+      "claim": "Bank of Thailand USD reference rate 15 October 2026, 33.5410",
+      "found": true
+    },
+    {
+      "id": "S22",
+      "files": [
+        "T3/sbf_apac_segment_fy2023_fy2025_edinet_2026-10-20.md"
+      ],
+      "needle": "394,057",
+      "claim": "Suntory Beverage and Food APAC external revenue FY2025, 394,057 million yen",
+      "found": true
+    },
+    {
+      "id": "S23",
+      "files": [
+        "T2/priceza_sprite_2026-10-20.md"
+      ],
+      "needle": "456",
+      "claim": "Sprite No Sugar 24-can, CR7 ManU, 456 baht (Priceza row)",
+      "found": true
+    },
+    {
+      "id": "S24",
+      "files": [
+        "T5/lotuss_2026-10-20.md"
+      ],
+      "needle": "332",
+      "claim": "Sprite 325 mL 24-can at Lotus's, 332 baht (regular, no sugar wording)",
+      "found": true
+    },
+    {
+      "id": "S25",
+      "files": [
+        "T5/makro_pro_2026-10-20.md"
+      ],
+      "needle": "311",
+      "claim": "Sprite 325 mL 24-can at Makro PRO, 311 baht",
+      "found": true
+    },
+    {
+      "id": "S26",
+      "files": [
+        "T2/lotus_singha_lemon_soda_can_2026-10-20.md"
+      ],
+      "needle": "17.00",
+      "claim": "Singha Lemon Soda single can at Lotus's, 17.00 baht",
+      "found": true
+    },
+    {
+      "id": "S27",
+      "files": [
+        "T1/mitihoon_622207_2026-03-03_hadthip_results.md"
+      ],
+      "needle": "8,258.4",
+      "claim": "Haad Thip revenue from sales 2025, 8,258.4 million baht (Mitihoon reprint)",
+      "found": true
+    },
+    {
+      "id": "S28",
+      "files": [
+        "T4/68c_cpaxtra_newsroom_own_brand_2025-06-06.md"
+      ],
+      "needle": "18.5%",
+      "claim": "Makro own brand products about 18.5 percent of Makro sales (CP Axtra newsroom, 6 June 2025)",
+      "found": true
+    },
+    {
+      "id": "S29",
+      "files": [
+        "T5/r27_thaiger_sprite_lemon_plus_2022.md"
+      ],
+      "needle": "29 ส.ค. 2565",
+      "claim": "Sprite Lemon Plus 2022 price article dated 29 August 2022",
+      "found": true
+    },
+    {
+      "id": "S30",
+      "files": [
+        "T2/tncc_sec_filing_v2_exec_summary_extract.md",
+        "T1/tncc_sec_v2_exec_summary_pages.md"
+      ],
+      "needle": "511,000",
+      "claim": "ThaiNamthip about 511,000 outlets at 30 June 2025",
+      "found": true
+    },
+    {
+      "id": "S31",
+      "files": [
+        "T3/csd_market_share_press_2020_2025.md"
+      ],
+      "needle": "8.6%",
+      "claim": "est 8.6 percent volume share (Thansettakij, 16 March 2024)",
+      "found": true
+    },
+    {
+      "id": "S32",
+      "files": [
+        "T1/mitihoon_622207_2026-03-03_hadthip_results.md",
+        "T1/haadthip_release_2026-03-25_storythailand.md"
+      ],
+      "needle": "5.6%",
+      "claim": "Haad Thip FY2025 net profit change of minus 5.6 percent (string '5.6%' present; context read by hand)",
+      "found": true
+    }
+  ],
+  "derived_checks": [
+    {
+      "id": "D01",
+      "value": 51,
+      "expected": 51,
+      "claim": "t5 ladder: 51 of 51 saved-page rows pass (rerun 20 October 2026)",
+      "pass": true
+    },
+    {
+      "id": "D02",
+      "value": 14.0462,
+      "expected": 14.0462,
+      "claim": "set A main ladder median, 31 can listings (rounded 14.05)",
+      "pass": true
+    },
+    {
+      "id": "D03",
+      "value": 13.875,
+      "expected": 13.875,
+      "claim": "set B retailer-page multipacks median, 16 rows (rounded 13.88)",
+      "pass": true
+    },
+    {
+      "id": "D04",
+      "value": 16.6231,
+      "expected": 16.6231,
+      "claim": "set D single-can median, unrounded (rounded 16.62)",
+      "pass": true
+    },
+    {
+      "id": "D05",
+      "value": 16.2462,
+      "expected": 16.2462,
+      "claim": "set D single-can minimum (7UP No Sugar and Sprite single at 16.00 per 325 mL)",
+      "pass": true
+    },
+    {
+      "id": "D07",
+      "value": 13.70835,
+      "expected": 13.7083,
+      "claim": "set K Singha rows median recomputed from row values",
+      "pass": true
+    },
+    {
+      "id": "D08",
+      "value": 12.4,
+      "expected": 12.4,
+      "claim": "named-seller sugar-free 24-can range (A01 excluded), minimum (A05 7UP No Sugar)",
+      "pass": true
+    },
+    {
+      "id": "D09",
+      "value": 14.63,
+      "expected": 14.63,
+      "claim": "named-seller sugar-free 24-can range, maximum (A10 Schweppes lime no sugar; half-up rounding of 14.625)",
+      "pass": true
+    },
+    {
+      "id": "D10",
+      "value": 12.4,
+      "expected": 12.4,
+      "claim": "range if A01 were included: minimum unchanged",
+      "pass": true
+    },
+    {
+      "id": "D11",
+      "value": 14.63,
+      "expected": 14.63,
+      "claim": "range if A01 were included: maximum unchanged (A01 at 14.05 lies inside the range)",
+      "pass": true
+    },
+    {
+      "id": "D12",
+      "value": 17.0,
+      "expected": 17.0,
+      "claim": "Singha Lemon Soda single can, sugar-free (Lotus's), THB per 330 mL",
+      "pass": true
+    },
+    {
+      "id": "D13",
+      "value": 16.2462,
+      "expected": 16.2462,
+      "claim": "7UP No Sugar single can, 325 mL at 16.00, per 330 mL (sugar-free by name)",
+      "pass": true
+    },
+    {
+      "id": "D14",
+      "value": 16.2462,
+      "expected": 16.2462,
+      "claim": "Sprite single can (regular), 325 mL at 16.00, per 330 mL",
+      "pass": true
+    },
+    {
+      "id": "G01",
+      "value": 0.95,
+      "expected": 0.95,
+      "claim": "cube minus main median (above by 0.95)",
+      "pass": true
+    },
+    {
+      "id": "G02",
+      "value": 6.8,
+      "expected": 6.8,
+      "claim": "cube above main median, percent",
+      "pass": true
+    },
+    {
+      "id": "G03",
+      "value": 1.125,
+      "expected": 1.125,
+      "claim": "cube minus retailer-page multipack median (1.125; half-up 1.13)",
+      "pass": true
+    },
+    {
+      "id": "G04",
+      "value": 8.1,
+      "expected": 8.1,
+      "claim": "cube above set B median, percent",
+      "pass": true
+    },
+    {
+      "id": "G05",
+      "value": -1.6231,
+      "expected": -1.6231,
+      "claim": "cube minus single-can median (below by 1.62)",
+      "pass": true
+    },
+    {
+      "id": "G06",
+      "value": -9.8,
+      "expected": -9.8,
+      "claim": "cube below single-can median, percent",
+      "pass": true
+    },
+    {
+      "id": "G07",
+      "value": -1.2462,
+      "expected": -1.2462,
+      "claim": "cube minus 7UP No Sugar single (below by 1.25)",
+      "pass": true
+    },
+    {
+      "id": "G08",
+      "value": -7.7,
+      "expected": -7.7,
+      "claim": "cube below 7UP No Sugar single, percent",
+      "pass": true
+    },
+    {
+      "id": "G09",
+      "value": -2.0,
+      "expected": -2.0,
+      "claim": "cube minus Singha single (below by 2.00)",
+      "pass": true
+    },
+    {
+      "id": "G10",
+      "value": -11.8,
+      "expected": -11.8,
+      "claim": "cube below Singha single, percent",
+      "pass": true
+    },
+    {
+      "id": "G11",
+      "value": 0.8692,
+      "expected": 0.8692,
+      "claim": "cube minus Sprite No Sugar 24-can (above by 0.87)",
+      "pass": true
+    },
+    {
+      "id": "M01",
+      "value": 14.346074,
+      "expected": 14.3,
+      "claim": "Osotspa attributable margin 2025, 3,667 over 25,561 (one decimal 14.3)",
+      "pass": true
+    },
+    {
+      "id": "M02",
+      "value": 36.579492,
+      "expected": 36.58,
+      "claim": "ThaiBev non-alcoholic gross margin FY2025 (36.58)",
+      "pass": true
+    },
+    {
+      "id": "M03",
+      "value": 7.936827,
+      "expected": 7.94,
+      "claim": "ThaiBev non-alcoholic net margin before owners' share (7.94)",
+      "pass": true
+    },
+    {
+      "id": "M04",
+      "value": 3.726804,
+      "expected": 3.73,
+      "claim": "ThaiBev attributable margin (3.73)",
+      "pass": true
+    },
+    {
+      "id": "M05",
+      "value": 6.881478,
+      "expected": 6.88,
+      "claim": "Haad Thip net margin, base revenue from sales (6.88, not the printed 6.90)",
+      "pass": true
+    },
+    {
+      "id": "M06",
+      "value": 13.166667,
+      "expected": 13.1667,
+      "claim": "Singha Red and Lemon Cream six-pack at THB 79 per 330 mL (13.17)",
+      "pass": true
+    },
+    {
+      "id": "M07",
+      "value": 13.666667,
+      "expected": 13.6667,
+      "claim": "Singha Lemon six-pack at Makro PRO THB 82 per 330 mL (13.67)",
+      "pass": true
+    }
+  ],
+  "summary": {
+    "saved_page_checks": 32,
+    "saved_page_found": 32,
+    "saved_page_not_found": [],
+    "derived_checks": 31,
+    "derived_pass": 31,
+    "derived_fail": []
+  }
+}

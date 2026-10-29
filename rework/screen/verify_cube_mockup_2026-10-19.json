@@ -11,8 +11,9 @@
     "patterns_checked": 62,
     "forbidden_pattern_hits": [],
     "bare_new_occurrences": 0,
-    "new_as_constructor": 38,
-    "organiser_digest_hits": 0
+    "new_as_constructor": 42,
+    "organiser_digest_hits": 0,
+    "water_word_hits_in_visible_copy": 0
   },
   "cases": [
     {
@@ -26,7 +27,12 @@
       "state": {
         "threeLoaded": true,
         "threeError": null,
-        "phase": "hover",
+        "sceneParts": [
+          "Pouch",
+          "Carton",
+          "Cube"
+        ],
+        "dropControl": false,
         "stageIsFallback": false,
         "fallbackShown": false,
         "fallbackLabelCanvas": false,
@@ -54,30 +60,8 @@
       "idle_screenshot": "rework/screen/cube_3d_desktop_idle.png",
       "idle_screenshot_size": [
         1280,
-        1033
+        1056
       ],
-      "drop": {
-        "drop_phases": [
-          "fall",
-          "sink",
-          "dissolve",
-          "dissolved"
-        ],
-        "drop_ok": true,
-        "cube_hidden_when_dissolved": true,
-        "dissolved_screenshot": "rework/screen/cube_3d_desktop_dissolved.png",
-        "dissolved_screenshot_size": [
-          1280,
-          1033
-        ],
-        "reset_phases": [
-          "reset",
-          "hover"
-        ],
-        "reset_ok": true,
-        "cube_visible_after_reset": true,
-        "error": null
-      },
       "console_errors": [],
       "page_errors": [],
       "failed_requests": [],
@@ -95,7 +79,12 @@
       "state": {
         "threeLoaded": true,
         "threeError": null,
-        "phase": "hover",
+        "sceneParts": [
+          "Pouch",
+          "Carton",
+          "Cube"
+        ],
+        "dropControl": false,
         "stageIsFallback": false,
         "fallbackShown": false,
         "fallbackLabelCanvas": false,
@@ -123,27 +112,8 @@
       "idle_screenshot": "rework/screen/cube_3d_phone_idle.png",
       "idle_screenshot_size": [
         375,
-        1155
+        1124
       ],
-      "drop": {
-        "drop_phases": [
-          "fall",
-          "sink",
-          "dissolve",
-          "dissolved"
-        ],
-        "drop_ok": true,
-        "cube_hidden_when_dissolved": true,
-        "dissolved_screenshot": null,
-        "dissolved_screenshot_size": null,
-        "reset_phases": [
-          "reset",
-          "hover"
-        ],
-        "reset_ok": true,
-        "cube_visible_after_reset": true,
-        "error": null
-      },
       "console_errors": [],
       "page_errors": [],
       "failed_requests": [],
@@ -161,7 +131,8 @@
       "state": {
         "threeLoaded": false,
         "threeError": "Failed to fetch dynamically imported module: https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
-        "phase": null,
+        "sceneParts": null,
+        "dropControl": false,
         "stageIsFallback": true,
         "fallbackShown": true,
         "fallbackLabelCanvas": true,
@@ -183,9 +154,8 @@
       "idle_screenshot": "rework/screen/cube_3d_fallback_cdn_blocked.png",
       "idle_screenshot_size": [
         1280,
-        948
+        970
       ],
-      "drop": null,
       "console_errors": [
         "Failed to load resource: net::ERR_FAILED",
         "Failed to load resource: net::ERR_FAILED",
@@ -240,22 +210,17 @@
     {
       "check": "desktop idle screenshot saved",
       "pass": true,
-      "detail": "rework/screen/cube_3d_desktop_idle.png size=[1280, 1033]"
+      "detail": "rework/screen/cube_3d_desktop_idle.png size=[1280, 1056]"
     },
     {
-      "check": "desktop drop sequence in order and cube hidden when dissolved",
+      "check": "desktop scene has pouch, cube and carton, and no water",
       "pass": true,
-      "detail": "phases=['fall', 'sink', 'dissolve', 'dissolved']; hiddenWhenDissolved=True; error=None"
+      "detail": "sceneParts=['Pouch', 'Carton', 'Cube']"
     },
     {
-      "check": "desktop reset sequence in order and cube back in hover",
+      "check": "desktop no drop control (the water and drop story is removed, rework/48 section 8.4)",
       "pass": true,
-      "detail": "phases=['reset', 'hover']; visibleAfterReset=True"
-    },
-    {
-      "check": "desktop dissolved screenshot saved",
-      "pass": true,
-      "detail": "rework/screen/cube_3d_desktop_dissolved.png size=[1280, 1033]"
+      "detail": "dropControl=False"
     },
     {
       "check": "phone page loads from file://",
@@ -290,17 +255,17 @@
     {
       "check": "phone idle screenshot saved",
       "pass": true,
-      "detail": "rework/screen/cube_3d_phone_idle.png size=[375, 1155]"
+      "detail": "rework/screen/cube_3d_phone_idle.png size=[375, 1124]"
     },
     {
-      "check": "phone drop sequence in order and cube hidden when dissolved",
+      "check": "phone scene has pouch, cube and carton, and no water",
       "pass": true,
-      "detail": "phases=['fall', 'sink', 'dissolve', 'dissolved']; hiddenWhenDissolved=True; error=None"
+      "detail": "sceneParts=['Pouch', 'Carton', 'Cube']"
     },
     {
-      "check": "phone reset sequence in order and cube back in hover",
+      "check": "phone no drop control (the water and drop story is removed, rework/48 section 8.4)",
       "pass": true,
-      "detail": "phases=['reset', 'hover']; visibleAfterReset=True"
+      "detail": "dropControl=False"
     },
     {
       "check": "CDN blocked: fallback text and front label shown, no WebGL canvas",
@@ -315,7 +280,7 @@
     {
       "check": "CDN blocked: fallback screenshot saved",
       "pass": true,
-      "detail": "rework/screen/cube_3d_fallback_cdn_blocked.png size=[1280, 948]"
+      "detail": "rework/screen/cube_3d_fallback_cdn_blocked.png size=[1280, 970]"
     },
     {
       "check": "cube_3d.html wording scan (make_label.py list and organiser digests)",
@@ -324,8 +289,8 @@
     }
   ],
   "summary": {
-    "passed": 24,
-    "total": 24,
+    "passed": 23,
+    "total": 23,
     "failed": []
   }
 }

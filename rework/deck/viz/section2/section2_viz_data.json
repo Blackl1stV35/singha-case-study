@@ -1,0 +1,312 @@
+{
+ "slide3": {
+  "stat1": {
+   "strictly_try_to_reduce_sugar_pct": 44,
+   "open_to_sugar_or_salt_alternatives_pct": 27,
+   "source": "Mintel, February 2026",
+   "tier": "S"
+  },
+  "stat2": {
+   "price_per_330ml_thb": [
+    12.4,
+    14.63
+   ],
+   "what": "sugar-free lemon and lime 24-can packs",
+   "where": "named sellers",
+   "date": "20 October 2026",
+   "tier": "S",
+   "axis_thb": [
+    10,
+    16
+   ]
+  },
+  "stat3": {
+   "overseas": "found (waterdrop; Ricola)",
+   "thailand": "none found in listings read on 20 October 2026"
+  }
+ },
+ "slide4": {
+  "brand": {
+   "launched": "August 2020 (press; later articles say late 2020)",
+   "later_flavours": [
+    "Yuzu",
+    "Red",
+    "Ume",
+    "Pink",
+    "Lemon Cream"
+   ]
+  },
+  "pack_and_price_thb_per_can": {
+   "launch": 16.0,
+   "single_can_lotus_20_oct_2026": 17.0,
+   "pack_24_per_can_20_oct_2026": [
+    13.54,
+    13.75
+   ],
+   "axis_thb": [
+    12,
+    18
+   ]
+  },
+  "channels": [
+   "7-Eleven",
+   "Lotus's",
+   "Makro",
+   "Singha Online Shop"
+  ],
+  "derived_estimates_not_singha_figures": [
+   {
+    "label": "Cans a year",
+    "point": 119,
+    "range": [
+     83,
+     137
+    ],
+    "axis_max": 150
+   },
+   {
+    "label": "A year, to the producer",
+    "point": "about THB 880 million a year to the producer",
+    "range": null
+   },
+   {
+    "label": "Can variable cost, before aluminium",
+    "point": 3.3,
+    "range": [
+     2.6,
+     3.9
+    ],
+    "axis_max": 5
+   },
+   {
+    "label": "Line-hours for 200,000 cubes",
+    "point": 79,
+    "range": [
+     45,
+     152
+    ],
+    "axis_max": 160
+   }
+  ]
+ },
+ "slide5": {
+  "tiles": {
+   "urban_consumers_drink_carbonated_out_of_home_pct": 90,
+   "purchases_a_year": "more than 22",
+   "spend_per_trip_thb": "about 19",
+   "source": "Kantar, April 2024",
+   "tier": "S"
+  },
+  "sweetness_preference_pct": {
+   "full sweetness": 40,
+   "less sweet": 36,
+   "undecided": 24,
+   "source": "Mintel, February 2026",
+   "tier": "S"
+  },
+  "margin_over_men_35_44_pct": [
+   {
+    "row": "Age gradient alone",
+    "ratio_median": 1.0295,
+    "ratio_p05": 0.9985,
+    "ratio_p95": 1.0677,
+    "margin_pct_median": 2.95,
+    "margin_pct_p05": -0.15,
+    "margin_pct_p95": 6.77,
+    "shown": {
+     "median": "+3.0",
+     "p05": "minus 0.2",
+     "p95": "plus 6.8"
+    },
+    "interval_touches_1": true,
+    "source": "rework/screen/ambient_variation_results.json, comparison_with_rework_46_47",
+    "tier": "DERIVED (ASSUMPTION and PROXY inputs)"
+   },
+   {
+    "row": "Full model: with potassium exclusion and assumed temperature noise",
+    "ratio_median": 1.0565,
+    "ratio_p05": 0.997,
+    "ratio_p95": 1.1231,
+    "margin_pct_median": 5.65,
+    "margin_pct_p05": -0.3,
+    "margin_pct_p95": 12.31,
+    "shown": {
+     "median": "+5.7",
+     "p05": "minus 0.3",
+     "p95": "plus 12.3"
+    },
+    "interval_touches_1": true,
+    "source": "rework/screen/ambient_variation_results.json, comparison_with_rework_46_47",
+    "tier": "DERIVED (ASSUMPTION and PROXY inputs)"
+   }
+  ],
+  "rank_first_probability": {
+   "men_25_34_among_six_drinker_groups": 0.9405,
+   "shown": "94%"
+  }
+ },
+ "note": "Slides 3 to 5 figures are from rework/deck/deck_content.md; the slide 5 margin ranges are read from the team model results.",
+ "drawn_text": [
+  "Cans are the lemon drink on the",
+  "shelf. No dissolvable cube was found.",
+  "44%",
+  "strictly try to reduce sugar",
+  "27%",
+  "are open to sugar or salt alternatives",
+  "Mintel, February 2026, S",
+  "THB 12.40 to 14.63",
+  "per 330 ml: sugar-free lemon and lime 24-can packs at named sellers (S,",
+  "20 October 2026)",
+  "THB 10",
+  "THB 12",
+  "THB 14",
+  "THB 16",
+  "Drink cubes sell overseas (waterdrop; Ricola)",
+  "None was found on sale in Thailand in listings",
+  "read on 20 October 2026",
+  "Today: a 330 ml can",
+  "Proposed: one cube in 330 ml",
+  "of water",
+  "330 ml",
+  "ON THE SHELF IN THAILAND",
+  "Lemon and lime cans, sugar-free, at",
+  "named sellers.",
+  "NOT FOUND ON SALE IN THAILAND",
+  "No dissolvable cube was found.",
+  "OUT OF SCOPE",
+  "Market size. Press values disagree (NielsenIQ THB 70,772 million to November 2024; THB 66,000 million to January 2024; 2025 values THB 67,000 million to THB 76,900 million). No level is",
+  "stated, and no market is sized from them.",
+  "Opening",
+  "The case",
+  "The product",
+  "The economics",
+  "The plan",
+  "Appendix",
+  "The Singha lemon can gives the cube",
+  "a flavour family and routes to test.",
+  "Brand",
+  "Launched August 2020 (press; later",
+  "articles say late 2020).",
+  "Later flavours",
+  "Yuzu",
+  "Red",
+  "Ume",
+  "Pink",
+  "Lemon Cream",
+  "Lemon can",
+  "the taste reference",
+  "Pack and price",
+  "330 ml can; prices in THB a can",
+  "12",
+  "14",
+  "16",
+  "18",
+  "24-can packs 13.54 to 13.75",
+  "Launch 16",
+  "Single 17.00",
+  "THB 16 at launch. Online on 20 October",
+  "2026: a single lemon can at THB 17.00",
+  "(Lotus's); 24-can packs at THB 13.54 to 13.75",
+  "a can.",
+  "Channels",
+  "7-Eleven",
+  "Lotus's",
+  "Makro",
+  "Singha Online Shop",
+  "The lemon can was listed online on 20",
+  "October 2026.",
+  "Proof",
+  "The maker's page says 0% sugar.",
+  "COMPANY CLAIM",
+  "Blind taste test against the can.",
+  "Review point: if 7% or more of cube",
+  "buyers would otherwise have bought a",
+  "can, the value model is rerun.",
+  "DERIVED FROM PUBLIC DATA; NOT SINGHA FIGURES",
+  "Cans a year",
+  "about 119 million",
+  "0",
+  "150 million",
+  "83",
+  "137",
+  "A year, to the producer",
+  "about THB 880 million",
+  "Range not stated",
+  "Can variable cost, before aluminium",
+  "about THB 3.3",
+  "0",
+  "THB 5",
+  "2.6",
+  "3.9",
+  "Line-hours for 200,000 cubes",
+  "about 79",
+  "0",
+  "160 hours",
+  "45",
+  "152",
+  "OUT OF SCOPE",
+  "The filling plant; the can's unit cost; line capacity at the group's plants; the number of outlets that carry the can; store shelf prices; retail reach.",
+  "Brand use: the lion and SINGHA need written sign-off from the brand owner before any pack print.",
+  "Opening",
+  "The case",
+  "The product",
+  "The economics",
+  "The plan",
+  "Appendix",
+  "Consumers want less sugar without losing",
+  "taste. Men aged 25 to 34 are the lead to test.",
+  "90%",
+  "of urban consumers drink carbonated drinks out of",
+  "home",
+  "more than 22",
+  "purchases a year",
+  "about THB 19",
+  "per trip",
+  "Kantar, April 2024, S",
+  "Taste",
+  "About two in five name taste as a decision factor (Innova, October 2025, S).",
+  "Preference for sweetness (Mintel, February 2026, S)",
+  "40%",
+  "full sweetness",
+  "36%",
+  "less sweet",
+  "24%",
+  "undecided",
+  "Lead",
+  "In the model, men aged 25 to 34 who drink alcohol rank first among six",
+  "drinker groups in 94% of simulated outcomes. The confirmed category",
+  "band is men aged 27 to 44 (Bangkok sample, n = 400, S).",
+  "OUT OF SCOPE",
+  "A buyer profile for Singha Lemon Soda. Men aged 45 to 59 are a later volume",
+  "segment, pended.",
+  "Margin of men aged 25 to 34 over men aged 35 to 44",
+  "Purchase intent, model result (DERIVED), 90% range",
+  "0%",
+  "5%",
+  "10%",
+  "Men 25 to 34 ahead",
+  "Men 35 to 44",
+  "ahead",
+  "0 = no difference",
+  "Age gradient alone",
+  "+3.0%",
+  "minus 0.2",
+  "plus 6.8",
+  "Full model: with",
+  "potassium exclusion and",
+  "assumed temperature",
+  "noise",
+  "+5.7%",
+  "minus 0.3",
+  "plus 12.3",
+  "Both ranges include no difference. A model result under stated assumptions, not a consumer finding; the",
+  "pilot tests it.",
+  "Opening",
+  "The case",
+  "The product",
+  "The economics",
+  "The plan",
+  "Appendix"
+ ],
+ "forbidden_characters_found": []
+}

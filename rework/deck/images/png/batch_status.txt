@@ -1,0 +1,9 @@
+P1 shadow=1 skip long=3840 (pixels 11796480, a frame of 11059200 already failed on host memory)
+P1 shadow=1 long=2048 OK 97s P1_cover_1638x2048.png
+P1 shadow=0 skip long=3840 (pixels 11796480, a frame of 11059200 already failed on host memory)
+P1 shadow=0 long=2048 OK 40s P1_cover_1638x2048_noshadow.png
+P2 shadow=1 skip long=3840 (pixels 11059200, a frame of 11059200 already failed on host memory)
+P2 shadow=1 long=2048 OK 111s P2_exec_summary_2048x1536.png
+P2 shadow=0 skip long=3840 (pixels 11059200, a frame of 11059200 already failed on host memory)
+P2 shadow=0 long=2048 OK 47s P2_exec_summary_2048x1536_noshadow.png
+P3 shadow=1 skip long=3840 (pixels 11059200, a frame of 11059200 already failed on host memory)

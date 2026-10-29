@@ -1,0 +1,276 @@
+{
+  "bot_check": {
+    "buying_sight_usd_printed": 33.3535,
+    "buying_transfer_usd_printed": 33.4246,
+    "midpoint_buying_sight_and_selling_derived": 33.5495,
+    "midpoint_minus_printed_reference_rate": 0.0085,
+    "note": "The 33.4246 row is printed as BUYING TRANSFER (the earlier raw file of 19 October 2026 labelled it 'bill'). The printed reference rate is used for the conversion. The midpoint is DERIVED and is not a published rate.",
+    "reference_rate_usd_printed": 33.541,
+    "selling_usd_printed": 33.7455,
+    "source": "Bank of Thailand report FM_FX_001_S3 (reportID 123), read 20 October 2026 (P). Date column: 15 OCT 2026."
+  },
+  "bottler_sum": {
+    "coca_cola_system_carbonated_2024_tncc_reported_plus_htc_derived": 43309.9,
+    "missing": [
+      "Suntory PepsiCo Beverage (Thailand) (Pepsi, Mirinda, 7UP): statements not found",
+      "Thai Drinks Co., Ltd. (marketer of est): revenue not found",
+      "Coca-Cola (Thailand) Limited (brand owner, does not bottle): no revenue readable from the registry aggregator (T2)",
+      "TNCC full-year 2025 and Hadthip statements under the SEC (not opened)",
+      "other small brands and imports"
+    ],
+    "of_which_htc_part_is_assumption": 7640.6,
+    "periods": "TNCC calendar 2024 (P as filed); Hadthip 2024 derived from the 2025 release growth rate and the 2025 brand mix (ASSUMPTION); Big Cola 2024 total sales (S, a proxy); Sermsuk fiscal year to 30 September 2023 (P). Mixed periods.",
+    "plus_big_cola_total_sales_proxy_2024": 46909.9,
+    "plus_sermsuk_carbonated_fy2023_reported": 51460.0,
+    "status": "A sum of derived and reported lines on mixed years, with one assumed component and Pepsi missing. It is not a lower bound and does not size the market.",
+    "sum_with_sermsuk_over_niq_to_nov_2024": 0.7271
+  },
+  "bottler_sum_2024": {
+    "coca_cola_system_carbonated_tncc_plus_htc": 43309.9,
+    "coke_share_in_press": 0.51,
+    "coke_share_times_niq_to_nov_2024": 36093.7,
+    "coke_system_over_niq_to_jan_2024": 0.6562,
+    "coke_system_over_niq_to_nov_2024": 0.612,
+    "plus_big_cola_sales": 46909.9,
+    "sum_ex_sermsuk_over_niq_to_nov_2024": 0.6628
+  },
+  "canned_13172": {
+    "can_share_10pct_of_57000": 5700.0,
+    "canned_over_csd_2022_57000": 0.2311,
+    "canned_over_that": 2.31,
+    "note": "The 13,172 figure has no year, no source and no level (Marketeer, 16 August 2022). The year of the 1,357 million Singha sales value is also not stated. The 10.3 percent Singha share divides two undated numbers and is not a market share.",
+    "singha_over_canned_market": 0.103
+  },
+  "colour_clear_segment": {
+    "bkk_17300_note": "Mixed window: the 67,000 value has no window (Bangkokbiznews). Not a share of a common period. Not used for sizing.",
+    "bkk_17300_over_bkk_2025_67000_mixed_window": 0.2582,
+    "bkk_colour_nielseniq_sep2024_aug2025": 17300.0,
+    "lemon_lime_only": "not found",
+    "marketeer_note": "The 18 percent line excludes zero-sugar variants (15 percent, separate line), so it is a floor for the non-cola segment, not its size.",
+    "marketeer_regular_colour_or_clear_18pct_of_66000": 11880.0,
+    "positioningmag_2019_clear_6pct_of_56000": 3360.0,
+    "positioningmag_2019_colour_plus_clear_share": 0.29,
+    "positioningmag_2019_growth_from_its_printed_figures": 0.1002,
+    "positioningmag_2019_growth_printed_text": "almost 12 percent (from about 50,900 million)",
+    "positioningmag_growth_note": "The article's text says almost 12 percent; its own printed figures give 10.0 percent. The article is internally inconsistent on growth. Neither growth figure is used.",
+    "thansettakij_colour_unattributed_no_period": 17391.0
+  },
+  "dark_cola_shares_check": {
+    "note": "The shares do not add to 100 percent (they add to 103.9), so they are not shares of one total. AJ Thai's 85 percent dark cola and Pepsi's 72 percent forecast (26 March 2025) disagree; neither is used.",
+    "shares_624003_printed": {
+      "big_cola": 5.0,
+      "coke": 51.0,
+      "pepsi_suntory": 39.0,
+      "s_thai_drinks": 8.9
+    },
+    "sum_of_printed_shares_pct": 103.9
+  },
+  "htc": {
+    "carbonated_brand_mix_2025_assumed_for_2024": 0.94,
+    "carbonated_sales_2024_at_2025_brand_mix_ASSUMPTION": 7640.6,
+    "carbonated_sales_2025_at_brand_mix": 7762.9,
+    "infographic_growth_2024_over_2023_pct": 0.0415,
+    "infographic_growth_2025_over_2024_pct": 0.0219,
+    "infographic_minus_implied_2024": 60.7,
+    "infographic_minus_release_2025": 109.6,
+    "infographic_minus_release_2025_pct": 0.0133,
+    "infographic_sales_2021_to_2025": {
+      "2021": 6544,
+      "2022": 7092,
+      "2023": 7863,
+      "2024": 8189,
+      "2025": 8368
+    },
+    "note": "The 2024 base is derived from the 2025 growth rate, and the carbonated part applies the 2025 brand mix to it. Both steps are assumptions for 2024.",
+    "ratio_htc_carbonated_2025_to_south_market_times_share": 0.9927,
+    "sales_2024_implied_from_release_growth_DERIVED": 8128.3,
+    "sales_2025_release_mitihoon": 8258.4,
+    "south_market_times_share": 7820.0,
+    "three_year_table_basis": "2023 and 2024 are infographic sales (ยอดขาย). 2025 is both the release revenue from sales (8,258.4, Mitihoon, S) and the infographic sales (8,368, CEO statement, S). The basis gap of 109.6 is not explained by the pages read."
+  },
+  "kresearch_check": {
+    "csd_76900_over_niq_to_nov_2024": 1.0866,
+    "csd_over_nab": 0.3403,
+    "csd_plus_water_over_nab": 0.5531,
+    "map_a_base_over_niq_to_nov_2024": 0.0653,
+    "map_a_carbonated_2_0pct_base_2024": 75392.2,
+    "map_b_base_over_niq_to_nov_2024": 0.0591,
+    "map_b_carbonated_2_6pct_base_2024": 74951.3,
+    "mapping": "The note prints '2.0% and 2.6%' for carbonated and bottled water without labels. The mapping in list order (carbonated first) is an inference. The same note gives 2.0 percent for the whole non-alcoholic business in 2025 (excerpt lines 11 and 14), so the 2.0 may be the total's growth. Thansettakij (8 September 2025) also prints about 2 percent for the 226,000 total.",
+    "nab_total_growth_2025_printed_in_note": 0.02,
+    "printed_text": "more than 55 percent",
+    "reading": "Under either mapping the implied 2024 carbonated base is 5.9 to 6.5 percent above the NielsenIQ value to November 2024. So the 76,900 is on a higher level than NielsenIQ, or the forecast growth is not the one applied to it. The 76,900 sits in a chart (Figure 3) that was not read as text, so this is not settled. The conclusion holds whichever of the two printed figures is the carbonated growth."
+  },
+  "krungsri_value_2025": {
+    "nab_value_thb_million_derived": 347064.8,
+    "nab_value_usd_million": 10555.5,
+    "note": "Krungsri (15 June 2026) gives domestic non-alcoholic sales of USD 10,555.5 million for 2025, converted at THB 32.88 per USD (its footnote 2). That is about THB 347,000 million, 53.6 percent above the KResearch total of THB 226,000 million for 2025. The two bank totals differ in definition, source or level. The pages read do not explain the gap. The gap bears on whether the 76,900 is at the NielsenIQ level.",
+    "over_kresearch_nab_226000_pct": 0.5357,
+    "thb_per_usd_krungsri": 32.88
+  },
+  "krungsri_volume": {
+    "carbonated_and_soda_million_litres_2025": 2691.1,
+    "matches_printed_2_7_billion_within_pct": 0.0033,
+    "note": "Volume is carbonated and soda for 2025 (Krungsri, citing Euromonitor). The page does not define the category, which may be wider than carbonated soft drinks. The values are for 2024 or 2025 windows. Team check, not a figure printed on the page. Plausibility check only.",
+    "thb_per_litre_at_66000": 24.53,
+    "thb_per_litre_at_70772": 26.3,
+    "thb_per_litre_at_76900": 28.58
+  },
+  "nab_totals_2024_2025": {
+    "bangkokbiznews_2025_nab_over": 260000.0,
+    "kresearch_2025_nab": 226000.0,
+    "kresearch_2025_nab_growth_printed": 0.02,
+    "krungsri_2025_nab_thb_derived": 347064.8,
+    "marketplus_2024_article_high": 200000.0,
+    "marketplus_2024_article_low": 198000.0,
+    "marketplus_csd_share_printed": 0.31,
+    "marketplus_implied_csd_high": 62000.0,
+    "marketplus_implied_csd_low": 61380.0,
+    "marketplus_internal_gap_high": 4620.0,
+    "marketplus_internal_gap_low": 4000.0,
+    "marketplus_printed_csd_value": 66000.0,
+    "marketplus_year_not_stated_in_sentence": true,
+    "reading": "Four non-alcoholic totals with four definitions or levels: 198,000 to 200,000 (MarketPlus, 8 May 2024, year not stated in the sentence), 226,000 (KResearch, 2025), over 260,000 (Bangkokbiznews, 13 October 2025, no source named) and about 347,000 (Krungsri, 2025, USD converted). None is explained in the pages read. MarketPlus's own 31 percent gives 61,380 to 62,000 for carbonated drinks, not the 66,000 it prints."
+  },
+  "niq_window_consistency": {
+    "change_12m_to_nov_2023_to_12m_to_jan_2024_pct": 0.0165,
+    "change_to_aug_2023_to_to_nov_2024_pct": 0.1415,
+    "change_to_jan_2024_to_to_nov_2024_pct": 0.0723,
+    "implied_12m_to_jan_2023_from_12pct": 58928.6,
+    "implied_12m_to_nov_2023_from_9pct": 64928.4,
+    "reading": "The two NielsenIQ-attributed values (66,000 and 70,772) and their stated growth rates are consistent with a rising run, but that is not proof of one series. The 62,000 value names no source and is not counted as NielsenIQ. The 66,000 window (February 2023 to January 2024) is mostly 2023 and the 70,772 window (December 2023 to November 2024) is mostly 2024; they are ten months apart."
+  },
+  "press_2025_checks": {
+    "bkk_2025_67000_over_niq_to_nov_2024_pct": -0.0533,
+    "exec_68000_label_2024_times_0_96": 65280.0,
+    "marketeer_2025_70000_over_its_2024_66000_calendar_labels_pct": 0.0606,
+    "niq_to_nov_2024_times_0_92": 65110.2,
+    "niq_to_nov_2024_times_0_96": 67941.1,
+    "reading": "70,772 less 4 percent is about 67,900, close to the 68,000 that the ThaiBev executive labels 2024 and to the 67,000 that Bangkokbiznews gives for 2025 with no source. 68,000 may be a 2025 level or a 12 month window to August 2025; the pages do not say. Kept as a possible reading and a stated limit, not as a second 2024 value. The Marketeer +6.1 percent uses its own calendar labels, which are not like for like with the NielsenIQ windows."
+  },
+  "press_shares_applied_to_niq_to_nov_2024": {
+    "big_cola_3600_over_niq": 0.0509,
+    "coca_cola_51pct": 36093.7,
+    "est_8_6pct_volume": 6086.4,
+    "note": "Press shares carry no stated measure (only est 8.6 percent is labelled volume), so these are illustrations, not value estimates.",
+    "pepsi_30pct": 21231.6
+  },
+  "press_value_spread_all_statements": {
+    "max": 76900.0,
+    "min": 60000.0,
+    "note": "The spread of statements, not a range. The endpoints have different windows and one is a forecast.",
+    "statements": [
+      {
+        "label": "AJ Thai Big Cola section, 3 April 2025, no year, no source",
+        "tier": "S",
+        "value": 60000.0
+      },
+      {
+        "label": "all carbonated, 2023 article, no source named (GotoManager)",
+        "tier": "S",
+        "value": 62000.0
+      },
+      {
+        "label": "all carbonated, growth window to August 2023, no source named (Thairath)",
+        "tier": "S",
+        "value": 62000.0
+      },
+      {
+        "label": "NielsenIQ as printed by MarketPlus and Thansettakij, 12 months to January 2024",
+        "tier": "S",
+        "value": 66000.0
+      },
+      {
+        "label": "Thansettakij intro 3 April 2025, no year, no source",
+        "tier": "S",
+        "value": 66000.0
+      },
+      {
+        "label": "Bangkokbiznews 2025, window not stated, no source named",
+        "tier": "S",
+        "value": 67000.0
+      },
+      {
+        "label": "ThaiBev executive (named), Thansettakij 13 October 2025, labelled 2024",
+        "tier": "S",
+        "value": 68000.0
+      },
+      {
+        "label": "Marketeer compilation 2025 (NielsenIQ and brand forecasts)",
+        "tier": "S",
+        "value": 70000.0
+      },
+      {
+        "label": "NielsenIQ as printed by Thansettakij, 12 months to November 2024",
+        "tier": "S",
+        "value": 70772.0
+      },
+      {
+        "label": "Kasikorn Research Center estimate or forecast 2025 (as relayed by Thansettakij)",
+        "tier": "S",
+        "value": 76900.0
+      }
+    ]
+  },
+  "sermsuk": {
+    "carbonated_9m_fy2024_share_of_total": 0.3994,
+    "carbonated_growth_fy2023_over_fy2022": 0.1454,
+    "carbonated_share_of_total": {
+      "2021": 0.3855,
+      "2022": 0.3643,
+      "2023": 0.3678
+    },
+    "mda_total_matches_form_250_2_table_fy2022_fy2023": {
+      "fy2022": [
+        10905.0,
+        10904.85
+      ],
+      "fy2023": [
+        12371.0,
+        12371.03
+      ]
+    },
+    "note": "Fiscal years end 30 September. The carbonated line is Sermsuk's own revenue (it makes est under a manufacturing contract for the trademark owner), not est retail sales. The FY2024 carbonated line is not printed; the nine-month figure runs to 30 June 2024. The table gives no brand split.",
+    "source_of_carbonated_line": "Thai SEC Form 250-2 (opinion on a tender offer), dated 8 October 2024, revenue structure table, PDF pages 11 and 63 to 64 (P for those pages). The 15 November 2023 letter gives no carbonated split.",
+    "total_fy2024_mda": 13153.0
+  },
+  "share_implied_market_2024": {
+    "coke_system_over_51_4pct": 84260.4,
+    "coke_system_over_51pct": 84921.3,
+    "coke_system_over_niq_to_nov_2024": 0.612,
+    "note": "Conditional: the filing does not say whether 51.4 percent is by value, or whether it is TNCC alone or the Coca-Cola brand family nationally. TNCC alone is consistent with NielsenIQ. The whole Coca-Cola system implies a producer-level market above the range if 51 percent is a value share.",
+    "tncc_carbonated_over_51_4pct": 69395.4,
+    "tncc_carbonated_over_niq_to_nov_2024": 0.504,
+    "tncc_implied_vs_niq_to_nov_2024_pct": -0.0195
+  },
+  "strategyhelix_thb_million": {
+    "2026_at_bot_reference_rate_DERIVED": 114039.0,
+    "2026_at_team_midpoint_check_DERIVED": 114068.0,
+    "2031_at_bot_reference_rate_DERIVED": 137518.0,
+    "note": "Converted at the BOT reference rate for 15 October 2026. Reproduced on 20 October 2026 from the BOT table. The source does not state the level or the sources of the market size, so the figure is not used as a market value.",
+    "ratio_2026_at_reference_to_niq_to_nov_2024": 1.611
+  },
+  "sum_plus_pepsi_press_share_illustration": {
+    "note": "Illustration only. Pepsi's 30 percent has no stated measure (value or volume) and Pepsi's own revenue was not found. The bottler lines are at manufacturer level on mixed periods, and the level of the NielsenIQ value is not stated. The result shows that the sum plus Pepsi at its press share is near the NielsenIQ value; the bottler data therefore do not contradict it.",
+    "pepsi_30pct_of_niq_to_nov_2024": 21231.6,
+    "ratio_to_niq_to_nov_2024": 1.0271,
+    "sum_with_sermsuk_plus_that": 72691.6
+  },
+  "tncc_carbonated_lines": {
+    "2022": 31657.31,
+    "2023": 34931.07,
+    "2024": 35669.21
+  },
+  "tncc_carbonated_share_of_total_revenue_2024": 0.8634,
+  "tncc_first_half": {
+    "carbonated_lines_change_pct": -0.1652,
+    "carbonated_lines_h1_2024": 19110.8,
+    "carbonated_lines_h1_2025": 15952.9,
+    "coca_cola_line_change_pct": -0.147,
+    "note": "First half to 30 June, Version 2 of the draft prospectus (pages 8, 19, 23). Full-year 2025 was not read. Do not double a half year: the first half holds the hot season.",
+    "other_csd_line_change_pct": -0.2019,
+    "total_revenue_change_pct": -0.1486,
+    "unit_cases_all_licensed_beverages_change_pct": -0.162,
+    "unit_cases_note": "All licensed beverages (ALL licensed beverages, not carbonated only), 216 to 181 million unit cases, from the Version 2 text (tncc_sec_v2_exec_summary_pages.md, line 12). Not a carbonated unit-case figure."
+  }
+}

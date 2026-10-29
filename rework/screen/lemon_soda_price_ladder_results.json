@@ -1,0 +1,1858 @@
+{
+ "task": "T5 retail price ladder",
+ "date_read": "2026-10-20",
+ "method": "per can = pack price / pack count; per 330 mL = per can x 330 / can mL (325 mL cans scaled by 330/325); per litre = per can / can litres; unavailable or out-of-stock rows excluded from the ladder and shown in a sensitivity set; bottle rows excluded from the can ladder; no random numbers, no seed.",
+ "cube": {
+  "cube_shelf_thb_per_serve": 15.0,
+  "serve_ml": 330,
+  "cube_per_litre_thb": 45.5
+ },
+ "rows": [
+  {
+   "id": "E1",
+   "retailer": "7-Eleven ALL Online",
+   "channel": "direct",
+   "product": "Singha Lemon Soda",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 330,
+   "pack_count": 24,
+   "pack_price_thb": 330,
+   "per_can_thb": 13.75,
+   "per_330ml_thb": 13.75,
+   "per_litre_thb": 41.7,
+   "sugar_status": "sugar-free (maker page: zero sugar, zero calories; sucralose and acesulfame potassium)",
+   "date_read": "2026-10-20",
+   "url": "https://www.allonline.7eleven.co.th/p/สิงห์-เลมอนโซดา-330-มล-ยกลัง-24-กระป๋อง/474313/",
+   "raw_file": "7eleven_allonline_2026-10-20.md",
+   "note": "struck-through 408",
+   "unavailable": false,
+   "stock_wording": "in stock (page label)",
+   "single_can": false
+  },
+  {
+   "id": "E2",
+   "retailer": "7-Eleven ALL Online",
+   "channel": "direct",
+   "product": "Singha Lemon Soda",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 330,
+   "pack_count": 6,
+   "pack_price_thb": 172,
+   "per_can_thb": 28.67,
+   "per_330ml_thb": 28.67,
+   "per_litre_thb": 86.9,
+   "sugar_status": "sugar-free (maker page: zero sugar, zero calories; sucralose and acesulfame potassium)",
+   "date_read": "2026-10-20",
+   "url": "https://www.allonline.7eleven.co.th/p/สิงห์-เลมอนโซดา-330-มล-แพ็ก-6-กระป๋อง/514221/",
+   "raw_file": "7eleven_allonline_2026-10-20.md",
+   "note": "struck-through 182",
+   "unavailable": false,
+   "stock_wording": "in stock (page label)",
+   "single_can": false
+  },
+  {
+   "id": "E3",
+   "retailer": "7-Eleven ALL Online",
+   "channel": "direct",
+   "product": "Schweppes Lime Soda Zero",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 330,
+   "pack_count": 6,
+   "pack_price_thb": 170,
+   "per_can_thb": 28.33,
+   "per_330ml_thb": 28.33,
+   "per_litre_thb": 85.9,
+   "sugar_status": "sugar-free (page: สูตรไม่มีน้ำตาล)",
+   "date_read": "2026-10-20",
+   "url": "https://www.allonline.7eleven.co.th/p/ชเวปส์มะนาวโซดาซีโร่-330มล-แพ็ก-6-กระป๋อง/354988/",
+   "raw_file": "7eleven_allonline_2026-10-20.md",
+   "note": "struck-through 190; promotion ends 20 Oct 2026",
+   "unavailable": false,
+   "stock_wording": "in stock (page label)",
+   "single_can": false
+  },
+  {
+   "id": "E4",
+   "retailer": "7-Eleven ALL Online",
+   "channel": "direct",
+   "product": "Nestle Pure Life Soda Plus Lemon Lime",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 330,
+   "pack_count": 24,
+   "pack_price_thb": 377,
+   "per_can_thb": 15.71,
+   "per_330ml_thb": 15.71,
+   "per_litre_thb": 47.6,
+   "sugar_status": "not stated",
+   "date_read": "2026-10-20",
+   "url": "https://www.allonline.7eleven.co.th/p/เนสท์เล่-เพียวไลฟ์-โซดาพลัส-เลมอนไลม์-330-มลถาด-24-กระป๋อง/327940/",
+   "raw_file": "7eleven_allonline_2026-10-20.md",
+   "note": "search row; label: sorry, out of stock",
+   "unavailable": true,
+   "stock_wording": "flagged unavailable on page",
+   "single_can": false
+  },
+  {
+   "id": "E5",
+   "retailer": "7-Eleven ALL Online",
+   "channel": "direct",
+   "product": "Singha Sparkling Water Lime",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 330,
+   "pack_count": 24,
+   "pack_price_thb": 302,
+   "per_can_thb": 12.58,
+   "per_330ml_thb": 12.58,
+   "per_litre_thb": 38.1,
+   "sugar_status": "not confirmed by this read (page: 0% calories; no sugar line)",
+   "date_read": "2026-10-20",
+   "url": "https://www.allonline.7eleven.co.th/p/สิงห์สปาร์คกลิ้งไลม์-330-มล-ยกลัง-24-กระป๋อง/327253/",
+   "raw_file": "7eleven_allonline_2026-10-20.md",
+   "note": "304 shown beside the price; -1%; in stock label",
+   "unavailable": false,
+   "stock_wording": "in stock (page label)",
+   "single_can": false
+  },
+  {
+   "id": "M1",
+   "retailer": "Makro PRO",
+   "channel": "direct",
+   "product": "Sprite Lemon Lime",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 325,
+   "pack_count": 24,
+   "pack_price_thb": 311,
+   "per_can_thb": 12.96,
+   "per_330ml_thb": 13.16,
+   "per_litre_thb": 39.9,
+   "sugar_status": "regular variant; sugar not stated on page",
+   "date_read": "2026-10-20",
+   "url": "https://www.makro.pro/en/p/179712-7078659719363",
+   "raw_file": "makro_pro_2026-10-20.md",
+   "note": "list 321",
+   "unavailable": false,
+   "stock_wording": "none on page",
+   "single_can": false
+  },
+  {
+   "id": "M2",
+   "retailer": "Makro PRO",
+   "channel": "direct",
+   "product": "Sprite Lemon Lime",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 330,
+   "pack_count": 12,
+   "pack_price_thb": 137,
+   "per_can_thb": 11.42,
+   "per_330ml_thb": 11.42,
+   "per_litre_thb": 34.6,
+   "sugar_status": "regular variant; sugar not stated on page",
+   "date_read": "2026-10-20",
+   "url": "https://www.makro.pro/en/p/830198-7078660866243",
+   "raw_file": "makro_pro_2026-10-20.md",
+   "note": "Buy 3+ units tier 135",
+   "unavailable": false,
+   "stock_wording": "none on page",
+   "single_can": false
+  },
+  {
+   "id": "M3",
+   "retailer": "Makro PRO",
+   "channel": "direct",
+   "product": "Sprite Chill Lemon Mint",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 325,
+   "pack_count": 6,
+   "pack_price_thb": 78,
+   "per_can_thb": 13.0,
+   "per_330ml_thb": 13.2,
+   "per_litre_thb": 40.0,
+   "sugar_status": "not stated on page",
+   "date_read": "2026-10-20",
+   "url": "https://www.makro.pro/en/p/630907-363090727914101",
+   "raw_file": "makro_pro_2026-10-20.md",
+   "note": "list 81",
+   "unavailable": false,
+   "stock_wording": "none on page",
+   "single_can": false
+  },
+  {
+   "id": "M4",
+   "retailer": "Makro PRO",
+   "channel": "direct",
+   "product": "Singha Lemon Soda",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 330,
+   "pack_count": 6,
+   "pack_price_thb": 82,
+   "per_can_thb": 13.67,
+   "per_330ml_thb": 13.67,
+   "per_litre_thb": 41.4,
+   "sugar_status": "sugar-free (maker page: zero sugar, zero calories; sucralose and acesulfame potassium)",
+   "date_read": "2026-10-20",
+   "url": "https://www.makro.pro/en/p/893947-6814746706115",
+   "raw_file": "makro_pro_2026-10-20.md",
+   "note": "Buy 3+ units tier 78",
+   "unavailable": false,
+   "stock_wording": "none on page",
+   "single_can": false
+  },
+  {
+   "id": "M5",
+   "retailer": "Makro PRO",
+   "channel": "direct",
+   "product": "Singha Lemon Soda",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 330,
+   "pack_count": 24,
+   "pack_price_thb": 325,
+   "per_can_thb": 13.54,
+   "per_330ml_thb": 13.54,
+   "per_litre_thb": 41.0,
+   "sugar_status": "sugar-free (maker page: zero sugar, zero calories; sucralose and acesulfame potassium)",
+   "date_read": "2026-10-20",
+   "url": "https://www.makro.pro/en/p/428706-7350275997891",
+   "raw_file": "makro_pro_2026-10-20.md",
+   "note": "list 330",
+   "unavailable": false,
+   "stock_wording": "none on page",
+   "single_can": false
+  },
+  {
+   "id": "M7",
+   "retailer": "Makro PRO",
+   "channel": "direct",
+   "product": "Schweppes Soda Water",
+   "group": "soda_water",
+   "container": "can",
+   "can_ml": 330,
+   "pack_count": 24,
+   "pack_price_thb": 341,
+   "per_can_thb": 14.21,
+   "per_330ml_thb": 14.21,
+   "per_litre_thb": 43.1,
+   "sugar_status": "plain soda water; no sugar claim on page",
+   "date_read": "2026-10-20",
+   "url": "https://www.makro.pro/en/p/119581-7416114282691",
+   "raw_file": "makro_pro_2026-10-20.md",
+   "note": "Buy 2+ units tier 336",
+   "unavailable": false,
+   "stock_wording": "none on page",
+   "single_can": false
+  },
+  {
+   "id": "M8",
+   "retailer": "Makro PRO",
+   "channel": "direct",
+   "product": "Schweppes Lime Soda",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 330,
+   "pack_count": 6,
+   "pack_price_thb": 84,
+   "per_can_thb": 14.0,
+   "per_330ml_thb": 14.0,
+   "per_litre_thb": 42.4,
+   "sugar_status": "regular; page nutrition panel shows carbohydrates 16 g (basis not stated)",
+   "date_read": "2026-10-20",
+   "url": "https://www.makro.pro/en/p/vwmvjuh-6814746476739",
+   "raw_file": "makro_pro_2026-10-20.md",
+   "note": "Buy 2+ units tier 83",
+   "unavailable": false,
+   "stock_wording": "none on page",
+   "single_can": false
+  },
+  {
+   "id": "M9",
+   "retailer": "Makro PRO",
+   "channel": "direct",
+   "product": "Schweppes Lime Soda Zero Sugar",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 330,
+   "pack_count": 6,
+   "pack_price_thb": 84,
+   "per_can_thb": 14.0,
+   "per_330ml_thb": 14.0,
+   "per_litre_thb": 42.4,
+   "sugar_status": "sugar-free (name)",
+   "date_read": "2026-10-20",
+   "url": "https://www.makro.pro/en/p/899900-7499701616835",
+   "raw_file": "makro_pro_2026-10-20.md",
+   "note": "page: unavailable in the area selected",
+   "unavailable": true,
+   "stock_wording": "flagged unavailable on page",
+   "single_can": false
+  },
+  {
+   "id": "M10",
+   "retailer": "Makro PRO",
+   "channel": "direct",
+   "product": "Singha Sparkling Water Lime",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 330,
+   "pack_count": 24,
+   "pack_price_thb": 312,
+   "per_can_thb": 13.0,
+   "per_330ml_thb": 13.0,
+   "per_litre_thb": 39.4,
+   "sugar_status": "not confirmed by this read (no sugar text on page extract)",
+   "date_read": "2026-10-20",
+   "url": "https://www.makro.pro/en/p/699716183874140",
+   "raw_file": "makro_pro_2026-10-20.md",
+   "note": "list 319; -2%",
+   "unavailable": false,
+   "stock_wording": "none on page",
+   "single_can": false
+  },
+  {
+   "id": "L1",
+   "retailer": "Lotus's Shop Online",
+   "channel": "direct",
+   "product": "Sprite (single can)",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 325,
+   "pack_count": 1,
+   "pack_price_thb": 16,
+   "per_can_thb": 16.0,
+   "per_330ml_thb": 16.25,
+   "per_litre_thb": 49.2,
+   "sugar_status": "regular variant; sugar not stated on page",
+   "date_read": "2026-10-20",
+   "url": "https://shopping.lotuss.com/th/product/sprite-lemonlime-flavour-soft-drink-325ml-238945",
+   "raw_file": "lotuss_2026-10-20.md",
+   "note": "",
+   "unavailable": false,
+   "stock_wording": "none on page",
+   "single_can": true
+  },
+  {
+   "id": "L2",
+   "retailer": "Lotus's Shop Online",
+   "channel": "direct",
+   "product": "Sprite",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 325,
+   "pack_count": 6,
+   "pack_price_thb": 85,
+   "per_can_thb": 14.17,
+   "per_330ml_thb": 14.38,
+   "per_litre_thb": 43.6,
+   "sugar_status": "regular variant; sugar not stated on page",
+   "date_read": "2026-10-20",
+   "url": "https://www.lotuss.com/en/product/sprite-lemonlime-flavour-soft-drink-325ml-x-6pcs-6808557",
+   "raw_file": "lotuss_2026-10-20.md",
+   "note": "promotion: buy 2 for 156",
+   "unavailable": false,
+   "stock_wording": "none on page",
+   "single_can": false
+  },
+  {
+   "id": "L3",
+   "retailer": "Lotus's Shop Online",
+   "channel": "direct",
+   "product": "Sprite",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 325,
+   "pack_count": 24,
+   "pack_price_thb": 332,
+   "per_can_thb": 13.83,
+   "per_330ml_thb": 14.05,
+   "per_litre_thb": 42.6,
+   "sugar_status": "regular variant; sugar not stated on page",
+   "date_read": "2026-10-20",
+   "url": "https://www.lotuss.com/en/product/sprite-soft-drink-original-325ml-x-24pcs-clubpack-150033088",
+   "raw_file": "lotuss_2026-10-20.md",
+   "note": "member price 315",
+   "unavailable": false,
+   "stock_wording": "none on page",
+   "single_can": false
+  },
+  {
+   "id": "L4",
+   "retailer": "Lotus's Shop Online",
+   "channel": "direct",
+   "product": "Sprite Chill Lemon Mint (single can)",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 325,
+   "pack_count": 1,
+   "pack_price_thb": 17,
+   "per_can_thb": 17.0,
+   "per_330ml_thb": 17.26,
+   "per_litre_thb": 52.3,
+   "sugar_status": "not stated on page",
+   "date_read": "2026-10-20",
+   "url": "https://www.lotuss.com/en/product/75714334",
+   "raw_file": "lotuss_2026-10-20.md",
+   "note": "",
+   "unavailable": false,
+   "stock_wording": "none on page",
+   "single_can": true
+  },
+  {
+   "id": "L5",
+   "retailer": "Lotus's Shop Online",
+   "channel": "direct",
+   "product": "7UP Zero Sugar Lemon Soda",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 325,
+   "pack_count": 6,
+   "pack_price_thb": 75,
+   "per_can_thb": 12.5,
+   "per_330ml_thb": 12.69,
+   "per_litre_thb": 38.5,
+   "sugar_status": "sugar-free (name: ZERO SUGAR)",
+   "date_read": "2026-10-20",
+   "url": "https://www.lotuss.com/en/product/171266560",
+   "raw_file": "lotuss_2026-10-20.md",
+   "note": "list 80",
+   "unavailable": false,
+   "stock_wording": "none on page",
+   "single_can": false
+  },
+  {
+   "id": "L7",
+   "retailer": "Lotus's Shop Online",
+   "channel": "direct",
+   "product": "Singha Lemon Soda (single can)",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 330,
+   "pack_count": 1,
+   "pack_price_thb": 17,
+   "per_can_thb": 17.0,
+   "per_330ml_thb": 17.0,
+   "per_litre_thb": 51.5,
+   "sugar_status": "sugar-free (maker page: zero sugar, zero calories; sucralose and acesulfame potassium)",
+   "date_read": "2026-10-20",
+   "url": "https://www.lotuss.com/en/product/singha-lemon-soda-zero-sugar-lemon-soda-330ml-50986847",
+   "raw_file": "lotuss_2026-10-20.md",
+   "note": "",
+   "unavailable": false,
+   "stock_wording": "none on page",
+   "single_can": true
+  },
+  {
+   "id": "L8",
+   "retailer": "Lotus's Shop Online",
+   "channel": "direct",
+   "product": "Singha Lemon Soda",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 330,
+   "pack_count": 6,
+   "pack_price_thb": 85,
+   "per_can_thb": 14.17,
+   "per_330ml_thb": 14.17,
+   "per_litre_thb": 42.9,
+   "sugar_status": "sugar-free (maker page: zero sugar, zero calories; sucralose and acesulfame potassium)",
+   "date_read": "2026-10-20",
+   "url": "https://www.lotuss.com/en/product/singha-lemon-soda-can-330ml-6-51109221",
+   "raw_file": "lotuss_2026-10-20.md",
+   "note": "member price 81",
+   "unavailable": false,
+   "stock_wording": "none on page",
+   "single_can": false
+  },
+  {
+   "id": "L9",
+   "retailer": "Lotus's Shop Online",
+   "channel": "direct",
+   "product": "Singha Lemon Soda",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 330,
+   "pack_count": 24,
+   "pack_price_thb": 330,
+   "per_can_thb": 13.75,
+   "per_330ml_thb": 13.75,
+   "per_litre_thb": 41.7,
+   "sugar_status": "sugar-free (maker page: zero sugar, zero calories; sucralose and acesulfame potassium)",
+   "date_read": "2026-10-20",
+   "url": "https://www.lotuss.com/en/product/169912032",
+   "raw_file": "lotuss_2026-10-20.md",
+   "note": "",
+   "unavailable": false,
+   "stock_wording": "none on page",
+   "single_can": false
+  },
+  {
+   "id": "L10",
+   "retailer": "Lotus's Shop Online",
+   "channel": "direct",
+   "product": "Schweppes Manao (Lime) Soda (single can)",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 330,
+   "pack_count": 1,
+   "pack_price_thb": 18,
+   "per_can_thb": 18.0,
+   "per_330ml_thb": 18.0,
+   "per_litre_thb": 54.5,
+   "sugar_status": "regular lime soda; sugar not stated on page",
+   "date_read": "2026-10-20",
+   "url": "https://shopping.lotuss.com/en/product/schweppes-soft-drink-lime-soda-330ml-single-6709516",
+   "raw_file": "lotuss_2026-10-20.md",
+   "note": "",
+   "unavailable": false,
+   "stock_wording": "none on page",
+   "single_can": true
+  },
+  {
+   "id": "L11",
+   "retailer": "Lotus's Shop Online",
+   "channel": "direct",
+   "product": "Schweppes Soda Water",
+   "group": "soda_water",
+   "container": "can",
+   "can_ml": 330,
+   "pack_count": 6,
+   "pack_price_thb": 88,
+   "per_can_thb": 14.67,
+   "per_330ml_thb": 14.67,
+   "per_litre_thb": 44.4,
+   "sugar_status": "plain soda water; no sugar claim on page",
+   "date_read": "2026-10-20",
+   "url": "https://www.lotuss.com/en/product/schweppes-sparkling-soda-water-330ml-x-6-cans-75162024",
+   "raw_file": "lotuss_2026-10-20.md",
+   "note": "",
+   "unavailable": false,
+   "stock_wording": "none on page",
+   "single_can": false
+  },
+  {
+   "id": "Z1",
+   "retailer": "Tops Online (via Priceza)",
+   "channel": "aggregator",
+   "product": "Sprite",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 325,
+   "pack_count": 24,
+   "pack_price_thb": 332,
+   "per_can_thb": 13.83,
+   "per_330ml_thb": 14.05,
+   "per_litre_thb": 42.6,
+   "sugar_status": "regular variant; sugar not stated",
+   "date_read": "2026-10-20",
+   "url": "https://www.priceza.com/p/สไปรท์-เครื่องดื่มอัดลมกระป๋อง-325-มล-sprite-soft-drink-325ml-12341813",
+   "raw_file": "priceza_aggregator_2026-10-20.md",
+   "note": "S aggregator row; Tops blocks direct reading",
+   "unavailable": false,
+   "stock_wording": "none on page",
+   "single_can": false
+  },
+  {
+   "id": "Z2",
+   "retailer": "Coca-Cola Official Store, LazMall (via Priceza)",
+   "channel": "aggregator",
+   "product": "Sprite No Sugar",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 325,
+   "pack_count": 24,
+   "pack_price_thb": 334,
+   "per_can_thb": 13.92,
+   "per_330ml_thb": 14.13,
+   "per_litre_thb": 42.8,
+   "sugar_status": "sugar-free (name: สูตรไม่มีน้ำตาล)",
+   "date_read": "2026-10-20",
+   "url": "https://www.priceza.com/b/groceries/น้ำอัดลม/sprite",
+   "raw_file": "priceza_aggregator_2026-10-20.md",
+   "note": "was 384",
+   "unavailable": false,
+   "stock_wording": "none on page",
+   "single_can": false
+  },
+  {
+   "id": "Z4",
+   "retailer": "Coca-Cola Official Store, LazMall (via Priceza)",
+   "channel": "aggregator",
+   "product": "Sprite Original",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 325,
+   "pack_count": 6,
+   "pack_price_thb": 96,
+   "per_can_thb": 16.0,
+   "per_330ml_thb": 16.25,
+   "per_litre_thb": 49.2,
+   "sugar_status": "regular variant; sugar not stated",
+   "date_read": "2026-10-20",
+   "url": "https://www.priceza.com/b/groceries/น้ำอัดลม/sprite",
+   "raw_file": "priceza_aggregator_2026-10-20.md",
+   "note": "",
+   "unavailable": false,
+   "stock_wording": "none on page",
+   "single_can": false
+  },
+  {
+   "id": "Z5",
+   "retailer": "Suntory PepsiCo official store, LazMall (via Priceza)",
+   "channel": "aggregator",
+   "product": "7UP Lemon Soda No Sugar",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 325,
+   "pack_count": 24,
+   "pack_price_thb": 293,
+   "per_can_thb": 12.21,
+   "per_330ml_thb": 12.4,
+   "per_litre_thb": 37.6,
+   "sugar_status": "sugar-free (name: ไม่มีน้ำตาล)",
+   "date_read": "2026-10-20",
+   "url": "https://www.priceza.com/s/ราคา/เซเว่นอัพ",
+   "raw_file": "priceza_aggregator_2026-10-20.md",
+   "note": "was 384",
+   "unavailable": false,
+   "stock_wording": "none on page",
+   "single_can": false
+  },
+  {
+   "id": "Z6",
+   "retailer": "Suntory PepsiCo official store, LazMall (via Priceza)",
+   "channel": "aggregator",
+   "product": "7UP Lemon Soda No Sugar",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 325,
+   "pack_count": 12,
+   "pack_price_thb": 161,
+   "per_can_thb": 13.42,
+   "per_330ml_thb": 13.62,
+   "per_litre_thb": 41.3,
+   "sugar_status": "sugar-free (name: ไม่มีน้ำตาล)",
+   "date_read": "2026-10-20",
+   "url": "https://www.priceza.com/s/ราคา/เซเว่นอัพ",
+   "raw_file": "priceza_aggregator_2026-10-20.md",
+   "note": "was 192",
+   "unavailable": false,
+   "stock_wording": "none on page",
+   "single_can": false
+  },
+  {
+   "id": "Z7",
+   "retailer": "Suntory PepsiCo official store, LazMall (via Priceza)",
+   "channel": "aggregator",
+   "product": "7UP Lemon Soda No Sugar",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 325,
+   "pack_count": 6,
+   "pack_price_thb": 96,
+   "per_can_thb": 16.0,
+   "per_330ml_thb": 16.25,
+   "per_litre_thb": 49.2,
+   "sugar_status": "sugar-free (name: ไม่มีน้ำตาล)",
+   "date_read": "2026-10-20",
+   "url": "https://www.priceza.com/s/ราคา/เซเว่นอัพ",
+   "raw_file": "priceza_aggregator_2026-10-20.md",
+   "note": "",
+   "unavailable": false,
+   "stock_wording": "none on page",
+   "single_can": false
+  },
+  {
+   "id": "Z8",
+   "retailer": "Coca-Cola Official Store, LazMall (via Priceza)",
+   "channel": "aggregator",
+   "product": "Schweppes Lime Soda Zero",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 330,
+   "pack_count": 24,
+   "pack_price_thb": 351,
+   "per_can_thb": 14.62,
+   "per_330ml_thb": 14.62,
+   "per_litre_thb": 44.3,
+   "sugar_status": "sugar-free (name: สูตรไม่มีน้ำตาล)",
+   "date_read": "2026-10-20",
+   "url": "https://www.priceza.com/s/ราคา/ชเวปส์มะนาวโซดา",
+   "raw_file": "priceza_aggregator_2026-10-20.md",
+   "note": "404 inferred as was-price; delivery limited to Bangkok metro and Chonburi",
+   "unavailable": false,
+   "stock_wording": "none on page",
+   "single_can": false
+  },
+  {
+   "id": "Z9",
+   "retailer": "Coca-Cola Official Store, LazMall (via Priceza)",
+   "channel": "aggregator",
+   "product": "Schweppes Lime Soda Zero",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 330,
+   "pack_count": 12,
+   "pack_price_thb": 196,
+   "per_can_thb": 16.33,
+   "per_330ml_thb": 16.33,
+   "per_litre_thb": 49.5,
+   "sugar_status": "sugar-free (name: สูตรไม่มีน้ำตาล)",
+   "date_read": "2026-10-20",
+   "url": "https://www.priceza.com/s/ราคา/ชเวปส์มะนาวโซดา",
+   "raw_file": "priceza_aggregator_2026-10-20.md",
+   "note": "",
+   "unavailable": false,
+   "stock_wording": "none on page",
+   "single_can": false
+  },
+  {
+   "id": "Z10",
+   "retailer": "Lotus's Shop Online (via Priceza)",
+   "channel": "aggregator",
+   "product": "7UP Zero Sugar Lemon Soda (single can)",
+   "group": "lemon_lime",
+   "container": "can",
+   "can_ml": 325,
+   "pack_count": 1,
+   "pack_price_thb": 16,
+   "per_can_thb": 16.0,
+   "per_330ml_thb": 16.25,
+   "per_litre_thb": 49.2,
+   "sugar_status": "sugar-free (name: ไม่มีน้ำตาล)",
+   "date_read": "2026-10-20",
+   "url": "https://www.priceza.com/s/ราคา/เซเว่นอัพ",
+   "raw_file": "priceza_aggregator_2026-10-20.md",
+   "note": "single-can price; the pre-production Lotus's page shows the same 16 and is not used as source",
+   "unavailable": false,
+   "stock_wording": "none on page",
+   "single_can": true
+  }
+ ],
+ "excluded_unavailable_rows": [
+  "E4",
+  "M9"
+ ],
+ "row_composition": {
+  "direct_rows": 22,
+  "singha_lemon_soda_rows": 7,
+  "singha_sparkling_water_lime_rows": 2,
+  "singha_brand_rows": 9,
+  "not_singha_brand_rows": 13,
+  "rows_with_in_stock_label_on_page": [
+   "E1",
+   "E2",
+   "E3",
+   "E5"
+  ],
+  "rows_with_no_stock_wording_on_page": [
+   "M1",
+   "M2",
+   "M3",
+   "M4",
+   "M5",
+   "M7",
+   "M8",
+   "M10",
+   "L1",
+   "L2",
+   "L3",
+   "L4",
+   "L5",
+   "L7",
+   "L8",
+   "L9",
+   "L10",
+   "L11"
+  ],
+  "rows_flagged_unavailable_and_excluded": [
+   "E4",
+   "M9"
+  ]
+ },
+ "ladders": {
+  "direct_all_cans": {
+   "per_can_thb": {
+    "n": 22,
+    "min": 11.42,
+    "median": 13.91,
+    "max": 28.67
+   },
+   "per_330ml_thb": {
+    "n": 22,
+    "min": 11.42,
+    "median": 14.03,
+    "max": 28.67
+   },
+   "per_litre_thb": {
+    "n": 22,
+    "min": 34.6,
+    "median": 42.5,
+    "max": 86.9
+   },
+   "row_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E5",
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M7",
+    "M8",
+    "M10",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "L5",
+    "L7",
+    "L8",
+    "L9",
+    "L10",
+    "L11"
+   ]
+  },
+  "direct_lemon_lime_cans": {
+   "per_can_thb": {
+    "n": 20,
+    "min": 11.42,
+    "median": 13.79,
+    "max": 28.67
+   },
+   "per_330ml_thb": {
+    "n": 20,
+    "min": 11.42,
+    "median": 13.88,
+    "max": 28.67
+   },
+   "per_litre_thb": {
+    "n": 20,
+    "min": 34.6,
+    "median": 42.05,
+    "max": 86.9
+   },
+   "row_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E5",
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M8",
+    "M10",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "L5",
+    "L7",
+    "L8",
+    "L9",
+    "L10"
+   ]
+  },
+  "direct_plus_aggregator_lemon_lime_cans": {
+   "per_can_thb": {
+    "n": 29,
+    "min": 11.42,
+    "median": 13.92,
+    "max": 28.67
+   },
+   "per_330ml_thb": {
+    "n": 29,
+    "min": 11.42,
+    "median": 14.05,
+    "max": 28.67
+   },
+   "per_litre_thb": {
+    "n": 29,
+    "min": 34.6,
+    "median": 42.6,
+    "max": 86.9
+   },
+   "row_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E5",
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M8",
+    "M10",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "L5",
+    "L7",
+    "L8",
+    "L9",
+    "L10",
+    "Z1",
+    "Z2",
+    "Z4",
+    "Z5",
+    "Z6",
+    "Z7",
+    "Z8",
+    "Z9",
+    "Z10"
+   ]
+  },
+  "direct_single_cans": {
+   "per_can_thb": {
+    "n": 4,
+    "min": 16.0,
+    "median": 17.0,
+    "max": 18.0
+   },
+   "per_330ml_thb": {
+    "n": 4,
+    "min": 16.25,
+    "median": 17.13,
+    "max": 18.0
+   },
+   "per_litre_thb": {
+    "n": 4,
+    "min": 49.2,
+    "median": 51.9,
+    "max": 54.5
+   },
+   "row_ids": [
+    "L1",
+    "L4",
+    "L7",
+    "L10"
+   ]
+  },
+  "direct_multipack_cans": {
+   "per_can_thb": {
+    "n": 18,
+    "min": 11.42,
+    "median": 13.75,
+    "max": 28.67
+   },
+   "per_330ml_thb": {
+    "n": 18,
+    "min": 11.42,
+    "median": 13.75,
+    "max": 28.67
+   },
+   "per_litre_thb": {
+    "n": 18,
+    "min": 34.6,
+    "median": 41.7,
+    "max": 86.9
+   },
+   "row_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E5",
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M7",
+    "M8",
+    "M10",
+    "L2",
+    "L3",
+    "L5",
+    "L8",
+    "L9",
+    "L11"
+   ]
+  },
+  "all_single_cans_incl_aggregator": {
+   "per_can_thb": {
+    "n": 5,
+    "min": 16.0,
+    "median": 17.0,
+    "max": 18.0
+   },
+   "per_330ml_thb": {
+    "n": 5,
+    "min": 16.25,
+    "median": 17.0,
+    "max": 18.0
+   },
+   "per_litre_thb": {
+    "n": 5,
+    "min": 49.2,
+    "median": 51.5,
+    "max": 54.5
+   },
+   "row_ids": [
+    "L1",
+    "L4",
+    "L7",
+    "L10",
+    "Z10"
+   ]
+  },
+  "all_multipack_cans_incl_aggregator": {
+   "per_can_thb": {
+    "n": 26,
+    "min": 11.42,
+    "median": 13.83,
+    "max": 28.67
+   },
+   "per_330ml_thb": {
+    "n": 26,
+    "min": 11.42,
+    "median": 14.03,
+    "max": 28.67
+   },
+   "per_litre_thb": {
+    "n": 26,
+    "min": 34.6,
+    "median": 42.5,
+    "max": 86.9
+   },
+   "row_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E5",
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M7",
+    "M8",
+    "M10",
+    "L2",
+    "L3",
+    "L5",
+    "L8",
+    "L9",
+    "L11",
+    "Z1",
+    "Z2",
+    "Z4",
+    "Z5",
+    "Z6",
+    "Z7",
+    "Z8",
+    "Z9"
+   ]
+  },
+  "singha_lemon_soda_direct": {
+   "per_can_thb": {
+    "n": 7,
+    "min": 13.54,
+    "median": 13.75,
+    "max": 28.67
+   },
+   "per_330ml_thb": {
+    "n": 7,
+    "min": 13.54,
+    "median": 13.75,
+    "max": 28.67
+   },
+   "per_litre_thb": {
+    "n": 7,
+    "min": 41.0,
+    "median": 41.7,
+    "max": 86.9
+   },
+   "row_ids": [
+    "E1",
+    "E2",
+    "M4",
+    "M5",
+    "L7",
+    "L8",
+    "L9"
+   ]
+  },
+  "singha_lemon_soda_direct_single": {
+   "per_can_thb": {
+    "n": 1,
+    "min": 17.0,
+    "median": 17.0,
+    "max": 17.0
+   },
+   "per_330ml_thb": {
+    "n": 1,
+    "min": 17.0,
+    "median": 17.0,
+    "max": 17.0
+   },
+   "per_litre_thb": {
+    "n": 1,
+    "min": 51.5,
+    "median": 51.5,
+    "max": 51.5
+   },
+   "row_ids": [
+    "L7"
+   ]
+  },
+  "singha_lemon_soda_direct_multipack": {
+   "per_can_thb": {
+    "n": 6,
+    "min": 13.54,
+    "median": 13.75,
+    "max": 28.67
+   },
+   "per_330ml_thb": {
+    "n": 6,
+    "min": 13.54,
+    "median": 13.75,
+    "max": 28.67
+   },
+   "per_litre_thb": {
+    "n": 6,
+    "min": 41.0,
+    "median": 41.7,
+    "max": 86.9
+   },
+   "row_ids": [
+    "E1",
+    "E2",
+    "M4",
+    "M5",
+    "L8",
+    "L9"
+   ]
+  },
+  "sugar_free_lemon_lime_direct": {
+   "per_can_thb": {
+    "n": 9,
+    "min": 12.5,
+    "median": 13.75,
+    "max": 28.67
+   },
+   "per_330ml_thb": {
+    "n": 9,
+    "min": 12.69,
+    "median": 13.75,
+    "max": 28.67
+   },
+   "per_litre_thb": {
+    "n": 9,
+    "min": 38.5,
+    "median": 41.7,
+    "max": 86.9
+   },
+   "row_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "M4",
+    "M5",
+    "L5",
+    "L7",
+    "L8",
+    "L9"
+   ]
+  },
+  "other_lemon_lime_direct_not_confirmed_sugar_free": {
+   "per_can_thb": {
+    "n": 11,
+    "min": 11.42,
+    "median": 13.83,
+    "max": 18.0
+   },
+   "per_330ml_thb": {
+    "n": 11,
+    "min": 11.42,
+    "median": 14.0,
+    "max": 18.0
+   },
+   "per_litre_thb": {
+    "n": 11,
+    "min": 34.6,
+    "median": 42.4,
+    "max": 54.5
+   },
+   "row_ids": [
+    "E5",
+    "M1",
+    "M2",
+    "M3",
+    "M8",
+    "M10",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "L10"
+   ]
+  },
+  "soda_water_cans_direct": {
+   "per_can_thb": {
+    "n": 2,
+    "min": 14.21,
+    "median": 14.44,
+    "max": 14.67
+   },
+   "per_330ml_thb": {
+    "n": 2,
+    "min": 14.21,
+    "median": 14.44,
+    "max": 14.67
+   },
+   "per_litre_thb": {
+    "n": 2,
+    "min": 43.1,
+    "median": 43.75,
+    "max": 44.4
+   },
+   "row_ids": [
+    "M7",
+    "L11"
+   ]
+  },
+  "singha_brand_direct": {
+   "per_can_thb": {
+    "n": 9,
+    "min": 12.58,
+    "median": 13.75,
+    "max": 28.67
+   },
+   "per_330ml_thb": {
+    "n": 9,
+    "min": 12.58,
+    "median": 13.75,
+    "max": 28.67
+   },
+   "per_litre_thb": {
+    "n": 9,
+    "min": 38.1,
+    "median": 41.7,
+    "max": 86.9
+   },
+   "row_ids": [
+    "E1",
+    "E2",
+    "E5",
+    "M4",
+    "M5",
+    "M10",
+    "L7",
+    "L8",
+    "L9"
+   ]
+  },
+  "singha_sparkling_water_lime_direct": {
+   "per_can_thb": {
+    "n": 2,
+    "min": 12.58,
+    "median": 12.79,
+    "max": 13.0
+   },
+   "per_330ml_thb": {
+    "n": 2,
+    "min": 12.58,
+    "median": 12.79,
+    "max": 13.0
+   },
+   "per_litre_thb": {
+    "n": 2,
+    "min": 38.1,
+    "median": 38.75,
+    "max": 39.4
+   },
+   "row_ids": [
+    "E5",
+    "M10"
+   ]
+  },
+  "direct_cans_not_singha_brand": {
+   "per_can_thb": {
+    "n": 13,
+    "min": 11.42,
+    "median": 14.17,
+    "max": 28.33
+   },
+   "per_330ml_thb": {
+    "n": 13,
+    "min": 11.42,
+    "median": 14.21,
+    "max": 28.33
+   },
+   "per_litre_thb": {
+    "n": 13,
+    "min": 34.6,
+    "median": 43.1,
+    "max": 85.9
+   },
+   "row_ids": [
+    "E3",
+    "M1",
+    "M2",
+    "M3",
+    "M7",
+    "M8",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "L5",
+    "L10",
+    "L11"
+   ]
+  },
+  "direct_cans_not_singha_brand_excluding_7eleven_6can": {
+   "per_can_thb": {
+    "n": 12,
+    "min": 11.42,
+    "median": 14.09,
+    "max": 18.0
+   },
+   "per_330ml_thb": {
+    "n": 12,
+    "min": 11.42,
+    "median": 14.13,
+    "max": 18.0
+   },
+   "per_litre_thb": {
+    "n": 12,
+    "min": 34.6,
+    "median": 42.85,
+    "max": 54.5
+   },
+   "row_ids": [
+    "M1",
+    "M2",
+    "M3",
+    "M7",
+    "M8",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "L5",
+    "L10",
+    "L11"
+   ]
+  },
+  "sensitivity_direct_cans_excluding_7eleven_6can_rows": {
+   "per_can_thb": {
+    "n": 20,
+    "min": 11.42,
+    "median": 13.79,
+    "max": 18.0
+   },
+   "per_330ml_thb": {
+    "n": 20,
+    "min": 11.42,
+    "median": 13.88,
+    "max": 18.0
+   },
+   "per_litre_thb": {
+    "n": 20,
+    "min": 34.6,
+    "median": 42.05,
+    "max": 54.5
+   },
+   "row_ids": [
+    "E1",
+    "E5",
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M7",
+    "M8",
+    "M10",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "L5",
+    "L7",
+    "L8",
+    "L9",
+    "L10",
+    "L11"
+   ]
+  },
+  "retailer_7eleven_direct": {
+   "per_can_thb": {
+    "n": 4,
+    "min": 12.58,
+    "median": 21.04,
+    "max": 28.67
+   },
+   "per_330ml_thb": {
+    "n": 4,
+    "min": 12.58,
+    "median": 21.04,
+    "max": 28.67
+   },
+   "per_litre_thb": {
+    "n": 4,
+    "min": 38.1,
+    "median": 63.8,
+    "max": 86.9
+   },
+   "row_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E5"
+   ]
+  },
+  "retailer_makro_direct": {
+   "per_can_thb": {
+    "n": 8,
+    "min": 11.42,
+    "median": 13.27,
+    "max": 14.21
+   },
+   "per_330ml_thb": {
+    "n": 8,
+    "min": 11.42,
+    "median": 13.37,
+    "max": 14.21
+   },
+   "per_litre_thb": {
+    "n": 8,
+    "min": 34.6,
+    "median": 40.5,
+    "max": 43.1
+   },
+   "row_ids": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M7",
+    "M8",
+    "M10"
+   ]
+  },
+  "retailer_lotuss_direct": {
+   "per_can_thb": {
+    "n": 10,
+    "min": 12.5,
+    "median": 14.42,
+    "max": 18.0
+   },
+   "per_330ml_thb": {
+    "n": 10,
+    "min": 12.69,
+    "median": 14.53,
+    "max": 18.0
+   },
+   "per_litre_thb": {
+    "n": 10,
+    "min": 38.5,
+    "median": 44.0,
+    "max": 54.5
+   },
+   "row_ids": [
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "L5",
+    "L7",
+    "L8",
+    "L9",
+    "L10",
+    "L11"
+   ]
+  },
+  "sensitivity_direct_cans_including_unavailable_rows": {
+   "per_can_thb": {
+    "n": 24,
+    "min": 11.42,
+    "median": 14.0,
+    "max": 28.67
+   },
+   "per_330ml_thb": {
+    "n": 24,
+    "min": 11.42,
+    "median": 14.03,
+    "max": 28.67
+   },
+   "per_litre_thb": {
+    "n": 24,
+    "min": 34.6,
+    "median": 42.5,
+    "max": 86.9
+   },
+   "row_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M7",
+    "M8",
+    "M9",
+    "M10",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "L5",
+    "L7",
+    "L8",
+    "L9",
+    "L10",
+    "L11"
+   ]
+  },
+  "sensitivity_direct_cans_with_makro_M2_at_135": {
+   "per_can_thb": {
+    "n": 22,
+    "min": 11.25,
+    "median": 13.91,
+    "max": 28.67
+   },
+   "per_330ml_thb": {
+    "n": 22,
+    "min": 11.25,
+    "median": 14.03,
+    "max": 28.67
+   },
+   "per_litre_thb": {
+    "n": 22,
+    "min": 34.1,
+    "median": 42.5,
+    "max": 86.9
+   },
+   "row_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E5",
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M7",
+    "M8",
+    "M10",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "L5",
+    "L7",
+    "L8",
+    "L9",
+    "L10",
+    "L11"
+   ]
+  }
+ },
+ "position_of_cube_price_15": {
+  "direct_all_cans": {
+   "x": 15.0,
+   "n": 22,
+   "rows_below": 16,
+   "rows_equal": 0,
+   "rows_above": 6,
+   "share_at_or_below": 0.727
+  },
+  "direct_lemon_lime_cans": {
+   "x": 15.0,
+   "n": 20,
+   "rows_below": 14,
+   "rows_equal": 0,
+   "rows_above": 6,
+   "share_at_or_below": 0.7
+  },
+  "direct_single_cans": {
+   "x": 15.0,
+   "n": 4,
+   "rows_below": 0,
+   "rows_equal": 0,
+   "rows_above": 4,
+   "share_at_or_below": 0.0
+  },
+  "direct_multipack_cans": {
+   "x": 15.0,
+   "n": 18,
+   "rows_below": 16,
+   "rows_equal": 0,
+   "rows_above": 2,
+   "share_at_or_below": 0.889
+  },
+  "direct_plus_aggregator_lemon_lime_cans": {
+   "x": 15.0,
+   "n": 29,
+   "rows_below": 19,
+   "rows_equal": 0,
+   "rows_above": 10,
+   "share_at_or_below": 0.655
+  },
+  "all_single_cans_incl_aggregator": {
+   "x": 15.0,
+   "n": 5,
+   "rows_below": 0,
+   "rows_equal": 0,
+   "rows_above": 5,
+   "share_at_or_below": 0.0
+  },
+  "all_multipack_cans_incl_aggregator": {
+   "x": 15.0,
+   "n": 26,
+   "rows_below": 21,
+   "rows_equal": 0,
+   "rows_above": 5,
+   "share_at_or_below": 0.808
+  },
+  "singha_lemon_soda_direct": {
+   "x": 15.0,
+   "n": 7,
+   "rows_below": 5,
+   "rows_equal": 0,
+   "rows_above": 2,
+   "share_at_or_below": 0.714
+  },
+  "sensitivity_direct_cans_excluding_7eleven_6can_rows": {
+   "x": 15.0,
+   "n": 20,
+   "rows_below": 16,
+   "rows_equal": 0,
+   "rows_above": 4,
+   "share_at_or_below": 0.8
+  },
+  "retailer_7eleven_direct": {
+   "x": 15.0,
+   "n": 4,
+   "rows_below": 2,
+   "rows_equal": 0,
+   "rows_above": 2,
+   "share_at_or_below": 0.5
+  },
+  "retailer_makro_direct": {
+   "x": 15.0,
+   "n": 8,
+   "rows_below": 8,
+   "rows_equal": 0,
+   "rows_above": 0,
+   "share_at_or_below": 1.0
+  },
+  "retailer_lotuss_direct": {
+   "x": 15.0,
+   "n": 10,
+   "rows_below": 6,
+   "rows_equal": 0,
+   "rows_above": 4,
+   "share_at_or_below": 0.6
+  },
+  "direct_cans_not_singha_brand": {
+   "x": 15.0,
+   "n": 13,
+   "rows_below": 9,
+   "rows_equal": 0,
+   "rows_above": 4,
+   "share_at_or_below": 0.692
+  },
+  "direct_cans_not_singha_brand_excluding_7eleven_6can": {
+   "x": 15.0,
+   "n": 12,
+   "rows_below": 9,
+   "rows_equal": 0,
+   "rows_above": 3,
+   "share_at_or_below": 0.75
+  },
+  "singha_brand_direct": {
+   "x": 15.0,
+   "n": 9,
+   "rows_below": 7,
+   "rows_equal": 0,
+   "rows_above": 2,
+   "share_at_or_below": 0.778
+  },
+  "singha_sparkling_water_lime_direct": {
+   "x": 15.0,
+   "n": 2,
+   "rows_below": 2,
+   "rows_equal": 0,
+   "rows_above": 0,
+   "share_at_or_below": 1.0
+  }
+ },
+ "cube_vs_can_per_serve": [
+  {
+   "label": "Singha Lemon Soda single can, Lotus's Shop Online",
+   "can_per_330ml_thb": 17.0,
+   "cube_minus_can_thb": -2.0,
+   "cube_vs_can_pct": -11.8
+  },
+  {
+   "label": "Singha Lemon Soda 24-can pack, 7-Eleven ALL Online",
+   "can_per_330ml_thb": 13.75,
+   "cube_minus_can_thb": 1.25,
+   "cube_vs_can_pct": 9.1
+  },
+  {
+   "label": "Singha Lemon Soda 6-can pack, 7-Eleven ALL Online",
+   "can_per_330ml_thb": 28.67,
+   "cube_minus_can_thb": -13.67,
+   "cube_vs_can_pct": -47.7
+  },
+  {
+   "label": "Singha Lemon Soda 6-can pack, Makro PRO",
+   "can_per_330ml_thb": 13.67,
+   "cube_minus_can_thb": 1.33,
+   "cube_vs_can_pct": 9.7
+  },
+  {
+   "label": "Singha Lemon Soda 24-can pack, Makro PRO",
+   "can_per_330ml_thb": 13.54,
+   "cube_minus_can_thb": 1.46,
+   "cube_vs_can_pct": 10.8
+  },
+  {
+   "label": "Singha Lemon Soda 6-can pack, Lotus's Shop Online",
+   "can_per_330ml_thb": 14.17,
+   "cube_minus_can_thb": 0.83,
+   "cube_vs_can_pct": 5.9
+  },
+  {
+   "label": "Singha Lemon Soda 24-can pack, Lotus's Shop Online",
+   "can_per_330ml_thb": 13.75,
+   "cube_minus_can_thb": 1.25,
+   "cube_vs_can_pct": 9.1
+  },
+  {
+   "label": "Singha Sparkling Water Lime 24-can pack, 7-Eleven ALL Online",
+   "can_per_330ml_thb": 12.58,
+   "cube_minus_can_thb": 2.42,
+   "cube_vs_can_pct": 19.2
+  },
+  {
+   "label": "Singha Sparkling Water Lime 24-can pack, Makro PRO",
+   "can_per_330ml_thb": 13.0,
+   "cube_minus_can_thb": 2.0,
+   "cube_vs_can_pct": 15.4
+  },
+  {
+   "label": "Direct lemon-lime cans, median of single cans",
+   "can_per_330ml_thb": 17.13,
+   "cube_minus_can_thb": -2.13,
+   "cube_vs_can_pct": -12.4
+  },
+  {
+   "label": "Direct cans, median of multipacks",
+   "can_per_330ml_thb": 13.75,
+   "cube_minus_can_thb": 1.25,
+   "cube_vs_can_pct": 9.1
+  },
+  {
+   "label": "Direct cans, median of all rows",
+   "can_per_330ml_thb": 14.03,
+   "cube_minus_can_thb": 0.97,
+   "cube_vs_can_pct": 6.9
+  }
+ ],
+ "carton_vs_six_can_pack": {
+  "cube_carton_count": 6,
+  "cube_carton_price_thb": 90.0,
+  "six_can_packs_singha_lemon_soda": [
+   {
+    "retailer": "7-Eleven ALL Online",
+    "pack_price_thb": 172,
+    "carton_minus_pack_thb": -82.0
+   },
+   {
+    "retailer": "Makro PRO",
+    "pack_price_thb": 82,
+    "carton_minus_pack_thb": 8.0
+   },
+   {
+    "retailer": "Lotus's Shop Online",
+    "pack_price_thb": 85,
+    "carton_minus_pack_thb": 5.0
+   }
+  ]
+ },
+ "bottle_rows_soda_water": [
+  {
+   "id": "B1",
+   "retailer": "7-Eleven ALL Online",
+   "product": "Singha Soda (soda water)",
+   "bottle_ml": 325,
+   "pack_count": 24,
+   "pack_price_thb": 195,
+   "per_bottle_thb": 8.12,
+   "per_330ml_thb": 8.25,
+   "per_litre_thb": 25.0,
+   "date_read": "2026-10-20",
+   "url": "https://www.allonline.7eleven.co.th/p/โซดาสิงห์-325-มล-แพ็ก-24-ขวด/452565/",
+   "raw_file": "7eleven_allonline_2026-10-20.md",
+   "note": "bottle; the 6-bottle listing at 157 is shown as an outlier"
+  },
+  {
+   "id": "B2",
+   "retailer": "7-Eleven ALL Online",
+   "product": "Singha Soda small bottle (soda water)",
+   "bottle_ml": 325,
+   "pack_count": 6,
+   "pack_price_thb": 157,
+   "per_bottle_thb": 26.17,
+   "per_330ml_thb": 26.57,
+   "per_litre_thb": 80.5,
+   "date_read": "2026-10-20",
+   "url": "https://www.allonline.7eleven.co.th/p/สิงห์-โซดาขวดเล็ก-325-มล-แพ็ก-6-ขวด/452376/",
+   "raw_file": "7eleven_allonline_2026-10-20.md",
+   "note": "outlier against B1, B3 and B4; reason not on page"
+  },
+  {
+   "id": "B3",
+   "retailer": "Makro PRO",
+   "product": "Singha Soda (soda water)",
+   "bottle_ml": 325,
+   "pack_count": 24,
+   "pack_price_thb": 190,
+   "per_bottle_thb": 7.92,
+   "per_330ml_thb": 8.04,
+   "per_litre_thb": 24.4,
+   "date_read": "2026-10-20",
+   "url": "https://www.makro.pro/en/p/160629-6761215066307",
+   "raw_file": "makro_pro_2026-10-20.md",
+   "note": "bottle"
+  },
+  {
+   "id": "B4",
+   "retailer": "Lotus's Shop Online",
+   "product": "Singha Soda (soda water)",
+   "bottle_ml": 325,
+   "pack_count": 6,
+   "pack_price_thb": 48,
+   "per_bottle_thb": 8.0,
+   "per_330ml_thb": 8.12,
+   "per_litre_thb": 24.6,
+   "date_read": "2026-10-20",
+   "url": "https://www.lotuss.com/en/product/singha-soda-325-ml-6-24183741",
+   "raw_file": "lotuss_2026-10-20.md",
+   "note": "packaging type not stated on the page"
+  }
+ ]
+}

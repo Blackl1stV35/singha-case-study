@@ -1,0 +1,1765 @@
+{
+  "fx": {
+    "THB_per_USD_BoT_mid_15Oct2026": 33.5495,
+    "ECB_19Oct2026_per_EUR": {
+      "EUR": 1.0,
+      "USD": 1.1225,
+      "JPY": 177.63,
+      "GBP": 0.84205,
+      "CHF": 0.9261,
+      "CAD": 1.5798
+    },
+    "THB_per": {
+      "EUR": 37.6593,
+      "USD": 33.5495,
+      "JPY": 0.212,
+      "GBP": 44.7234,
+      "CHF": 40.6644,
+      "CAD": 23.838,
+      "THB": 1.0
+    }
+  },
+  "cube_shelf_THB_per_330ml_ASSUMPTION": 15.0,
+  "per_serve": [
+    {
+      "id": "waterdrop_us_lemon_lime_12",
+      "label": "waterdrop Lemon Lime (Soft Drink Alternatives), 12 servings, US own store, regular price",
+      "currency": "USD",
+      "pack_price": 13.99,
+      "serves": 12,
+      "dose_ml_range_on_label": [
+        400,
+        500,
+        600
+      ],
+      "tax_basis": "US store price, sales tax not included",
+      "price_per_serve_local": 1.1658,
+      "price_per_cube_as_sold_THB": 39.11,
+      "price_per_serve_THB": 39.11,
+      "src": "waterdrop_2026-10-20.md",
+      "note": "US own store, regular price; the US page says 12 servings (one cube per serving is an ASSUMPTION); the 400 to 600 mL dose is the UK product's label transferred by ASSUMPTION, because the US page states no water volume",
+      "per_330ml_equivalent": {
+        "dose_ml_options": [
+          400,
+          500,
+          600
+        ],
+        "THB_per_330ml_by_dose_ml": {
+          "400": 32.27,
+          "500": 25.81,
+          "600": 21.51
+        },
+        "THB_per_330ml_low": 21.51,
+        "THB_per_330ml_high": 32.27,
+        "THB_per_330ml_central": 25.81,
+        "central_is": "500 mL",
+        "ratio_to_cube_as_sold": 2.61,
+        "ratio_to_cube_per_330ml_low": 1.43,
+        "ratio_to_cube_per_330ml_central": 1.72,
+        "ratio_to_cube_per_330ml_high": 2.15,
+        "cube_minus_analogue_per_330ml_central_THB": -10.81,
+        "cube_vs_low_dose_pct": -30.3,
+        "cube_vs_high_dose_pct": -53.5
+      }
+    },
+    {
+      "id": "waterdrop_uk_focus_lemon_lime_12_sale",
+      "label": "waterdrop FOCUS Lemon-Lime (a different product from the US Lemon Lime), 12 cubes, UK retailer, sale price",
+      "currency": "GBP",
+      "pack_price": 6.12,
+      "serves": 12,
+      "dose_ml_range_on_label": [
+        400,
+        500,
+        600
+      ],
+      "tax_basis": "UK retailer price incl 5% VAT as the page states",
+      "price_per_serve_local": 0.51,
+      "price_per_cube_as_sold_THB": 22.81,
+      "price_per_serve_THB": 22.81,
+      "src": "waterdrop_2026-10-20.md",
+      "note": "retailer page, sale price, offer ends 21 Oct 2026",
+      "per_330ml_equivalent": {
+        "dose_ml_options": [
+          400,
+          500,
+          600
+        ],
+        "THB_per_330ml_by_dose_ml": {
+          "400": 18.82,
+          "500": 15.05,
+          "600": 12.54
+        },
+        "THB_per_330ml_low": 12.54,
+        "THB_per_330ml_high": 18.82,
+        "THB_per_330ml_central": 15.05,
+        "central_is": "500 mL",
+        "ratio_to_cube_as_sold": 1.52,
+        "ratio_to_cube_per_330ml_low": 0.84,
+        "ratio_to_cube_per_330ml_central": 1.0,
+        "ratio_to_cube_per_330ml_high": 1.25,
+        "cube_minus_analogue_per_330ml_central_THB": -0.05,
+        "cube_vs_low_dose_pct": 19.6,
+        "cube_vs_high_dose_pct": -20.3
+      }
+    },
+    {
+      "id": "waterdrop_uk_focus_lemon_lime_12_regular",
+      "label": "waterdrop FOCUS Lemon-Lime, 12 cubes, UK retailer, regular price",
+      "currency": "GBP",
+      "pack_price": 6.8,
+      "serves": 12,
+      "dose_ml_range_on_label": [
+        400,
+        500,
+        600
+      ],
+      "tax_basis": "UK retailer price incl 5% VAT as the page states",
+      "price_per_serve_local": 0.5667,
+      "price_per_cube_as_sold_THB": 25.34,
+      "price_per_serve_THB": 25.34,
+      "src": "waterdrop_2026-10-20.md",
+      "note": "retailer page, struck-through price",
+      "per_330ml_equivalent": {
+        "dose_ml_options": [
+          400,
+          500,
+          600
+        ],
+        "THB_per_330ml_by_dose_ml": {
+          "400": 20.91,
+          "500": 16.73,
+          "600": 13.94
+        },
+        "THB_per_330ml_low": 13.94,
+        "THB_per_330ml_high": 20.91,
+        "THB_per_330ml_central": 16.73,
+        "central_is": "500 mL",
+        "ratio_to_cube_as_sold": 1.69,
+        "ratio_to_cube_per_330ml_low": 0.93,
+        "ratio_to_cube_per_330ml_central": 1.12,
+        "ratio_to_cube_per_330ml_high": 1.39,
+        "cube_minus_analogue_per_330ml_central_THB": -1.73,
+        "cube_vs_low_dose_pct": 7.6,
+        "cube_vs_high_dose_pct": -28.3
+      }
+    },
+    {
+      "id": "ricola_discovery_48_sale",
+      "label": "Ricola x waterdrop Discovery Set, 48 cubes, EU own store, sale price",
+      "currency": "EUR",
+      "pack_price": 28.79,
+      "serves": 48,
+      "dose_ml_range_on_label": [
+        400,
+        500,
+        600
+      ],
+      "tax_basis": "EU store price incl VAT, excl shipping",
+      "price_per_serve_local": 0.5998,
+      "price_per_cube_as_sold_THB": 22.59,
+      "price_per_serve_THB": 22.59,
+      "src": "ricola_2026-10-20.md",
+      "note": "20% off",
+      "per_330ml_equivalent": {
+        "dose_ml_options": [
+          400,
+          500,
+          600
+        ],
+        "THB_per_330ml_by_dose_ml": {
+          "400": 18.63,
+          "500": 14.91,
+          "600": 12.42
+        },
+        "THB_per_330ml_low": 12.42,
+        "THB_per_330ml_high": 18.63,
+        "THB_per_330ml_central": 14.91,
+        "central_is": "500 mL",
+        "ratio_to_cube_as_sold": 1.51,
+        "ratio_to_cube_per_330ml_low": 0.83,
+        "ratio_to_cube_per_330ml_central": 0.99,
+        "ratio_to_cube_per_330ml_high": 1.24,
+        "cube_minus_analogue_per_330ml_central_THB": 0.09,
+        "cube_vs_low_dose_pct": 20.8,
+        "cube_vs_high_dose_pct": -19.5
+      }
+    },
+    {
+      "id": "ricola_discovery_48_regular",
+      "label": "Ricola x waterdrop Discovery Set, 48 cubes, EU own store, regular price",
+      "currency": "EUR",
+      "pack_price": 35.96,
+      "serves": 48,
+      "dose_ml_range_on_label": [
+        400,
+        500,
+        600
+      ],
+      "tax_basis": "EU store price incl VAT, excl shipping",
+      "price_per_serve_local": 0.7492,
+      "price_per_cube_as_sold_THB": 28.21,
+      "price_per_serve_THB": 28.21,
+      "src": "ricola_2026-10-20.md",
+      "note": "regular price",
+      "per_330ml_equivalent": {
+        "dose_ml_options": [
+          400,
+          500,
+          600
+        ],
+        "THB_per_330ml_by_dose_ml": {
+          "400": 23.28,
+          "500": 18.62,
+          "600": 15.52
+        },
+        "THB_per_330ml_low": 15.52,
+        "THB_per_330ml_high": 23.28,
+        "THB_per_330ml_central": 18.62,
+        "central_is": "500 mL",
+        "ratio_to_cube_as_sold": 1.88,
+        "ratio_to_cube_per_330ml_low": 1.03,
+        "ratio_to_cube_per_330ml_central": 1.24,
+        "ratio_to_cube_per_330ml_high": 1.55,
+        "cube_minus_analogue_per_330ml_central_THB": -3.62,
+        "cube_vs_low_dose_pct": -3.4,
+        "cube_vs_high_dose_pct": -35.6
+      }
+    },
+    {
+      "id": "coke_jp_15cube_ex_tax",
+      "label": "Coca-Cola Japan 1,2,CUBE tea, 15 cubes, JPY 600 excluding tax (2021 release)",
+      "currency": "JPY",
+      "pack_price": 600.0,
+      "serves": 15,
+      "dose_ml_range_on_label": [
+        200,
+        400
+      ],
+      "tax_basis": "excl consumption tax",
+      "price_per_serve_local": 40.0,
+      "price_per_cube_as_sold_THB": 8.48,
+      "price_per_serve_THB": 8.48,
+      "src": "coca_cola_japan_2026-10-20.md",
+      "note": "release price; Amazon.co.jp only, 2021; tea cube 200 to 400 mL (coffee cube 130 mL not scaled)",
+      "per_330ml_equivalent": {
+        "dose_ml_options": [
+          200,
+          400
+        ],
+        "THB_per_330ml_by_dose_ml": {
+          "200": 13.99,
+          "400": 7.0
+        },
+        "THB_per_330ml_low": 7.0,
+        "THB_per_330ml_high": 13.99,
+        "THB_per_330ml_central": 9.33,
+        "central_is": "midpoint of the label range",
+        "ratio_to_cube_as_sold": 0.57,
+        "ratio_to_cube_per_330ml_low": 0.47,
+        "ratio_to_cube_per_330ml_central": 0.62,
+        "ratio_to_cube_per_330ml_high": 0.93,
+        "cube_minus_analogue_per_330ml_central_THB": 5.67,
+        "cube_vs_low_dose_pct": 114.3,
+        "cube_vs_high_dose_pct": 7.2
+      }
+    },
+    {
+      "id": "coke_jp_15cube_incl_10pct",
+      "label": "Coca-Cola Japan 1,2,CUBE tea, 15 cubes, with 10% tax (DERIVED)",
+      "currency": "JPY",
+      "pack_price": 660.0,
+      "serves": 15,
+      "dose_ml_range_on_label": [
+        200,
+        400
+      ],
+      "tax_basis": "incl 10% tax (our arithmetic)",
+      "price_per_serve_local": 44.0,
+      "price_per_cube_as_sold_THB": 9.33,
+      "price_per_serve_THB": 9.33,
+      "src": "coca_cola_japan_2026-10-20.md",
+      "note": "tax-inclusive figure is our arithmetic",
+      "per_330ml_equivalent": {
+        "dose_ml_options": [
+          200,
+          400
+        ],
+        "THB_per_330ml_by_dose_ml": {
+          "200": 15.39,
+          "400": 7.7
+        },
+        "THB_per_330ml_low": 7.7,
+        "THB_per_330ml_high": 15.39,
+        "THB_per_330ml_central": 10.26,
+        "central_is": "midpoint of the label range",
+        "ratio_to_cube_as_sold": 0.62,
+        "ratio_to_cube_per_330ml_low": 0.51,
+        "ratio_to_cube_per_330ml_central": 0.68,
+        "ratio_to_cube_per_330ml_high": 1.03,
+        "cube_minus_analogue_per_330ml_central_THB": 4.74,
+        "cube_vs_low_dose_pct": 94.8,
+        "cube_vs_high_dose_pct": -2.5
+      }
+    },
+    {
+      "id": "nuun_us_tube_10",
+      "label": "Nuun Sport tube, US store (Strawberry Lemonade on the page read); 10 tablets is an ASSUMPTION",
+      "currency": "USD",
+      "pack_price": 7.49,
+      "serves": 10,
+      "dose_ml_range_on_label": [
+        500,
+        473
+      ],
+      "tax_basis": "US store price, sales tax not included",
+      "price_per_serve_local": 0.749,
+      "price_per_cube_as_sold_THB": 25.13,
+      "price_per_serve_THB": 25.13,
+      "src": "nuun_nuunlife_2026-10-20.md",
+      "note": "US page gives no tablet count; the count of 10 is taken from a Canadian Lemon + Lime listing that states 'one tube makes 10 drinks' (nuun_hydralyte_2026-10-20.md, section A4); the dose is the Canadian listing's directions (500 mL, central) with the 473 mL nutrition basis (16 fl oz) as the alternative; per-tablet figure is ASSUMPTION-based",
+      "per_330ml_equivalent": {
+        "dose_ml_options": [
+          500,
+          473
+        ],
+        "THB_per_330ml_by_dose_ml": {
+          "500": 16.58,
+          "473": 17.53
+        },
+        "THB_per_330ml_low": 16.58,
+        "THB_per_330ml_high": 17.53,
+        "THB_per_330ml_central": 16.58,
+        "central_is": "500 mL",
+        "ratio_to_cube_as_sold": 1.68,
+        "ratio_to_cube_per_330ml_low": 1.11,
+        "ratio_to_cube_per_330ml_central": 1.11,
+        "ratio_to_cube_per_330ml_high": 1.17,
+        "cube_minus_analogue_per_330ml_central_THB": -1.58,
+        "cube_vs_low_dose_pct": -9.5,
+        "cube_vs_high_dose_pct": -14.4
+      }
+    },
+    {
+      "id": "nuun_ca_vitasave_10",
+      "label": "Nuun Sport Lemon + Lime tube, Canadian reseller (Vitasave), regular price",
+      "currency": "CAD",
+      "pack_price": 14.99,
+      "serves": 10,
+      "dose_ml_range_on_label": [
+        500,
+        473
+      ],
+      "tax_basis": "Canadian reseller price",
+      "price_per_serve_local": 1.499,
+      "price_per_cube_as_sold_THB": 35.73,
+      "price_per_serve_THB": 35.73,
+      "src": "nuun_hydralyte_2026-10-20.md",
+      "note": "reseller price, sold out on read; dose as for the US tube (500 mL directions, 473 mL nutrition basis)",
+      "per_330ml_equivalent": {
+        "dose_ml_options": [
+          500,
+          473
+        ],
+        "THB_per_330ml_by_dose_ml": {
+          "500": 23.58,
+          "473": 24.93
+        },
+        "THB_per_330ml_low": 23.58,
+        "THB_per_330ml_high": 24.93,
+        "THB_per_330ml_central": 23.58,
+        "central_is": "500 mL",
+        "ratio_to_cube_as_sold": 2.38,
+        "ratio_to_cube_per_330ml_low": 1.57,
+        "ratio_to_cube_per_330ml_central": 1.57,
+        "ratio_to_cube_per_330ml_high": 1.66,
+        "cube_minus_analogue_per_330ml_central_THB": -8.58,
+        "cube_vs_low_dose_pct": -36.4,
+        "cube_vs_high_dose_pct": -39.8
+      }
+    }
+  ],
+  "thai_effervescent_tablets": {
+    "inclusion_rule_as_applied": "form taken from the brand or the Priceza search page that returned the row, or from the title (title_states_effervescent_form flags the 12 rows whose own title states it); the title states the tablet count; price not a placeholder; no expiry or out-of-stock note that makes the row expired on 20 Oct 2026 (two rows say expiry year 2027 and are named in expiry_2027_in_title); one shop chain at one price counted once. Source pages: priceza_thai_effervescent_tablets_2026-10-20.md (S, 20 Oct 2026)",
+    "rows": [
+      {
+        "id": "T01",
+        "product": "Berocca Immu D+ 15 tablets",
+        "group": "bayer",
+        "flavour": "not stated (orange line)",
+        "tablets": 15,
+        "price_THB": 149.0,
+        "listed_price_THB": 209.0,
+        "seller": "ALL ONLINE (7-Eleven online shop)",
+        "title_states_effervescent_form": false,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 9.93,
+        "price_per_tablet_unrounded_THB": 9.933333,
+        "price_per_tablet_at_listed_price_THB": 13.93
+      },
+      {
+        "id": "T02",
+        "product": "Berocca Immu D+ 2 tablets, pack of 12 (24 tablets, our reading of the title)",
+        "group": "bayer",
+        "flavour": "not stated",
+        "tablets": 24,
+        "price_THB": 399.0,
+        "listed_price_THB": 420.0,
+        "seller": "ALL ONLINE (7-Eleven online shop)",
+        "title_states_effervescent_form": false,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 16.63,
+        "price_per_tablet_unrounded_THB": 16.625,
+        "price_per_tablet_at_listed_price_THB": 17.5
+      },
+      {
+        "id": "T03",
+        "product": "Berocca Immu D 3 x 15 tablets",
+        "group": "bayer",
+        "flavour": "orange line",
+        "tablets": 45,
+        "price_THB": 559.0,
+        "listed_price_THB": null,
+        "seller": "Bayer Consumer Health Official Store, LazMall (Lazada)",
+        "title_states_effervescent_form": true,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 12.42,
+        "price_per_tablet_unrounded_THB": 12.422222,
+        "price_per_tablet_at_listed_price_THB": null
+      },
+      {
+        "id": "T04",
+        "product": "Berocca Immu D+ 15 tablets",
+        "group": "bayer",
+        "flavour": "orange",
+        "tablets": 15,
+        "price_THB": 217.0,
+        "listed_price_THB": null,
+        "seller": "Shopee, MM pharmacy",
+        "title_states_effervescent_form": false,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 14.47,
+        "price_per_tablet_unrounded_THB": 14.466667,
+        "price_per_tablet_at_listed_price_THB": null
+      },
+      {
+        "id": "T05",
+        "product": "Berocca vitamin effervescent 15 tablets (title: expiry year 2027)",
+        "group": "bayer",
+        "flavour": "not stated",
+        "tablets": 15,
+        "price_THB": 235.0,
+        "listed_price_THB": null,
+        "seller": "Lazada, ช้อปปิ้งชิลล์",
+        "title_states_effervescent_form": true,
+        "expiry_2027_in_title": true,
+        "price_per_tablet_THB": 15.67,
+        "price_per_tablet_unrounded_THB": 15.666667,
+        "price_per_tablet_at_listed_price_THB": null
+      },
+      {
+        "id": "T06",
+        "product": "Berocca effervescent 15 tablets (title: expiry year 2027)",
+        "group": "bayer",
+        "flavour": "orange",
+        "tablets": 15,
+        "price_THB": 235.0,
+        "listed_price_THB": null,
+        "seller": "Lazada, ยาเภสัช",
+        "title_states_effervescent_form": true,
+        "expiry_2027_in_title": true,
+        "price_per_tablet_THB": 15.67,
+        "price_per_tablet_unrounded_THB": 15.666667,
+        "price_per_tablet_at_listed_price_THB": null
+      },
+      {
+        "id": "T07",
+        "product": "Berocca Immu D+ Z D Zinc (Redoxon formula) 15 tablets",
+        "group": "bayer",
+        "flavour": "orange",
+        "tablets": 15,
+        "price_THB": 219.0,
+        "listed_price_THB": null,
+        "seller": "Shopee, 24 OSOD",
+        "title_states_effervescent_form": false,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 14.6,
+        "price_per_tablet_unrounded_THB": 14.6,
+        "price_per_tablet_at_listed_price_THB": null
+      },
+      {
+        "id": "T08",
+        "product": "Berocca Immu D+ 15 tablets",
+        "group": "bayer",
+        "flavour": "orange",
+        "tablets": 15,
+        "price_THB": 649.0,
+        "listed_price_THB": null,
+        "seller": "Shopee, healthy_trends_official_store",
+        "title_states_effervescent_form": true,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 43.27,
+        "price_per_tablet_unrounded_THB": 43.266667,
+        "price_per_tablet_at_listed_price_THB": null
+      },
+      {
+        "id": "T09",
+        "product": "Berocca 30 tablets",
+        "group": "bayer",
+        "flavour": "orange",
+        "tablets": 30,
+        "price_THB": 1239.0,
+        "listed_price_THB": null,
+        "seller": "Shopee, 76np3t0n_i",
+        "title_states_effervescent_form": false,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 41.3,
+        "price_per_tablet_unrounded_THB": 41.3,
+        "price_per_tablet_at_listed_price_THB": null
+      },
+      {
+        "id": "T10",
+        "product": "Redoxon Zinc 15 tablets",
+        "group": "bayer",
+        "flavour": "not stated",
+        "tablets": 15,
+        "price_THB": 228.0,
+        "listed_price_THB": null,
+        "seller": "Lazada",
+        "title_states_effervescent_form": false,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 15.2,
+        "price_per_tablet_unrounded_THB": 15.2,
+        "price_per_tablet_at_listed_price_THB": null
+      },
+      {
+        "id": "T11",
+        "product": "Redoxon Zinc 15 tablets",
+        "group": "bayer",
+        "flavour": "not stated",
+        "tablets": 15,
+        "price_THB": 195.0,
+        "listed_price_THB": null,
+        "seller": "PharmaShop4U (online pharmacy)",
+        "title_states_effervescent_form": true,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 13.0,
+        "price_per_tablet_unrounded_THB": 13.0,
+        "price_per_tablet_at_listed_price_THB": null
+      },
+      {
+        "id": "T12",
+        "product": "Redoxon vitamin C 15 tablets",
+        "group": "bayer",
+        "flavour": "not stated",
+        "tablets": 15,
+        "price_THB": 200.0,
+        "listed_price_THB": null,
+        "seller": "Shopee, pattaruk_ja",
+        "title_states_effervescent_form": false,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 13.33,
+        "price_per_tablet_unrounded_THB": 13.333333,
+        "price_per_tablet_at_listed_price_THB": null
+      },
+      {
+        "id": "T13",
+        "product": "Redoxon Triple Action 10 tablets",
+        "group": "bayer",
+        "flavour": "not stated",
+        "tablets": 10,
+        "price_THB": 221.0,
+        "listed_price_THB": null,
+        "seller": "Shopee, fachristore7c.th",
+        "title_states_effervescent_form": false,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 22.1,
+        "price_per_tablet_unrounded_THB": 22.1,
+        "price_per_tablet_at_listed_price_THB": null
+      },
+      {
+        "id": "T14",
+        "product": "Redoxon Triple Action Effervescent Orange 30 x 3 (90 tablets)",
+        "group": "bayer",
+        "flavour": "orange",
+        "tablets": 90,
+        "price_THB": 1313.0,
+        "listed_price_THB": null,
+        "seller": "Shopee, mve8llnwqv",
+        "title_states_effervescent_form": true,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 14.59,
+        "price_per_tablet_unrounded_THB": 14.588889,
+        "price_per_tablet_at_listed_price_THB": null
+      },
+      {
+        "id": "T15",
+        "product": "CDR Calcium D Redoxon 15 tablets",
+        "group": "cdr",
+        "flavour": "not stated",
+        "tablets": 15,
+        "price_THB": 150.0,
+        "listed_price_THB": null,
+        "seller": "Shopee, ห้องยาชุมชน",
+        "title_states_effervescent_form": true,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 10.0,
+        "price_per_tablet_unrounded_THB": 10.0,
+        "price_per_tablet_at_listed_price_THB": null
+      },
+      {
+        "id": "T16",
+        "product": "CDR Calcium D Redoxon 15 tablets, pack of 2 (30 tablets, our reading)",
+        "group": "cdr",
+        "flavour": "orange",
+        "tablets": 30,
+        "price_THB": 245.0,
+        "listed_price_THB": null,
+        "seller": "Shopee",
+        "title_states_effervescent_form": true,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 8.17,
+        "price_per_tablet_unrounded_THB": 8.166667,
+        "price_per_tablet_at_listed_price_THB": null
+      },
+      {
+        "id": "T17",
+        "product": "CDR Calcium D Redoxon 2 tubes of 15 (30 tablets)",
+        "group": "cdr",
+        "flavour": "orange",
+        "tablets": 30,
+        "price_THB": 330.0,
+        "listed_price_THB": 540.0,
+        "seller": "Lazada",
+        "title_states_effervescent_form": false,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 11.0,
+        "price_per_tablet_unrounded_THB": 11.0,
+        "price_per_tablet_at_listed_price_THB": 18.0
+      },
+      {
+        "id": "T18",
+        "product": "CDR Calcium D Redoxon 2 tubes of 15 (30 tablets)",
+        "group": "cdr",
+        "flavour": "orange",
+        "tablets": 30,
+        "price_THB": 394.0,
+        "listed_price_THB": 540.0,
+        "seller": "Lazada",
+        "title_states_effervescent_form": false,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 13.13,
+        "price_per_tablet_unrounded_THB": 13.133333,
+        "price_per_tablet_at_listed_price_THB": 18.0
+      },
+      {
+        "id": "T19",
+        "product": "CDR Calcium D Redoxon 3 tubes of 15 (45 tablets)",
+        "group": "cdr",
+        "flavour": "orange",
+        "tablets": 45,
+        "price_THB": 474.0,
+        "listed_price_THB": 795.0,
+        "seller": "Lazada",
+        "title_states_effervescent_form": true,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 10.53,
+        "price_per_tablet_unrounded_THB": 10.533333,
+        "price_per_tablet_at_listed_price_THB": 17.67
+      },
+      {
+        "id": "T20",
+        "product": "CDR Calcium D Redoxon 4 tubes of 15 (60 tablets)",
+        "group": "cdr",
+        "flavour": "orange",
+        "tablets": 60,
+        "price_THB": 565.0,
+        "listed_price_THB": 1000.0,
+        "seller": "Lazada",
+        "title_states_effervescent_form": false,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 9.42,
+        "price_per_tablet_unrounded_THB": 9.416667,
+        "price_per_tablet_at_listed_price_THB": 16.67
+      },
+      {
+        "id": "T21",
+        "product": "CDR Calcium D Redoxon 4 tubes of 15 (60 tablets)",
+        "group": "cdr",
+        "flavour": "orange",
+        "tablets": 60,
+        "price_THB": 631.0,
+        "listed_price_THB": 1000.0,
+        "seller": "Lazada",
+        "title_states_effervescent_form": false,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 10.52,
+        "price_per_tablet_unrounded_THB": 10.516667,
+        "price_per_tablet_at_listed_price_THB": 16.67
+      },
+      {
+        "id": "L01",
+        "product": "Demosana Vitamin C Lemon 20 tablets",
+        "group": "lemon",
+        "flavour": "lemon",
+        "tablets": 20,
+        "price_THB": 119.0,
+        "listed_price_THB": 180.0,
+        "seller": "Lazada, Today is bestseller",
+        "title_states_effervescent_form": false,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 5.95,
+        "price_per_tablet_unrounded_THB": 5.95,
+        "price_per_tablet_at_listed_price_THB": 9.0
+      },
+      {
+        "id": "L02",
+        "product": "Demosana Vitamin C Lemon 20 tablets",
+        "group": "lemon",
+        "flavour": "lemon",
+        "tablets": 20,
+        "price_THB": 130.0,
+        "listed_price_THB": null,
+        "seller": "Shopee, santegoodhealth_officialshop",
+        "title_states_effervescent_form": false,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 6.5,
+        "price_per_tablet_unrounded_THB": 6.5,
+        "price_per_tablet_at_listed_price_THB": null
+      },
+      {
+        "id": "L03",
+        "product": "Demosana Vitamin C Lemon Effer 20 tablets",
+        "group": "lemon",
+        "flavour": "lemon",
+        "tablets": 20,
+        "price_THB": 132.16,
+        "listed_price_THB": 159.5,
+        "seller": "Lazada, SAVEDRUG (LazMall)",
+        "title_states_effervescent_form": true,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 6.61,
+        "price_per_tablet_unrounded_THB": 6.608,
+        "price_per_tablet_at_listed_price_THB": 7.98
+      },
+      {
+        "id": "L04",
+        "product": "Demosana Vitamin C Lemon 20 tablets (11 branch listings of one pharmacy chain, counted once)",
+        "group": "lemon",
+        "flavour": "lemon",
+        "tablets": 20,
+        "price_THB": 145.0,
+        "listed_price_THB": null,
+        "seller": "Shopee, ร้านยากรุงเทพ (pharmacy chain)",
+        "title_states_effervescent_form": false,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 7.25,
+        "price_per_tablet_unrounded_THB": 7.25,
+        "price_per_tablet_at_listed_price_THB": null
+      },
+      {
+        "id": "L05",
+        "product": "Demosana Vitamin C Lemon 20 tablets",
+        "group": "lemon",
+        "flavour": "lemon",
+        "tablets": 20,
+        "price_THB": 149.0,
+        "listed_price_THB": null,
+        "seller": "Shopee, ชีวดี",
+        "title_states_effervescent_form": false,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 7.45,
+        "price_per_tablet_unrounded_THB": 7.45,
+        "price_per_tablet_at_listed_price_THB": null
+      },
+      {
+        "id": "L06",
+        "product": "Interpharma Magnesium Plus B Complex 20 tablets",
+        "group": "lemon",
+        "flavour": "lemon",
+        "tablets": 20,
+        "price_THB": 140.0,
+        "listed_price_THB": null,
+        "seller": "Lazada, Yadeemedical",
+        "title_states_effervescent_form": false,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 7.0,
+        "price_per_tablet_unrounded_THB": 7.0,
+        "price_per_tablet_at_listed_price_THB": null
+      },
+      {
+        "id": "L07",
+        "product": "Interpharma Magnesium Plus B Complex 20 tablets (green)",
+        "group": "lemon",
+        "flavour": "lemon",
+        "tablets": 20,
+        "price_THB": 190.0,
+        "listed_price_THB": 780.0,
+        "seller": "Shopee, 365wecareshop",
+        "title_states_effervescent_form": false,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 9.5,
+        "price_per_tablet_unrounded_THB": 9.5,
+        "price_per_tablet_at_listed_price_THB": 39.0
+      },
+      {
+        "id": "L08",
+        "product": "Interpharma Magnesium B Complex 20 tablets",
+        "group": "lemon",
+        "flavour": "lemon",
+        "tablets": 20,
+        "price_THB": 280.0,
+        "listed_price_THB": null,
+        "seller": "TikTok Shop",
+        "title_states_effervescent_form": false,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 14.0,
+        "price_per_tablet_unrounded_THB": 14.0,
+        "price_per_tablet_at_listed_price_THB": null
+      },
+      {
+        "id": "L09",
+        "product": "HOF Effer Zinc+ Vitamin C 20 tablets",
+        "group": "lemon",
+        "flavour": "lime lemon",
+        "tablets": 20,
+        "price_THB": 150.0,
+        "listed_price_THB": null,
+        "seller": "PharmaShop4U (online pharmacy)",
+        "title_states_effervescent_form": true,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 7.5,
+        "price_per_tablet_unrounded_THB": 7.5,
+        "price_per_tablet_at_listed_price_THB": null
+      },
+      {
+        "id": "L10",
+        "product": "Airborne Vitamin C effervescent 10 tablets (US brand, import)",
+        "group": "lemon",
+        "flavour": "lemon",
+        "tablets": 10,
+        "price_THB": 490.0,
+        "listed_price_THB": null,
+        "seller": "Shopee, mememelonshop",
+        "title_states_effervescent_form": true,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 49.0,
+        "price_per_tablet_unrounded_THB": 49.0,
+        "price_per_tablet_at_listed_price_THB": null
+      },
+      {
+        "id": "O01",
+        "product": "Demosana Vitamin C Orange 20 tablets",
+        "group": "other",
+        "flavour": "orange",
+        "tablets": 20,
+        "price_THB": 129.0,
+        "listed_price_THB": null,
+        "seller": "Lazada, ร้านยา DE BANGKOK 4",
+        "title_states_effervescent_form": false,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 6.45,
+        "price_per_tablet_unrounded_THB": 6.45,
+        "price_per_tablet_at_listed_price_THB": null
+      },
+      {
+        "id": "O02",
+        "product": "Demosana Vitamin C mixed flavours 20 tablets (3 listings of one seller counted once)",
+        "group": "other",
+        "flavour": "mixed (orange, strawberry, yuzu, lemon)",
+        "tablets": 20,
+        "price_THB": 117.0,
+        "listed_price_THB": null,
+        "seller": "Lazada, PharmacarePlus",
+        "title_states_effervescent_form": false,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 5.85,
+        "price_per_tablet_unrounded_THB": 5.85,
+        "price_per_tablet_at_listed_price_THB": null
+      },
+      {
+        "id": "O03",
+        "product": "Demosana Vitamin C mixed flavours 20 tablets",
+        "group": "other",
+        "flavour": "mixed (orange, strawberry, yuzu, lemon)",
+        "tablets": 20,
+        "price_THB": 279.71,
+        "listed_price_THB": 337.0,
+        "seller": "TikTok Shop",
+        "title_states_effervescent_form": false,
+        "expiry_2027_in_title": false,
+        "price_per_tablet_THB": 13.99,
+        "price_per_tablet_unrounded_THB": 13.9855,
+        "price_per_tablet_at_listed_price_THB": 16.85
+      }
+    ],
+    "excluded_rows_read": [
+      {
+        "row": "Redoxon Zinc 15 tablets, THB 888 (Shopee, Banya Yooyen)",
+        "reason": "price looks like a placeholder: THB 888 recurs on two single-tablet listings"
+      },
+      {
+        "row": "Redoxon Zinc, THB 99,999 (three Shopee sellers)",
+        "reason": "placeholder price"
+      },
+      {
+        "row": "Redoxon Zinc 15 tablets, THB 155 (Shopee, FS.MEDICALS)",
+        "reason": "the title says expiry 03/2025 (expired on 20 October 2026)"
+      },
+      {
+        "row": "Redoxon Zinc 15 tablets, THB 183 (Meyaadee online pharmacy)",
+        "reason": "out of stock on read (page opened); would be THB 12.20 per tablet"
+      },
+      {
+        "row": "HOF Effer Zinc+ Vitamin C 20s, THB 447 and THB 1,776 (PharmaShop4U, two other SKUs)",
+        "reason": "same title as the THB 150 row at 3 and 12 times the price: pack size UNVERIFIED"
+      },
+      {
+        "row": "Demosana Magnesium Lemon 20s (2 tubes) THB 249 (Lazada)",
+        "reason": "tablet count ambiguous"
+      },
+      {
+        "row": "Demosana Vitamin C Lemon / Immune Refresh Lemon 82 g THB 149 (Tops Online); Demosana Vitamin C 20Tab THB 149 (Boots); Strawberry 20S THB 288 (Boots)",
+        "reason": "channel evidence only: the Tops and Boots rows are in Priceza's recommended block and the Tops title gives no tablet count"
+      },
+      {
+        "row": "Berocca Performance 30 tablets (ALL ONLINE THB 199; LazMall THB 213; Shopee THB 250)",
+        "reason": "swallowed tablet (title says เม็ดกลืน), not effervescent"
+      },
+      {
+        "row": "Berocca Boost 20 tablets THB 1,350 and BeroccaMind Citrus 20 tablets THB 1,228 (Lazada, YUI49)",
+        "reason": "format not stated on the page"
+      },
+      {
+        "row": "Berocca Immu D Dietary Supplement THB 209 (LazMall); Berocca 12 ingredients orange THB 230; Berocca Australia import THB 750; Demosana Collagen C THB 299 and Zinc C THB 179; NUTRAKAL calcium THB 249; Redoxon / Berocca THB 187",
+        "reason": "no tablet count stated"
+      },
+      {
+        "row": "Redoxon Kids Vitamin C 60 chewable THB 299 (Shopee)",
+        "reason": "chewable, not effervescent"
+      },
+      {
+        "row": "Berocca and Elderberry sachets and drinks (THB 224 to THB 819)",
+        "reason": "not a tablet"
+      },
+      {
+        "row": "Demosana TikTok Shop rows at THB 165.55 to THB 212.85 (about 80% off a THB 930 list)",
+        "reason": "no tablet count; deep-discount listing"
+      },
+      {
+        "row": "Hall XS Singh Ume Lemon Soda 20 tablets THB 22 (BigC Shopping Online)",
+        "reason": "a lozenge or confectionery tablet, not a drink"
+      },
+      {
+        "row": "Alka-Seltzer, bath salts, descalers, stain removers, candies",
+        "reason": "not a vitamin drink tablet"
+      }
+    ],
+    "stats_per_tablet_THB": {
+      "all_counted_rows": {
+        "n": 34,
+        "min": 5.85,
+        "q1": 7.67,
+        "median": 11.71,
+        "q3": 14.6,
+        "max": 49.0,
+        "median_unrounded_THB": 11.711111,
+        "rows_below_cube": 26,
+        "rows_above_cube": 8,
+        "cube_minus_median_THB": 3.29,
+        "cube_over_median_ratio": 1.28
+      },
+      "bayer_berocca_redoxon_vitamin_tablets": {
+        "n": 14,
+        "min": 9.93,
+        "q1": 13.62,
+        "median": 14.9,
+        "q3": 16.39,
+        "max": 43.27,
+        "median_unrounded_THB": 14.9,
+        "rows_below_cube": 7,
+        "rows_above_cube": 7,
+        "cube_minus_median_THB": 0.1,
+        "cube_over_median_ratio": 1.01
+      },
+      "redoxon_cdr_calcium_tablets": {
+        "n": 7,
+        "min": 8.17,
+        "q1": 9.71,
+        "median": 10.52,
+        "q3": 10.77,
+        "max": 13.13,
+        "median_unrounded_THB": 10.516667,
+        "rows_below_cube": 7,
+        "rows_above_cube": 0,
+        "cube_minus_median_THB": 4.48,
+        "cube_over_median_ratio": 1.43
+      },
+      "lemon_or_lime_tablets": {
+        "n": 10,
+        "min": 5.95,
+        "q1": 6.71,
+        "median": 7.35,
+        "q3": 9.0,
+        "max": 49.0,
+        "median_unrounded_THB": 7.35,
+        "rows_below_cube": 9,
+        "rows_above_cube": 1,
+        "cube_minus_median_THB": 7.65,
+        "cube_over_median_ratio": 2.04
+      },
+      "orange_or_mixed_demosana": {
+        "n": 3,
+        "min": 5.85,
+        "q1": 6.15,
+        "median": 6.45,
+        "q3": 10.22,
+        "max": 13.99,
+        "median_unrounded_THB": 6.45,
+        "rows_below_cube": 3,
+        "rows_above_cube": 0,
+        "cube_minus_median_THB": 8.55,
+        "cube_over_median_ratio": 2.33
+      },
+      "bayer_without_two_high_outliers_T08_T09": {
+        "n": 12,
+        "min": 9.93,
+        "q1": 13.25,
+        "median": 14.59,
+        "q3": 15.67,
+        "max": 22.1,
+        "median_unrounded_THB": 14.594444,
+        "rows_below_cube": 7,
+        "rows_above_cube": 5,
+        "cube_minus_median_THB": 0.41,
+        "cube_over_median_ratio": 1.03,
+        "note": "T08 (THB 43.27) and T09 (THB 41.30) are named outliers"
+      },
+      "lemon_or_lime_without_airborne_import_L10": {
+        "n": 9,
+        "min": 5.95,
+        "q1": 6.61,
+        "median": 7.25,
+        "q3": 7.5,
+        "max": 14.0,
+        "median_unrounded_THB": 7.25,
+        "rows_below_cube": 9,
+        "rows_above_cube": 0,
+        "cube_minus_median_THB": 7.75,
+        "cube_over_median_ratio": 2.07,
+        "note": "L10 (THB 49.00, a US brand import) is a named outlier"
+      },
+      "lemon_or_lime_without_interpharma_form_unverified_L06_L07_L08": {
+        "n": 7,
+        "min": 5.95,
+        "q1": 6.55,
+        "median": 7.25,
+        "q3": 7.48,
+        "max": 49.0,
+        "median_unrounded_THB": 7.25,
+        "rows_below_cube": 6,
+        "rows_above_cube": 1,
+        "cube_minus_median_THB": 7.75,
+        "cube_over_median_ratio": 2.07,
+        "note": "seven rows whose brand or own title is taken as the effervescent form (L01 to L05, L09, L10); the three Interpharma rows (L06 to L08) are UNVERIFIED for form"
+      },
+      "bayer_without_2027_expiry_rows_T05_T06": {
+        "n": 12,
+        "min": 9.93,
+        "q1": 13.25,
+        "median": 14.59,
+        "q3": 17.99,
+        "max": 43.27,
+        "median_unrounded_THB": 14.594444,
+        "rows_below_cube": 7,
+        "rows_above_cube": 5,
+        "cube_minus_median_THB": 0.41,
+        "cube_over_median_ratio": 1.03,
+        "note": "T05 and T06 (THB 235 each, Lazada) carry 'expiry year 2027' in the title; not expired on 20 October 2026; removed here as a sensitivity only"
+      },
+      "all_counted_without_2027_expiry_rows_T05_T06": {
+        "n": 32,
+        "min": 5.85,
+        "q1": 7.49,
+        "median": 10.77,
+        "q3": 14.5,
+        "max": 49.0,
+        "median_unrounded_THB": 10.766666,
+        "rows_below_cube": 26,
+        "rows_above_cube": 6,
+        "cube_minus_median_THB": 4.23,
+        "cube_over_median_ratio": 1.39
+      },
+      "title_states_form_all_counted": {
+        "n": 12,
+        "min": 6.61,
+        "q1": 9.54,
+        "median": 12.71,
+        "q3": 15.67,
+        "max": 49.0,
+        "median_unrounded_THB": 12.711111,
+        "rows_below_cube": 8,
+        "rows_above_cube": 4,
+        "cube_minus_median_THB": 2.29,
+        "cube_over_median_ratio": 1.18,
+        "note": "rows whose own title states the effervescent form; 22 of 34 counted rows do not state it in the title"
+      },
+      "title_states_form_bayer": {
+        "n": 6,
+        "min": 12.42,
+        "q1": 13.4,
+        "median": 15.13,
+        "q3": 15.67,
+        "max": 43.27,
+        "median_unrounded_THB": 15.127778,
+        "rows_below_cube": 3,
+        "rows_above_cube": 3,
+        "cube_minus_median_THB": -0.13,
+        "cube_over_median_ratio": 0.99,
+        "note": "Berocca and Redoxon rows whose own title states the effervescent form (T03, T05, T06, T08, T11, T14)",
+        "median_is_above_or_below_cube": "above"
+      },
+      "title_states_form_lemon": {
+        "n": 3,
+        "min": 6.61,
+        "q1": 7.05,
+        "median": 7.5,
+        "q3": 28.25,
+        "max": 49.0,
+        "median_unrounded_THB": 7.5,
+        "rows_below_cube": 2,
+        "rows_above_cube": 1,
+        "cube_minus_median_THB": 7.5,
+        "cube_over_median_ratio": 2.0
+      }
+    },
+    "cube_vs_lemon_tablets": {
+      "cube_over_lemon_tablet_median": 2.04,
+      "cube_over_lemon_tablet_min": 2.52,
+      "cube_over_lemon_tablet_q3": 1.67
+    },
+    "sensitivity": {
+      "bayer_with_the_THB_888_15_tablet_row_added": {
+        "n": 15,
+        "min": 9.93,
+        "q1": 13.9,
+        "median": 15.2,
+        "q3": 19.36,
+        "max": 59.2,
+        "median_unrounded_THB": 15.2,
+        "rows_below_cube": 7,
+        "rows_above_cube": 8,
+        "cube_minus_median_THB": -0.2,
+        "cube_over_median_ratio": 0.99
+      },
+      "lemon_with_the_HOF_THB_447_and_THB_1776_rows_added_at_20_tablets": {
+        "n": 12,
+        "min": 5.95,
+        "q1": 6.9,
+        "median": 7.48,
+        "q3": 16.09,
+        "max": 88.8,
+        "median_unrounded_THB": 7.475,
+        "rows_below_cube": 9,
+        "rows_above_cube": 3,
+        "cube_minus_median_THB": 7.53,
+        "cube_over_median_ratio": 2.01
+      },
+      "bayer_with_the_out_of_stock_Meyaadee_THB_183_row_added": {
+        "n": 15,
+        "min": 9.93,
+        "q1": 13.17,
+        "median": 14.6,
+        "q3": 16.15,
+        "max": 43.27,
+        "median_unrounded_THB": 14.6,
+        "rows_below_cube": 8,
+        "rows_above_cube": 7,
+        "cube_minus_median_THB": 0.4,
+        "cube_over_median_ratio": 1.03
+      },
+      "bayer_listed_prices_instead_of_ALL_ONLINE_sale_prices": {
+        "n": 14,
+        "min": 12.42,
+        "q1": 14.07,
+        "median": 14.9,
+        "q3": 17.04,
+        "max": 43.27,
+        "median_unrounded_THB": 14.9,
+        "rows_below_cube": 7,
+        "rows_above_cube": 7,
+        "cube_minus_median_THB": 0.1,
+        "cube_over_median_ratio": 1.01
+      }
+    }
+  },
+  "nuun_thai_marketplace": {
+    "rows_with_stated_count": [
+      {
+        "id": "N19",
+        "label": "Nuun Sport Hydration, 10 tablets, Lazada, iBody Thailand (price 195.50, listed 200; title carries a '75 OFF' phrase)",
+        "price_THB": 195.5,
+        "tablets": 10,
+        "channel": "Lazada",
+        "price_per_tablet_THB": 19.55,
+        "THB_per_330ml_at_500ml_directions_dose": 12.9,
+        "THB_per_330ml_at_473ml_nutrition_dose": 13.64
+      },
+      {
+        "id": "N_iherb_orange",
+        "label": "Nuun Sport Effervescent Electrolyte, Orange, 10 tablets, iHerb",
+        "price_THB": 267.64,
+        "tablets": 10,
+        "channel": "iHerb (cross-border)",
+        "price_per_tablet_THB": 26.76,
+        "THB_per_330ml_at_500ml_directions_dose": 17.66,
+        "THB_per_330ml_at_473ml_nutrition_dose": 18.67
+      },
+      {
+        "id": "N_iherb_grape",
+        "label": "Nuun Sport Effervescent Electrolyte, Grape, 10 tablets, iHerb",
+        "price_THB": 267.34,
+        "tablets": 10,
+        "channel": "iHerb (cross-border)",
+        "price_per_tablet_THB": 26.73,
+        "THB_per_330ml_at_500ml_directions_dose": 17.64,
+        "THB_per_330ml_at_473ml_nutrition_dose": 18.65
+      },
+      {
+        "id": "N_iherb_immune",
+        "label": "Nuun Daily Hydration Immune Support, Orange Citrus, 10 tablets, iHerb",
+        "price_THB": 227.24,
+        "tablets": 10,
+        "channel": "iHerb (cross-border)",
+        "price_per_tablet_THB": 22.72
+      },
+      {
+        "id": "N16",
+        "label": "Nuun Hydration Immunity, 10 servings, Lazada, iLiveLife (listed 1,000)",
+        "price_THB": 745.0,
+        "tablets": 10,
+        "channel": "Lazada",
+        "price_per_tablet_THB": 74.5
+      }
+    ],
+    "rows_without_count": {
+      "rows": 19,
+      "price_min_THB": 290.0,
+      "price_max_THB": 420.0,
+      "pack_count": "not stated on any of these rows (UNVERIFIED)",
+      "conditional_per_tablet_if_10_tablets_THB": [
+        29.0,
+        42.0
+      ],
+      "conditional_is": "ASSUMPTION: the tube holds 10 tablets as on the iBody, iHerb and Canadian reseller pages; not read on these rows"
+    }
+  },
+  "hydralyte_thai_marketplace": [
+    {
+      "id": "H4",
+      "label": "Hydralyte Electrolyte Ice Blocks 16 pack, Strawberry Kiwi, Shopee",
+      "price_THB": 850.0,
+      "units": 16,
+      "unit": "per ice block",
+      "price_per_unit_THB": 53.13
+    },
+    {
+      "id": "H5",
+      "label": "Hydralyte Liver Support Blood Orange, 12 packets, iHerb",
+      "price_THB": 586.34,
+      "units": 12,
+      "unit": "per packet",
+      "price_per_unit_THB": 48.86
+    },
+    {
+      "id": "H6",
+      "label": "Hydralyte Lemon Squeeze, 6 packets, iHerb",
+      "price_THB": 506.83,
+      "units": 6,
+      "unit": "per packet",
+      "price_per_unit_THB": 84.47
+    },
+    {
+      "id": "H7",
+      "label": "Hydralyte Variety Pack, 30 packets, iHerb",
+      "price_THB": 1187.58,
+      "units": 30,
+      "unit": "per packet",
+      "price_per_unit_THB": 39.59
+    },
+    {
+      "id": "H8",
+      "label": "Hydralyte Verisol Collagen Strawberry Lemonade, 12 packets, iHerb",
+      "price_THB": 471.47,
+      "units": 12,
+      "unit": "per packet",
+      "price_per_unit_THB": 39.29
+    },
+    {
+      "id": "H1_to_H3",
+      "label": "Hydralyte effervescent electrolyte tablets (three listings, one a lemon listing), Lazada, Ching tongom",
+      "price_THB": 280.0,
+      "units": null,
+      "unit": "tablet count not stated",
+      "price_per_unit_THB": null
+    }
+  ],
+  "hydralyte_us_value_pack": {
+    "label": "Hydralyte Orange tablets Value 2-pack (2 tubes), US-facing brand site",
+    "price_USD": 21.99,
+    "price_THB": 737.75,
+    "tablet_count": "not stated (UNVERIFIED)",
+    "price_per_tablet_THB": null
+  },
+  "sodastream_proxy": {
+    "syrup": {
+      "regular": {
+        "usd_pack": 7.99,
+        "usd_per_330ml": 0.293,
+        "thb_per_330ml": 9.83
+      },
+      "sale": {
+        "usd_pack": 5.99,
+        "usd_per_330ml": 0.2196,
+        "thb_per_330ml": 7.37
+      }
+    },
+    "co2": {
+      "uk_exchange_25.98_GBP_at_stated_up_to_60L": {
+        "status": "P (UK page: exchange price and 'up to 60L')",
+        "local_per_330ml": 0.1429,
+        "thb_per_330ml": 6.39
+      },
+      "canada_exchange_19.99_CAD_at_UK_60L_yield": {
+        "status": "PROXY (Canadian page states no litre figure; the UK yield is applied)",
+        "local_per_330ml": 0.1099,
+        "thb_per_330ml": 2.62
+      }
+    },
+    "total_thb_per_330ml_low_UK_basis": 13.76,
+    "total_thb_per_330ml_high_UK_basis": 16.22,
+    "total_thb_per_330ml_low_if_Canadian_cylinder_taken_at_UK_yield_PROXY": 9.99,
+    "note": "machine purchase excluded; prices from the UK and Canadian brand pages and the US mix page. The UK-basis figures are a floor because the cylinder yield is 'up to' 60 L and the mix is 'about' 9 L. The Canadian low end is a PROXY at the UK yield."
+  },
+  "canned_ladder_summary": {
+    "source_file": "rework/screen/t5_retail_price_ladder_results.json (68d second revision; sets A, B, D and K)",
+    "main_set_A_per_330ml": {
+      "n": 31,
+      "min": 12.3962,
+      "q1": 13.6449,
+      "median": 14.0462,
+      "q3": 14.5048,
+      "max": 28.6667,
+      "mean": 15.0366
+    },
+    "retailer_pages_set_B_per_330ml": {
+      "n": 16,
+      "min": 12.5833,
+      "q1": 13.4457,
+      "median": 13.875,
+      "q3": 14.2524,
+      "max": 28.6667,
+      "mean": 15.5384
+    },
+    "single_cans_set_D_per_330ml": {
+      "n": 4,
+      "min": 16.2462,
+      "q1": 16.2462,
+      "median": 16.6231,
+      "q3": 17.25,
+      "max": 18.0,
+      "mean": 16.8731
+    },
+    "singha_rows_set_K_per_330ml": {
+      "n": 8,
+      "min": 12.5833,
+      "q1": 13.4062,
+      "median": 13.7083,
+      "q3": 13.8542,
+      "max": 28.6667,
+      "mean": 15.3906
+    },
+    "cube_shelf_price_THB": 15.0,
+    "cube_planning_ex_factory_THB": 9.0,
+    "cube_cost_THB": 4.09
+  },
+  "singha_pack_per_330ml_low_high": [
+    13.5417,
+    14.1667
+  ],
+  "singha_pack_rows": [
+    {
+      "id": "D01",
+      "product": "Singha Lemon Soda 330 mL, case of 24 cans",
+      "retailer": "7-Eleven ALL Online",
+      "pack_count": 24,
+      "per_330ml_thb": 13.75
+    },
+    {
+      "id": "D06",
+      "product": "SINGHA Lemon Soda 330 mL, 24 cans",
+      "retailer": "Makro PRO",
+      "pack_count": 24,
+      "per_330ml_thb": 13.5417
+    },
+    {
+      "id": "D07",
+      "product": "SINGHA Lemon Soda 330 mL, pack of 6",
+      "retailer": "Makro PRO",
+      "pack_count": 6,
+      "per_330ml_thb": 13.6667
+    },
+    {
+      "id": "D12",
+      "product": "SINGHA LEMON SODA CAN 330ML. PACK 24",
+      "retailer": "Lotus's Shop Online",
+      "pack_count": 24,
+      "per_330ml_thb": 13.75
+    },
+    {
+      "id": "D13",
+      "product": "SINGHA LEMON SODA CAN 330ML.X6",
+      "retailer": "Lotus's Shop Online",
+      "pack_count": 6,
+      "per_330ml_thb": 14.1667
+    },
+    {
+      "id": "D02",
+      "product": "Singha Lemon Soda 330 mL, pack of 6 cans",
+      "retailer": "7-Eleven ALL Online",
+      "pack_count": 6,
+      "per_330ml_thb": 28.6667
+    }
+  ],
+  "singha_pack_outlier_E2_per_330ml": 28.6667,
+  "comparisons": {
+    "cube_shelf_vs_cheapest_single_can": {
+      "abs_THB": -1.25,
+      "pct": -7.7
+    },
+    "cube_shelf_vs_singha_single_can": {
+      "abs_THB": -2.0,
+      "pct": -11.8
+    },
+    "cube_shelf_vs_single_can_median": {
+      "abs_THB": -1.62,
+      "pct": -9.8
+    },
+    "cube_shelf_vs_most_expensive_single_can": {
+      "abs_THB": -3.0,
+      "pct": -16.7
+    },
+    "cube_shelf_vs_singha_pack_low": {
+      "abs_THB": 1.46,
+      "pct": 10.8
+    },
+    "cube_shelf_vs_singha_pack_high": {
+      "abs_THB": 0.83,
+      "pct": 5.9
+    },
+    "cube_shelf_vs_multipack_median": {
+      "abs_THB": 1.12,
+      "pct": 8.1
+    },
+    "cube_shelf_vs_all_cans_median": {
+      "abs_THB": 0.95,
+      "pct": 6.8
+    },
+    "waterdrop_us_over_cube_shelf_ratio_as_sold": 2.61,
+    "waterdrop_uk_focus_sale_over_cube_shelf_ratio_as_sold": 1.52,
+    "ricola_eu_sale_over_cube_shelf_ratio_as_sold": 1.51,
+    "nuun_us_over_cube_shelf_ratio_as_sold": 1.68,
+    "coke_jp_ex_tax_over_cube_shelf_ratio_as_sold": 0.57,
+    "cube_shelf_vs_thai_lemon_tablet_median": {
+      "abs_THB": 7.65,
+      "pct": 104.1
+    },
+    "cube_shelf_vs_thai_bayer_vitamin_tablet_median": {
+      "abs_THB": 0.1,
+      "pct": 0.7
+    },
+    "cube_shelf_vs_thai_bayer_median_without_2027_expiry_rows": {
+      "abs_THB": 0.41,
+      "pct": 2.8
+    },
+    "cube_shelf_vs_thai_bayer_median_title_states_form_only": {
+      "abs_THB": -0.13,
+      "pct": -0.8
+    },
+    "cube_shelf_vs_thai_all_counted_tablet_median": {
+      "abs_THB": 3.29,
+      "pct": 28.1
+    },
+    "cube_shelf_vs_sodastream_UK_basis_low": {
+      "abs_THB": 1.24,
+      "pct": 9.0
+    },
+    "cube_shelf_vs_sodastream_UK_basis_high": {
+      "abs_THB": -1.22,
+      "pct": -7.5
+    }
+  },
+  "cube_vs_analogue": {
+    "waterdrop_us_lemon_lime_12": {
+      "analogue_THB_per_cube_as_sold": 39.11,
+      "cube_minus_analogue_THB": -24.11,
+      "cube_vs_analogue_pct": -61.6,
+      "analogue_over_cube_ratio": 2.61
+    },
+    "waterdrop_uk_focus_lemon_lime_12_sale": {
+      "analogue_THB_per_cube_as_sold": 22.81,
+      "cube_minus_analogue_THB": -7.81,
+      "cube_vs_analogue_pct": -34.2,
+      "analogue_over_cube_ratio": 1.52
+    },
+    "waterdrop_uk_focus_lemon_lime_12_regular": {
+      "analogue_THB_per_cube_as_sold": 25.34,
+      "cube_minus_analogue_THB": -10.34,
+      "cube_vs_analogue_pct": -40.8,
+      "analogue_over_cube_ratio": 1.69
+    },
+    "ricola_discovery_48_sale": {
+      "analogue_THB_per_cube_as_sold": 22.59,
+      "cube_minus_analogue_THB": -7.59,
+      "cube_vs_analogue_pct": -33.6,
+      "analogue_over_cube_ratio": 1.51
+    },
+    "ricola_discovery_48_regular": {
+      "analogue_THB_per_cube_as_sold": 28.21,
+      "cube_minus_analogue_THB": -13.21,
+      "cube_vs_analogue_pct": -46.8,
+      "analogue_over_cube_ratio": 1.88
+    },
+    "coke_jp_15cube_ex_tax": {
+      "analogue_THB_per_cube_as_sold": 8.48,
+      "cube_minus_analogue_THB": 6.52,
+      "cube_vs_analogue_pct": 76.9,
+      "analogue_over_cube_ratio": 0.57
+    },
+    "coke_jp_15cube_incl_10pct": {
+      "analogue_THB_per_cube_as_sold": 9.33,
+      "cube_minus_analogue_THB": 5.67,
+      "cube_vs_analogue_pct": 60.8,
+      "analogue_over_cube_ratio": 0.62
+    },
+    "nuun_us_tube_10": {
+      "analogue_THB_per_cube_as_sold": 25.13,
+      "cube_minus_analogue_THB": -10.13,
+      "cube_vs_analogue_pct": -40.3,
+      "analogue_over_cube_ratio": 1.68
+    },
+    "nuun_ca_vitasave_10": {
+      "analogue_THB_per_cube_as_sold": 35.73,
+      "cube_minus_analogue_THB": -20.73,
+      "cube_vs_analogue_pct": -58.0,
+      "analogue_over_cube_ratio": 2.38
+    }
+  },
+  "overseas_ratio_as_sold": {
+    "waterdrop_us_lemon_lime_12": 2.61,
+    "waterdrop_uk_focus_lemon_lime_12_sale": 1.52,
+    "waterdrop_uk_focus_lemon_lime_12_regular": 1.69,
+    "ricola_discovery_48_sale": 1.51,
+    "ricola_discovery_48_regular": 1.88,
+    "coke_jp_15cube_ex_tax": 0.57,
+    "coke_jp_15cube_incl_10pct": 0.62,
+    "nuun_us_tube_10": 1.68,
+    "nuun_ca_vitasave_10": 2.38,
+    "thai_lazada_nuun_10_tablets_THB_19.55": 1.3
+  },
+  "overseas_ratio_summary": {
+    "listed_overseas_units_min": 1.51,
+    "listed_overseas_units_max": 2.61,
+    "exceptions": {
+      "thai_lazada_nuun_10_tablets_THB_19.55": 1.3,
+      "coke_jp_tea_2021_ex_tax": 0.57
+    }
+  },
+  "multipack_sensitivity": {
+    "set_B_16_retailer_page_rows_median": 13.875,
+    "set_B_without_2_plain_soda_water_cans_D11_D17_14_rows_median": 13.75,
+    "set_B_lemon_and_lime_packs_only_without_plain_soda_water_or_sparkling_water_12_rows_median": 13.875,
+    "range_of_set_B_per_330ml": [
+      12.5833,
+      28.6667
+    ]
+  },
+  "financials": {
+    "Coca-Cola Company (group, FY to 31 Dec)": {
+      "unit": "USD million",
+      "years": {
+        "FY2023": {
+          "revenue": 45754,
+          "net_income": 10714,
+          "net_margin_pct": 23.4,
+          "gross_profit": 27234,
+          "gross_margin_pct": 59.5
+        },
+        "FY2024": {
+          "revenue": 47061,
+          "net_income": 10631,
+          "net_margin_pct": 22.6,
+          "gross_profit": 28737,
+          "gross_margin_pct": 61.1
+        },
+        "FY2025": {
+          "revenue": 47941,
+          "net_income": 13107,
+          "net_margin_pct": 27.3,
+          "gross_profit": 29544,
+          "gross_margin_pct": 61.6
+        }
+      }
+    },
+    "PepsiCo (group, FY to last Saturday of Dec)": {
+      "unit": "USD million",
+      "years": {
+        "FY2023": {
+          "revenue": 91471,
+          "net_income": 9074,
+          "net_margin_pct": 9.9,
+          "gross_profit": 49590,
+          "gross_margin_pct": 54.2
+        },
+        "FY2024": {
+          "revenue": 91854,
+          "net_income": 9578,
+          "net_margin_pct": 10.4,
+          "gross_profit": 50110,
+          "gross_margin_pct": 54.6
+        },
+        "FY2025": {
+          "revenue": 93925,
+          "net_income": 8240,
+          "net_margin_pct": 8.8,
+          "gross_profit": 50859,
+          "gross_margin_pct": 54.1
+        }
+      }
+    },
+    "Nestle S.A. (group, FY to 31 Dec); gross profit = sales minus cost of goods sold (DERIVED)": {
+      "unit": "CHF million",
+      "years": {
+        "FY2023": {
+          "revenue": 92998,
+          "net_income": 11209,
+          "net_margin_pct": 12.1,
+          "gross_profit": 42670,
+          "gross_margin_pct": 45.9
+        },
+        "FY2024": {
+          "revenue": 91354,
+          "net_income": 10884,
+          "net_margin_pct": 11.9,
+          "gross_profit": 42684,
+          "gross_margin_pct": 46.7
+        },
+        "FY2025": {
+          "revenue": 89490,
+          "net_income": 9033,
+          "net_margin_pct": 10.1,
+          "gross_profit": 40796,
+          "gross_margin_pct": 45.6
+        }
+      }
+    },
+    "Prestige Consumer Healthcare (group, FY to 31 March)": {
+      "unit": "USD thousand",
+      "years": {
+        "FY2024 (to 31 Mar 2024)": {
+          "revenue": 1125357,
+          "net_income": 209339,
+          "net_margin_pct": 18.6,
+          "gross_profit": 624448,
+          "gross_margin_pct": 55.5
+        },
+        "FY2025 (to 31 Mar 2025)": {
+          "revenue": 1137762,
+          "net_income": 214605,
+          "net_margin_pct": 18.9,
+          "gross_profit": 634463,
+          "gross_margin_pct": 55.8
+        },
+        "FY2026 (to 31 Mar 2026)": {
+          "revenue": 1088705,
+          "net_income": 190301,
+          "net_margin_pct": 17.5,
+          "gross_profit": 595578,
+          "gross_margin_pct": 54.7
+        }
+      }
+    },
+    "Bayer AG (group, FY to 31 Dec; secondary aggregator)": {
+      "unit": "EUR million",
+      "years": {
+        "FY2023": {
+          "revenue": 47637,
+          "net_income": -2941,
+          "net_margin_pct": -6.2,
+          "gross_profit": 27950,
+          "gross_margin_pct": 58.7
+        },
+        "FY2024": {
+          "revenue": 46606,
+          "net_income": -2552,
+          "net_margin_pct": -5.5,
+          "gross_profit": 25775,
+          "gross_margin_pct": 55.3
+        },
+        "FY2025": {
+          "revenue": 45575,
+          "net_income": -3620,
+          "net_margin_pct": -7.9,
+          "gross_profit": 27048,
+          "gross_margin_pct": 59.3
+        }
+      }
+    },
+    "waterdrop (Konzernabschluss as labelled by trend.at, 6 May 2026; EUR million; scope partial per the page; no gross profit published)": {
+      "unit": "EUR million",
+      "years": {
+        "FY2023": {
+          "revenue": 107.12,
+          "net_income": -33.74,
+          "net_margin_pct": -31.5
+        },
+        "FY2024": {
+          "revenue": 126.55,
+          "net_income": -26.62,
+          "net_margin_pct": -21.0
+        }
+      }
+    }
+  },
+  "nestle_arithmetic_check": {
+    "FY2025": {
+      "source": "2025 consolidated statements PDF (2025 column)",
+      "computed_trading_operating_profit": 12675,
+      "printed_trading_operating_profit": 12675,
+      "difference": 0,
+      "match": true
+    },
+    "FY2024": {
+      "source": "2025 consolidated statements PDF (2024 column)",
+      "computed_trading_operating_profit": 14633,
+      "printed_trading_operating_profit": 14633,
+      "difference": 0,
+      "match": true
+    },
+    "FY2023": {
+      "source": "2024 consolidated statements PDF (2023 column)",
+      "computed_trading_operating_profit": 14520,
+      "printed_trading_operating_profit": 14520,
+      "difference": 0,
+      "match": true
+    }
+  },
+  "other": {
+    "cube_contribution_margin_pct_of_ex_factory": 54.6,
+    "cube_contribution_note": "ex-factory THB 9.00 is an ASSUMPTION (60 percent of the THB 15 shelf price); contribution THB 4.91 = 9.00 - 4.09 is DERIVED from plan inputs",
+    "cube_cost_share_of_ex_factory_pct": 45.4,
+    "waterdrop_per_330ml_at_500ml_dilution_factor": 0.66,
+    "waterdrop_revenue_growth_2023_to_2024_pct": 18.1,
+    "yellow_wood_price_over_divested_business_2025_sales_USD": 0.83
+  }
+}

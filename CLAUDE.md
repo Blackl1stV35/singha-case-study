@@ -78,3 +78,12 @@ Read this first in any new session. These rules are standing instructions from t
 - The form on the competition site: the user has to give permission for the one required question (a checkbox that ties the answers to the account signed into Chrome) before anything goes further.
 - The can cost model needs primary sources (LME settlement, Bank of Thailand rate, the Thai sugar levy, Boon Rawd or Singha filings, a can-maker's annual report). See `rework/61`.
 - The storyboard animation: the page follows the storyboard. A Blender clip is not rendered.
+
+## 10. Boundary and overclaiming (28 October 2026, user instruction)
+
+- The entry is an undergraduate student team's desk-stage proposal. Produce work inside that boundary: public sources, own arithmetic, stated assumptions and limits, and test designs written as plans (labelled ASSUMPTION).
+- Do not overclaim. No invented quotes, licences, regulatory opinions, lab results, supplier terms or named makers. A figure or source that was not read or derived is UNVERIFIED or removed. Prefer a stated limit (OUT OF SCOPE) to an invented fix, and say what a result does not prove (for example, a pilot pass reopens the value model; it does not prove NPV above zero).
+- Review panels are calibrated to this boundary: penalise overclaiming, inconsistency and unclear rules; do not penalise missing work that needs outside contact or professional resources.
+- The illustrative marketing-plan slide and the personas page were aborted on 28 October 2026. Do not add them.
+- Layout problems the text loop cannot fix (overlaps, tick and axis placement, badges, hierarchy) go through `.claude/workflows/singha-deck-layout-then-loop.js`, which edits the staged copy with position, resize, format and line edits only. Record: `rework/workflows/deck_layout_passes_2026-10-28.md`. Chart data and number formats cannot be edited through the connector; list them as stated limits.
+- The saved fix loop is `.claude/workflows/singha-deck-fix-loop.js` (revise a staged Canva copy, re-judge with the nine-role panel, verify, repeat). Run it with `scriptPath` and `args`; it edits only the staged copy named in `args.staging_id`. All deck workflows in this folder (fix loop, layout wrapper, remove-additions) run every agent on Haiku 5.5 through an `hagent` helper (29 October 2026).

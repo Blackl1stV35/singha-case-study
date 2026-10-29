@@ -1,0 +1,14 @@
+00:04.391  cycles           | WARNING HIPEW initialization failed: Error opening HIP dynamic library
+D:\Workspace\singha-case-study\rework\mockup\deck_mock\render_lemon_cube.py:166: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world.use_nodes = True
+D:\Workspace\singha-case-study\rework\mockup\deck_mock\render_lemon_cube.py:109: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat.use_nodes = True
+D:\Workspace\singha-case-study\rework\mockup\deck_mock\render_lemon_cube.py:69: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat.use_nodes = True
+00:37.813  render           | Saved: 'D:\Workspace\singha-case-study\rework\mockup\deck_mock\renders\product_fragments.png'
+rendering fragments 1600 x 1200 samples 64 device GPU
+saved D:/Workspace/singha-case-study/rework/mockup/deck_mock/renders/product_fragments.png
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit
+exit 0

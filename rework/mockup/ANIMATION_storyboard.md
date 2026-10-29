@@ -1,6 +1,7 @@
 # Storyboard: cube drop into 330 ml of water (draft, 19 October 2026)
 
-Status: draft for review. Nothing is rendered yet. Timings are the page's own constants (`cube_3d.html`, `SCENE`). The dissolve is illustrative: a real dissolve time is an ASSUMPTION (60 s), not a measurement. The label shown is the current artwork, which still reads TARLO. It will change to Lime Cube after the segment redesign lands.
+Status: superseded on 19 October 2026. The water block and the drop sequence were removed (rework/48 section 8.4, which removed the water column from the render; the judge 3D page follows it). Frames 1 to 6 below no longer apply. A clip needs a new storyboard before anything is rendered. The record is kept as it was.
+Earlier status: draft for review. Nothing is rendered yet. Timings are the page's own constants (`cube_3d.html`, `SCENE`). The dissolve is illustrative: a real dissolve time is an ASSUMPTION (60 s), not a measurement. The label shown is the current artwork, which still reads TARLO. It will change to Lime Cube after the segment redesign lands.
 
 Rules applied to every frame: no bubbles, fizz, droplets or splash (rule S2). No glassware, no bar or night-out cues. The water is a plain translucent lime block, with no container and no rim.
 

@@ -1,0 +1,400 @@
+{
+  "meta": {
+    "seed": 20261020,
+    "draws": 20000,
+    "fx_thb_per_usd": 33.55
+  },
+  "fee_table_thb": {
+    "tiktok": {
+      "nano": [
+        1677.4999999999998,
+        6709.999999999999
+      ],
+      "micro": [
+        6709.999999999999,
+        26839.999999999996
+      ],
+      "mid": [
+        26839.999999999996,
+        26839.999999999996
+      ],
+      "macro": [
+        26839.999999999996,
+        167750.0
+      ],
+      "mega": [
+        167750.0,
+        1677499.9999999998
+      ]
+    },
+    "youtube": {
+      "nano": [
+        671.0,
+        6709.999999999999
+      ],
+      "micro": [
+        6709.999999999999,
+        33550.0
+      ],
+      "mid": [
+        33550.0,
+        335500.0
+      ],
+      "macro": [
+        335500.0,
+        671000.0
+      ],
+      "mega": [
+        671000.0,
+        1677499.9999999998
+      ]
+    }
+  },
+  "budget_lines": [
+    {
+      "line": "Creator fees, nano tiktok",
+      "arithmetic": "no flat fee: product kit plus commission on sale (see the kit and commission lines)",
+      "thb": 0.0,
+      "tier_label": "ASSUMPTION (offer structure)"
+    },
+    {
+      "line": "Creator fees, micro tiktok",
+      "arithmetic": "8 posts x THB 6710.0 (USD 200 x 33.55)",
+      "thb": 53679.99999999999,
+      "tier_label": "PROXY (global benchmark, lower bound, converted at 33.55)"
+    },
+    {
+      "line": "Creator fees, mid youtube",
+      "arithmetic": "1 posts x THB 33550.0 (USD 1000 x 33.55)",
+      "thb": 33550.0,
+      "tier_label": "PROXY (global benchmark, lower bound, converted at 33.55)"
+    },
+    {
+      "line": "Product kits and giveaways",
+      "arithmetic": "(21 creators x 12 cubes + 600 giveaway cubes) x THB 4.09",
+      "thb": 3484.68,
+      "tier_label": "DERIVED (cost per cube excludes binder, filler, flavour)"
+    },
+    {
+      "line": "Pay-on-sale commission reserve",
+      "arithmetic": "cap; 10 percent of the THB 90 carton price, THB 9 per sale",
+      "thb": 10000.0,
+      "tier_label": "ASSUMPTION"
+    },
+    {
+      "line": "Paid amplification of creator posts (Route B), conditional",
+      "arithmetic": "THB 60000 (about 5217 clicks at THB 11.5)",
+      "thb": 60000.0,
+      "tier_label": "ASSUMPTION spend; cost per click PROXY"
+    },
+    {
+      "line": "Route A in-store samples",
+      "arithmetic": "3000 samples x THB 15",
+      "thb": 45000.0,
+      "tier_label": "ASSUMPTION"
+    },
+    {
+      "line": "Contingency",
+      "arithmetic": "10 percent of subtotal THB 205715",
+      "thb": 20571.468,
+      "tier_label": "ASSUMPTION"
+    }
+  ],
+  "budget": {
+    "subtotal_thb": 205714.68,
+    "contingency_thb": 20571.468,
+    "total_thb": 226286.148,
+    "flat_fee_total_thb": 87230.0,
+    "flat_fee_share_of_total": 0.38548537226414764,
+    "share_of_500k_fixed_cost_base": 0.452572296,
+    "share_of_250k_fixed_cost_grid_low": 0.905144592,
+    "creators_total": 21,
+    "posts_total": 41,
+    "by_tier": {
+      "nano": {
+        "creators": 16,
+        "posts": 32,
+        "fee_per_post_thb": 0.0,
+        "amount_thb": 0.0,
+        "benchmark_usd_range": [
+          50,
+          200
+        ]
+      },
+      "micro": {
+        "creators": 4,
+        "posts": 8,
+        "fee_per_post_thb": 6709.999999999999,
+        "amount_thb": 53679.99999999999,
+        "benchmark_usd_range": [
+          200,
+          800
+        ]
+      },
+      "mid": {
+        "creators": 1,
+        "posts": 1,
+        "fee_per_post_thb": 33550.0,
+        "amount_thb": 33550.0,
+        "benchmark_usd_range": [
+          1000,
+          10000
+        ]
+      }
+    },
+    "conditional_amplification_thb": 60000.0,
+    "total_without_amplification_thb": 160286.14800000002,
+    "flat_fee_total_by_benchmark_point_thb": {
+      "low": 87230.0,
+      "mid": 318725.0,
+      "high": 550220.0
+    },
+    "total_if_fees_at_benchmark_mid_thb": 480930.64800000004,
+    "total_if_fees_at_benchmark_high_thb": 735575.148,
+    "one_tiktok_mega_post_lowest_fee_share_of_total": 0.7413180235848993,
+    "one_youtube_macro_video_lowest_fee_share_of_total": 1.4826360471697986
+  },
+  "unit": {
+    "carton_contribution_base_thb": 29.46,
+    "carton_contribution_floor_thb": 21.06,
+    "carton_shelf_price_thb": 90.0,
+    "commission_per_sale_thb": 9.0,
+    "kit_cost_per_creator_thb": 49.08
+  },
+  "paid_social_route_b": {
+    "cpa_base_thb": 1150.0,
+    "cubes_per_buyer_to_recover_at_4_91": 234.21588594704684,
+    "cubes_per_buyer_to_recover_at_3_51": 327.63532763532766,
+    "first_carton_share_of_cpa_base": 0.025617391304347828,
+    "first_carton_share_of_cpa_floor": 0.01831304347826087,
+    "cpa_at_cpm_80_thb": 766.6666666666666,
+    "cpa_at_cpm_180_thb": 1725.0,
+    "cpa_at_phoenix_conversion_0_08_pct_thb": 14375.0,
+    "cpa_at_ecdb_proxy_3_44_pct_thb": 334.5941227814955,
+    "clicks_from_amplification_budget": 5217.391304347826,
+    "first_purchases_from_amplification_budget_base": 52.17391304347826,
+    "stop_ceiling_cpa_thb": 1725.0,
+    "lpr_needed_for_carton_to_cover_click_base": 0.39035980991174474,
+    "lpr_needed_for_carton_to_cover_click_floor": 0.5460588793922128,
+    "value_per_buyer_in_pilot_target_30": {
+      "cubes_per_buyer": 7.800000000000001,
+      "contribution_base_thb": 38.298,
+      "contribution_floor_thb": 27.378
+    },
+    "value_per_buyer_in_pilot_floor_15": {
+      "cubes_per_buyer": 6.8999999999999995,
+      "contribution_base_thb": 33.879,
+      "contribution_floor_thb": 24.218999999999998
+    },
+    "cubes_per_buyer_at_ecdb_proxy_lpr": {
+      "at_4_91": 68.14544252168952,
+      "at_3_51": 95.32596090640898
+    },
+    "cubes_per_buyer_at_phoenix_0_08_lpr": {
+      "at_4_91": 2927.6985743380856,
+      "at_3_51": 4095.441595441596
+    }
+  },
+  "valuation_check": {
+    "npv_base_million_deck_slide_10": 0.88,
+    "year0_pilot_budget_million": 0.226286148,
+    "npv_if_pilot_added_on_top_million_undiscounted_year0": 0.653713852,
+    "note": "Year 0 carries fixed cost undiscounted in the existing model; the pilot is read as drawn from that line, and this shows the effect if it were added instead."
+  },
+  "creator_funnel_base": {
+    "nano": {
+      "posts": 32,
+      "views_base": 32000,
+      "clicks": 320.0,
+      "first_purchases": 3.2,
+      "flat_fees_thb": 0.0,
+      "kit_cost_thb": 785.28,
+      "commission_thb": 28.8,
+      "all_in_cost_thb": 814.0799999999999,
+      "cost_per_1000_views_before_commission_thb": 24.54,
+      "cost_per_view_before_commission_thb": 0.02454,
+      "cpa_all_in_thb": 254.39999999999998,
+      "cubes_per_buyer_to_recover_at_4_91": 51.81262729124236,
+      "cubes_per_buyer_to_recover_at_3_51": 72.47863247863248
+    },
+    "micro": {
+      "posts": 8,
+      "views_base": 64000,
+      "clicks": 640.0,
+      "first_purchases": 6.4,
+      "flat_fees_thb": 53679.99999999999,
+      "kit_cost_thb": 196.32,
+      "commission_thb": 57.6,
+      "all_in_cost_thb": 53933.91999999999,
+      "cost_per_1000_views_before_commission_thb": 841.8174999999999,
+      "cost_per_view_before_commission_thb": 0.8418174999999999,
+      "cpa_all_in_thb": 8427.174999999997,
+      "cubes_per_buyer_to_recover_at_4_91": 1716.3289205702642,
+      "cubes_per_buyer_to_recover_at_3_51": 2400.904558404558,
+      "views_per_post_needed_to_match_paid_social_cpa": 58561.21739130434,
+      "max_all_in_cost_per_post_to_match_paid_social_thb": 920.0
+    },
+    "mid": {
+      "posts": 1,
+      "views_base": 44000,
+      "clicks": 440.0,
+      "first_purchases": 4.4,
+      "flat_fees_thb": 33550.0,
+      "kit_cost_thb": 49.08,
+      "commission_thb": 39.6,
+      "all_in_cost_thb": 33638.68,
+      "cost_per_1000_views_before_commission_thb": 763.6154545454546,
+      "cost_per_view_before_commission_thb": 0.7636154545454545,
+      "cpa_all_in_thb": 7645.154545454545,
+      "cubes_per_buyer_to_recover_at_4_91": 1557.0579522310682,
+      "cubes_per_buyer_to_recover_at_3_51": 2178.106708106708,
+      "views_per_post_needed_to_match_paid_social_cpa": 292165.9130434783,
+      "max_all_in_cost_per_post_to_match_paid_social_thb": 5060.0
+    },
+    "all_creator_posts": {
+      "posts": 41,
+      "views_base": 140000.0,
+      "clicks": 1400.0,
+      "first_purchases": 14.000000000000002,
+      "flat_fees_thb": 87230.0,
+      "all_in_cost_thb": 88386.68,
+      "cpa_all_in_thb": 6313.334285714284,
+      "cubes_per_buyer_to_recover_at_4_91": 1285.8114634855976,
+      "cubes_per_buyer_to_recover_at_3_51": 1798.6707366707365,
+      "views_needed_for_100_first_buyers_at_base_ctr_and_lpr": 1000000.0,
+      "views_per_post_needed_for_100_buyers": 24390.243902439026
+    }
+  },
+  "comparison_cost_per_view": {
+    "meta_cost_per_video_view_thb": 4.0,
+    "meta_cost_per_impression_thb": 0.12,
+    "note": "A Meta video view and a creator post's view are different measures; shown side by side only."
+  },
+  "pay_on_sale": {
+    "commission_per_first_carton_thb": 9.0,
+    "kit_cost_per_creator_thb": 49.08,
+    "net_per_first_carton_base_thb": 20.46,
+    "net_per_first_carton_floor_thb": 12.059999999999999,
+    "sales_per_creator_to_cover_kit_base": 2.3988269794721404,
+    "sales_per_creator_to_cover_kit_floor": 4.069651741293533,
+    "if_nano_were_paid_the_benchmark_low_flat_fee_for_two_posts": {
+      "flat_fee_thb": 3354.9999999999995,
+      "sales_per_creator_to_cover_kit_and_fee_base": 166.37732160312802,
+      "sales_per_creator_to_cover_kit_and_fee_floor": 282.2620232172471
+    },
+    "caveat": "Commission is on the shelf price; contribution is on the ex-factory basis (conservative). Marketplace or platform fees are not sourced and are not deducted."
+  },
+  "monte_carlo": {
+    "note": "Creator layer cost includes flat fees, product kits and commission on sale. Views per post, view-to-click and click-to-purchase are drawn independently.",
+    "creator_layer_first_purchases": {
+      "median": 22.24895445183732,
+      "p5": 4.3221833572796085,
+      "p95": 103.0681734530458,
+      "mean": 34.276024101223456
+    },
+    "creator_layer_cpa_all_in_thb": {
+      "median": 3975.9587195035374,
+      "p5": 865.3330486831787,
+      "p95": 20429.392464070872,
+      "mean": 6576.9498500261825
+    },
+    "cpa_all_in_thb_nano": {
+      "median": 193.7986956586891,
+      "p5": 37.18033712228858,
+      "p95": 1278.2400747313147,
+      "mean": 374.827521792269
+    },
+    "cpa_all_in_thb_micro": {
+      "median": 6249.449501947882,
+      "p5": 1093.5029580280248,
+      "p95": 40022.71878847545,
+      "mean": 11936.58347708981
+    },
+    "cpa_all_in_thb_mid": {
+      "median": 5809.698619724417,
+      "p5": 882.5144518548001,
+      "p95": 39828.70938557728,
+      "mean": 11731.940918200762
+    },
+    "paid_social_cpa_thb": {
+      "median": 860.7593030991538,
+      "p5": 383.60959613398995,
+      "p95": 2681.9974485026755,
+      "mean": 1119.5581844110698
+    },
+    "share_draws_creator_cpa_at_or_below_1150": 0.09425,
+    "share_draws_creator_cpa_at_or_below_1725": 0.1869,
+    "share_draws_creator_cpa_at_or_below_first_carton_contribution_floor": 0.0,
+    "share_draws_paid_social_cpa_at_or_below_1150": 0.67985,
+    "share_draws_paid_social_cpa_at_or_below_1725": 0.85925,
+    "share_draws_paid_social_cpa_at_or_below_first_carton_contribution_floor": 0.0,
+    "paid_social_cpa_min_thb": 235.5187562845688,
+    "amplification_first_purchases": {
+      "median": 69.70589811282612,
+      "p5": 22.37138617347394,
+      "p95": 156.40901869489048,
+      "mean": 76.69743361902214
+    },
+    "creator_plus_amplification_first_purchases": {
+      "median": 98.70449703585567,
+      "p5": 30.999747745660283,
+      "p95": 231.09244138006616,
+      "mean": 110.9734577202456
+    },
+    "creator_plus_amplification_cpa_thb": {
+      "median": 1504.6138171862467,
+      "p5": 644.0217719210386,
+      "p95": 4783.311489586985,
+      "mean": 1974.7092254171323
+    },
+    "share_draws_100_or_more_first_purchases_creator_plus_amplification": 0.4914
+  },
+  "repeat_read_sample": {
+    "n_for_30pct_halfwidth_9pts": 99.59703703703703,
+    "n_for_30pct_halfwidth_10pts": 80.67359999999998,
+    "n_for_15pct_halfwidth_9pts": 60.46962962962963,
+    "halfwidth_pts_at_25_buyers_p30": 17.963696724226892,
+    "halfwidth_pts_at_50_buyers_p30": 12.702251768879405,
+    "base_first_purchases_creator_layer": 14.000000000000002,
+    "base_first_purchases_amplification": 52.17391304347826,
+    "route_a_trials_from_samples": 300.0,
+    "route_a_cost_per_trial_thb": 150.0
+  },
+  "youtube_latest_video_view_ratio": {
+    "mega_1m_plus": {
+      "n": 15,
+      "min": 0.0015481852315394242,
+      "median": 0.026294956140350878,
+      "max": 0.21705426356589147
+    },
+    "mid_macro_100k_to_1m": {
+      "n": 5,
+      "min": 0.0017826086956521739,
+      "median": 0.1146309963099631,
+      "max": 0.22470454545454546
+    },
+    "note": "Latest-video views over subscribers, one video each, read within about a day or two of upload; not a typical-post average."
+  },
+  "tiktok_top50_ratios": {
+    "n": 47,
+    "views_over_followers": {
+      "n": 47,
+      "min": 0.07886435331230283,
+      "median": 0.45775,
+      "max": 5.100182149362477
+    },
+    "engagement_over_followers_likes_comments_shares": {
+      "n": 47,
+      "min": 0.007141955835962145,
+      "median": 0.1046,
+      "max": 0.7009519867549668
+    },
+    "engagement_over_views_likes_comments_shares": {
+      "n": 47,
+      "min": 0.057379310344827586,
+      "median": 0.1803226969533081,
+      "max": 0.49639878695981804
+    },
+    "note": "Per-post averages over followers or views for the accounts of 100,000 followers or more in a list ranked by the aggregator; an upper bound for a typical creator."
+  }
+}

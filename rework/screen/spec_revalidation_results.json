@@ -1,0 +1,982 @@
+{
+  "meta": {
+    "task": "T9 slide 7 specification revalidation (20 Oct 2026)",
+    "script": "rework\\screen\\spec_revalidation.py",
+    "python": "3.12.8",
+    "deterministic": true,
+    "seed": "not applicable: no random draws",
+    "revision": "second revision, 20 Oct 2026, after the second independent verification",
+    "FX": {
+      "THB_per_USD_BOT_mid_15Oct2026": 33.5495,
+      "THB_per_CNY_FRED_cross_9Oct2026": 5.0134,
+      "THB_per_CNY_FRED_cross_8Oct2026_sensitivity": 5.0268
+    },
+    "method": "First principles for chemistry, stoichiometry, geometry and cost arithmetic. Team allowances (binder, flavour, pouch, laminate, carton mass and price, SeaCube dimensions) are carried as stated ASSUMPTIONS; checks against them are circular."
+  },
+  "inputs": {
+    "slide": {
+      "dose_vol": 0.55,
+      "khco3_g": 0.81,
+      "potassium_mg": 317.0,
+      "citric_stoich_g": 0.52,
+      "citric_g": 2.1,
+      "pH": 3.5,
+      "sucralose_mg": 33.0,
+      "sucralose_mg_per_kg": 100.0,
+      "binder_g": 0.8,
+      "flavour_g": 0.05,
+      "dry_g": 3.79,
+      "dry_range": [
+        3.46,
+        4.24
+      ],
+      "cube_mm": 14.0,
+      "packed_g": 5.29,
+      "pouch_g": 1.5,
+      "net_g": 3.8,
+      "carton_mm": [
+        190.0,
+        150.0,
+        50.0
+      ],
+      "cartons_20ft": 21431,
+      "cubes_20ft": 128586,
+      "pack_fraction": 0.92,
+      "cost_total": 4.09,
+      "cost_reactants": 0.12,
+      "cost_pouch_print": 2.8,
+      "cost_processing": 0.5,
+      "cost_carton": 0.67,
+      "contribution": 4.91,
+      "planning_price": 9.0,
+      "shelf_price_deck": 15.0,
+      "exfactory_share": 0.6
+    },
+    "ONE_20": {
+      "L": 5.898,
+      "W": 2.35,
+      "H": 2.39,
+      "door_W": 2.34,
+      "door_H": 2.28,
+      "payload": 28330.0,
+      "tare": 2150.0,
+      "cubic_m3_stated": 33.1
+    },
+    "SEACUBE_20": {
+      "L": 5.898,
+      "W": 2.352,
+      "H": 2.393
+    },
+    "DSV_20": {
+      "L": 5.9,
+      "W": 2.35,
+      "H": 2.39,
+      "cubic_m3_stated": 33.2,
+      "payload": 25000.0
+    },
+    "GC_rows": {
+      "khco3": {
+        "low": 7900,
+        "central": 7900,
+        "high": 9800,
+        "rows": "Zhejiang Dayang Food Grade 99% (7,900); Locally Made Food Grade 99% (9,800)"
+      },
+      "khco3_unlabelled": 5500,
+      "citric": {
+        "low": 4300.0,
+        "central": 6300.0,
+        "high": 7000.0,
+        "rows": "median of 15 food-grade-labelled row midpoints in the Oct 2026 monthly table"
+      },
+      "citric_anhydrous_rows_median": 5900.0,
+      "citric_unlabelled": 6500,
+      "sucralose": {
+        "low": 105000,
+        "central": 105000,
+        "high": 360000,
+        "rows": "Jiangsu Xin Su 99% (105,000); Senfida 98% (360,000); neither row is labelled food grade"
+      },
+      "maltodextrin": {
+        "low": 3500,
+        "central": 3900,
+        "high": 4300,
+        "rows": "Shandong Xiwang Food Grade 99% (3,500 to 3,600); Henan Food-Grade (4,200 to 4,300)"
+      },
+      "mannitol": 28000
+    },
+    "citric_food_grade_rows_CNY_per_t": {
+      "Shandong Food Grade 99%, 25 kg": 6500.0,
+      "Shandong Food Grade": 6500.0,
+      "Yingxuan Food Grade (4,967 to 5,200)": 5083.5,
+      "Locally Made Food Grade, Content 99.9% (5,400 to 6,700)": 6050.0,
+      "Gongyi, Henan Food Grade, Content 99%": 5500.0,
+      "Seven Stars Food Grade, Content 99%": 6800.0,
+      "Qixing Pai Food Grade, Content 99%": 6800.0,
+      "Yijia Water Purification Food grade, monohydrate, 99.5%": 6300.0,
+      "Locally Made Food Grade": 6500.0,
+      "Yingxuan/Qixing Food Grade": 6400.0,
+      "Shijian Chemical Anhydrous Citric Acid, Food Grade": 7000.0,
+      "Shijian Chemical Citric Acid Monohydrate, Food Grade": 6300.0,
+      "Shunzhi Bang Food Grade, Content 99%": 5000.0,
+      "Shunzhi Bang Food Grade, Content 99.9%": 4800.0,
+      "Huiyi Hai Food Grade": 4300.0
+    },
+    "citric_anhydrous_rows_CNY_per_t": {
+      "Shandong Yingxuan Anhydrous, 99.5% (5,200 to 6,200), not labelled food grade": 5700.0,
+      "Locally Made Anhydrous, 99.5% (6,000), not labelled food grade": 6000.0,
+      "Locally Made anhydrous citric acid (5,000 to 6,600), not labelled food grade": 5800.0,
+      "Shijian Chemical Anhydrous Citric Acid, Food Grade (7,000)": 7000.0
+    },
+    "elchemy_citric_usd_per_kg": [
+      0.9,
+      1.25
+    ],
+    "elchemy_anhydrous_premium": [
+      1.05,
+      1.1
+    ],
+    "flavour_thb_per_kg": {
+      "low": 300.0,
+      "central": 800.0,
+      "high": 1500.0
+    },
+    "pouch_layout_mm": [
+      90.0,
+      70.0,
+      20.0
+    ],
+    "carton_mass_kg": 0.1,
+    "laminate_g_per_m2": 96.0,
+    "carton_6_thb": 4.0
+  },
+  "results": {
+    "stoichiometry": {
+      "reaction": "3 KHCO3 + C6H8O7 -> K3C6H5O7 + 3 CO2 + 3 H2O",
+      "MM_KHCO3_g_mol": 100.1143,
+      "MM_citric_anhydrous_g_mol": 192.123,
+      "MM_citric_monohydrate_g_mol": 210.138,
+      "KHCO3_g_at_0p55_dose_0C": 0.8107,
+      "KHCO3_g_slide_rounded_input": 0.81,
+      "citric_stoich_g_at_0p55_dose": 0.5186,
+      "citric_stoich_g_from_0p81g": 0.5181,
+      "citric_stoich_monohydrate_g_from_0p81g": 0.5667,
+      "citric_excess_ratio_vs_stoich": 4.053,
+      "match_citric_stoich_0p52": true
+    },
+    "co2_volume": {
+      "basis": "Ideal gas V_m = R T / P, R = 8.314462618 J/(mol K) (NIST CODATA 2022, P); 1 atm.",
+      "by_temperature": {
+        "0C": {
+          "T_K": 273.15,
+          "V_m_L_per_mol_1atm": 22.414,
+          "CO2_mL_for_0p55_dose": 181.5,
+          "volumes_per_330mL": 0.55,
+          "KHCO3_g_for_0p55_volume_on_this_basis": 0.8107,
+          "potassium_mg_for_0p55_volume_on_this_basis": 316.6
+        },
+        "20C": {
+          "T_K": 293.15,
+          "V_m_L_per_mol_1atm": 24.0551,
+          "CO2_mL_for_0p55_dose": 194.8,
+          "volumes_per_330mL": 0.5903,
+          "KHCO3_g_for_0p55_volume_on_this_basis": 0.7554,
+          "potassium_mg_for_0p55_volume_on_this_basis": 295.0
+        },
+        "30C": {
+          "T_K": 303.15,
+          "V_m_L_per_mol_1atm": 24.8757,
+          "CO2_mL_for_0p55_dose": 201.4,
+          "volumes_per_330mL": 0.6104,
+          "KHCO3_g_for_0p55_volume_on_this_basis": 0.7305,
+          "potassium_mg_for_0p55_volume_on_this_basis": 285.3
+        },
+        "60F_15p56C": {
+          "T_K": 288.7055555555555,
+          "V_m_L_per_mol_1atm": 23.6904,
+          "CO2_mL_for_0p55_dose": 191.8,
+          "volumes_per_330mL": 0.5813,
+          "KHCO3_g_for_0p55_volume_on_this_basis": 0.767,
+          "potassium_mg_for_0p55_volume_on_this_basis": 299.5
+        },
+        "0C_from_0p81g": 0.5495
+      },
+      "IUPAC_1bar_0C_V_m_L_per_mol": 22.711,
+      "bunsen_co2_20C_volumes_STP": 0.878,
+      "match_0p55_at_0C": true,
+      "note": "0.55 volumes is the gas released at 0 C and 1 atm. At 20 C the same mole count gives 0.59 volumes and at 30 C 0.61. A second convention in use counts the volume at 60 F (15.56 C; US 4,636,337, S), on which the same dose reads 0.58 volume (key 60F_15p56C). The 0.878 Bunsen value is a capacity at 1 atm of pure CO2 (STP-normalised). Slide 7 must say that the figure is a gas volume at 0 C."
+    },
+    "potassium": {
+      "K_fraction_in_KHCO3": 0.390537,
+      "K_mg_from_0p55_dose": 316.6,
+      "K_mg_from_rounded_0p81g": 316.33,
+      "slide_K_mg": 317.0,
+      "match_317_on_dose_basis": true,
+      "label_declared_mg_from_dose": 320.0,
+      "label_declared_mg_from_0p81g": 320.0,
+      "KHCO3_g_for_exact_317_mg": 0.8117,
+      "share_of_Thai_RDI_3500_pct": 9.05,
+      "share_of_EFSA_AI_3500_pct": 9.05,
+      "share_of_NASEM_AI_men_3400_pct": 9.31,
+      "share_of_NASEM_AI_women_2600_pct": 12.18,
+      "share_of_3500_if_declared_320_pct": 9.14,
+      "note": "317 mg is the exact 0.55-volume dose (316.6 mg). The rounded 0.81 g gives 316.3 mg. If potassium is declared on a Thai nutrition panel, the rounding rule (T10 saved page of Notification 445) gives 320 mg, so a panel would not read 317 mg. Notification 445 Clause 3 requires a panel only for foods with a nutrition claim, a health claim or nutritional value used in promotion (or others the Minister notifies), so whether a panel is required is not settled. The caveat's 9 percent is right either way."
+    },
+    "citric_pH": {
+      "slide_pH": 3.5,
+      "pH_ideal_at_2p10g": 3.5004,
+      "pH_davies_concentration_basis_at_2p10g": 3.3461,
+      "pH_davies_meter_equivalent_at_2p10g": 3.4134,
+      "davies_A_f_at_2p10g": 0.0673,
+      "ionic_strength_M_ideal": 0.02609,
+      "ionic_strength_M_davies": 0.02656,
+      "mass_for_target_pH": {
+        "3.0": {
+          "ideal_g": 3.693,
+          "davies_conc_pH_g": 3.07,
+          "davies_meter_pH_g": 3.364
+        },
+        "3.3": {
+          "ideal_g": 2.535,
+          "davies_conc_pH_g": 2.191,
+          "davies_meter_pH_g": 2.341
+        },
+        "3.5": {
+          "ideal_g": 2.101,
+          "davies_conc_pH_g": 1.848,
+          "davies_meter_pH_g": 1.949
+        },
+        "3.7": {
+          "ideal_g": 1.81,
+          "davies_conc_pH_g": 1.604,
+          "davies_meter_pH_g": 1.679
+        },
+        "4.0": {
+          "ideal_g": 1.515,
+          "davies_conc_pH_g": 1.337,
+          "davies_meter_pH_g": 1.392
+        },
+        "4.5": {
+          "ideal_g": 1.175,
+          "davies_conc_pH_g": 1.022,
+          "davies_meter_pH_g": 1.06
+        }
+      },
+      "pH_vs_citric_mass": {
+        "0.000": {
+          "ideal": 8.3381,
+          "davies_conc": 8.1425,
+          "davies_meter": 8.208
+        },
+        "0.300": {
+          "ideal": 8.4256,
+          "davies_conc": 8.1532,
+          "davies_meter": 8.2311
+        },
+        "0.400": {
+          "ideal": 8.5096,
+          "davies_conc": 8.1951,
+          "davies_meter": 8.2762
+        },
+        "0.519": {
+          "ideal": 9.154,
+          "davies_conc": 8.8998,
+          "davies_meter": 8.9846
+        },
+        "0.520": {
+          "ideal": 8.4608,
+          "davies_conc": 7.9648,
+          "davies_meter": 8.0496
+        },
+        "0.800": {
+          "ideal": 5.4787,
+          "davies_conc": 5.1076,
+          "davies_meter": 5.1848
+        },
+        "1.000": {
+          "ideal": 4.8445,
+          "davies_conc": 4.5453,
+          "davies_meter": 4.6192
+        },
+        "1.500": {
+          "ideal": 4.0188,
+          "davies_conc": 3.806,
+          "davies_meter": 3.8751
+        },
+        "1.800": {
+          "ideal": 3.7081,
+          "davies_conc": 3.5345,
+          "davies_meter": 3.6023
+        },
+        "2.000": {
+          "ideal": 3.5611,
+          "davies_conc": 3.4019,
+          "davies_meter": 3.4693
+        },
+        "2.100": {
+          "ideal": 3.5004,
+          "davies_conc": 3.3461,
+          "davies_meter": 3.4134
+        },
+        "2.200": {
+          "ideal": 3.4463,
+          "davies_conc": 3.2959,
+          "davies_meter": 3.363
+        },
+        "2.500": {
+          "ideal": 3.3134,
+          "davies_conc": 3.1708,
+          "davies_meter": 3.2378
+        },
+        "3.000": {
+          "ideal": 3.1536,
+          "davies_conc": 3.0178,
+          "davies_meter": 3.0848
+        }
+      },
+      "sensitivity_pKa_shift_pH_at_2p10g": {
+        "pKa1-0.1": 3.4204,
+        "pKa1+0.1": 3.579,
+        "pKa2-0.1": 3.4822,
+        "pKa2+0.1": 3.5164,
+        "pKa3-0.1": 3.5003,
+        "pKa3+0.1": 3.5004
+      },
+      "bicarbonate_only_pH": 8.3381,
+      "pH_at_stoichiometric_0p5186g_ideal": 9.154,
+      "pH_at_exactly_0p52g_ideal": 8.4608,
+      "excess_acid_at_0p52g_pct_over_stoich": 0.27,
+      "stoichiometric_point_note": "The potassium citrate point (all bicarbonate consumed, no excess acid) is at 0.5186 g and the pH there is the ideal value shown for key 0.519. At exactly 0.52 g there is 0.27 percent excess acid, and the pH falls steeply to the value under key 0.520, so the slide's 0.52 g is not the pH of the stoichiometric point.",
+      "match_pH_3p5": true,
+      "note": "Open-vessel model, 25 C, pKa at zero ionic strength (S). CO2 leaves as it forms. The ideal value (3.50) treats activity as concentration and is the working value. With the Davies correction (ionic strength about 0.03 M) the solved -log10 of the H+ concentration is the 'concentration basis' value, and the quantity a pH meter reads (-log10 of the H+ activity) is higher by A f (about 0.07), the 'meter-equivalent' value. Both are sensitivities. Titratable acid at 2.10 g is 4.05 times the stoichiometric amount. Above 0.52 g the pH falls from 9 to about 3.2 as acid is added; below 0.52 g bicarbonate is in excess."
+    },
+    "ph_vs_soft_drinks": {
+      "source": "Barac et al. 2023, Acta Med Medianae 62(3), Table 2 (P; one Serbian bottling each; T8 saved page barac2023_sprite_pH_TA.md)",
+      "measured_pH": {
+        "Sprite": 2.71,
+        "Coca-Cola": 2.56,
+        "Schweppes Bitter Lemon": 2.54
+      },
+      "cube_pH_ideal": 3.5004,
+      "cube_pH_meter_equivalent_davies": 3.4134,
+      "hydrogen_ion_ratio_drink_over_cube_ideal": {
+        "Sprite": 6.2,
+        "Coca-Cola": 8.7,
+        "Schweppes Bitter Lemon": 9.1
+      },
+      "hydrogen_ion_ratio_drink_over_cube_meter_equivalent": {
+        "Sprite": 5.1,
+        "Coca-Cola": 7.1,
+        "Schweppes Bitter Lemon": 7.5
+      },
+      "pH_units_above_measured_drinks_ideal": {
+        "Sprite": 0.79,
+        "Coca-Cola": 0.94,
+        "Schweppes Bitter Lemon": 0.96
+      },
+      "note": "The cube drink at the ideal pH is above all three measured soft drinks by the pH units shown, so its hydrogen ion level is several times lower (ratios above). pH is not the sourness: the acid load of the cube is 6.36 g/L of citric acid (section taste_benchmarks) and the titratable acidity comparison with Sprite is in the team's chemistry record rework/71 (T8), which was not rerun here."
+    },
+    "sucralose": {
+      "mg_per_L_on_330mL": 100.0,
+      "mg_per_kg_on_330g_water": 100.0,
+      "mg_per_kg_on_finished_drink": 98.86,
+      "slide_mg_per_kg": 100.0,
+      "w_w_percent_of_cube": 0.87,
+      "sugar_equivalent_g_per_100mL_at_600x": 6.0,
+      "share_of_Thai_limit_300_mg_per_kg_pct": 33.3,
+      "EU_ADI_share_pct": {
+        "adult60kg": 3.67,
+        "child15kg": 14.67
+      },
+      "US_ADI_share_pct": {
+        "adult60kg": 11.0,
+        "child15kg": 44.0
+      },
+      "note": "Mass basis: 330 g of water gives 100 mg/kg; the finished drink (330 mL water plus the 3.79 g cube) gives about 99 mg/kg. Both round to about 100 mg/kg. The Thai limit (Notification 468, category 14.1.4, conditions 127 and TH3; 127 calculates as ready to drink) is 300 mg/kg, so the design is about one third of it. 33 mg is inside the 3.79 g dry mass."
+    },
+    "taste_benchmarks": {
+      "design_citric_acid_g_per_L": 6.364,
+      "design_citric_acid_pct_w_v": 0.636,
+      "design_sugar_equivalent_pct_w_v_at_600x": 6.0,
+      "Ingredion_lemon_lime_citric_pct_S": 0.22,
+      "design_acid_over_Ingredion": 2.89,
+      "Foods2020_citric_pct_P": 0.14,
+      "design_acid_over_Foods2020": 4.55,
+      "Foods2020_sucrose_pct_P": 2.5,
+      "design_sugar_equivalent_over_Foods2020_sucrose": 2.4,
+      "design_acid_per_sugar_equivalent": 0.1061,
+      "Foods2020_acid_per_sucrose": 0.056,
+      "design_acid_to_sweetness_ratio_over_Foods2020": 1.89,
+      "Foods2020_sweetness_sucrose_alone_9pt": 6.32,
+      "Foods2020_sweetness_with_citric_9pt": 4.53,
+      "Foods2020_sweetness_drop_pct": 28.3,
+      "note": "The design acid load (0.64 percent w/v) is about 2.9 times the citric acid in an ingredient maker's lemon-lime starting formula (0.22 percent; S, undated; its sweetness, pH and carbonation are not stated) and about 4.5 times the 0.14 percent that cut the mean sweetness of 2.5 percent sucrose from 6.32 to 4.53 on a 9-point scale (28 percent; P, aqueous sucrose, consumer panel). The sugar equivalent of the design (6.0 g per 100 mL) is 2.4 times that sucrose sample, but the acid per unit of sweetness is about 1.9 times the Foods 2020 sample. 33 mg of sucralose may therefore be low against 2.10 g of citric acid. This is an untasted desk flag, not a finding: sucralose is not sucrose, and no sample of the cube has been tasted."
+    },
+    "dry_mass": {
+      "sum_at_dose_basis_g": 3.7937,
+      "sum_at_slide_rounded_0p81g_g": 3.793,
+      "slide_dry_g": 3.79,
+      "match_3p79": true,
+      "range_slide": [
+        3.46,
+        4.24
+      ],
+      "range_from_allowances_low_high_g": [
+        3.464,
+        4.244
+      ],
+      "range_allowances_binder_0p5_1p2_flavour_0p02_0p10": "reproduces 3.46 and 4.24 g",
+      "range_match": true,
+      "single_driver_needed_for_range_ends": {
+        "binder_g": {
+          "value_g": 0.8,
+          "needed_low": 0.4663,
+          "needed_high": 1.2463
+        },
+        "citric_g": {
+          "value_g": 2.1,
+          "needed_low": 1.7663,
+          "needed_high": 2.5463
+        },
+        "flavour_g": {
+          "value_g": 0.05,
+          "needed_low": -0.2837,
+          "needed_high": 0.4963
+        },
+        "KHCO3_g": {
+          "value_g": 0.8106884152689893,
+          "needed_low": 0.477,
+          "needed_high": 1.257
+        }
+      },
+      "pH_driver_mass_offsets_g": {
+        "pH_3p3": 0.435,
+        "pH_3p7": -0.29,
+        "meter_pH_3p5_davies": -0.151,
+        "concentration_pH_3p5_davies": -0.252
+      },
+      "khco3_g_at_0p50_and_0p60_volume": [
+        0.737,
+        0.8844
+      ],
+      "dose_driver_mass_offsets_g": {
+        "0p50_volume": -0.0737,
+        "0p60_volume": 0.0737,
+        "dose_counted_at_20C": -0.0553
+      },
+      "monohydrate_citric_offset_g": 0.197,
+      "range_offsets_from_central_g": [
+        -0.33,
+        0.45
+      ],
+      "single_driver_offsets_inside_range": true,
+      "single_driver_offsets_g": [
+        0.435,
+        -0.29,
+        -0.151,
+        -0.252,
+        -0.074,
+        0.074,
+        -0.055,
+        0.197
+      ],
+      "target_pH_range_that_reproduces_range_ends_ideal": [
+        3.2959,
+        3.737
+      ],
+      "dry_mass_at_target_pH_3p3_and_3p7_ideal_g": [
+        3.504,
+        4.229
+      ],
+      "dose_volumes_for_range_ends": {
+        "basis_A_citric_held_at_2p10g": [
+          0.324,
+          0.853
+        ],
+        "basis_B_citric_rescaled_to_keep_pH_3p5_ideal": [
+          0.486,
+          0.635
+        ],
+        "dry_mass_basis_B_at_dose_volume_g": {
+          "0.49_volume": 3.48,
+          "0.50_volume": 3.532,
+          "0.60_volume": 4.056,
+          "0.64_volume": 4.266
+        }
+      },
+      "note": "Each single chemistry driver (target pH 3.3 or 3.7, meter pH, dose 0.50 or 0.60 volume, counting the dose at 20 C, monohydrate) moves the dry mass by an amount that lies inside the allowance range (single_driver_offsets_inside_range). A target pH of 3.3 to 3.7 nearly reproduces both ends of the range (dry_mass_at_target_pH_3p3_and_3p7_ideal_g against 3.46 and 4.24 g). A dose range with the citric acid rescaled to keep pH 3.5 also lands near the ends (dose_volumes_for_range_ends, basis B); with the citric acid held at 2.10 g (basis A) the dose range needed is much wider. The ends themselves are set by the team's allowances, binder 0.5 to 1.2 g and flavour 0.02 to 0.10 g, added to the dose and citric acid used here, which give 3.46 and 4.24 g (ASSUMPTION, cited in rework/screen/cube_size_0_55.py from rework/48 section 6.1, not independently derived). That check is circular: it shows what the stated range is, not that the allowances are right."
+    },
+    "cube": {
+      "range_ends_14mm_cube": {
+        "low_end_binder_0p5_flavour_0p02": {
+          "dry_g": 3.464,
+          "density_g_cm3": 1.262,
+          "porosity_pct": 26.8
+        },
+        "central_binder_0p80_flavour_0p05": {
+          "dry_g": 3.794,
+          "density_g_cm3": 1.383,
+          "porosity_pct": 18.5
+        },
+        "high_end_binder_1p2_flavour_0p10": {
+          "dry_g": 4.244,
+          "density_g_cm3": 1.547,
+          "porosity_pct": 6.9
+        }
+      },
+      "cube_volume_cm3": 2.744,
+      "density_g_cm3_at_3p79g": 1.3812,
+      "density_g_cm3_at_dose_basis": 1.3825,
+      "true_density_mix_g_cm3": 1.6953,
+      "porosity_pct": 18.5,
+      "porosity_pct_binder_1p2": 13.6,
+      "porosity_pct_binder_1p6": 19.7,
+      "reference_density_effervescent_g_cm3": "1.250 (UNVERIFIED: a conference-abstract snippet; the page returned HTTP 403)",
+      "cube_side_mm_at_density_1p25": 14.48,
+      "cube_side_mm_at_density_1p60": 13.33,
+      "note": "Density 1.38 g/cm3 for a 14 mm cube at 3.79 g. Porosity follows from the true density of the mix (KHCO3 and citric acid are S; binder, flavour and sucralose densities are ASSUMPTIONS). The compaction benchmarks that were read are in R['compaction']."
+    },
+    "compaction": {
+      "cube_face_mm2_square_die": 196.0,
+      "pressure_benchmarks_MPa": {
+        "Pharmaceutics_2025_P": 200.0,
+        "RSC_2019_max_P": 159.0,
+        "Jungbunzlauer_derived_S": 142.6
+      },
+      "force_on_14mm_face_kN_at_benchmark_pressures": {
+        "142.6_MPa": 28.0,
+        "159.0_MPa": 31.2,
+        "200.0_MPa": 39.2
+      },
+      "Pharmaceutics_2025_check_20kN_over_area_MPa": 200.1,
+      "design_porosity_pct": 18.5,
+      "design_porosity_range_pct": [
+        13.6,
+        19.7
+      ],
+      "RSC_2019_porosity_uncoated_at_159MPa_pct": 13.67,
+      "design_relative_density": 0.815,
+      "RSC_relative_density_at_159MPa": 0.8633,
+      "Pharmaceutics_2025_true_density_g_cm3": 1.8246,
+      "design_true_density_g_cm3": 1.6953,
+      "Pharmaceutics_2025_tablet_thickness_mm_derived": {
+        "porosity_0pct_mm": 1.92,
+        "porosity_10pct_mm": 2.13,
+        "porosity_20pct_mm": 2.4
+      },
+      "Pharmaceutics_2025_height_to_diameter_range": [
+        0.17,
+        0.213
+      ],
+      "cube_height_to_width": 1.0,
+      "cube_mass_per_punch_face_mg_per_mm2": 19.34,
+      "sourced_tablet_mass_per_punch_face_mg_per_mm2": {
+        "Pharmaceutics_2025_350mg_11p28mm_P": 3.5,
+        "Jungbunzlauer_5g_25mm_S": 10.19,
+        "Roquette_vitaminC_2400mg_20mm_S": 7.64
+      },
+      "cube_over_sourced_tablet_mass_per_face": {
+        "Pharmaceutics_2025_350mg_11p28mm_P": 5.52,
+        "Jungbunzlauer_5g_25mm_S": 1.9,
+        "Roquette_vitaminC_2400mg_20mm_S": 2.53
+      },
+      "hardness_benchmarks_in_newtons": [
+        {
+          "source": "Ansar et al. 2009, Jurnal Teknologi dan Industri Pangan 20(1):25 (fruit juice effervescent tablet; abstract only)",
+          "tier": "P (abstract; mass and diameter not stated)",
+          "hardness_N": "40.53 (highest)",
+          "compression_force_N": "2339.8 (highest hardness); 1417.6 (fastest dissolution, 41.99 s)"
+        },
+        {
+          "source": "Taymouri et al. 2019, J Rep Pharm Sci 8(2):236 (bismuth subcitrate; abstract only)",
+          "tier": "P (abstract; mass, diameter and force not stated)",
+          "hardness_N": "72.3 +/- 5.5",
+          "compression_force_N": "not stated"
+        },
+        {
+          "source": "Jungbunzlauer CITROCOAT EP facts sheet, Figure 1 (5 g, 25 mm, 2 percent PEG 4000, n = 20)",
+          "tier": "S (supplier sheet, undated; axis labelled N)",
+          "hardness_N": "67.9 (hand mix, 70 kN); 117.8 (CITROCOAT EP, 70 kN); 70.2 (CITROCOAT EP, 44 kN)",
+          "compression_force_N": "70000 and 44000"
+        },
+        {
+          "source": "Roquette vitamin C effervescent tablet formulation page (2,400 mg, 20 mm flat punch)",
+          "tier": "S (company technical page; thickness and force not stated)",
+          "hardness_N": "100",
+          "compression_force_N": "not stated"
+        }
+      ],
+      "hardness_range_reported_N": [
+        40.53,
+        117.8
+      ],
+      "hardness_note": "Hardness values reported in newtons by effervescent tablet sources run from about 40 to 118 N (four sources, two of them peer-reviewed abstracts and two supplier pages). The figures are diametral breaking forces of round flat tablets; a 14 mm cube has no diameter, so its hardness is not comparable and is not predicted. No sourced bulk density of a commercial effervescent tablet was found (the 1.250 g/cm3 lead stays UNVERIFIED), because none of the opened sources gives tablet thickness.",
+      "note": "Sourced effervescent tablets are round, flat and thin (mass about 350 mg at 11.28 mm, so roughly 2 mm thick, height to diameter about 0.2) and were pressed between 53 and 200 MPa. The design cube is 3.79 g with height equal to width (ratio 1.0), about 11 times the mass of the Pharmaceutics 2025 tablet. At those pressures the 196 mm2 face would need about 28 to 39 kN (DERIVED). The design porosity (18.5 percent, estimated) is not tighter than the 13.7 percent reached at 159 MPa by a different, 8.5 mm tablet, so the design density does not call for more compaction than a tablet reached. That does not show a 14 mm cube can be pressed: density gradients, die-wall friction, ejection, lamination, hardness and dissolution time of a cube-shaped body are not measured and no source for a cube was found. These are stated limits."
+    },
+    "pack": {
+      "packed_calc_g": 5.29,
+      "match_packed_5p29": true,
+      "net_weight_rounding": true,
+      "pouch_mass_1p5_g_status": "ASSUMPTION (team value); cannot be checked from sources",
+      "pouch_film_two_faces_m2": 0.0126,
+      "pouch_film_mass_g_at_assumed_96_g_m2": 1.21,
+      "pouch_mass_not_explained_by_film_g": 0.29,
+      "carton_outside_volume_L": 1.425,
+      "carton_wall_mm_assumed_for_fit_test": 3.0,
+      "carton_inside_mm_at_assumed_wall": [
+        184.0,
+        144.0,
+        44.0
+      ],
+      "six_cube_volume_cm3": 16.46,
+      "pouches_per_carton_layout_on_outside_size": {
+        "per_layer": 4,
+        "layers": 2,
+        "capacity": 8
+      },
+      "pouches_per_carton_layout_inside_assumed_wall": {
+        "per_layer": 4,
+        "layers": 2,
+        "capacity": 8
+      },
+      "fits_six_pouches_outside_size": true,
+      "fits_six_pouches_inside_assumed_wall": true,
+      "note": "The pouch size (90 x 70 x 20 mm) and mass (1.5 g) are the team's ASSUMPTIONS. The film at an assumed 96 g/m2 laminate weight (also an ASSUMPTION) explains about 1.21 g of the 1.5 g; the remaining 0.29 g is not explained by anything in this run, and no source was found for the pouch mass, so the 1.5 g cannot be checked. The carton 190 x 150 x 50 mm is the OUTSIDE size (submission 04); 1.425 L is the outside volume, which is the right basis for container packing. Two pouches fit across 190 mm and two down 150 mm, two layers at 50 mm height: eight on the outside size and still eight inside an assumed 3 mm wall; six are used."
+    },
+    "container": {
+      "ONE_page_P": {
+        "source": "ONE 20 ft dry page (P), read 2026-10-20",
+        "internal_volume_m3": 33.1261,
+        "cartons_at_92pct": 21386,
+        "cubes_at_92pct": 128316,
+        "implied_packing_fraction_for_21431": 0.9219,
+        "slide_cartons_difference_pct": 0.21,
+        "grid_counts_full_height": {
+          "190_along_length": {
+            "per_layer": 465,
+            "layers_full": 47,
+            "cartons_full_height": 21855
+          },
+          "150_along_length": {
+            "per_layer": 468,
+            "layers_full": 47,
+            "cartons_full_height": 21996
+          }
+        },
+        "grid_counts_door_height_2p28m": {
+          "190_along_length": 20925,
+          "150_along_length": 21060
+        },
+        "container_mass_kg_at_92pct_with_0p10kg_carton": 2817.5,
+        "mass_share_of_payload_28330_pct": 9.9
+      },
+      "SeaCube_S": {
+        "source": "SeaCube dimensions as in team's pack_economics.py (S, not reopened)",
+        "internal_volume_m3": 33.1959,
+        "cartons_at_92pct": 21431,
+        "cubes_at_92pct": 128586,
+        "implied_packing_fraction_for_21431": 0.92,
+        "slide_cartons_difference_pct": 0.0,
+        "grid_counts_full_height": {
+          "190_along_length": {
+            "per_layer": 465,
+            "layers_full": 47,
+            "cartons_full_height": 21855
+          },
+          "150_along_length": {
+            "per_layer": 468,
+            "layers_full": 47,
+            "cartons_full_height": 21996
+          }
+        },
+        "grid_counts_door_height_2p28m": {
+          "190_along_length": 20925,
+          "150_along_length": 21060
+        },
+        "container_mass_kg_at_92pct_with_0p10kg_carton": 2823.4,
+        "mass_share_of_payload_28330_pct": 10.0
+      },
+      "DSV_proxy_P": {
+        "source": "DSV generic 20 ft dry (P for DSV, rounded; PROXY)",
+        "internal_volume_m3": 33.1374,
+        "cartons_at_92pct": 21393,
+        "cubes_at_92pct": 128358,
+        "implied_packing_fraction_for_21431": 0.9216,
+        "slide_cartons_difference_pct": 0.18,
+        "grid_counts_full_height": {
+          "190_along_length": {
+            "per_layer": 465,
+            "layers_full": 47,
+            "cartons_full_height": 21855
+          },
+          "150_along_length": {
+            "per_layer": 468,
+            "layers_full": 47,
+            "cartons_full_height": 21996
+          }
+        },
+        "grid_counts_door_height_2p28m": {
+          "190_along_length": 20925,
+          "150_along_length": 21060
+        },
+        "container_mass_kg_at_92pct_with_0p10kg_carton": 2818.4,
+        "mass_share_of_payload_28330_pct": 9.9
+      },
+      "slide_cartons": 21431,
+      "slide_cubes": 128586,
+      "cubes_check_6x": true,
+      "ONE_stated_cubic_m3": 33.1,
+      "ONE_payload_kg": 28330.0,
+      "payload_slide_t": 28.3,
+      "payload_match_ONE": true,
+      "door_height_layers_45": 45,
+      "twelve_cube_carton_190x150x100_mm": {
+        "outside_volume_L": 2.85,
+        "ONE_cartons_at_92pct": 10693,
+        "ONE_cubes_at_92pct": 128316,
+        "SeaCube_cartons_at_92pct": 10715,
+        "SeaCube_cubes_at_92pct": 128580,
+        "deck_and_submission_say": "128,580 cubes in 10,715 cartons (executive_summary line 30)"
+      },
+      "twenty_four_cube_carton_190x150x200_mm": {
+        "ONE_cartons_at_92pct": 5346,
+        "ONE_cubes_at_92pct": 128304,
+        "SeaCube_cubes_at_92pct": 128568,
+        "team_copy_says": "128,568 (proposal/04_strategy.md line 93)"
+      },
+      "note": "ONE dimensions (P) give 21,386 cartons at 92 percent (a volume estimate); the slide's 21,431 is 92.0 percent of the SeaCube volume (S). The difference is 0.2 percent and is a source choice. The ONE page says individual containers may have different specifications. Full-height grid counts are about 21,850 to 22,000, but the 2.28 m door limits the stack to 45 layers (about 20,900 to 21,060 hand-loaded cartons), so the volume estimate is a ceiling to confirm with the carrier, not a loading plan. The carton is counted on its outside size."
+    },
+    "cost": {
+      "slide_sum_check": 4.09,
+      "match_4p09": true,
+      "carton_per_cube_check_4p00_over_6": 0.6667,
+      "carton_basis_is_per_cube_consistent": true,
+      "FX_THB_per_CNY": 5.0134,
+      "FX_THB_per_USD_BOT_mid": 33.5495,
+      "reactant_rows": {
+        "KHCO3_food_grade": {
+          "mass_g": 0.81069,
+          "THB_per_cube_low": 0.03211,
+          "THB_per_cube_central": 0.03211,
+          "THB_per_cube_high": 0.03983,
+          "CNY_per_t_low_central_high": [
+            7900,
+            7900,
+            9800
+          ]
+        },
+        "citric_acid_food_grade_rows": {
+          "mass_g": 2.1,
+          "THB_per_cube_low": 0.04527,
+          "THB_per_cube_central": 0.06633,
+          "THB_per_cube_high": 0.0737,
+          "CNY_per_t_low_central_high": [
+            4300.0,
+            6300.0,
+            7000.0
+          ]
+        },
+        "sucralose": {
+          "mass_g": 0.033,
+          "THB_per_cube_low": 0.01737,
+          "THB_per_cube_central": 0.01737,
+          "THB_per_cube_high": 0.05956,
+          "CNY_per_t_low_central_high": [
+            105000,
+            105000,
+            360000
+          ]
+        },
+        "maltodextrin_binder": {
+          "mass_g": 0.8,
+          "THB_per_cube_low": 0.01404,
+          "THB_per_cube_central": 0.01564,
+          "THB_per_cube_high": 0.01725,
+          "CNY_per_t_low_central_high": [
+            3500,
+            3900,
+            4300
+          ]
+        }
+      },
+      "reactants_THB_per_cube_low_central_high": [
+        0.0948,
+        0.1158,
+        0.1731
+      ],
+      "reactants_slide_0p12_vs_central_diff": -0.0042,
+      "reactants_if_citric_unlabelled_6500": 0.1179,
+      "reactants_if_KHCO3_unlabelled_5500": 0.1061,
+      "cross_check_elchemy_citric_food_grade_THB": [
+        0.0634,
+        0.0881
+      ],
+      "cross_check_elchemy_citric_anhydrous_THB": [
+        0.0666,
+        0.0969
+      ],
+      "citric_price_basis": {
+        "anhydrous_labelled_rows_median_CNY_t": 5900.0,
+        "food_grade_rows_median_CNY_t": 6300.0,
+        "food_grade_rows_low_high_CNY_t": [
+          4300.0,
+          7000.0
+        ],
+        "n_food_grade_rows": 15,
+        "n_anhydrous_rows": 4
+      },
+      "reactants_if_citric_from_anhydrous_labelled_rows_median": 0.1116,
+      "reactants_if_citric_rows_are_monohydrate_mass_x1p094": 0.122,
+      "reactants_central_at_FX_8Oct_5p0275": 0.1161,
+      "FX_THB_per_CNY_8Oct_sensitivity": 5.0268,
+      "binder_maltodextrin_THB_central": 0.0156,
+      "binder_mannitol_unlabelled_THB": 0.1123,
+      "flavour_THB_low_central_high": [
+        0.015,
+        0.04,
+        0.075
+      ],
+      "priced_cost_with_reactants_recomputed_THB": 4.0858,
+      "priced_cost_with_maltodextrin_and_flavour_THB": 4.1414,
+      "priced_cost_with_mannitol_and_flavour_THB": 4.2381,
+      "priced_cost_with_maltodextrin_and_flavour_low_high_THB": [
+        4.1148,
+        4.1781
+      ],
+      "note": "Prices: Guidechem rows (S) for China ex-works CNY per tonne, converted at the FRED H.10 cross rate of 9 Oct 2026, the latest observation in both series (P series). These are not Thai landed prices. Freight, duty, VAT on inputs and any Thai distributor price are not included. Potassium bicarbonate rows are labelled food grade. The citric central is the median of 15 food-grade-labelled rows (any form; the range is the lowest and highest row); the rows labelled anhydrous give a similar median but two of them are not labelled food grade. The sucralose rows are not labelled food grade, and the sucralose page looks like a static listing: both rows print the same price in every daily, weekly and monthly column (August to October) with zero change, and the page's update date (10 Oct 2026) is earlier than its daily columns (14 to 16 Oct). The reactant price basis therefore changes from the earlier UN Comtrade unit values (submission 02 line 50 and 07 line 38 describe 0.118 and 0.12 that way) to Guidechem listing rows. The binder is not named; the maltodextrin page is dated 3 June 2026 (stale). Mannitol is priced from a row not labelled food grade. The flavour price (THB 300, 800 and 1,500 per kg) has no source and is an ASSUMPTION. The 4.09 total excludes binder and flavour (team's own note on slide 9)."
+    },
+    "contribution": {
+      "planning_price_check_15x0p60": 9.0,
+      "match_planning_price_9p00": true,
+      "contribution_deck_9p00_minus_4p09": 4.91,
+      "match_contribution_4p91": true,
+      "reading_if_9p00_were_shelf_wrong_reading": 1.31,
+      "VAT7_ex_shelf_15_then_60pct_minus_4p09": 4.321,
+      "with_repriced_reactants": 4.914,
+      "with_maltodextrin_and_flavour": 4.859,
+      "with_mannitol_and_flavour": 4.762,
+      "with_maltodextrin_and_flavour_low_high": [
+        4.822,
+        4.885
+      ],
+      "contribution_margin_pct_of_planning": 54.6,
+      "note": "Planning ex-factory price 9.00 equals 60 percent of a THB 15 shelf price (ASSUMPTION, team slide 9 note). So 4.91 = 9.00 - 4.09 is correct on that basis. Applying the 60 percent to 9.00 again would be double counting. If the THB 15 shelf price includes 7 percent VAT, the VAT-exclusive base is 14.02, the ex-factory share gives 8.41, and the contribution 4.32. The 60 percent share is an ASSUMPTION with no sourced margin.",
+      "sensitivity_share_shelf_THB": {
+        "share0.50_shelf13": 2.41,
+        "share0.50_shelf15": 3.41,
+        "share0.50_shelf17": 4.41,
+        "share0.55_shelf13": 3.06,
+        "share0.55_shelf15": 4.16,
+        "share0.55_shelf17": 5.26,
+        "share0.60_shelf13": 3.71,
+        "share0.60_shelf15": 4.91,
+        "share0.60_shelf17": 6.11,
+        "share0.65_shelf13": 4.36,
+        "share0.65_shelf15": 5.66,
+        "share0.65_shelf17": 6.96,
+        "share0.70_shelf13": 5.01,
+        "share0.70_shelf15": 6.41,
+        "share0.70_shelf17": 7.81
+      }
+    },
+    "thai_mineral_salt_beverage_195": {
+      "limits_per_litre_as_read": {
+        "Na_mg_per_L_min": 460.0,
+        "Na_mg_per_L_max": 920.0,
+        "K_mg_per_L_max": 195.0,
+        "bicarbonate_mg_per_L_max": 793.0,
+        "citrate_mg_per_L_max": 819.0,
+        "glucose_or_fructose_pct_min": 2.0,
+        "sucrose_pct_min": 4.0
+      },
+      "design_potassium_mg_per_L_on_330mL": 959.0,
+      "potassium_over_195_limit_x": 4.92,
+      "design_citrate_as_citric_acid_mg_per_L": 6364.0,
+      "design_citrate_as_anion_mg_per_L": 6263.0,
+      "citrate_over_819_limit_x_range": [
+        7.65,
+        7.77
+      ],
+      "design_sodium_mg_per_L": "0 by design (sodium-free); binder sodium not checked",
+      "design_sugar_pct": 0.0,
+      "meets_clause_4_composition": false,
+      "potassium_citrate_g_formed": 0.827,
+      "citric_acid_left_g": 1.581,
+      "dissolved_solids_after_reaction_g": 3.291,
+      "potassium_citrate_share_of_solids_pct": 25.1,
+      "citric_acid_share_of_solids_pct": 48.0,
+      "citric_acid_share_of_cube_dry_mass_pct": 55.4,
+      "note": "The cube drink does not meet the composition set for a mineral-salt beverage (no sodium, no sugar, about 4.9 times the potassium ceiling, about 7.6 to 7.8 times the citrate ceiling), so it could not be sold as one. Whether the Thai FDA treats a drink made from the cube as a flavoured drink (category 14.1.4) or as a mineral-salt beverage (Clause 3, mineral salts as the main ingredient) is not settled by the text read. Citric acid, not a mineral salt, is the largest solid in the glass. Classification is a stated limit. Condition TH3 in Notification 468 (annex list 2 part 2, printed page 835, read as a page image on 20 Oct 2026) says that for mineral-salt beverage products the additive must be used together with sugar of the type and amount set in the mineral-salt beverage notification. The earlier saved reading of the repealed Notification 418 (TH3 excludes products under Notification 195) is superseded: both tie TH3 to Notification 195, but the 468 text states the condition as a sugar-pairing duty on mineral-salt beverages. The cube drink has no sugar, so it could not be sold as a mineral-salt beverage with sucralose either."
+    },
+    "thai_notification_468_as_read_2026_10_20": {
+      "source": "MoPH Notification 468 B.E. 2568 Annex (P468.pdf, 839 PDF pages, SHA-256 5BEB26FC...FF7C, identical to the file read on 19 Oct 2026); Thai text, our translation; page images read on 20 Oct 2026. PDF page = printed page + 1.",
+      "rows_category_14_1_4_flavoured_drinks": {
+        "sucralose_INS_955": {
+          "max_mg_per_kg": 300,
+          "conditions": [
+            "127",
+            "TH3"
+          ],
+          "year_set_BE": 2559,
+          "pdf_page": 678
+        },
+        "citric_acid_INS_330": {
+          "max": "quantum satis",
+          "conditions": [],
+          "year_set_BE": 2559,
+          "pdf_page": 197
+        },
+        "potassium_hydrogen_carbonate_INS_501ii": {
+          "max": "quantum satis",
+          "conditions": [],
+          "year_set_BE": 2559,
+          "pdf_page": 534
+        }
+      },
+      "condition_127": "calculated in the ready-to-consume state (annex list 2 part 2, printed page 788, PDF 789)",
+      "condition_TH3": "for mineral-salt beverage products, must be used together with sugar of the type and amount prescribed in the MoPH notification on mineral-salt beverages (printed page 835, PDF 836)",
+      "explanatory_announcement": {
+        "source": "Announcement of the Office of the Food and Drug Board, explanatory statement of MoPH Notification 468 (36 pages, 788 KB; dated 6 January B.E. 2569 = 6 January 2026 on page 5)",
+        "quantum_satis_definition_page_2": "quantum satis means the lowest amount of the additive that gives the desired technological effect under GMP; it does not mean the additive may be added without limit; the operator must study its own product to find the lowest amount that gives the effect",
+        "clause_4_page_2": "for additives in the same functional group that have numeric maxima, used together (two or more), the sum of use-over-maximum ratios must not exceed one",
+        "list_2_page_9": "additives whose maximum is quantum satis are not brought into the sum-of-ratios rule even when in the same functional group"
+      },
+      "sweetener_sum_of_ratios_for_the_design": {
+        "sucralose_mg_per_kg_ready_to_drink": 100.0,
+        "ratio_over_300": 0.333,
+        "sum_of_ratios_one_numeric_sweetener": 0.333,
+        "limit": 1.0,
+        "note": "Only one numeric-maximum additive of the sweetener group is used, so the sum equals its ratio. Potassium bicarbonate and citric acid are quantum satis and are outside the sum."
+      }
+    },
+    "quantum_satis_citric_acid_basis": {
+      "citric_acid_g_design": 2.1,
+      "citric_acid_g_stoichiometric": 0.5186,
+      "citric_acid_g_for_target_pH_ideal": {
+        "3.0": 3.693,
+        "3.3": 2.535,
+        "3.5": 2.101,
+        "3.7": 1.81,
+        "4.0": 1.515,
+        "4.5": 1.175
+      },
+      "pH_at_stoichiometric_point_ideal": 9.154,
+      "note": "Under quantum satis the 2.10 g has to be the lowest amount that gives the intended effect. The intended effect is the pH 3.5 target (an ASSUMPTION of the design); less acid gives a higher pH (citric_acid_g_for_target_pH_ideal), and the balance of that acid against 33 mg of sucralose is untasted. The stoichiometric mass alone leaves the drink alkaline."
+    },
+    "flags": {
+      "sweet_acid_ratio_note": "33 mg sucralose is about 6.0 g sugar equivalent per 100 mL. The added citric acid is 6.36 g per litre, about 2.9 times an ingredient maker's lemon-lime starting formula and 4.5 times the level that suppressed sweetness by 28 percent in a published sucrose panel. The balance is an untasted desk flag; the first lever is more sweetener or less acid.",
+      "potassium_label_note": "If potassium is declared on a Thai nutrition panel, the rounding rule gives 320 mg (9.1 percent of the Thai RDI). Whether a panel is required is not settled: Notification 445 Clause 3 requires one only for foods with a nutrition claim, a health claim or nutritional value used in promotion. Potassium-retaining medicines and kidney disease need a medical view (Gate 2).",
+      "sodium_note": "Sodium is not claimed: sodium-free wording is barred in the deck (deck_content.md) and submission 09. The binder is not yet named, so its sodium content is unchecked.",
+      "sucralose_child_note": "One serve is 2.2 mg/kg for a 15 kg child, about 15 percent of the EFSA ADI and 44 percent of the FDA ADI.",
+      "thai_regulation_note": "Notification 468 sets 300 mg/kg for category 14.1.4 (conditions 127 and TH3; row reread on 20 Oct 2026 from page images). Potassium bicarbonate and citric acid are quantum satis in that category, which the Thai FDA explanatory announcement (page 2) defines as the lowest amount that gives the technological effect under GMP, not an unlimited allowance. TH3 reads: for mineral-salt beverage products the additive must be used together with sugar of the type and amount prescribed in the mineral-salt beverage notification. Classification (flavoured drink or mineral-salt beverage, Notification 195) is a stated limit.",
+      "net_weight_note": "Net weight 3.8 g is the rounded central dry mass 3.79 g, to be confirmed by weighing before print; no pressing target above 3.79 g is proposed here."
+    },
+    "team_comparison": {
+      "team_container_mass_kg": 2823.8,
+      "team_payload_kg_used": 28200.0,
+      "payload_conflict_ONE_28330_vs_team_28200_kg": 130.0,
+      "valuation_cost_base_3p90_vs_slide_4p09_diff": -0.19,
+      "team_reactants_0p118_vs_repriced_central": 0.0022,
+      "note": "Team container mass 2,823.8 kg is 10.0 percent of the ONE payload (28,330 kg); the team's payload input 28,200 kg is Maersk's figure, so the team files and the ONE page disagree by 130 kg. The valuation code comment '9.00 - 3.90 = 5.10' is stale: project_valuation_results.json uses the 6-pack base (cost 4.09, contribution 4.91), so the values agree and only the comment needs correcting."
+    }
+  }
+}

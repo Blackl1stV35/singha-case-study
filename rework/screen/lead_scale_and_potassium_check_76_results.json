@@ -1,0 +1,72 @@
+{
+  "check": "Lead scale and potassium per serve, record 76 (second pass)",
+  "date": "2026-10-20",
+  "seed": "none (closed-form arithmetic, no random draw)",
+  "baseline_share": 0.3,
+  "potassium": {
+    "khco3_molar_mass_g_per_mol": 100.114,
+    "potassium_mass_fraction_exact": 0.39053,
+    "potassium_mass_fraction_record_rounding": 0.39053,
+    "bicarbonate_g_per_serve": 0.81,
+    "potassium_mg_per_serve_exact_weights": 316.3,
+    "potassium_mg_per_serve_record_rounding": 316.3,
+    "bicarbonate_g_needed_for_317_mg": 0.8117,
+    "submission_figure_mg": 317.0,
+    "note": "The submissions state 317 mg. From 0.81 g the script gives about 316 mg. 317 mg needs about 0.812 g of bicarbonate. The team must choose one figure."
+  },
+  "lead_by_ratio_and_scale": {
+    "ratio_A_men25_34_over_35_44": [
+      {
+        "bound": "lower_bound",
+        "ratio": 1.0,
+        "share_scale_lead_points": 0.0,
+        "odds_scale_lead_points": 0.0
+      },
+      {
+        "bound": "median",
+        "ratio": 1.04,
+        "share_scale_lead_points": 1.2,
+        "odds_scale_lead_points": 0.83
+      },
+      {
+        "bound": "upper_bound",
+        "ratio": 1.09,
+        "share_scale_lead_points": 2.7,
+        "odds_scale_lead_points": 1.84
+      }
+    ],
+    "ratio_B_men25_34_over_45_59": [
+      {
+        "bound": "lower_bound",
+        "ratio": 1.03,
+        "share_scale_lead_points": 0.9,
+        "odds_scale_lead_points": 0.62
+      },
+      {
+        "bound": "median",
+        "ratio": 1.15,
+        "share_scale_lead_points": 4.5,
+        "odds_scale_lead_points": 3.01
+      },
+      {
+        "bound": "upper_bound",
+        "ratio": 1.28,
+        "share_scale_lead_points": 8.4,
+        "odds_scale_lead_points": 5.42
+      }
+    ]
+  },
+  "reverse_checks_ratio_needed": {
+    "submission_01_odds_scale_0_6_points_needs_ratio": 1.0288,
+    "submission_01_share_scale_0_9_points_needs_ratio": 1.03,
+    "submission_12_share_scale_1_23_points_needs_ratio": 1.041
+  },
+  "reading": {
+    "record_lead_point_estimate": "1.2 points on the share scale at the median ratio 1.04 (submission 12 quotes 1.23 from its simulation, not reproduced exactly here)",
+    "odds_scale_at_median": 0.83,
+    "share_scale_at_median": 1.2,
+    "ratio_B_share_scale_at_median": 4.5,
+    "submission_12_ratio_B_quoted_points": 4.4,
+    "conflict": "Submission 01 gives 0.6 points (odds scale) and 0.9 points (share scale) with 1.2 from the power simulation; submission 12 gives 1.23 on the share scale. The two submissions use different model versions."
+  }
+}

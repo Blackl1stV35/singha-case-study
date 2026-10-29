@@ -4,8 +4,8 @@ Scene: `cube_hero.png`, built by `build_cube_scene.py` in Blender 5.2, Cycles on
 
 Basis codes:
 - **ASSUMPTION**: a design or rendering choice with no measured or published source. Colours and sizes read from `style_tokens.json` are ASSUMPTION (design choice). No brand colour is verified.
-- **DERIVED**: arithmetic on ASSUMPTION inputs, for example the cube side from the design dose in 48 section 6.1.
-- **SOURCED**: none. No value in this scene is sourced. The stoichiometry in 48 section 6.1 is sourced, and it sets only the derived cube side.
+- **DERIVED**: arithmetic on ASSUMPTION inputs, for example the cube mass and density from basis B (rework/64 section 8).
+- **SOURCED**: none. No value in this scene is sourced. The stoichiometry behind the reactant mass (rework/64 section 2) is sourced, and it sets only the derived cube mass.
 
 ## Materials
 
@@ -29,8 +29,11 @@ Removed in this revision (critic blocker, 48 section 8.4): TumblerGlass, LimeWat
 | Pack edge bevel | 2.5 mm | ASSUMPTION |
 | Heat-seal ridges | 4 mm tall at top and bottom, full depth, 1.2 mm bevel | ASSUMPTION |
 | Front label | 65 x 32.5 mm, 2:1 aspect kept | ASSUMPTION (layout). The artwork is landscape and the front is portrait, so it is contained, not stretched. |
-| Cube side | 15 mm | DERIVED. Design dose 1.75 volumes: 4.23 g of reactants, design mass 5.28 g, density 1.56 g/cm3 at 15 mm. The density band (1.25 to 1.60) is ASSUMPTION; the high end of the mass range is above it (48 section 6.4). |
-| Cube bevel and rotation | 1.5 mm bevel; rotated 18 degrees about Z only, so the base sits flat on the floor; centre 7.5 mm above the floor, 26 mm right of the pouch centre line | ASSUMPTION (staging) |
+| Cube side | 14 mm | DERIVED. Basis B (user, 19 October 2026; rework/64 section 8); superseded by rework/64 section 8 (basis B); was 15 mm at the 1.75-volume design dose. |
+| Cube mass, central | 3.79 g (range 3.46 to 4.24 g) | DERIVED on ASSUMPTION inputs (basis B). Per 330 ml at 0.55 volume, pH 3.5: potassium bicarbonate 0.811 g; citric acid 2.10 g (0.519 g stoichiometric plus 1.581 g free excess); sucralose 33 mg; reactants 2.944 g. Plus binder and filler 0.80 g (ASSUMPTION, range 0.5 to 1.2 g) and lime flavour powder 0.05 g (ASSUMPTION, range 0.02 to 0.10 g). Range: low 2.944 + 0.5 + 0.02 = 3.46 g; high 2.944 + 1.2 + 0.10 = 4.24 g. Superseded by rework/64 section 8 (basis B); was 5.28 g at 1.75 volumes. |
+| Packed unit mass | 5.29 g | ASSUMPTION for the 1.5 g pouch: cube 3.79 g plus pouch 1.5 g. Superseded by rework/64 section 8 (basis B); was 4.44 g. |
+| Cube density | 1.38 g/cm3 at 14 mm (2.744 cm3) | DERIVED on ASSUMPTION inputs. The band 1.25 to 1.60 g/cm3 is ASSUMPTION; the mass range gives 1.26 to 1.55 g/cm3, inside it. Superseded by rework/64 section 8 (basis B); was 1.56 g/cm3 at 15 mm. |
+| Cube bevel and rotation | 1.5 mm bevel; rotated 18 degrees about Z only, so the base sits flat on the floor; centre 7.0 mm above the floor (half of the 14 mm side; was 7.5 mm at 15 mm), 26 mm right of the pouch centre line | ASSUMPTION (staging) |
 
 ## Render settings with a basis
 
@@ -58,10 +61,14 @@ Read from `cube_hero.png` with PIL on 18 October 2026, as patch medians:
 - No material here is validated against a real pouch or cube. Every surface finish and every tint is a rendering choice.
 - The pack reads more like a rigid box than a flat single-serve pouch. The heat-seal ridges make it look like a lid. The depth of 20 mm is ASSUMPTION.
 - The label is shown at 65 mm wide and 2:1, so it covers only the centre of the front face. The copy layout in 48 section 5.5 was built for a portrait front, and the artwork does not follow that layout.
-- The cube's density at the high end of the mass range (5.80 g) is above the ASSUMPTION band at 15 mm. The render does not depend on mass. The owner must choose between a side of about 15.4 mm or more and a narrower mass range (48 section 6.4, L6).
+- Basis B (user, 19 October 2026; rework/64 section 8) sets the cube at 14 mm and the mass range at 3.46 to 4.24 g. The density over that range is 1.26 to 1.55 g/cm3, inside the ASSUMPTION band of 1.25 to 1.60 g/cm3. The render does not depend on mass. Rework/48 section 6.4 (L6) still reads 15 mm and 5.80 g; it is not changed here.
 - No glass is drawn. If the owner wants a glass, rule 5 must be reopened in writing before judging (48 section 10.3).
 
 
 ## Revision, 18 October 2026 (real-material values)
 
 The pouch film and the cube now use the values above. The pack geometry is unchanged: 70 x 90 mm front, 20 mm depth, and seal ridges 4 mm tall. The render still reads as a rigid box. The depth and the ridge profile are ASSUMPTION and need a decision on the pouch form before the shape can read as a flat pouch.
+
+## Revision, 19 October 2026 (basis B)
+
+Basis B (user, 19 October 2026; rework/64 section 8) sets the cube at 14 mm, central mass 3.79 g (range 3.46 to 4.24 g), density 1.38 g/cm3, and the packed unit at 5.29 g with a 1.5 g pouch (ASSUMPTION). The pouch front (70 x 90 mm) and the 20 mm depth are unchanged. The materials table is unchanged. The measured checks above were read from the 15 mm render of 18 October 2026 and have not been re-measured. The carton (12 cubes; empty carton 0.10 kg, ASSUMPTION) is not in this list; add its material row if the render includes it.

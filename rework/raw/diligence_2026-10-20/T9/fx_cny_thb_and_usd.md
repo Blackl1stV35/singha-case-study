@@ -1,0 +1,7 @@
+> **SUPERSEDED (20 October 2026, second verification pass).** The current exchange rates are in `fed_h10_fx_fred_2026-10.md` (CNY cross, 9 October 2026, P series) and `raw/bot_fx_primary_2026-10-15.md` (USD). The pluang converter figure below (S) is a cross-check only. Note: the Bank of Thailand page https://www.bot.or.th/en/statistics/exchange-rate.html returned only navigation menus and links when opened again on 20 October 2026, with no rate table, so the 15 October 2026 average counter rate (mid 33.5495) cannot be reconfirmed from the live page; the saved page `raw/bot_fx_primary_2026-10-15.md` is the record. The USD rate is used only in the Elchemy citric acid cross-check (not in the headline re-price, which uses the Federal Reserve cross rate).
+
+# Exchange rates used for the re-price (read 20 October 2026)
+
+- CNY to THB: 1 CNY = 5.0218 THB, "Updated 19 Oct 2026, 22:49 WIB, Mid-Market Rate", 52-week range 4.4148 to 5.0429. Source page https://pluang.com/en/tools/currency-converter/cny-thb (data by Financial Modeling Prep). Tier S (a retail converter; mid-market, not a bank rate). Read 20 October 2026.
+- USD to THB: 33.5495 (mid of Bank of Thailand average buying sight 33.3535 and selling transfer 33.7455, as of 15 October 2026), from the team's saved primary record rework/raw/bot_fx_primary_2026-10-15.md (https://www.bot.or.th/en/statistics/exchange-rate.html). Tier P. Not used for the re-price (the price pages are in CNY); kept for reference.
+- The BOT page returned no CNY rate through the fetch tool, so the CNY rate stays S.

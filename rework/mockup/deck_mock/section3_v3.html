@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lemon Soda, section 3: the cube in use</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Anti-slop palette: two neutrals, one ink, one accent used once. No gradients, glows or grids. */
+:root{--paper:#F6F4EE;--ink:#15171A;--muted:#6B6F76;--rule:#15171A;--accent:#F2C94C;--radius:12px}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink);font-family:"Source Sans 3",system-ui,sans-serif}
+#stage{position:relative;width:1920px;height:1080px;overflow:hidden;background:var(--paper)}
+h1{position:absolute;left:96px;top:78px;margin:0;font-family:Fraunces,Georgia,serif;font-weight:600;font-size:64px;letter-spacing:-0.5px}
+.sub{position:absolute;left:96px;top:166px;font-size:22px;color:var(--muted)}
+.pic{position:absolute;left:96px;top:250px;width:604px;height:453px;transition:opacity .45s ease}
+.pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;transition:opacity .45s ease}
+.pic img{opacity:0}
+.pic img.on{opacity:1}
+.phasecap{position:absolute;left:96px;top:724px;width:604px;font-size:20px;color:var(--muted)}
+.line{position:absolute;left:920px;width:800px;top:360px;height:2px;background:var(--rule);opacity:.25}
+.node{position:absolute;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Fraunces,Georgia,serif;font-weight:600;cursor:pointer;transition:all .35s ease;user-select:none}
+.node.big{width:112px;height:112px;background:var(--ink);color:#FFFFFF;font-size:46px;top:304px;transform:translateX(-50%)}
+.node.small{width:58px;height:58px;background:var(--paper);border:1.5px solid var(--ink);color:var(--ink);font-size:24px;top:331px;transform:translateX(-50%)}
+.node.small:hover{background:#FFFFFF}
+.node.empty{width:58px;height:58px;border:1.5px dashed #B4B0A4;top:331px;transform:translateX(-50%);cursor:default}
+.nlabel{position:absolute;top:446px;transform:translateX(-50%);font-size:18px;color:var(--muted);white-space:nowrap;cursor:pointer}
+.nlabel.on{color:var(--ink);font-weight:700;font-size:20px;cursor:default}
+.card{position:absolute;left:800px;top:530px;width:1024px;height:316px;border:1px solid var(--rule);border-radius:var(--radius);background:#FFFFFF;padding:32px 40px}
+.card .phase{font-size:15px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted)}
+.card .name{font-family:Fraunces,Georgia,serif;font-size:34px;font-weight:600;margin-top:6px}
+.card .hero{font-family:Fraunces,Georgia,serif;font-size:50px;font-weight:600;letter-spacing:-0.5px;margin-top:10px}
+.card .hsub{font-size:20px;color:var(--muted);margin-top:6px}
+.card .para{font-size:21px;line-height:1.4;margin-top:12px}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.chip{border:1px solid var(--rule);border-radius:8px;padding:5px 12px;font-size:16px;font-weight:600}
+.chip.out{background:var(--ink);color:#FFFFFF}
+.btn{position:absolute;top:876px;font-size:21px;font-weight:700;cursor:pointer;border-bottom:2px solid transparent;padding-bottom:3px;user-select:none}
+.btn:hover{border-bottom-color:var(--ink)}
+.btn.off{opacity:.3;cursor:default;pointer-events:none}
+#btnPrev{left:800px}
+#btnNext{right:96px}
+.pager{position:absolute;top:878px;left:0;right:0;text-align:center;font-size:20px;color:var(--muted)}
+.hint{position:absolute;left:96px;top:968px;font-size:17px;color:var(--muted)}
+nav.sections{position:absolute;left:0;right:0;bottom:22px;display:flex;justify-content:center;gap:40px;font-size:19px;color:var(--muted)}
+nav.sections a{color:var(--muted);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent;cursor:pointer;transition:color .15s,border-color .15s}
+nav.sections a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+nav.sections a.current{color:var(--ink);font-weight:700}
+nav.sections a.off{opacity:.45;cursor:default;pointer-events:none}
+</style>
+</head>
+<body>
+<div id="stage">
+  <h1>The cube in use</h1>
+  <div class="sub">Three phases, one drink in the glass. The timings are model estimates.</div>
+
+  <div class="pic" id="pic">
+    <img class="on" src="renders/product_whole.png" alt="Whole lemon cube">
+    <img src="renders/product_fragments.png" alt="Cube broken into pieces">
+    <img src="renders/product_residue.png" alt="Small pieces left after breaking up">
+  </div>
+  <div class="phasecap" id="phasecap">Phase 1: the cube, whole.</div>
+
+  <div class="line"></div>
+  <div id="nodes"></div>
+
+  <div class="card" id="card">
+    <div class="phase" id="d-phase"></div>
+    <div class="name" id="d-name"></div>
+    <div class="hero" id="d-hero"></div>
+    <div class="hsub" id="d-hsub"></div>
+    <div class="para" id="d-para"></div>
+    <div class="chips" id="d-chips"></div>
+  </div>
+
+  <div class="btn" id="btnPrev">Back</div>
+  <div class="pager" id="pager">1 of 3</div>
+  <div class="btn" id="btnNext">Next</div>
+  <div class="hint">Select a phase, or use the arrow keys.</div>
+
+  <nav class="sections">
+    <a data-href="exec_summary_v3.html">Opening</a>
+    <a>The case</a>
+    <a class="current">The product</a>
+    <a class="off">Economics</a>
+    <a class="off">Plan</a>
+    <a class="off">Appendix</a>
+  </nav>
+</div>
+<script>
+const PHASES = [
+  { phase: 'Phase 1 of 3', name: 'The cube', hero: 'Shelf life: out of scope',
+    hsub: 'The storage test (35 C for 8 weeks, assumption) is planned before pack print.',
+    para: 'A dry 14 mm cube of 3.82 g with 55 mg of sucralose. Its shelf life is not measured in this proposal.',
+    chips: [['Out of scope: shelf life', true], ['Storage test planned before pack print', false]],
+    cap: 'Phase 1: the cube, whole.' },
+  { phase: 'Phase 2 of 3', name: 'Dropped into water', hero: '6 min stirred, 11 min still',
+    hsub: 'Central model estimate at 25 C. Across the assumed ranges: 3 to 74 minutes.',
+    para: 'This holds only if the cube breaks into fine pieces. The time is a model estimate, not a measurement.',
+    chips: [['Out of scope: dissolution in a glass', true], ['Break-up time to be measured', false]],
+    cap: 'Phase 2: the cube breaks into pieces.' },
+  { phase: 'Phase 3 of 3', name: 'Ready to drink', hero: '1.7 to 3.4 hours',
+    hsub: 'Above the 0.44 g/L sparkling threshold by surface loss alone, model estimate at 20 C.',
+    para: 'Bubble loss could cut this to about 15 minutes. Below 41% dissolved at serve, the drink starts under the threshold.',
+    chips: [['Out of scope: taste', true], ['Out of scope: bubble behaviour in a glass', true]],
+    cap: 'Phase 3: small pieces remain as the drink is made.' },
+];
+let cur = 0;
+const $ = id => document.getElementById(id);
+const imgs = [...document.querySelectorAll('#pic img')];
+
+function slot(x, idx, isCentre) {
+  const wrap = document.createElement('div');
+  if (idx < 0 || idx > 2) {
+    const e = document.createElement('div'); e.className = 'node empty'; e.style.left = x + 'px'; wrap.appendChild(e);
+  } else {
+    const n = document.createElement('div');
+    n.className = 'node ' + (isCentre ? 'big' : 'small');
+    n.style.left = x + 'px';
+    n.textContent = String(idx + 1);
+    if (!isCentre) n.addEventListener('click', () => setPhase(idx));
+    wrap.appendChild(n);
+    const l = document.createElement('div');
+    l.className = 'nlabel' + (isCentre ? ' on' : '');
+    l.style.left = x + 'px';
+    l.textContent = PHASES[idx].name;
+    if (!isCentre) l.addEventListener('click', () => setPhase(idx));
+    wrap.appendChild(l);
+  }
+  return wrap;
+}
+
+function render() {
+  const nodes = $('nodes'); nodes.innerHTML = '';
+  nodes.appendChild(slot(940, cur - 1, false));
+  nodes.appendChild(slot(1280, cur, true));
+  nodes.appendChild(slot(1620, cur + 1, false));
+  const p = PHASES[cur];
+  $('d-phase').textContent = p.phase;
+  $('d-name').textContent = p.name;
+  $('d-hero').textContent = p.hero;
+  $('d-hsub').textContent = p.hsub;
+  $('d-para').textContent = p.para;
+  const chips = $('d-chips'); chips.innerHTML = '';
+  p.chips.forEach(([t, out]) => { const c = document.createElement('span'); c.className = 'chip' + (out ? ' out' : ''); c.textContent = t; chips.appendChild(c); });
+  imgs.forEach((im, i) => im.classList.toggle('on', i === cur));
+  $('phasecap').textContent = p.cap;
+  $('pager').textContent = (cur + 1) + ' of 3';
+  $('btnPrev').classList.toggle('off', cur === 0);
+  $('btnNext').classList.toggle('off', cur === 2);
+}
+function setPhase(i) { cur = Math.max(0, Math.min(2, i)); render(); }
+$('btnPrev').addEventListener('click', () => setPhase(cur - 1));
+$('btnNext').addEventListener('click', () => setPhase(cur + 1));
+addEventListener('keydown', e => { if (e.key === 'ArrowRight') setPhase(cur + 1); if (e.key === 'ArrowLeft') setPhase(cur - 1); });
+document.querySelectorAll('nav.sections a[data-href]').forEach(a => a.addEventListener('click', () => { location.href = a.dataset.href; }));
+render();
+</script>
+</body>
+</html>

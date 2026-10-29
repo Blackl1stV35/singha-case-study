@@ -1,0 +1,342 @@
+{
+  "task": "T2 Coca-Cola system check, 20 October 2026 (68a revision)",
+  "method": "per can = pack / cans; per 330 mL = per can x 330 / can size; no rounding before comparison; ratios shown to 1 or 2 decimals after computation",
+  "inputs_note": "Each input carries the raw file it was read from (rework/raw/diligence_2026-10-20/T2/ unless stated).",
+  "shelf_prices": {
+    "sprite_no_sugar_24_pack": [
+      {
+        "label": "Sprite No Sugar 325 mL x 24, Coca-Cola Official Store (LazMall), via Priceza",
+        "pack": 334.0,
+        "cans": 24,
+        "ml": 325,
+        "src": "priceza_sprite_2026-10-20.md row 9",
+        "per_can": 13.92,
+        "per_330": 14.13,
+        "per_litre": 42.8
+      },
+      {
+        "label": "Sprite No Sugar 325 mL x 24, Lazada trending page (seller not stated)",
+        "pack": 365.0,
+        "cans": 24,
+        "ml": 325,
+        "src": "retail_prices_2026-10-20.md (Lazada block)",
+        "per_can": 15.21,
+        "per_330": 15.44,
+        "per_litre": 46.8
+      },
+      {
+        "label": "Sprite No Sugar 325 mL x 24, Fresh Mart, via Priceza",
+        "pack": 414.0,
+        "cans": 24,
+        "ml": 325,
+        "src": "priceza_sprite_2026-10-20.md row 18",
+        "per_can": 17.25,
+        "per_330": 17.52,
+        "per_litre": 53.1
+      },
+      {
+        "label": "Sprite No Sugar 325 mL x 24, CR7 ManU, via Priceza",
+        "pack": 456.0,
+        "cans": 24,
+        "ml": 325,
+        "src": "priceza_sprite_2026-10-20.md row 10",
+        "per_can": 19.0,
+        "per_330": 19.29,
+        "per_litre": 58.5
+      }
+    ],
+    "sprite_no_sugar_24_pack_summary": {
+      "listings_used": 4,
+      "min_per_330": 14.13,
+      "max_per_330": 19.29,
+      "median_per_330": 16.48,
+      "excluded_bundle": "LazMall 325 mL x 24 with Halls XS candy, THB 328, row 22 (bundle, not used)"
+    },
+    "sprite_no_sugar_24_pack_median_check_16_48": true,
+    "singles_and_others": [
+      {
+        "label": "Sprite (regular) 325 mL can, Lotus's Shop Online (sugar wording not stated on page)",
+        "pack": 16.0,
+        "cans": 1,
+        "ml": 325,
+        "src": "lotus_sprite_can_2026-10-20.md",
+        "per_can": 16.0,
+        "per_330": 16.25,
+        "per_litre": 49.2
+      },
+      {
+        "label": "Sprite No Sugar 325 mL can, Tops Online (UNVERIFIED lead, HTTP 403, not used in any range)",
+        "pack": 16.0,
+        "cans": 1,
+        "ml": 325,
+        "src": "retail_prices_2026-10-20.md (lead only)",
+        "per_can": 16.0,
+        "per_330": 16.25,
+        "per_litre": 49.2
+      },
+      {
+        "label": "Sprite Lemon Plus 325 mL can, planning reference 2022 (dated)",
+        "pack": 15.0,
+        "cans": 1,
+        "ml": 325,
+        "src": "sprite_fanta_schweppes_launch_releases.md item 2",
+        "per_can": 15.0,
+        "per_330": 15.23,
+        "per_litre": 46.2
+      },
+      {
+        "label": "Sprite No Sugar 325 mL can, first release 2019 (dated)",
+        "pack": 14.0,
+        "cans": 1,
+        "ml": 325,
+        "src": "sprite_fanta_schweppes_launch_releases.md item 1",
+        "per_can": 14.0,
+        "per_330": 14.22,
+        "per_litre": 43.1
+      },
+      {
+        "label": "Schweppes Lime Soda Zero Sugar 330 mL x 6, Makro PRO (unavailable in area selected)",
+        "pack": 84.0,
+        "cans": 6,
+        "ml": 330,
+        "src": "retail_prices_2026-10-20.md (Makro PRO block)",
+        "per_can": 14.0,
+        "per_330": 14.0,
+        "per_litre": 42.4
+      },
+      {
+        "label": "Fanta Pineapple 325 mL x 6, Lazada trending page",
+        "pack": 85.0,
+        "cans": 6,
+        "ml": 325,
+        "src": "retail_prices_2026-10-20.md (Lazada block)",
+        "per_can": 14.17,
+        "per_330": 14.38,
+        "per_litre": 43.6
+      },
+      {
+        "label": "Coke No Sugar 330 mL x 12, Makro PRO",
+        "pack": 102.0,
+        "cans": 12,
+        "ml": 330,
+        "src": "retail_prices_2026-10-20.md (Makro PRO block)",
+        "per_can": 8.5,
+        "per_330": 8.5,
+        "per_litre": 25.8
+      },
+      {
+        "label": "7UP NS Strawberry Lemon 325 mL x 6, Lazada (context, other brand)",
+        "pack": 75.0,
+        "cans": 6,
+        "ml": 325,
+        "src": "retail_prices_2026-10-20.md (Lazada block)",
+        "per_can": 12.5,
+        "per_330": 12.69,
+        "per_litre": 38.5
+      },
+      {
+        "label": "SINGHA LEMON SODA can 330 mL, Lotus's Shop Online (proposer's own product)",
+        "pack": 17.0,
+        "cans": 1,
+        "ml": 330,
+        "src": "lotus_singha_lemon_soda_can_2026-10-20.md",
+        "per_can": 17.0,
+        "per_330": 17.0,
+        "per_litre": 51.5
+      }
+    ],
+    "cube_planning_price_thb_per_330_ASSUMPTION": 15.0,
+    "cube_minus_listing_per_330": {
+      "Sprite No Sugar 325 mL x 24, Coca-Cola Official Store (LazMall), via Priceza": 0.87,
+      "Sprite No Sugar 325 mL x 24, Lazada trending page (seller not stated)": -0.44,
+      "Sprite No Sugar 325 mL x 24, Fresh Mart, via Priceza": -2.52,
+      "Sprite No Sugar 325 mL x 24, CR7 ManU, via Priceza": -4.29,
+      "Schweppes Lime Soda Zero Sugar 330 mL x 6 (Makro PRO)": 1.0,
+      "Sprite (regular) 325 mL can (Lotus's), per 330 mL": -1.25,
+      "SINGHA LEMON SODA can 330 mL (Lotus's)": -2.0
+    }
+  },
+  "coca_cola_company_group_usd_m": {
+    "FY2023": {
+      "gross_margin_pct": 59.5,
+      "net_margin_pct": 23.4
+    },
+    "FY2024": {
+      "gross_margin_pct": 61.1,
+      "net_margin_pct": 22.6
+    },
+    "FY2025": {
+      "gross_margin_pct": 61.6,
+      "net_margin_pct": 27.3
+    }
+  },
+  "thainamthip_tncc_thb_m": {
+    "FY2022": {
+      "gross_margin_on_sales_of_goods_pct": 38.2,
+      "net_margin_on_total_revenue_pct": 8.6
+    },
+    "FY2023": {
+      "gross_margin_on_sales_of_goods_pct": 38.6,
+      "net_margin_on_total_revenue_pct": 8.6
+    },
+    "FY2024": {
+      "gross_margin_on_sales_of_goods_pct": 38.5,
+      "net_margin_on_total_revenue_pct": 10.6
+    },
+    "6M2024": {
+      "gross_margin_on_sales_of_goods_pct": 38.9,
+      "net_margin_on_total_revenue_pct": 9.6
+    },
+    "6M2025": {
+      "gross_margin_on_sales_of_goods_pct": 39.2,
+      "net_margin_on_total_revenue_pct": 5.2
+    }
+  },
+  "thainamthip_growth_pct": {
+    "total_rev_FY2023_vs_FY2022": 9.2,
+    "total_rev_FY2024_vs_FY2023": 5.1,
+    "total_rev_6M2025_vs_6M2024": -14.9,
+    "net_profit_6M2025_vs_6M2024": -53.7
+  },
+  "thainamthip_channels_fy2024": {
+    "modern_trade": {
+      "thb_m": 19917.5,
+      "pct_of_sales_goods": 50.0
+    },
+    "traditional_trade": {
+      "thb_m": 19136.8,
+      "pct_of_sales_goods": 48.0
+    },
+    "laos_and_export": {
+      "thb_m": 774.1,
+      "pct_of_sales_goods": 1.9
+    },
+    "sum_check_vs_sales_goods": -0.07
+  },
+  "thainamthip_6M2025_lines": {
+    "cola_pct_change": -14.7,
+    "other_carbonated_pct_change": -20.2,
+    "volume_pct_change_181_vs_216_million_cases": -16.2
+  },
+  "thainamthip_carbonated_plausibility": {
+    "carbonated_revenue_fy2024_thb_m": 35669.21,
+    "implied_market_at_51_4pct_thb_bn": 69.4,
+    "carbonated_as_pct_of_press_market_66_bn": 54.0,
+    "carbonated_as_pct_of_press_market_76_9_bn": 46.4,
+    "note": "A bracket only. It shows the 51.4 per cent share is consistent with a ThaiNamthip-only reading; it is not a share estimate."
+  },
+  "capacity_utilisation_fy2024": {
+    "400m_on_564m_pct": 70.9,
+    "404m_on_564m_pct": 71.6,
+    "400m_on_450m_pct": 88.9,
+    "404m_on_450m_pct": 89.8
+  },
+  "haad_thip_thb_m": {
+    "FY2023_net_margin_on_total_rev_pct": 7.6,
+    "FY2024_net_margin_on_total_rev_pct": 7.3,
+    "FY2024_gross_margin_derived_pct": 42.7,
+    "FY2025_net_margin_on_sales_pct": 6.9,
+    "FY2025_net_margin_company_page_pct": 6.9,
+    "FY2025_revenue_growth_on_FY2024_total_rev_8189_09_pct": 0.8,
+    "FY2025_revenue_growth_on_FY2024_total_rev_if_8368_pct": 2.2,
+    "FY2024_sales_comparator_implied_by_release_1_6_pct": 8128.3,
+    "FY2025_net_profit_change_release_pct": -5.6
+  },
+  "gross_margin_gap_owner_minus_tncc_fy2024_pts": 22.6,
+  "thainamthip_shareholding_p": {
+    "ipo_new_shares_plus_before_equals_after": true,
+    "put_option_shares_added_to_swb_equals_put_case": true,
+    "computed_pct": {
+      "swb_before": 55.59,
+      "swb_after_ipo": 50.03,
+      "swb_after_put_option_ipo": 54.54,
+      "tntl_before": 29.95,
+      "tntl_after_ipo": 26.95
+    },
+    "printed_pct": {
+      "swb_before": 55.59,
+      "swb_after_ipo": 50.03,
+      "swb_after_put_option_ipo": 54.54,
+      "tntl_before": 29.95,
+      "tntl_after_ipo": 26.95
+    },
+    "computed_matches_printed": {
+      "swb_before": true,
+      "swb_after_ipo": true,
+      "swb_after_put_option_ipo": true,
+      "tntl_before": true,
+      "tntl_after_ipo": true
+    },
+    "put_option_cap_usd_m_printed": 250,
+    "tier": "P: all five percentages are printed in the filing (Version 2, page 9); the computed values match them. The put option case is a filing assumption, and the filing says the actual steps may change."
+  },
+  "coca_cola_company_gm_printed_check": {
+    "FY2024": {
+      "printed_pct": 61.1,
+      "computed_pct": 61.1,
+      "matches": true
+    },
+    "FY2025": {
+      "printed_pct": 61.6,
+      "computed_pct": 61.6,
+      "matches": true
+    },
+    "FY2023": {
+      "printed_pct": null,
+      "computed_pct": 59.5,
+      "note": "not printed in the extract; DERIVED only"
+    },
+    "tier": "FY2024 and FY2025 gross margins are printed (P, Form 10-K FY2025 extract, section C, line 34 of ko_group_income_statement_fy2022_fy2025.md); FY2023 and all net margins are DERIVED from the printed revenue, gross profit and net income."
+  },
+  "haad_thip_southern_carbonated_78_2_attribution": {
+    "value": "78.2% share of southern carbonated soft drinks, 2025",
+    "thai_press_3_march_2026": "credits Nielsen (Thailand) for 23.2% (NARTD) and for 78.2% (carbonated); basis not stated",
+    "marketeer_24_march_2026": "78.2% sentence has no source in the sentence; infographic source line reads Haad Thip company, March 2026; 23.2% described as by value",
+    "status": "S, attribution conflicting; not described as the company's claim alone",
+    "saved": "haadthip_results_press_2024_2026.md; haadthip_78_2_attribution_2026-10-20.md",
+    "judge_text": "not used in judge-facing text (proposal 11 section 2.3 paragraph in rev 2 leaves it out)"
+  },
+  "other_carbonated_line_brand_membership": {
+    "filing_revenue_line": "2. other carbonated soft drinks (เครื่องดื่มอัดลมประเภทอื่นๆ), Version 2 PDF page 10 revenue table; 6M 2025 on PDF page 23",
+    "filing_brand_split": "not given in the pages read",
+    "authorised_brands_named_on_page_7": "Coca-Cola, Fanta, Sprite, Schweppes, Minute Maid, A&W (Thailand only), Fuze Tea and Namthip",
+    "team_reading": "other carbonated line = Fanta, Sprite, Schweppes (non-alcoholic) and A&W; a reading by elimination, not a filing statement",
+    "schweppes_mixed": "alcoholic ready-to-drink; the filing reports it in row 5 'other (1)' with footnote (1), not in the carbonated line"
+  },
+  "reopen_and_record_text_checks": {
+    "swire_tncc_subsidiary_30_sept_2024_on_reopened_page": true,
+    "swire_laos_date_absent_on_reopened_page": true,
+    "lazada_original_delivery_text_saved": true,
+    "lazada_no_sugar_delivery_text_saved": true,
+    "makro_unavailable_text_saved": true,
+    "marketeer_79_3_no_year_no_source_saved": true,
+    "thai_name_spelled_with_long_vowel_in_v2_extract": true,
+    "v2_header_states_verbatim_on_pages_tested_in_rev3": true,
+    "v1_header_states_v1_not_retested": true,
+    "printed_digits_present_in_saved_v2_extract": {
+      "51.4": true,
+      "47.9": true,
+      "66.0": true,
+      "27.5": true,
+      "15.6": true,
+      "511,000": true,
+      "564": true,
+      "55.59": true,
+      "50.03": true,
+      "54.54": true,
+      "29.95": true,
+      "26.95": true,
+      "181": true,
+      "216": true,
+      "5,080.19": true,
+      "6,365.02": true
+    },
+    "record_section_10_has_no_internal_note_on_haad_thip_press_credit": true,
+    "record_section_10_has_no_em_or_en_dash_or_middle_dot": true,
+    "record_section_5_haad_thip_79_3_labelled_undated": true,
+    "record_section_10_has_no_planning_price_wording": true,
+    "all_text_checks_pass_except_digit_table": true,
+    "digit_table_all_present": true,
+    "tier": "Text checks against the saved extracts (tool extracts, not raw page text). They confirm that the quoted wording is saved and that the record carries no internal note or dash in section 10. They do not verify the PDF text layer."
+  }
+}

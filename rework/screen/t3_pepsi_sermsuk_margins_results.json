@@ -1,0 +1,534 @@
+{
+  "script": "rework/screen/t3_pepsi_sermsuk_margins.py",
+  "seed": "none (no random numbers)",
+  "sermsuk_consolidated_thb_million_fye_30_sep": {
+    "FY2022": {
+      "year_end": "2022-09-30",
+      "sales": 10905,
+      "cost_of_sales": 7824,
+      "net_profit": 13,
+      "gross_profit": 3081,
+      "gross_margin_pct": 28.25,
+      "gross_margin_pct_4dp": 28.2531,
+      "net_margin_pct": 0.12,
+      "net_margin_pct_4dp": 0.1192,
+      "gross_profit_unrounded_form250_2": 3081.31,
+      "gross_margin_pct_from_unrounded_form250_2": 28.26,
+      "gross_margin_pct_as_filed_form250_2": 28.26,
+      "filed_minus_mdna_computed_point": 0.01
+    },
+    "FY2023": {
+      "year_end": "2023-09-30",
+      "sales": 12371,
+      "cost_of_sales": 8870,
+      "net_profit": 248,
+      "gross_profit": 3501,
+      "gross_margin_pct": 28.3,
+      "gross_margin_pct_4dp": 28.3001,
+      "net_margin_pct": 2.0,
+      "net_margin_pct_4dp": 2.0047,
+      "gross_profit_unrounded_form250_2": 3501.57,
+      "gross_margin_pct_from_unrounded_form250_2": 28.3,
+      "gross_margin_pct_as_filed_form250_2": 28.3,
+      "filed_minus_mdna_computed_point": 0.0,
+      "sales_growth_pct": 13.44
+    },
+    "FY2024": {
+      "year_end": "2024-09-30",
+      "sales": 13153,
+      "cost_of_sales": 9306,
+      "net_profit": 404,
+      "gross_profit": 3847,
+      "gross_margin_pct": 29.25,
+      "gross_margin_pct_4dp": 29.2481,
+      "net_margin_pct": 3.07,
+      "net_margin_pct_4dp": 3.0715,
+      "sales_growth_pct": 6.32
+    }
+  },
+  "sermsuk_cost_shares_fy2024": {
+    "sales": 13153,
+    "cost_of_sales_pct": 70.75,
+    "distribution_costs": 3033,
+    "distribution_costs_pct": 23.06,
+    "administrative_expenses": 736,
+    "administrative_expenses_pct": 5.6
+  },
+  "sermsuk_revenue_structure_thb_million": {
+    "FY2023_carbonated": 4550.15,
+    "FY2023_total": 12371.03,
+    "FY2023_carbonated_share_pct": 36.78
+  },
+  "sermsuk_stated_gross_margin_pct_form250_2": {
+    "FY2021": 30.93,
+    "FY2022": 28.26,
+    "FY2023": 28.3,
+    "9M_2024": 29.47
+  },
+  "sermsuk_average_selling_price_carbonated": {
+    "carbonated_thb_per_litre": 18.42,
+    "per_330ml": 6.08,
+    "est_volume_Oct2023_Sep2024_million_litres_IFA": 275.6
+  },
+  "pepsico_inc_consolidated_usd_million_fye_last_sat_dec": {
+    "FY2023": {
+      "year_end": "2023-12-30",
+      "revenue": 91471,
+      "gross_profit": 49590,
+      "net_income_to_pepsico": 9074,
+      "gross_margin_pct": 54.21,
+      "net_margin_pct": 9.92
+    },
+    "FY2024": {
+      "year_end": "2024-12-28",
+      "revenue": 91854,
+      "gross_profit": 50110,
+      "net_income_to_pepsico": 9578,
+      "gross_margin_pct": 54.55,
+      "net_margin_pct": 10.43
+    },
+    "FY2025": {
+      "year_end": "2025-12-27",
+      "revenue": 93925,
+      "gross_profit": 50859,
+      "net_income_to_pepsico": 8240,
+      "gross_margin_pct": 54.15,
+      "net_margin_pct": 8.77
+    }
+  },
+  "thaibev_non_alcoholic_segment_thb_million_fye_30_sep": {
+    "FY2024": {
+      "sales": 65802,
+      "gross_profit": 23688,
+      "profit_for_year": 5934,
+      "attributable": 1455,
+      "gross_margin_pct": 36.0,
+      "profit_for_year_margin_pct": 9.02,
+      "attributable_margin_pct": 2.21
+    },
+    "FY2025": {
+      "sales": 64774,
+      "gross_profit": 23694,
+      "profit_for_year": 5141,
+      "attributable": 2414,
+      "gross_margin_pct": 36.58,
+      "profit_for_year_margin_pct": 7.94,
+      "attributable_margin_pct": 3.73
+    },
+    "FY2023_derived": {
+      "sales": 63143,
+      "gross_profit": 21323,
+      "profit_for_year": 5430,
+      "attributable": 1196,
+      "gross_margin_pct": 33.77,
+      "profit_for_year_margin_pct": 8.6,
+      "attributable_margin_pct": 1.89
+    }
+  },
+  "suntory_beverage_food_asia_pacific_segment_fy2022_proxy": {
+    "revenue_jpy_billion": 359.4,
+    "revenue_growth_pct_as_printed": 21.4,
+    "segment_profit_jpy_billion": 56.4,
+    "segment_profit_growth_pct_as_printed": 42.0,
+    "segment_profit_margin_pct": 15.69,
+    "prior_year_revenue_jpy_billion_derived": 296.0,
+    "prior_year_segment_profit_jpy_billion_derived": 39.7,
+    "prior_year_segment_profit_margin_pct_derived": 13.41,
+    "tier": "PROXY (P filing; Asia Pacific segment, not Thailand-only; segment profit, not gross or net margin)",
+    "basis_note": "As first reported in the FY2022 report, Africa was inside Asia Pacific. The FY2023 report moved Africa to Europe and restated FY2022 (see the series below)."
+  },
+  "suntory_beverage_food_asia_pacific_segment_series_fy2022_restated_to_fy2025": {
+    "FY2022_restated_new_basis": {
+      "source": "FY2023 annual securities report (S100T62P), prior-year column of the segment table",
+      "revenue_jpy_m": 352615,
+      "segment_profit_jpy_m": 57731,
+      "segment_profit_margin_pct": 16.37,
+      "tier": "PROXY (P filing; segment profit ratio; Asia Pacific, not Thailand-only; not a gross or net margin)"
+    },
+    "FY2023": {
+      "source": "FY2023 annual securities report (S100T62P), segment table, year 2023",
+      "revenue_jpy_m": 371435,
+      "segment_profit_jpy_m": 43075,
+      "revenue_growth_pct_as_printed": 5.3,
+      "revenue_growth_cc_pct_as_printed": 0.0,
+      "segment_profit_growth_pct_as_printed": -25.4,
+      "segment_profit_growth_cc_pct_as_printed": -27.7,
+      "segment_profit_margin_pct": 11.6,
+      "tier": "PROXY (P filing; segment profit ratio; Asia Pacific, not Thailand-only; not a gross or net margin)"
+    },
+    "FY2024": {
+      "source": "FY2024 annual securities report (S100VHVQ), segment table, year 2024",
+      "revenue_jpy_m": 402049,
+      "segment_profit_jpy_m": 45404,
+      "revenue_growth_pct_as_printed": 8.2,
+      "revenue_growth_cc_pct_as_printed": 3.1,
+      "segment_profit_growth_pct_as_printed": 5.4,
+      "segment_profit_growth_cc_pct_as_printed": 1.0,
+      "segment_profit_margin_pct": 11.29,
+      "tier": "PROXY (P filing; segment profit ratio; Asia Pacific, not Thailand-only; not a gross or net margin)"
+    },
+    "FY2025": {
+      "source": "FY2025 annual securities report (S100XSOA), segment table, year 2025",
+      "revenue_jpy_m": 394057,
+      "segment_profit_jpy_m": 42516,
+      "revenue_growth_pct_as_printed": -2.0,
+      "revenue_growth_cc_pct_as_printed": -1.6,
+      "segment_profit_growth_pct_as_printed": -6.4,
+      "segment_profit_growth_cc_pct_as_printed": -6.2,
+      "segment_profit_margin_pct": 10.79,
+      "tier": "PROXY (P filing; segment profit ratio; Asia Pacific, not Thailand-only; not a gross or net margin)"
+    }
+  },
+  "sbf_apac_fy23_vs_fy22_restated_change_pct": -25.4,
+  "sbf_apac_fy22_original_currency_neutral_profit_growth_pct_as_printed": 28.6,
+  "price_per_330ml_thb": {
+    "7UP Zero Sugar Lemon Soda 325 mL x6, Lotus's (L5)": {
+      "price": 75,
+      "units": 6,
+      "unit_ml": 325,
+      "per_unit": 12.5,
+      "per_330ml": 12.69
+    },
+    "7UP no-sugar lemon soda 325 mL single can, Lotus's Shop Online row on Priceza (P3)": {
+      "price": 16,
+      "units": 1,
+      "unit_ml": 325,
+      "per_unit": 16.0,
+      "per_330ml": 16.25
+    },
+    "7UP lemon soda no sugar 325 mL x6, Suntory PepsiCo official store, LazMall via Priceza (P3)": {
+      "price": 96,
+      "units": 6,
+      "unit_ml": 325,
+      "per_unit": 16.0,
+      "per_330ml": 16.25
+    },
+    "7UP lemon soda no sugar 325 mL x24, Suntory PepsiCo official store, LazMall via Priceza (P3)": {
+      "price": 293,
+      "units": 24,
+      "unit_ml": 325,
+      "per_unit": 12.21,
+      "per_330ml": 12.4
+    },
+    "est cola 325 mL x6, Makro PRO cash-and-carry listing (T4)": {
+      "price": 79,
+      "units": 6,
+      "unit_ml": 325,
+      "per_unit": 13.17,
+      "per_330ml": 13.37
+    },
+    "est cola 325 mL x6, 7-Eleven online (T4)": {
+      "price": 138,
+      "units": 6,
+      "unit_ml": 325,
+      "per_unit": 23.0,
+      "per_330ml": 23.35
+    },
+    "est Sugar Free (flavour not stated) 325 mL x6, Lazada seller Sermsuk Click via Priceza (T4)": {
+      "price": 99,
+      "units": 6,
+      "unit_ml": 325,
+      "per_unit": 16.5,
+      "per_330ml": 16.75
+    },
+    "Pepsi 325 mL x6, 7-Eleven online (capture 19)": {
+      "price": 167,
+      "units": 6,
+      "unit_ml": 325,
+      "per_unit": 27.83,
+      "per_330ml": 28.26
+    },
+    "Sprite 325 mL x6, Lotus's (L2)": {
+      "price": 85,
+      "units": 6,
+      "unit_ml": 325,
+      "per_unit": 14.17,
+      "per_330ml": 14.38
+    },
+    "Singha Lemon Soda 330 mL x6, Lotus's (L8)": {
+      "price": 85,
+      "units": 6,
+      "unit_ml": 330,
+      "per_unit": 14.17,
+      "per_330ml": 14.17
+    },
+    "Singha Lemon Soda 330 mL single, Lotus's (L7)": {
+      "price": 17,
+      "units": 1,
+      "unit_ml": 330,
+      "per_unit": 17.0,
+      "per_330ml": 17.0
+    },
+    "Singha Lemon Soda 330 mL x6, 7-Eleven online (A2)": {
+      "price": 172,
+      "units": 6,
+      "unit_ml": 330,
+      "per_unit": 28.67,
+      "per_330ml": 28.67
+    }
+  },
+  "price_position_of_lemon_soda_assumption": {
+    "lotus_six_pack_per330": {
+      "7UP Zero Sugar Lemon Soda": 12.69,
+      "Sprite": 14.38
+    },
+    "lotus_six_pack_range": [
+      12.69,
+      14.38
+    ],
+    "single_can_per330": {
+      "7UP no-sugar lemon soda (Lotus's Shop Online row on Priceza)": 16.25
+    },
+    "single_can_range": [
+      16.25,
+      16.25
+    ],
+    "cube_shelf_price_per330_assumption": 15.0,
+    "cube_between_six_pack_max_and_single_can_min": true,
+    "singha_reference_rows": {
+      "note": "Reference only. Lotus's Singha Lemon Soda rows (S). The deck and submission say the Singha can price is not verified, so these rows are not used in the judge text. Record section 12 lists the conflict.",
+      "six_pack_per330_lotus": 14.17,
+      "single_can_per330_lotus": 17.0,
+      "six_pack_per330_7eleven_online": 28.67
+    },
+    "note": "The 7UP official store on LazMall prices its own six-pack at the single-can level (16.25 per 330 mL) and its 24-pack at 12.40, so the multipack level is not uniform across retailers. Judge-text ranges use only the 7UP rows and the Sprite six-pack."
+  },
+  "ranges": {
+    "7UP_zero_sugar_lemon_per330_min_max": [
+      12.4,
+      16.25
+    ],
+    "cube_shelf_price_per330_assumption": 15.0
+  },
+  "ratio_7eleven_online_to_lotus_singha_6pack": 2.02,
+  "mass_packed_unit_vs_liquid": {
+    "tier": "DERIVED from an ASSUMPTION input (pouch 1.5 g). The dry mass 3.79 g is the deck's central figure and includes the binder; nothing was weighed",
+    "packed_unit_g": 5.29,
+    "dry_cube_g": 3.79,
+    "dry_mass_formulation_sum_g_check": 3.793,
+    "binder_inside_dry_mass_g": 0.8,
+    "pouch_g_assumption": 1.5,
+    "liquid_330ml_g": 330.0,
+    "packed_unit_pct_of_liquid": 1.6,
+    "dry_cube_pct_of_liquid": 1.15,
+    "liquid_to_packed_unit_ratio": 62.4,
+    "dry_cube_allowance_range_g": [
+      3.46,
+      4.24
+    ],
+    "packed_unit_pct_of_liquid_over_allowance_range": [
+      1.5,
+      1.74
+    ],
+    "dry_cube_pct_of_liquid_over_allowance_range": [
+      1.05,
+      1.28
+    ]
+  },
+  "share_reports_as_printed": [
+    {
+      "date": "2023-03-13",
+      "est_pct": 8.0,
+      "basis": "not stated",
+      "source": "Thansettakij 558785 (via T4)",
+      "sum_of_printed_shares": null
+    },
+    {
+      "date": "2023-03-21",
+      "est_pct": 8.0,
+      "coke_pct": 51,
+      "pepsi_pct": 37,
+      "big_cola_pct": 3,
+      "others_pct": 1,
+      "basis": "ThaiBev table, partly Nielsen; year and measure not stated in the saved extract",
+      "source": "Positioning 1424257 (T1 file nielseniq_press_series_2023_2026.md, row 1; page not re-opened in T3)",
+      "sum_of_printed_shares": 100.0
+    },
+    {
+      "date": "2023-10-17",
+      "est_pct": 9.1,
+      "basis": "not stated; up from 7.1% before the rebrand",
+      "source": "Brand Buffet (T4 file est_market_2023_2025_brandbuffet_marketeer_thansettakij.md)",
+      "sum_of_printed_shares": null
+    },
+    {
+      "date": "2023-10-29",
+      "est_pct": 9.1,
+      "coke_pct": 54,
+      "pepsi_pct": 30,
+      "basis": "est volume share for August 2023, was 7%; Coke and Pepsi bases not stated",
+      "source": "Gotomanager 5234",
+      "sum_of_printed_shares": 93.1
+    },
+    {
+      "date": "2024-03-15",
+      "est_pct": 8.9,
+      "basis": "volume (as printed by Marketeer)",
+      "source": "Marketeer 345506 (T4 file est_market_2023_2025_brandbuffet_marketeer_thansettakij.md)",
+      "sum_of_printed_shares": null
+    },
+    {
+      "date": "2024-03-16",
+      "est_pct": 8.6,
+      "coke_pct": 51,
+      "pepsi_pct": 30,
+      "basis": "est stated as volume; Coke and Pepsi measure and year not stated",
+      "source": "Thansettakij 590894",
+      "sum_of_printed_shares": 89.6
+    },
+    {
+      "date": "2024-04-15",
+      "est_pct": 9.0,
+      "coke_pct": 51,
+      "pepsi_pct": 30,
+      "basis": "not stated",
+      "source": "Thairath 2778345",
+      "sum_of_printed_shares": 90.0
+    },
+    {
+      "date": "2025-03-12",
+      "est_pct": 8.9,
+      "basis": "reference March 2024",
+      "source": "Marketeer 406131 (via T4)",
+      "sum_of_printed_shares": null
+    },
+    {
+      "date": "2025-03-26",
+      "coke_pct": 51,
+      "pepsi_pct": 39.1,
+      "basis": "of the dark cola market; year not stated",
+      "source": "Thansettakij 623088",
+      "sum_of_printed_shares": null
+    },
+    {
+      "date": "2025-04-03",
+      "est_pct": 8.9,
+      "coke_pct": 51,
+      "pepsi_pct": 39,
+      "big_cola_pct": 5,
+      "basis": "of the Thai carbonated soft drink market as printed; year and data owner not stated",
+      "source": "Thansettakij 624003",
+      "sum_of_printed_shares": 103.9
+    },
+    {
+      "date": "2025-04-17",
+      "coke_pct": 51,
+      "pepsi_pct": 39.1,
+      "basis": "of the dark cola segment; year not stated",
+      "source": "Brand Buffet suntory-pepsico-beverage-strategy-2025",
+      "sum_of_printed_shares": null
+    },
+    {
+      "date": "2025-03-30",
+      "pepsi_pct": 39.1,
+      "basis": "not stated; the article gives no basis for the 39.1 per cent (opened 20 October 2026; the investment and CEO remarks are attributed to Prachachat, not the share)",
+      "source": "Mini Me Insights, 30 March 2025 (opened; raw/diligence_2026-10-20/T3/mini_me_2025-03-30_opened_2026-10-20.md)",
+      "sum_of_printed_shares": null
+    },
+    {
+      "date": "2025-10-13",
+      "est_pct": 10.6,
+      "est_colour_soda_pct": 24.6,
+      "basis": "est total soda share, up from 7% before the rebrand; basis not stated; est number 2 in colour soda",
+      "source": "Thansettakij 641276 (T4 file est_thansettakij_2025-10-13_share_and_glow.md)",
+      "sum_of_printed_shares": null
+    }
+  ],
+  "share_summary": {
+    "est_min_pct": 8.0,
+    "est_max_pct": 10.6,
+    "est_reports": 10,
+    "latest_est_report": "2025-10-13, 10.6 (basis not stated)",
+    "pepsi_values_pct": [
+      30,
+      37,
+      39,
+      39.1
+    ],
+    "rows_summing_to_100": [
+      "2023-03-21"
+    ],
+    "rows_summing_over_100": [
+      "2025-04-03"
+    ],
+    "rows_with_a_sum": [
+      "2023-03-21",
+      "2023-10-29",
+      "2024-03-16",
+      "2024-04-15",
+      "2025-04-03"
+    ]
+  },
+  "market_value_statements_as_printed": [
+    {
+      "value": 62000,
+      "where": "Gotomanager 29 Oct 2023; Brand Buffet 17 Oct 2023; Thairath 10 Oct 2023",
+      "window": "not stated (Thairath: growth period Sep 2022 to Aug 2023)",
+      "tier": "S"
+    },
+    {
+      "value": 66000,
+      "where": "Thansettakij 16 Mar 2024; Marketeer 15 Mar 2024; MarketPlus 8 May 2024",
+      "window": "NielsenIQ, Feb 2023 to Jan 2024, +12%",
+      "tier": "S"
+    },
+    {
+      "value": 70772,
+      "where": "Thansettakij 14 Jan 2025",
+      "window": "NielsenIQ via ThaiBev, 12 months to Nov 2024, +9%",
+      "tier": "S"
+    },
+    {
+      "value": 68000,
+      "where": "Thansettakij 13 Oct 2025",
+      "window": "labelled 2024; may be a 2025 level (record 67)",
+      "tier": "S"
+    },
+    {
+      "value": 76900,
+      "where": "Kasikorn Research Center via Thansettakij 8 Sep 2025",
+      "window": "2025 estimate or forecast",
+      "tier": "S"
+    }
+  ],
+  "market_value_summary": {
+    "min": 62000,
+    "max": 76900,
+    "colour_soda_17391_pct_of_68000": 25.57,
+    "colour_soda_17391_pct_of_70772": 24.57,
+    "printed_share_of_total_pct_for_colour_soda": 30
+  },
+  "fourth_pass_thaibev_fy24_non_alcohol_basis": {
+    "sum_fy24_announcement_split": 27215,
+    "sum_fy25_comparative_split": 27215,
+    "both_splits_sum_to_27215": true,
+    "non_alcohol_reallocated_thb_million": 309,
+    "others_reallocated_thb_million": 309,
+    "fy24_vs_fy23_growth_pct_announcement_basis": 21.7,
+    "fy25_growth_pct_on_1146_base": 110.6,
+    "fy25_growth_pct_on_1455_base": 65.9,
+    "fy25_growth_as_printed_pct": 110.6,
+    "printed_growth_matches_1146_base": true,
+    "note": "The FY2025 comparative restates the FY2024 split: 309 million baht moves from Non-Alcohol to Others with the total unchanged. The FY2025 extract does not label it a restatement. The FY2024 announcement's by-business table prints a movement of 251 for Beer-row numbers, which does not reconcile to the narrative 259; the record uses the narrative (1,455 against 1,196)."
+  },
+  "fourth_pass_chang_scope_check": {
+    "fy25_implied_base_on_fy25_scope_mlitres": 132.9,
+    "fy24_printed_scope_mlitres": 122.8,
+    "implied_base_equals_fy24_printed": false,
+    "series_comparable": false,
+    "note": "The FY2025 line is 'Water & Soda'; the FY2024 line is 'Chang Soda and Chang Water'. The implied base of about 132.9 million litres does not equal the FY2024 printed 122.8, so the two rows are not one series and no growth rate is taken from them."
+  },
+  "fourth_pass_sugar_tax_ladder_check": {
+    "press_phase3_ladder_equals_gazette_1oct2564_row": true,
+    "press_phase3_period_1apr2023_to_31mar2025_is_a_gazette_period": false,
+    "gazette_row_in_force_from_1oct2566_nonzero_rates": [
+      1,
+      3,
+      5
+    ],
+    "press_phase4_low_0_3_appears_in_gazette_1oct2566_row": false,
+    "press_phase4_high_5_appears_in_gazette_1oct2566_row": true,
+    "phase4_notice_read": false,
+    "note": "The press phase 3 ladder matches the Gazette row for 1 Oct 2564 to 30 Sep 2566, not the period the press gives. The Gazette row in force from 1 Oct 2566 has no 0.3 rate, so the press phase 4 range (0.3 to 5) is not a schedule of that notice. Later amendments were not searched. Phase 4 is tier S (press only) and is a stated limit."
+  }
+}

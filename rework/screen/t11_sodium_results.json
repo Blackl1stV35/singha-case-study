@@ -1,0 +1,537 @@
+{
+  "task": "T11 sodium check, binder choice and label thresholds (second revision, 20 October 2026)",
+  "date_run": "2026-10-20",
+  "seed_recorded": 20261020,
+  "units": "mg per 330 mL serve unless stated",
+  "serve_ml": 330.0,
+  "reference_serving_ml_case1": 200.0,
+  "na_fraction_in_sodium_sulphate": 0.3237,
+  "components": [
+    {
+      "component": "Potassium bicarbonate (INS 501(ii)), food grade",
+      "mass_g_per_serve": 0.81,
+      "mass_tier": "DERIVED (stoichiometry, repo basis B)",
+      "sodium_wt_fraction_low": 0.0,
+      "sodium_wt_fraction_high": 0.001,
+      "sodium_high_tier": "ASSUMPTION",
+      "sodium_mg_per_serve_low": 0.0,
+      "sodium_mg_per_serve_high": 0.81,
+      "sodium_mg_per_100ml_low": 0.0,
+      "sodium_mg_per_100ml_high": 0.245,
+      "na_fraction_that_alone_reaches_5mg_per_serve_pct": 0.6173,
+      "basis": "Maker food-grade sales specification (Armand Products, rev. 05/22, read 20 Oct 2026) lists no sodium limit. Planning high case 0.1 wt% Na. Indicator only (S, different grade): the same maker's ACS-grade sheet limits Na to 0.03 wt% max.",
+      "indicator_sodium_mg_per_serve": 0.243,
+      "indicator_note": "S: Armand ACS-grade sheet, Na 0.03 wt% max (higher grade than food grade; sheet undated)"
+    },
+    {
+      "component": "Citric acid (INS 330)",
+      "mass_g_per_serve": 2.1,
+      "mass_tier": "DERIVED (repo basis B)",
+      "sodium_wt_fraction_low": 0.0,
+      "sodium_wt_fraction_high": 0.00016185,
+      "sodium_high_tier": "DERIVED from P",
+      "sodium_mg_per_serve_low": 0.0,
+      "sodium_mg_per_serve_high": 0.34,
+      "sodium_mg_per_100ml_low": 0.0,
+      "sodium_mg_per_100ml_high": 0.103,
+      "na_fraction_that_alone_reaches_5mg_per_serve_pct": 0.2381,
+      "basis": "FAO JECFA Monographs 16 (2014): sulfated ash not more than 0.05%. No sodium limit in the monograph text. Bound assumes all residue is sodium sulphate."
+    },
+    {
+      "component": "Sucralose (INS 955)",
+      "mass_g_per_serve": 0.033,
+      "mass_tier": "ASSUMPTION (about 33 mg, repo design)",
+      "sodium_wt_fraction_low": 0.0,
+      "sodium_wt_fraction_high": 0.00226592,
+      "sodium_high_tier": "DERIVED from P",
+      "sodium_mg_per_serve_low": 0.0,
+      "sodium_mg_per_serve_high": 0.075,
+      "sodium_mg_per_100ml_low": 0.0,
+      "sodium_mg_per_100ml_high": 0.023,
+      "na_fraction_that_alone_reaches_5mg_per_serve_pct": 15.1515,
+      "basis": "FAO JECFA Monograph (prepared 41st JECFA 1993, metals revised 63rd JECFA 2004), Additive 444: sulfated ash not more than 0.7%. Bound assumes all residue is sodium sulphate."
+    },
+    {
+      "component": "Lemon flavour (incl. carrier)",
+      "mass_g_per_serve": 0.05,
+      "mass_tier": "ASSUMPTION",
+      "sodium_wt_fraction_low": 0.0,
+      "sodium_wt_fraction_high": 0.01,
+      "sodium_high_tier": "ASSUMPTION",
+      "sodium_mg_per_serve_low": 0.0,
+      "sodium_mg_per_serve_high": 0.5,
+      "sodium_mg_per_100ml_low": 0.0,
+      "sodium_mg_per_100ml_high": 0.152,
+      "na_fraction_that_alone_reaches_5mg_per_serve_pct": 10.0,
+      "basis": "No flavour or carrier specification read (UNVERIFIED). 1 wt% planning value only."
+    },
+    {
+      "component": "Binder and filler: mannitol, tableting grade (INS 421), primary",
+      "mass_g_per_serve": 0.8,
+      "mass_tier": "ASSUMPTION (0.80 g, repo design)",
+      "sodium_wt_fraction_low": 0.0,
+      "sodium_wt_fraction_high": 0.0003237,
+      "sodium_high_tier": "DERIVED from P",
+      "sodium_mg_per_serve_low": 0.0,
+      "sodium_mg_per_serve_high": 0.259,
+      "sodium_mg_per_100ml_low": 0.0,
+      "sodium_mg_per_100ml_high": 0.078,
+      "na_fraction_that_alone_reaches_5mg_per_serve_pct": 0.625,
+      "basis": "FAO JECFA Monographs 1, Additive 275 (46th JECFA 1996; metals revised 2001): sulfated ash not more than 0.1%, chlorides not more than 70 mg/kg. Bound assumes all residue is sodium sulphate. A supplier tableting-grade sheet was not read."
+    },
+    {
+      "component": "Pouch film (migration to the cube during shelf life)",
+      "mass_g_per_serve": 0.0,
+      "mass_tier": "ASSUMPTION (no sodium-bearing layer assumed; migration not tested)",
+      "sodium_wt_fraction_low": 0.0,
+      "sodium_wt_fraction_high": 0.0,
+      "sodium_high_tier": "ASSUMPTION",
+      "sodium_mg_per_serve_low": 0.0,
+      "sodium_mg_per_serve_high": 0.0,
+      "sodium_mg_per_100ml_low": 0.0,
+      "sodium_mg_per_100ml_high": 0.0,
+      "na_fraction_that_alone_reaches_5mg_per_serve_pct": null,
+      "basis": "Film specification not supplied. No sodium-bearing layer assumed (ASSUMPTION), so the line is set to 0. The cube touches the film during shelf life, so the pouch being discarded before use does not remove the route. A sodium partial-salt ionomer seal layer is a permitted food-contact resin (21 CFR 177.1330, P), so the film specification must exclude it or a migration test must show no sodium. Migration was not tested (stated limit)."
+    }
+  ],
+  "fallback_binder_isomalt": {
+    "component": "Binder and filler: isomalt (INS 953), fallback",
+    "mass_g_per_serve": 0.8,
+    "sodium_wt_fraction_high": 0.00016185,
+    "sodium_high_tier": "DERIVED from P",
+    "sodium_mg_per_serve_low": 0.0,
+    "sodium_mg_per_serve_high": 0.129,
+    "sodium_mg_per_100ml_high": 0.039,
+    "basis": "FAO JECFA Monographs 5 (69th JECFA 2008), Isomalt: sulfated ash not more than 0.05%; water not more than 7.0%; reducing sugars not more than 0.3%. Bound assumes all residue is sodium sulphate."
+  },
+  "water": {
+    "low_mg_per_serve": 0.0,
+    "high_mg_per_serve": 6.6,
+    "low_mg_per_100ml": 0.0,
+    "high_mg_per_100ml": 2.0,
+    "tier": "P for the WHO typical value only (typically under 20 mg/L; can greatly exceed this); Thai water not measured",
+    "high_case_basis": "the WHO typical value of 20 mg per litre, used as the high end of the range for water at or below that level. It is not a ceiling: the WHO text says concentrations can greatly exceed it in some countries, and a Thai Department of Health nutritionist is reported to put tap water at 100 to 200 mg per litre (S). See water_sensitivity.",
+    "thai_reported_mg_per_l_range": [
+      100.0,
+      200.0
+    ],
+    "thai_reported_tier": "S (news report of a Department of Health nutritionist, Thai PBS World, 23 Feb 2021; page read through a fetch tool extraction)",
+    "thai_reported_mg_per_serve_range": [
+      33.0,
+      66.0
+    ]
+  },
+  "totals": {
+    "formula_ingredients_mg_per_serve": [
+      0.0,
+      1.984
+    ],
+    "formula_high_part_bounded_by_P_limits_mg": 0.674,
+    "formula_high_part_planning_values_mg": 1.31,
+    "total_with_water_mg_per_serve": [
+      0.0,
+      8.584
+    ],
+    "total_with_water_mg_per_100ml": [
+      0.0,
+      2.601
+    ],
+    "total_with_water_mg_per_litre": [
+      0.0,
+      26.012
+    ],
+    "formula_high_with_isomalt_fallback_mg_per_serve": 1.854,
+    "total_high_with_isomalt_fallback_mg_per_serve": 8.454,
+    "total_high_includes_assumed_planning_values": true
+  },
+  "claim_tests_table1_case1": {
+    "sodium-free (free of sodium)": {
+      "table1_limit_mg_per_serve_below": 5.0,
+      "limit_mg_per_litre_made_up_drink": 15.15,
+      "range_meets_on_estimate": "only at low end",
+      "measured_value_needed": "a measured sodium value for the made-up drink, below 5.0 mg per 330 mL"
+    },
+    "very low sodium": {
+      "table1_limit_mg_per_serve_below": 35.0,
+      "limit_mg_per_litre_made_up_drink": 106.06,
+      "range_meets_on_estimate": "yes for whole range",
+      "measured_value_needed": "a measured sodium value for the made-up drink, below 35.0 mg per 330 mL"
+    },
+    "low sodium": {
+      "table1_limit_mg_per_serve_below": 140.0,
+      "limit_mg_per_litre_made_up_drink": 424.24,
+      "range_meets_on_estimate": "yes for whole range",
+      "measured_value_needed": "a measured sodium value for the made-up drink, below 140.0 mg per 330 mL"
+    },
+    "water_sodium_ceiling_mg_per_l_if_formula_at_high_case": {
+      "sodium-free (free of sodium)": 9.14,
+      "very low sodium": 100.05,
+      "low sodium": 418.23
+    },
+    "water_sodium_ceiling_mg_per_l_if_formula_at_zero": {
+      "sodium-free (free of sodium)": 15.15,
+      "very low sodium": 106.06,
+      "low sodium": 424.24
+    },
+    "water_ceilings_both_bases_mg_per_l": {
+      "sodium-free (free of sodium)": {
+        "limit_mg": 5.0,
+        "consumed_330ml_formula_at_high_case": 9.14,
+        "consumed_330ml_formula_at_zero": 15.15,
+        "two_fold_reference_400ml_formula_at_high_case": 6.49,
+        "two_fold_reference_400ml_formula_at_zero": 12.5,
+        "binding_ceiling_if_both_bases_apply_formula_at_high_case": 6.49
+      },
+      "very low sodium": {
+        "limit_mg": 35.0,
+        "consumed_330ml_formula_at_high_case": 100.05,
+        "consumed_330ml_formula_at_zero": 106.06,
+        "two_fold_reference_400ml_formula_at_high_case": 81.49,
+        "two_fold_reference_400ml_formula_at_zero": 87.5,
+        "binding_ceiling_if_both_bases_apply_formula_at_high_case": 81.49
+      },
+      "low sodium": {
+        "limit_mg": 140.0,
+        "consumed_330ml_formula_at_high_case": 418.23,
+        "consumed_330ml_formula_at_zero": 424.24,
+        "two_fold_reference_400ml_formula_at_high_case": 343.99,
+        "two_fold_reference_400ml_formula_at_zero": 350.0,
+        "binding_ceiling_if_both_bases_apply_formula_at_high_case": 343.99
+      }
+    }
+  },
+  "claim_scenarios": {
+    "case1_consumed_serving_330ml": {
+      "sodium-free (free of sodium)": {
+        "limit_mg": 5.0,
+        "water_not_counted_high_mg": 1.984,
+        "water_not_counted": "passes across the estimated range",
+        "water_counted_high_mg": 8.584,
+        "water_counted": "passes only part of the estimated range"
+      },
+      "very low sodium": {
+        "limit_mg": 35.0,
+        "water_not_counted_high_mg": 1.984,
+        "water_not_counted": "passes across the estimated range",
+        "water_counted_high_mg": 8.584,
+        "water_counted": "passes across the estimated range"
+      },
+      "low sodium": {
+        "limit_mg": 140.0,
+        "water_not_counted_high_mg": 1.984,
+        "water_not_counted": "passes across the estimated range",
+        "water_counted_high_mg": 8.584,
+        "water_counted": "passes across the estimated range"
+      }
+    },
+    "case1_two_fold_reference_serving_400ml_if_reference_amount_not_over_30g": {
+      "sodium-free (free of sodium)": {
+        "limit_mg": 5.0,
+        "product_scale_vs_one_cube": 1.2121,
+        "water_not_counted_high_mg": 2.405,
+        "water_not_counted": "passes across the estimated range",
+        "water_counted_high_mg": 10.405,
+        "water_counted": "passes only part of the estimated range"
+      },
+      "very low sodium": {
+        "limit_mg": 35.0,
+        "product_scale_vs_one_cube": 1.2121,
+        "water_not_counted_high_mg": 2.405,
+        "water_not_counted": "passes across the estimated range",
+        "water_counted_high_mg": 10.405,
+        "water_counted": "passes across the estimated range"
+      },
+      "low sodium": {
+        "limit_mg": 140.0,
+        "product_scale_vs_one_cube": 1.2121,
+        "water_not_counted_high_mg": 2.405,
+        "water_not_counted": "passes across the estimated range",
+        "water_counted_high_mg": 10.405,
+        "water_counted": "passes across the estimated range"
+      }
+    },
+    "case2_per_100ml_hypothetical_only": {
+      "sodium-free (free of sodium)": {
+        "limit_mg_per_100ml_not_more_than": 5.0,
+        "water_not_counted_high_mg_per_100ml": 0.601,
+        "water_not_counted": "passes across the estimated range",
+        "water_counted_high_mg_per_100ml": 2.601,
+        "water_counted": "passes across the estimated range"
+      },
+      "very low sodium": {
+        "limit_mg_per_100ml_not_more_than": 20.0,
+        "water_not_counted_high_mg_per_100ml": 0.601,
+        "water_not_counted": "passes across the estimated range",
+        "water_counted_high_mg_per_100ml": 2.601,
+        "water_counted": "passes across the estimated range"
+      },
+      "low sodium": {
+        "limit_mg_per_100ml_not_more_than": 60.0,
+        "water_not_counted_high_mg_per_100ml": 0.601,
+        "water_not_counted": "passes across the estimated range",
+        "water_counted_high_mg_per_100ml": 2.601,
+        "water_counted": "passes across the estimated range"
+      }
+    },
+    "note": "Case 1 applies on our reading (Annex 2, category 2, item 3 gives the cube a prescribed reference serving). The second Case 1 basis (two-fold reference serving) applies only if the reference amount counts as not more than 30 g; the regulator's reading is UNVERIFIED. Case 2 is shown as a hypothetical for the case in which the regulator rules the cube outside Case 1; it is not a current basis. The water ceilings are in claim_tests_table1_case1.water_ceilings_both_bases_mg_per_l and the water levels in water_sensitivity."
+  },
+  "table2_per100ml_case2_limits_mg": {
+    "sodium-free (free of sodium)": 5.0,
+    "very low sodium": 20.0,
+    "low sodium": 60.0
+  },
+  "codex_gl23_per100g_limits_mg": {
+    "sodium-free": 5.0,
+    "very low sodium": 40.0,
+    "low sodium": 120.0
+  },
+  "energy_and_label_rounding": {
+    "energy_kcal_per_serve_with_mannitol_binder": 7.58,
+    "energy_kcal_per_serve_with_isomalt_binder": 7.9,
+    "energy_kcal_per_serve_with_erythritol_binder": 6.3,
+    "energy_declared_rounded_with_mannitol": 10,
+    "energy_declared_rounded_with_isomalt": 10,
+    "energy_declared_rounded_with_erythritol": 5,
+    "rounding_rule_note": "Notification 445 clause 2.6: energy 5 to under 50 kcal rounded to a step of 5; under 5 kcal declared as 0.",
+    "sodium_declared_rounded_low_mg": 0,
+    "sodium_declared_rounded_high_mg": 10,
+    "sodium_declared_rounded_as_sold_high_mg": 0,
+    "sodium_rounding_note": "Clause 2.6: sodium under 5 mg declared as 0; 5 to 140 mg in steps of 5; over 140 mg in steps of 10.",
+    "sugar_alcohol_line_note": "Clause 2.3 remark ** : a sugar alcohols line is displayed if energy is calculated with the clause 2.4 2) 2.2 conversion factors (0.80 g of mannitol per cube)."
+  },
+  "potassium_panel_line": {
+    "potassium_mg_per_serve_from_0p81g_KHCO3": 316.33,
+    "repo_figure_mg": 317,
+    "declared_after_clause_2_6_rounding_mg": 320,
+    "thai_rdi_potassium_mg_annex3": 3500,
+    "percent_of_thai_rdi_declared_value": 9.14,
+    "thai_rdi_sodium_mg_annex3": 2000,
+    "note": "Notification 445 Annex 1 clause 2.3 asterisks Potassium as mandatory in the standard format; Notification 446 replaced clause 5(1) of Notification 394 so that the panel follows Annex 1 of 445 (FDA unofficial English text). A potassium line is therefore expected on the panel."
+  },
+  "binder_sugar_excise_and_tolerance": {
+    "mannitol_total_sugars_bound_mg_per_serve": 8.0,
+    "mannitol_total_sugars_bound_g_per_100ml": 0.00242,
+    "mannitol_reducing_sugars_bound_mg_per_serve": 2.4,
+    "isomalt_reducing_sugars_bound_mg_per_serve": 2.4,
+    "binder_if_all_counted_as_sugar_g_per_100ml": 0.2424,
+    "flavour_if_all_counted_as_sugar_g_per_100ml": 0.0152,
+    "tier_ceiling_g_per_100ml_lowest_tier": 6.0,
+    "tier_stays_lowest_even_if_all_polyol_counted": true,
+    "mannitol_solubility_g_per_l_25c_pubchem_secondary": 216.0,
+    "mannitol_dose_g_per_l": 2.424,
+    "mannitol_fraction_of_saturation": 0.0112,
+    "eu_laxative_benchmark_polyols_g_per_day": 20.0,
+    "binder_dose_fraction_of_20g": 0.04,
+    "water_in_binder_limit_mg_per_serve": {
+      "mannitol_loss_on_drying_max_0p3pct": 2.4,
+      "isomalt_water_max_7pct": 56.0,
+      "ratio_isomalt_to_mannitol": 23.3
+    }
+  },
+  "peg_6000_limit_check": {
+    "thai_468_peg_limit_mg_per_kg_ready_to_drink": 500.0,
+    "drink_mass_kg_convention": 0.33379,
+    "max_peg_mg_per_cube_at_limit": 166.9,
+    "peg_at_0p80g_mg_per_kg_of_drink": 2397.0,
+    "peg_at_0p80g_times_the_limit": 4.79,
+    "note": "PEG at the Thai level can be a lubricant at no more than about 167 mg per cube; it cannot be the 0.80 g binder and filler."
+  },
+  "peg_lubricant_contingent": {
+    "thai_468_level_mg_per_kg": 500.0,
+    "max_peg_mg_per_cube_at_thai_level": 166.9,
+    "jecfa_sulfated_ash_max_pct": 0.1,
+    "sodium_upper_bound_mg_per_cube_at_max_peg": 0.054,
+    "jecfa_adi_mg_per_kg_bw": 10.0,
+    "assumed_body_weight_kg": 60.0,
+    "peg_at_max_as_pct_of_adi_per_serve": 27.8,
+    "note": "Contingent only. The formula as specified has no lubricant, so nothing is added to the totals. If a lubricant proves necessary at the bench trial, PEG up to about 167 mg per cube adds at most 0.054 mg of sodium (DERIVED from the JECFA ash limit) and would be entered as a new line. The body weight is an ASSUMPTION."
+  },
+  "formula_mass_and_lubricant_check": {
+    "sum_of_specified_components_g": 3.793,
+    "central_dry_cube_mass_g_repo": 3.79,
+    "difference_g": 0.003,
+    "lubricant_in_formula": "none specified (the five components account for the whole 3.79 g)",
+    "sodium_salt_lubricants_excluded_by_specification": [
+      "sodium stearyl fumarate",
+      "sodium benzoate",
+      "sodium lauryl sulfate",
+      "monosodium citrate or other sodium-coated acid grades"
+    ],
+    "tier": "DERIVED (arithmetic on the repo masses); the exclusion list is the team's specification (ASSUMPTION until supplier declarations)"
+  },
+  "electrolyte_drink_standard_check_notification_195": {
+    "sodium_mg_per_litre_formula_only_range": [
+      0.0,
+      6.0
+    ],
+    "sodium_required_min_max_mg_per_litre": [
+      460.0,
+      920.0
+    ],
+    "sodium_below_minimum": true,
+    "potassium_mg_per_litre": 959.0,
+    "potassium_max_mg_per_litre": 195.0,
+    "bicarbonate_before_reaction_mg_per_litre": 1496.0,
+    "bicarbonate_max_mg_per_litre": 793.0,
+    "citric_acid_total_mg_per_litre_as_added": 6364.0,
+    "citrate_max_mg_per_litre": 819.0,
+    "citrate_basis_note": "The notification does not say how citrate is expressed; the citric acid added is shown as a magnitude only.",
+    "sugar_required": "glucose or fructose at least 2 percent by weight, or sucrose at least 4 percent",
+    "sugar_in_cube": "none added (mannitol is not a sugar in the Thai nutrition definition)",
+    "reading": "The cube drink is far outside the clause 4 (1) composition of an electrolyte drink on sodium, sugar and potassium. If a regulator classed it as an electrolyte drink it could not meet that standard, and condition TH3 would also require the polyol to be used together with sugar. The recipe therefore must not be named or presented as an electrolyte drink; the classification is part of the Gate 1 opinion.",
+    "tier": "P for the standard (Thai original, rendered pages); DERIVED for the cube values"
+  },
+  "water_sensitivity": {
+    "formula_high_mg_per_330ml": 1.984,
+    "rows": [
+      {
+        "water_mg_per_litre": 0.0,
+        "water_mg_per_330ml": 0.0,
+        "total_mg_per_330ml_formula_high": 1.98,
+        "total_mg_per_400ml_two_fold_basis": 2.4,
+        "total_mg_per_100ml_330ml_basis": 0.6,
+        "case1_330ml_sodium-free (free of sodium)": "passes",
+        "case1_two_fold_sodium-free (free of sodium)": "passes",
+        "case1_330ml_very low sodium": "passes",
+        "case1_two_fold_very low sodium": "passes",
+        "case1_330ml_low sodium": "passes",
+        "case1_two_fold_low sodium": "passes",
+        "case2_hypothetical_sodium-free (free of sodium)": "passes",
+        "case2_hypothetical_very low sodium": "passes",
+        "case2_hypothetical_low sodium": "passes"
+      },
+      {
+        "water_mg_per_litre": 20.0,
+        "water_mg_per_330ml": 6.6,
+        "total_mg_per_330ml_formula_high": 8.58,
+        "total_mg_per_400ml_two_fold_basis": 10.4,
+        "total_mg_per_100ml_330ml_basis": 2.6,
+        "case1_330ml_sodium-free (free of sodium)": "fails",
+        "case1_two_fold_sodium-free (free of sodium)": "fails",
+        "case1_330ml_very low sodium": "passes",
+        "case1_two_fold_very low sodium": "passes",
+        "case1_330ml_low sodium": "passes",
+        "case1_two_fold_low sodium": "passes",
+        "case2_hypothetical_sodium-free (free of sodium)": "passes",
+        "case2_hypothetical_very low sodium": "passes",
+        "case2_hypothetical_low sodium": "passes"
+      },
+      {
+        "water_mg_per_litre": 100.0,
+        "water_mg_per_330ml": 33.0,
+        "total_mg_per_330ml_formula_high": 34.98,
+        "total_mg_per_400ml_two_fold_basis": 42.4,
+        "total_mg_per_100ml_330ml_basis": 10.6,
+        "case1_330ml_sodium-free (free of sodium)": "fails",
+        "case1_two_fold_sodium-free (free of sodium)": "fails",
+        "case1_330ml_very low sodium": "passes",
+        "case1_two_fold_very low sodium": "fails",
+        "case1_330ml_low sodium": "passes",
+        "case1_two_fold_low sodium": "passes",
+        "case2_hypothetical_sodium-free (free of sodium)": "fails",
+        "case2_hypothetical_very low sodium": "passes",
+        "case2_hypothetical_low sodium": "passes"
+      },
+      {
+        "water_mg_per_litre": 200.0,
+        "water_mg_per_330ml": 66.0,
+        "total_mg_per_330ml_formula_high": 67.98,
+        "total_mg_per_400ml_two_fold_basis": 82.4,
+        "total_mg_per_100ml_330ml_basis": 20.6,
+        "case1_330ml_sodium-free (free of sodium)": "fails",
+        "case1_two_fold_sodium-free (free of sodium)": "fails",
+        "case1_330ml_very low sodium": "fails",
+        "case1_two_fold_very low sodium": "fails",
+        "case1_330ml_low sodium": "passes",
+        "case1_two_fold_low sodium": "passes",
+        "case2_hypothetical_sodium-free (free of sodium)": "fails",
+        "case2_hypothetical_very low sodium": "fails",
+        "case2_hypothetical_low sodium": "passes"
+      }
+    ],
+    "note": "Water counted in the claim. Case 2 is a hypothetical (the cube has a prescribed reference serving, so Case 1 applies on our reading). If the regulator does not count the plain water, the formula alone decides: 0 to 1.98 mg per 330 mL and 0 to 2.40 mg on the two-fold basis, which passes all three claim limits."
+  },
+  "binder_price_proxy": {
+    "comtrade_hs290543_world_usd_per_kg": 4.395,
+    "fx_thb_per_usd_mid": 33.5495,
+    "proxy_thb_per_kg": 147.4,
+    "proxy_thb_per_cube_0p8g": 0.118,
+    "premium_assumption_low_x": 1,
+    "premium_assumption_high_x": 3,
+    "thb_per_cube_at_3x_premium": 0.354,
+    "binder_alone_takes_contribution_to_stop_threshold_at_thb_per_kg": 1750.0,
+    "gap_contribution_to_stop_threshold_thb_per_cube": 1.4,
+    "gap_note": "THB 4.91 less THB 3.51. The submission already uses this gap for the pouch high case (THB 2.70 pouch), so it cannot be spent twice.",
+    "breakeven_usd_per_kg": 52.16,
+    "breakeven_over_proxy_ratio": 11.9,
+    "isomalt_price": "UNVERIFIED (no Thai or import figure found; HS code not established). Same ceiling applies.",
+    "origin_spread_from_saved_rows": [
+      {
+        "origin": "World",
+        "net_kg": 476781.0,
+        "usd_per_kg": 4.395,
+        "thb_per_kg": 147.4,
+        "thb_per_cube_0p8g": 0.118,
+        "times_world_unit_value": 1.0,
+        "share_of_1p40_headroom": 0.084
+      },
+      {
+        "origin": "China",
+        "net_kg": 427232.0,
+        "usd_per_kg": 3.041,
+        "thb_per_kg": 102.0,
+        "thb_per_cube_0p8g": 0.082,
+        "times_world_unit_value": 0.69,
+        "share_of_1p40_headroom": 0.058
+      },
+      {
+        "origin": "France",
+        "net_kg": 24375.0,
+        "usd_per_kg": 12.224,
+        "thb_per_kg": 410.1,
+        "thb_per_cube_0p8g": 0.328,
+        "times_world_unit_value": 2.78,
+        "share_of_1p40_headroom": 0.234
+      },
+      {
+        "origin": "Japan",
+        "net_kg": 19951.0,
+        "usd_per_kg": 12.906,
+        "thb_per_kg": 433.0,
+        "thb_per_cube_0p8g": 0.346,
+        "times_world_unit_value": 2.94,
+        "share_of_1p40_headroom": 0.247
+      },
+      {
+        "origin": "Germany",
+        "net_kg": 4929.0,
+        "usd_per_kg": 47.326,
+        "thb_per_kg": 1587.8,
+        "thb_per_cube_0p8g": 1.27,
+        "times_world_unit_value": 10.77,
+        "share_of_1p40_headroom": 0.907
+      }
+    ],
+    "origin_spread_note": "Thailand imports 2025, HS 290543, CIF USD over net kg, from the saved Comtrade page (rows as extracted; the page records that the fetch tool returned a model-written extraction, not the verbatim JSON). The unit value runs from the world average to about 10.8 times it (Germany, 4,929 kg). A tableting grade could sit anywhere in that spread, including near the break-even. The grade premium of 1 to 3 times is an ASSUMPTION; the spread is the only data on the page.",
+    "tier": "PROXY (bulk import unit value; grade premium is ASSUMPTION)"
+  },
+  "as_sold_cube_panel_check": {
+    "per_cube_mg_low": 0.0,
+    "per_cube_mg_high": 1.984,
+    "declared_rounded_high_mg": 0,
+    "rule": "Notification 445 clause 2.6: under 5 mg declared as 0."
+  },
+  "limits": [
+    "No measured sodium value exists for any component or for the made-up drink.",
+    "Potassium bicarbonate (food grade) and lemon flavour high cases are planning values (ASSUMPTION), not specifications. The citric acid, sucralose, mannitol and isomalt high cases are upper bounds derived from JECFA sulfated-ash limits (DERIVED from P).",
+    "Thai Notification 468 rows for mannitol, isomalt, maltodextrin and erythritol in category 14.1.4 were read from rendered pages on 20 October 2026 (quantum satis; TH3 on mannitol, isomalt and erythritol applies to electrolyte drinks only).",
+    "Water sodium is the largest open term. The WHO typical value (under 20 mg/L) is not a ceiling: WHO says concentrations can greatly exceed it in some countries, and a Thai Department of Health nutritionist is reported to put tap water at 100 to 200 mg/L (S). Thai tap and bottled water were not measured. Whether the Thai rule counts the plain water in the claim calculation is not settled (Annex 2 category 2 item 3 sets the reference serving as the defined amount for preparing 200 mL; the Thai FAQ section 8 (1) treats water of insignificant nutrient content separately).",
+    "Whether the two-fold reference serving basis applies (reference amount not over 30 g) is a regulatory reading, UNVERIFIED. If it applies, the stricter water ceiling binds.",
+    "Case 2 (per 100 mL) is a hypothetical: the cube has a prescribed reference serving, so Case 1 applies on our reading.",
+    "Binder price is a PROXY (world import unit value, with a spread by origin), not a Thai supplier price; the grade premium is ASSUMPTION; isomalt price UNVERIFIED.",
+    "The formula has no lubricant; whether a 14 mm cube can be pressed without one is untested (bench trial). A PEG lubricant is shown as a contingent line only.",
+    "Pouch film sodium and migration were not tested; the film specification is not supplied.",
+    "Notification 467 (B.E. 2568) was read in English in the T10 record (replaces only paragraph one of clause 2.1 of Annex 1: white background and font sizes; potassium unchanged).",
+    "The Thai excise schedule is read from the B.E. 2560 primary extract and a press report of the phase 4 rates (S); the later decree was not opened."
+  ]
+}

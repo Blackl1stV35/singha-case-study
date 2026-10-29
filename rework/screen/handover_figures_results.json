@@ -15,7 +15,11 @@
     "potassium_pct_of_thai_rdi": 9.0,
     "sucralose_mg": 33.0,
     "sucralose_mg_per_kg": 100.0,
-    "sucralose_limit_mg_per_kg": 300
+    "sucralose_limit_mg_per_kg": 300,
+    "reactants_g": 2.944,
+    "binder_filler_g": 0.8,
+    "flavour_g": 0.05,
+    "cube_mass_g": 3.794
   },
   "serve_temperature": [
     {
@@ -123,7 +127,7 @@
     "print_thb": 1.5,
     "processing_thb": 0.5,
     "per_pouch_before_carton_thb": 3.42,
-    "pouch_mass_g": 4.44,
+    "pouch_mass_g": 5.29,
     "packs": {
       "6": {
         "cost_per_cube_thb": 4.09,
@@ -132,14 +136,14 @@
           "20ft": {
             "cartons": 21431,
             "cubes": 128586,
-            "container_mass_kg": 2714.5,
+            "container_mass_kg": 2823.8,
             "payload_limit_kg": 28200.0,
             "limited_by": "volume"
           },
           "40ft": {
             "cartons": 43721,
             "cubes": 262326,
-            "container_mass_kg": 5537.9,
+            "container_mass_kg": 5760.9,
             "payload_limit_kg": 26840.0,
             "limited_by": "volume"
           }
@@ -152,14 +156,14 @@
           "20ft": {
             "cartons": 10715,
             "cubes": 128580,
-            "container_mass_kg": 1642.9,
+            "container_mass_kg": 1752.2,
             "payload_limit_kg": 28200.0,
             "limited_by": "volume"
           },
           "40ft": {
             "cartons": 21860,
             "cubes": 262320,
-            "container_mass_kg": 3351.8,
+            "container_mass_kg": 3574.7,
             "payload_limit_kg": 26840.0,
             "limited_by": "volume"
           }
@@ -172,14 +176,14 @@
           "20ft": {
             "cartons": 5357,
             "cubes": 128568,
-            "container_mass_kg": 1107.1,
+            "container_mass_kg": 1216.3,
             "payload_limit_kg": 28200.0,
             "limited_by": "volume"
           },
           "40ft": {
             "cartons": 10930,
             "cubes": 262320,
-            "container_mass_kg": 2258.8,
+            "container_mass_kg": 2481.7,
             "payload_limit_kg": 26840.0,
             "limited_by": "volume"
           }
@@ -193,6 +197,8 @@
     "the pH target is a working anchor; taste is untested",
     "the pouch and print costs are assumptions or non-Thai listings; no Thai quote was requested",
     "the 0.55-volume gate is not set; it is for R&D to define",
-    "product classification (beverage, edible ice or electrolyte drink) is open; condition TH3 applies to electrolyte drinks only"
+    "product classification (beverage, edible ice or electrolyte drink) is open; condition TH3 applies to electrolyte drinks only",
+    "basis B: binder and filler 0.80 g (range 0.5 to 1.2) and lime flavour 0.05 g (range 0.02 to 0.10) are ASSUMPTION (rework/48 section 6.1); the cube mass is derived, not weighed; binder and flavour are not priced, so the cost per cube excludes them",
+    "binder name and its sodium content are unconfirmed (gate G3, rework/57 item 8); no sodium-free claim is made"
   ]
 }

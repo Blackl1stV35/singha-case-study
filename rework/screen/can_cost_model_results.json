@@ -1,21 +1,27 @@
 {
-  "basis": "Desk estimate. No Singha or Boon Rawd can cost found. Tiers: P primary, S secondary.",
+  "basis": "Desk estimate. No Singha or Boon Rawd can cost found. Tiers: P primary, S secondary, PROXY, ASSUMPTION.",
+  "superseded": {
+    "thb_per_can_mid": 4.94,
+    "range": [
+      3.73,
+      6.14
+    ],
+    "note": "Earlier result including the LME reading (USD 3,013 to 3,014 a tonne), which is not authorised. Superseded by the non-aluminium cost below and the aluminium slope. Do not quote."
+  },
   "excluded_or_missing": [
-    "aluminium regional premium and sheet rolling (no input; see premium scenarios)",
-    "scrap credit (no scrap price; not netted, so cost is overstated by the credit)",
+    "aluminium price (LME route not authorised; slope and break-even only)",
+    "aluminium regional premium and sheet rolling (scenarios only)",
+    "scrap credit (not netted, so cost is overstated by the credit)",
     "end and tab conversion; lacquer-curing gas; secondary packaging (carton, shrink, pallet)",
-    "excise on sugar-sweetened drinks (Thai sugar levy; primary law not read)",
+    "excise on sugar-sweetened drinks (not read; record 69 section 6)",
     "freight, distribution, marketing, overheads, depreciation, line capex",
-    "lacquer and ink, labour and electricity: sub-components of conversion, not added"
+    "lacquer and ink, labour and electricity: sub-components of conversion, not added",
+    "binder and flavour for the cube (not part of a can; not priced)"
   ],
-  "inputs": {
+  "inputs_from_singha_internal_estimates": {
     "fx_thb_per_usd": [
       33.3535,
       33.7455
-    ],
-    "lme_usd_per_t": [
-      3013.0,
-      3014.0
     ],
     "sheet_g_per_can": [
       14.4,
@@ -43,22 +49,26 @@
     ],
     "nameplate_ML": 1000.0,
     "canned_share": 0.553,
-    "utilisation": [
-      0.584,
-      0.633
+    "utilisation_tbc_2024_2025": [
+      0.5857,
+      0.5946
     ],
     "fixed_thb_m_scenarios": [
       0.0,
       300.0,
       600.0
+    ],
+    "premium_usd_t_scenarios": [
+      0.0,
+      100.0,
+      200.0
     ]
   },
-  "variable_cost_per_can": {
+  "variable_cost_excl_aluminium_per_can": {
     "low": {
-      "usd": 0.11179,
-      "thb": 3.728,
+      "usd": 0.0684,
+      "thb": 2.281,
       "items_usd": {
-        "sheet_metal": 0.04339,
         "conversion_nonmetal": 0.04,
         "filling_consumables": 0.001,
         "seaming": 0.0001,
@@ -67,10 +77,9 @@
       }
     },
     "high": {
-      "usd": 0.18206,
-      "thb": 6.144,
+      "usd": 0.1263,
+      "thb": 4.262,
       "items_usd": {
-        "sheet_metal": 0.05576,
         "conversion_nonmetal": 0.08,
         "filling_consumables": 0.004,
         "seaming": 0.0005,
@@ -79,36 +88,48 @@
       }
     }
   },
-  "premium_sensitivity_thb_per_can": {
-    "0.0": 1.663,
-    "100.0": 1.718,
-    "200.0": 1.773
+  "variable_cost_excl_aluminium_bounding_cases_note": "low and high are the bounding cases (every input at its low or high bound), not a 90 per cent interval. The 90 per cent interval from the Monte Carlo in singha_internal_estimates.py is narrower.",
+  "variable_cost_excl_aluminium_mid_thb": 3.266,
+  "aluminium": {
+    "status": "LME route not authorised. Slope and break-even only; no aluminium price is used.",
+    "thb_per_can_per_usd_100_per_tonne_mid": 0.0552,
+    "premium_scenarios_thb_per_can_mid_sheet": {
+      "0.0": 0.0,
+      "100.0": 0.0552,
+      "200.0": 0.1104
+    },
+    "listing_price_basis_thb_per_can": 13.8025,
+    "net_after_excise_thb_per_can": 7.393,
+    "contribution_pre_aluminium_thb_per_can": 4.127,
+    "zero_contribution_price_usd_per_tonne_mid": 7477.0,
+    "single_can_17_price_basis_zero_contribution_usd_per_tonne": 10581.0,
+    "note": "Price basis: mean of four online multipack listing prices read 20 October 2026 (record 68d). The 7-Eleven 24-can reading (THB 330) is a promotional selling price (the page prints 408 struck through; promotion valid to 20 October 2026). The THB 17.00 single-can basis is shown for comparison only. The price affects the aluminium break-even, not the variable cost."
   },
   "cans_per_year": {
-    "at_util_low": 978642424,
-    "at_util_high": 1060754545,
+    "at_util_low": 981491212,
+    "at_util_high": 996405455,
     "at_nameplate_100pct": 1675757576
   },
-  "cost_per_can_grid_thb": {
-    "variable_mid_thb": 4.936,
+  "cost_per_can_grid_excl_aluminium": {
+    "variable_mid_thb": 3.266,
     "rows": [
       {
         "cans_per_year": 500000000,
-        "fixed_0m_thb_per_can": 4.936,
-        "fixed_300m_thb_per_can": 5.536,
-        "fixed_600m_thb_per_can": 6.136
+        "fixed_0m_thb_per_can_excl_aluminium": 3.266,
+        "fixed_300m_thb_per_can_excl_aluminium": 3.866,
+        "fixed_600m_thb_per_can_excl_aluminium": 4.466
       },
       {
         "cans_per_year": 1000000000,
-        "fixed_0m_thb_per_can": 4.936,
-        "fixed_300m_thb_per_can": 5.236,
-        "fixed_600m_thb_per_can": 5.536
+        "fixed_0m_thb_per_can_excl_aluminium": 3.266,
+        "fixed_300m_thb_per_can_excl_aluminium": 3.566,
+        "fixed_600m_thb_per_can_excl_aluminium": 3.866
       },
       {
         "cans_per_year": 1675757576,
-        "fixed_0m_thb_per_can": 4.936,
-        "fixed_300m_thb_per_can": 5.115,
-        "fixed_600m_thb_per_can": 5.294
+        "fixed_0m_thb_per_can_excl_aluminium": 3.266,
+        "fixed_300m_thb_per_can_excl_aluminium": 3.445,
+        "fixed_600m_thb_per_can_excl_aluminium": 3.624
       }
     ]
   }

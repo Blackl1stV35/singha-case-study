@@ -1,0 +1,279 @@
+{
+  "cube": {
+    "mass_g": {
+      "potassium_bicarbonate": 0.81,
+      "citric_acid": 2.1,
+      "sucralose": 0.033,
+      "binder_filler": 0.8,
+      "lemon_flavour": 0.05
+    },
+    "dry_mass_g": 3.793,
+    "volume_ml": 330.0
+  },
+  "na_fraction_of_sodium_sulphate": 0.3237,
+  "pouch": {
+    "contact_dm2": 1.26,
+    "overall_migration_cap_total_mg": 12.6
+  },
+  "component_sodium": [
+    {
+      "component": "potassium_bicarbonate",
+      "mass_g": 0.81,
+      "basis": "Na mass fraction ceiling 0.100 percent",
+      "na_mg_low": 0.081,
+      "na_mg_high": 0.81,
+      "tier": "ASSUMPTION (ceiling) with DERIVED arithmetic",
+      "na_mg_per_100ml_low": 0.0245,
+      "na_mg_per_100ml_high": 0.2455
+    },
+    {
+      "component": "citric_acid",
+      "mass_g": 2.1,
+      "basis": "sulphated ash ceiling 0.10 percent x 0.3238 (Na share of sodium sulphate) = 0.0324 percent Na",
+      "na_mg_low": 0.068,
+      "na_mg_high": 0.6798,
+      "tier": "ASSUMPTION (ceiling) with DERIVED arithmetic",
+      "na_mg_per_100ml_low": 0.0206,
+      "na_mg_per_100ml_high": 0.206
+    },
+    {
+      "component": "sucralose",
+      "mass_g": 0.033,
+      "basis": "sulphated ash ceiling 1.00 percent x 0.3238 (Na share of sodium sulphate) = 0.3237 percent Na",
+      "na_mg_low": 0.0107,
+      "na_mg_high": 0.1068,
+      "tier": "ASSUMPTION (ceiling) with DERIVED arithmetic",
+      "na_mg_per_100ml_low": 0.0032,
+      "na_mg_per_100ml_high": 0.0324
+    },
+    {
+      "component": "binder_filler",
+      "mass_g": 0.8,
+      "basis": "sulphated ash ceiling 0.10 percent x 0.3238 (Na share of sodium sulphate) = 0.0324 percent Na",
+      "na_mg_low": 0.0259,
+      "na_mg_high": 0.259,
+      "tier": "ASSUMPTION (ceiling) with DERIVED arithmetic",
+      "na_mg_per_100ml_low": 0.0078,
+      "na_mg_per_100ml_high": 0.0785
+    },
+    {
+      "component": "lemon_flavour",
+      "mass_g": 0.05,
+      "basis": "Na mass fraction ceiling 0.500 percent",
+      "na_mg_low": 0.025,
+      "na_mg_high": 0.25,
+      "tier": "ASSUMPTION (ceiling) with DERIVED arithmetic",
+      "na_mg_per_100ml_low": 0.0076,
+      "na_mg_per_100ml_high": 0.0758
+    },
+    {
+      "component": "pouch_film_migration",
+      "mass_g": null,
+      "basis": "overall migration cap 10.0 mg/dm2 x 1.26 dm2 contact = 12.60 mg of all migrants; sodium at most 1 percent of it",
+      "na_mg_low": 0.0126,
+      "na_mg_high": 0.126,
+      "tier": "ASSUMPTION (sodium share) on a SOURCED overall migration limit",
+      "na_mg_per_100ml_low": 0.0038,
+      "na_mg_per_100ml_high": 0.0382
+    }
+  ],
+  "total": {
+    "total_na_mg_per_serve_low": 0.223,
+    "total_na_mg_per_serve_high": 2.232,
+    "total_na_mg_per_100ml_low": 0.0676,
+    "total_na_mg_per_100ml_high": 0.6762,
+    "percent_of_thai_sodium_free_limit_5mg_high": 44.6,
+    "percent_thai_rdi_2000mg_high": 0.112
+  },
+  "khco3_sensitivity": [
+    {
+      "khco3_na_percent": 0.02,
+      "khco3_na_mg": 0.162,
+      "total_with_others_at_ceiling_mg": 1.584,
+      "passes_thai_below_5mg": true,
+      "passes_internal_release_3_5mg": true
+    },
+    {
+      "khco3_na_percent": 0.1,
+      "khco3_na_mg": 0.81,
+      "total_with_others_at_ceiling_mg": 2.232,
+      "passes_thai_below_5mg": true,
+      "passes_internal_release_3_5mg": true
+    },
+    {
+      "khco3_na_percent": 0.25,
+      "khco3_na_mg": 2.025,
+      "total_with_others_at_ceiling_mg": 3.447,
+      "passes_thai_below_5mg": true,
+      "passes_internal_release_3_5mg": true
+    },
+    {
+      "khco3_na_percent": 0.5,
+      "khco3_na_mg": 4.05,
+      "total_with_others_at_ceiling_mg": 5.472,
+      "passes_thai_below_5mg": false,
+      "passes_internal_release_3_5mg": false
+    },
+    {
+      "khco3_na_percent": 1.0,
+      "khco3_na_mg": 8.1,
+      "total_with_others_at_ceiling_mg": 9.522,
+      "passes_thai_below_5mg": false,
+      "passes_internal_release_3_5mg": false
+    }
+  ],
+  "khco3_breakeven": {
+    "others_at_ceiling_mg": 1.422,
+    "khco3_na_percent_for_total_5mg": 0.442,
+    "khco3_na_percent_for_total_3_5mg": 0.257
+  },
+  "claim_basis": {
+    "labelled_serving_ml": 330.0,
+    "reference_serving_ml": 200.0,
+    "labelled_as_percent_of_reference": 165.0,
+    "cap_percent_of_reference": 200,
+    "reference_portion_of_one_cube": 0.606,
+    "na_mg_per_reference_portion_high": 1.352,
+    "na_mg_per_labelled_serving_high": 2.232,
+    "binding_limit": "the labelled serving (one cube): the reference portion holds less sodium than the whole cube",
+    "thai_sodium_free_limit_mg": 5,
+    "thai_very_low_limit_mg": 35,
+    "thai_low_limit_mg": 140,
+    "internal_release_limit_mg": 3.5,
+    "internal_release_limit_basis": "70 percent of the Thai limit (ASSUMPTION: room for analytical uncertainty and lot spread)",
+    "codex_sodium_free_mg_per_100g": 5,
+    "codex_very_low_mg_per_100g": 40,
+    "codex_low_mg_per_100g": 120,
+    "codex_margin_x_at_high": 7.4,
+    "codex_margin_x_at_low": 73.9,
+    "thai_5mg_per_330ml_equals_mg_per_100ml": 1.515,
+    "ratio_codex_free_to_thai_basis_at_330ml": 3.3
+  },
+  "water_sensitivity": [
+    {
+      "water_na_mg_per_l": 5,
+      "added_mg_per_330ml": 1.65
+    },
+    {
+      "water_na_mg_per_l": 10,
+      "added_mg_per_330ml": 3.3
+    },
+    {
+      "water_na_mg_per_l": 20,
+      "added_mg_per_330ml": 6.6
+    },
+    {
+      "water_na_mg_per_l": 50,
+      "added_mg_per_330ml": 16.5
+    }
+  ],
+  "binder": {
+    "limits": {
+      "thai_ready_to_drink_mass_kg": 0.3319,
+      "binder_level_as_ready_to_drink_mg_per_kg": 2410.0,
+      "peg_thai_limit_mg_per_kg_rtd": 500.0,
+      "peg_max_per_cube_mg": 165.9,
+      "peg_at_0_8g_over_limit_x": 4.82,
+      "peg_dose_mg_per_kg_bw_at_0_8g": 13.33,
+      "peg_adi_jecfa_mg_per_kg_bw": 10,
+      "peg_adi_scf_mg_per_kg_bw": 5,
+      "peg_dose_as_percent_of_jecfa_adi_at_0_8g": 133.0,
+      "peg_dose_as_percent_of_scf_adi_at_0_8g": 267.0
+    },
+    "tolerance": {
+      "mannitol_vs_laxative_20g_percent": 4.0,
+      "mannitol_vs_lowest_trial_dose_50g_percent": 1.6,
+      "isomalt_vs_30g_mild_symptoms_percent": 2.7,
+      "erythritol_vs_child_noel_15g_percent": 5.3,
+      "erythritol_vs_efsa_adi_0_5g_per_kg_at_60kg_percent": 2.7,
+      "binder_concentration_g_per_100ml": 0.242,
+      "mannitol_study_solution_g_per_100ml_ajaj": 2.5,
+      "mannitol_solubility_g_per_kg_water_25c": 250.0,
+      "mannitol_dose_g_per_kg_water_in_drink": 2.42,
+      "solubility_margin_x": 103.0
+    },
+    "energy": {
+      "mannitol_kcal_per_g": 1.6,
+      "isomalt_kcal_per_g": 2.0,
+      "erythritol_kcal_per_g": 0.0,
+      "sorbitol_kcal_per_g": 2.6,
+      "organic_acid_kcal_per_g": 3.0,
+      "kcal_binder_mannitol": 1.28,
+      "kcal_binder_isomalt": 1.6,
+      "kcal_binder_erythritol": 0.0,
+      "kcal_citric_acid_per_cube": 6.3
+    },
+    "cost": {
+      "mannitol_world": {
+        "usd_per_kg": 4.395,
+        "thb_per_kg": 147.5,
+        "thb_per_cube_0_8g": 0.118
+      },
+      "mannitol_china": {
+        "usd_per_kg": 3.041,
+        "thb_per_kg": 102.0,
+        "thb_per_cube_0_8g": 0.0816
+      },
+      "polyol_basket_290549_world": {
+        "usd_per_kg": 1.77,
+        "thb_per_kg": 59.4,
+        "thb_per_cube_0_8g": 0.0475
+      },
+      "sorbitol_290544_world": {
+        "usd_per_kg": 0.691,
+        "thb_per_kg": 23.2,
+        "thb_per_cube_0_8g": 0.0185
+      },
+      "dextrin_350510_china": {
+        "usd_per_kg": 1.013,
+        "thb_per_kg": 34.0,
+        "thb_per_cube_0_8g": 0.0272
+      },
+      "mannitol_world_dc_premium_x2_thb_per_cube": 0.236,
+      "mannitol_world_dc_premium_x3_thb_per_cube": 0.354,
+      "thb_per_cube_per_100_thb_per_kg_binder": 0.08,
+      "cube_cost_6_carton_thb_excl_binder": 4.09,
+      "mannitol_world_share_of_cube_cost_percent": 2.9,
+      "mannitol_x3_share_of_cube_cost_percent": 8.7,
+      "cube_cost_with_mannitol_world": 4.208,
+      "contribution_with_mannitol_world": 4.792,
+      "margin_percent_with_mannitol_world": 53.2,
+      "cube_cost_with_mannitol_world_x3": 4.444,
+      "contribution_with_mannitol_world_x3": 4.556,
+      "margin_percent_with_mannitol_world_x3": 50.6,
+      "contribution_excl_binder": 4.91,
+      "margin_percent_excl_binder": 54.6
+    }
+  },
+  "excise": {
+    "binder_as_sugar_g_per_100ml": 0.2424,
+    "whole_cube_as_sugar_g_per_100ml": 1.1494,
+    "tier_a_boundary_g_per_100ml": 6.0,
+    "binder_share_of_boundary_percent": 4.0,
+    "whole_cube_share_of_boundary_percent": 19.2,
+    "rate_baht_per_litre_tier_a": 0
+  },
+  "lemon_lime_sodas_sodium": {
+    "per_100ml": {
+      "sprite_india": 10.1,
+      "sprite_hong_kong": 17.0,
+      "usda_lemon_lime": 9.0
+    },
+    "per_330ml_mg": {
+      "sprite_india": 33.3,
+      "sprite_hong_kong": 56.1,
+      "usda_lemon_lime": 29.7
+    },
+    "multiple_of_5mg": {
+      "sprite_india": 6.7,
+      "sprite_hong_kong": 11.2,
+      "usda_lemon_lime": 5.9
+    }
+  },
+  "assumption_flags": {
+    "low_fraction_of_ceiling": 0.1,
+    "pouch_na_share_of_migrants": 0.01,
+    "body_weight_kg": 60.0,
+    "usd_thb": 33.55
+  }
+}

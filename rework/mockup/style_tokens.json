@@ -29,8 +29,8 @@
   },
   "dimensions_mm": {
     "cube_side": {
-      "value": 15,
-      "basis": "ASSUMPTION (derived design value). Design dose at 1.75 volumes: 4.23 g of reactants per 330 ml (KHCO3 2.58 g and citric acid 1.65 g, from the gate simulation; the earlier 1.5-volume figure of 3.63 g is superseded). Excipient, flavour, sweetener and excess citric masses are ASSUMPTION. Design mass 5.28 g gives an implied density of 1.56 g/cm3 at 15 mm. The density band 1.25 to 1.60 g/cm3 is ASSUMPTION; the high end of the mass range (5.8 g) gives 1.72 g/cm3, above that band (48 section 6.4)."
+      "value": 14,
+      "basis": "ASSUMPTION (derived design value), basis B (user, 19 October 2026; rework/64 section 8). Mass is DERIVED on ASSUMPTION inputs: 2.944 g of reactants per 330 ml at 0.55 volume, pH 3.5 (potassium bicarbonate 0.811 g; citric acid 2.10 g total, of which 0.519 g stoichiometric and 1.581 g free excess; sucralose 33 mg), plus 0.80 g binder and filler (ASSUMPTION, range 0.5 to 1.2 g) and 0.05 g lime flavour powder (ASSUMPTION, range 0.02 to 0.10 g). Central cube mass 3.79 g, range 3.46 to 4.24 g. Implied density 1.38 g/cm3 at 14 mm. The density band 1.25 to 1.60 g/cm3 is ASSUMPTION; the whole mass range gives 1.26 to 1.55 g/cm3, inside it. Superseded: 15 mm at the 1.75-volume design dose (5.28 g, 1.56 g/cm3)."
     },
     "pack_w": {
       "value": 70,
@@ -42,11 +42,11 @@
     },
     "pack_d": {
       "value": 20,
-      "basis": "ASSUMPTION: 15 mm cube plus about 2.5 mm of film and seal allowance per face. No film, seal or sealant specification is sourced."
+      "basis": "ASSUMPTION: 20 mm pouch depth. The basis B cube of 14 mm plus about 2.5 mm of film and seal allowance per face gives 19 mm, which fits inside 20 mm (rework/64 section 8). No film, seal or sealant specification is sourced."
     },
     "net_weight_g": {
-      "value": 5.3,
-      "basis": "DERIVED. 4.23 g of reactants from stoichiometry at 1.75 volumes (2.58 g potassium bicarbonate and 1.65 g citric acid, rework/50 gate G3 and rework/screen/final_gate_sim.py) plus 1.05 g ASSUMPTION for binder, filler, flavour, sweetener and excess citric acid. The sum is 5.28 g, rounded to 5.3 g. Nothing is weighed; confirm on weighed production cubes before print."
+      "value": "[to be set]",
+      "basis": "PLACEHOLDER, not a figure. Net weight is not printed until a cube is weighed (rework/52 section 6 item 9). The derived central cube mass is 3.79 g (basis B, rework/64 section 8, DERIVED on ASSUMPTION inputs); it is not the label value. Superseded: the 5.3 g of the 1.75-volume design (rework/48 section 6.1)."
     }
   },
   "copy_front": [
@@ -54,7 +54,7 @@
     "One compressed cube is dropped into 330 ml of water.",
     "Serving: 1 cube made up to 330 ml",
     "Contains an intensive sweetener.",
-    "Single-serve pouch · Net weight: 5.3 g"
+    "Single-serve pouch · Net weight: [to be set]"
   ],
   "copy_back": [
     "Thai-language particulars: [to be set]",
@@ -72,7 +72,7 @@
   "held_back": [
     "Any sugar wording (sugar-free, zero sugar, no added sugar, low sugar, sugarless): settled rule S1.",
     "Sodium-free, low sodium, no sodium, salt-free: pending the Thai text check and a water basis.",
-    "Sodium figure (under 5 mg) and potassium amount (about 1,007 mg at the 1.75-volume design dose): held until the salt choice is fixed and an adviser decides whether a bare figure triggers the full nutrition panel. The potassium presence line is printed as a plain fact; its amount is a placeholder.",
+    "Sodium figure (under 5 mg) and potassium amount (317 mg per serve at 0.55 volume, DERIVED from basis B, rework/64 section 8; the earlier 1,007 mg at 1.75 volumes is superseded), still held as a placeholder until the salt choice is fixed and an adviser decides whether a bare figure triggers the full nutrition panel. The potassium presence line is printed as a plain fact; its amount is a placeholder.",
     "Total sugars 0 g panel line: held with the panel; an adviser must confirm it does not read as a sugar-free claim (S1).",
     "Potassium benefit (muscle, heart, hydration, electrolyte) and source-of-potassium wording: rules 2 and 3.",
     "Health or function wording (hydration, immunity, energy, digestion, healthy): rule 2.",

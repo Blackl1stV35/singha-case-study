@@ -1,0 +1,15 @@
+# ONE: dry 20 ft container specification (company page, tier P)
+- URL: https://www.one-line.com/en/dry-containers
+- Date read: 2026-10-20 (the page shows no publication or last-updated date)
+- Extract as returned by the page (WebFetch, 2026-10-20):
+  - Dry 20 FT (20' standard dry) specifications
+  - Internal length 5,898 mm (19'4")
+  - Internal width 2,350 mm (7'8")
+  - Internal height 2,390 mm (7'10")
+  - Door opening width 2,340 mm; door opening height 2,280 mm
+  - Cubic capacity 33.1 m3 (1,169 cu ft)
+  - Tare weight 2,150 kg
+  - Payload 28,330 kg (62,460 lbs); the row reads "Pay Load 28,330 kg 62,460 lbs"
+  - Max gross weight 30,480 kg (equals tare plus payload; the page heading reads "8'6" / 30,480kg")
+  - Page disclaimer: "Individual containers may have different specifications from the measurement shown above."
+- Used for: internal volume (5.898 x 2.350 x 2.390 m), payload 28.33 t (slide 7), door height 2.28 m (loading check).

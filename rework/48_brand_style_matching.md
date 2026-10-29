@@ -146,14 +146,14 @@ Open (L9, L14).
 
 | Item | Value used | Basis | Status |
 |---|---|---|---|
-| Cube side | 15 mm | Design value, derived from the 1.75-volume design dose and a density band | ASSUMPTION (derived design value); the density band is ASSUMPTION |
+| Cube side | 14 mm | Basis B (user, 19 October 2026): the central cube mass of 3.79 g gives 1.38 g/cm3 at 14 mm, inside the density band; superseded by rework/64 section 8 (basis B); was 15 mm at the 1.75-volume design dose | ASSUMPTION (derived design value); the density band is ASSUMPTION |
 | Reactants per 330 ml at 1.75 volumes (design dose) | 4.23 g: KHCO3 2.58 g and citric acid 1.65 g | 1.75 x 0.330 L = 0.5775 L of CO2, which is 0.02577 mol at 22.41 L/mol. KHCO3 0.02577 x 100.12 = 2.58 g. Citric acid is one-third mol per mol CO2, 1.65 g. Matches the gate simulation (rework/screen/final_gate_sim_results.json: 2.579 g and 1.65 g). The earlier 1.5-volume row (3.63 g) is superseded | Derived from sourced stoichiometry |
 | Citric acid excess | 0.17 g | 10 percent of 1.65 g, ASSUMPTION | ASSUMPTION |
 | Intensive sweetener | 0.03 g (range 0.01 to 0.10) | ASSUMPTION | ASSUMPTION |
 | Lime flavour powder | 0.05 g (range 0.02 to 0.10) | ASSUMPTION | ASSUMPTION |
 | Binder and filler (sodium content not claimed) | 0.80 g (range 0.5 to 1.2) | ASSUMPTION | ASSUMPTION |
-| Design mass | 5.3 g (sum 5.28 g; range 4.9 to 5.8 g) | 4.23 + 0.17 + 0.03 + 0.05 + 0.80 = 5.28 g; low end 4.93 g; high end 5.80 g | Derived with ASSUMPTION inputs |
-| Implied density | 1.56 g/cm3 at 5.28 g; 1.46 at the low end (4.93 g); 1.72 at the high end (5.80 g) | Mass over 3.375 cm3 at 15 mm | Derived; the band 1.25 to 1.60 is ASSUMPTION; the high end is above it (6.4, L6) |
+| Design mass | 3.79 g central (range 3.46 to 4.24 g); packed unit 5.29 g with a 1.5 g pouch | Basis B: 2.944 g reactants (0.811 g potassium bicarbonate, 2.10 g citric acid, 33 mg sucralose) plus 0.80 g binder and filler (range 0.5 to 1.2) and 0.05 g lime flavour (range 0.02 to 0.10) = 3.79 g; low 2.944 + 0.5 + 0.02 = 3.46 g; high 2.944 + 1.2 + 0.10 = 4.24 g; superseded by rework/64 section 8 (basis B); was 5.3 g (5.28 g) at 1.75 volumes | Derived on ASSUMPTION inputs |
+| Implied density | 1.38 g/cm3 at 3.79 g and 14 mm (2.744 cm3); 1.26 at the low end (3.46 g); 1.55 at the high end (4.24 g) | Mass over 2.744 cm3 at 14 mm; superseded by rework/64 section 8 (basis B); was 1.56 g/cm3 at 15 mm | Derived on ASSUMPTION inputs; the band 1.25 to 1.60 is ASSUMPTION; all three values are inside it |
 | Potassium per 330 ml | 1,007 mg from KHCO3 at 1.75 volumes (864 mg at 1.5 volumes) | 2.58 g x 39.10 / 100.12 = 1,007 mg. About 29 percent of the 3,500 mg Thai reference (not reconfirmed). Matches the gate simulation (rework/screen/final_gate_sim_results.json) | Derived, not measured; the amount is held from the mockup |
 | Pack | 70 x 90 x 20 mm, single-serve flat pouch | ASSUMPTION (design choice) | Dimensions beyond the cube are ASSUMPTION; no converter quote |
 | Front face | 63 cm2 | 70 x 90 mm | Under the 80 cm2 limit for format 1.3 (Notification 445 Annex 1) and the 100 cm2 band (Notification 450 clause 15) |
@@ -293,7 +293,7 @@ Open (L9, L14).
 
 10.1 What is built. `rework/mockup/build_cube_scene.py` is a headless Blender 5.2 script. It builds a pouch of 70 by 90 by 20 mm with heat-seal bands at the top and bottom, the front artwork from `label_front.png`, one 15 mm lime cube resting on the floor beside the pouch, a matte cyclorama in the background colour and three soft lights. It renders `rework/mockup/cube_hero.png` at 1600 by 1200 with Cycles on the CPU, 128 samples and OpenImageDenoise. The final render took 248 s of script time (252 s wall), inside the 600000 ms limit, so the sample count was not reduced. The timing is in rework/screen/cube_hero_render_log_2026-10-18.txt (filtered: the raw log holds local paths and is not kept in the repo). The PNG was rewritten with every text chunk removed. Its remaining chunks are IHDR, sRGB, gAMA, pHYs and IDAT, then IEND. The material list, with the basis of each value, is in `rework/mockup/MATERIALS_cube.md`. The script docstring holds the full assumption list.
 
-10.2 Sizes. The pack and the cube come from the tokens file. The pack is 70 by 90 mm, the cube is 15 mm, and the front artwork is shown at 65 by 32.5 mm (ASSUMPTION). The cube is 15 mm, on the floor 26 mm right of the pouch centre line. The 330 ml preparation volume is no longer checked against any geometry, because the glass and water were removed (8.4).
+10.2 Sizes. The pack and the cube come from the tokens file. The pack is 70 by 90 mm, the cube is 14 mm, and the front artwork is shown at 65 by 32.5 mm (ASSUMPTION). The cube is 14 mm (superseded by rework/64 section 8 (basis B); was 15 mm), on the floor 26 mm right of the pouch centre line. The 330 ml preparation volume is no longer checked against any geometry, because the glass and water were removed (8.4).
 
 10.3 Conflicts with this note. Glass and bubbles are resolved by removal (8.4) and can return only by the owner's written decision. The pack form and the artwork shape remain open.
 

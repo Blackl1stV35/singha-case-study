@@ -1,0 +1,49 @@
+{
+  "sermsuk_shares": {
+    "issued_shares": 265900484,
+    "accepted_tender_pct_of_issued": 34.52,
+    "holding_after_tender_pct_of_issued": 99.19,
+    "agm_attending_pct_of_issued": 99.1885,
+    "max_tender_pct_of_issued": 35.33,
+    "holding_after_tender_as_printed_pct": 99.19,
+    "check_holding_rounds_to_printed": true
+  },
+  "tender_value_thb": {
+    "accepted_value_thb": 5782543452,
+    "accepted_value_thb_million": 5782.5,
+    "max_value_thb_million": 5918.6,
+    "check_max_truncates_to_brand_buffet_5918": true,
+    "note": "DERIVED: price times shares. Brand Buffet's 5,918 million equals the derived 5,918.6 million truncated to whole millions (cross-check only, S).",
+    "max_value_thb_exact": 5918577840,
+    "form250_page10_total_thb": 5918577840,
+    "max_value_equals_form250_total": true
+  },
+  "so_water_holding_before_tender_check": {
+    "record_date_6_dec_2023_pct_of_issued": 64.67,
+    "record_date_6_dec_2023_as_printed_pct": 64.67,
+    "record_date_17_jul_2024_as_printed_pct": 64.67,
+    "note": "Same percentage at two record dates (6 Dec 2023 in the 3 Jul 2024 announcement; 17 Jul 2024 in the 15 Nov 2024 notice). The date basis is stated in the record."
+  },
+  "sermsuk_fy24_checks": {
+    "gross_profit_check_rev_minus_cogs": 3847,
+    "gross_profit_check_matches_printed": true,
+    "gross_margin_pct": 29.25,
+    "net_margin_pct": 3.07,
+    "distribution_share_of_sales_pct": 23.06,
+    "net_fy23_from_fy24_minus_change": 248,
+    "net_fy23_matches_mda": true,
+    "net_change_pct_yoy": 62.9
+  },
+  "sbf_apac_definition_check_p": {
+    "fy22_original_margin_pct": 15.69,
+    "fy22_restated_margin_pct": 16.37,
+    "fy23_margin_pct": 11.6,
+    "fy24_margin_pct": 11.29,
+    "fy25_margin_pct": 10.79,
+    "fy23_vs_fy22_restated_profit_change_pct": -25.4,
+    "fy23_vs_fy22_restated_profit_change_as_printed_pct": -25.4,
+    "fy23_snippet_43_1_matches_p_fy23_profit": true,
+    "fy25_profit_snippet_45_0_superseded": "The earlier snippet said JPY 45.0 billion; the annual report says JPY 42.5 billion (42,516 million).",
+    "note": "PROXY for the Pepsi bottler: Asia Pacific segment (Vietnam, Thailand, Indonesia, Oceania, health foods). Segment profit ratio, not a gross or net margin. The FY2022 original basis includes Africa."
+  }
+}

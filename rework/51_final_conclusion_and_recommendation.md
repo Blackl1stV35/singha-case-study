@@ -51,6 +51,8 @@ If the user's choice differs from this recommendation, the leaf drink is the fal
 
 ## 5. Decisions needed
 
+Status (19 October 2026): items 1 to 4 are decided ([52](52_pivot_and_retirement.md) D2, D3, D4 and D5; the page 2 check is a stated limit, L19). Item 5 is open (O5). Item 6 is partly done ([52](52_pivot_and_retirement.md) section 7).
+
 1. **Potassium salt.** Recommend **potassium bicarbonate**, as modelled. The model, the mockup spec and the gate simulation all use bicarbonate. Decision R1 in [rework/45](45_working_candidate_rework.md) said carbonate; it is now corrected. Carbonate would give about 2,015 mg potassium per 330 ml at 1.75 volumes, twice the bicarbonate figure of about 1,007 mg. One mole of carbonate carries two moles of potassium per mole of CO₂, and bicarbonate carries one. Correction to my earlier message: the factor is two, not 1.7. The "1,730 mg" figure came from the workflow critic and is wrong.
 2. **Potassium dose framing.** Recommend stating the amount on the label as a plain fact and presenting the medical question as an open limit. Recommend against lowering the dose to make the medical question go away, because that fails the fizz gate. A warning for people on potassium-retaining medicines or with kidney disease needs wording from a medical reviewer, which needs outside contact. **Without that wording, judges who know food safety will raise this first.** This is the item most likely to sink the entry.
 3. **Claim set.** Recommend no sodium-free claim (F1), no sugar-free claim (S1), no health claim, and no validated fizz claim. This weakens the Ingredients pillar. I recommend accepting that rather than presenting a claim the record cannot support.

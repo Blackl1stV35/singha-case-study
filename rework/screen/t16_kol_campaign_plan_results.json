@@ -1,0 +1,661 @@
+{
+  "meta": {
+    "date": "2026-10-20",
+    "seed": 20261020,
+    "fx_thb_per_usd": 33.541,
+    "note": "All numbers are produced by this script. Inputs carry their tier in INPUTS."
+  },
+  "inputs": {
+    "cubes_per_carton": {
+      "value": 6,
+      "tier": "ASSUMPTION",
+      "source": "team six-cube carton (a pack design choice), rework/proposal/05 and 10"
+    },
+    "exfactory_per_cube_thb": {
+      "value": 9.0,
+      "tier": "ASSUMPTION",
+      "source": "shelf 15.00 x 60 percent ex-factory share, rework/proposal/05 row Shelf price"
+    },
+    "cost_pouch_thb": {
+      "value": 1.3,
+      "tier": "ASSUMPTION",
+      "source": "pouch per cube, rework/proposal/06 cost build"
+    },
+    "cost_print_thb": {
+      "value": 1.5,
+      "tier": "ASSUMPTION",
+      "source": "print per cube, rework/proposal/06 cost build"
+    },
+    "cost_processing_thb": {
+      "value": 0.5,
+      "tier": "ASSUMPTION",
+      "source": "processing per cube, rework/proposal/06 cost build"
+    },
+    "cost_reactants_thb": {
+      "value": 0.118,
+      "tier": "DERIVED",
+      "source": "reactants per cube, rework/proposal/06 line 105 (the earlier note omitted this line)"
+    },
+    "cost_carton_share_6pack_thb": {
+      "value": 0.67,
+      "tier": "ASSUMPTION",
+      "source": "carton share per cube for the 6-cube carton (THB 4 per carton scaled from the 12-cube price), rework/proposal/05 cost table"
+    },
+    "cost_per_cube_6pack_thb": {
+      "value": 4.09,
+      "tier": "DERIVED",
+      "source": "sum of the five cost rows above, rounded (1.30 + 1.50 + 0.50 + 0.118 + 0.67 = 4.088), rework/proposal/05 and 06. Binder (0.80 g) and lemon flavour (0.05 g) are NOT priced anywhere in the repo cost build, so this cost is an incomplete build and the contribution is an upper bound"
+    },
+    "contrib_floor_per_cube_thb": {
+      "value": 3.51,
+      "tier": "DERIVED",
+      "source": "repo floor from the pouch high case, rework/proposal/10 and 06"
+    },
+    "shelf_per_cube_thb": {
+      "value": 15.0,
+      "tier": "ASSUMPTION",
+      "source": "rework/proposal/05 row Shelf price"
+    },
+    "commission_per_carton_thb": {
+      "value": 8.0,
+      "tier": "ASSUMPTION",
+      "source": "team setting below the ceiling of THB 8.40 per carton (base contribution 3.58 per cube after commission). The earlier planning value, 10 percent of the THB 90 carton (THB 9.00), gives 3.41 per cube at base and fails the 3.51 test"
+    },
+    "cpc_phoenix_thb": {
+      "value": 11.5,
+      "tier": "PROXY",
+      "source": "Phoenix Media 2025, Facebook and Instagram, cross-industry; rework/raw/diligence_2026-10-20/T16/14"
+    },
+    "cpm_phoenix_thb": {
+      "value": 120,
+      "tier": "PROXY",
+      "source": "Phoenix Media 2025, Facebook and Instagram; rework/raw/.../T16/14"
+    },
+    "cpc_global_usd": {
+      "value": 0.82,
+      "tier": "PROXY",
+      "source": "Vaizle 2025 average, 5,200 Meta accounts; rework/raw/.../T16/19"
+    },
+    "lpr_low": {
+      "value": 0.0008,
+      "tier": "PROXY",
+      "source": "Phoenix 2025 conversion rate 0.08 percent (lead-generation mix); rework/raw/.../T16/14"
+    },
+    "lpr_base": {
+      "value": 0.01,
+      "tier": "ASSUMPTION",
+      "source": "click-to-first-purchase base, rework/proposal/10 Step 1"
+    },
+    "lpr_high": {
+      "value": 0.0202,
+      "tier": "PROXY",
+      "source": "Triple Whale food and beverage conversion 2.02 percent, 2025, via Influee; rework/raw/.../T16/19"
+    },
+    "ctr_creator": {
+      "value": 0.01,
+      "tier": "ASSUMPTION",
+      "source": "view to link click on creator posts; cross-check Phoenix-implied 1.04 percent (DERIVED)"
+    },
+    "repeat_base": {
+      "value": 0.3,
+      "tier": "ASSUMPTION",
+      "source": "repeat target, rework/proposal/10 both routes"
+    },
+    "repeat_floor": {
+      "value": 0.15,
+      "tier": "ASSUMPTION",
+      "source": "repeat floor, rework/proposal/10"
+    },
+    "repeat_extra_cartons": {
+      "value": 1,
+      "tier": "ASSUMPTION",
+      "source": "a repeat buyer buys one more carton inside 13 weeks"
+    },
+    "micro_fee_usd": {
+      "value": 200,
+      "tier": "PROXY",
+      "source": "Influencer Marketing Hub, TikTok micro lower bound, 6 October 2026; rework/raw/.../T16/05"
+    },
+    "mid_fee_usd": {
+      "value": 1000,
+      "tier": "PROXY",
+      "source": "Influencer Marketing Hub, YouTube mid lower bound; rework/raw/.../T16/05"
+    },
+    "kit_cubes": {
+      "value": 12,
+      "tier": "ASSUMPTION",
+      "source": "two cartons per creator"
+    },
+    "commission_cap_cartons": {
+      "value": 500,
+      "tier": "ASSUMPTION",
+      "source": "planning cap on creator-coded cartons"
+    },
+    "contingency_share": {
+      "value": 0.1,
+      "tier": "ASSUMPTION",
+      "source": "planning contingency on committed lines"
+    },
+    "route_b_learning_thb": {
+      "value": 20000,
+      "tier": "ASSUMPTION",
+      "source": "paid learning tranche, released after the week 4 read"
+    },
+    "route_b_scale_thb": {
+      "value": 40000,
+      "tier": "ASSUMPTION",
+      "source": "paid scale tranche, released only if cost per first purchase meets the cap at week 8"
+    }
+  },
+  "unit_economics": {
+    "contrib_base_per_cube_thb": 4.91,
+    "contrib_floor_per_cube_thb": 3.51,
+    "carton_contrib_base_thb": 29.46,
+    "carton_contrib_floor_thb": 21.06,
+    "commission_per_carton_thb": 8.0,
+    "contrib_base_after_commission_per_cube_thb": 3.58,
+    "max_commission_per_carton_keeping_3_51_at_base_thb": 8.4,
+    "headroom_to_floor_before_commission_per_cube_thb": 1.4,
+    "headroom_to_floor_after_commission_per_cube_thb": 0.07,
+    "unpriced_inputs": "binder and filler 0.80 g and lemon flavour 0.05 g are not priced in the repo cost build (proposal/05, proposal/06); contribution figures are upper bounds; any unpriced cost above the after-commission headroom per cube fails the 3.51 test",
+    "kit_cost_per_creator_thb": 49.08,
+    "cpc_phoenix_thb": 11.5,
+    "cpc_global_thb": 27.5,
+    "cpm_phoenix_thb": 120,
+    "phoenix_implied_ctr_pct": 1.043,
+    "micro_fee_thb": 6708.2,
+    "mid_fee_thb": 33541.0
+  },
+  "paid_route_grid": [
+    {
+      "cpc": "phoenix",
+      "cpc_thb": 11.5,
+      "lpr": "low",
+      "lpr_value": 0.0008,
+      "cost_per_first_purchase_thb": 14375.0,
+      "cartons_to_recover_base_1carton": 487.95,
+      "cartons_to_recover_floor_1carton": 682.57,
+      "cubes_to_recover_at_4_91": 2927.7
+    },
+    {
+      "cpc": "phoenix",
+      "cpc_thb": 11.5,
+      "lpr": "base",
+      "lpr_value": 0.01,
+      "cost_per_first_purchase_thb": 1150.0,
+      "cartons_to_recover_base_1carton": 39.04,
+      "cartons_to_recover_floor_1carton": 54.61,
+      "cubes_to_recover_at_4_91": 234.2
+    },
+    {
+      "cpc": "phoenix",
+      "cpc_thb": 11.5,
+      "lpr": "high",
+      "lpr_value": 0.0202,
+      "cost_per_first_purchase_thb": 569.31,
+      "cartons_to_recover_base_1carton": 19.32,
+      "cartons_to_recover_floor_1carton": 27.03,
+      "cubes_to_recover_at_4_91": 115.9
+    },
+    {
+      "cpc": "global",
+      "cpc_thb": 27.5,
+      "lpr": "low",
+      "lpr_value": 0.0008,
+      "cost_per_first_purchase_thb": 34375.0,
+      "cartons_to_recover_base_1carton": 1166.84,
+      "cartons_to_recover_floor_1carton": 1632.24,
+      "cubes_to_recover_at_4_91": 7001.0
+    },
+    {
+      "cpc": "global",
+      "cpc_thb": 27.5,
+      "lpr": "base",
+      "lpr_value": 0.01,
+      "cost_per_first_purchase_thb": 2750.0,
+      "cartons_to_recover_base_1carton": 93.35,
+      "cartons_to_recover_floor_1carton": 130.58,
+      "cubes_to_recover_at_4_91": 560.1
+    },
+    {
+      "cpc": "global",
+      "cpc_thb": 27.5,
+      "lpr": "high",
+      "lpr_value": 0.0202,
+      "cost_per_first_purchase_thb": 1361.39,
+      "cartons_to_recover_base_1carton": 46.21,
+      "cartons_to_recover_floor_1carton": 64.64,
+      "cubes_to_recover_at_4_91": 277.3
+    }
+  ],
+  "paid_cap": {
+    "cap_repeat_floor_thb": 24.22,
+    "cap_repeat_base_thb": 27.38,
+    "lpr_needed_at_phoenix_cpc_for_cap_base_repeat_pct": 42.0,
+    "lpr_needed_at_phoenix_cpc_for_one_carton_floor_pct": 54.61,
+    "lpr_needed_at_phoenix_cpc_for_one_carton_base_pct": 39.04
+  },
+  "paid_route_at_base": {
+    "learning_tranche": {
+      "clicks": 1739.1,
+      "buyers": 17.391,
+      "cartons": 22.609,
+      "cost_per_first_purchase_thb": 1150.0,
+      "gross_contribution_thb": 476.14,
+      "net_thb": -19523.86
+    },
+    "scale_tranche_if_released": {
+      "clicks": 3478.3,
+      "buyers": 34.783,
+      "cartons": 45.217,
+      "cost_per_first_purchase_thb": 1150.0,
+      "gross_contribution_thb": 952.28,
+      "net_thb": -39047.72
+    },
+    "full_60000_route_b": {
+      "clicks": 5217.4,
+      "buyers": 52.174,
+      "cartons": 67.826,
+      "cost_per_first_purchase_thb": 1150.0,
+      "gross_contribution_thb": 1428.42,
+      "net_thb": -58571.58
+    },
+    "flag": "paid social does not recover its first-purchase cost at base inputs"
+  },
+  "budget": {
+    "option_A": {
+      "name": "A, with flat fees for micro and mid posts",
+      "subtotal_committed_thb": 92237.28,
+      "contingency_thb": 9223.73,
+      "committed_total_thb": 101461.01,
+      "conditional_total_thb": 60000,
+      "ceiling_total_thb": 161461.01
+    },
+    "option_B": {
+      "name": "B, commission-led (recommended default)",
+      "lines": [
+        {
+          "line": "Creator kits, nano and micro",
+          "arithmetic": "20 creators x 12 cubes x THB 4.09 = 20 x 49.08",
+          "thb": 981.6,
+          "tier": "DERIVED on ASSUMPTION cost inputs"
+        },
+        {
+          "line": "Commission cap on creator-coded cartons",
+          "arithmetic": "500 cartons x THB 8.00",
+          "thb": 4000.0,
+          "tier": "ASSUMPTION (cap; rate set by the 3.51 test)"
+        },
+        {
+          "line": "Measurement: unique codes and listing analytics",
+          "arithmetic": "internal tools; no quote obtained",
+          "thb": 0.0,
+          "tier": "ASSUMPTION; not costed"
+        }
+      ],
+      "subtotal_committed_thb": 4981.6,
+      "contingency_thb": 498.16,
+      "committed_total_thb": 5479.76,
+      "conditional_total_thb": 60000,
+      "ceiling_total_thb": 65479.76
+    },
+    "lines": [
+      {
+        "line": "Micro creator flat fees",
+        "arithmetic": "4 creators x 2 posts x THB 6708.2",
+        "thb": 53665.6,
+        "tier": "PROXY"
+      },
+      {
+        "line": "Mid creator flat fee (optional, cut first)",
+        "arithmetic": "1 creator x 1 video x THB 33541.0",
+        "thb": 33541.0,
+        "tier": "PROXY"
+      },
+      {
+        "line": "Creator kits, nano",
+        "arithmetic": "16 creators x 12 cubes x THB 4.09 = 16 x 49.08",
+        "thb": 785.28,
+        "tier": "DERIVED on ASSUMPTION cost inputs"
+      },
+      {
+        "line": "Creator kits, micro and mid",
+        "arithmetic": "5 creators x 49.08",
+        "thb": 245.4,
+        "tier": "DERIVED on ASSUMPTION cost inputs"
+      },
+      {
+        "line": "Commission cap on creator-coded cartons",
+        "arithmetic": "500 cartons x THB 8.00",
+        "thb": 4000.0,
+        "tier": "ASSUMPTION (cap; rate set by the 3.51 test)"
+      },
+      {
+        "line": "Measurement: unique codes and listing analytics",
+        "arithmetic": "internal tools; no quote obtained",
+        "thb": 0.0,
+        "tier": "ASSUMPTION; not costed"
+      }
+    ],
+    "subtotal_committed_thb": 92237.28,
+    "contingency_thb": 9223.73,
+    "committed_total_thb": 101461.01,
+    "conditional_lines": [
+      {
+        "line": "Route B learning tranche (paid social, one listing)",
+        "arithmetic": "released after the week 4 read",
+        "thb": 20000,
+        "tier": "ASSUMPTION"
+      },
+      {
+        "line": "Route B scale tranche (paid social)",
+        "arithmetic": "released only if the week 8 cost per first purchase is at or below the cap",
+        "thb": 40000,
+        "tier": "ASSUMPTION"
+      }
+    ],
+    "conditional_total_thb": 60000,
+    "ceiling_total_thb": 161461.01,
+    "committed_without_mid_thb": 64565.91,
+    "creators_total": 21,
+    "posts_total": 41,
+    "scope": "Creator programme and Route B paid-social budget only. Route A in-store sampling is NOT costed: the store count and samples per store are not set in proposal/10 (UNVERIFIED), so no Route A total and no two-route total is stated. Brand-lift panel and Thai legal review are not costed either."
+  },
+  "route_a_not_costed": {
+    "per_sample_thb": 15,
+    "range_thb": [
+      10,
+      25
+    ],
+    "tier": "ASSUMPTION (proposal/10 Route A)",
+    "stores": "UNVERIFIED: not set in proposal/10",
+    "formula": "stores x samples per store x THB 15",
+    "total_thb": null
+  },
+  "scale_rule": {
+    "tranche_release_week_8": "Release the THB 40,000 scale tranche at week 8 only if the measured cost per first purchase on cohort 1 is at or below the cap at the measured repeat, and the measured contribution per cube after commission is at least THB 3.51.",
+    "scaling_week_12": "Scale a route beyond the released tranche only if repeat is at least 15 percent in both cohorts and the measured contribution per cube after commission is at least THB 3.51.",
+    "cap_thb": {
+      "repeat_30pct": 27.38,
+      "repeat_15pct": 24.22,
+      "repeat_40pct_max_draw": 29.48
+    },
+    "tiers": "cap DERIVED on the repo floor (THB 3.51 per cube, 6 cubes per carton); the repeat rates are ASSUMPTIONS; the week 8 and week 12 gates are ASSUMPTIONS"
+  },
+  "creator_program_base_full": {
+    "creators": 21,
+    "posts": 41,
+    "views": 89000.0,
+    "clicks": 890.0,
+    "first_purchases_buyers": 8.9,
+    "cartons_per_buyer": 1.3,
+    "cartons": 11.57,
+    "flat_fees_thb": 87206.6,
+    "kits_thb": 1030.68,
+    "commission_thb": 92.56,
+    "spend_thb": 88329.84,
+    "contribution_net_of_commission_thb": 248.29,
+    "net_result_thb": -87988.99,
+    "cost_per_first_purchase_thb": 9924.7,
+    "per_tier": {
+      "nano": {
+        "creators": 16,
+        "posts": 32,
+        "views": 32000.0,
+        "flat_fees_thb": 0.0
+      },
+      "micro": {
+        "creators": 4,
+        "posts": 8,
+        "views": 32000.0,
+        "flat_fees_thb": 53665.6
+      },
+      "mid": {
+        "creators": 1,
+        "posts": 1,
+        "views": 25000.0,
+        "flat_fees_thb": 33541.0
+      }
+    }
+  },
+  "creator_program_base_no_mid": {
+    "creators": 20,
+    "posts": 40,
+    "views": 64000.0,
+    "clicks": 640.0,
+    "first_purchases_buyers": 6.4,
+    "cartons_per_buyer": 1.3,
+    "cartons": 8.32,
+    "flat_fees_thb": 53665.6,
+    "kits_thb": 981.6,
+    "commission_thb": 66.56,
+    "spend_thb": 54713.76,
+    "contribution_net_of_commission_thb": 178.55,
+    "net_result_thb": -54468.65,
+    "cost_per_first_purchase_thb": 8549.02,
+    "per_tier": {
+      "nano": {
+        "creators": 16,
+        "posts": 32,
+        "views": 32000.0,
+        "flat_fees_thb": 0.0
+      },
+      "micro": {
+        "creators": 4,
+        "posts": 8,
+        "views": 32000.0,
+        "flat_fees_thb": 53665.6
+      }
+    }
+  },
+  "creator_program_commission_only_no_fees": {
+    "creators": 21,
+    "posts": 41,
+    "views": 89000.0,
+    "clicks": 890.0,
+    "first_purchases_buyers": 8.9,
+    "cartons_per_buyer": 1.3,
+    "cartons": 11.57,
+    "flat_fees_thb": 0.0,
+    "kits_thb": 1030.68,
+    "commission_thb": 92.56,
+    "spend_thb": 1123.24,
+    "contribution_net_of_commission_thb": 248.29,
+    "net_result_thb": -782.39,
+    "cost_per_first_purchase_thb": 126.21,
+    "per_tier": {
+      "nano": {
+        "creators": 16,
+        "posts": 32,
+        "views": 32000.0,
+        "flat_fees_thb": 0.0
+      },
+      "micro": {
+        "creators": 4,
+        "posts": 8,
+        "views": 32000.0,
+        "flat_fees_thb": 0.0
+      },
+      "mid": {
+        "creators": 1,
+        "posts": 1,
+        "views": 25000.0,
+        "flat_fees_thb": 0.0
+      }
+    }
+  },
+  "creator_program_commission_led_B": {
+    "creators": 20,
+    "posts": 40,
+    "views": 64000.0,
+    "clicks": 640.0,
+    "first_purchases_buyers": 6.4,
+    "cartons_per_buyer": 1.3,
+    "cartons": 8.32,
+    "flat_fees_thb": 0.0,
+    "kits_thb": 981.6,
+    "commission_thb": 66.56,
+    "spend_thb": 1048.16,
+    "contribution_net_of_commission_thb": 178.55,
+    "net_result_thb": -803.05,
+    "cost_per_first_purchase_thb": 163.77,
+    "per_tier": {
+      "nano": {
+        "creators": 16,
+        "posts": 32,
+        "views": 32000.0,
+        "flat_fees_thb": 0.0
+      },
+      "micro": {
+        "creators": 4,
+        "posts": 8,
+        "views": 32000.0,
+        "flat_fees_thb": 0.0
+      }
+    }
+  },
+  "creator_sensitivity": [
+    {
+      "views": "views_low",
+      "lpr": "low",
+      "lpr_value": 0.0008,
+      "views_total": 42000.0,
+      "buyers": 0.336,
+      "spend_thb": 88240.77,
+      "net_result_thb": -88227.91,
+      "cost_per_first_purchase_thb": 262621.35
+    },
+    {
+      "views": "views_low",
+      "lpr": "base",
+      "lpr_value": 0.01,
+      "views_total": 42000.0,
+      "buyers": 4.2,
+      "spend_thb": 88280.96,
+      "net_result_thb": -88120.11,
+      "cost_per_first_purchase_thb": 21019.28
+    },
+    {
+      "views": "views_low",
+      "lpr": "high",
+      "lpr_value": 0.0202,
+      "views_total": 42000.0,
+      "buyers": 8.484,
+      "spend_thb": 88325.51,
+      "net_result_thb": -88000.59,
+      "cost_per_first_purchase_thb": 10410.83
+    },
+    {
+      "views": "views_base",
+      "lpr": "low",
+      "lpr_value": 0.0008,
+      "views_total": 89000.0,
+      "buyers": 0.712,
+      "spend_thb": 88244.68,
+      "net_result_thb": -88217.42,
+      "cost_per_first_purchase_thb": 123939.16
+    },
+    {
+      "views": "views_base",
+      "lpr": "base",
+      "lpr_value": 0.01,
+      "views_total": 89000.0,
+      "buyers": 8.9,
+      "spend_thb": 88329.84,
+      "net_result_thb": -87988.99,
+      "cost_per_first_purchase_thb": 9924.7
+    },
+    {
+      "views": "views_base",
+      "lpr": "high",
+      "lpr_value": 0.0202,
+      "views_total": 89000.0,
+      "buyers": 17.978,
+      "spend_thb": 88424.25,
+      "net_result_thb": -87735.73,
+      "cost_per_first_purchase_thb": 4918.47
+    },
+    {
+      "views": "views_high",
+      "lpr": "low",
+      "lpr_value": 0.0008,
+      "views_total": 236000.0,
+      "buyers": 1.888,
+      "spend_thb": 88256.92,
+      "net_result_thb": -88184.61,
+      "cost_per_first_purchase_thb": 46746.25
+    },
+    {
+      "views": "views_high",
+      "lpr": "base",
+      "lpr_value": 0.01,
+      "views_total": 236000.0,
+      "buyers": 23.6,
+      "spend_thb": 88482.72,
+      "net_result_thb": -87578.89,
+      "cost_per_first_purchase_thb": 3749.27
+    },
+    {
+      "views": "views_high",
+      "lpr": "high",
+      "lpr_value": 0.0202,
+      "views_total": 236000.0,
+      "buyers": 47.672,
+      "spend_thb": 88733.07,
+      "net_result_thb": -86907.33,
+      "cost_per_first_purchase_thb": 1861.32
+    }
+  ],
+  "creator_breakeven_base": {
+    "fixed_spend_thb": 88237.28,
+    "net_per_buyer_thb": 27.9,
+    "buyers_needed": 3162.9,
+    "views_needed": 31628533.0,
+    "views_planned": 89000.0,
+    "purchases_per_1000_views_needed_at_planned_views": 35.54,
+    "purchases_per_1000_views_planned": 0.1
+  },
+  "creator_breakeven_high_lpr": {
+    "fixed_spend_thb": 88237.28,
+    "net_per_buyer_thb": 27.9,
+    "buyers_needed": 3162.9,
+    "views_needed": 15657689.0,
+    "views_planned": 89000.0,
+    "purchases_per_1000_views_needed_at_planned_views": 35.54,
+    "purchases_per_1000_views_planned": 0.202
+  },
+  "creator_breakeven_repeat_floor": {
+    "fixed_spend_thb": 88237.28,
+    "net_per_buyer_thb": 24.68,
+    "buyers_needed": 3575.4,
+    "views_needed": 35753993.0,
+    "views_planned": 89000.0,
+    "purchases_per_1000_views_needed_at_planned_views": 40.17,
+    "purchases_per_1000_views_planned": 0.1
+  },
+  "creator_breakeven_option_B": {
+    "fixed_spend_thb": 981.6,
+    "net_per_buyer_thb": 27.9,
+    "buyers_needed": 35.2,
+    "views_needed": 351853.0,
+    "views_planned": 64000.0,
+    "purchases_per_1000_views_needed_at_planned_views": 0.55,
+    "purchases_per_1000_views_planned": 0.1
+  },
+  "monte_carlo": {
+    "draws": 20000,
+    "seed": 20261020,
+    "prob_creator_net_result_at_or_above_zero": 0.0,
+    "creator_cpf_median_thb": 9060.19,
+    "creator_cpf_p10_thb": 3765.77,
+    "creator_cpf_p90_thb": 24495.4,
+    "prob_creator_net_result_at_or_above_zero_option_B_commission_led": 0.0069,
+    "prob_paid_cpf_at_or_below_cap": 0.0,
+    "paid_cpf_floor_thb": 569.31,
+    "cap_max_thb": 29.48,
+    "paid_cpf_median_thb": 1616.74,
+    "paid_cpf_p10_thb": 957.0,
+    "paid_cpf_p90_thb": 3429.35,
+    "note": "ASSUMPTION distributions: views multiplier lognormal (sigma 0.5), CTR triangular 0.5 to 2 percent, LPR triangular between the PROXY bounds (0.08 to 2.02 percent) with mode at the 1.0 percent base, repeat triangular 15 to 40 percent (mode 30). Paid cost per click triangular between the Phoenix PROXY (THB 11.5, mode) and the global PROXY (THB 27.51). These are model readings, not forecasts. The paid cap result of 0.0 is structural, not a finding: the lowest paid cost per first purchase in any draw is paid_cpf_floor_thb (THB 11.5 divided by 2.02 percent), and the highest cap in any draw is cap_max_thb (at a 40 percent repeat), so no draw can meet the cap."
+  }
+}

@@ -1,0 +1,7 @@
+00:06.187  cycles           | WARNING HIPEW initialization failed: Error opening HIP dynamic library
+D:\Workspace\singha-case-study\rework\deck\images\render_deck_images.py:474: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world.use_nodes = True
+D:\Workspace\singha-case-study\rework\deck\images\render_deck_images.py:486: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  fm.use_nodes = True
+D:\Workspace\singha-case-study\rework\deck\images\render_deck_images.py:114: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat.use_nodes = True

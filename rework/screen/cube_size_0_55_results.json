@@ -1,0 +1,72 @@
+{
+  "check_1_75_volume": {
+    "khco3_g": 2.58,
+    "citric_stoichiometric_g": 1.65,
+    "reactants_g": 4.23,
+    "expected_reactants_g": 4.23,
+    "density_at_15mm_for_5_28g": 1.564,
+    "expected_density": 1.56,
+    "ok": true
+  },
+  "recipe_0_55_volume": {
+    "co2_mmol": 8.1,
+    "khco3_g": 0.811,
+    "citric_stoichiometric_g": 0.519,
+    "citric_free_excess_g": 1.581,
+    "citric_total_g": 2.1,
+    "sucralose_g": 0.033,
+    "reactants_g": 2.944,
+    "potassium_mg_per_serve": 316.6,
+    "packed_unit_g_with_pouch": 4.44,
+    "cube_mass_g_basis_B": 3.794,
+    "packed_unit_g_basis_B_with_pouch": 5.29
+  },
+  "cube_side_by_basis": {
+    "A_reactants_only": {
+      "mass_g": 2.944,
+      "side_mm_at_band_low_1_25": 13.3,
+      "side_mm_at_band_mid_1_425": 12.74,
+      "side_mm_at_band_high_1_60": 12.25,
+      "side_mm_at_old_design_density_1_56": 12.36
+    },
+    "B_with_binder_and_flavour": {
+      "mass_g": 3.794,
+      "side_mm_at_band_low_1_25": 14.48,
+      "side_mm_at_band_mid_1_425": 13.86,
+      "side_mm_at_band_high_1_60": 13.33,
+      "side_mm_at_old_design_density_1_56": 13.45
+    }
+  },
+  "density_at_candidate_side": {
+    "A_reactants_only": {
+      "12.5": 1.507,
+      "13.0": 1.34,
+      "13.5": 1.196,
+      "14.0": 1.073,
+      "15.0": 0.872
+    },
+    "B_with_binder_and_flavour": {
+      "12.5": 1.942,
+      "13.0": 1.727,
+      "13.5": 1.542,
+      "14.0": 1.383,
+      "15.0": 1.124
+    }
+  },
+  "pack_depth_mm": {
+    "12.5": 17.5,
+    "13.0": 18.0,
+    "13.5": 18.5,
+    "14.0": 19.0,
+    "15.0": 20.0
+  },
+  "status": {
+    "stoichiometry": "DERIVED from SOURCED molar masses",
+    "citric_total": "DERIVED from pKa, S, UNVERIFIED in the handover",
+    "sucralose": "DERIVED, S",
+    "density_band": "ASSUMPTION",
+    "binder_and_flavour": "ASSUMPTION (rework/48 section 6.1: binder 0.5 to 1.2 g, flavour 0.02 to 0.10 g)",
+    "cube_mass_basis_B": "DERIVED on ASSUMPTION inputs",
+    "pouch_mass": "ASSUMPTION"
+  }
+}

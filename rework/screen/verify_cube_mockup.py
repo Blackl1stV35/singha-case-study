@@ -11,9 +11,9 @@ Cases:
   - checks horizontal overflow (documentElement.scrollWidth <= innerWidth)
   - reads the name line width in mm against the 62 mm live width, and the bottom of the
     front and back label text against the 90 mm label canvas
-  - runs the drop sequence (hover, fall, sink, dissolve, dissolved, reset, hover) and checks
+  - checks the scene parts (pouch, cube, carton), that no water is drawn, and that no drop control is shown
     the order and the cube's visibility
-  - saves an idle screenshot; at desktop width also a dissolved screenshot
+  - saves an idle screenshot
 - fallback: the three.js CDN is blocked at the network layer (desktop width). The page must
   fall back to its text and front label, with no WebGL canvas and no uncaught page errors.
 - wording: the page file is scanned with the wording list in rework/mockup/make_label.py.
@@ -43,11 +43,9 @@ LAUNCH_ARGS = ["--enable-unsafe-swiftshader", "--ignore-gpu-blocklist"]
 RUN_DATE = datetime.date.today().isoformat()
 LIVE_W_MM = 62.0
 LABEL_H_PX = 900  # the 90 mm label canvas at 10 px per mm
-DROP_ORDER = ["fall", "sink", "dissolve", "dissolved"]
-RESET_ORDER = ["reset", "hover"]
 
 VIEWPORTS = [
-    {"tag": "desktop", "width": 1280, "height": 800, "dissolved_shot": True},
+    {"tag": "desktop", "width": 1280, "height": 800, "dissolved_shot": False},
     {"tag": "phone", "width": 375, "height": 812, "dissolved_shot": False},
 ]
 
@@ -62,7 +60,8 @@ STATE_JS = """() => {
   return {
     threeLoaded: c.threeLoaded === undefined ? null : c.threeLoaded,
     threeError: c.threeError || null,
-    phase: c.phase === undefined ? null : c.phase,
+    sceneParts: typeof c.sceneParts === 'function' ? c.sceneParts() : null,
+    dropControl: !!document.getElementById('dropBtn'),
     stageIsFallback: stage ? stage.classList.contains('is-fallback') : null,
     fallbackShown: fb ? !fb.hidden : null,
     fallbackLabelCanvas: !!document.querySelector('#fallbackLabel canvas'),
@@ -82,22 +81,6 @@ STATE_JS = """() => {
     innerWidth: window.innerWidth
   };
 }"""
-
-# Samples window.mockupCheck.phase every 30 ms until the stop phase, or the timeout.
-PHASE_JS = """(arg) => new Promise((resolve) => {
-  const seen = [];
-  const t0 = performance.now();
-  const id = setInterval(() => {
-    const p = window.mockupCheck ? window.mockupCheck.phase : null;
-    if (p && seen[seen.length - 1] !== p) seen.push(p);
-    const timedOut = performance.now() - t0 > arg.timeoutMs;
-    if (p === arg.stop || timedOut) {
-      clearInterval(id);
-      resolve({ seen: seen, timedOut: timedOut && p !== arg.stop });
-    }
-  }, 30);
-})"""
-
 
 def probe_cdn():
     try:
@@ -131,11 +114,6 @@ def rel(path):
     return str(path.relative_to(ROOT)).replace("\\", "/")
 
 
-def is_subsequence(seq, items):
-    it = iter(seq)
-    return all(x in it for x in items)
-
-
 def launch(p):
     try:
         browser = p.chromium.launch(headless=True, args=LAUNCH_ARGS)
@@ -146,36 +124,7 @@ def launch(p):
         return browser, f"Google Chrome at {CHROME_PATH} (bundled launch failed: {bundled_err})"
 
 
-def drop_sequence(page, dissolved_name):
-    out = {
-        "drop_phases": None, "drop_ok": False, "cube_hidden_when_dissolved": None,
-        "dissolved_screenshot": None, "dissolved_screenshot_size": None,
-        "reset_phases": None, "reset_ok": False, "cube_visible_after_reset": None,
-        "error": None,
-    }
-    try:
-        page.wait_for_function("() => window.mockupCheck && window.mockupCheck.phase === 'hover'", timeout=10000)
-        page.click("#dropBtn")
-        d = page.evaluate(PHASE_JS, {"stop": "dissolved", "timeoutMs": 15000})
-        out["drop_phases"] = d["seen"]
-        out["drop_ok"] = (not d["timedOut"]) and is_subsequence(d["seen"], DROP_ORDER) and d["seen"][-1] == "dissolved"
-        out["cube_hidden_when_dissolved"] = page.evaluate("() => window.mockupCheck.dropVisible() === false")
-        if dissolved_name:
-            shot = SCREEN_DIR / dissolved_name
-            page.screenshot(path=str(shot), full_page=True)
-            out["dissolved_screenshot"] = rel(shot)
-            out["dissolved_screenshot_size"] = png_size(shot)
-        page.click("#dropBtn")
-        r = page.evaluate(PHASE_JS, {"stop": "hover", "timeoutMs": 10000})
-        out["reset_phases"] = r["seen"]
-        out["reset_ok"] = (not r["timedOut"]) and is_subsequence(r["seen"], RESET_ORDER) and r["seen"][-1] == "hover"
-        out["cube_visible_after_reset"] = page.evaluate("() => window.mockupCheck.dropVisible() === true")
-    except Exception as e:
-        out["error"] = f"{type(e).__name__}: {e}"
-    return out
-
-
-def run_case(browser, tag, width, height, idle_name, dissolved_name=None, block_cdn=False, drop_test=True):
+def run_case(browser, tag, width, height, idle_name, block_cdn=False):
     idle = SCREEN_DIR / idle_name
     rec = {
         "case": tag,
@@ -188,7 +137,6 @@ def run_case(browser, tag, width, height, idle_name, dissolved_name=None, block_
         "state": None,
         "idle_screenshot": rel(idle),
         "idle_screenshot_size": None,
-        "drop": None,
         "console_errors": [],
         "page_errors": [],
         "failed_requests": [],
@@ -222,13 +170,18 @@ def run_case(browser, tag, width, height, idle_name, dissolved_name=None, block_
         # Measured before the full-page screenshot, which can resize the viewport.
         page.screenshot(path=str(idle), full_page=True)
         rec["idle_screenshot_size"] = png_size(idle)
-        if drop_test and (rec["state"] or {}).get("threeLoaded") is True:
-            rec["drop"] = drop_sequence(page, dissolved_name)
     except Exception as e:
         rec["run_error"] = f"{type(e).__name__}: {e}"
     finally:
         context.close()
     return rec
+
+
+def visible_copy(text):
+    """The page text a reader sees: no script, no style, no data URIs."""
+    text = re.sub(r"<script.*?</script>", "", text, flags=re.S | re.I)
+    text = re.sub(r"<style.*?</style>", "", text, flags=re.S | re.I)
+    return re.sub(r"<[^>]+>", " ", text)
 
 
 def wording_scan():
@@ -246,6 +199,7 @@ def wording_scan():
         "bare_new_occurrences": len(re.findall(r"\bnew\b(?!\s+[A-Z])", text)),
         "new_as_constructor": len(re.findall(r"\bnew\s+[A-Z]", text)),
         "organiser_digest_hits": make_label.organiser_digest_hits(text),
+        "water_word_hits_in_visible_copy": len(re.findall(r"water", visible_copy(text), re.I)),
     }
 
 
@@ -301,22 +255,18 @@ def build_checks(report):
         add(f"{tag} idle screenshot saved",
             case["idle_screenshot_size"] is not None,
             f"{case['idle_screenshot']} size={case['idle_screenshot_size']}")
-        d = case["drop"] or {}
-        add(f"{tag} drop sequence in order and cube hidden when dissolved",
-            d.get("drop_ok") is True and d.get("cube_hidden_when_dissolved") is True and not d.get("error"),
-            f"phases={d.get('drop_phases')}; hiddenWhenDissolved={d.get('cube_hidden_when_dissolved')}; "
-            f"error={d.get('error')}")
-        add(f"{tag} reset sequence in order and cube back in hover",
-            d.get("reset_ok") is True and d.get("cube_visible_after_reset") is True,
-            f"phases={d.get('reset_phases')}; visibleAfterReset={d.get('cube_visible_after_reset')}")
-        if d.get("dissolved_screenshot"):
-            add(f"{tag} dissolved screenshot saved",
-                d.get("dissolved_screenshot_size") is not None,
-                f"{d['dissolved_screenshot']} size={d.get('dissolved_screenshot_size')}")
+        parts = st.get("sceneParts") or []
+        add(f"{tag} scene has pouch, cube and carton, and no water",
+            {"Pouch", "Cube", "Carton"} <= set(parts) and "Water" not in parts,
+            f"sceneParts={parts}")
+        add(f"{tag} no drop control (the water and drop story is removed, rework/48 section 8.4)",
+            st.get("dropControl") is False,
+            f"dropControl={st.get('dropControl')}")
 
     wc = report["wording_scan"]
     add("cube_3d.html wording scan (make_label.py list and organiser digests)",
-        not wc["forbidden_pattern_hits"] and wc["bare_new_occurrences"] == 0 and wc["organiser_digest_hits"] == 0,
+        not wc["forbidden_pattern_hits"] and wc["bare_new_occurrences"] == 0 and wc["organiser_digest_hits"] == 0
+        and wc["water_word_hits_in_visible_copy"] == 0,
         f"pattern hits={wc['forbidden_pattern_hits']}; bare new={wc['bare_new_occurrences']}; "
         f"organiser digest hits={wc['organiser_digest_hits']}")
     return checks
@@ -339,11 +289,10 @@ def main():
                 report["cases"].append(run_case(
                     browser, vp["tag"], vp["width"], vp["height"],
                     f"cube_3d_{vp['tag']}_idle.png",
-                    f"cube_3d_{vp['tag']}_dissolved.png" if vp["dissolved_shot"] else None,
                 ))
             report["cases"].append(run_case(
                 browser, "fallback_cdn_blocked", 1280, 800,
-                "cube_3d_fallback_cdn_blocked.png", None, block_cdn=True, drop_test=False,
+                "cube_3d_fallback_cdn_blocked.png", block_cdn=True,
             ))
         finally:
             browser.close()

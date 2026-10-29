@@ -1,0 +1,144 @@
+{
+  "task": "T2 text-layer check of the ThaiNamthip IPO filing, Version 2 (20 October 2026, revision 3)",
+  "pdf_file_checked": "tncc_v2.pdf",
+  "pdf_sha256": "1803b5f294d22453ae7c24e93b761c5a6742edc1b72f2bd3631501aeacebda1d",
+  "pdf_bytes": 2411418,
+  "pdf_pages": 29,
+  "pymupdf_version": "1.28.0",
+  "source_url": "https://market.sec.or.th/public/ipos/IPOSGetFile.aspx?TransID=691644&TransFileSeq=299",
+  "thai_codepoints_on_pages": {
+    "7": 3174,
+    "9": 1459,
+    "10": 1976,
+    "23": 2960
+  },
+  "thai_word_occurrences_whole_pdf": {
+    "บริษัท": 396,
+    "ส่วนแบ่งตลาด": 11,
+    "ฟรอส์ท แอนด์ ซัลลิวัน": 3,
+    "ไทยน้ำทิพย์": 34,
+    "ไทยนำทิพย์": 0,
+    "รายชื่อผู้ถือหุ้น": 3
+  },
+  "saved_extract_match_by_page": {
+    "7": {
+      "pdf_thai_windows_tested": 228,
+      "windows_found_in_saved_extract": 228,
+      "share_found_pct": 100.0
+    },
+    "8": {
+      "pdf_thai_windows_tested": 95,
+      "windows_found_in_saved_extract": 95,
+      "share_found_pct": 100.0
+    },
+    "9": {
+      "pdf_thai_windows_tested": 134,
+      "windows_found_in_saved_extract": 103,
+      "share_found_pct": 76.9
+    },
+    "10": {
+      "pdf_thai_windows_tested": 162,
+      "windows_found_in_saved_extract": 162,
+      "share_found_pct": 100.0
+    },
+    "18": {
+      "pdf_thai_windows_tested": 91,
+      "windows_found_in_saved_extract": 91,
+      "share_found_pct": 100.0
+    },
+    "19": {
+      "pdf_thai_windows_tested": 112,
+      "windows_found_in_saved_extract": 112,
+      "share_found_pct": 100.0
+    },
+    "22": {
+      "pdf_thai_windows_tested": 199,
+      "windows_found_in_saved_extract": 199,
+      "share_found_pct": 100.0
+    },
+    "23": {
+      "pdf_thai_windows_tested": 221,
+      "windows_found_in_saved_extract": 221,
+      "share_found_pct": 100.0
+    },
+    "26": {
+      "pdf_thai_windows_tested": 211,
+      "windows_found_in_saved_extract": 211,
+      "share_found_pct": 100.0
+    }
+  },
+  "figure_pages_in_pdf": {
+    "51.4": [
+      7,
+      27
+    ],
+    "47.9": [
+      7,
+      21
+    ],
+    "66.0": [
+      7
+    ],
+    "27.5": [
+      7
+    ],
+    "15.6": [
+      7
+    ],
+    "511,000": [
+      7
+    ],
+    "564": [
+      7,
+      28
+    ],
+    "55.59": [
+      9
+    ],
+    "50.03": [
+      9
+    ],
+    "54.54": [
+      9
+    ],
+    "29.95": [
+      9
+    ],
+    "26.95": [
+      9
+    ],
+    "3,064,110,570": [
+      9
+    ],
+    "276,342,760": [
+      9
+    ],
+    "612,451,687": [
+      2,
+      9
+    ],
+    "5,080.19": [
+      10
+    ],
+    "6,365.02": [
+      10
+    ],
+    "10,872.74": [
+      10
+    ],
+    "12,745.80": [
+      10
+    ],
+    "181": [
+      7
+    ],
+    "216": [
+      7
+    ],
+    "20.2": [
+      23
+    ]
+  },
+  "reading": "The PDF text layer carries Thai characters that read as Thai words (for example the company name and the heading of page 9). The saved extract matches the layer for the pages tested (see saved_extract_match_by_page). The printed figures can be located on the pages listed in figure_pages_in_pdf. The verifier's report of unmapped Thai glyphs is not reproduced on this copy.",
+  "tier": "Check of a local copy. Printed figures stay at tier P (company filing)."
+}

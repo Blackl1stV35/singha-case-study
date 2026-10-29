@@ -173,14 +173,16 @@ Open:
 - Deliquescence humidity of potassium bicarbonate and of anhydrous citric acid (not found).
 - Current GSFA (2024) sucralose level for carbonated drinks (not reached).
 
+Status on 19 October 2026: the first item stays open and sale-blocking. The annex needs a download, and that needs the user's permission. The other items are stated limits, because no desk source exists for them. The print cost stays an ASSUMPTION placeholder.
+
 ## 9. What this changes for the handover
 
-1. **The dose needs a decision.** At 25 °C the 0.9-volume design loses about 16% at once and holds fully only up to about 19 °C. At Thai ambient (30 to 35 °C) it loses 27 to 34%. Options for R&D:
+1. **The dose is decided: 0.55 volume (closed).** The user adopted 0.55 volume on 19 October 2026 ([rework/52](52_pivot_and_retirement.md) D14, "go by your recommendation"), with target pH 3.5 (D15). The gate for the dose is for R&D to define. The options below are the record of that choice. At 25 °C the 0.9-volume design loses about 16% at once and holds fully only up to about 19 °C. At Thai ambient (30 to 35 °C) it loses 27 to 34%. Options for R&D:
    - Keep 0.9 volume and specify a chilled or iced serve. Ice at 30 g gives 21 °C, and 60 g gives 13 °C, which keeps 0.76 to 0.83 volume.
    - Lower the dose to 0.55 volume, which holds at every Thai serve in the model, including 35 °C (0.592). A 0.6-volume dose leaks about 1% at 35 °C. Potassium at 0.55 volume is about 317 mg per serve, or 9.0% of the Thai RDI.
 2. **The acid load is several times a typical lime soda.** The pH target is a taste decision (section 5).
 3. **Sweetener permission is open** (section 8). It blocks sale.
-4. **Pack choice.** A 12-cube carton is the balance point in this model: 3.90 THB per cube and about 128,600 cubes per 20 ft container. The pouch price is the lever that matters, and the Thai pouch price is still missing.
+4. **Pack choice.** A 12-cube carton is the balance point in this model: 3.90 THB per cube and about 128,600 cubes per 20 ft container. The pouch price is the lever that matters, and the Thai pouch price is still missing. Closed for the 3D page: the 12-cube carton is adopted on the user's request of 19 October 2026, with an assumed outside size ([rework/64](64_cube_size_at_0_55_volume.md) section 9). The pouch price stays the open lever, with no Thai price found (a stated limit).
 
 ## 10. Limits (not resolved on a desk)
 

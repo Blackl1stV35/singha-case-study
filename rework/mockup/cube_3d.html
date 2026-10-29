@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Product mockup</title>
-<meta name="description" content="Illustrative 3D mockup of a single-serve drink cube pack, a lime cube and a block of lime-tinted water.">
+<meta name="description" content="Illustrative 3D mockup of a single-serve drink cube pack, a lime cube and a 6-cube carton.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;800&display=swap">
@@ -122,7 +122,7 @@ button:disabled { opacity: 0.55; cursor: default; }
 <body>
 <main>
   <h1>Product mockup</h1>
-  <p class="lead">A single-serve pouch, a lime cube and a block of lime-tinted water. Drag to orbit. Scroll or pinch to zoom.</p>
+  <p class="lead">A single-serve pouch, a lime cube and a 6-cube carton. Drag to orbit. Scroll or pinch to zoom.</p>
 
   <div class="stage" id="stage">
     <div class="fallback" id="fallback" hidden>
@@ -132,7 +132,6 @@ button:disabled { opacity: 0.55; cursor: default; }
   </div>
 
   <div class="controls" role="group" aria-label="Mockup controls">
-    <button type="button" id="dropBtn" disabled>Drop cube</button>
     <button type="button" id="spinBtn" aria-pressed="true">Auto-rotate: on</button>
     <button type="button" id="viewBtn">Reset view</button>
   </div>
@@ -146,11 +145,11 @@ button:disabled { opacity: 0.55; cursor: default; }
     </article>
     <article class="spec">
       <h2>Cube</h2>
-      <p>Compressed cube: 15 mm side.</p>
+      <p>Compressed cube: 14 mm side (design value; density band is an assumption).</p>
     </article>
     <article class="spec">
-      <h2>Water</h2>
-      <p>330 ml of water, shown as a 69 mm block.</p>
+      <h2>Carton</h2>
+      <p>6-cube carton, 190 x 150 x 50 mm outside. Outside size is an assumption.</p>
     </article>
     <article class="spec">
       <h2>Colour and type</h2>
@@ -182,11 +181,14 @@ const TOKENS = Object.freeze({
   family: "'Leelawadee UI', 'Leelawadee', 'Noto Sans Thai', 'Sarabun', Arial, sans-serif",
   displayFamily: "Georgia, 'Times New Roman', serif",
   dimensionsMm: Object.freeze({
-    cubeSide: 15,          // derived design value; density band is ASSUMPTION
+    cubeSide: 14,          // design value (basis B); density band is ASSUMPTION
     cubeEdgeRadius: 3,     // ASSUMPTION: rounding matches the render's 3 mm bevel
     packW: 70,             // ASSUMPTION (design choice); pouch size is ASSUMPTION
     packH: 90,             // ASSUMPTION (design choice)
-    packD: 20              // ASSUMPTION: cube plus film and seal allowance
+    packD: 20,             // ASSUMPTION: cube plus film and seal allowance
+    cartonW: 190,          // ASSUMPTION: 6-cube carton outside, 190 x 150 x 50 mm
+    cartonD: 150,          // ASSUMPTION
+    cartonH: 50            // ASSUMPTION
   })
 });
 
@@ -195,22 +197,14 @@ const TOKENS = Object.freeze({
 const SCENE = Object.freeze({
   unitsPerMm: 0.1,
   packX: -4.6,
-  blockX: 3.0,
-  targetX: -0.8,
+  cubeX: 1.8,            // cube rests on the floor, 64 mm right of the pouch centre (as in the render)
+  cartonX: -3.8,         // 6-cube carton, behind the pouch
+  cartonZ: -9.3,         // carton centre depth: its front face sits just behind the pouch
+  targetX: -2.5,
   targetY: 5.0,
   fitHalfExtent: 7.8,
-  fovDeg: 30,
-  hoverAboveBlock: 2.4,
-  entryAboveBlock: 0.75,
-  sinkBelowTop: 1.2,
-  blockOpacity: 0.3,
-  fallS: 0.9,
-  sinkS: 1.0,
-  dissolveS: 2.0,
-  resetS: 0.8
+  fovDeg: 30
 });
-// About 330 ml as a 69 mm cube (69 cubed is about 329 ml). ASSUMPTION: shape only.
-const WATER_SIDE_MM = 69;
 
 /* ---------- Label artwork, drawn on canvas (no external images) ---------- */
 const C = TOKENS.colour;
@@ -357,21 +351,15 @@ async function loadFonts() {
 /* ---------- Page controls and scene ---------- */
 const stage = document.getElementById('stage');
 const statusEl = document.getElementById('status');
-const dropBtn = document.getElementById('dropBtn');
 const spinBtn = document.getElementById('spinBtn');
 const viewBtn = document.getElementById('viewBtn');
-
-function updateDropButton(phase) {
-  dropBtn.textContent = (phase === 'dissolved' || phase === 'reset') ? 'Reset cube' : 'Drop cube';
-  dropBtn.disabled = !(phase === 'hover' || phase === 'dissolved');
-}
 
 function showFallback() {
   stage.classList.add('is-fallback');
   document.getElementById('fallback').hidden = false;
   labelCanvas.front.style.width = '100%';
   document.getElementById('fallbackLabel').append(labelCanvas.front);
-  for (const b of [dropBtn, spinBtn, viewBtn]) b.disabled = true;
+  for (const b of [spinBtn, viewBtn]) b.disabled = true;
 }
 
 // Pouch shape: a pillow with a flat seal flange, as in build_cube_scene.py (ASSUMPTION values).
@@ -485,7 +473,7 @@ function buildScene(THREE, OrbitControls, RoundedBoxGeometry) {
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   renderer.toneMapping = THREE.NoToneMapping;
   renderer.domElement.setAttribute('role', 'img');
-  renderer.domElement.setAttribute('aria-label', 'Illustrative 3D view of a single-serve pouch, a lime cube and a block of lime-tinted water');
+  renderer.domElement.setAttribute('aria-label', 'Illustrative 3D view of a single-serve pouch, a lime cube and a 6-cube carton');
   stage.prepend(renderer.domElement);
 
   const scene = new THREE.Scene();
@@ -525,6 +513,7 @@ function buildScene(THREE, OrbitControls, RoundedBoxGeometry) {
   const ph = mm(D.packH);
   const pd = mm(D.packD);
   const pack = new THREE.Group();
+  pack.name = 'Pouch';
   pack.position.set(S.packX, 0, 0);
   pack.rotation.y = 0.32;
   scene.add(pack);
@@ -537,116 +526,41 @@ function buildScene(THREE, OrbitControls, RoundedBoxGeometry) {
   pouch.receiveShadow = true;
   pack.add(pouch);
 
-  // Water: about 330 ml as a plain translucent block. No container, no rim.
-  const bSide = mm(WATER_SIDE_MM);
-  const blockTop = bSide;
-  const water = new THREE.Mesh(
-    new RoundedBoxGeometry(bSide, bSide, bSide, 4, mm(2)),
-    new THREE.MeshPhysicalMaterial({
-      color: C.lime,
-      transparent: true,
-      opacity: S.blockOpacity,
-      roughness: 0.15,
-      clearcoat: 0.6,
-      side: THREE.DoubleSide,
-      depthWrite: false
-    })
+  // Carton: a 6-cube carton behind the pouch, ink with a lime band across the top of the front.
+  // Outside size is an ASSUMPTION (screen/pack_economics.py). No lettering: the carton copy is not designed.
+  const cartonW = mm(D.cartonW);
+  const cartonD = mm(D.cartonD);
+  const cartonH = mm(D.cartonH);
+  const carton = new THREE.Group();
+  carton.name = 'Carton';
+  carton.position.set(S.cartonX, cartonH / 2, S.cartonZ);
+  scene.add(carton);
+  const cartonBody = new THREE.Mesh(
+    new RoundedBoxGeometry(cartonW, cartonH, cartonD, 2, mm(1.5)),
+    new THREE.MeshStandardMaterial({ color: C.ink, roughness: 0.6 })
   );
-  water.position.set(S.blockX, bSide / 2, 0);
-  scene.add(water);
+  cartonBody.castShadow = true;
+  cartonBody.receiveShadow = true;
+  carton.add(cartonBody);
+  const bandH = mm(12);
+  const band = new THREE.Mesh(
+    new THREE.BoxGeometry(cartonW, bandH, mm(1.2)),
+    new THREE.MeshStandardMaterial({ color: C.lime, roughness: 0.45 })
+  );
+  band.position.set(0, cartonH / 2 - bandH / 2, cartonD / 2 + mm(0.6));
+  carton.add(band);
 
-  // Cube: a rounded lime cube with chamfer and underside shading
+  // Cube: a rounded lime cube resting on the floor beside the pouch. No water and no drop.
   const cubeSide = mm(D.cubeSide);
   const cubeGeo = new RoundedBoxGeometry(cubeSide, cubeSide, cubeSide, 6, mm(D.cubeEdgeRadius));
   colourCube(cubeGeo, THREE);
-  const cubeMat = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.75, metalness: 0, transparent: true, opacity: 1 });
-  const cube = new THREE.Mesh(cubeGeo, cubeMat);
+  const cube = new THREE.Mesh(cubeGeo, new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.75, metalness: 0 }));
+  cube.name = 'Cube';
   cube.castShadow = true;
+  cube.receiveShadow = true;
+  cube.position.set(S.cubeX, cubeSide / 2, 0);
+  cube.rotation.set(0, 0.314, 0);  // 18 degrees about the vertical axis, as in the render
   scene.add(cube);
-
-  // Drop animation state
-  const HOVER_Y = blockTop + S.hoverAboveBlock;
-  const ENTRY_Y = blockTop + S.entryAboveBlock;
-  const SINK_Y = blockTop - S.sinkBelowTop;
-  const anim = { phase: 'hover', t: 0, fromY: HOVER_Y };
-  const setPhase = (p) => {
-    anim.phase = p;
-    anim.t = 0;
-    updateDropButton(p);
-  };
-  const smooth = (p) => p * p * (3 - 2 * p);
-  const lerp = (a, b, k) => a + (b - a) * k;
-
-  function startDrop() {
-    if (anim.phase !== 'hover') return;
-    anim.fromY = cube.position.y;
-    statusEl.textContent = '';
-    setPhase('fall');
-  }
-  function startReset() {
-    if (anim.phase !== 'dissolved') return;
-    statusEl.textContent = 'Cube reset.';
-    cube.scale.setScalar(0.1);
-    cubeMat.opacity = 0;
-    setPhase('reset');
-  }
-  dropBtn.addEventListener('click', () => {
-    if (anim.phase === 'hover') startDrop();
-    else if (anim.phase === 'dissolved') startReset();
-  });
-
-  function updateCube(dt, t) {
-    anim.t += dt;
-    switch (anim.phase) {
-      case 'hover': {
-        cube.visible = true;
-        cube.position.set(S.blockX, HOVER_Y + Math.sin(t * 1.6) * 0.12, 0);
-        cube.scale.setScalar(1);
-        cube.rotation.set(0.35 + Math.sin(t * 0.9) * 0.05, (t * 0.5) % (Math.PI * 2), 0.15);
-        break;
-      }
-      case 'fall': {
-        const p = Math.min(anim.t / S.fallS, 1);
-        cube.position.set(S.blockX, lerp(anim.fromY, ENTRY_Y, p * p), 0);
-        cube.rotation.y += dt * 4;
-        if (p >= 1) setPhase('sink');
-        break;
-      }
-      case 'sink': {
-        const p = Math.min(anim.t / S.sinkS, 1);
-        const e = smooth(p);
-        cube.position.set(S.blockX, lerp(ENTRY_Y, SINK_Y, e), 0);
-        cube.scale.setScalar(lerp(1, 0.92, e));
-        cube.rotation.y += dt * 1.5;
-        if (p >= 1) setPhase('dissolve');
-        break;
-      }
-      case 'dissolve': {
-        const p = Math.min(anim.t / S.dissolveS, 1);
-        const e = 1 - Math.pow(1 - p, 2);
-        cube.scale.setScalar(lerp(0.92, 0.1, e));
-        cubeMat.opacity = 1 - e;
-        if (p >= 1) {
-          cube.visible = false;
-          statusEl.textContent = 'Cube dropped into the water. Illustrative only.';
-          setPhase('dissolved');
-        }
-        break;
-      }
-      case 'reset': {
-        const p = Math.min(anim.t / S.resetS, 1);
-        const e = smooth(p);
-        cube.visible = true;
-        cube.position.set(S.blockX, HOVER_Y, 0);
-        cube.scale.setScalar(lerp(0.1, 1, e));
-        cubeMat.opacity = e;
-        if (p >= 1) setPhase('hover');
-        break;
-      }
-      default:
-        break;
-    }
-  }
 
   // Camera and orbit controls
   const controls = new OrbitControls(camera, renderer.domElement);
@@ -704,17 +618,14 @@ function buildScene(THREE, OrbitControls, RoundedBoxGeometry) {
     const dt = Math.min(clock.getDelta(), 0.05);
     elapsed += dt;
     controls.update(dt);
-    updateCube(dt, elapsed);
     renderer.render(scene, camera);
     requestAnimationFrame(frame);
   }
-  updateDropButton(anim.phase);
   requestAnimationFrame(frame);
 
   // Read-only state for testing
-  Object.defineProperty(labelCheck, 'phase', { get: () => anim.phase, enumerable: true });
   Object.defineProperty(labelCheck, 'autoRotate', { get: () => controls.autoRotate, enumerable: true });
-  labelCheck.dropVisible = () => cube.visible;
+  labelCheck.sceneParts = () => scene.children.map(o => o.name).filter(Boolean);
 }
 
 /* ---------- Start ---------- */

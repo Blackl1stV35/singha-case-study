@@ -1,0 +1,25 @@
+# Retailers and pages that blocked automated reading, or returned no usable listing, on 20 October 2026
+
+Access route: WebFetch for every row. Nothing was bypassed. No browser, login, cart or form was used.
+
+| Retailer or page | URL tried | Result | Consequence |
+|---|---|---|---|
+| Big C Online | https://www.bigc.co.th/search?q=sprite ; product pages for Singha Lemon Soda 6-pack (.81553), Schweppes lime soda no sugar (.92654), Sprite Lemon Plus (.1314038), 7-Up lemon soda no sugar (.3660282) | HTTP 403 Forbidden on all five | No Big C figure is used. Search snippets (not opened) gave leads only: Singha Lemon Soda 6-pack 85; Sprite 325 mL single can 16; 6-pack 79 to 85; 24-pack 316; 7UP lemon soda no sugar 6-pack 75. These stay UNVERIFIED. |
+| Tops Online | https://www.tops.co.th/en/search/sprite ; https://www.tops.co.th/th/7up-lemon-soda-no-sugar-325ml-pack-6-8858998573165 | HTTP 403 Forbidden | Tops is covered only through the Priceza row for Sprite 325 mL x 24 at 332 (S, aggregator). An earlier 18 October 2026 browser capture in raw/browser_captures_2026-10-18.md (Schweppes soda water single can 17; Sprite Zero Sugar single can 16; Coca-Cola No Sugar single can 16) is not repeated here. |
+| Foodland | https://www.foodland.co.th | HTTP 403 Forbidden; a web search found no Foodland product page | No Foodland figure. |
+| Makro PRO search | https://www.makro.pro/en/search?q=sprite and /th/search?q=sprite | HTTP 404 | Product pages found by web search were opened instead (makro_pro_2026-10-20.md). |
+| Lotus's search | https://www.lotuss.com/th/search/sprite | empty shell (title only) | Product pages found by web search were opened instead (lotuss_2026-10-20.md). |
+| Lazada search and tag pages | https://www.lazada.co.th/catalog/?q=สิงห์เลมอนโซดา ; /tag/singha-lemon-soda/ ; /singha-lemon-soda-123776882/ ; /tag/coke-can/ ; one product page (…i2296431636.html) | page shell without product cards or prices; the product page loaded the title and delivery text but no price, stock or seller | No direct Lazada figure. A Lazada trending page (https://www.lazada.co.th/trending/Sparkling-Flavoured-Drinks-Best-Price/1584270705) rendered three rows without store names: Sprite Original 325 mL pack 24 at 365; Sprite No Sugar 325 mL pack 24 at 365; 7Up no-sugar strawberry-lemon 6 x 325 mL at 75 (delivery limited to Bangkok metro, Lamphun, Chiang Mai and Chonburi). These are not used in the ladder because no store is named; the official-store rows come from Priceza. |
+| Shopee | https://shopee.co.th/search?keyword=สิงห์เลมอนโซดา | empty content | No Shopee figure. Web search found one Shopee AMP page for Coke only (not lemon or lime). A snippet for Sprite No Sugar 6 cans at 90 was not opened and stays UNVERIFIED. |
+| CP Fresh Mart (CP All) | https://www.cpfreshmart.com/search?q=สไปรท์ | HTTP 302 redirect to a third-party host (moovend.com) | The redirect was not followed because the host is unrelated to the retailer. No CP Fresh Mart figure from the site. Two Fresh Mart rows appear on Priceza (see priceza_aggregator_2026-10-20.md) and are not used. |
+| Coca-Cola Thailand brand page | https://www.coca-cola.com/th/th/brands/sprite | HTTP 403 Forbidden | Sprite's sugar status is not taken from the maker's page. The media-centre page for Sprite Chill (https://www.coca-cola.com/th/th/media-center/sprite-chill) opened: it gives "กระป๋อง ขนาด 325 มล." and a dateline "1 เมษายน 2569", no price and no sugar statement. |
+| Singha Online Shop | search for shop.singha.com | no page found by search | No maker-shop price. |
+| 7-Eleven (CP All) | https://www.allonline.7eleven.co.th/search/ | page renders, but a notice says the function is unavailable because of a technical problem | Sprite and 7UP rows were not found on 7-Eleven online; the search was flagged unreliable, so the absence is not proof. |
+
+## Added in the second pass (20 October 2026)
+- Web search: the session's web search budget was used up. A search to re-find the Lotus's snippet that showed an ingredient line with sugar for the Singha Lemon Soda page could not run, so the snippet stays unopened (see lotuss_2026-10-20.md, second read). Pages were opened directly instead.
+- 7-Eleven site search for "สปาร์คกลิ้ง" (https://www.allonline.7eleven.co.th/search/?q=สปาร์คกลิ้ง): page renders with the "function unavailable" notice; no Singha sparkling row on it. The 7-Eleven page for Singha Sparkling Water Lime opened through the id found on Priceza (7eleven_allonline_2026-10-20.md, A4).
+- Priceza pages for Singha Sparkling Water Lime listed no Lotus's, Tops or Big C row.
+
+## Correction note (20 October 2026, second pass)
+Row 8 names a Coca-Cola No Sugar single can at 16 in the 18 October 2026 browser capture. That item is not in rework/raw/browser_captures_2026-10-18.md. The capture lists only the Tops Sprite Zero Sugar 325 ml at 16 and the Schweppes Soda Water 330 cc at 17 (both out of stock), plus two items outside this record. The Coca-Cola No Sugar figure is not used in any ladder. The two Tops items are excluded leads (X08 and X09 in rework/68d_lemon_soda_price_ladder.md, section 4.3).

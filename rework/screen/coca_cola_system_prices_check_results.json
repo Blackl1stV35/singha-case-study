@@ -1,0 +1,117 @@
+{
+  "task": "T2 Coca-Cola system price check, 20 October 2026",
+  "method": "per can = pack price / cans; per 330 mL = per can x 330 / can size; no rounding before comparison",
+  "rows": [
+    {
+      "label": "Sprite No Sugar 325 mL x 24, Coca-Cola Official Store (LazMall), via Priceza",
+      "pack_price_thb": 334.0,
+      "cans_in_pack": 24,
+      "can_size_ml": 325,
+      "bundled": false,
+      "per_can_thb": 13.92,
+      "per_330ml_thb": 14.13,
+      "per_litre_thb": 42.8,
+      "source": "Priceza Sprite category page, row 9, read 20 Oct 2026 (raw/T2/priceza_sprite_2026-10-20.md)"
+    },
+    {
+      "label": "Sprite No Sugar 325 mL x 24, Lazada listing (seller not stated on page)",
+      "pack_price_thb": 365.0,
+      "cans_in_pack": 24,
+      "can_size_ml": 325,
+      "bundled": false,
+      "per_can_thb": 15.21,
+      "per_330ml_thb": 15.44,
+      "per_litre_thb": 46.8,
+      "source": "Lazada trending page, read 20 Oct 2026 (raw/T2/retail_prices_2026-10-20.md)"
+    },
+    {
+      "label": "Sprite No Sugar 325 mL x 24, Fresh Mart, via Priceza",
+      "pack_price_thb": 414.0,
+      "cans_in_pack": 24,
+      "can_size_ml": 325,
+      "bundled": false,
+      "per_can_thb": 17.25,
+      "per_330ml_thb": 17.52,
+      "per_litre_thb": 53.1,
+      "source": "Priceza Sprite category page, row 18, read 20 Oct 2026 (raw/T2/priceza_sprite_2026-10-20.md)"
+    },
+    {
+      "label": "Sprite No Sugar 325 mL x 24, CR7 ManU, via Priceza",
+      "pack_price_thb": 456.0,
+      "cans_in_pack": 24,
+      "can_size_ml": 325,
+      "bundled": false,
+      "per_can_thb": 19.0,
+      "per_330ml_thb": 19.29,
+      "per_litre_thb": 58.5,
+      "source": "Priceza Sprite category page, row 10, read 20 Oct 2026 (raw/T2/priceza_sprite_2026-10-20.md)"
+    },
+    {
+      "label": "Sprite No Sugar 325 mL x 24, Coca-Cola Official Store, bundled with Halls XS candy",
+      "pack_price_thb": 328.0,
+      "cans_in_pack": 24,
+      "can_size_ml": 325,
+      "bundled": true,
+      "per_can_thb": 13.67,
+      "per_330ml_thb": 13.88,
+      "per_litre_thb": 42.1,
+      "source": "Priceza Sprite category page, row 22; bundle, excluded from the range"
+    },
+    {
+      "label": "Sprite 325 mL single can, Lotus's Shop Online (regular Sprite)",
+      "pack_price_thb": 16.0,
+      "cans_in_pack": 1,
+      "can_size_ml": 325,
+      "bundled": false,
+      "per_can_thb": 16.0,
+      "per_330ml_thb": 16.25,
+      "per_litre_thb": 49.2,
+      "source": "Lotus's product page, read 20 Oct 2026 (raw/T2/lotus_sprite_can_2026-10-20.md)"
+    },
+    {
+      "label": "Schweppes Lime Soda Zero Sugar 330 mL x 6, Makro PRO",
+      "pack_price_thb": 84.0,
+      "cans_in_pack": 6,
+      "can_size_ml": 330,
+      "bundled": false,
+      "per_can_thb": 14.0,
+      "per_330ml_thb": 14.0,
+      "per_litre_thb": 42.4,
+      "source": "Makro PRO page, read 20 Oct 2026 (raw/T2/retail_prices_2026-10-20.md; captures_2026-10-19/38)"
+    },
+    {
+      "label": "Fanta Pineapple 325 mL x 6, Lazada (stated as 6*325 ml)",
+      "pack_price_thb": 85.0,
+      "cans_in_pack": 6,
+      "can_size_ml": 325,
+      "bundled": false,
+      "per_can_thb": 14.17,
+      "per_330ml_thb": 14.38,
+      "per_litre_thb": 43.6,
+      "source": "Lazada trending page, read 20 Oct 2026 (raw/T2/retail_prices_2026-10-20.md)"
+    },
+    {
+      "label": "Coke No Sugar 330 mL x 12, Makro PRO (THB 8.50 unit read on 20 Oct 2026)",
+      "pack_price_thb": 102.0,
+      "cans_in_pack": 12,
+      "can_size_ml": 330,
+      "bundled": false,
+      "per_can_thb": 8.5,
+      "per_330ml_thb": 8.5,
+      "per_litre_thb": 25.8,
+      "source": "Makro PRO page, read 20 Oct 2026 (raw/T2/retail_prices_2026-10-20.md)"
+    }
+  ],
+  "summary": {
+    "sprite_no_sugar_24pack_per_330ml_min": 14.13,
+    "sprite_no_sugar_24pack_per_330ml_max": 19.29,
+    "sprite_no_sugar_24pack_per_330ml_median": 16.48,
+    "sprite_no_sugar_24pack_listings_used": 4,
+    "sprite_single_can_per_330ml": 16.25,
+    "cube_base_case_thb_per_330ml": 15.0,
+    "cube_minus_24pack_min": 0.87,
+    "cube_minus_24pack_max": -4.29,
+    "cube_minus_single_can": -1.25,
+    "cube_is_below_listings_count": 3
+  }
+}

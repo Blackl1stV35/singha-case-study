@@ -1,0 +1,662 @@
+{
+  "task": "T8 part c, surface-only fizz bound and nucleation check (rebuilds the 96 minutes)",
+  "date": "2026-10-20",
+  "inputs": {
+    "dose_volumes": {
+      "value": 0.55,
+      "tier": "design (ASSUMPTION of the deck)"
+    },
+    "retention_at_serve": {
+      "value": 1.0,
+      "tier": "ASSUMPTION (not measured)"
+    },
+    "C0_molar_basis_g_L": {
+      "value": 1.0799,
+      "tier": "CONSTANT (22.414 L/mol; 44.01 g/mol)"
+    },
+    "C0_density_basis_g_L": {
+      "value": 1.0874,
+      "tier": "CONSTANT (1.977 g/L per volume; basis of the earlier 96 minutes)"
+    },
+    "threshold_g_L": {
+      "value": 0.44,
+      "tier": "PROXY, tier S (Puleo et al. 2021, abstract only, mineral water detection threshold); 0.33 to 0.55 ASSUMPTION"
+    },
+    "H_CO2_298K_mol_L_bar": {
+      "value": 0.033,
+      "tier": "S, Sander 2023 compilation read through a fetch summary (3.3e-4 mol/(m3 Pa))"
+    },
+    "dlnH_dinvT_K": {
+      "value": 2400.0,
+      "tier": "S (2400 K: Sander 2011, 2006, Weiss 1974, as listed in the compilation); Burkholder 2019 2300 K as sensitivity"
+    },
+    "D_CO2_25C_m2_s": {
+      "value": 1.92e-09,
+      "tier": "S, Wikipedia mass diffusivity (1.92e-5 cm2/s)"
+    },
+    "water_viscosity_mPa_s": {
+      "value": {
+        "0.0": 1.7921,
+        "5.0": 1.5188,
+        "10.0": 1.3077,
+        "15.0": 1.1404,
+        "20.0": 1.005,
+        "25.0": 0.8937,
+        "30.0": 0.8007,
+        "35.0": 0.7225
+      },
+      "tier": "S, Wikipedia water data page (re-read 2026-10-20, the 5 C row is printed)"
+    },
+    "k600_lake_cm_h": {
+      "value": {
+        "lake_low": 1.5,
+        "lake_central": 2.65,
+        "lake_high": 3.1
+      },
+      "tier": "S, Cole and Caraco 1998 (2.65); Cole et al. 2010 (1.5 to 3.1)"
+    },
+    "k600_lowest_in_sources_read_cm_h": {
+      "value": 0.65,
+      "tier": "S, Xiao et al. 2014 abstract (one pond site in autumn, floating chambers; text of section 3.2 gives 0.72); the lowest in the sources read, not a bound"
+    },
+    "glass_diameter_mm": {
+      "value": 65.0,
+      "tier": "ASSUMPTION (55 to 75 mm)"
+    },
+    "A_over_V_per_m": {
+      "value": 10.055,
+      "tier": "DERIVED from the 65 mm glass and 330 mL"
+    },
+    "sigma_beverage_N_m": {
+      "value": 0.047,
+      "tier": "S (Liger-Belair and Cilindre 2021: lager 43, champagne 47 mN/m); PROXY"
+    },
+    "sigma_water_N_m": {
+      "value": {
+        "20.0": 0.07274,
+        "25.0": 0.07198
+      },
+      "tier": "S, Wikipedia water data page (the re-read prints 72.75 and 71.97 mN/m at 20 and 25 C; the 0.01 difference is immaterial and used only in a nucleation check)"
+    },
+    "site_radius_um": {
+      "value": [
+        1.0,
+        10.0
+      ],
+      "tier": "ASSUMPTION (S modelling range)"
+    },
+    "champagne_k_app_per_s": {
+      "value": 0.001003,
+      "tier": "DERIVED from the PROXY figure (7.4 to 3 g/L in 15 min)"
+    },
+    "P_CO2_air_bar": {
+      "value": 0.00042,
+      "tier": "ASSUMPTION (420 ppm)"
+    }
+  },
+  "henry_and_saturation": {
+    "5": {
+      "H_mol_L_bar": 0.05887,
+      "saturation_1atm_volumes_from_Sander": 1.337,
+      "dose_p_CO2_bar": 0.417,
+      "dose_as_fraction_of_1atm_saturation": 0.411,
+      "D_CO2_m2_s": 1.0539903842989987e-09,
+      "Sc": 1441.1
+    },
+    "20": {
+      "H_mol_L_bar": 0.03786,
+      "saturation_1atm_volumes_from_Sander": 0.86,
+      "dose_p_CO2_bar": 0.648,
+      "dose_as_fraction_of_1atm_saturation": 0.64,
+      "D_CO2_m2_s": 1.6787344765356517e-09,
+      "Sc": 599.7
+    },
+    "25": {
+      "H_mol_L_bar": 0.033,
+      "saturation_1atm_volumes_from_Sander": 0.749,
+      "dose_p_CO2_bar": 0.744,
+      "dose_as_fraction_of_1atm_saturation": 0.734,
+      "D_CO2_m2_s": 1.92e-09,
+      "Sc": 466.8
+    },
+    "30": {
+      "H_mol_L_bar": 0.0289,
+      "saturation_1atm_volumes_from_Sander": 0.656,
+      "dose_p_CO2_bar": 0.849,
+      "dose_as_fraction_of_1atm_saturation": 0.838,
+      "D_CO2_m2_s": 2.178943238518384e-09,
+      "Sc": 369.1
+    },
+    "35": {
+      "H_mol_L_bar": 0.02541,
+      "saturation_1atm_volumes_from_Sander": 0.577,
+      "dose_p_CO2_bar": 0.966,
+      "dose_as_fraction_of_1atm_saturation": 0.953,
+      "D_CO2_m2_s": 2.4546099683921674e-09,
+      "Sc": 294.9
+    },
+    "note": "Lange-based table in the earlier model gives 0.878 volumes at 20 C and 0.655 at 30 C (S); the Sander-based values here agree to about 2 percent."
+  },
+  "reconciliation_96_min": {
+    "earlier_basis_25C_10s": {
+      "C0_g_L_density_basis": 1.0874,
+      "D_m2_s": 1.92e-09,
+      "renewal_s": 10.0,
+      "kL_m_s": 1.5635280380893438e-05,
+      "kL_cm_h": 5.63,
+      "tau_min": 106.01,
+      "t_min": 96.0,
+      "statement": "Reproduces the earlier 96 minutes: tau 106.0 min x ln(1.0874 / 0.44) = 96.0 min (25 C, density basis, 10 s renewal, 65 mm glass)."
+    },
+    "same_10s_renewal_20C_molar_basis": {
+      "kL_cm_h": 5.26,
+      "t_min": 101.9
+    },
+    "calm_lake_central_20C_molar_basis": {
+      "kL_cm_h": 2.651,
+      "t_min": 202.3
+    }
+  },
+  "surface_only_times_molar_basis": {
+    "lake_lowest_read_0.65cm_h": {
+      "5": {
+        "kL_cm_h": 0.419,
+        "t_surface_min": 1279.5
+      },
+      "20": {
+        "kL_cm_h": 0.65,
+        "t_surface_min": 824.9
+      },
+      "30": {
+        "kL_cm_h": 0.829,
+        "t_surface_min": 647.0
+      }
+    },
+    "lake_low_1.5cm_h": {
+      "5": {
+        "kL_cm_h": 0.968,
+        "t_surface_min": 554.4
+      },
+      "20": {
+        "kL_cm_h": 1.5,
+        "t_surface_min": 357.5
+      },
+      "30": {
+        "kL_cm_h": 1.913,
+        "t_surface_min": 280.4
+      }
+    },
+    "lake_central_2.65cm_h": {
+      "5": {
+        "kL_cm_h": 1.71,
+        "t_surface_min": 313.8
+      },
+      "20": {
+        "kL_cm_h": 2.651,
+        "t_surface_min": 202.3
+      },
+      "30": {
+        "kL_cm_h": 3.379,
+        "t_surface_min": 158.7
+      }
+    },
+    "lake_high_3.1cm_h": {
+      "5": {
+        "kL_cm_h": 2.0,
+        "t_surface_min": 268.3
+      },
+      "20": {
+        "kL_cm_h": 3.101,
+        "t_surface_min": 173.0
+      },
+      "30": {
+        "kL_cm_h": 3.953,
+        "t_surface_min": 135.7
+      }
+    },
+    "penetration_600s_quiescent": {
+      "5": {
+        "kL_cm_h": 0.538,
+        "t_surface_min": 996.7
+      },
+      "20": {
+        "kL_cm_h": 0.679,
+        "t_surface_min": 789.3
+      },
+      "30": {
+        "kL_cm_h": 0.774,
+        "t_surface_min": 692.6
+      }
+    },
+    "penetration_30s": {
+      "5": {
+        "kL_cm_h": 2.408,
+        "t_surface_min": 222.9
+      },
+      "20": {
+        "kL_cm_h": 3.039,
+        "t_surface_min": 176.5
+      },
+      "30": {
+        "kL_cm_h": 3.462,
+        "t_surface_min": 154.9
+      }
+    },
+    "penetration_10s_earlier_basis": {
+      "5": {
+        "kL_cm_h": 4.17,
+        "t_surface_min": 128.7
+      },
+      "20": {
+        "kL_cm_h": 5.263,
+        "t_surface_min": 101.9
+      },
+      "30": {
+        "kL_cm_h": 5.996,
+        "t_surface_min": 89.4
+      }
+    },
+    "penetration_3s_fast": {
+      "5": {
+        "kL_cm_h": 7.614,
+        "t_surface_min": 70.5
+      },
+      "20": {
+        "kL_cm_h": 9.609,
+        "t_surface_min": 55.8
+      },
+      "30": {
+        "kL_cm_h": 10.948,
+        "t_surface_min": 49.0
+      }
+    }
+  },
+  "bounds_20C_surface_only_min": {
+    "still_lake_range_min": [
+      173.0,
+      357.5
+    ],
+    "central_still_lake_min": 202.3,
+    "quiescent_penetration_600s_renewal_min_theory_only": 789.3,
+    "lake_low_1.5_cm_h_min": 357.5,
+    "lowest_coefficient_in_sources_read_0.65cm_h_min": 824.9,
+    "stirred_10s_renewal_min": 101.9,
+    "statement": "Surface-only time at 20 C for the lake coefficients of Cole and Caraco 1998 and Cole et al. 2010 (k600 1.5 to 3.1 cm/h) is 173 to 358 minutes; the lowest coefficient in the sources read (0.65 cm/h, Xiao et al. 2014, one pond site) gives 825 minutes and a perfectly quiescent surface (600 s renewal, theory only) 789 minutes. The 96 minute value needs a 10 s surface renewal (5.3 cm/h at 20 C), a stirred surface, and is not an upper bound. No sourced upper bound exists. All times assume the full 0.55 volume dose is still dissolved at serve (retention 1.0, not measured)."
+  },
+  "nucleation_check": {
+    "5": {
+      "H_g_L_bar": 2.5908,
+      "C0_g_L": 1.0799,
+      "p_CO2_bar_at_C0": 0.4168,
+      "N1_flat_limit_g_L": 2.6245,
+      "N1_Ccrit_10um_g_L": 2.868,
+      "N1_Ccrit_1um_g_L": 5.0598,
+      "N1_nucleates_at_C0": false,
+      "N2_r_c_um_at_C0": 2.255,
+      "N2_active_sites_in_1_to_10_um": true,
+      "N2_floor_10um_site_g_L": 0.2435,
+      "N2_floor_1um_site_g_L": 2.4354
+    },
+    "20": {
+      "H_g_L_bar": 1.6661,
+      "C0_g_L": 1.0799,
+      "p_CO2_bar_at_C0": 0.6482,
+      "N1_flat_limit_g_L": 1.6877,
+      "N1_Ccrit_10um_g_L": 1.8443,
+      "N1_Ccrit_1um_g_L": 3.2538,
+      "N1_nucleates_at_C0": false,
+      "N2_r_c_um_at_C0": 1.45,
+      "N2_active_sites_in_1_to_10_um": true,
+      "N2_floor_10um_site_g_L": 0.1566,
+      "N2_floor_1um_site_g_L": 1.5661
+    },
+    "30": {
+      "H_g_L_bar": 1.2718,
+      "C0_g_L": 1.0799,
+      "p_CO2_bar_at_C0": 0.8492,
+      "N1_flat_limit_g_L": 1.2883,
+      "N1_Ccrit_10um_g_L": 1.4078,
+      "N1_Ccrit_1um_g_L": 2.4837,
+      "N1_nucleates_at_C0": false,
+      "N2_r_c_um_at_C0": 1.107,
+      "N2_active_sites_in_1_to_10_um": true,
+      "N2_floor_10um_site_g_L": 0.1195,
+      "N2_floor_1um_site_g_L": 1.1955
+    },
+    "sigma_water_20C_check": {
+      "H_g_L_bar": 1.6661,
+      "C0_g_L": 1.0799,
+      "p_CO2_bar_at_C0": 0.6482,
+      "N1_flat_limit_g_L": 1.6877,
+      "N1_Ccrit_10um_g_L": 1.9301,
+      "N1_Ccrit_1um_g_L": 4.1115,
+      "N1_nucleates_at_C0": false,
+      "N2_r_c_um_at_C0": 2.244,
+      "N2_active_sites_in_1_to_10_um": true,
+      "N2_floor_10um_site_g_L": 0.2424,
+      "N2_floor_1um_site_g_L": 2.4238
+    }
+  },
+  "validation_N1_critical_radius": {
+    "beer_6C_5.2gL_paper_H_2.4_um": 0.745,
+    "beer_6C_5.2gL_Sander_H_um": 0.814,
+    "champagne_10C_8gL_Sander_H_um": 0.364,
+    "paper_values_um": {
+      "beer_6C": 0.7,
+      "champagne_10C": 0.3
+    },
+    "deviation_percent": {
+      "beer_paper_H": 6.4,
+      "beer_Sander_H": 16.3,
+      "champagne_Sander_H": 21.3
+    },
+    "source": "Liger-Belair and Cilindre 2021 (ACS Omega) abstract (S, saved in T8 raw folder)",
+    "statement": "The pure-CO2 rule gives 0.745 against 0.7 micrometre for beer (+6 percent, the paper's Henry constant) and 0.364 against 0.3 for champagne (+21 percent, Sander constant; the champagne constant used in the paper was not read). The published radii are quoted to one figure, so agreement is to about 20 percent at best. It is used as the literature's criterion, not as a validated predictor."
+  },
+  "nucleation_bound": {
+    "champagne_proxy_k_app_per_s": 0.001003,
+    "floor_min_champagne_proxy": 14.9,
+    "status": "PROXY floor only: the constant was measured for a supersaturated champagne flute at about 4.5 bar; a floor at 0.6 bar driving force is not sourced",
+    "central_not_stated": "Active-site density and bubble rate at 1.08 g/L are not sourced"
+  },
+  "tornado_still_lake_central_20C": {
+    "base_min": 202.3,
+    "rows": [
+      {
+        "input": "kL source range",
+        "low_min": 173.0,
+        "high_min": 357.5,
+        "swing_min": 184.5
+      },
+      {
+        "input": "kL lowest coefficient in the sources read (0.65 cm/h; lake base only)",
+        "low_min": 202.3,
+        "high_min": 824.9,
+        "swing_min": 622.6
+      },
+      {
+        "input": "glass diameter 55 to 75 mm",
+        "low_min": 152.0,
+        "high_min": 282.6,
+        "swing_min": 130.6
+      },
+      {
+        "input": "retention at serve 0.4 to 1.0 (break-even 0.408)",
+        "low_min": 0.0,
+        "high_min": 202.3,
+        "swing_min": 202.3
+      },
+      {
+        "input": "threshold 0.33 to 0.55 g/L",
+        "low_min": 152.0,
+        "high_min": 267.2,
+        "swing_min": 115.2
+      },
+      {
+        "input": "H temperature term 2300 to 2400 K",
+        "low_min": 202.3,
+        "high_min": 202.3,
+        "swing_min": 0.0
+      },
+      {
+        "input": "temperature 5 to 30 C",
+        "low_min": 158.7,
+        "high_min": 313.8,
+        "swing_min": 155.1
+      },
+      {
+        "input": "dose basis density 1.0874 vs molar 1.0800 g/L",
+        "low_min": 202.3,
+        "high_min": 203.9,
+        "swing_min": 1.5
+      },
+      {
+        "input": "D(CO2) 25 C: 1.92e-9 (S) to 2.04e-9 (Zeebe MD fit, P)",
+        "low_min": 196.0,
+        "high_min": 202.3,
+        "swing_min": 6.3
+      }
+    ]
+  },
+  "tornado_stirred_10s_20C": {
+    "base_min": 101.9,
+    "rows": [
+      {
+        "input": "kL source range",
+        "low_min": 55.8,
+        "high_min": 176.5,
+        "swing_min": 120.7
+      },
+      {
+        "input": "glass diameter 55 to 75 mm",
+        "low_min": 76.5,
+        "high_min": 142.3,
+        "swing_min": 65.8
+      },
+      {
+        "input": "retention at serve 0.4 to 1.0 (break-even 0.408)",
+        "low_min": 0.0,
+        "high_min": 101.9,
+        "swing_min": 101.9
+      },
+      {
+        "input": "threshold 0.33 to 0.55 g/L",
+        "low_min": 76.6,
+        "high_min": 134.6,
+        "swing_min": 58.0
+      },
+      {
+        "input": "H temperature term 2300 to 2400 K",
+        "low_min": 101.9,
+        "high_min": 101.9,
+        "swing_min": 0.0
+      },
+      {
+        "input": "temperature 5 to 30 C",
+        "low_min": 89.4,
+        "high_min": 128.7,
+        "swing_min": 39.3
+      },
+      {
+        "input": "dose basis density 1.0874 vs molar 1.0800 g/L",
+        "low_min": 101.9,
+        "high_min": 102.7,
+        "swing_min": 0.8
+      },
+      {
+        "input": "D(CO2) 25 C: 1.92e-9 (S) to 2.04e-9 (Zeebe MD fit, P)",
+        "low_min": 98.7,
+        "high_min": 101.9,
+        "swing_min": 3.2
+      }
+    ]
+  },
+  "retention_at_serve": {
+    "break_even_retention": 0.4074,
+    "break_even_note": "Below this share of the 0.55 volume dose still dissolved at serve, the drink is already below 0.44 g/L (time zero).",
+    "times_20C_by_retention_min": {
+      "1.0": {
+        "C0_g_L": 1.0799,
+        "still_lake_central_min": 202.3,
+        "stirred_10s_min": 101.9,
+        "lowest_coefficient_read_0.65_min": 824.9
+      },
+      "0.8": {
+        "C0_g_L": 0.8639,
+        "still_lake_central_min": 152.1,
+        "stirred_10s_min": 76.6,
+        "lowest_coefficient_read_0.65_min": 620.0
+      },
+      "0.6": {
+        "C0_g_L": 0.648,
+        "still_lake_central_min": 87.2,
+        "stirred_10s_min": 43.9,
+        "lowest_coefficient_read_0.65_min": 355.7
+      },
+      "0.5": {
+        "C0_g_L": 0.54,
+        "still_lake_central_min": 46.2,
+        "stirred_10s_min": 23.2,
+        "lowest_coefficient_read_0.65_min": 188.2
+      },
+      "0.45": {
+        "C0_g_L": 0.486,
+        "still_lake_central_min": 22.4,
+        "stirred_10s_min": 11.3,
+        "lowest_coefficient_read_0.65_min": 91.3
+      },
+      "0.41": {
+        "C0_g_L": 0.4428,
+        "still_lake_central_min": 1.4,
+        "stirred_10s_min": 0.7,
+        "lowest_coefficient_read_0.65_min": 5.8
+      },
+      "0.4": {
+        "C0_g_L": 0.432,
+        "still_lake_central_min": 0.0,
+        "stirred_10s_min": 0.0,
+        "lowest_coefficient_read_0.65_min": 0.0
+      }
+    },
+    "retention_needed_for_still_lake_central_time_of_150_min": 0.793,
+    "retention_needed_for_stirred_10s_time_of_60_min": 0.691
+  },
+  "retention_after_dissolution_surface_loss_only": {
+    "basis": "CO2 formed during the stage 2 dissolution time and lost through the free surface only at the first-order rate 1/tau (20 C, 65 mm glass); two bracketing generation profiles (all formed at the start, or uniformly over the dissolution time). Ceq (about 0.001 g/L) is neglected. This is an UPPER bound on retention: bubble formation at the cube, in the plume and on the glass is not included and is not bounded by any source read.",
+    "dissolution_times_from": "cube_chemistry_dissolution_results.json (25 C; the fizz model is at 20 C, a stated mismatch of a few percent)",
+    "cases": {
+      "stirred central (25 C)": {
+        "t_dissolve_s": 347.3,
+        "stirred_10s_renewal": {
+          "tau_min": 113.4,
+          "retention_gas_all_formed_at_start": 0.95,
+          "retention_gas_formed_uniformly": 0.975,
+          "time_after_dissolution_ends_min_worst": 96.1,
+          "time_after_dissolution_ends_min_uniform": 99.0
+        },
+        "calm_lake_central": {
+          "tau_min": 225.1,
+          "retention_gas_all_formed_at_start": 0.975,
+          "retention_gas_formed_uniformly": 0.987,
+          "time_after_dissolution_ends_min_worst": 196.5,
+          "time_after_dissolution_ends_min_uniform": 199.4
+        },
+        "lowest_coefficient_read_0.65": {
+          "tau_min": 917.8,
+          "retention_gas_all_formed_at_start": 0.994,
+          "retention_gas_formed_uniformly": 0.997,
+          "time_after_dissolution_ends_min_worst": 819.1,
+          "time_after_dissolution_ends_min_uniform": 822.0
+        }
+      },
+      "unstirred central (25 C)": {
+        "t_dissolve_s": 645.0,
+        "stirred_10s_renewal": {
+          "tau_min": 113.4,
+          "retention_gas_all_formed_at_start": 0.91,
+          "retention_gas_formed_uniformly": 0.954,
+          "time_after_dissolution_ends_min_worst": 91.1,
+          "time_after_dissolution_ends_min_uniform": 96.6
+        },
+        "calm_lake_central": {
+          "tau_min": 225.1,
+          "retention_gas_all_formed_at_start": 0.953,
+          "retention_gas_formed_uniformly": 0.976,
+          "time_after_dissolution_ends_min_worst": 191.6,
+          "time_after_dissolution_ends_min_uniform": 197.0
+        },
+        "lowest_coefficient_read_0.65": {
+          "tau_min": 917.8,
+          "retention_gas_all_formed_at_start": 0.988,
+          "retention_gas_formed_uniformly": 0.994,
+          "time_after_dissolution_ends_min_worst": 814.2,
+          "time_after_dissolution_ends_min_uniform": 819.5
+        }
+      },
+      "stirred 95th percentile of assumed ranges (25 C)": {
+        "t_dissolve_s": 1313.9,
+        "stirred_10s_renewal": {
+          "tau_min": 113.4,
+          "retention_gas_all_formed_at_start": 0.824,
+          "retention_gas_formed_uniformly": 0.909,
+          "time_after_dissolution_ends_min_worst": 80.0,
+          "time_after_dissolution_ends_min_uniform": 91.1
+        },
+        "calm_lake_central": {
+          "tau_min": 225.1,
+          "retention_gas_all_formed_at_start": 0.907,
+          "retention_gas_formed_uniformly": 0.953,
+          "time_after_dissolution_ends_min_worst": 180.4,
+          "time_after_dissolution_ends_min_uniform": 191.5
+        },
+        "lowest_coefficient_read_0.65": {
+          "tau_min": 917.8,
+          "retention_gas_all_formed_at_start": 0.976,
+          "retention_gas_formed_uniformly": 0.988,
+          "time_after_dissolution_ends_min_worst": 803.0,
+          "time_after_dissolution_ends_min_uniform": 814.0
+        }
+      },
+      "unstirred 95th percentile of assumed ranges (25 C)": {
+        "t_dissolve_s": 4446.2,
+        "stirred_10s_renewal": {
+          "tau_min": 113.4,
+          "retention_gas_all_formed_at_start": 0.52,
+          "retention_gas_formed_uniformly": 0.734,
+          "time_after_dissolution_ends_min_worst": 27.7,
+          "time_after_dissolution_ends_min_uniform": 66.8
+        },
+        "calm_lake_central": {
+          "tau_min": 225.1,
+          "retention_gas_all_formed_at_start": 0.72,
+          "retention_gas_formed_uniformly": 0.852,
+          "time_after_dissolution_ends_min_worst": 128.2,
+          "time_after_dissolution_ends_min_uniform": 166.3
+        },
+        "lowest_coefficient_read_0.65": {
+          "tau_min": 917.8,
+          "retention_gas_all_formed_at_start": 0.922,
+          "retention_gas_formed_uniformly": 0.961,
+          "time_after_dissolution_ends_min_worst": 750.8,
+          "time_after_dissolution_ends_min_uniform": 788.1
+        }
+      }
+    }
+  },
+  "robustness": {
+    "still_lake_min_min": 173.0,
+    "still_lake_max_min": 357.5,
+    "ninety_six_min_is_below_still_lake_range": true,
+    "still_lake_time_above_150_min_needs_retention_at_least": 0.793,
+    "still_lake_central_time_at_retention_0.8_min": 152.1,
+    "still_lake_central_time_at_retention_0.5_min": 46.2,
+    "still_lake_central_time_at_retention_0.45_min": 22.4,
+    "break_even_retention": 0.4074,
+    "pure_CO2_nucleation_at_0.55_volumes_any_T_5_to_30C": false,
+    "air_equilibrated_sites_active_at_C0_20C": true,
+    "air_equilibrated_10um_floor_below_threshold_20C": true,
+    "statement": "The surface-only still-glass time stays above 150 minutes at 20 C only while the retention at serve is at or above about 0.79; retention 0.8 gives 152 minutes, 0.5 gives 46, 0.45 gives 22 and below 0.41 the drink is under the threshold at serve. Retention is the dominant unmeasured input."
+  },
+  "stage3_summary_20C": {
+    "surface_only_stirred_10s_min": 101.9,
+    "surface_only_calm_lake_central_min": 202.3,
+    "surface_only_range_h": [
+      1.7,
+      3.4
+    ],
+    "proxy_floor_with_bubble_loss_min": 14.9,
+    "break_even_retention": 0.407,
+    "basis": "Surface-only range runs from an ASSUMED 10 s surface renewal (stirred glass) to a lake coefficient (calm lake central, Cole and Caraco 1998), neither measured in a drinking glass. The floor is a champagne PROXY. Full dose dissolved at serve is assumed."
+  },
+  "limits": [
+    "No fizz measurement. The 0.44 g/L threshold is a mineral-water detection threshold (PROXY); a sugared, acidic drink may differ.",
+    "Surface coefficients are lake values (S). No source gives a free-surface coefficient for a drinking glass.",
+    "Nucleation depends on whether the liquid carries dissolved air (N2) or only CO2 (N1). Neither the air content nor the active-site density is sourced.",
+    "The champagne constant is a PROXY from a supersaturated flute (about 4.5 bar); it is a floor only.",
+    "Retention at serve is not measured. The times in the surface tables assume the full 0.55 volume dose is dissolved at serve; the tornado runs retention from 0.4 to 1.0 (break-even 0.408, below which there is no time above the threshold at all).",
+    "The retention left after dissolution from surface loss alone is high (see retention_after_dissolution_surface_loss_only) but it is an upper bound: bubble formation at the cube and on the glass is not bounded by any source read.",
+    "The lowest coefficient in the sources read (0.65 cm/h, one pond site, floating chambers, abstract) is not a bound; other sources were not searched exhaustively.",
+    "The surface-loss model assumes a well-mixed bulk; a quiescent column loses CO2 more slowly at first, so a still glass can exceed the lake-based times (no sourced upper bound).",
+    "C0 is 1.080 g/L for exactly 0.55 volumes (22.414 L/mol) and 1.079 g/L from 0.81 g of potassium bicarbonate (0.5495 volumes); the difference is rounding."
+  ]
+}

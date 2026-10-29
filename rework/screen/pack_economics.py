@@ -1,3 +1,4 @@
+# 0.9-volume desk model; POUCH_MASS_G excludes binder and flavour. For the 0.55-volume proposal figures, the source is rework/screen/handover_figures.py.
 """Pack economics for the 0.9-volume cube: cost per cube, units per carton, units per container (desk).
 
 Uses the formulation from formulation_desk_model.py for the reactant masses. Prices are inputs with a

@@ -1,0 +1,549 @@
+{
+  "check": "SBU involvement matrix for record 76",
+  "date": "2026-10-20",
+  "revision": "third pass (verifier items: sourced units only; host roles; rule 8 added)",
+  "seed": "none (no random draw)",
+  "columns": [
+    "G0",
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5",
+    "G6",
+    "G7",
+    "P2",
+    "G8",
+    "G9",
+    "P4",
+    "P5",
+    "P6"
+  ],
+  "n_columns": 14,
+  "n_units": 13,
+  "rules": "1 to 8 (see the module docstring)",
+  "problems": [],
+  "all_rules_pass": true,
+  "legacy_map_from_second_pass": {
+    "U10 (R&D and quality)": "role inside U10 (plants, supply chain and procurement)",
+    "U11 (plants, supply chain and procurement)": "U10",
+    "U12 (packaging)": "U11",
+    "U13 (finance)": "U12",
+    "U14 (sustainability and community)": "U13",
+    "U15 (brand and legal function)": "role inside U1 (Singha Corporation executive management)"
+  },
+  "accountable_owner_by_column": {
+    "G0": "U1",
+    "G1": "U10",
+    "G2": "U10",
+    "G3": "U10",
+    "G4": "U10",
+    "G5": "U10",
+    "G6": "U10",
+    "G7": "U1",
+    "P2": "U8",
+    "G8": "U9",
+    "G9": "U10",
+    "P4": "U9",
+    "P5": "U1",
+    "P6": "U2"
+  },
+  "owner_role_by_column": {
+    "G0": "executive sponsor",
+    "G1": "regulatory affairs head",
+    "G2": "regulatory affairs head",
+    "G3": "R&D lead",
+    "G4": "sensory lead",
+    "G5": "packaging and procurement lead",
+    "G6": "operations director",
+    "G7": "brand and legal head",
+    "P2": "marketing lead",
+    "G8": "sales and channel head",
+    "G9": "pack release lead",
+    "P4": "sales and channel head",
+    "P5": "executive sponsor",
+    "P6": "product owner, soda and drinking water"
+  },
+  "accountable_owner_by_phase": {
+    "Phase 0 Mobilise": [
+      "U1"
+    ],
+    "Phase 1 Readiness gates": [
+      "U10",
+      "U10",
+      "U10",
+      "U10",
+      "U10",
+      "U10",
+      "U1"
+    ],
+    "Phase 2 Concept pre-test": [
+      "U8"
+    ],
+    "Phase 3 Pilot readiness": [
+      "U9",
+      "U10"
+    ],
+    "Phase 4 Marketing pilot": [
+      "U9"
+    ],
+    "Phase 5 Measured outcome": [
+      "U1"
+    ],
+    "Phase 6 Scale": [
+      "U2"
+    ]
+  },
+  "sale_blocking_gate_owners": {
+    "G1": {
+      "unit": "U10",
+      "role": "regulatory affairs head"
+    },
+    "G2": {
+      "unit": "U10",
+      "role": "regulatory affairs head"
+    },
+    "G7": {
+      "unit": "U1",
+      "role": "brand and legal head"
+    },
+    "G9": {
+      "unit": "U10",
+      "role": "pack release lead"
+    }
+  },
+  "pilot_batch_gate_owners": {
+    "G3": {
+      "unit": "U10",
+      "role": "R&D lead"
+    },
+    "G4": {
+      "unit": "U10",
+      "role": "sensory lead"
+    },
+    "G5": {
+      "unit": "U10",
+      "role": "packaging and procurement lead"
+    },
+    "G6": {
+      "unit": "U10",
+      "role": "operations director"
+    },
+    "G8": {
+      "unit": "U9",
+      "role": "sales and channel head"
+    }
+  },
+  "distinct_owner_roles_all_columns": 11,
+  "distinct_owner_roles_all_columns_list": [
+    "R&D lead",
+    "brand and legal head",
+    "executive sponsor",
+    "marketing lead",
+    "operations director",
+    "pack release lead",
+    "packaging and procurement lead",
+    "product owner, soda and drinking water",
+    "regulatory affairs head",
+    "sales and channel head",
+    "sensory lead"
+  ],
+  "distinct_owner_roles_gates_0_to_9": 9,
+  "distinct_owner_roles_gates_0_to_9_list": [
+    "R&D lead",
+    "brand and legal head",
+    "executive sponsor",
+    "operations director",
+    "pack release lead",
+    "packaging and procurement lead",
+    "regulatory affairs head",
+    "sales and channel head",
+    "sensory lead"
+  ],
+  "owner_roles_per_unit": {
+    "U1": [
+      "brand and legal head",
+      "executive sponsor"
+    ],
+    "U2": [
+      "product owner, soda and drinking water"
+    ],
+    "U8": [
+      "marketing lead"
+    ],
+    "U9": [
+      "sales and channel head"
+    ],
+    "U10": [
+      "R&D lead",
+      "operations director",
+      "pack release lead",
+      "packaging and procurement lead",
+      "regulatory affairs head",
+      "sensory lead"
+    ]
+  },
+  "accountable_columns_per_unit": {
+    "U1": 3,
+    "U2": 1,
+    "U8": 1,
+    "U9": 2,
+    "U10": 7
+  },
+  "busiest_accountable_unit": "U10",
+  "busiest_accountable_unit_name": "Plants, supply chain and procurement (R&D and quality role)",
+  "busiest_accountable_count": 7,
+  "busiest_share_of_columns": 0.5,
+  "units_with_no_accountable_column": [
+    "U3",
+    "U4",
+    "U5",
+    "U6",
+    "U7",
+    "U11",
+    "U12",
+    "U13"
+  ],
+  "units_touching_most_columns": [
+    [
+      "U1",
+      14
+    ],
+    [
+      "U10",
+      14
+    ],
+    [
+      "U8",
+      13
+    ],
+    [
+      "U9",
+      13
+    ],
+    [
+      "U2",
+      12
+    ]
+  ],
+  "annual_ingredient_need_kg_by_cubes_per_year": {
+    "50000": {
+      "potassium_bicarbonate": 40.5,
+      "citric_acid": 105.0,
+      "sucralose": 1.65,
+      "binder_and_filler": 40.0,
+      "lemon_flavour": 2.5
+    },
+    "200000": {
+      "potassium_bicarbonate": 162.0,
+      "citric_acid": 420.0,
+      "sucralose": 6.6,
+      "binder_and_filler": 160.0,
+      "lemon_flavour": 10.0
+    },
+    "1000000": {
+      "potassium_bicarbonate": 810.0,
+      "citric_acid": 2100.0,
+      "sucralose": 33.0,
+      "binder_and_filler": 800.0,
+      "lemon_flavour": 50.0
+    }
+  },
+  "annual_need_basis": "grams per cube times cubes per year divided by 1000; design masses are DERIVED or ASSUMPTION inputs in submission 05 and 09",
+  "per_unit": {
+    "U1": {
+      "name": "Singha Corporation executive management (executive sponsor; brand and legal head)",
+      "source_tier": "S, COMPANY CLAIM (English About page; Thai profile page; both undated, footers 2014 and 2020)",
+      "A": [
+        "G0",
+        "G7",
+        "P5"
+      ],
+      "R": [],
+      "C": [
+        "G1",
+        "G2",
+        "P2",
+        "G9",
+        "P4",
+        "P6"
+      ],
+      "I": [
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G8"
+      ],
+      "count_A": 3,
+      "count_R": 0,
+      "count_C": 6,
+      "count_I": 5,
+      "columns_touched": 14
+    },
+    "U2": {
+      "name": "Soda and drinking-water business",
+      "source_tier": "P (company product listing under Beverages)",
+      "A": [
+        "P6"
+      ],
+      "R": [],
+      "C": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G6",
+        "G7",
+        "P2",
+        "G8",
+        "P5"
+      ],
+      "I": [
+        "P4"
+      ],
+      "count_A": 1,
+      "count_R": 0,
+      "count_C": 10,
+      "count_I": 1,
+      "columns_touched": 12
+    },
+    "U3": {
+      "name": "Beer and alcoholic beverages",
+      "source_tier": "P (company product listing)",
+      "A": [],
+      "R": [],
+      "C": [
+        "G7"
+      ],
+      "I": [
+        "G0",
+        "P5"
+      ],
+      "count_A": 0,
+      "count_R": 0,
+      "count_C": 1,
+      "count_I": 2,
+      "columns_touched": 3
+    },
+    "U4": {
+      "name": "Other non-alcoholic beverages",
+      "source_tier": "P (company product listing)",
+      "A": [],
+      "R": [],
+      "C": [],
+      "I": [
+        "G0",
+        "P5"
+      ],
+      "count_A": 0,
+      "count_R": 0,
+      "count_C": 0,
+      "count_I": 2,
+      "columns_touched": 2
+    },
+    "U5": {
+      "name": "Food and restaurants",
+      "source_tier": "P for brands (Masita, Pun Dee Rice); S for restaurants",
+      "A": [],
+      "R": [],
+      "C": [],
+      "I": [
+        "G0",
+        "P5"
+      ],
+      "count_A": 0,
+      "count_R": 0,
+      "count_C": 0,
+      "count_I": 2,
+      "columns_touched": 2
+    },
+    "U6": {
+      "name": "Singha Park",
+      "source_tier": "S (Our Group list; press)",
+      "A": [],
+      "R": [],
+      "C": [],
+      "I": [
+        "G0",
+        "P5"
+      ],
+      "count_A": 0,
+      "count_R": 0,
+      "count_C": 0,
+      "count_I": 2,
+      "columns_touched": 2
+    },
+    "U7": {
+      "name": "International",
+      "source_tier": "S (Our Group list; press)",
+      "A": [],
+      "R": [],
+      "C": [],
+      "I": [
+        "G0",
+        "P5"
+      ],
+      "count_A": 0,
+      "count_R": 0,
+      "count_C": 0,
+      "count_I": 2,
+      "columns_touched": 2
+    },
+    "U8": {
+      "name": "Marketing and brand (Boon Rawd Trading)",
+      "source_tier": "P (Boon Rawd Trading release, 13 March 2026)",
+      "A": [
+        "P2"
+      ],
+      "R": [
+        "G7",
+        "G8",
+        "P4",
+        "P5",
+        "P6"
+      ],
+      "C": [
+        "G0",
+        "G4",
+        "G9"
+      ],
+      "I": [
+        "G1",
+        "G2",
+        "G3",
+        "G6"
+      ],
+      "count_A": 1,
+      "count_R": 5,
+      "count_C": 3,
+      "count_I": 4,
+      "columns_touched": 13
+    },
+    "U9": {
+      "name": "Sales, channel and distribution (Boon Rawd Trading)",
+      "source_tier": "S (efinancethai, 12 March 2026; company history; Siri Pro, 2021)",
+      "A": [
+        "G8",
+        "P4"
+      ],
+      "R": [
+        "P5",
+        "P6"
+      ],
+      "C": [
+        "G0"
+      ],
+      "I": [
+        "G1",
+        "G2",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "P2",
+        "G9"
+      ],
+      "count_A": 2,
+      "count_R": 2,
+      "count_C": 1,
+      "count_I": 8,
+      "columns_touched": 13
+    },
+    "U10": {
+      "name": "Plants, supply chain and procurement (R&D and quality role)",
+      "source_tier": "S, COMPANY CLAIM (plant pages, footer 2016; a packaging science post at a plant company)",
+      "A": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G9"
+      ],
+      "R": [
+        "P4",
+        "P6"
+      ],
+      "C": [
+        "G0",
+        "G8",
+        "P5"
+      ],
+      "I": [
+        "G7",
+        "P2"
+      ],
+      "count_A": 7,
+      "count_R": 2,
+      "count_C": 3,
+      "count_I": 2,
+      "columns_touched": 14
+    },
+    "U11": {
+      "name": "Packaging (BG Container Glass)",
+      "source_tier": "S (listed group company; efinancethai, Bright TV)",
+      "A": [],
+      "R": [],
+      "C": [
+        "G5",
+        "P6"
+      ],
+      "I": [
+        "G0"
+      ],
+      "count_A": 0,
+      "count_R": 0,
+      "count_C": 2,
+      "count_I": 1,
+      "columns_touched": 3
+    },
+    "U12": {
+      "name": "Finance",
+      "source_tier": "S (board page title; press, 2568 BE)",
+      "A": [],
+      "R": [
+        "G8",
+        "P5"
+      ],
+      "C": [
+        "G0",
+        "G1",
+        "G5",
+        "P2",
+        "P4",
+        "P6"
+      ],
+      "I": [
+        "G9"
+      ],
+      "count_A": 0,
+      "count_R": 2,
+      "count_C": 6,
+      "count_I": 1,
+      "columns_touched": 9
+    },
+    "U13": {
+      "name": "Sustainability and community",
+      "source_tier": "S (plant and CSR pages; Phraya Bhirombhakdi Foundation)",
+      "A": [],
+      "R": [],
+      "C": [
+        "G5",
+        "G7"
+      ],
+      "I": [
+        "G0",
+        "P5",
+        "P6"
+      ],
+      "count_A": 0,
+      "count_R": 0,
+      "count_C": 2,
+      "count_I": 3,
+      "columns_touched": 5
+    }
+  }
+}

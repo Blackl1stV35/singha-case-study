@@ -1,0 +1,756 @@
+{
+  "task": "T8 part a, taste chemistry model (no sensory result claimed)",
+  "date": "2026-10-20",
+  "status": "desk chemistry model; no sensory data; no taste result is claimed",
+  "revision_note": "Revised 2026-10-20: the Davies activity correction had the wrong sign (apparent pKs rose with ionic strength); corrected to pK' = pK + log gamma_A - log gamma_HA, unit checks added, titration end point ionic strength iterated, benchmark CO2 added. Second revision 2026-10-20: Sprite acid basis from a citric acid assay added, potassium bitterness range added, citric acid needed for pH 3.0 and 3.5 at 20 and 25 C added.",
+  "unit_checks": {
+    "apparent_pK_at_I_0_equals_Goldberg_25C": true,
+    "apparent_pK_falls_as_I_rises_all_three": true,
+    "pK3_apparent_at_I_0.1": 5.87,
+    "pK3_apparent_at_I_0.1_between_5.7_and_6.0": true,
+    "pK1_apparent_at_I_0.026": 3.062,
+    "pK2_apparent_at_I_0.026": 4.564,
+    "pK3_apparent_at_I_0.026": 6.068,
+    "gamma_below_one_and_falls_with_charge": true,
+    "charge_balance_residual_below_1e-9_M": true,
+    "pH_ideal_solution_25C_2.10g": 3.498,
+    "ideal_pH_matches_design_basis_3.5_within_0.02": true
+  },
+  "inputs": {
+    "KHCO3_g": {
+      "value": 0.81,
+      "tier": "design (deck slide 7, handover)"
+    },
+    "citric_total_g": {
+      "value": 2.1,
+      "tier": "design (handover; the working pH 3.5 basis)"
+    },
+    "sucralose_mg_today": {
+      "value": 33.0,
+      "tier": "design today; DERIVED (6 g per 100 mL over 600)"
+    },
+    "sucralose_mg_proposed": {
+      "value": 55.0,
+      "tier": "DERIVED here (10 g per 100 mL over 600), the team proposal"
+    },
+    "serve_L": {
+      "value": 0.33,
+      "tier": "design"
+    },
+    "CO2_dose_volumes": {
+      "value": 0.55,
+      "tier": "design (ASSUMPTION of the deck)"
+    },
+    "pKa_citric_25C_I0": {
+      "value": [
+        3.128,
+        4.761,
+        6.396
+      ],
+      "tier": "P, Goldberg et al. 2002 Table 7.22 (read in the PDF image 2026-10-20)"
+    },
+    "dH_citric_J_mol": {
+      "value": [
+        4070.0,
+        2230.0,
+        -3380.0
+      ],
+      "tier": "P, same table"
+    },
+    "dCp_citric_J_K_mol": {
+      "value": [
+        -131.0,
+        -178.0,
+        -254.0
+      ],
+      "tier": "P, same table"
+    },
+    "pK_carbonic_25C": {
+      "value": [
+        6.351,
+        10.329
+      ],
+      "tier": "S, Wikipedia potassium bicarbonate (read 2026-10-20)"
+    },
+    "carbonic_T_shift": {
+      "value": "none",
+      "tier": "ASSUMPTION (no sourced shift)"
+    },
+    "Davies_A": {
+      "value": 0.5,
+      "tier": "S form (Wikipedia Davies page, constant 0.5); T independence ASSUMPTION"
+    },
+    "MW_KHCO3": {
+      "value": 100.115,
+      "tier": "S, Wikipedia"
+    },
+    "MW_citric": {
+      "value": 192.124,
+      "tier": "S, Wikipedia"
+    },
+    "MW_K": {
+      "value": 39.098,
+      "tier": "CONSTANT (standard atomic weight, not opened)"
+    },
+    "MW_sucralose": {
+      "value": 397.63,
+      "tier": "S, Wikipedia"
+    },
+    "sucralose_potency": {
+      "value": {
+        "low": 400.0,
+        "central": 600.0,
+        "high": 700.0
+      },
+      "tier": "S, Wiet and Beyts 1992 abstract (400 to 700); 600 from Wikipedia and EFSA news summary"
+    },
+    "sucralose_limit_mg_per_kg": {
+      "value": 300.0,
+      "tier": "P, via submission 09 (P, SOURCED there); not re-read in this task; sub-category rows unread"
+    }
+  },
+  "benchmarks": {
+    "Sprite_pH": {
+      "value": 2.71,
+      "tier": "P, Barac et al. 2023 Table 2 (Serbian bottling, one bottling)"
+    },
+    "Sprite_TA_to_5.5_mmol_L": {
+      "value": 35.95,
+      "tier": "DERIVED from P (0.9613 M NaOH, 50 mL)"
+    },
+    "Sprite_TA_to_7.0_mmol_L": {
+      "value": 54.79,
+      "tier": "DERIVED from P"
+    },
+    "Sprite_sugar_g_100mL_Brix": {
+      "value": 10.0,
+      "tier": "S, Ali et al. 2022 (journal page opened 2026-10-20; Brix)"
+    },
+    "Sprite_sugar_g_100mL_India": {
+      "value": 11.7,
+      "tier": "P, Coca-Cola India brand page (read 2026-10-20 and read again on the same day)"
+    },
+    "Sprite_sugar_g_100mL_HK": {
+      "value": 8.6,
+      "tier": "P, Coca-Cola Hong Kong brand page (read once on 2026-10-20 and not re-verified)"
+    },
+    "Sprite_citric_g_L": {
+      "value": 1.1968,
+      "tier": "S, Ali et al. 2022"
+    },
+    "Sprite_CO2_gas_volumes": {
+      "value": 3.8,
+      "tier": "S, Ali et al. 2022"
+    },
+    "7Up_Brix": {
+      "value": 10.7,
+      "tier": "S, Ali et al. 2022"
+    },
+    "7Up_citric_g_L": {
+      "value": 1.4592,
+      "tier": "S, Ali et al. 2022"
+    },
+    "7Up_CO2_gas_volumes": {
+      "value": 3.7,
+      "tier": "S, Ali et al. 2022"
+    },
+    "Bangladesh_pH_range": {
+      "value": [
+        3.2,
+        4.0
+      ],
+      "tier": "S, Sarwar et al. abstract"
+    },
+    "lemon_lime_patent_pH": {
+      "value": 3.55,
+      "tier": "P (patent), PROXY (syrup basis)"
+    }
+  },
+  "thresholds": {
+    "KCl_detection_mM": {
+      "value": 2.42,
+      "tier": "S, Schiffman et al. 1995 record (detection only; salt molarity)"
+    },
+    "potassium_citrate_detection_mM": {
+      "value": 0.3,
+      "tier": "S, same record (salt form not stated)"
+    },
+    "potassium_carbonate_detection_mM": {
+      "value": 2.86,
+      "tier": "S, same record"
+    },
+    "citric_sour_detection_g_L_sucrose": {
+      "value": [
+        0.057,
+        0.082
+      ],
+      "tier": "S, Mao et al. 2022 abstract"
+    },
+    "citric_sour_stock_group_C_deionized_g_L": {
+      "value": 0.12,
+      "tier": "S, Hoehl et al. 2014: stock concentration of the most dilute group, NOT a threshold; detection occurs below it"
+    },
+    "bitterness_recognition_caffeine_and_KCl_combined_g_100mL": {
+      "value": [
+        0.0242,
+        0.0586
+      ],
+      "tier": "S, Torrico et al. 2015 abstract (water; caffeine and KCl not separated; PROXY for potassium bicarbonate and citrate in a drink)"
+    },
+    "CO2_no_mouthfeel_difference_g_L": {
+      "value": 1.2,
+      "tier": "S, McMahon et al. 2017 abstract (wine PROXY): 1.2 g/L did not differ from the control"
+    },
+    "CO2_mouthfeel_difference_from_g_L": {
+      "value": 2.0,
+      "tier": "S, same abstract (wine PROXY): differences from 2.0 g/L"
+    },
+    "CO2_bite_difference_from_g_L_trained_panel": {
+      "value": 2.8,
+      "tier": "S, McMahon et al. 2016 poster (trained panel, wine PROXY)"
+    }
+  },
+  "recipe_stoichiometry": {
+    "CO2_mmol_per_serve": 8.091,
+    "CO2_volumes_STP_per_serve_basis": 0.5495,
+    "CO2_g_per_L_from_0.81_g_KHCO3": 1.079,
+    "CO2_g_per_L_from_exactly_0.55_volumes": 1.0799,
+    "CO2_note": "0.81 g KHCO3 gives 0.5495 volumes (1.079 g/L); exactly 0.55 volumes is 1.080 g/L. The 0.1 percent gap is rounding of the design dose.",
+    "K_mM": 24.517,
+    "K_mg_per_serve": 316.3,
+    "K_mg_per_L": 959.0,
+    "citric_stoich_g_for_CO2": 0.518,
+    "citric_free_g_after_CO2": 1.582,
+    "citric_total_mM": 33.123
+  },
+  "equilibrium_pH": {
+    "5": {
+      "pH_with_CO2_retained": 3.474,
+      "pH_degassed": 3.476,
+      "ionic_strength_M": 0.0265,
+      "pKa_app_citric": [
+        3.13,
+        4.614,
+        6.056
+      ],
+      "pKa_app_carbonic": [
+        6.285,
+        10.131
+      ],
+      "H_mM": 0.3908,
+      "citric_species_mM": {
+        "H3L": 9.834,
+        "H2L-": 21.711,
+        "HL2-": 1.573,
+        "L3-": 0.004
+      },
+      "carbonate_mM_with_CO2": {
+        "HCO3-": 0.038,
+        "CO3_2-": 0.0,
+        "H2CO3_dissolved": 24.479
+      }
+    },
+    "20": {
+      "pH_with_CO2_retained": 3.424,
+      "pH_degassed": 3.426,
+      "ionic_strength_M": 0.0265,
+      "pKa_app_citric": [
+        3.075,
+        4.571,
+        6.058
+      ],
+      "pKa_app_carbonic": [
+        6.285,
+        10.131
+      ],
+      "H_mM": 0.4385,
+      "citric_species_mM": {
+        "H3L": 9.762,
+        "H2L-": 21.802,
+        "HL2-": 1.555,
+        "L3-": 0.004
+      },
+      "carbonate_mM_with_CO2": {
+        "HCO3-": 0.034,
+        "CO3_2-": 0.0,
+        "H2CO3_dissolved": 24.484
+      }
+    },
+    "30": {
+      "pH_with_CO2_retained": 3.403,
+      "pH_degassed": 3.405,
+      "ionic_strength_M": 0.0265,
+      "pKa_app_citric": [
+        3.051,
+        4.558,
+        6.077
+      ],
+      "pKa_app_carbonic": [
+        6.285,
+        10.131
+      ],
+      "H_mM": 0.4598,
+      "citric_species_mM": {
+        "H3L": 9.717,
+        "H2L-": 21.869,
+        "HL2-": 1.533,
+        "L3-": 0.003
+      },
+      "carbonate_mM_with_CO2": {
+        "HCO3-": 0.032,
+        "CO3_2-": 0.0,
+        "H2CO3_dissolved": 24.485
+      }
+    }
+  },
+  "pH_ideal_no_activity_correction": {
+    "pH_by_temperature": {
+      "5": 3.56,
+      "20": 3.509,
+      "30": 3.488
+    },
+    "note": "With all activity coefficients set to 1 the 25 C value is the 3.5 of the design basis; the Davies correction lowers it by about 0.1 because the ionic strength (0.03 mol/L) lowers the apparent pKs."
+  },
+  "titratable_acidity_20C": {
+    "with_CO2": {
+      "TA_to_5.5_mmol_L": 53.78,
+      "TA_to_5.5_mmol_L_start_I_variant": 48.94,
+      "end_point_ionic_strength_to_5.5_M": 0.13,
+      "TA_to_5.5_citric_eq_g_L": 3.444,
+      "TA_to_7.0_mmol_L": 94.07,
+      "TA_to_7.0_mmol_L_start_I_variant": 92.01,
+      "end_point_ionic_strength_to_7.0_M": 0.214,
+      "TA_to_7.0_citric_eq_g_L": 6.024,
+      "TA_to_8.2_mmol_L": 99.43,
+      "TA_to_8.2_mmol_L_start_I_variant": 99.12,
+      "end_point_ionic_strength_to_8.2_M": 0.224,
+      "TA_to_8.2_citric_eq_g_L": 6.367
+    },
+    "degassed": {
+      "TA_to_5.5_mmol_L": 49.9,
+      "TA_to_5.5_mmol_L_start_I_variant": 45.48,
+      "end_point_ionic_strength_to_5.5_M": 0.126,
+      "TA_to_5.5_citric_eq_g_L": 3.195,
+      "TA_to_7.0_mmol_L": 73.0,
+      "TA_to_7.0_mmol_L_start_I_variant": 71.43,
+      "end_point_ionic_strength_to_7.0_M": 0.193,
+      "TA_to_7.0_citric_eq_g_L": 4.675,
+      "TA_to_8.2_mmol_L": 74.73,
+      "TA_to_8.2_mmol_L_start_I_variant": 74.62,
+      "end_point_ionic_strength_to_8.2_M": 0.198,
+      "TA_to_8.2_citric_eq_g_L": 4.786
+    }
+  },
+  "TA_ratio_to_Sprite_pH7": {
+    "Sprite_TA7_mmol_L": 54.79,
+    "cube_degassed_over_Sprite_headline": 1.332,
+    "cube_with_all_CO2_retained_over_Sprite_upper_edge": 1.717,
+    "cube_degassed_over_Sprite_start_I_variant": 1.304,
+    "cube_with_CO2_over_Sprite_start_I_variant": 1.679,
+    "Sprite_dissolved_CO2_mM_at_3.8_volumes": 169.5,
+    "base_to_take_Sprite_CO2_alone_to_pH7_mmol_L_if_retained": 138.5,
+    "note": "Barac et al. titrated 50 mL of Sprite opened and stirred in a beaker; the paper does not say whether the sample was degassed and does not report CO2 loss. Sprite at 3.8 volumes (Ali 2022) would need about 138 mmol/L of base to take its CO2 alone to pH 7, yet the measured total is 54.8 mmol/L, so most of the CO2 had left during the titration (INFERENCE, not stated by the paper). The like-for-like basis for the cube is therefore the degassed value (headline); the all-CO2-retained value is an upper edge. Because the measured Sprite value may still contain some carbonic acid, the ratio of the cube to the acid-only part of Sprite is higher than the headline."
+  },
+  "TA_ratio_to_Sprite_citric_assay_basis": {
+    "Sprite_citric_mM_Ali2022": 6.229,
+    "pH_of_that_citric_acid_alone_20C_model": 2.746,
+    "Sprite_pH_Barac2023": 2.71,
+    "Sprite_acid_only_TA_to_7_mmol_L": 18.1,
+    "Sprite_acid_only_TA_to_7_citric_eq_g_L": 1.159,
+    "cube_degassed_over_Sprite_acid_only": 4.03,
+    "cube_with_CO2_over_Sprite_acid_only": 5.2,
+    "Barac_total_TA7_over_acid_only_TA7": 3.03,
+    "note": "The two Sprite samples disagree on how much acid Sprite holds: the Serbian titration (54.8 mmol/L to pH 7, 3.5 g/L citric equivalent) is about 3 times what the Peshawar citric assay (1.2 g/L citric acid) can supply as acid alone (18.1 mmol/L). If the Peshawar assay is the better guide, most of the Serbian total would be carbonic acid and the cube carries about 4.0 times Sprite's acid; if the Serbian total is all acid, the ratio is 1.33 (degassed cube). Both samples are single bottlings (one Serbian, one Pakistani), so the ratio is bracketed, not fixed. Sprite also lists sodium citrate (Serbian label), which this acid-only count does not include (INFERENCE that it would raise the buffer)."
+  },
+  "sweetness_sucrose_eq_g_per_100mL": {
+    "low": 4.0,
+    "central": 6.0,
+    "high": 7.0
+  },
+  "sweetness_at_proposed_55_mg_g_per_100mL": {
+    "low": 6.67,
+    "central": 10.0,
+    "high": 11.67
+  },
+  "sucralose_mg_per_serve_to_match_sugar_eq": {
+    "8.6": {
+      "low": 71.0,
+      "central": 47.3,
+      "high": 40.5
+    },
+    "10.0": {
+      "low": 82.5,
+      "central": 55.0,
+      "high": 47.1
+    },
+    "11.7": {
+      "low": 96.5,
+      "central": 64.3,
+      "high": 55.2
+    }
+  },
+  "sucralose_limit_mg_per_serve": 99.0,
+  "sucralose_mg_per_kg_of_drink": {
+    "33_mg": 100.0,
+    "55_mg": 166.7,
+    "note": "Drink mass taken as 0.330 kg (density near 1.0); the 300 mg/kg limit is from submission 09 and was not re-read here. Submission 07 (line 65) says the design holds only if no sub-category sets a level below the design level; at 55 mg that level is about 167 mg/kg, not about 100 mg/kg."
+  },
+  "sweet_to_acid": {
+    "cube_sugar_eq_g_L_33mg": 60.0,
+    "Sprite_sugar_g_L": 100.0,
+    "cube_TA7_citric_eq_g_L_degassed": 4.675,
+    "Sprite_TA7_citric_eq_g_L": 3.509,
+    "ratio_to_Sprite_titratable_basis_degassed_33mg_headline": 0.45,
+    "ratio_to_Sprite_titratable_basis_degassed_55mg": 0.751,
+    "ratio_to_Sprite_titratable_basis_with_CO2_33mg": 0.349,
+    "ratio_to_Sprite_titratable_basis_with_CO2_55mg": 0.582,
+    "cube_citric_total_g_L": 6.364,
+    "Sprite_citric_g_L_Ali2022": 1.1968,
+    "cube_citric_total_over_Sprite_mass": 5.32,
+    "mass_basis_sugar_over_citric_cube_33mg": 9.43,
+    "mass_basis_sugar_over_citric_Sprite": 83.56,
+    "mass_basis_ratio_cube_over_Sprite_33mg": 0.113,
+    "mass_basis_ratio_cube_over_Sprite_55mg": 0.188,
+    "note": "Two Sprite acid values disagree (mass 1.2 g/L citric from a Peshawar sample; titratable 3.5 g/L citric equivalent from a Serbian bottling); both bases are shown. Thin sweetness is flagged on both."
+  },
+  "potassium_vs_threshold": {
+    "K_mM": 24.52,
+    "KCl_detection_mM": 2.42,
+    "ratio_to_KCl_detection": 10.13,
+    "potassium_citrate_detection_mM_salt": 0.3,
+    "ratio_to_K_citrate_if_tripotassium_3K_per_salt": 27.2,
+    "ratio_to_K_citrate_per_mole_of_salt_1K": 81.7,
+    "potassium_carbonate_detection_mM_salt": 2.86,
+    "ratio_to_K_carbonate_on_K_basis_2K_per_salt": 4.3,
+    "Sprite_potassium_mg_per_L_USDA_mirror": 10,
+    "cube_potassium_mg_per_L": 959.0,
+    "note": "Detection thresholds in water for the salt, not bitter or metallic recognition thresholds. The abstract does not say which citrate salt was used. Sprite's potassium is about 1 mg per 100 g (USDA via a mirror, S)."
+  },
+  "potassium_vs_bitterness_recognition": {
+    "K_as_KCl_mass_g_L": 1.828,
+    "caffeine_and_KCl_combined_bitter_recognition_g_L": [
+      0.242,
+      0.586
+    ],
+    "ratio_range": [
+      3.1,
+      7.6
+    ],
+    "note": "PROXY, order of magnitude only: the Torrico range is for caffeine and KCl together in water (not separable), and the cube's potassium is bicarbonate and citrate potassium in a sweet and sour drink. Metallic recognition: no threshold sourced (stated limit)."
+  },
+  "citric_vs_threshold": {
+    "free_citric_g_L": 4.794,
+    "ratio_to_sour_detection_sucrose_range": [
+      58.5,
+      84.1
+    ],
+    "ratio_to_sour_stock_deionized_lower_bound": 39.9,
+    "note": "Detection thresholds are not intensity levels; ratios give the order of magnitude only: at least 40 times in deionized water (the 0.12 g/L stock is above the threshold, so this is a lower bound) and about 58 to 84 times in sucrose solution."
+  },
+  "bite": {
+    "CO2_g_L_from_0.81g_KHCO3": 1.079,
+    "Sprite_CO2_g_L_at_3.8_volumes": 7.46,
+    "cube_over_Sprite_CO2": 0.145,
+    "ratio_to_1.2_g_L_no_difference_level": 0.899,
+    "below_2.0_g_L_where_wine_mouthfeel_first_differed": true,
+    "note": "Wine PROXY (ethanol matrix, trained and consumer panels): 1.2 g/L did not differ from the 0 g/L control; differences began at 2.0 g/L (and at 2.8 g/L for bite in the trained panel). The cube at 1.08 g/L is below both; the benchmark soft drink carries about 7.5 g/L. Sparkling sensation threshold 0.44 g/L from Puleo et al. 2021 abstract (PROXY, mineral water)."
+  },
+  "adjust_citric_grid_20C": [
+    {
+      "citric_total_g": 1.4,
+      "free_citric_g": 0.882,
+      "pH_20C": 3.993,
+      "H_mM": 0.119,
+      "TA_to_7_degassed_mmol_L": 40.34,
+      "TA7_degassed_over_Sprite": 0.736,
+      "TA_to_7_with_CO2_mmol_L": 61.36,
+      "TA7_with_CO2_over_Sprite": 1.12,
+      "sweet_ratio_at_55mg_degassed": 1.358,
+      "CO2_complete": true
+    },
+    {
+      "citric_total_g": 1.6,
+      "free_citric_g": 1.082,
+      "pH_20C": 3.779,
+      "H_mM": 0.1941,
+      "TA_to_7_degassed_mmol_L": 49.67,
+      "TA7_degassed_over_Sprite": 0.906,
+      "TA_to_7_with_CO2_mmol_L": 70.71,
+      "TA7_with_CO2_over_Sprite": 1.29,
+      "sweet_ratio_at_55mg_degassed": 1.103,
+      "CO2_complete": true
+    },
+    {
+      "citric_total_g": 1.8,
+      "free_citric_g": 1.282,
+      "pH_20C": 3.611,
+      "H_mM": 0.2853,
+      "TA_to_7_degassed_mmol_L": 59.0,
+      "TA7_degassed_over_Sprite": 1.077,
+      "TA_to_7_with_CO2_mmol_L": 80.05,
+      "TA7_with_CO2_over_Sprite": 1.461,
+      "sweet_ratio_at_55mg_degassed": 0.929,
+      "CO2_complete": true
+    },
+    {
+      "citric_total_g": 2.0,
+      "free_citric_g": 1.482,
+      "pH_20C": 3.48,
+      "H_mM": 0.386,
+      "TA_to_7_degassed_mmol_L": 68.33,
+      "TA7_degassed_over_Sprite": 1.247,
+      "TA_to_7_with_CO2_mmol_L": 89.4,
+      "TA7_with_CO2_over_Sprite": 1.632,
+      "sweet_ratio_at_55mg_degassed": 0.802,
+      "CO2_complete": true
+    },
+    {
+      "citric_total_g": 2.1,
+      "free_citric_g": 1.582,
+      "pH_20C": 3.424,
+      "H_mM": 0.4385,
+      "TA_to_7_degassed_mmol_L": 73.0,
+      "TA7_degassed_over_Sprite": 1.332,
+      "TA_to_7_with_CO2_mmol_L": 94.07,
+      "TA7_with_CO2_over_Sprite": 1.717,
+      "sweet_ratio_at_55mg_degassed": 0.751,
+      "CO2_complete": true
+    },
+    {
+      "citric_total_g": 2.2,
+      "free_citric_g": 1.682,
+      "pH_20C": 3.374,
+      "H_mM": 0.4919,
+      "TA_to_7_degassed_mmol_L": 77.67,
+      "TA7_degassed_over_Sprite": 1.417,
+      "TA_to_7_with_CO2_mmol_L": 98.74,
+      "TA7_with_CO2_over_Sprite": 1.802,
+      "sweet_ratio_at_55mg_degassed": 0.705,
+      "CO2_complete": true
+    },
+    {
+      "citric_total_g": 2.4,
+      "free_citric_g": 1.882,
+      "pH_20C": 3.287,
+      "H_mM": 0.6005,
+      "TA_to_7_degassed_mmol_L": 87.0,
+      "TA7_degassed_over_Sprite": 1.588,
+      "TA_to_7_with_CO2_mmol_L": 108.08,
+      "TA7_with_CO2_over_Sprite": 1.973,
+      "sweet_ratio_at_55mg_degassed": 0.63,
+      "CO2_complete": true
+    }
+  ],
+  "citric_acid_g_for_target_pH_20C": {
+    "3.3": 2.368,
+    "3.4": 2.147,
+    "3.5": 1.966,
+    "3.6": 1.815,
+    "3.8": 1.578,
+    "4.0": 1.394
+  },
+  "citric_acid_g_for_target_pH_by_temperature_and_activity": {
+    "note": "KHCO3 0.81 g and CO2 retained. Davies = with activity correction (this model); ideal = all activity coefficients 1 (the design basis of the 3.5 and the 3.0 in submission 05 line 102).",
+    "rows": {
+      "20 C, Davies, pH 3.0": 3.423,
+      "20 C, Davies, pH 3.5": 1.966,
+      "20 C, Davies, pH 4.0": 1.394,
+      "20 C, ideal, pH 3.0": 3.755,
+      "20 C, ideal, pH 3.5": 2.117,
+      "20 C, ideal, pH 4.0": 1.515,
+      "25 C, Davies, pH 3.0": 3.365,
+      "25 C, Davies, pH 3.5": 1.947,
+      "25 C, Davies, pH 4.0": 1.386,
+      "25 C, ideal, pH 3.0": 3.689,
+      "25 C, ideal, pH 3.5": 2.096,
+      "25 C, ideal, pH 4.0": 1.507
+    }
+  },
+  "adjust_carbonation_rows": [
+    {
+      "dose_volumes": 0.55,
+      "CO2_g_L": 1.08,
+      "KHCO3_g_needed": 0.811,
+      "K_mM": 24.54,
+      "citric_stoich_g": 0.519,
+      "pH_20C_at_2.10g_citric": 3.425
+    },
+    {
+      "dose_volumes": 0.61,
+      "CO2_g_L": 1.198,
+      "KHCO3_g_needed": 0.899,
+      "K_mM": 27.22,
+      "citric_stoich_g": 0.575,
+      "pH_20C_at_2.10g_citric": 3.541
+    }
+  ],
+  "sensitivity_one_at_a_time": {
+    "base": {
+      "pH": 3.424,
+      "TA7_degassed_mmol_L": 73.0,
+      "TA7_degassed_over_Sprite": 1.332,
+      "sweet_to_acid_ratio": 0.45,
+      "K_mM": 24.52
+    },
+    "rows": [
+      {
+        "input": "citric acid total +/-10 percent (1.89 to 2.31 g)",
+        "pH_low": 3.548,
+        "pH_high": 3.324,
+        "pH_swing": 0.224,
+        "TA7_ratio_low": 1.153,
+        "TA7_ratio_high": 1.511,
+        "sweet_ratio_low": 0.52,
+        "sweet_ratio_high": 0.397,
+        "K_mM_low": 24.52,
+        "K_mM_high": 24.52
+      },
+      {
+        "input": "KHCO3 +/-10 percent (0.73 to 0.89 g; CO2 and K move together)",
+        "pH_low": 3.321,
+        "pH_high": 3.529,
+        "pH_swing": 0.208,
+        "TA7_ratio_low": 1.376,
+        "TA7_ratio_high": 1.288,
+        "sweet_ratio_low": 0.436,
+        "sweet_ratio_high": 0.466,
+        "K_mM_low": 22.1,
+        "K_mM_high": 26.94
+      },
+      {
+        "input": "sucralose 33 mg, potency 400 to 700 (sweet ratio only)",
+        "pH_low": 3.424,
+        "pH_high": 3.424,
+        "pH_swing": 0.0,
+        "TA7_ratio_low": 1.332,
+        "TA7_ratio_high": 1.332,
+        "sweet_ratio_low": 0.3,
+        "sweet_ratio_high": 0.525,
+        "K_mM_low": 24.52,
+        "K_mM_high": 24.52
+      },
+      {
+        "input": "activity model: ideal (A = 0) against Davies A = 0.5",
+        "pH_low": 3.509,
+        "pH_high": 3.424,
+        "pH_swing": 0.085,
+        "TA7_ratio_low": 1.246,
+        "TA7_ratio_high": 1.332,
+        "sweet_ratio_low": 0.481,
+        "sweet_ratio_high": 0.45,
+        "K_mM_low": 24.52,
+        "K_mM_high": 24.52
+      },
+      {
+        "input": "Davies A 0.49 to 0.53",
+        "pH_low": 3.426,
+        "pH_high": 3.419,
+        "pH_swing": 0.007,
+        "TA7_ratio_low": 1.331,
+        "TA7_ratio_high": 1.335,
+        "sweet_ratio_low": 0.451,
+        "sweet_ratio_high": 0.449,
+        "K_mM_low": 24.52,
+        "K_mM_high": 24.52
+      },
+      {
+        "input": "citric pK1 shift -0.05 to +0.05",
+        "pH_low": 3.386,
+        "pH_high": 3.461,
+        "pH_swing": 0.075,
+        "TA7_ratio_low": 1.332,
+        "TA7_ratio_high": 1.332,
+        "sweet_ratio_low": 0.45,
+        "sweet_ratio_high": 0.45,
+        "K_mM_low": 24.52,
+        "K_mM_high": 24.52
+      },
+      {
+        "input": "temperature 5 C to 30 C",
+        "pH_low": 3.474,
+        "pH_high": 3.403,
+        "pH_swing": 0.071,
+        "TA7_ratio_low": 1.332,
+        "TA7_ratio_high": 1.331,
+        "sweet_ratio_low": 0.45,
+        "sweet_ratio_high": 0.451,
+        "K_mM_low": 24.52,
+        "K_mM_high": 24.52
+      }
+    ]
+  },
+  "robustness": {
+    "pH_range_over_all_single_changes": [
+      3.321,
+      3.548
+    ],
+    "TA7_ratio_min_over_all_single_changes": 1.153,
+    "TA7_ratio_above_Sprite_in_every_single_change": true,
+    "TA7_ratio_above_1.2_rule_in_every_single_change": false,
+    "thin_sweetness_below_0.8_rule_in_every_single_change_at_33mg": true,
+    "sweet_ratio_max_over_all_single_changes_at_33mg": 0.525,
+    "K_ratio_to_KCl_min_over_changes": 9.13,
+    "flag_rule_basis_test": {
+      "TA7_ratio_degassed_headline": 1.332,
+      "TA7_ratio_with_CO2_upper_edge": 1.717,
+      "flag_fires_on_both_bases_at_rule_1.2": true
+    }
+  },
+  "risk_flags": [
+    "TOO SOUR (buffered): TA to pH 7 is 1.33 times Sprite on the degassed basis (1.72 with all CO2 retained) against the Serbian titration, and 4.0 times the acid that the Peshawar citric assay can supply; rule 1.2 is an ASSUMPTION",
+    "SALTY OR BITTER RISK: K+ is about 10 times the KCl detection threshold (and about 27 times potassium citrate on a tripotassium basis); off-note not quantified",
+    "THIN SWEETNESS: sweet to acid ratio is 0.45 of Sprite on the titratable basis (0.11 on the citric mass basis); 6.0 against about 10 g sugar equivalent per 100 mL",
+    "WEAK BITE: CO2 of 1.08 g/L is below the 2.0 g/L where a wine mouthfeel difference began and about 14 percent of Sprite's 7.5 g/L (wine and benchmark PROXIES)",
+    "SOFTER ACID HIT: pH 3.42 is above Sprite's 2.71 (hydrogen ion activity about 5 times lower, a weaker sharp acid note); it is inside the 3.2 to 4.0 range of five Bangladeshi brands (S)"
+  ],
+  "adjustments_arithmetic": {
+    "sweetener": {
+      "from_mg": 33.0,
+      "to_mg": 55.0,
+      "sugar_eq_g_per_100mL": [
+        6.0,
+        10.0
+      ],
+      "range_over_potency_400_to_700_at_55mg": [
+        6.67,
+        11.67
+      ],
+      "mg_needed_for_10_g_over_potency_700_600_400": [
+        47.1,
+        55.0,
+        82.5
+      ],
+      "sweet_ratio_titratable_basis": [
+        0.45,
+        0.751
+      ],
+      "mg_per_kg": [
+        100.0,
+        167.0
+      ]
+    },
+    "acid": {
+      "note": "see adjust_citric_grid_20C: lowering citric acid cuts buffered acid but raises pH; about 2.0 g gives pH 3.5 and the working anchor; about 1.4 g is needed for pH 4"
+    },
+    "flavour": {
+      "note": "Not modelled: lemon flavour (0.05 g) has no chemistry model here; no flavour threshold or composition is sourced"
+    },
+    "blend": {
+      "note": "Sweetener blend synergy is not modelled (no sourced data read); acesulfame potassium would add potassium"
+    }
+  },
+  "conclusions": [
+    "Equilibrium pH is about 3.4 at serve (3.40 to 3.47 over 5 to 30 C) once the ionic strength is counted, so the working pH of 3.5 stands within about 0.1; about 2.0 g of citric acid would give 3.5. CO2 retention does not move pH.",
+    "33 mg sucralose gives about 6.0 g sucrose-equivalent per 100 mL (range 4.0 to 7.0); Sprite is about 10 g per 100 mL (8.6 to 11.7 on brand pages).",
+    "Matching 10 g with sucralose alone needs about 55 mg per serve (47 to 83 mg over the potency range), about 167 mg/kg, below the 99 mg per serve that 300 mg/kg allows (limit taken from submission 09, not re-read here; sub-category rows unread).",
+    "The cube has a higher pH than Sprite (fewer hydrogen ions) and more citric acid and more buffered acid: degassed titratable acid to pH 7 is about 1.3 times the Serbian Sprite titration (1.7 times with all CO2 retained) and about 4 times the acid that the Peshawar citric assay can supply, so the drink carries more acid on every basis and the size of the gap depends on which Sprite sample is used. The taste is not measured."
+  ],
+  "limits": [
+    "No sensory data. No taste result is claimed. Thresholds are detection values only.",
+    "No metallic recognition threshold for K+ and no sourness intensity threshold is in any source read. The only bitterness figure is a combined caffeine and KCl recognition range in water (Torrico et al. 2015 abstract), a PROXY.",
+    "The two Sprite samples disagree on the amount of acid (Serbian titration against the Peshawar citric assay); the cube-to-Sprite acid ratio is bracketed from about 1.3 to about 4 (see TA_ratio_to_Sprite_citric_assay_basis), not fixed.",
+    "Sprite titratable acidity was measured in a stirred open beaker with unreported CO2 loss (Barac 2023); the ratio basis is stated, and the paper does not say the sample was degassed.",
+    "No temperature shift is applied to carbonic acid, and the Davies constant is taken as independent of temperature (ASSUMPTION). The Davies equation is used at I = 0.03 and up to 0.13 to 0.22 at the titration end point (within its stated range of about 0.5; about 2 percent deviation at 0.1 M for 1:1 electrolytes).",
+    "Sprite benchmarks are a Serbian bottling (P) and one Peshawar sample (S). The US and Thai formulas were not read. The Singha Lemon Soda can was not found with acid, pH or Brix data."
+  ]
+}

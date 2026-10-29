@@ -1,0 +1,532 @@
+{
+  "note": "DERIVED arithmetic on figures saved in rework/raw/diligence_2026-10-20/T6/. Tiers sit in rework/69.",
+  "price_per_can_and_litre": [
+    {
+      "retailer": "Lotus's",
+      "flavour": "Lemon",
+      "pack": "single",
+      "flag": "",
+      "pack_price_thb": 17.0,
+      "cans": 1,
+      "thb_per_can": 17.0,
+      "thb_per_litre": 51.52
+    },
+    {
+      "retailer": "Lotus's",
+      "flavour": "Red",
+      "pack": "single",
+      "flag": "",
+      "pack_price_thb": 17.0,
+      "cans": 1,
+      "thb_per_can": 17.0,
+      "thb_per_litre": 51.52
+    },
+    {
+      "retailer": "Lotus's",
+      "flavour": "Pink",
+      "pack": "single",
+      "flag": "",
+      "pack_price_thb": 17.0,
+      "cans": 1,
+      "thb_per_can": 17.0,
+      "thb_per_litre": 51.52
+    },
+    {
+      "retailer": "Lotus's",
+      "flavour": "Lemon Cream",
+      "pack": "single",
+      "flag": "",
+      "pack_price_thb": 17.0,
+      "cans": 1,
+      "thb_per_can": 17.0,
+      "thb_per_litre": 51.52
+    },
+    {
+      "retailer": "Lotus's",
+      "flavour": "Lemon",
+      "pack": "pack6",
+      "flag": "",
+      "pack_price_thb": 85.0,
+      "cans": 6,
+      "thb_per_can": 14.17,
+      "thb_per_litre": 42.93
+    },
+    {
+      "retailer": "Lotus's",
+      "flavour": "Lemon",
+      "pack": "pack6",
+      "flag": "member",
+      "pack_price_thb": 81.0,
+      "cans": 6,
+      "thb_per_can": 13.5,
+      "thb_per_litre": 40.91
+    },
+    {
+      "retailer": "Lotus's",
+      "flavour": "Lemon",
+      "pack": "case24",
+      "flag": "",
+      "pack_price_thb": 330.0,
+      "cans": 24,
+      "thb_per_can": 13.75,
+      "thb_per_litre": 41.67
+    },
+    {
+      "retailer": "Lotus's",
+      "flavour": "Pink",
+      "pack": "case24",
+      "flag": "",
+      "pack_price_thb": 337.0,
+      "cans": 24,
+      "thb_per_can": 14.04,
+      "thb_per_litre": 42.55
+    },
+    {
+      "retailer": "Makro Pro",
+      "flavour": "Lemon",
+      "pack": "pack6",
+      "flag": "",
+      "pack_price_thb": 82.0,
+      "cans": 6,
+      "thb_per_can": 13.67,
+      "thb_per_litre": 41.41
+    },
+    {
+      "retailer": "Makro Pro",
+      "flavour": "Lemon",
+      "pack": "pack6",
+      "flag": "qty_tier",
+      "pack_price_thb": 78.0,
+      "cans": 6,
+      "thb_per_can": 13.0,
+      "thb_per_litre": 39.39
+    },
+    {
+      "retailer": "Makro Pro",
+      "flavour": "Red",
+      "pack": "pack6",
+      "flag": "",
+      "pack_price_thb": 79.0,
+      "cans": 6,
+      "thb_per_can": 13.17,
+      "thb_per_litre": 39.9
+    },
+    {
+      "retailer": "Makro Pro",
+      "flavour": "Lemon Cream",
+      "pack": "pack6",
+      "flag": "",
+      "pack_price_thb": 79.0,
+      "cans": 6,
+      "thb_per_can": 13.17,
+      "thb_per_litre": 39.9
+    },
+    {
+      "retailer": "Makro Pro",
+      "flavour": "Pink",
+      "pack": "pack6",
+      "flag": "",
+      "pack_price_thb": 82.0,
+      "cans": 6,
+      "thb_per_can": 13.67,
+      "thb_per_litre": 41.41
+    },
+    {
+      "retailer": "Makro Pro",
+      "flavour": "Ume",
+      "pack": "pack6",
+      "flag": "",
+      "pack_price_thb": 82.0,
+      "cans": 6,
+      "thb_per_can": 13.67,
+      "thb_per_litre": 41.41
+    },
+    {
+      "retailer": "Makro Pro",
+      "flavour": "Lemon",
+      "pack": "case24",
+      "flag": "",
+      "pack_price_thb": 325.0,
+      "cans": 24,
+      "thb_per_can": 13.54,
+      "thb_per_litre": 41.04
+    },
+    {
+      "retailer": "Makro Pro",
+      "flavour": "Pink",
+      "pack": "case24",
+      "flag": "",
+      "pack_price_thb": 325.0,
+      "cans": 24,
+      "thb_per_can": 13.54,
+      "thb_per_litre": 41.04
+    },
+    {
+      "retailer": "Makro Pro",
+      "flavour": "Red",
+      "pack": "case24",
+      "flag": "",
+      "pack_price_thb": 325.0,
+      "cans": 24,
+      "thb_per_can": 13.54,
+      "thb_per_litre": 41.04
+    },
+    {
+      "retailer": "7-Eleven ALL Online",
+      "flavour": "Lemon",
+      "pack": "case24",
+      "flag": "",
+      "pack_price_thb": 330.0,
+      "cans": 24,
+      "thb_per_can": 13.75,
+      "thb_per_litre": 41.67
+    },
+    {
+      "retailer": "7-Eleven ALL Online",
+      "flavour": "Lemon",
+      "pack": "case24",
+      "flag": "list",
+      "pack_price_thb": 408.0,
+      "cans": 24,
+      "thb_per_can": 17.0,
+      "thb_per_litre": 51.52
+    },
+    {
+      "retailer": "7-Eleven ALL Online",
+      "flavour": "Watermelon",
+      "pack": "case24",
+      "flag": "",
+      "pack_price_thb": 330.0,
+      "cans": 24,
+      "thb_per_can": 13.75,
+      "thb_per_litre": 41.67
+    },
+    {
+      "retailer": "7-Eleven ALL Online",
+      "flavour": "Watermelon",
+      "pack": "case24",
+      "flag": "list",
+      "pack_price_thb": 342.0,
+      "cans": 24,
+      "thb_per_can": 14.25,
+      "thb_per_litre": 43.18
+    },
+    {
+      "retailer": "7-Eleven ALL Online",
+      "flavour": "Pink",
+      "pack": "case24",
+      "flag": "",
+      "pack_price_thb": 330.0,
+      "cans": 24,
+      "thb_per_can": 13.75,
+      "thb_per_litre": 41.67
+    },
+    {
+      "retailer": "7-Eleven ALL Online",
+      "flavour": "Ume",
+      "pack": "case24",
+      "flag": "",
+      "pack_price_thb": 330.0,
+      "cans": 24,
+      "thb_per_can": 13.75,
+      "thb_per_litre": 41.67
+    },
+    {
+      "retailer": "7-Eleven ALL Online",
+      "flavour": "Red",
+      "pack": "case24",
+      "flag": "",
+      "pack_price_thb": 330.0,
+      "cans": 24,
+      "thb_per_can": 13.75,
+      "thb_per_litre": 41.67
+    },
+    {
+      "retailer": "7-Eleven ALL Online",
+      "flavour": "Lemon Cream",
+      "pack": "case24",
+      "flag": "",
+      "pack_price_thb": 330.0,
+      "cans": 24,
+      "thb_per_can": 13.75,
+      "thb_per_litre": 41.67
+    },
+    {
+      "retailer": "7-Eleven ALL Online",
+      "flavour": "Lemon",
+      "pack": "pack6",
+      "flag": "anomaly",
+      "pack_price_thb": 172.0,
+      "cans": 6,
+      "thb_per_can": 28.67,
+      "thb_per_litre": 86.87
+    },
+    {
+      "retailer": "7-Eleven ALL Online",
+      "flavour": "Lemon",
+      "pack": "pack6",
+      "flag": "anomaly",
+      "pack_price_thb": 182.0,
+      "cans": 6,
+      "thb_per_can": 30.33,
+      "thb_per_litre": 91.92
+    },
+    {
+      "retailer": "7-Eleven ALL Online",
+      "flavour": "Red",
+      "pack": "pack6",
+      "flag": "anomaly",
+      "pack_price_thb": 172.0,
+      "cans": 6,
+      "thb_per_can": 28.67,
+      "thb_per_litre": 86.87
+    }
+  ],
+  "price_ranges": {
+    "single_can_lemon_lotus_thb": 17.0,
+    "lemon_6pack_thb_per_can_member_to_nonmember": {
+      "min": 13.5,
+      "max": 14.17,
+      "n": 3
+    },
+    "lemon_6pack_thb_per_can_nonmember_only": {
+      "min": 13.67,
+      "max": 14.17,
+      "n": 2
+    },
+    "lemon_24case_thb_per_can": {
+      "min": 13.54,
+      "max": 13.75,
+      "n": 3
+    },
+    "other_flavours_multipack_and_case_thb_per_can": {
+      "min": 13.17,
+      "max": 14.04,
+      "n": 12
+    },
+    "all_flavours_multipack_and_case_used_rows_thb_per_can": {
+      "min": 13.17,
+      "max": 14.17,
+      "n": 18
+    },
+    "lemon_case_list_price_thb_per_can_7eleven_online": 17.0,
+    "lemon_case_7eleven_online_discount_pct": 19.1,
+    "lotus_member_discount_on_6pack_pct": 4.7,
+    "makro_qty_tier_6pack_thb_per_can_not_used": 13.0,
+    "seven_eleven_lemon_6pack_anomaly_thb_per_can_not_used": 28.67,
+    "slide_strings_one_decimal": {
+      "lemon_6pack_min": 13.5,
+      "lemon_6pack_max": 14.2,
+      "lemon_case_min": 13.5,
+      "lemon_case_max": 13.8,
+      "other_flavours_min": 13.2,
+      "seven_eleven_lemon_6pack_anomaly": 28.7,
+      "single_can_per_litre": 51.5
+    },
+    "reading": "Lemon only: 6-packs THB 13.50 (Lotus's Club Card member price) to 14.17 (Lotus's non-member); 24-can cases THB 13.54 to 13.75 (Makro Pro, Lotus's and 7-Eleven online). Other flavours read as low as THB 13.17 (Makro Pro Red and Lemon Cream 6-packs). The 7-Eleven online Lemon 6-pack (THB 28.67 a can) and the Makro Pro quantity price are not in these ranges."
+  },
+  "price_history": {
+    "launch_price_thb_2020": 16,
+    "red_aug_2022_thb": 16,
+    "ume_sep_2023_thb": 17,
+    "pink_jun_2024_thb": 17,
+    "current_single_can_thb_20_oct_2026": 17,
+    "rise_16_to_17_pct": 6.25,
+    "per_litre_at_16": 48.48,
+    "per_litre_at_17": 51.52
+  },
+  "brand_volume": {
+    "litres_2021_million": 28,
+    "litres_2022_target_million": 45,
+    "cans_2021_million": 84.8,
+    "cans_2022_target_million": 136.4,
+    "target_growth_pct": 60.7,
+    "retail_value_2021_at_thb16_million": 1357.6,
+    "press_sales_value_million_year_unclear": 1357,
+    "difference_pct": -0.04,
+    "limited_edition_2_million_cans_in_million_litres": 0.66
+  },
+  "canned_segment_year_inference": {
+    "csd_market_2021_thb_million_dated_in_source": 62725,
+    "canned_share_pct_in_source": 21,
+    "21pct_of_62725_thb_million": 13172.25,
+    "canned_value_in_source_thb_million_year_not_stated": 13172,
+    "difference_thb_million": 0.25,
+    "reading": "The source dates 62,725 to 2021 and gives 13,172 without a year. 21% of 62,725 is 13,172.25, so the year of 13,172 is INFERRED as 2021 by this arithmetic (Positioning, 4 July 2022, file 09 section C). It is not a printed date."
+  },
+  "share_arithmetic": {
+    "1357_over_13172_pct": 10.3,
+    "1450_over_13172_pct": 11.0,
+    "12pct_of_13172_million": 1581.0,
+    "1450_over_62725_total_csd_pct": 2.31
+  },
+  "can_maker_bjc_2025": {
+    "tbc_capacity_million_cans": {
+      "2023": 3440,
+      "2024": 3780,
+      "2025": 3880
+    },
+    "tbc_actual_million_cans": {
+      "2023": 2027,
+      "2024": 2214,
+      "2025": 2307
+    },
+    "tbc_usage_pct_computed": {
+      "2023": 58.92,
+      "2024": 58.57,
+      "2025": 59.46
+    },
+    "tbc_capacity_growth_2023_to_2025_pct": 12.8,
+    "tbc_spare_capacity_2025_million_cans": 1573,
+    "tbc_spare_capacity_2025_pct_of_capacity": 40.54,
+    "tbc_actual_growth_2025_vs_2024_pct": 4.2,
+    "tbc_ball_vn_actual_million_cans": {
+      "2023": 1910,
+      "2024": 1764,
+      "2025": 1959
+    },
+    "thai_plus_vn_cans_2025_million": 4266,
+    "segment_sales_2025_thb_million": 11852.0,
+    "tbc_total_revenue_thb_million": {
+      "2025": 11909.031,
+      "2024": 12374.731
+    },
+    "tbc_profit_thb_million": {
+      "2025": 1356.513,
+      "2024": 1551.215
+    },
+    "tbc_net_margin_pct": {
+      "2025": 11.39,
+      "2024": 12.54
+    },
+    "tbc_revenue_change_2025_pct": -3.76,
+    "revenue_per_can_produced_thb_blended_segment_sales": 2.778,
+    "revenue_per_can_produced_thb_blended_tbc_revenue": 2.792,
+    "revenue_per_can_produced_thb_upper_bracket_all_revenue_over_thai_cans_only": 5.162,
+    "packaging_supply_chain_gross_margin_pct_printed": 22.8,
+    "packaging_supply_chain_ebit_margin_pct_printed": 17.6,
+    "caveat": "Revenue per can includes lids and all can sizes and the Vietnamese plant. It is a bracket, not a price list."
+  },
+  "brand_vs_can_maker": {
+    "brand_2021_cans_pct_of_tbc_2025_actual": 3.68,
+    "brand_2022_target_cans_pct_of_tbc_2025_actual": 5.91,
+    "brand_2022_target_cans_pct_of_tbc_2025_capacity": 3.51
+  },
+  "model_cross_check": {
+    "model_sheet_metal_plus_nonmetal_conversion_thb_low": 2.78,
+    "model_sheet_metal_plus_nonmetal_conversion_thb_high": 4.58,
+    "model_variable_cost_per_filled_can_thb_low": 3.728,
+    "model_variable_cost_per_filled_can_thb_high": 6.144,
+    "model_cans_per_year_group_proxy_low": 978642424,
+    "model_cans_per_year_group_proxy_high": 1060754545,
+    "bjc_blended_revenue_per_can_thb": 2.78,
+    "reading": "The blended revenue per can, lids included, is at the model's low end for the can body alone; the model's high end is not supported by the filing.",
+    "brand_2022_target_cans_pct_of_model_group_cans_low_to_high": [
+      12.9,
+      13.9
+    ]
+  },
+  "retail_reach_counts": {
+    "seven_eleven_stores_end_2025": 15945,
+    "big_c_big_format_thailand": 206,
+    "big_c_mini_thailand": 1490,
+    "big_c_all_formats_thailand": 1696,
+    "siri_pro_retail_shops_2021_press": 70000,
+    "siri_pro_traditional_wholesale_2021_press": 3600
+  },
+  "singha_corporation_ratios": {
+    "2021": {
+      "revenue_thb_million": 4226.639742,
+      "net_profit_thb_million": 3590.70076,
+      "net_profit_pct_of_revenue": 85.0
+    },
+    "2024": {
+      "revenue_thb_million": 3950.0,
+      "net_profit_thb_million": 3135.0,
+      "net_profit_pct_of_revenue": 79.4
+    },
+    "2025": {
+      "revenue_thb_million": 3892.0,
+      "net_profit_thb_million": 3085.0,
+      "net_profit_pct_of_revenue": 79.3
+    }
+  },
+  "singha_corporation_changes": {
+    "revenue_2025_vs_2024_pct": -1.5,
+    "net_profit_2025_vs_2024_pct": -1.6,
+    "revenue_2025_vs_2021_pct": -7.9,
+    "net_profit_2025_vs_2021_pct": -14.1
+  },
+  "boon_rawd_brewery_2022_net_profit_pct_of_revenue": 49.5,
+  "dates_read_as_printed": {
+    "lemon_launch_brand_buffet_pr": "19 Aug 2020 (330 mL, THB 16, 7-Eleven nationwide, sugar-free and 0 calories)",
+    "yuzu_brand_inside": "8 Jun 2021 (330 mL, THB 16, sugar-free formula and no calories)",
+    "red_thansettakij": "15 Aug 2022 (330 mL, THB 16, 45 million litres target for 2022)",
+    "ume_marketeer_and_brand_inside": "3 Sep 2023 and 4 Sep 2023 (330 mL, THB 17, 52% share of canned, no period)",
+    "pink_marketeer": "25 Jun 2024 (330 mL, THB 17, No. 1 in canned sugar-free carbonated drinks, no figure)",
+    "watermelon_bloody_nanno_brand_buffet_pr": "16 Mar 2026 (2 million cans, two label designs, 7-Eleven and Singha Online)",
+    "melon_brand_buffet": "4 Apr 2025 (limited edition, sold for 6 months that summer, no can count)",
+    "lemon_cream_mitihoon": "10 Nov 2025 (330 mL, price not printed, more than 6 flavours before it)"
+  },
+  "channels_as_printed": {
+    "ume_2023": [
+      "Singha Online Shop",
+      "7-Eleven nationwide"
+    ],
+    "pink_2024": [
+      "7-Eleven",
+      "Lotus's",
+      "Makro",
+      "leading stores nationwide",
+      "Singha Online Shop"
+    ],
+    "lemon_cream_2025": [
+      "7-Eleven",
+      "department stores",
+      "supermarkets nationwide"
+    ],
+    "watermelon_2026": [
+      "7-Eleven all branches",
+      "Singha Online"
+    ],
+    "company_product_page_th_en": [
+      "7-Eleven",
+      "department stores",
+      "Singha Online",
+      "Shopee",
+      "Lazada"
+    ]
+  },
+  "yuzu_still_listed_check_2026_10_20": {
+    "seven_eleven_search_header_count": 373,
+    "seven_eleven_search_cards_shown": 30,
+    "seven_eleven_yuzu_beverage_listed": 0,
+    "makro_pro_search_header_count": 110,
+    "makro_pro_search_rows_shown": 20,
+    "makro_pro_yuzu_beverage_listed": 0,
+    "lotuss_search_page_rendered_results": false,
+    "reading": "No Yuzu beverage on the first pages read. Yuzu is not confirmed on sale; the pages show a partial read only."
+  },
+  "single_can_check_2026_10_20": {
+    "lotuss_single_can_thb": 17.0,
+    "lotuss_single_can_thb_per_litre": 51.52,
+    "lotuss_page_manufacturer_field": "none printed",
+    "seven_eleven_24_case_manufacturer_field": "none printed; shelf life 1 year; promotion valid 11/08/2020 to 20/10/2026"
+  },
+  "sales_statements_as_published_no_arithmetic": {
+    "ume_2023_forecast_sales_growth_pct": 30,
+    "ume_2023_forecast_timeframe": "none stated",
+    "ume_2023_canned_share_pct": 52,
+    "ume_2023_canned_share_period": "none stated",
+    "ume_2023_sugar_free_carbonated_market_thb_million": 6930,
+    "ume_2023_sugar_free_carbonated_market_growth_pct_stated": "more than 25",
+    "pink_2024_sales_or_share_figure": "none printed; No. 1 claim only",
+    "lemon_cream_2025_sales_figure": "none printed",
+    "red_2022_sales_target_million_litres": 45
+  },
+  "healthier_choice_register_2026_10_20": {
+    "register_entry_for_lemon_soda_found": false,
+    "programme_front_page_read": true,
+    "reading": "Search and front page read; no entry for the product found. Stated limit."
+  }
+}

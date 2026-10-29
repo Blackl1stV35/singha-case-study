@@ -18,6 +18,8 @@ Rules applied: no sugar-free claim of any kind (S1); no lab test and no medical 
 | **G6 food additives** (new; added by the critic) | **Open** | Read-only step, possible without contact: the Thai food-additive notification for the intensive sweetener in a beverage, and for potassium bicarbonate as the acid-carbonate source | Not read. This blocks sale whatever G1 to G5 say. Stevia, sucralose and acesulfame K show no warning in the annexes read, but their beverage permission is unverified. Acesulfame K also adds potassium |
 | **Conversion test** | **Stated limit** (synthesis basis) | [49](49_conversion_test_synthesis.md): direction supported under stated inputs; a 5-point lead not supported at any baseline | No respondents. The recruited design is deferred and needs an approval naming a provider and budget (S4) |
 
+Update 19 October 2026: the adopted dose is 0.55 volume ([52](52_pivot_and_retirement.md) D14), not 1.75. The G2 pass rule cannot be met at 0.55, and the potassium figure is about 317 mg per serve, not 1,007 mg. See [52](52_pivot_and_retirement.md) section 7, O1 and O3. In this record G1 means the sodium-free gate; README, 60 and CLAUDE use G1 for the lion gate.
+
 ## 2. Decisions taken under the standing authority (reviewable)
 
 | # | Decision | Reason | Reverse if |

@@ -1,0 +1,13 @@
+# ONE Special Cargo brochure, May 2023, page 3 (container specifications)
+- Source file: https://in.one-line.com:443/sites/g/files/lnzjqr776/files/2023-05/Special%20Cargo_Brochure_May2023_Updated_for%20web.pdf (redirected to cms-resources-in.one-line.com)
+- Saved binary: scratch tool-results webfetch PDF (499.9 KB); page 3 read with the Read tool on 2026-10-20
+- Tier: P (carrier brochure), with a reference-only disclaimer
+- Table "ONE SPECIAL CARGO CONTAINERS AND SPECIFICATIONS", OPEN TOP, 20 FEET, "Specifications for 8 ft 6 in / 30,480kg":
+  - Inside measurement: length 589 cm, width 234 cm, height 234 cm
+  - Door opening: width 233 cm, height 224 cm
+  - Load capacity: 32.4 m3
+  - Container weight: 2,380 kg
+  - Max load weight: 28,100 kg
+- Footnote: "*Indicated specifications for reference only. Actual unit may differ."
+- Note: this is an open-top unit. The dry 20 ft box height of 2.393 m used on slide 7 is not on this ONE page.
+- Flat rack 20 ft row on the same page (556 x 219 x 221 cm, 30,950 kg max load) is not used.

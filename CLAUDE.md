@@ -11,6 +11,7 @@ Read this first in any new session. These rules are standing instructions from t
 - Model routing (20 October 2026): authors and routine verifiers run on Haiku 5.5; hard statistical and chemistry tasks (T8, T9, T10, T11, T12, T14, T15) verify and revise on Sonnet or higher. The user dropped the usage concern on 20 October 2026, so no usage gate applies. See `rework/workflows/model_routing_2026-10-20.md`.
 - The older folders `strategy/` and `korea-chart/` were removed on 20 October 2026 (recoverable from git history).
 - Commit trailers name the model that wrote the commit.
+- Final submission deck: Canva design `DAHX_hKTpDE` ("Singha Lemon Soda Cube – Final"), reverted on 29 October 2026 to the pre-verdict original, with the teammate's persona page kept at position 6. The staged working copy `DAHZRLUtEGk` and the backup `DAHZUgx5WUs` are not final. Do not run the fix loops on the final deck.
 
 ## 1. What the repo is
 
@@ -47,7 +48,7 @@ Read this first in any new session. These rules are standing instructions from t
 ## 5. Gates and decisions (do not change without the user)
 
 - **Gate G1 closed (19 October 2026):** the user confirmed the SINGHA lion for the proposal and placed the brand-owner and legal sign-off, and the alcohol-cue concern, with Singha's department. The team does not hold those sign-offs and does not check the cue.
-- The judge folder follows the merged design (synced 19 October 2026). Re-sync it from the mockup after any label change, and re-scan it for identifiers.
+- The judge folder follows the merged design (synced 19 October 2026). The mockup is retired (29 October 2026; archived in `rework/archive/mockup_retired_2026-10-29`), so there is no re-sync from it. Re-scan any judge-facing file for identifiers.
 - Name: **Lime Cube** (no SINGHA). Units: one cube per pouch (single serve). The SINGHA-as-text question was dropped by the user.
 - Thai particulars, ingredients, sweetener name and manufacturer remain bracketed placeholders.
 - The potassium amount line (decision F4) is kept until the user decides otherwise.
@@ -57,8 +58,7 @@ Read this first in any new session. These rules are standing instructions from t
 - Cycles uses the **GPU by default** (NVIDIA GeForce GTX 1650, 4 GB VRAM, CUDA). `--device cpu` forces the CPU. The script falls back to the CPU when no CUDA device is found.
 - Host RAM is the binding limit (8 GB total; Claude processes take about 1.2 GB). Check free RAM before a render (`Get-CimInstance Win32_OperatingSystem`). The 2K GPU render's Blender process was observed at about 2.1 GB working set (one reading, not logged). Close other large applications first.
 - Run renders in the background and check the log. The log is buffered, so a missing print does not mean a failure. Confirm with the "Saved" and "done in" lines and the file's time.
-- Do not overwrite `rework/mockup/cube_front_2k.png` with a test render. Test renders go to the session scratch folder.
-- Verify the 3D page after any label change: `python rework/screen/verify_cube_mockup.py` (24 checks).
+- The 3D mockup is retired (29 October 2026). Its renders and scripts are in `rework/archive/mockup_retired_2026-10-29`. The 3D page check no longer applies.
 
 ## 7. Git
 
